@@ -1,6 +1,6 @@
 # The Five Levels of Conceptual Maturity for IT Teams
 
-![](/../images/fivelevels.jpg)
+![](../images/fivelevels.jpg)
 
 IT is a strange activity because it is an industry that has troubles getting out of a craft industry approach. Constantly moving to new exciting technologies and constantly influenced by massive technology centered marketing, IT people stay durably too technical and have recurring troubles to achieve IT projects.
 
