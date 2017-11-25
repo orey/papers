@@ -2,23 +2,23 @@
     "docs": [
         {
             "location": "/",
-            "text": "Olivier Rey's Papers\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.\n\n\n\n\n\nSite licensed under the terms of the \nGNU FDL V3\n.",
+            "text": "Olivier Rey's Papers\n\n\nPapers\n\n\n\n\nThe Five Levels of Conceptual Maturity for IT Teams\n\n\nThe V2 Vortex\n - New version\n\n\n\n\nOngoing works\n\n\n\n\nConsiderations about Rest and Web Services\n\n\n\n\nMore to come soon...\n\n\n\n\nSite licensed under the terms of the \nGNU FDL V3\n.",
             "title": "Home"
         },
         {
             "location": "/#olivier-reys-papers",
-            "text": "For full documentation visit  mkdocs.org .",
+            "text": "",
             "title": "Olivier Rey's Papers"
         },
         {
-            "location": "/#commands",
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
-            "title": "Commands"
+            "location": "/#papers",
+            "text": "The Five Levels of Conceptual Maturity for IT Teams  The V2 Vortex  - New version",
+            "title": "Papers"
         },
         {
-            "location": "/#project-layout",
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.   Site licensed under the terms of the  GNU FDL V3 .",
-            "title": "Project layout"
+            "location": "/#ongoing-works",
+            "text": "Considerations about Rest and Web Services   More to come soon...   Site licensed under the terms of the  GNU FDL V3 .",
+            "title": "Ongoing works"
         },
         {
             "location": "/articles/five-levels/",
