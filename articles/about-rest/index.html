@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Olivier Rey">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Considerations About Rest And Web Services - Papers</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">Papers</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Articles <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../five-levels/">The Five Levels of Conceptual Maturity for IT Teams</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../the-v2-vortex/">The V2 Vortex</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Considerations About Rest And Web Services</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../about/about/">Author</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../about/LICENSE/">License</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../the-v2-vortex/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../../about/about/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/orey/papers/">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#considerations-about-rest-and-web-services">Considerations About Rest And Web Services</a></li>
+        
+            <li><a href="#a-bit-of-history">A Bit Of History</a></li>
+        
+            <li><a href="#what-is-rpc">What Is RPC?</a></li>
+        
+            <li><a href="#the-notion-of-verb">The Notion Of "Verb"</a></li>
+        
+            <li><a href="#the-corba-failed-attempt">The Corba Failed Attempt</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="considerations-about-rest-and-web-services">Considerations About Rest And Web Services</h1>
+<p>It's been a very long time since I've been explaining this to a lot of people and maybe today I should try to put the full explanation on paper.</p>
+<h2 id="a-bit-of-history">A Bit Of History</h2>
+<p>When the REST concept was published, sometimes around 2001, I was in a middleware team in a big software company. In that team, we were accustomed to use business services for more than a decade.</p>
+<p>Indeed, the term "web service" or "SOA" was not existing at the time. But, in many business domains such as airline commercial business, banking, insurance, etc., many people knew what was RPC and were using it extensively to communicate between systems.</p>
+<p>RPC means Remote Procedure Call. RPC concept was introduced to me with the DCE (<a href="http://pubs.opengroup.org/onlinepubs/9629399/">Distributed Computing Environment</a>). DCE was a very powerful standard that were never completely used, as far as I know, but it explained in great details the basis of interoperability between systems. For sure, the standard was only making a synthesis of ideas that were much older.</p>
+<h2 id="what-is-rpc">What Is RPC?</h2>
+<p>Fundamentally RPC is, like it is said in its name, a remote procedure call.</p>
+<p>To understand the concept, let's imagine 2 programs that want to communicate, first program being A and second being B. B will publish an API in order to be called. In most procedural programming languages (like C), if the two programs are located on the same machine, A can call the API of B (see the top of Figure 1).</p>
+<p><img alt="" src="../../yed/RPC.png" />Figure 1: Local Procedure Call and Remote Procedure Call</p>
+<p>The idea of interoperability in RPC is that, if B is located in a remote machine (or a remote process), B should not change when invoked by A. On the other side, A should not change in its invocation of B interface. So A will call a B interface locally to its system, this interface hiding a client stub that will wrap/serialize data in a certain format to be sent on the wire; on the machine hosting B, there will be a server stub unwraping/unserializing data to call locally the B interface.</p>
+<p>For sure, in order to work in a complex network, the message sent from A will have to fond is route to the machine hosting B. We have here all the elements of the client-server architecture.</p>
+<h2 id="the-notion-of-verb">The Notion Of "Verb"</h2>
+<p>Well, RPC is a bit more than that. Because, when calling a remote procedure (or function), semantically, we call a remote system asking it to do something (the B API) with the input data that we provide (the request). We expect data back (the response).</p>
+<p>This is/was called a "verb". A says to B: "perform B-interface contract with my input data and give me back the contract expected output data".</p>
+<p>Trends passed on many parameters:</p>
+<ul>
+<li>
+<p>The protocols used changed,</p>
+</li>
+<li>
+<p>The addressing schemes changed,</p>
+</li>
+<li>
+<p>The format of the data changed (from many proprietary formats or Edifact, to XML to JSON).</p>
+</li>
+</ul>
+<p>But the fact is, in most businesses proposing a certain degree of business complexity, RPC is still there. Most often, verbs are expressing an "action" semantic and requests are proposing data trees, so as responses.</p>
+<h2 id="the-corba-failed-attempt">The Corba Failed Attempt</h2>
+<p>In the 90s, the objet-oriented programming (OOP) being trendy, the intention behind <a href="https://en.wikipedia.org/wiki/Common_Object_Request_Broker_Architecture">Corba</a> was born. The idea was to generalize the object notions to a distributed world. The logic consequence was to imagine a client-server protocol for objects to communicate between one another.</p>
+<p>The principle is simple: an object <code>A</code> calls locally a method <code>m</code> on an object <code>B</code>. If we imagine the <code>B</code> instance as being remote,</p>
+<p>[To be continued]</p></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+                <p>Copyright Olivier Rey 2017 - Site licensed under the GNU FDL V3</p>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
