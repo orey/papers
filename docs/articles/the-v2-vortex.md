@@ -1,6 +1,6 @@
 # The V2 Vortex
 
-![](../images/vortex.jpg)
+![Image of a vortex](../images/vortex.jpg)
 
 A lot of companies enter, at a certain moment in their life, into the "V2 Vortex”. In this article, we're going to detail the pattern of the harsh replacement of the V1 of the application by the V2.
 

@@ -3,7 +3,8 @@
 ## Papers
 
 * [The Five Levels of Conceptual Maturity for IT Teams](articles/five-levels.md)
-* [The V2 Vortex](articles/the-v2-vortex.md) - New version
+* [The V2 Vortex](articles/the-v2-vortex.md) - New version November 2017
+* [The Various Stages of Digital Transformation](articles/various-stages.md)
 
 ## Ongoing works
 
