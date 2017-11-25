@@ -1,3 +1,17 @@
 site_name: Papers
+site_description: Olivier Rey's Papers
+site_author: Olivier Rey
+copyright: Copyright Olivier Rey 2017 - Site licensed under the GNU FDL V3
+#google_analytics: ['UA-36723568-3', 'mkdocs.org']
 repo_url: https://github.com/orey/papers/
 #theme: readthedocs
+site_dir: site
+pages:
+- Home: 'index.md'
+- Articles:
+    - 'The Five Levels of Conceptual Maturity for IT Teams': 'articles/five-levels.md'
+    - 'The V2 Vortex': 'articles/the-v2-vortex.md'
+    - 'Considerations About Rest And Web Services': 'articles/about-rest.md'
+- About:
+    - Author: 'about/about.md'
+    - License: 'about/LICENSE.md'

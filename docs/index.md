@@ -18,5 +18,5 @@ For full documentation visit [mkdocs.org](http://mkdocs.org).
 
 ---
 
-Site licensed under the terms of the [GNU FDL V3](LICENSE.md).
+Site licensed under the terms of the [GNU FDL V3](about/LICENSE.md).
 

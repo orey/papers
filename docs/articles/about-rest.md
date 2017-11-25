@@ -16,7 +16,7 @@ Fundamentally RPC is, like it is said in its name, a remote procedure call.
 
 To understand the concept, let's imagine 2 programs that want to communicate, first program being A and second being B. B will publish an API in order to be called. In most procedural programming languages \(like C\), if the two programs are located on the same machine, A can call the API of B \(see the top of Figure 1\).
 
-![](/assets/RPC.png)Figure 1: Local Procedure Call and Remote Procedure Call
+![](../yed/RPC.png)Figure 1: Local Procedure Call and Remote Procedure Call
 
 The idea of interoperability in RPC is that, if B is located in a remote machine \(or a remote process\), B should not change when invoked by A. On the other side, A should not change in its invocation of B interface. So A will call a B interface locally to its system, this interface hiding a client stub that will wrap/serialize data in a certain format to be sent on the wire; on the machine hosting B, there will be a server stub unwraping/unserializing data to call locally the B interface.
 
@@ -46,11 +46,5 @@ The principle is simple: an object `A` calls locally a method `m` on an object `
 
 
 [To be continued]
-
----
-
-Copyright (C) 2012-2018 Olivier Rey.
-Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
-A copy of the license is included in the page entitled [License](/license.md).
 
 

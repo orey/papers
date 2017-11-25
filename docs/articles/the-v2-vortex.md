@@ -1,6 +1,6 @@
 # The V2 Vortex
 
-![](/assets/vortex.jpg)
+![](../images/vortex.jpg)
 
 A lot of companies enter, at a certain moment in their life, into the "V2 Vortex”. In this article, we're going to detail the pattern of the harsh replacement of the V1 of the application by the V2.
 
@@ -149,15 +149,8 @@ After decades of projects and auditing, most of the companies I saw facing the V
 
 [2] - Archimate resources can be found here: http://www.opengroup.org/subjectareas/enterprise/archimate.
 
-[3] - Refer to [The Five Levels Of Conceptual Maturity for IT Teams](/the-five-levels-of-conceptual-maturity-for-it-teams.md "The five levels of conceptual maturity for IT teams").
+[3] - Refer to [The Five Levels Of Conceptual Maturity for IT Teams](five-levels.md).
 
-
-
----
-
-Copyright (C) 2012-2018 Olivier Rey.
-Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
-A copy of the license is included in the page entitled [License](/license.md).
 
 
 

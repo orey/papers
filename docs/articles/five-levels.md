@@ -1,6 +1,6 @@
-# The Five Levels of Conceptual Maturity for IT teams
+# The Five Levels of Conceptual Maturity for IT Teams
 
-![](/assets/fivelevels.jpg)
+![](/../images/fivelevels.jpg)
 
 IT is a strange activity because it is an industry that has troubles getting out of a craft industry approach. Constantly moving to new exciting technologies and constantly influenced by massive technology centered marketing, IT people stay durably too technical and have recurring troubles to achieve IT projects.
 
@@ -72,9 +72,4 @@ The problem today, in most companies, is not only to "code" nor only to "manage 
 
 IT industry should target maturity and maturity comes with the identification of our level of mastering of IT complexity.
 
----
-
-Copyright (C) 2012-2018 Olivier Rey.
-Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
-A copy of the license is included in the page entitled [License](/license.md).
 
