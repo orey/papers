@@ -1,20 +1,16 @@
 # Olivier Rey's Papers
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+## Papers
 
-## Commands
+* [The Five Levels of Conceptual Maturity for IT Teams](articles/five-levels.md)
+* [The V2 Vortex](articles/the-v2-vortex.md) - New version
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+## Ongoing works
 
-## Project layout
+* [Considerations about Rest and Web Services](about-rest.md)
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+More to come soon...
+
 
 ---
 
