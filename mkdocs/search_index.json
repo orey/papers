@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "Olivier Rey's Papers\n\n\nPapers\n\n\n\n\nThe Five Levels of Conceptual Maturity for IT Teams\n\n\nThe V2 Vortex\n - New version\n\n\n\n\nOngoing works\n\n\n\n\nConsiderations about Rest and Web Services\n\n\n\n\nMore to come soon...\n\n\n\n\nSite licensed under the terms of the \nGNU FDL V3\n.",
+            "text": "Olivier Rey's Papers\n\n\nPapers\n\n\n\n\nThe Five Levels of Conceptual Maturity for IT Teams\n\n\nThe V2 Vortex\n - New version November 2017\n\n\nThe Various Stages of Digital Transformation\n\n\n\n\nOngoing works\n\n\n\n\nConsiderations about Rest and Web Services\n\n\n\n\nMore to come soon...\n\n\n\n\nSite licensed under the terms of the \nGNU FDL V3\n.",
             "title": "Home"
         },
         {
@@ -12,7 +12,7 @@
         },
         {
             "location": "/#papers",
-            "text": "The Five Levels of Conceptual Maturity for IT Teams  The V2 Vortex  - New version",
+            "text": "The Five Levels of Conceptual Maturity for IT Teams  The V2 Vortex  - New version November 2017  The Various Stages of Digital Transformation",
             "title": "Papers"
         },
         {
@@ -169,6 +169,16 @@
             "location": "/articles/the-v2-vortex/#notes",
             "text": "[1] - We will come back on technical debt in other parts of this book.  [2] - Archimate resources can be found here: http://www.opengroup.org/subjectareas/enterprise/archimate.  [3] - Refer to  The Five Levels Of Conceptual Maturity for IT Teams .",
             "title": "Notes"
+        },
+        {
+            "location": "/articles/various-stages/",
+            "text": "The Various Stages of Digital Transformation\n\n\n\n\nPresentation done in Airbus Helicopters for the PMI France Chapter.\n\n\nClick to see the \nPrezi presentation\n.",
+            "title": "The Various Stages of Digital Transformation"
+        },
+        {
+            "location": "/articles/various-stages/#the-various-stages-of-digital-transformation",
+            "text": "Presentation done in Airbus Helicopters for the PMI France Chapter.  Click to see the  Prezi presentation .",
+            "title": "The Various Stages of Digital Transformation"
         },
         {
             "location": "/articles/about-rest/",
