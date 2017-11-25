@@ -7,7 +7,7 @@
 
 ## Ongoing works
 
-* [Considerations about Rest and Web Services](about-rest.md)
+* [Considerations about Rest and Web Services](articles/about-rest.md)
 
 More to come soon...
 
