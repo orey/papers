@@ -171,12 +171,19 @@
         
             <li><a href="#the-corba-failed-attempt">The Corba Failed Attempt</a></li>
         
+            <li><a href="#the-core-problem-of-resource-orientation">The Core Problem of Resource Orientation</a></li>
+        
+            <li><a href="#conclusion">Conclusion</a></li>
+        
+            <li><a href="#annexes">Annexes</a></li>
+        
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="considerations-about-rest-and-web-services">Considerations About Rest And Web Services</h1>
+<p><img alt="Image with various protocol names" src="../..//images/rpcorb.png" /> </p>
 <p>It's been a very long time since I've been explaining this to a lot of people and maybe today I should try to put the full explanation on paper.</p>
 <h2 id="a-bit-of-history">A Bit Of History</h2>
 <p>When the REST concept was published, sometimes around 2001, I was in a middleware team in a big software company. In that team, we were accustomed to use business services for more than a decade.</p>
@@ -217,10 +224,51 @@
 <ul>
 <li>It supposes that the remote system is object oriented;</li>
 <li>It supposes that the remote system is stateful (the <code>B</code> instance must exist for its method to be called);</li>
+<li>It supposes an addressing system to find the reference of the instance of B;</li>
 <li>The contract of the method is not self sufficient, indeed, conceptually <code>A</code> asks for: <code>response = state(B).m(request)</code> which introduce some uncertainty on the call (because it depends on B state);</li>
 <li>The contract is supposing the state of B should be managed differently from the request parameters, and so, it puts a different semantic weight on B that should be a "first-class entity" whereas the request parameters are considered as "second class entities".</li>
 </ul>
-<p>[To be continued]</p></div>
+<p>This way of thinking distributed systems is leading to consider that the network offers "objects that can provide services on themselves", instead of providing simple services (i.e. distributed functions).</p>
+<p>In 2017's language, we could say that CORBA is proposing a "resource-oriented architecture".</p>
+<h3 id="the-drawbacks-of-the-orb-approach">The Drawbacks of the ORB Approach</h3>
+<p>An ORB (Object Request Broker) is a middleware that enables to manage those distributed objects, their remote invocation and the required addressing schema.</p>
+<p>The main drawback of the ORB approach is that a service can be, semantically, much more complex than calling one method of one object. Indeed, if we call a method on an object, we can imagine that the object will process this method on its state, or that it will process it considering its aggregation ("facade" pattern).</p>
+<p>For services, we do not make any assumptions of the kind. We just call a function that is supposed to do something with the inbound parameters that we provide (inbound parameters that are generally some kind of tree of objects having or not links together).</p>
+<p>Certainly, we can "twist" Corba in order to make it look like RPC: we can use objects that do not contain state and that have "methods" that are indeed just "procedures".</p>
+<p>But the addressing repository will have to manage object instance addresses instead of knowing the service location.</p>
+<h3 id="an-idea-that-keeps-coming-back">An Idea That Keeps Coming Back</h3>
+<p>This idea keeps coming back. Rest architecture can be seen as a reformulation of Corba principles:</p>
+<ul>
+<li>Resources are benefiting from an addressing scheme (URI);</li>
+<li>Resources have a name (class name), they are identified through their instance and they publish methods;</li>
+<li>Invoking a service is indeed a remote method invocation.</li>
+</ul>
+<p>Moreover, a strange design option is taken in the Rest specification: the presentation layer is binded on the underlying network protocol (http) in a very hard way. Indeed, the only verbs that seem to be invokable are CRUD verbs (CRUD standing for Create Retrieve Update Delete). </p>
+<p>We can also see this ORB principle applied, in a weaker way, in WSDL. When SOAP web services were really in the spirit of RPC, WSDL standard groups transactions in a way that is sometimes near to the idea of a group of methods operating on a remote object.</p>
+<p>We can note also in WSDL, a very strange hard biding on the underlying protocol (the WSDL schema integrates information from several OSI layers which is bad).</p>
+<p>Rest was those last years recently put in front of the scene due to IT marketing and the creation of <a href="https://swagger.io">Swagger.io</a></p>
+<h2 id="the-core-problem-of-resource-orientation">The Core Problem of Resource Orientation</h2>
+<p>Resource orientation, like in an ORB, is semantically a very hard restriction of RPC. RPC is a way of calling a service that will transform a graph of data in another graph of data. In the ORB approach, we call a method on a object, which is very restrictive.</p>
+<p>This can work if the semantics of the business is simple. If my business objects are modeled properly by one class, then maybe an ORB can work. If the business objects I have to model need several classes interacting together in a complex manner, then using an ORB will be a real pain. When a service can transform my graph of objects into another graph of objects, an ORB will force me to "adapt" my semantics to a pure technical object-oriented method call.</p>
+<p>For sure, this is true for Rest, as it was true for Corba. For pure Rest, it is even worse: being able to consider that only the http verbs (network layer) should be used to express the semantics of the presentation layer, the semantics of the "functional verbs" seems even more restrictive than Corba.</p>
+<p>For social networks like Twitter or Facebook, it seems to work. I can define a Rest API providing all the services offered by the platform. For a business application, we generally cannot use Rest because the constraints (RMI with CRUD verbs) are too strong.</p>
+<p>Again, like in Corba, we can cheat: we can use "almost Rest" and have a request body with JSON. That turns the method invocation into an almost-service. We can also include in the request a service name, but that is pretending to implement Rest and doing JSON-RPC-like behind the scene.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Rest is very practical for the applications which semantics is simple and can be adapted to two constraints:</p>
+<ul>
+<li>A resource oriented API (pushing for services to be RMI);</li>
+<li>A verb semantic limited to a variation of CRUD.</li>
+</ul>
+<p>For other applications, like business applications, we believe things never changed for decades. Before SOA, RPC services were existing. They were the same stuff than JSON-RPC like transactions today.</p>
+<p>Service orientation is a much more general way of implementing service distribution than ORB concepts. In particular, service orientation does not presuppose that the remote server sees the data as the caller  does. The service signature is an agreed contract for both the client and the server to communicate together, but each of them can restructure data as they want, in an object oriented way or not.</p>
+<p>So, my advice is not to force yourself to implement a Rest API to your application because it is trendy, but to do it only if your business semantics enables it.</p>
+<h2 id="annexes">Annexes</h2>
+<h3 id="about-graphql">About GraphQL</h3>
+<p>GraphQL stands as an intermediate between Rest and JSON-RPC. It also has schemas that enable the client to ask for certain data to the server. Indeed, all that seems a bit resource oriented.</p>
+<p>[To be continued]</p>
+<hr />
+<p>Notes:</p>
+<p>[1] - In some businesses, like the airline one (standardized by <a href="https://www.iata.org">IATA</a>), services have big requests and big responses for decades because the business requires it.</p></div>
             
         </div>
 
