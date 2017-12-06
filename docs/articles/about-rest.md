@@ -117,24 +117,17 @@ Rest is very practical for the applications which semantics is simple and can be
  * A resource oriented API (pushing for services to be RMI);
  * A verb semantic limited to a variation of CRUD.
 
-For other applications, like business applications, we believe things never changed for decades. Before SOA, RPC services were existing. They were the same stuff than JSON-RPC like transactions today.
+For other applications, like business applications [1], we believe things never changed for decades. Before SOA, RPC services were existing. They were the same stuff than JSON-RPC like transactions today.
 
 Service orientation is a much more general way of implementing service distribution than ORB concepts. In particular, service orientation does not presuppose that the remote server sees the data as the caller  does. The service signature is an agreed contract for both the client and the server to communicate together, but each of them can restructure data as they want, in an object oriented way or not.
 
 So, my advice is not to force yourself to implement a Rest API to your application because it is trendy, but to do it only if your business semantics enables it.
 
-## Annexes
+## See Also
 
-### About GraphQL
+ * [About GraphQL](graphql-web-services)
 
-GraphQL stands as an intermediate between Rest and JSON-RPC. It also has schemas that enable the client to ask for certain data to the server. Indeed, all that seems a bit resource oriented.
-
-[To be continued]
-
-
----
-
-Notes:
+## Notes
 
 [1] - In some businesses, like the airline one (standardized by [IATA](https://www.iata.org)), services have big requests and big responses for decades because the business requires it.
 
