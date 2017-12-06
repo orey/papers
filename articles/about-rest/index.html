@@ -175,7 +175,9 @@
         
             <li><a href="#conclusion">Conclusion</a></li>
         
-            <li><a href="#annexes">Annexes</a></li>
+            <li><a href="#see-also">See Also</a></li>
+        
+            <li><a href="#notes">Notes</a></li>
         
     
     </ul>
@@ -259,15 +261,14 @@
 <li>A resource oriented API (pushing for services to be RMI);</li>
 <li>A verb semantic limited to a variation of CRUD.</li>
 </ul>
-<p>For other applications, like business applications, we believe things never changed for decades. Before SOA, RPC services were existing. They were the same stuff than JSON-RPC like transactions today.</p>
+<p>For other applications, like business applications [1], we believe things never changed for decades. Before SOA, RPC services were existing. They were the same stuff than JSON-RPC like transactions today.</p>
 <p>Service orientation is a much more general way of implementing service distribution than ORB concepts. In particular, service orientation does not presuppose that the remote server sees the data as the caller  does. The service signature is an agreed contract for both the client and the server to communicate together, but each of them can restructure data as they want, in an object oriented way or not.</p>
 <p>So, my advice is not to force yourself to implement a Rest API to your application because it is trendy, but to do it only if your business semantics enables it.</p>
-<h2 id="annexes">Annexes</h2>
-<h3 id="about-graphql">About GraphQL</h3>
-<p>GraphQL stands as an intermediate between Rest and JSON-RPC. It also has schemas that enable the client to ask for certain data to the server. Indeed, all that seems a bit resource oriented.</p>
-<p>[To be continued]</p>
-<hr />
-<p>Notes:</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="../graphql-web-services">About GraphQL</a></li>
+</ul>
+<h2 id="notes">Notes</h2>
 <p>[1] - In some businesses, like the airline one (standardized by <a href="https://www.iata.org">IATA</a>), services have big requests and big responses for decades because the business requires it.</p></div>
             
         </div>
