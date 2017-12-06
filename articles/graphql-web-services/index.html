@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Olivier Rey">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>GraphQL And Classic Web Services - Papers</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-110156293-1', 'orey.github.io');
+            ga('send', 'pageview');
+        </script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">Papers</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Articles <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../five-levels/">The Five Levels of Conceptual Maturity for IT Teams</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../the-v2-vortex/">The V2 Vortex</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../various-stages/">The Various Stages of Digital Transformation</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../about-rest/">Considerations About Rest And Web Services</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">GraphQL And Classic Web Services</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../about/about/">Author</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../about/LICENSE/">License</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../about-rest/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../../about/about/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/orey/papers/">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#graphql-and-classic-web-services">GraphQL And Classic Web Services</a></li>
+        
+            <li><a href="#the-basics-of-services">The Basics of Services</a></li>
+        
+            <li><a href="#graphql-answers-to-service-oriented-requirements">GraphQL Answers To Service Oriented Requirements</a></li>
+        
+            <li><a href="#a-promising-standard">A Promising Standard</a></li>
+        
+            <li><a href="#conclusion">Conclusion</a></li>
+        
+            <li><a href="#see-also">See also</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="graphql-and-classic-web-services">GraphQL And Classic Web Services</h1>
+<p><img alt="GraphQL logo" src="../..//images/graphql.png" /> </p>
+<p>Facebook produced the <a href="http://graphql.org/">GraphQL specification</a> in order to be an alternative to Rest.</p>
+<p>We already explained <a href="../about-rest/">what we thought of Rest services</a>.</p>
+<p>GraphQL appears to us as a new way to do the same thing that what the industry is doing for decades.</p>
+<p>This article is a first analysis of GraphQL and may be enriched or corrected with time with feedback on the industrial use of the standard.</p>
+<h2 id="the-basics-of-services">The Basics of Services</h2>
+<h3 id="various-standards-same-spirit">Various Standards, Same Spirit</h3>
+<p>The underlying basis of services is RPC (Remote Procedure Call, <a href="../about-rest/">see the dedicated article on the subject</a>). For decades, this concept is reinvented again and again with various flavors.</p>
+<p>Apart from RPC protocols or proprietary protocols (like the <a href="https://en.wikipedia.org/wiki/Tuxedo_(software)">Tuxedo</a> ones), <a href="https://en.wikipedia.org/wiki/EDIFACT">Edifact</a> was for a long time an industry standard in some business domains like travel, banking, medical and logistics. Edifact was replaced by <a href="https://en.wikipedia.org/wiki/XML">XML</a> then by <a href="https://en.wikipedia.org/wiki/JSON">JSON</a>.</p>
+<p>Every of those standards aimed to provide the same functionality: exchanging structured data between two different systems, probably implemented with different programming languages and/or paradigms, and having a client system benefiting from a service provided by a server system.</p>
+<h3 id="basic-requirements-for-a-service-oriented-language">Basic Requirements For a Service Oriented Language</h3>
+<p>The first requirement is to have a "verb", meaning the name of the "transaction" we expect the remote system to process.</p>
+<p>The second requirement is to have a type system to be able to send structured data under the form of a tree of objects. This is generally achieved by proposing basic types (like string, integer, float, etc.) and the capability of defining fields that have those properties and that can be grouped into classes. Classes will generally have to indicate what fields are required and what fields are optional. This is generally done within the context of one particular transaction.</p>
+<p>Once classes are defined, they can be grouped in larger structures or other classes to define groups of object structures than define larger entities, most of the time, better suitable to express the business semantics.</p>
+<p>Optionally, those definitions are expressed in "grammars" or "schemas". This is the case in RPC systems, in Edifact and in XML, and this is optional for JSON. Note that, even if there is no explicit schema mechanism, the fact of defining objects and structures leads to the use of implicit schemas. The difference is really what part of the code is "validating" that the messages are well formed:</p>
+<ul>
+<li>With an explicit schema definition, we can generate the validation code and create a kind of serializer/unserializer layer (wrapper/unwrapper or proxy/stub layer);</li>
+<li>Without an explicit schema definition, the validation code is generally hand written.</li>
+</ul>
+<p>All those requirements are defined in the <a href="https://en.wikipedia.org/wiki/OSI_model">OSI model</a> in the "presentation layer".</p>
+<h3 id="dont-forget-the-protocol">Don't forget the protocol</h3>
+<p>The last requirement is to have some kind of underlying protocol to:</p>
+<ul>
+<li>Send and receive messages between systems;</li>
+<li>Create a naming convention that enables to use the name of the service (or name of the "verb");</li>
+<li>Find the network configuration that enable to route the request message to the proper entry point;</li>
+<li>Possibly associate the request and the response with identifiers;</li>
+<li>Possibly include information about the sender and its security credentials.</li>
+</ul>
+<p>Once again, the <a href="https://en.wikipedia.org/wiki/OSI_model">OSI model</a> defines a certain split of responsibilities between all those requirements. Quickly explained:</p>
+<ul>
+<li>The transport layer (layer 4) is defining the addressing scheme and primitives that enables several systems to communicate together;</li>
+<li>The session layer (layer 5) enables to manage the sessions and conversations between the client and the server; this layer manages the succession of names messages that the two peers will exchange;</li>
+<li>The presentation layer (layer 6) manages the content of data, their structure and their values.</li>
+</ul>
+<h2 id="graphql-answers-to-service-oriented-requirements">GraphQL Answers To Service Oriented Requirements</h2>
+<p>GraphQL seems to us as a new flavor of the same old story. It brings some interesting new stuff (and we will come back on that), but the important point is that we can implement traditional services with this language.</p>
+<h3 id="the-verb">The "verb"</h3>
+<p>Each GraphQL service is an named <code>http</code> entry point. The <code>get</code> method will be used to access the <code>query</code>part of the service and the <code>post</code> method will access the <code>mutation</code> part of it.</p>
+<p>This looks like Rest but this is rather different, because the idea seems not to get some resources (even if it is possible), but to perform a service.</p>
+<h3 id="the-type-system">The Type System</h3>
+<p>GraphQL proposes an extended type system that proposes:</p>
+<ul>
+<li>Basic types,</li>
+<li>Classes,</li>
+<li>Groups of classes,</li>
+<li>Fragments (kind of filters on classes),</li>
+<li>Queries.</li>
+</ul>
+<p>With all the available semantics, it is very easy to implement all the existing web services that are used currently in the business.</p>
+<p>Moreover, it seems possible to have a richer interface on existing services and a more adaptative way of performing transactions.</p>
+<p>This seems rather promising for mobile or chatbot accesses for instance. Those two UIs manipulate a small amount of data and may require some server services to adapt their reply to their particular use.</p>
+<h3 id="and-the-protocol">And The Protocol?</h3>
+<p>In the Web, the protocol is <code>http</code> and the approach seems inspired by both Rest and Ajax kind of calls.</p>
+<h2 id="a-promising-standard">A Promising Standard</h2>
+<h3 id="an-intermediate-between-json-rpc-and-rest">An Intermediate Between JSON-RPC and Rest?</h3>
+<p>GraphQL seems to target the intermediate path between JSON-RPC (which is a simplified SOAP) and Rest. The fact of publishing a schema enables both approaches:</p>
+<ul>
+<li>Perform elaborated services (like before);</li>
+<li>Access business objects (like the Rest or CRUD approach).</li>
+</ul>
+<p>GraphQL seems to propose a way to benefit from both approaches.</p>
+<p>The industrial use, I mean for large scale applications, has to be assessed and this article will probably be updated soon with real life feedback about the use of this protocol.</p>
+<h3 id="towards-a-new-kind-of-applications">Towards A New Kind Of Applications?</h3>
+<p>So it seems possible to build new kinds of business applications, let's say "graph-oriented applications".</p>
+<p>This is a major change in the way the business applications are designed and we will come back on that point in other articles.</p>
+<h3 id="the-smart-facebook-team">The Smart Facebook Team</h3>
+<p>Well, despite the fact that I am not a Facebook user, I must recognize that the Facebook teams are smart. Each time they release a piece of software, the software is very often a bit smarter than what the other company are doing (except Amazon).</p>
+<p>This is the case for the <a href="https://reactjs.org/">React</a>/<a href="https://redux.js.org/">Redux</a> stuff, for the <a href="https://developers.facebook.com/docs/messenger-platform">chatbot API for Facebook Messenger</a>.</p>
+<p>This standard is smart because it surfs on the Rest wave (and Swagger.io stuff) while recognizing (implicitly) that it is not (always) possible for real business to implement Rest.</p>
+<p>Look at this diagram:</p>
+<p><img alt="Facebook schema showing a business layer" src="../../images/business_layer.png" /></p>
+<p>Most enterprise systems are very familiar with those kinds of schema (generally a bit more complicated). GraphQL stands in between RPC and Rest! Very funny indeed.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The GraphQL standard appears to be a very interesting and promising new way of doing the same old stuff plus probably more.</p>
+<p>It opens also the road to other kind of business application design, more graph-oriented - which is really business oriented. Because the business semantic is fundamentally a graph, and said otherwise, the best way of representing the business knowledge is a semantic graph.</p>
+<p>GraphQL also attracts progressively Rest adopters to a more RPC-like world, which is nice considering the extremist Rest approach that we can find on some companies. In those companies, many people struggle to implement Rest whereas their business just "doesn't fit" in it.</p>
+<p><a href="../five-levels/">Smart people make smart software</a>, I am convinced of that.</p>
+<p>Waiting for more industrial feedback, I would say: "nice move, Facebook".</p>
+<h2 id="see-also">See also</h2>
+<ul>
+<li><a href="../about-rest/">About Rest</a></li>
+</ul></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+                <p>Copyright Olivier Rey 2017 - Site licensed under the GNU FDL V3</p>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
