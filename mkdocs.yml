@@ -13,6 +13,7 @@ pages:
     - 'The V2 Vortex': 'articles/the-v2-vortex.md'
     - 'The Various Stages of Digital Transformation': 'articles/various-stages.md'
     - 'Considerations About Rest And Web Services': 'articles/about-rest.md'
+    - 'GraphQL And Classic Web Services': 'articles/graphql-web-services.md'
 - About:
     - Author: 'about/about.md'
     - License: 'about/LICENSE.md'

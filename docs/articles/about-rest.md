@@ -125,7 +125,7 @@ So, my advice is not to force yourself to implement a Rest API to your applicati
 
 ## See Also
 
- * [About GraphQL](graphql-web-services)
+ * [About GraphQL](graphql-web-services.md)
 
 ## Notes
 

@@ -1,10 +1,10 @@
-# Using GraphQL To Implement Classic Web Services
+# GraphQL And Classic Web Services
 
 ![GraphQL logo](..//images/graphql.png) 
 
 Facebook produced the [GraphQL specification](http://graphql.org/) in order to be an alternative to Rest.
 
-We already explained [what we thought of Rest services](about-rest).
+We already explained [what we thought of Rest services](about-rest.md).
 
 GraphQL appears to us as a new way to do the same thing that what the industry is doing for decades.
 
@@ -14,7 +14,7 @@ This article is a first analysis of GraphQL and may be enriched or corrected wit
 
 ### Various Standards, Same Spirit
 
-The underlying basis of services is RPC (Remote Procedure Call, [see the dedicated article on the subject](about-rest)). For decades, this concept is reinvented again and again with various flavors.
+The underlying basis of services is RPC (Remote Procedure Call, [see the dedicated article on the subject](about-rest.md)). For decades, this concept is reinvented again and again with various flavors.
 
 Apart from RPC protocols or proprietary protocols (like the [Tuxedo](https://en.wikipedia.org/wiki/Tuxedo_(software)) ones), [Edifact](https://en.wikipedia.org/wiki/EDIFACT) was for a long time an industry standard in some business domains like travel, banking, medical and logistics. Edifact was replaced by [XML](https://en.wikipedia.org/wiki/XML) then by [JSON](https://en.wikipedia.org/wiki/JSON).
 
@@ -122,10 +122,10 @@ It opens also the road to other kind of business application design, more graph-
 
 GraphQL also attracts progressively Rest adopters to a more RPC-like world, which is nice considering the extremist Rest approach that we can find on some companies. In those companies, many people struggle to implement Rest whereas their business just "doesn't fit" in it.
 
-[Smart people make smart software](five-levels), I am convinced of that.
+[Smart people make smart software](five-levels.md), I am convinced of that.
 
 Waiting for more industrial feedback, I would say: "nice move, Facebook".
 
 ## See also
 
-* [About Rest](about-rest)
+* [About Rest](about-rest.md)
