@@ -8,7 +8,7 @@ We already explained [what we thought of Rest services](about-rest.md).
 
 GraphQL appears to us as a new way to do the same thing that what the industry is doing for decades.
 
-This article is a first analysis of GraphQL and may be enriched or corrected with time with feedback on the industrial use of the standard.
+This article is an analysis of GraphQL principles, their consequences and a comparison with traditional ways of doing web services.
 
 ## The Basics of Services
 
