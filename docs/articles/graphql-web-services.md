@@ -137,7 +137,7 @@ The second consequence is also double:
  1. You published your graph business model to your clients;
  1. You use your database model as the presentation layer.
 
-This second point is very problematic. Indeed, it explains why the protocol is proposing so much complexity in some of its part: because it is supposed to be, at the same time, a protocol and a graph query language (like [Cypher](https://www.opencypher.org/).
+This second point is very problematic. Indeed, it explains why the protocol is proposing so much complexity in some of its part: because it is supposed to be, at the same time, a protocol and a graph query language (like [Cypher](https://www.opencypher.org/)).
 
 In a certain sense, it is supposed to be the new [SQL*Net](http://www.orafaq.com/wiki/SQL*Net) or [ODBC](https://docs.microsoft.com/fr-fr/sql/odbc/microsoft-open-database-connectivity-odbc) but for graphs.
 
@@ -215,7 +215,7 @@ Note that we did not really enter into the core details of "how do we really bui
 
 ## A Correct Intuition?
 
-If we try to step back one minute, we can say that the Facebook team may have had an intuition that, with the graph-oriented modeling approach, this fundamental principle or interoperability could be declared obsolete (and consequently graphs could be in the client, in the server, in the database, with exactly the same structure.
+If we try to step back one minute, we can say that the Facebook team may have had an intuition that, with the graph-oriented modeling approach, this fundamental principle or interoperability could be declared obsolete (and consequently graphs could be in the client, in the server, in the database, with exactly the same structure).
 
 In some cases, that's true: if you master both ends of the wire, that's probably one very efficient way to do it. But it looks like ODBC or SQL*Net anyway.
 
@@ -227,13 +227,14 @@ GraphQL is a very interesting attempt to propose a middle term between REST and 
 
 ![Facebook schema showing a business layer](../images/business_layer.png)
 
-However, this diagram is very misleading because the 3 inbound protocols have many impacts on the server design, contrary to what's presented.
+However, this diagram is very misleading because the 3 inbound protocols have many different impacts on the server design, contrary to what's presented. Indeed, both REST and GraphQL imply a very specific programming model:
 
-If REST is imposing a hard resource orientation that is unnatural to business applications (see [here](about-rest.md)), GraphQL proposes a graph-oriented ODBC-like protocol that will have the tendency to tie-up strongly the client and the server.
+ * REST is imposing a hard resource orientation that is unnatural to business applications (see [here](about-rest.md)),
+ * GraphQL proposes a graph-oriented ODBC-like protocol that will have the tendency to tie-up strongly the client and the server.
 
-Indeed, it seems to us that, so far, only RPC enables to design and deliver reliable and secure business applications.
+The conclusion is it seems to us that, so far, only RPC enables to design and deliver reliable and secure business applications, and to do it the way you want. RPC defines a contract that can lead to many various programming paradigms, which is not the case for REST or for GraphQL.
 
-The GraphQL has, however, opened publicly the cas of graph-orientation in the design of business applications.
+The GraphQL has, however, opened publicly the case of graph-orientation in the design of business applications.
 
 This area is really a core game changer for the IT business and it will be a topic described and explained in the future in this site.
 
