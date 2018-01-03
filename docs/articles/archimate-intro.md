@@ -10,6 +10,8 @@ All Archimate diagrams of this site are done using [Archi](https://www.archimate
 
 ## A Semantic Modeling Language
 
+### Brief Introduction To The Archimate Meta-Model
+
 Archimate is a modeling language that enables to describe and study several aspects of the enterprise:
 
   * Its strategy and motivations,
@@ -23,27 +25,63 @@ Archimate is a modeling language that enables to describe and study several aspe
 All those aspects propose:
 
   * Typed artifacts,
-  * Authorized typed relationships between artifacts.
+  * Typed relationships between artifacts.
 
-Moreover, Archimate defines interlayer relationships which enables to "connect" the various layers together.
+Note that several relationships types can interconnect many different types or can be used in many contexts. The detailed description of all artifacts is not in the scope of this article and we can advise the reader to refer to the book *Enterprise Architecture At Work* from [Mark Lankshorst](https://en.wikipedia.org/wiki/Marc_Lankhorst).
 
-This enables  to build a model that is actually a *graph*.
+Archimate also defines interlayer relationships which enables to "connect" the various layers together. This is an absolutely fundamental feature of the language.
 
-In this graph model, each artifact can be represented with the union of all relationships that this artifact has with other artifacts. 
+Indeed, an Archimate model is actually a *graph*. For those who are familiar with the Semantic Web ([RDF, RDFS](https://en.wikipedia.org/wiki/Resource_Description_Framework), and [OWL](https://en.wikipedia.org/wiki/Web_Ontology_Language)), any Archimate model is a semantic graph.
+
+The graph model is the result of the union of all diagrams implemented with the same set of artifacts. For each artifact, the union of all its incoming and outgoing relationships creates the [neighborhood](https://en.wikipedia.org/wiki/Neighbourhood_(graph_theory)) of the artifact in the graph model.
 
 When you use Archimate, you represent things using the various artifacts that are available to you. Each element you draw on a certain views (there are many types of views) will have a certain type, like "Business Process" or "Application Function". Thus, the resulting model will be a set of views, each of them presenting many interconnected artifacts that all are instances of types that have a specific *meaning*.
+
+### Viewpoint And Meta-Model
+
+The creation of a semantic language generally implies the creation a meta-model.
+
+Many tools are existing to create meta-models (for instance [Eclipse EMF](https://www.eclipse.org/modeling/emf/) with [Sirius](http://www.eclipse.org/sirius/), or [MetaEdit+](https://www.metacase.com/mep/) depending if you want to pay or not).
+
+In the history of enterprise architecture, many approaches defined the notion of "view point": in order to act on the enterprise as a whole (or as a system), the first step is to describe the enterprise. In order to describe it, due to the complexity of the task, the architect must use several viewpoints. The union of those viewpoints is defining the model of the enterprise.
+
+The [Zachman framework](https://en.wikipedia.org/wiki/Zachman_Framework) was one of the first publicly available enterprise architecture "framework".
+
+The problem with this framework, but also with many other enterprise architecture frameworks, is that they propose many viewpoints, generally each of them proposing a complete meta-model for each viewpoint (with artifact types and relationship types), but no consistent view of those various viewpoints.
+
+This is a major issue for the framework because:
+
+  * Separate meta-models for separate viewpoints can be ambiguous and can create various ways of representing the same things;
+  * There can be semantic overlap between various viewpoints and their respective meta-model;
+  * What should be a single viewpoint can artificially be split into different view points with different meta-models (we'll see later in this article the dramatic consequences of the Longépé Enterprise Architecture model in France).
+
+If the consistency is not "built in" the framework, if it is not part of the primary requirements, then the framework will be very difficult to use.
+
+And the fact is interconnecting various meta-models to be able to create something consistent is not an easy task. Indeed, Archimate seems to be the best illustration of it, and I fear I don't know many other samples. The only modeling approach that look like Archimate is the [Aris methodology](https://en.wikipedia.org/wiki/Architecture_of_Integrated_Information_Systems).
+
+### Samples of Non Consistent Modeling Approaches
+
+UML is not consistent due to the many meta-models that are not semantically connected together as a whole.
+
+Suppose you made class diagrams and sequence diagrams for a set of classes. You can add a state diagram for a particular process of a specific class `A` of your model. In UML, there is no way to know if this state diagram is consistent or not with the rest of the diagrams that include `A`. This is due to the fact that UML proposes a set of various kinds of views that are not *linked together*.
+
+Another dramatic inconsistent model is the Longépé French model which defined, instead of Archimate "software layer", two different layers:
+
+  * One functional layer, that could be interpreted as the Application Function part of the Archimate meta-model,
+  * One technical layer, that could be interpreted as the Application Component part of the Archimate meta-model.
+
+As in Archimate, there is, for Longépé, a business layer and an infrastructure layer, which scopes are almost the same than Archimate's.
+
+In Longépé model, every model can be "derived" from the model of the superior layer. This means that the technical layer can be derived from the functional layer. This assertion is obscure, misleading and semantically erroneous. In Archimate, the application function is "assigned to" a application component. That enables to manage the good and the bad assignment, what is called the "urbanisation" in French (notion of good or bad function positioning in the global IT systems).
+
+This particular problem caused a huge number of projects to fail, and numerous errors of interpretation and understanding for French architects. The book of Christophe Longépé was at the origin of many misjudgments, errors, and confusions in the French markets since the publication of its first edition in 2001.
+
+***
 
 ## The Many Revolutions of Archimate
 
 ### Revolution #1: The Language Just Works
 
-The creation of a semantic language implies to create a meta-model. Many tools are existing to create meta-models (for instance [Eclipse EMF](https://www.eclipse.org/modeling/emf/) with [Sirius](http://www.eclipse.org/sirius/), or [MetaEdit+](https://www.metacase.com/mep/) depending if you want to pay or not).
-
-In the history of enterprise architecture, many languages were aggregated or created to represent the various aspects of the reality, to begin with the [Zachman framework](https://en.wikipedia.org/wiki/Zachman_Framework).
-
-The problem with many enterprise architecture modeling languages is that they propose a way to describe the various parts of the reality but they don't focus on the necessary underlying *consistency*.
-
-This is exactly the same problem for UML modeling. Suppose you made class diagrams and sequence diagrams for a set of classes. You can add a state diagram for a particular process of a specific class `A` of your model. Indeed, in UML, there is no way to know if this state diagram is consistent with the rest of the diagrams that include `A`. This is due to the fact that UML proposes a set of various kinds of views that are not *linked together*.
 
 It is the same for the various views of many meta-model. Indeed, if the quality of the meta-model is high, then the modeling will be good. However, if the meta-model is bad, the modeling will be very bad.
 
