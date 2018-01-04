@@ -61,9 +61,15 @@ And the fact is interconnecting various meta-models to be able to create somethi
 
 ### Samples of Non Consistent Modeling Approaches
 
+#### Sample #1: UML
+
 UML is not consistent due to the many meta-models that are not semantically connected together as a whole.
 
 Suppose you made class diagrams and sequence diagrams for a set of classes. You can add a state diagram for a particular process of a specific class `A` of your model. In UML, there is no way to know if this state diagram is consistent or not with the rest of the diagrams that include `A`. This is due to the fact that UML proposes a set of various kinds of views that are not *linked together*.
+
+This problem can perhaps explain why modeling in UML was progressively abandoned by many projects; because it was not really suited to express in a consistent way what the code should be.
+
+#### Sample #2: Longépé
 
 Another dramatic inconsistent model is the Longépé French model which defined, instead of Archimate "software layer", two different layers:
 
@@ -72,16 +78,19 @@ Another dramatic inconsistent model is the Longépé French model which defined,
 
 As in Archimate, there is, for Longépé, a business layer and an infrastructure layer, which scopes are almost the same than Archimate's.
 
-In Longépé model, every model can be "derived" from the model of the superior layer. This means that the technical layer can be derived from the functional layer. This assertion is obscure, misleading and semantically erroneous. In Archimate, the application function is "assigned to" a application component. That enables to manage the good and the bad assignment, what is called the "urbanisation" in French (notion of good or bad function positioning in the global IT systems).
+In the Longépé model, every model can be "derived" from the model of the superior layer. This means that the technical layer can be derived from the functional layer. This assertion is obscure, misleading and semantically erroneous. In Archimate, the application function is "assigned to" a application component. That enables to manage the good and the bad assignment, what is called the "urbanisation" in French (notion of good or bad function positioning in the global IT systems).
 
-This particular problem caused a huge number of projects to fail, and numerous errors of interpretation and understanding for French architects. The book of Christophe Longépé was at the origin of many misjudgments, errors, and confusions in the French markets since the publication of its first edition in 2001.
+This artificial split of one layer (the application layer of Archimate) into two layers which dependency is erroneously defined, caused a huge number of French IT projects to fail, and numerous errors of interpretation and understanding for French architects. The book of Christophe Longépé was at the origin of many misjudgments, errors, confusions and money loss in the French market since the publication of its first edition in 2001.
 
-***
+#### Sample #3: Projects Creating Their Own Modeling Framework
+
+In consulting missions, I also saw strange practices, as the one of creating a project-specific enterprise architecture modeling framework that evolved throughout the project and incorporated progressively various inconsistent meta-models coming from various modeling standards. For sure, all architects works in this framework were confusing and not usable and led the project to failure.
 
 ## The Many Revolutions of Archimate
 
 ### Revolution #1: The Language Just Works
 
+That's why the fact 
 
 It is the same for the various views of many meta-model. Indeed, if the quality of the meta-model is high, then the modeling will be good. However, if the meta-model is bad, the modeling will be very bad.
 
