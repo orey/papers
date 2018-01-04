@@ -1,6 +1,6 @@
 # Introduction to the Archimate Revolution
 
-![Archimate logo](..//images/archimate.png) 
+![Archimate logo](../images/archimate.png) 
 
 In the last decade, a quiet revolution took place in the Enterprise Architecture (EA) domain. This revolution is called [Archimate](http://www.opengroup.org/subjectareas/enterprise/archimate).
 

@@ -1,6 +1,6 @@
 # GraphQL And Classic Web Services
 
-![GraphQL logo](..//images/graphql.png) 
+![GraphQL logo](../images/graphql.png) 
 
 Facebook produced the [GraphQL specification](http://graphql.org/) in order to be an alternative to Rest.
 
