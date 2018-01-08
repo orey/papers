@@ -10,11 +10,7 @@
 
 * [Considerations about Rest and Web Services](articles/about-rest.md)
 * [GraphQL And Classic Web Services](articles/graphql-web-services.md)
+* [A Simple Meta-Model for Portfolio Management](articles/portfolio.md)
 
 More to come soon...
-
-
----
-
-Site licensed under the terms of the [GNU FDL V3](about/LICENSE.md).
 

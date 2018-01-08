@@ -151,6 +151,8 @@ After decades of projects and auditing, most of the companies I saw facing the V
 
 [3] - Refer to [The Five Levels Of Conceptual Maturity for IT Teams](five-levels.md).
 
+(*June 2015, corrected November 2017*)
+
 
 
 

@@ -131,3 +131,6 @@ So, my advice is not to force yourself to implement a Rest API to your applicati
 
 [1] - In some businesses, like the airline one (standardized by [IATA](https://www.iata.org)), services have big requests and big responses for decades because the business requires it.
 
+(*December 2017*)
+
+
