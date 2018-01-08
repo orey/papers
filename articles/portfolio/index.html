@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Olivier Rey">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>A Simple Meta-Model for Portfolio Management - Papers</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-110156293-1', 'orey.github.io');
+            ga('send', 'pageview');
+        </script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">Papers</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Articles <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../five-levels/">The Five Levels of Conceptual Maturity for IT Teams</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../the-v2-vortex/">The V2 Vortex</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../various-stages/">The Various Stages of Digital Transformation</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../about-rest/">Considerations About Rest And Web Services</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../graphql-web-services/">GraphQL And Classic Web Services</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">A Simple Meta-Model for Portfolio Management</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../about/about/">Author</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../about/LICENSE/">License</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../graphql-web-services/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../../about/about/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/orey/papers/">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#a-simple-meta-model-for-portfolio-management">A Simple Meta-Model for Portfolio Management</a></li>
+        
+            <li><a href="#meta-model-presentation">Meta-Model Presentation</a></li>
+        
+            <li><a href="#methodology">Methodology</a></li>
+        
+            <li><a href="#limits-of-the-method">Limits of the Method</a></li>
+        
+            <li><a href="#what-tools-can-help">What Tools Can Help?</a></li>
+        
+            <li><a href="#conclusion">Conclusion</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="a-simple-meta-model-for-portfolio-management">A Simple Meta-Model for Portfolio Management</h1>
+<p><img alt="Portfolio image" src="../../images/portfolio.jpg" /></p>
+<p><em>Image courtesy of freedigitalphotos.net</em>.</p>
+<p>One of the main problems of companies is to manage many IT projects at the same time. Most often, the companies facing this problem are managing project portfolios.</p>
+<p>The main drawback of managing several projects in parallel is that is is not easy to:</p>
+<ul>
+<li>Understand the dependencies of the various projects together, and so the order in which they should be led;</li>
+<li>Identify and deal with the various scope overlaps between the various projects;</li>
+<li>Manage the relationship with the business people that want the various projects to happen.</li>
+</ul>
+<p>This article presents a very simple method to use to address all those points. We will present the original version of the meta-model. An <a href="archimate-intro.md">Archimate</a> version of this model will be presented in another article.</p>
+<p>This method mostly targets enterprise or IT architects, program managers or project portfolio managers. Due to its simplicity, many other profiles can use it.</p>
+<h2 id="meta-model-presentation">Meta-Model Presentation</h2>
+<p>The first objective is to formalize the client of the IT project. Each organization has several departments in which we have several different customers.</p>
+<p>Our first artifact type will be <code>Organization</code>. We will assume that every organization can include several other organizations. Each organization will also have a customer name as an attribute.</p>
+<p>When the projects intentions are declared, the materials that are produced by the various customers inside the same organization will generally be a list of many projects, with a project name and a more or less developed functional description.</p>
+<p>We will define two artifact types to model that:</p>
+<ul>
+<li><code>Project</code> to model the project,</li>
+<li><code>Function</code> to model the functionality.</li>
+</ul>
+<p>In the existing IT systems, we have applications. With the projects to come, some of the current application will get new functions, some new applications will be created and some other will be decommissioned.</p>
+<p>We need one more artifact type: <code>Application</code> that models the application; if the application is new, we need a way to tag it as "new" or "existing".</p>
+<p>The <code>Function</code> artifact type will be used to attach functionality to <code>Application</code>s. For this purpose, we need an attribute on the <code>Function</code> that indicates if the function is already existing, if it is new or if it must evolve.</p>
+<p>As applications are part of a big part of the IT systems (for instance the financial systems), we will attach the application to an application domain; we will use the <code>Domain</code> artifact type for that purpose.</p>
+<p>In terms of relationships, we have the following semantics:</p>
+<ul>
+<li>An <code>Organization</code> can contain other <code>Organization</code>s;</li>
+<li>An <code>Organization</code> will be the customer of several <code>Project</code>s;</li>
+<li><code>Project</code>s are aggregating <code>Function</code>s;</li>
+<li><code>Application</code>s are attached to <code>Domain</code>s and <code>Function</code>s are attached to them.</li>
+</ul>
+<p>The resulting meta-model is presented on the following figure.</p>
+<p><img alt="Image representing the meta model" src="../../yed/portfolio.png" /></p>
+<h2 id="methodology">Methodology</h2>
+<p>Let's suppose we use this model during the budgeting process that usually happens once a year in companies. Budget time is often the time for difficult choices.</p>
+<p>The following method is easy to use, can neutralize affects and help the top level management to choose between projects and to create a feasible roadmap within the limits of a feasible budget.</p>
+<h3 id="step-1-accept-all-project-requests-and-identify-functions">Step 1: Accept All Project Requests and Identify Functions</h3>
+<p>The first step is consisting in gathering all projects intentions from all organizations.</p>
+<p>We will analyze organization per organization. For each customer within a particular organization, the project intentions are gathered.</p>
+<p>The objective is to get the best functional description of the requirements possible and to identify the required functions. Very often, the requirements are a list of features (warning: some of them may already have been implemented without the customer to know about it).</p>
+<p>In that phase, the customer must not be challenged, but the architect should try his best to understand the <em>functional</em> (and non functional) requirements. To do that, it can be necessary to distinguish between the solution imagined by the customer and the original requirement.</p>
+<p>As the model is simple, the requirement artifact does not exist in this version. The identification of the required <code>Function</code>s will conclude this phase.</p>
+<p>Once this phase is complete, we can promise the customer to:</p>
+<ul>
+<li>Analyze his requirements along with all other requirements and projects and do our best to develop what is required;</li>
+<li>Provide a detailed feedback on the demands when all demands have been captured.</li>
+</ul>
+<h3 id="step-2-identify-common-functions-to-highlight-dependencies">Step 2: Identify Common Functions to Highlight Dependencies</h3>
+<p>Several customers could have defined different projects that are using the same subset of functions. Identifying those functions is very important, this for several reasons:</p>
+<ul>
+<li>To avoid several projects to develop several times the same function, or worse, variations of the same function;</li>
+<li>
+<p>To identify in what projects this function can be required and to scope it carefully;</p>
+<ul>
+<li>Developing a reusable function will ease the success of many projects whereas not developing it may cause project delays or failure;</li>
+</ul>
+</li>
+<li>
+<p>To add this function early in the roadmap;</p>
+</li>
+<li>
+<p>To take a special care to carefully <em>place</em> this function <em>at the proper spot</em> in the rest of the IT systems (step 3);</p>
+<ul>
+<li>Indeed, a misplaced function will generate many useless client/server calls, will generate consistency problems and will generate more integration and QA works: Economically, function placement is crucial.</li>
+</ul>
+</li>
+</ul>
+<p>Functions, once identified, should be assigned with a number characterizing the number of projects that require them. The highest number will lead the global roadmapping exercise. We will call this number the <em>dependency number</em>.</p>
+<h3 id="step-3-associate-functions-to-applications">Step 3: Associate Functions to Applications</h3>
+<p>This is a back office step that will be done between IT people, most of the time by architects. It is time to review the main functions of the existing applications to be accurate in the exercise.</p>
+<p>Functions will be classified into 3 categories:</p>
+<ol>
+<li><em>Existing functions</em>: We can plan to go back to the customer to assess if we missed something in the original requirement and if the existing function should not evolve.</li>
+<li><em>New functions that can be naturally attached to an existing application</em>: Some of the functions will naturally find their place as an evolution of an existing application;</li>
+<li><em>New functions that don't seem to be a natural evolution of the existing applications</em>: However, some new functions have to be studied in order to determine their best spot in the IT systems (or their "less worst" spot).</li>
+</ol>
+<p>The two last steps can give birth to more advanced architecture studies. Covering this topic is not in the scope of this article, but we can insist on leading careful analysis, because function misplacement is a problem that will cause painful and costly problems for years if not for decades.</p>
+<p>All the functions that are not in existing applications should be gathered and analyzed as a whole to determine the opportunity of developing new applications.</p>
+<h3 id="step-4-analyze-the-roadmap-of-each-application-size-it-roughly-and-compare-with-the-skills-available">Step 4: Analyze the Roadmap of Each Application, Size it Roughly and Compare With The Skills Available</h3>
+<p>Once all functions were assigned to applications, we can size them roughly and have a view of the roadmap of each application. For sure, this roadmap is still theoretical and the pure consequence of the customer's requirements.</p>
+<h4 id="the-case-of-application-maintenance-and-evolution">The Case of Application Maintenance and Evolution</h4>
+<p>All functions of an existing application can be prioritized in the best order of feasibility to create a first credible application roadmap, that is compliant with technical constraints.</p>
+<p>At this stage, we can also identify the functions that are nice to have compared to the ones that are must haves. This classification, even if it can be debated with the business may lead to some negotiation margins during the year to come.</p>
+<p>The skills available for each application is important because it will determine the real feasibility of the roadmap per application: We mean IT skills (project manager, product owner, developer, QA) but also business skills.</p>
+<p>Indeed, in that phase, we can identify the bottlenecks in terms of IT people, when not enough people are skilled to develop the expected application roadmap. Depending on the global priorities of the company, it is possible in that phase to plan people transfer, trainings or recruitments.</p>
+<h4 id="the-case-of-new-applications">The Case of New Applications</h4>
+<p>Those projects are always more risky than the previous ones.</p>
+<p>In some cases, it is obvious for the customer that the new requirements will lead to a new application. In some other cases, it is not. Those cases must be dealt with carefully because the customer may argue that the new requirements are part of an existing application. In those cases, the objective is to avoid function misplacement.</p>
+<p>However, it is more difficult to create a new application:</p>
+<ul>
+<li>The project manager has to be found, and she/he has to be able to lead from-scratch projects;</li>
+<li>The team has to be found, or in the existing people (staff or consultants), or in new comers;</li>
+<li>The business expert(s) has to be named.</li>
+</ul>
+<p>Some business people may be a bit worried about the application creation projects because they cause HR troubles and they can face more delays or failures than evolution projects.</p>
+<h4 id="end-of-the-phase">End of the Phase</h4>
+<p>At the end of the step 4, we should have:</p>
+<ul>
+<li>All functions identified;</li>
+<li>All application roadmap sized;</li>
+<li>All HR requirements.</li>
+</ul>
+<h3 id="step-5-introduction-of-dependencies-to-create-project-visions">Step 5: Introduction of Dependencies to Create Project Visions</h3>
+<p>To determine which projects to do first in the project portfolio, we need to take the reusable functions with the highest dependency number, in order to schedule them first.</p>
+<p>Then, the purpose is to play with the constraints to determine the less worst global path considering:</p>
+<ul>
+<li>The list of projects to develop;</li>
+<li>The skills available;</li>
+<li>The potential HR adjustments (people moving from one project to another, new people).</li>
+</ul>
+<p>Generally, the functions with the highest dependency number will drive the roadmap. That means that a function will be develop if and only if it is in the same project than a function with a high dependency number. That means also that generally a lot of new functions required by the business will not be able to be developed in the coming year, just because they are not part of an "important" project.</p>
+<p>Indeed, this method enables to show to the top level management what is important to the company throughout the functions that are required by many projects (i.e. that have the highest dependency numbers).</p>
+<p>Once everything is done, the exercise can be redone if the budget is bigger or lower in some parts.</p>
+<h2 id="limits-of-the-method">Limits of the Method</h2>
+<p>We can argue that the functions with the highest dependency numbers may not be the most crucial functions. That can be true.</p>
+<p>We can use some tricks in using several levels of functions if needed. Indeed, a function (level 1) required by a certain project could be divided into 3 functions of a smaller granularity (level 2). The level 2 functions could be the functions implemented by the applications. With this model adjustment, we can have a high level view of the function with "project functions" (level 1) and an IT view of functions (level 2).</p>
+<p>The artifact type <code>Function</code> must then be able to aggregate a list of <code>Function</code>s. We let the reader update the meta-model.</p>
+<h2 id="what-tools-can-help">What Tools Can Help?</h2>
+<h3 id="yed">Yed</h3>
+<p>When this method was used for the first time, <a href="https://www.yworks.com/products/yed">Yed</a> was the tool used. A Yed model was realized per organization.</p>
+<p>The advantage of Yed is its simplicity and its powerful set of graph layout algorithms. The drawback of Yed is when the number of projects is big (we had to deal with the Digital Division and their 130 projects), the model is hardly usable.</p>
+<h3 id="emf-and-sirius">EMF and Sirius</h3>
+<p>Indeed, when the number of projects is high, a multiple view design tool is required. A possible option is to create and <a href="https://en.wikipedia.org/wiki/Eclipse_Modeling_Framework">EMF</a> model and to create the edition views with <a href="http://www.eclipse.org/sirius/">Sirius</a>. You can also use <a href="http://www.metacase.com/">MetaEdit+</a> that is a powerful metamodeler.</p>
+<h3 id="roadmapping-with-archimate">Roadmapping With Archimate</h3>
+<p><a href="archimate-intro.md">Archimate</a> is probably the best language to realize this kind of portfolio management. We will explain in a bit more details a possible use of Archimate enterprise architecture modeling language for portfolio roadmapping in another article.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>With this meta-model, it is possible to create and operate a feasible, logic and auditable project portfolio and to have explanations about the constraints and the process of deciding what project should be done in priority.</p>
+<p>Most often, this kind of tools pacifies the battleground.</p>
+<p>Even if projects can go wrong during the year to come, with this method, many problems will have been anticipated and will, as per magic, not occur during the year.</p>
+<p>(<em>January 2018</em>)</p></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+                <p>Copyright Olivier Rey 2017&2018 - Site licensed under the GNU FDL V3</p>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
