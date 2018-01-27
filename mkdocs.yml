@@ -1,7 +1,7 @@
 site_name: Papers
 site_description: Olivier Rey's Papers
 site_author: Olivier Rey
-copyright: Copyright Olivier Rey 2017&2018 - Site licensed under the GNU FDL V3
+copyright: Copyright Olivier Rey 2017-2018 - Site licensed under the GNU FDL V3
 google_analytics: ['UA-110156293-1', 'orey.github.io']
 repo_url: https://github.com/orey/papers/
 #theme: readthedocs
@@ -15,6 +15,7 @@ pages:
     - 'Considerations About Rest And Web Services': 'articles/about-rest.md'
     - 'GraphQL And Classic Web Services': 'articles/graphql-web-services.md'
     - 'A Simple Meta-Model for Portfolio Management': 'articles/portfolio.md'
+    - 'An Introduction to The Archimate Revolution': 'articles/archimate-intro.md'
 - About:
     - Author: 'about/about.md'
     - License: 'about/LICENSE.md'
