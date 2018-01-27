@@ -216,5 +216,5 @@ We must never forget that the enterprise architect should be a crucial change ag
 
 [5] The temporal conventions can be as the ones we mentioned for scale management, something like `(P3)` for phase 3. Tagging the artifact name enables to have possibly many instances of the same artifact, instances that will evolve. The conventions must be chosen very carefully to be able to see what changes and what is remaining the same throughout the whole change process.
 
-*(January 2016)*
+*(January 2018)*
 
