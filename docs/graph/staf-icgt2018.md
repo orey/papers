@@ -2,7 +2,7 @@
 
 ![Graph sample](../yed/graph02.png) 
 
-The prototyping works of the GraphApps were stopped in December 2016 for economic reasons, the products (Design and Web Framework) staying closed source.
+The prototyping works of the GraphApps company were stopped in December 2016 for economic reasons, the products (Design and Web Framework) staying closed source.
 
 However, I kept on working on the graph-oriented programming topic, in particular in the perspective of solving the technical debt.
 

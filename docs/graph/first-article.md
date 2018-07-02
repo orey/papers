@@ -24,7 +24,7 @@ The graph transformations are playing a core role in graph-oriented programming.
 
 ## Closed-source prototype
 
-In 2016, it was prototyped in a company called GraphApps in a closed source approach. I am no longer art of this company.
+In 2016, it was prototyped in a company called GraphApps in a closed source approach. I am no longer part of this company.
 
 ## Global article on graph-oriented programming
 
