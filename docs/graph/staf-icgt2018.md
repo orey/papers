@@ -15,7 +15,8 @@ Beginning of 2018, Prof. Dr. Taentzer proposed that I was keynote speaker at the
 ## Introductory papers
 
 For the conference, two introductory papers were produced:
-  * [An abstract of the presentation](../pdf/ORey-GraphOrientedProgrammingAbstract-2pages-v4-0.pdf) for the [Springer proceedings](https://link.springer.com/book/10.1007/978-3-319-75396-6);
+
+  * [An abstract of the presentation](../pdf/ORey-GraphOrientedProgrammingAbstract-v4-0.pdf) for the [Springer proceedings](https://link.springer.com/book/10.1007/978-3-319-75396-6);
   * [A non published introduction](ORey-IntroductionToGraphOrientedProgramming-v1-0.pdf) to graph-oriented programming.
 
 ## Slides of the presentation
