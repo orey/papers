@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "Olivier Rey's Papers\n\n\nPapers\n\n\n\n\nThe Five Levels of Conceptual Maturity for IT Teams\n\n\nThe V2 Vortex\n - New version November 2017\n\n\nThe Various Stages of Digital Transformation\n\n\nConsiderations about Rest and Web Services\n\n\nGraphQL And Classic Web Services\n\n\n\n\nRecent\n\n\n\n\nA Simple Meta-Model for Portfolio Management\n\n\nAn Introduction to The Archimate Revolution\n\n\n\n\nMore to come soon...",
+            "text": "Olivier Rey's Papers\n\n\nPapers\n\n\n\n\nThe Five Levels of Conceptual Maturity for IT Teams\n\n\nThe V2 Vortex\n - New version November 2017\n\n\nThe Various Stages of Digital Transformation\n\n\nConsiderations about Rest and Web Services\n\n\nGraphQL And Classic Web Services\n\n\nA Simple Meta-Model for Portfolio Management\n\n\nAn Introduction to The Archimate Revolution\n\n\n\n\nGraph-oriented programming\n\n\nThis is a new section with some interesting materials about graph-oriented programming, solving the technical debt issue and using graph transformations in software engineering.\n\n\n\n\nFirst article on graph-oriented programming\n\n\nConference at the STAF/ICGT 2018 in Toulouse",
             "title": "Home"
         },
         {
@@ -12,13 +12,13 @@
         },
         {
             "location": "/#papers",
-            "text": "The Five Levels of Conceptual Maturity for IT Teams  The V2 Vortex  - New version November 2017  The Various Stages of Digital Transformation  Considerations about Rest and Web Services  GraphQL And Classic Web Services",
+            "text": "The Five Levels of Conceptual Maturity for IT Teams  The V2 Vortex  - New version November 2017  The Various Stages of Digital Transformation  Considerations about Rest and Web Services  GraphQL And Classic Web Services  A Simple Meta-Model for Portfolio Management  An Introduction to The Archimate Revolution",
             "title": "Papers"
         },
         {
-            "location": "/#recent",
-            "text": "A Simple Meta-Model for Portfolio Management  An Introduction to The Archimate Revolution   More to come soon...",
-            "title": "Recent"
+            "location": "/#graph-oriented-programming",
+            "text": "This is a new section with some interesting materials about graph-oriented programming, solving the technical debt issue and using graph transformations in software engineering.   First article on graph-oriented programming  Conference at the STAF/ICGT 2018 in Toulouse",
+            "title": "Graph-oriented programming"
         },
         {
             "location": "/articles/five-levels/",
@@ -571,8 +571,63 @@
             "title": "Notes"
         },
         {
+            "location": "/graph/first-article/",
+            "text": "First article on graph-oriented programming\n\n\n\n\nIn 2013, I started a personal project around directed attributed graph databases. The objective was to find a programming model that would enable the software to be as \"soft\" as the database.\n\n\nFirst works\n\n\nThe concept was defined and setup during 2014 and 2015.\n\n\nTwo articles on graph transformations were a crucial inspiration to the project.\n\n\nThe AGG Aproach\n published in the volume 2 of the \"Handbook of Graph Grammars\". AGG was particularly inspiring.\n\n\nErmel, Claudia, Michael Rudolf, and Gabriele Taentzer. \"The AGG approach: Language and environment.\" Handbook Of Graph Grammars And Computing By Graph Transformation: Volume 2: Applications, Languages and Tools. 1999. 551-603.\n\n\nAnother article from the same book was also a source of inspiration, \"The Progres approach\" (which doesn't seem to be available online).\n\n\nSch\u00fcrr, Andy, Andreas J. Winter, and Albert Z\u00fcndorf. \"The PROGRES approach: Language and environment.\" Handbook Of Graph Grammars And Computing By Graph Transformation: Volume 2: Applications, Languages and Tools. 1999. 487-550.\n\n\nBeginning of 2015, the graph-oriented programming concept was completed, and its capability of solving the useless technical debt was theoretically proven.\n\n\nThe graph transformations are playing a core role in graph-oriented programming.\n\n\nClosed-source prototype\n\n\nIn 2016, it was prototyped in a company called GraphApps in a closed source approach. I am no longer art of this company.\n\n\nGlobal article on graph-oriented programming\n\n\nA very first article was written in 2016 to explain all the concepts of this programming model.\n\n\nThis article is far from being perfect and didactic but it browses a lot of topics that would deserve special attention (especially in the part concerning graph transformations).\n\n\nThe original article can be found here: \nThe graph-oriented programming paradigm\n.\n\n\n(July 2018)",
+            "title": "First article on graph-oriented programming"
+        },
+        {
+            "location": "/graph/first-article/#first-article-on-graph-oriented-programming",
+            "text": "In 2013, I started a personal project around directed attributed graph databases. The objective was to find a programming model that would enable the software to be as \"soft\" as the database.",
+            "title": "First article on graph-oriented programming"
+        },
+        {
+            "location": "/graph/first-article/#first-works",
+            "text": "The concept was defined and setup during 2014 and 2015.  Two articles on graph transformations were a crucial inspiration to the project.  The AGG Aproach  published in the volume 2 of the \"Handbook of Graph Grammars\". AGG was particularly inspiring.  Ermel, Claudia, Michael Rudolf, and Gabriele Taentzer. \"The AGG approach: Language and environment.\" Handbook Of Graph Grammars And Computing By Graph Transformation: Volume 2: Applications, Languages and Tools. 1999. 551-603.  Another article from the same book was also a source of inspiration, \"The Progres approach\" (which doesn't seem to be available online).  Sch\u00fcrr, Andy, Andreas J. Winter, and Albert Z\u00fcndorf. \"The PROGRES approach: Language and environment.\" Handbook Of Graph Grammars And Computing By Graph Transformation: Volume 2: Applications, Languages and Tools. 1999. 487-550.  Beginning of 2015, the graph-oriented programming concept was completed, and its capability of solving the useless technical debt was theoretically proven.  The graph transformations are playing a core role in graph-oriented programming.",
+            "title": "First works"
+        },
+        {
+            "location": "/graph/first-article/#closed-source-prototype",
+            "text": "In 2016, it was prototyped in a company called GraphApps in a closed source approach. I am no longer art of this company.",
+            "title": "Closed-source prototype"
+        },
+        {
+            "location": "/graph/first-article/#global-article-on-graph-oriented-programming",
+            "text": "A very first article was written in 2016 to explain all the concepts of this programming model.  This article is far from being perfect and didactic but it browses a lot of topics that would deserve special attention (especially in the part concerning graph transformations).  The original article can be found here:  The graph-oriented programming paradigm .  (July 2018)",
+            "title": "Global article on graph-oriented programming"
+        },
+        {
+            "location": "/graph/staf-icgt2018/",
+            "text": "Conference at the STAF/ICGT 2018 in Toulouse\n\n\n \n\n\nThe prototyping works of the GraphApps were stopped in December 2016 for economic reasons, the products (Design and Web Framework) staying closed source.\n\n\nHowever, I kept on working on the graph-oriented programming topic, in particular in the perspective of solving the technical debt.\n\n\nMarburg University\n\n\nDuring Fall 2017, some conference calls were organized with Prof. Dr. \nGabriele Taentzer\n. Those discussions were about graph-oriented programming but also about \nHenshin\n.\n\n\nBeginning of 2018, Prof. Dr. Taentzer proposed that I was keynote speaker at the \nSTAF/ICGT 2018\n in Toulouse, conference organized by Dr. \nLeen Lambers\n and Prof. Dr. \nJens Weber\n. I thank all of them for their invitation and support.\n\n\nIntroductory papers\n\n\nFor the conference, two introductory papers were produced:\n  * \nAn abstract of the presentation\n for the \nSpringer proceedings\n;\n  * \nA non published introduction\n to graph-oriented programming.\n\n\nSlides of the presentation\n\n\nThe slides of the presentation can be found hereafter: \nIntroduction to graph-oriented programming\n\n\n\n\nA copy of those slides can also be found on the conference website \nhere\n.\n\n\nWhat's next?\n\n\nMy works on graph-oriented programming will go on, but with probably less time that I had in 2016.\n\n\n(July 2018)",
+            "title": "Conference at the STAF/ICGT 2018 in Toulouse"
+        },
+        {
+            "location": "/graph/staf-icgt2018/#conference-at-the-staficgt-2018-in-toulouse",
+            "text": "The prototyping works of the GraphApps were stopped in December 2016 for economic reasons, the products (Design and Web Framework) staying closed source.  However, I kept on working on the graph-oriented programming topic, in particular in the perspective of solving the technical debt.",
+            "title": "Conference at the STAF/ICGT 2018 in Toulouse"
+        },
+        {
+            "location": "/graph/staf-icgt2018/#marburg-university",
+            "text": "During Fall 2017, some conference calls were organized with Prof. Dr.  Gabriele Taentzer . Those discussions were about graph-oriented programming but also about  Henshin .  Beginning of 2018, Prof. Dr. Taentzer proposed that I was keynote speaker at the  STAF/ICGT 2018  in Toulouse, conference organized by Dr.  Leen Lambers  and Prof. Dr.  Jens Weber . I thank all of them for their invitation and support.",
+            "title": "Marburg University"
+        },
+        {
+            "location": "/graph/staf-icgt2018/#introductory-papers",
+            "text": "For the conference, two introductory papers were produced:\n  *  An abstract of the presentation  for the  Springer proceedings ;\n  *  A non published introduction  to graph-oriented programming.",
+            "title": "Introductory papers"
+        },
+        {
+            "location": "/graph/staf-icgt2018/#slides-of-the-presentation",
+            "text": "The slides of the presentation can be found hereafter:  Introduction to graph-oriented programming   A copy of those slides can also be found on the conference website  here .",
+            "title": "Slides of the presentation"
+        },
+        {
+            "location": "/graph/staf-icgt2018/#whats-next",
+            "text": "My works on graph-oriented programming will go on, but with probably less time that I had in 2016.  (July 2018)",
+            "title": "What's next?"
+        },
+        {
             "location": "/about/about/",
-            "text": "About The Author\n\n\nOlivier Rey\n\n\n\n\nSee my \nLinkedIn profile\n\n\nWrite to me: rey [dot] olivier [at] gmail [dot] com\n\n\n\n\nTo Do\n\n\n\n\nArchimate version of the \nportfolio management metamodel\n.\n\n\nGraph stuff\n\n\nDeming and the system of profound knowledge\n\n\nFrench articles\n\n\n\n\nOld stuff\n\n\n\n\nMigrate interesting stuff from old blog (and translate)\n\n\nVB and Delphi refactoring practices\n\n\n\n\n\n\n\n\n(January 2018)",
+            "text": "About The Author\n\n\nOlivier Rey\n\n\n\n\nSee my \nLinkedIn profile\n\n\nWrite to me: rey [dot] olivier [at] gmail [dot] com\n\n\n\n\nAreas of interest\n\n\n\n\nSoftware engineering, programming languages, programming paradigms\n\n\nModeling\n\n\nArchimate and enterprise architecture modeling frameworks\n\n\nMBSE\n\n\nDomain specific modeling\n\n\nDSL\n\n\n\n\n\n\nMathematics (topology, graphs, category theory, etc.)\n\n\n\n\nArticles to write or migrate\n\n\n\n\nArchimate version of the \nportfolio management metamodel\n.\n\n\nDeming and the system of profound knowledge\n\n\nFrench articles\n\n\n\n\nOld stuff\n\n\n\n\nMigrate interesting stuff from old blog (and translate)\n\n\nVB and Delphi refactoring practices\n\n\n\n\n\n\n\n\nGraph-oriented programming\n\n\n\n\nNew demo version (designer and web framework), open source this time\n\n\n\n\nOngoing graph studies and questions\n\n\nThese are my current topics of interest.\n\n\n\n\nModeling complex temporal events with graphs and topological graph transformations\n\n\nLike highway traffic\n\n\n\n\n\n\nThe graph transformation changes the graph topology. What kind of mathematical object is it?\n\n\nScale laws in graph (for instance adherence of domains in a multi-graph mode)\n\n\nWhat is the true nature of interdomain relationship? And how does it relate to the higher level relationship?\n\n\n\n\n\n\nDistance comparison between two graphs\n\n\nThe fact one and the referential one\n\n\nUseful for AI projects, knowledge representation\n\n\n\n\n\n\nIsomorphic semantic representations: what graph transformations enable that?\n\n\nModeling psychology frameworks (Freud, Jung, etc.) with graph patterns and graph distance measurement\n\n\nRewiring rules and their limitations\n\n\nCloning nodes and sub-graph: rules?\n\n\n\n\n(July 2018)",
             "title": "Author"
         },
         {
@@ -586,9 +641,24 @@
             "title": "Olivier Rey"
         },
         {
-            "location": "/about/about/#to-do",
-            "text": "Archimate version of the  portfolio management metamodel .  Graph stuff  Deming and the system of profound knowledge  French articles   Old stuff   Migrate interesting stuff from old blog (and translate)  VB and Delphi refactoring practices     (January 2018)",
-            "title": "To Do"
+            "location": "/about/about/#areas-of-interest",
+            "text": "Software engineering, programming languages, programming paradigms  Modeling  Archimate and enterprise architecture modeling frameworks  MBSE  Domain specific modeling  DSL    Mathematics (topology, graphs, category theory, etc.)",
+            "title": "Areas of interest"
+        },
+        {
+            "location": "/about/about/#articles-to-write-or-migrate",
+            "text": "Archimate version of the  portfolio management metamodel .  Deming and the system of profound knowledge  French articles   Old stuff   Migrate interesting stuff from old blog (and translate)  VB and Delphi refactoring practices",
+            "title": "Articles to write or migrate"
+        },
+        {
+            "location": "/about/about/#graph-oriented-programming",
+            "text": "New demo version (designer and web framework), open source this time",
+            "title": "Graph-oriented programming"
+        },
+        {
+            "location": "/about/about/#ongoing-graph-studies-and-questions",
+            "text": "These are my current topics of interest.   Modeling complex temporal events with graphs and topological graph transformations  Like highway traffic    The graph transformation changes the graph topology. What kind of mathematical object is it?  Scale laws in graph (for instance adherence of domains in a multi-graph mode)  What is the true nature of interdomain relationship? And how does it relate to the higher level relationship?    Distance comparison between two graphs  The fact one and the referential one  Useful for AI projects, knowledge representation    Isomorphic semantic representations: what graph transformations enable that?  Modeling psychology frameworks (Freud, Jung, etc.) with graph patterns and graph distance measurement  Rewiring rules and their limitations  Cloning nodes and sub-graph: rules?   (July 2018)",
+            "title": "Ongoing graph studies and questions"
         },
         {
             "location": "/about/LICENSE/",
