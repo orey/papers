@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "Olivier Rey's Papers\n\n\nPapers\n\n\n\n\nThe Five Levels of Conceptual Maturity for IT Teams\n\n\nThe V2 Vortex\n - New version November 2017\n\n\nThe Various Stages of Digital Transformation\n\n\nConsiderations about Rest and Web Services\n\n\nGraphQL And Classic Web Services\n\n\nA Simple Meta-Model for Portfolio Management\n\n\nAn Introduction to The Archimate Revolution\n\n\n\n\nGraph-oriented programming\n\n\nThis is a new section with some interesting materials about graph-oriented programming, solving the technical debt issue and using graph transformations in software engineering.\n\n\n\n\nFirst article on graph-oriented programming\n\n\nConference at the STAF/ICGT 2018 in Toulouse",
+            "text": "Olivier Rey's Papers\n\n\nPapers\n\n\n\n\nThe Five Levels of Conceptual Maturity for IT Teams\n\n\nThe V2 Vortex\n - New version November 2017\n\n\nThe Various Stages of Digital Transformation\n\n\nConsiderations about Rest and Web Services\n\n\nGraphQL And Classic Web Services\n\n\nA Simple Meta-Model for Portfolio Management\n\n\nAn Introduction to The Archimate Revolution\n\n\nNEW\n: \nArchimate Recipes\n\n\n\n\nGraph-oriented programming\n\n\nThis is a new section with some interesting materials about graph-oriented programming, solving the technical debt issue and using graph transformations in software engineering.\n\n\n\n\nFirst article on graph-oriented programming\n\n\nConference at the STAF/ICGT 2018 in Toulouse",
             "title": "Home"
         },
         {
@@ -12,7 +12,7 @@
         },
         {
             "location": "/#papers",
-            "text": "The Five Levels of Conceptual Maturity for IT Teams  The V2 Vortex  - New version November 2017  The Various Stages of Digital Transformation  Considerations about Rest and Web Services  GraphQL And Classic Web Services  A Simple Meta-Model for Portfolio Management  An Introduction to The Archimate Revolution",
+            "text": "The Five Levels of Conceptual Maturity for IT Teams  The V2 Vortex  - New version November 2017  The Various Stages of Digital Transformation  Considerations about Rest and Web Services  GraphQL And Classic Web Services  A Simple Meta-Model for Portfolio Management  An Introduction to The Archimate Revolution  NEW :  Archimate Recipes",
             "title": "Papers"
         },
         {
@@ -569,6 +569,66 @@
             "location": "/articles/archimate-intro/#notes",
             "text": "[1] The only modeling approach that look like Archimate is the  Aris methodology . Even if the methodology did not cover the full scope of Archimate, the theoretical approach was similar.  [2] We could compare a UML design tool with the  CAD  tools. The use of the modeling language must enable to work on the model of the programs before coding in order to create the best design possible, a design that will be implementable quite straight forwardly. Unfortunately with UML, the objective is not reached.  [3] Some big Enterprise Architecture frameworks used in the military world are proposing very complex meta-models that are proposing, at the same time, sets of disconnected meta-models and semantic overlap between artifacts. Those frameworks are often at the center of big project failures in the military industry.  [4] In projects, I often use or advise to use \"level\" (or scale) indications of some artifacts like business processes or business functions. The indication can be put in the name of the artifact or as an attribute. For instance,  Accounting  will become  (L1) Accounting  to indicate that, in some views, the business functions will be represented in a high level way. All detailed functions inside this one (aggregation or composition link) will be flagged  (L2)  such as  (L2) Centralization . This enables to have various levels of relationships between concepts and to be able to drill down inside the model in order to see more detailed (and more accurate) representations.  [5] The temporal conventions can be as the ones we mentioned for scale management, something like  (P3)  for phase 3. Tagging the artifact name enables to have possibly many instances of the same artifact, instances that will evolve. The conventions must be chosen very carefully to be able to see what changes and what is remaining the same throughout the whole change process.  (January 2018)",
             "title": "Notes"
+        },
+        {
+            "location": "/articles/archimate-recipes/",
+            "text": "Archimate recipes\n\n\n\n\nModeling in \nArchimate\n can sometimes present some difficulties.\n\n\nIn this article, we will expose some tips and tricks that can facilitate your daily life as an enterprise architect using Archimate in your modeling activities.\n\n\nPrerequisites\n\n\nThis article is using \nArchi\n. This tool is great. If you are using it, please consider making a donation.\n\n\nIntroduction to tags\n\n\nArchimate is a very powerful language but sometimes, it can be very useful to create tags to distinguish artifacts or group them into sets.\n\n\nWe will put some tags in the name of the artifact in some cases, and in other cases, we can benefit from the use of properties (for instance to process some calculation based on some property values). The convention we use in this article is to \"tag\" the names of the artifacts by placing a label between parenthesis.\n\n\nLevels of nesting\n\n\nBasics\n\n\nIn an Archimate model, it is quite common to model nested objects like shown in Figure 1.\n\n\n\n\nFigure 1\n: Sample of nesting in the business layer\n\n\nIn Figure 1, we can see that the \nAccountant\n role is assigned both to the \nAccounting\n business function and to the \nClosing\n business process. The \nClosing\n artifact is nested into the \nAccounting\n function that is, in our model, a business function of the highest level.\n\n\nBeing the highest level of \"granularity\" of our processes (in some cases, this level can be the one of the quality system of the company), we can tag the \nAccounting\n artifact with the level \n(L1)\n to indicate its level.\n\n\nAll the business processes and/or business functions that will be nested into it will be tagged \n(L2)\n for \"level 2\". All nested objects inside level 2 objects will be tagged level 3 \n(L3)\n and so on.\n\n\nAn option is to flag the relationship with the level as shown in Figure 1. This can be superfluous if the artifacts are already tagged.\n\n\nGraph view\n\n\nThis simple system enables to sort artifacts per level on the Archimate graph view (see Figure 2).\n\n\n\n\nFigure 2\n: Archimate graph centered in the Accountant artifact\n\n\nWhen the diagram has many artifacts, it is possible to sort the level of vision that we want to have in the graph view. This kind of need appears for instance when we want to have a good vision of the full coverage of a certain point of view.\n\n\nIn the graph view, helped with the tags, we can sort all processes attached to the \nAccountant\n role per level in order to determine in, in all our views, we cover what we imagine as being all \n(L1)\n processes.\n\n\n\n\nFigure 3\n: Sorted Archimate graph centered in the Accountant artifact\n\n\nWhen the model has many views with many artifacts at various different levels, the graph view helps making the model consistent.\n\n\nWorking at different levels\n\n\nIn Figure 4, working with process levels enabled the enterprise architect to indicate that, at a certain level \n(L2)\n, the main role takng in charge the \nClosing\n process is the \nAccountant\n, but at a lower level, we have other roles taking in charge a part of the process.\n\n\n\n\nFigure 4\n: Main role and secondary role\n\n\nConclusion on nesting\n\n\nNesting is an important part of big Archimate models. Generally, it is very useful to have certain artifacts (like active structures for instance) attached to several different levels of behaviors depending on the views.\n\n\nMost of the time, tagging artifacts with their level:\n\n\n\n\nEnable not to confuse the levels of artifacts,\n\n\nGet interested between the nested relationships between various levels of artifacts,\n\n\nThink about coverage (in our case, processes of a certain level per role, or sub-processes of a certain process).\n\n\n\n\nSeveral instances of the same software in different contexts\n\n\nTo be done.\n\n\nManaging time and scenarios\n\n\nTo be done.\n\n\nReports\n\n\nReports can be generated from the Archimate model. You can find \nhere a report template\n slightly modified compared to the original \nArchi\n one.\n\n\n(\nJuly 2018\n)",
+            "title": "Archimate Recipes"
+        },
+        {
+            "location": "/articles/archimate-recipes/#archimate-recipes",
+            "text": "Modeling in  Archimate  can sometimes present some difficulties.  In this article, we will expose some tips and tricks that can facilitate your daily life as an enterprise architect using Archimate in your modeling activities.",
+            "title": "Archimate recipes"
+        },
+        {
+            "location": "/articles/archimate-recipes/#prerequisites",
+            "text": "This article is using  Archi . This tool is great. If you are using it, please consider making a donation.",
+            "title": "Prerequisites"
+        },
+        {
+            "location": "/articles/archimate-recipes/#introduction-to-tags",
+            "text": "Archimate is a very powerful language but sometimes, it can be very useful to create tags to distinguish artifacts or group them into sets.  We will put some tags in the name of the artifact in some cases, and in other cases, we can benefit from the use of properties (for instance to process some calculation based on some property values). The convention we use in this article is to \"tag\" the names of the artifacts by placing a label between parenthesis.",
+            "title": "Introduction to tags"
+        },
+        {
+            "location": "/articles/archimate-recipes/#levels-of-nesting",
+            "text": "",
+            "title": "Levels of nesting"
+        },
+        {
+            "location": "/articles/archimate-recipes/#basics",
+            "text": "In an Archimate model, it is quite common to model nested objects like shown in Figure 1.   Figure 1 : Sample of nesting in the business layer  In Figure 1, we can see that the  Accountant  role is assigned both to the  Accounting  business function and to the  Closing  business process. The  Closing  artifact is nested into the  Accounting  function that is, in our model, a business function of the highest level.  Being the highest level of \"granularity\" of our processes (in some cases, this level can be the one of the quality system of the company), we can tag the  Accounting  artifact with the level  (L1)  to indicate its level.  All the business processes and/or business functions that will be nested into it will be tagged  (L2)  for \"level 2\". All nested objects inside level 2 objects will be tagged level 3  (L3)  and so on.  An option is to flag the relationship with the level as shown in Figure 1. This can be superfluous if the artifacts are already tagged.",
+            "title": "Basics"
+        },
+        {
+            "location": "/articles/archimate-recipes/#graph-view",
+            "text": "This simple system enables to sort artifacts per level on the Archimate graph view (see Figure 2).   Figure 2 : Archimate graph centered in the Accountant artifact  When the diagram has many artifacts, it is possible to sort the level of vision that we want to have in the graph view. This kind of need appears for instance when we want to have a good vision of the full coverage of a certain point of view.  In the graph view, helped with the tags, we can sort all processes attached to the  Accountant  role per level in order to determine in, in all our views, we cover what we imagine as being all  (L1)  processes.   Figure 3 : Sorted Archimate graph centered in the Accountant artifact  When the model has many views with many artifacts at various different levels, the graph view helps making the model consistent.",
+            "title": "Graph view"
+        },
+        {
+            "location": "/articles/archimate-recipes/#working-at-different-levels",
+            "text": "In Figure 4, working with process levels enabled the enterprise architect to indicate that, at a certain level  (L2) , the main role takng in charge the  Closing  process is the  Accountant , but at a lower level, we have other roles taking in charge a part of the process.   Figure 4 : Main role and secondary role",
+            "title": "Working at different levels"
+        },
+        {
+            "location": "/articles/archimate-recipes/#conclusion-on-nesting",
+            "text": "Nesting is an important part of big Archimate models. Generally, it is very useful to have certain artifacts (like active structures for instance) attached to several different levels of behaviors depending on the views.  Most of the time, tagging artifacts with their level:   Enable not to confuse the levels of artifacts,  Get interested between the nested relationships between various levels of artifacts,  Think about coverage (in our case, processes of a certain level per role, or sub-processes of a certain process).",
+            "title": "Conclusion on nesting"
+        },
+        {
+            "location": "/articles/archimate-recipes/#several-instances-of-the-same-software-in-different-contexts",
+            "text": "To be done.",
+            "title": "Several instances of the same software in different contexts"
+        },
+        {
+            "location": "/articles/archimate-recipes/#managing-time-and-scenarios",
+            "text": "To be done.",
+            "title": "Managing time and scenarios"
+        },
+        {
+            "location": "/articles/archimate-recipes/#reports",
+            "text": "Reports can be generated from the Archimate model. You can find  here a report template  slightly modified compared to the original  Archi  one.  ( July 2018 )",
+            "title": "Reports"
         },
         {
             "location": "/graph/first-article/",
