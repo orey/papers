@@ -9,6 +9,7 @@
   * [GraphQL And Classic Web Services](articles/graphql-web-services.md)
   * [A Simple Meta-Model for Portfolio Management](articles/portfolio.md)
   * [An Introduction to The Archimate Revolution](articles/archimate-intro.md)
+  * **NEW**: [Archimate Recipes](articles/archimate-recipes.md)
 
 ## Graph-oriented programming
 
