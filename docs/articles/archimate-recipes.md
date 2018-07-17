@@ -54,11 +54,45 @@ When the model has many views with many artifacts at various different levels, t
 
 ### Working at different levels
 
-In Figure 4, working with process levels enabled the enterprise architect to indicate that, at a certain level `(L2)`, the main role takng in charge the `Closing` process is the `Accountant`, but at a lower level, we have other roles taking in charge a part of the process.
+In Figure 4, working with process levels enabled the enterprise architect to indicate that, at a certain level `(L2)`, the main role taking in charge the `Closing` process is the `Accountant`, but at a lower level, we have other roles taking in charge a part of the process.
 
 ![Figure 4: Main role and secondary role](../archi/Figure-04.png)
 
 <u>Figure 4</u>: Main role and secondary role
+
+For sure, all diagrams should be consistent, so possibly not to show the relationships that could be misleading in the view.
+
+For instance, in Figure 4, the assignment link between `Accountant` and `(L2) Closing` is misleading in the diagram. Because, it this diagram, we should only show the various roles that collaborate to the sub-processes of the `(L2) Closing` process.
+
+![Figure 5: Main role and secondary role](../archi/Figure-05.png)
+
+<u>Figure 5</u>: Main role and secondary role (less ambiguous view)
+
+Figure 5 is showing a much less ambiguous view. For sure, as soon as we we look at those processes at the `(L2)` level, the `Business controller` role will become invisible.
+
+### Functional content of application components
+
+A very common requirement that we have in modeling the IT systems in Archimate is the requirement of modeling application functions at different levels.
+
+![Figure 6: Accounting system compressed](../archi/Figure-06.png)
+
+<u>Figure 6</u>: Accounting system basic view
+
+The Figure 6 shows a basic accounting system with implicit assignment and aggregation links. By tagging the functions with their level, we can clarify at what level we are looking at the model.
+
+The problem is to represent a zoom on a particular function like shown in Figure 7.
+
+![Figure 7: The need to represent an ambiguous assignment](../archi/Figure-07.png)
+
+<u>Figure 7</u>: The need to represent an ambiguous assignment
+
+This assignment relationship being flagged, the graph view enables a grouping of functions per levels.
+
+![Figure 8: The need to represent an ambiguous assignment](../archi/AccountingSystem.png)
+
+<u>Figure 8</u>: The need to represent an ambiguous assignment
+
+When we will try to assess the coverage of functions in the accounting system, we will have to consider only the `(L1)` application functions.
 
 ### Conclusion on nesting
 
