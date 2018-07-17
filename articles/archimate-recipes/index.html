@@ -255,9 +255,26 @@
 <p><u>Figure 3</u>: Sorted Archimate graph centered in the Accountant artifact</p>
 <p>When the model has many views with many artifacts at various different levels, the graph view helps making the model consistent.</p>
 <h3 id="working-at-different-levels">Working at different levels</h3>
-<p>In Figure 4, working with process levels enabled the enterprise architect to indicate that, at a certain level <code>(L2)</code>, the main role takng in charge the <code>Closing</code> process is the <code>Accountant</code>, but at a lower level, we have other roles taking in charge a part of the process.</p>
+<p>In Figure 4, working with process levels enabled the enterprise architect to indicate that, at a certain level <code>(L2)</code>, the main role taking in charge the <code>Closing</code> process is the <code>Accountant</code>, but at a lower level, we have other roles taking in charge a part of the process.</p>
 <p><img alt="Figure 4: Main role and secondary role" src="../../archi/Figure-04.png" /></p>
 <p><u>Figure 4</u>: Main role and secondary role</p>
+<p>For sure, all diagrams should be consistent, so possibly not to show the relationships that could be misleading in the view.</p>
+<p>For instance, in Figure 4, the assignment link between <code>Accountant</code> and <code>(L2) Closing</code> is misleading in the diagram. Because, it this diagram, we should only show the various roles that collaborate to the sub-processes of the <code>(L2) Closing</code> process.</p>
+<p><img alt="Figure 5: Main role and secondary role" src="../../archi/Figure-05.png" /></p>
+<p><u>Figure 5</u>: Main role and secondary role (less ambiguous view)</p>
+<p>Figure 5 is showing a much less ambiguous view. For sure, as soon as we we look at those processes at the <code>(L2)</code> level, the <code>Business controller</code> role will become invisible.</p>
+<h3 id="functional-content-of-application-components">Functional content of application components</h3>
+<p>A very common requirement that we have in modeling the IT systems in Archimate is the requirement of modeling application functions at different levels.</p>
+<p><img alt="Figure 6: Accounting system compressed" src="../../archi/Figure-06.png" /></p>
+<p><u>Figure 6</u>: Accounting system basic view</p>
+<p>The Figure 6 shows a basic accounting system with implicit assignment and aggregation links. By tagging the functions with their level, we can clarify at what level we are looking at the model.</p>
+<p>The problem is to represent a zoom on a particular function like shown in Figure 7.</p>
+<p><img alt="Figure 7: The need to represent an ambiguous assignment" src="../../archi/Figure-07.png" /></p>
+<p><u>Figure 7</u>: The need to represent an ambiguous assignment</p>
+<p>This assignment relationship being flagged, the graph view enables a grouping of functions per levels.</p>
+<p><img alt="Figure 8: The need to represent an ambiguous assignment" src="../../archi/AccountingSystem.png" /></p>
+<p><u>Figure 8</u>: The need to represent an ambiguous assignment</p>
+<p>When we will try to assess the coverage of functions in the accounting system, we will have to consider only the <code>(L1)</code> application functions.</p>
 <h3 id="conclusion-on-nesting">Conclusion on nesting</h3>
 <p>Nesting is an important part of big Archimate models. Generally, it is very useful to have certain artifacts (like active structures for instance) attached to several different levels of behaviors depending on the views.</p>
 <p>Most of the time, tagging artifacts with their level:</p>
