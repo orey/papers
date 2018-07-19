@@ -16,6 +16,8 @@ Archimate is a very powerful language but sometimes, it can be very useful to cr
 
 We will put some tags in the name of the artifact in some cases, and in other cases, we can benefit from the use of properties (for instance to process some calculation based on some property values). The convention we use in this article is to "tag" the names of the artifacts by placing a label between parenthesis.
 
+Tags are sometimes linked to [derived relationships](http://pubs.opengroup.org/architecture/archimate3-doc/chap05.html) but often they answer to other needs.
+
 ## Levels of nesting
 
 ### Basics
@@ -70,6 +72,28 @@ For instance, in Figure 4, the assignment link between `Accountant` and `(L2) Cl
 
 Figure 5 is showing a much less ambiguous view. For sure, as soon as we we look at those processes at the `(L2)` level, the `Business controller` role will become invisible.
 
+### Note on derived relationships
+
+Semantically, we try to express an ambiguity. Figure 1 could say that the `Accountant` role is assigned to `Closing` and "in a more general way" to the `Accounting` function. But we know nothing about the other `(L2)` functions and if the `Accountant` role is really assigned to all `(L2)` functions that would compose the `Accounting` function.
+
+The definition of a relationship is not really helping:
+
+> If two structural or dependency relationships r:R and s:S are permitted between elements a, b, and c such that r(a,b) and s(b,c), then a structural relationship t:T is also permitted, with t(a,c) and type T being the weakest of R and S.
+
+[Source](http://pubs.opengroup.org/architecture/archimate3-doc/chap05.html)
+
+Let's say `C` is the composition relationship ("composes") and `A` the assignment relationship ("is assigned to"). We have:
+
+  * `R1 = Closing C Accounting`
+  * `R2 = Accountant A Accounting`
+  * `R3 = Accountant A Closing`
+
+So, in the context of structural relationships derivation rules, we could say that `R3 + R1 &rarr; R2`. That means that `R2` is a derived relationship.
+
+In the activity of modeling, derived relationships are not always interesting. Indeed, in Figure 4, we don't want to have `Business controller` assigned to `Closing`, even if `Closing` is composed with `Validate provisions`.
+
+We believe that, in such cases, it is clearer to use tags. When watching a role, we can see immediately at what level of process he is assigned. If we don't use the derive relationship, we can express complex situation of drill down that are, strictly speaking, not complete, but that "fit" better to the reality.
+
 ### Functional content of application components
 
 A very common requirement that we have in modeling the IT systems in Archimate is the requirement of modeling application functions at different levels.
@@ -86,13 +110,13 @@ The problem is to represent a zoom on a particular function like shown in Figure
 
 <u>Figure 7</u>: The need to represent an ambiguous assignment
 
-This assignment relationship being flagged, the graph view enables a grouping of functions per levels.
+This assignment relationship being flagged, the graph view enables a grouping of functions per levels `(L1)` and `(L2)`. If we think about coverage, e.g. to answer to the question "what are, in all views of the model, all the functions of the accounting system?", we'll have to consider only the `(L1)`.
 
 ![Figure 8: The need to represent an ambiguous assignment](../archi/AccountingSystem.png)
 
 <u>Figure 8</u>: The need to represent an ambiguous assignment
 
-When we will try to assess the coverage of functions in the accounting system, we will have to consider only the `(L1)` application functions.
+Indeed the relationship `Accounting System` to `Monthly closing management` that we created in a certain viewpoint is a derived relationship and a consequence of 
 
 ### Conclusion on nesting
 
