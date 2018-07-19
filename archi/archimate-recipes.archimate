@@ -48,7 +48,7 @@
     <element xsi:type="archimate:CompositionRelationship" id="02e8bf9b-d202-42b1-b930-dff0a1df1e86" source="8af2da29-5510-44c7-90d0-a2960edabfaf" target="d90229d0-235c-495d-9cd0-e946c648aee9"/>
     <element xsi:type="archimate:CompositionRelationship" id="b02c0e66-6c24-440b-beea-c777879bdf04" source="8af2da29-5510-44c7-90d0-a2960edabfaf" target="db8a0f76-ed71-46f7-bf0c-d5737ae7b782"/>
     <element xsi:type="archimate:ServingRelationship" id="bc433119-d67b-4a66-bede-f1b21a299dff" source="db8a0f76-ed71-46f7-bf0c-d5737ae7b782" target="9491fc8a-4cf0-4ee6-90b6-2a862eb743bc"/>
-    <element xsi:type="archimate:AssignmentRelationship" id="b2fd53ce-ad58-46cf-a12f-a61507a97930" source="64fc0a2c-877c-4294-89db-7a708e2fa54e" target="db8a0f76-ed71-46f7-bf0c-d5737ae7b782"/>
+    <element xsi:type="archimate:AssignmentRelationship" name="Ambiguous" id="b2fd53ce-ad58-46cf-a12f-a61507a97930" source="64fc0a2c-877c-4294-89db-7a708e2fa54e" target="db8a0f76-ed71-46f7-bf0c-d5737ae7b782"/>
   </folder>
   <folder name="Views" id="ef57c51f-537e-4ecd-8d53-d777fc37ce1e" type="diagrams">
     <element xsi:type="archimate:ArchimateDiagramModel" name="Figure-01" id="16cbc7ba-9dd0-434c-8f53-e19e2137f090">

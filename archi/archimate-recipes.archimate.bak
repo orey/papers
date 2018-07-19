@@ -190,7 +190,12 @@
       </child>
       <child xsi:type="archimate:DiagramObject" id="71ae2883-c205-4fd7-8aa3-df399a0e1cc6" archimateElement="64fc0a2c-877c-4294-89db-7a708e2fa54e">
         <bounds x="348" y="360" width="133" height="55"/>
-        <sourceConnection xsi:type="archimate:Connection" id="c7979821-5a98-4fd9-b956-0d428e3a5f50" source="71ae2883-c205-4fd7-8aa3-df399a0e1cc6" target="8bcf46c6-6e91-4c6b-93df-ee0d28d67409" archimateRelationship="b2fd53ce-ad58-46cf-a12f-a61507a97930"/>
+        <sourceConnection xsi:type="archimate:Connection" id="c7979821-5a98-4fd9-b956-0d428e3a5f50" targetConnections="8c546a2e-ec99-42fb-a875-6e66e802922a" source="71ae2883-c205-4fd7-8aa3-df399a0e1cc6" target="8bcf46c6-6e91-4c6b-93df-ee0d28d67409" archimateRelationship="b2fd53ce-ad58-46cf-a12f-a61507a97930"/>
+      </child>
+      <child xsi:type="archimate:Note" id="6cb004d8-b6a9-4067-84a1-e3f9a2055de4" textPosition="1">
+        <bounds x="516" y="348" width="173" height="36"/>
+        <sourceConnection id="8c546a2e-ec99-42fb-a875-6e66e802922a" source="6cb004d8-b6a9-4067-84a1-e3f9a2055de4" target="c7979821-5a98-4fd9-b956-0d428e3a5f50"/>
+        <content>Assigment relationship</content>
       </child>
     </element>
   </folder>
