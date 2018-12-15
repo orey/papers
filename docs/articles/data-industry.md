@@ -4,32 +4,36 @@
 
 "Data is the new gold". "Data drives the world". "We are in a data driven world".
 
-All medias, and not especially the IT medias, are obsessed with data and the value they represent. The fact is what is true for retail is not so obvious in a lot of other businesses such as the industry.
+All medias, and not especially the IT medias, are obsessed with data and the value they represent. The fact is what is true for retail, where people buy products, is not so obvious in a lot of other businesses such as the industry.
 
-Maybe data is the new gold, but we are often like miners: in front of data that are really difficult to manipulate, especially when those data are representing objects that have a lifecycle, we need methods to deal with those data and make sense of them.
+Maybe data is the new gold, but we are often like old miners: looking at a way to extract the value from multiple sources representing complex objects that have a complex and specific lifecycle. Like old miners, we need methods to deal with those data and make sense of them.
 
-In the industry, where the "Digital Continuity" or "Digital Thread" are buzzwords, there are some fundamental problems with the data, problems that we will describe here trying to bring solutions.
+In the industry, where the "Digital Continuity" or "Digital Thread" are both necessities and buzzwords, the data related issues are numerous.
+
+Even if there is always the idea of an "end-to-end backbone", of a "central repository of multi-view oriented data", not all companies can achieve this dream of having "all data, in all lifecycle states, in a consistent way, in a single place".
+
+In other industries, this dream is highly linked to the monolith architecture anti-pattern.
 
 ## The real nature of data
 
-Data is not absolute, it is the result of a set of parameters.
+The first fact we must keep in mind is that data is not "absolute", it is the result of a set of factors.
 
 ![The relative nature of data](../yed/industry-data.png)
 
-Figure 1: The relative nature of data
+<u>Figure 1</u>: The relative nature of data
 
-Data is the product of:
+Data was always produced by a certain business process. For that reason, data is the product of the following factors:
 
-  * A semantic space,
+  * A semantic space (or a set of "business concepts" having semantic meanings and semantic links to one another),
   * A point of view,
   * A specific moment in time.
-  
-Data was always produced by a certain business process. Some data may be simple to interpret, for instance the list of articles you consulted in a retail website. With those data and the ones of people that bought the same products than you, you can create personalized recommendation algorithms.
 
-But in the industry, that is not because you ave the data that you can use them.
+Some data may be simple to interpret, for instance the list of articles you consulted in a retail website. With those data and the ones of people that bought the same products than you, you can create personalized recommendation algorithms.
+
+But in the industry, that is not because you ave the data that you can use them easily, even if you are talking about the exact same thing than your neighbor of the next office (same semantic space): you may look at the business concepts in another time frame, or your perspective makes you look at the other linked business concepts that are not relevant for the next office.
 
 
-![The challenges of industry data](../images/industry-data2.png) 
+![The challenges of industry data](../yed/industry-data2.png) 
 
 
 ## See Also
