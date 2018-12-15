@@ -24,13 +24,13 @@ The first fact we must keep in mind is that data is not "absolute", it is the re
 
 Data was always produced by a certain business process. For that reason, data is the product of the following factors:
 
-  * A semantic space (or a set of "business concepts" having semantic meanings and semantic links to one another),
-  * A point of view,
+  * A semantic space, which corresponds to a set of "business concepts" having semantic meanings and semantic links to one another;
+  * A point of view;
   * A specific moment in time.
 
 Some data may be simple to interpret, for instance the list of articles you consulted in a retail website. With those data and the ones of people that bought the same products than you, you can create personalized recommendation algorithms.
 
-But in the industry, that is not because you ave the data that you can use them easily, even if you are talking about the exact same thing than your neighbor of the next office (same semantic space): you may look at the business concepts in another time frame, or your perspective makes you look at the other linked business concepts that are not relevant for the next office.
+But in the industry, that is not because you have the data that you can use them easily, even if you are talking about the exact same thing than your neighbor of the next office (same semantic space): you may look at the same business concepts in another time frame, or your perspective makes you look at the other linked business concepts that are not relevant for the next office.
 
 
 ![The challenges of industry data](../yed/industry-data2.png) 
