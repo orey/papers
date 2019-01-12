@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "Olivier Rey's Papers\n\n\nPapers\n\n\n\n\nThe Five Levels of Conceptual Maturity for IT Teams\n\n\nThe V2 Vortex\n - New version November 2017\n\n\nThe Various Stages of Digital Transformation\n\n\nConsiderations about Rest and Web Services\n\n\nGraphQL And Classic Web Services\n\n\nA Simple Meta-Model for Portfolio Management\n\n\nAn Introduction to The Archimate Revolution\n\n\nNEW\n: \nArchimate Recipes\n\n\n\n\nGraph-oriented programming\n\n\nThis is a new section with some interesting materials about graph-oriented programming, solving the technical debt issue and using graph transformations in software engineering.\n\n\n\n\nFirst article on graph-oriented programming\n\n\nConference at the STAF/ICGT 2018 in Toulouse",
+            "text": "Olivier Rey's Papers\n\n\nPapers\n\n\n\n\nThe Five Levels of Conceptual Maturity for IT Teams\n\n\nThe V2 Vortex\n - New version November 2017\n\n\nThe Various Stages of Digital Transformation\n\n\nConsiderations about Rest and Web Services\n\n\nGraphQL And Classic Web Services\n\n\nA Simple Meta-Model for Portfolio Management\n\n\nAn Introduction to The Archimate Revolution\n\n\nNEW\n: \nArchimate Recipes\n\n\n\n\nGraph-oriented programming\n\n\nThis is a new section with some interesting materials about graph-oriented programming, solving the technical debt issue and using graph transformations in software engineering.\n\n\n\n\nFirst article on graph-oriented programming\n\n\nConference at the STAF/ICGT 2018 in Toulouse\n\n\n\n\nOngoing works can be found here: \nGraphApps.io\n or \nhere\n.",
             "title": "Home"
         },
         {
@@ -17,7 +17,7 @@
         },
         {
             "location": "/#graph-oriented-programming",
-            "text": "This is a new section with some interesting materials about graph-oriented programming, solving the technical debt issue and using graph transformations in software engineering.   First article on graph-oriented programming  Conference at the STAF/ICGT 2018 in Toulouse",
+            "text": "This is a new section with some interesting materials about graph-oriented programming, solving the technical debt issue and using graph transformations in software engineering.   First article on graph-oriented programming  Conference at the STAF/ICGT 2018 in Toulouse   Ongoing works can be found here:  GraphApps.io  or  here .",
             "title": "Graph-oriented programming"
         },
         {
