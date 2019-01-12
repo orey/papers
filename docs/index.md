@@ -17,3 +17,7 @@ This is a new section with some interesting materials about graph-oriented progr
 
   * [First article on graph-oriented programming](graph/first-article.md)
   * [Conference at the STAF/ICGT 2018 in Toulouse](graph/staf-icgt2018.md)
+  
+Ongoing works can be found here: [GraphApps.io](http://graphapps.io "GraphApps.io") or [here](https://github.com/orey/graphapps "GraphApps.io").
+
+
