@@ -181,4 +181,4 @@ To be done.
 Reports can be generated from the Archimate model. You can find [here a report template](https://github.com/orey/archi-report-template) slightly modified compared to the original [Archi](https://archimatetool.com) one.
 
 
-(*July 2018*)
+(*October 2019*)
