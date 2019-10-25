@@ -151,7 +151,8 @@
             <li><a href="#levels-of-nesting">Levels of nesting</a></li>
             <li><a href="#several-instances-of-the-same-software-in-different-contexts">Several instances of the same software in different contexts</a></li>
             <li><a href="#managing-time-and-scenarios">Managing time and scenarios</a></li>
-            <li><a href="#reports">Reports</a></li>
+            <li><a href="#about-tags">About tags</a></li>
+            <li><a href="#see-also">See also</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -255,9 +256,61 @@
 </ul>
 <p>All the tags used in the model should be documented precisely in the model description. They represent a kind of specific taxonomy of the various artifacts and ease the understanding of complex situations.</p>
 <h2 id="managing-time-and-scenarios">Managing time and scenarios</h2>
-<p>To be done.</p>
-<h2 id="reports">Reports</h2>
-<p>Reports can be generated from the Archimate model. You can find <a href="https://github.com/orey/archi-report-template">here a report template</a> slightly modified compared to the original <a href="https://archimatetool.com">Archi</a> one.</p>
+<p>Quite often in the digital transformation process, we need to establish the "as-is" situation and the "to-be" situation. This can be quite tricky if some naming conventions were not determined to make understand what are the "as-is" artifacts and the "to-be" ones.</p>
+<p>For instance, Figure 12 shows us a customized ERP module 3 for the French subsidiary. Let us suppose that this module is the "to-be" situation.</p>
+<p><img alt="Figure 13: As-is situation" src="../../archi/Figure-12.png" /></p>
+<p><u>Figure 13</u>: As-is situation</p>
+<p>The Figure 13 would describe the as-is situation.</p>
+<p>We know we need customized functions for the French subsidiary. Those functions will have to be implemented in some application component, being within the ERP module 3 or in an external module. That leads us to 2 scenarios.</p>
+<p><img alt="Figure 14: 2 scenarios" src="../../archi/Figure-13.png" /></p>
+<p><u>Figure 14</u>: 2 scenarios</p>
+<p>The Figure 14 shows a way of representing the 2 scenarios:</p>
+<ul>
+<li>One being a direct modification of module 3 with the new functions (scenario 1);</li>
+<li>One being a light modification of module 3 with the access to an external application implementing the new functions.</li>
+</ul>
+<p>In that case, we have 3 artifacts corresponding to the module 3, each of them having a different temporal tag:</p>
+<ul>
+<li><code>(as-is)</code> for the current module 3,</li>
+<li><code>(s1)</code> for the first scenario,</li>
+<li><code>(s2)</code> for the second one.</li>
+</ul>
+<p>We decided to keep the link between the evolutions of the module 3 (<code>(s1)</code> and <code>(s2)</code> tags) and their origin tagged <code>(as-is)</code> by using a specialization relationship tagged with the scenario number. This convention enables to work on alternate scenarios.</p>
+<p>Le's suppose now that we want to describe the following scenario:</p>
+<ul>
+<li>Step 1: Implementing the customized functions into the ERP module;</li>
+<li>Step 2: Getting those customized functions out of the ERP module.</li>
+</ul>
+<p>We would have the situation presented in Figure 15 with <code>(s1)</code> and <code>(s2)</code> representing the steps 1 and 2.</p>
+<p><img alt="Figure 15: Evolution of solutions with time" src="../../archi/Figure-14.png" /></p>
+<p><u>Figure 15</u>: Evolution of solutions with time</p>
+<p>This solution has an advantage: the ERP content is always exact, because the tags "as-is" and "to-be" duplicated the "ERP" artifact. The drawback is that the ERP artifact is not unique.</p>
+<p>Another description choice would have been to keep only one artifact for the ERP component. The component would have aggregated the several various "versions" of the module 3. In that case, the links between the ERP and the version of sub-module should have been very explicit in order to keep track of the various modifications of the module 3.</p>
+<p>Using temporal tags enable to better formalize scenarios and successions of steps in a context of digital transformation. This use must be adapted to the purpose of the project. In all cases, the trade-off analysis result should be explained in the model itself.</p>
+<h2 id="about-tags">About tags</h2>
+<p>In this article, we have introduced the use of tags in several cases:</p>
+<ul>
+<li>Nesting</li>
+<li>Multiple instances</li>
+<li>Time management</li>
+</ul>
+<p>The first case can be used for clarity and consistency. Using tags for nesting does not add semantic information to the model, but enables it to be more readable.</p>
+<p>The case of multiple instances is more complex, because we often want to represent several meanings at the same time, for instance two companies are using the same software but not really the same functions in it. In that case, a specific trade-off must be done in order to find the correct level of expressiveness.</p>
+<p>The case of time management is particularly useful to represent the various states of a digital transformation, or the various scenarios to go from one state to another. In that case also, the trade-off analysis is important and depends on what we really want to express.</p>
+<p>One simple rule can be to use different artifacts in the case when those artifacts can be estimated separately. For instance in Figure 14, the various versions of the module 3 will enable different sizing. The fact that we have only one ERP artifact would take the hypothesis that the version of the module 3 has no impact on the full ERP, whereas having 2 ERP artifacts will lead to think that depending on the version of the module 3, the ERP component could be impacted.</p>
+<p>We can note that those tags are not adding new semantic content (like UML stereotypes can do for instance). In this situation, tags can really be of help in quite a large number of situations.</p>
+<p>In Figure 10, we used tags to propagate two Archimate information in the tags of the software:</p>
+<ul>
+<li>Location</li>
+<li>Main organization using the software</li>
+</ul>
+<p>This use should be balanced and challenged. We did that in order to materialize the various instances of the software and the fact that those instances were really depending on the where and the who. On the other hand, native Archimate artifacts are existing which can be ambiguous. Sometimes, tags are just temporary ways to represent a complex reality before using a more standard way to do it.</p>
+<p>Remember that models are dynamic and often work in progress and that there is no definitive way of modeling complex reality.</p>
+<h2 id="see-also">See also</h2>
+<ul>
+<li><a href="../archimate-intro/">Introduction to Archimate</a></li>
+<li>Reports can be generated from the Archimate model. You can find <a href="https://github.com/orey/archi-report-template">here a report template</a> slightly modified compared to the original <a href="https://archimatetool.com">Archi</a> one.</li>
+</ul>
 <p>(<em>October 2019</em>)</p></div>
         </div>
 
