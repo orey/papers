@@ -130,7 +130,47 @@ Most of the time, tagging artifacts with their level:
 
 ## Several instances of the same software in different contexts
 
-To be done.
+Big software such as ERP often propose several modules. Documenting the proposed modules can be of interest to be able to capitalize on the descriptions, especially of some customizations were done inside the off-the-shelf software.
+
+The figure 9 shows an illustration of that case: The module 3 of the ERP was customized centrally to the company for the needs of the French subsidiary.
+
+![Figure 9: Standard and customized modules](../archi/Figure-08.png)
+
+<u>Figure 9</u>: Standard and customized modules
+
+The `(FR)` tag will enable to see directly that the function is customized in a certain context.
+
+The complexity comes when we will try to represent the various instances of the ERP running for the various subsidiaries.
+
+![Figure 10: Several ERP instances](../archi/Figure-09.png)
+
+<u>Figure 10</u>: Several ERP instances
+
+In figure 10, we use the specialization relationship to define the "instances" of ERP used by several subsidiaries based on the "central version" of the ERP.
+
+This figure is ambiguous, however. It lets think that every subsidiary is using all modules of the ERP, whereas it is probably not the case. The `(L1) ERP` is the description of the "central version" of the ERP, the one that will be deployed per subsidiary, and the description of its sub-modules.
+
+But we also need sub-modules for the instances of that product, knowing that only the French subsidiary is using the customized `(L2) ERP module 3`.
+
+![Figure 11: Linking sub-modules](../archi/Figure-10.png)
+
+<u>Figure 11</u>: Linking sub modules
+
+The Figure 11 proposes a way to reuse the sub-modules defined at the `(L1) ERP` level. This can be sufficient if only the French subsidiary is using the `(L2) ERP module 3`. But if the US subsidiary was to use also the module 3 *without* the French customization, we would have to reconsider the modeling in order to better represent the reality.
+
+![Figure 12: Specializing module 3](../archi/Figure-11.png)
+
+<u>Figure 12</u>: Specializing module 3
+
+The figure 11 shows how to specialize module 3 in order to represent the reality. The US ERP will use the standard ERP module 3 with standard functions, whereas the French subsidiary will use a customized version of the module 3 containing the French customizations.
+
+By creating another module, specialized from the original module 3, we were able to express the reality. The tags also enable the identification of the various dimensions that we want to keep track of:
+
+  * The various level of nesting of components,
+  * The organizations running the software,
+  * The business domains.
+
+All the tags used in the model should be documented precisely in the model description. They represent a kind of specific taxonomy of the various artifacts and ease the understanding of complex situations.
 
 ## Managing time and scenarios
 
