@@ -1,96 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    
     <url>
-     <loc>None/</loc>
-     <lastmod>2019-01-12</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-10-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
-        
     <url>
-     <loc>None/articles/five-levels/</loc>
-     <lastmod>2019-01-12</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-10-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/articles/the-v2-vortex/</loc>
-     <lastmod>2019-01-12</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-10-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/articles/various-stages/</loc>
-     <lastmod>2019-01-12</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-10-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/articles/about-rest/</loc>
-     <lastmod>2019-01-12</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-10-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/articles/graphql-web-services/</loc>
-     <lastmod>2019-01-12</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-10-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/articles/portfolio/</loc>
-     <lastmod>2019-01-12</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-10-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/articles/archimate-intro/</loc>
-     <lastmod>2019-01-12</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-10-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/articles/archimate-recipes/</loc>
-     <lastmod>2019-01-12</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-10-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>None/graph/first-article/</loc>
-     <lastmod>2019-01-12</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-10-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/graph/staf-icgt2018/</loc>
-     <lastmod>2019-01-12</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-10-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>None/about/about/</loc>
-     <lastmod>2019-01-12</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-10-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/about/LICENSE/</loc>
-     <lastmod>2019-01-12</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-10-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
 </urlset>
