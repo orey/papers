@@ -29,17 +29,20 @@ The full digital thread of information will have to be maintained through change
 
 ### RFLP processes with many variable dimensions
 
-The RFLP processes that we can find in the industry are generally describing many parameters attached to the various elements (requirements, functions, systems, etc.): the performance, the price, the manufacturability, the respect of regulation and standards are among the most important of parameters (the weight also in aerospace). Those parameters are crucial because, during the various design phases:
+The RFLP processes that we can find in the industry are generally describing many parameters attached to the various elements (requirements, functions, systems, etc.): the performance, the price, the various criteria of manufacturability, the respect of regulation and standards are among the most important of parameters (the weight also in aerospace). Those parameters are crucial because, during the various design phases:
 
+  * They permit to use requirement quantification (with values and ranges) and not only requirement qualification;
   * They enable to simulate the various elements working together (functional simulation, system simulation, or full product simulation in some known conditions);
-  * They enable complex trade-offs that lead to design the best product "under certain constraints".
+  * They enable complex trade-offs that lead to design the best product "under a certain set of constraints".
 
 ### Modeling in MBSE
 
-The topic is quite vast but we will, once again, try a simplification. Modeling can be done in 3 approaches:
+The topic is quite vast but we will, once again, try a simplification. Modeling can be done mainly with 2 different (and sometimes complementary) approaches:
 
-  * The first one is to use "standard MBSE modeling language" like SysML or Capella to run the "RFL" part of the MBSE process (the "P" part will be done with specific tools like 3D design tools or electricity engineering tools);
-  * The second one is to use a domain-specific language (DSL) like
+  * The first one is to use "standard MBSE modeling language" like [SysML](http://www.omgsysml.org/) or [Arcadia](https://www.polarsys.org/capella/) to run the "RFL" part of the MBSE process (the "P" part will be done with specific tools like 3D design tools or electricity engineering tools); The objective is to model graphically the "RFL" part of the process and to keep links with the "P" parts;
+  * The second one is to use a simulation-oriented domain-specific language (DSL, the domain being systems engineering) like [PMM](https://hal.archives-ouvertes.fr/hal-01273973/document) or [Form-L](http://www.ep.liu.se/ecp/096/130/ecp14096130.pdf);
+
+A third way of doing is not to do any MBSE approach, or doing it partially: requirements, functions and systems can be described in various tools and office documents, and at a certain point (generally the detailed design point), specific business tools are used to complete the study. In this kind of process, the digital thread is extremely difficult to maintain or trace, and generally, to be able to do it, a lot of manual and painful efforts are required.
 
 
 
