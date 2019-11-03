@@ -149,9 +149,10 @@
             <li><a href="#prerequisites">Prerequisites</a></li>
             <li><a href="#introduction-to-tags">Introduction to tags</a></li>
             <li><a href="#levels-of-nesting">Levels of nesting</a></li>
+            <li><a href="#alternates-solution-for-nesting">Alternates solution for nesting</a></li>
             <li><a href="#several-instances-of-the-same-software-in-different-contexts">Several instances of the same software in different contexts</a></li>
             <li><a href="#managing-time-and-scenarios">Managing time and scenarios</a></li>
-            <li><a href="#about-tags">About tags</a></li>
+            <li><a href="#about-tags_1">About tags</a></li>
             <li><a href="#see-also">See also</a></li>
     </ul>
 </div></div>
@@ -164,38 +165,47 @@
 <h2 id="prerequisites">Prerequisites</h2>
 <p>This article is using <a href="https://archimatetool.com">Archi</a>. This tool is great. If you are using it, please consider making a donation.</p>
 <h2 id="introduction-to-tags">Introduction to tags</h2>
+<h3 id="about-tags">About tags</h3>
 <p>Archimate is a very powerful language but sometimes, it can be very useful to create tags to distinguish artifacts or group them into sets.</p>
 <p>We will put some tags in the name of the artifact in some cases, and in other cases, we can benefit from the use of properties (for instance to process some calculation based on some property values). The convention we use in this article is to "tag" the names of the artifacts by placing a label between parenthesis.</p>
 <p>Tags are sometimes linked to <a href="http://pubs.opengroup.org/architecture/archimate3-doc/chap05.html">derived relationships</a> but often they answer to other needs.</p>
+<h3 id="why-not-using-stereotypes">Why not using stereotypes?</h3>
+<p>Modeling languages like UML or SysML use stereotypes to specialialize model elements and to create new artifacts that derive from a master artifact (one from the standard).</p>
+<p>Example: If you want to model a graph of data, you may need 2 new artifacts: <code>Node</code> and <code>Relationship</code> instead of <code>Data Objet</code>. You can use the left representation of Figure 1 and create new data objects from the specializations with the UML convention <code>&lt;&lt;stereotype&gt;&gt;</code>.</p>
+<p><img alt="Figure 1: Modeling a graph with and without stereotypes" src="../../archi/Figure-15.png" /></p>
+<p><u>Figure 1</u>: Modeling a graph with and without stereotypes</p>
+<p>Stereotypes are creating new classes of objects. Mentioning stereotypes can be a good way to indicate to your fellow modelers (having a UML or SysML background) what were your intentions.</p>
+<p>But you can also use the right representation and make your classes derive directly from <code>Node</code> and <code>Relationship</code>, considered as implicitit stereotypes of <code>Data Objet</code>.</p>
+<p>In the rest of the page, we will more focus on tags that are not supposed to replace the stereotype specialization.</p>
 <h2 id="levels-of-nesting">Levels of nesting</h2>
 <h3 id="basics">Basics</h3>
-<p>In an Archimate model, it is quite common to model nested objects like shown in Figure 1.</p>
-<p><img alt="Figure 1: Sample of nesting in the business layer" src="../../archi/Figure-01.png" /></p>
-<p><u>Figure 1</u>: Sample of nesting in the business layer</p>
-<p>In Figure 1, we can see that the <code>Accountant</code> role is assigned both to the <code>Accounting</code> business function and to the <code>Closing</code> business process. The <code>Closing</code> artifact is nested into the <code>Accounting</code> function that is, in our model, a business function of the highest level.</p>
+<p>In an Archimate model, it is quite common to model nested objects like shown in Figure 2.</p>
+<p><img alt="Figure 2: Sample of nesting in the business layer" src="../../archi/Figure-01.png" /></p>
+<p><u>Figure 2</u>: Sample of nesting in the business layer</p>
+<p>In Figure 2, we can see that the <code>Accountant</code> role is assigned both to the <code>Accounting</code> business function and to the <code>Closing</code> business process. The <code>Closing</code> artifact is nested into the <code>Accounting</code> function that is, in our model, a business function of the highest level.</p>
 <p>Being the highest level of "granularity" of our processes (in some cases, this level can be the one of the quality system of the company), we can tag the <code>Accounting</code> artifact with the level <code>(L1)</code> to indicate its level.</p>
 <p>All the business processes and/or business functions that will be nested into it will be tagged <code>(L2)</code> for "level 2". All nested objects inside level 2 objects will be tagged level 3 <code>(L3)</code> and so on.</p>
-<p>An option is to flag the relationship with the level as shown in Figure 1. This can be superfluous if the artifacts are already tagged.</p>
+<p>An option is to flag the relationship with the level as shown in Figure 2. This can be superfluous if the artifacts are already tagged.</p>
 <h3 id="graph-view">Graph view</h3>
-<p>This simple system enables to sort artifacts per level on the Archimate graph view (see Figure 2).</p>
-<p><img alt="Figure 2: Archimate graph centered in the Accountant artifact" src="../../archi/Accountant.png" /></p>
-<p><u>Figure 2</u>: Archimate graph centered in the Accountant artifact</p>
+<p>This simple system enables to sort artifacts per level on the Archimate graph view (see Figure 3).</p>
+<p><img alt="Figure 3: Archimate graph centered in the Accountant artifact" src="../../archi/Accountant.png" /></p>
+<p><u>Figure 3</u>: Archimate graph centered in the Accountant artifact</p>
 <p>When the diagram has many artifacts, it is possible to sort the level of vision that we want to have in the graph view. This kind of need appears for instance when we want to have a good vision of the full coverage of a certain point of view.</p>
 <p>In the graph view, helped with the tags, we can sort all processes attached to the <code>Accountant</code> role per level in order to determine in, in all our views, we cover what we imagine as being all <code>(L1)</code> processes.</p>
-<p><img alt="Figure 3: Sorted Archimate graph centered in the Accountant artifact" src="../../archi/Accountant2.png" /></p>
-<p><u>Figure 3</u>: Sorted Archimate graph centered in the Accountant artifact</p>
+<p><img alt="Figure 4: Sorted Archimate graph centered in the Accountant artifact" src="../../archi/Accountant2.png" /></p>
+<p><u>Figure 4</u>: Sorted Archimate graph centered in the Accountant artifact</p>
 <p>When the model has many views with many artifacts at various different levels, the graph view helps making the model consistent.</p>
 <h3 id="working-at-different-levels">Working at different levels</h3>
-<p>In Figure 4, working with process levels enabled the enterprise architect to indicate that, at a certain level <code>(L2)</code>, the main role taking in charge the <code>Closing</code> process is the <code>Accountant</code>, but at a lower level, we have other roles taking in charge a part of the process.</p>
-<p><img alt="Figure 4: Main role and secondary role" src="../../archi/Figure-04.png" /></p>
-<p><u>Figure 4</u>: Main role and secondary role</p>
+<p>In Figure 5, working with process levels enabled the enterprise architect to indicate that, at a certain level <code>(L2)</code>, the main role taking in charge the <code>Closing</code> process is the <code>Accountant</code>, but at a lower level, we have other roles taking in charge a part of the process.</p>
+<p><img alt="Figure 5: Main role and secondary role" src="../../archi/Figure-04.png" /></p>
+<p><u>Figure 5</u>: Main role and secondary role</p>
 <p>For sure, all diagrams should be consistent, so possibly not to show the relationships that could be misleading in the view.</p>
-<p>For instance, in Figure 4, the assignment link between <code>Accountant</code> and <code>(L2) Closing</code> is misleading in the diagram. Because, it this diagram, we should only show the various roles that collaborate to the sub-processes of the <code>(L2) Closing</code> process.</p>
-<p><img alt="Figure 5: Main role and secondary role" src="../../archi/Figure-05.png" /></p>
-<p><u>Figure 5</u>: Main role and secondary role (less ambiguous view)</p>
-<p>Figure 5 is showing a much less ambiguous view. For sure, as soon as we we look at those processes at the <code>(L2)</code> level, the <code>Business controller</code> role will become invisible.</p>
+<p>For instance, in Figure 5, the assignment link between <code>Accountant</code> and <code>(L2) Closing</code> is misleading in the diagram. Because, it this diagram, we should only show the various roles that collaborate to the sub-processes of the <code>(L2) Closing</code> process.</p>
+<p><img alt="Figure 6: Main role and secondary role" src="../../archi/Figure-05.png" /></p>
+<p><u>Figure 6</u>: Main role and secondary role (less ambiguous view)</p>
+<p>Figure 6 is showing a much less ambiguous view. For sure, as soon as we we look at those processes at the <code>(L2)</code> level, the <code>Business controller</code> role will become invisible.</p>
 <h3 id="note-on-derived-relationships">Note on derived relationships</h3>
-<p>Semantically, we try to express an ambiguity. Figure 1 could say that the <code>Accountant</code> role is assigned to <code>Closing</code> and "in a more general way" to the <code>Accounting</code> function. But we know nothing about the other <code>(L2)</code> functions and if the <code>Accountant</code> role is really assigned to all <code>(L2)</code> functions that would compose the <code>Accounting</code> function.</p>
+<p>Semantically, we try to express an ambiguity. Figure 2 could say that the <code>Accountant</code> role is assigned to <code>Closing</code> and "in a more general way" to the <code>Accounting</code> function. But we know nothing about the other <code>(L2)</code> functions and if the <code>Accountant</code> role is really assigned to all <code>(L2)</code> functions that would compose the <code>Accounting</code> function.</p>
 <p>The definition of a relationship is not really helping:</p>
 <blockquote>
 <p>If two structural or dependency relationships r:R and s:S are permitted between elements a, b, and c such that r(a,b) and s(b,c), then a structural relationship t:T is also permitted, with t(a,c) and type T being the weakest of R and S.</p>
@@ -208,20 +218,25 @@
 <li><code>R3 = Accountant A Closing</code></li>
 </ul>
 <p>So, in the context of structural relationships derivation rules, we could say that <code>R3 + R1 &amp;rarr; R2</code>. That means that <code>R2</code> is a derived relationship.</p>
-<p>In the activity of modeling, derived relationships are not always interesting. Indeed, in Figure 4, we don't want to have <code>Business controller</code> assigned to <code>Closing</code>, even if <code>Closing</code> is composed with <code>Validate provisions</code>.</p>
+<p>In the activity of modeling, derived relationships are not always interesting. Indeed, in Figure 5, we don't want to have <code>Business controller</code> assigned to <code>Closing</code>, even if <code>Closing</code> is composed with <code>Validate provisions</code>.</p>
 <p>We believe that, in such cases, it is clearer to use tags. When watching a role, we can see immediately at what level of process he is assigned. If we don't use the derive relationship, we can express complex situation of drill down that are, strictly speaking, not complete, but that "fit" better to the reality.</p>
 <h3 id="functional-content-of-application-components">Functional content of application components</h3>
 <p>A very common requirement that we have in modeling the IT systems in Archimate is the requirement of modeling application functions at different levels.</p>
-<p><img alt="Figure 6: Accounting system compressed" src="../../archi/Figure-06.png" /></p>
-<p><u>Figure 6</u>: Accounting system basic view</p>
-<p>The Figure 6 shows a basic accounting system with implicit assignment and aggregation links. By tagging the functions with their level, we can clarify at what level we are looking at the model.</p>
-<p>The problem is to represent a zoom on a particular function like shown in Figure 7.</p>
-<p><img alt="Figure 7: The need to represent an ambiguous assignment" src="../../archi/Figure-07.png" /></p>
-<p><u>Figure 7</u>: The need to represent an ambiguous assignment</p>
-<p>This assignment relationship being flagged, the graph view enables a grouping of functions per levels <code>(L1)</code> and <code>(L2)</code>. If we think about coverage, e.g. to answer to the question "what are, in all views of the model, all the functions of the accounting system?", we'll have to consider only the <code>(L1)</code>.</p>
-<p><img alt="Figure 8: The need to represent an ambiguous assignment" src="../../archi/AccountingSystem.png" /></p>
+<p><img alt="Figure 7: Accounting system compressed" src="../../archi/Figure-06.png" /></p>
+<p><u>Figure 7</u>: Accounting system basic view</p>
+<p>The Figure 7 shows a basic accounting system with implicit assignment and aggregation links. By tagging the functions with their level, we can clarify at what level we are looking at the model.</p>
+<p>The problem is to represent a zoom on a particular function like shown in Figure 8.</p>
+<p><img alt="Figure 8: The need to represent an ambiguous assignment" src="../../archi/Figure-07.png" /></p>
 <p><u>Figure 8</u>: The need to represent an ambiguous assignment</p>
-<p>Indeed the relationship <code>Accounting System</code> to <code>Monthly closing management</code> that we created in a certain viewpoint is a derived relationship and a consequence of </p>
+<p>This assignment relationship being flagged, the graph view enables a grouping of functions per levels <code>(L1)</code> and <code>(L2)</code>. If we think about coverage, e.g. to answer to the question "what are, in all views of the model, all the functions of the accounting system?", we'll have to consider only the <code>(L1)</code>.</p>
+<p><img alt="Figure 9: The need to represent an ambiguous assignment" src="../../archi/AccountingSystem.png" /></p>
+<p><u>Figure 9</u>: The need to represent an ambiguous assignment</p>
+<p>Indeed the relationship <code>Accounting System</code> to <code>Monthly closing management</code> that we created in a certain viewpoint is a derived relationship, and the consequence of <code>Monthly closing management</code> being aggregated into <code>General ledger management</code>. Without tags, this relation could be ambiguous. With tags, we know right away in Figure 8 that the assignment relation is probably some kind of shortcut, used to highlight a specific point, and that <code>(L1)</code> functions are also assigned to <code>Accounting System</code>, the <code>(L2) Monthly closing management</code> being a <code>(L2)</code> function.</p>
+<p>We have to be vigilant of those relationships to <code>(L2)</code> elements because they will probably not enable the talk about coverage. If the <code>(L1)</code> functions present a full coverage representation of the application component, the <code>(L2)</code> level may not. Indeed, when using a <code>(L2)</code> level in in <code>(L1)</code>, we should think about the fact that the set of <code>(L2)</code> elements is representing correctly the <code>(L1)</code>.</p>
+<p>In this sample, the underlying hypothesis is that every application component will be assigned to a hierarchy of <code>(L1)</code> functions. Using tags in this way enables to have a more precise vision of the reality.</p>
+<h2 id="alternates-solution-for-nesting">Alternates solution for nesting</h2>
+<p>An alternate solution was proposed by <a href="https://www.linkedin.com/in/philippe-augras-a2a5432/">Philippe Augras</a> in <a href="https://www.linkedin.com/posts/reyolivier_archimate-recipes-activity-6593541962756878336-98X7">LinkedIn</a> using hierarchy of meanings tagging the various levels of nesting (artifacts and relationships).</p>
+<p>Another alternate solution was propose by <a href="https://www.linkedin.com/in/nfigay/">Nicolas Figay</a> in <a href="https://www.linkedin.com/posts/reyolivier_archimate-recipes-activity-6593541962756878336-98X7">LinkedIn</a> using properties and specific views.</p>
 <h3 id="conclusion-on-nesting">Conclusion on nesting</h3>
 <p>Nesting is an important part of big Archimate models. Generally, it is very useful to have certain artifacts (like active structures for instance) attached to several different levels of behaviors depending on the views.</p>
 <p>Most of the time, tagging artifacts with their level:</p>
@@ -232,22 +247,22 @@
 </ul>
 <h2 id="several-instances-of-the-same-software-in-different-contexts">Several instances of the same software in different contexts</h2>
 <p>Big software such as ERP often propose several modules. Documenting the proposed modules can be of interest to be able to capitalize on the descriptions, especially of some customizations were done inside the off-the-shelf software.</p>
-<p>The figure 9 shows an illustration of that case: The module 3 of the ERP was customized centrally to the company for the needs of the French subsidiary.</p>
-<p><img alt="Figure 9: Standard and customized modules" src="../../archi/Figure-08.png" /></p>
-<p><u>Figure 9</u>: Standard and customized modules</p>
+<p>The figure 10 shows an illustration of that case: The module 3 of the ERP was customized centrally to the company for the needs of the French subsidiary.</p>
+<p><img alt="Figure 10: Standard and customized modules" src="../../archi/Figure-08.png" /></p>
+<p><u>Figure 10</u>: Standard and customized modules</p>
 <p>The <code>(FR)</code> tag will enable to see directly that the function is customized in a certain context.</p>
 <p>The complexity comes when we will try to represent the various instances of the ERP running for the various subsidiaries.</p>
-<p><img alt="Figure 10: Several ERP instances" src="../../archi/Figure-09.png" /></p>
-<p><u>Figure 10</u>: Several ERP instances</p>
-<p>In figure 10, we use the specialization relationship to define the "instances" of ERP used by several subsidiaries based on the "central version" of the ERP.</p>
+<p><img alt="Figure 11: Several ERP instances" src="../../archi/Figure-09.png" /></p>
+<p><u>Figure 11</u>: Several ERP instances</p>
+<p>In figure 11, we use the specialization relationship to define the "instances" of ERP used by several subsidiaries based on the "central version" of the ERP.</p>
 <p>This figure is ambiguous, however. It lets think that every subsidiary is using all modules of the ERP, whereas it is probably not the case. The <code>(L1) ERP</code> is the description of the "central version" of the ERP, the one that will be deployed per subsidiary, and the description of its sub-modules.</p>
 <p>But we also need sub-modules for the instances of that product, knowing that only the French subsidiary is using the customized <code>(L2) ERP module 3</code>.</p>
-<p><img alt="Figure 11: Linking sub-modules" src="../../archi/Figure-10.png" /></p>
-<p><u>Figure 11</u>: Linking sub modules</p>
-<p>The Figure 11 proposes a way to reuse the sub-modules defined at the <code>(L1) ERP</code> level. This can be sufficient if only the French subsidiary is using the <code>(L2) ERP module 3</code>. But if the US subsidiary was to use also the module 3 <em>without</em> the French customization, we would have to reconsider the modeling in order to better represent the reality.</p>
-<p><img alt="Figure 12: Specializing module 3" src="../../archi/Figure-11.png" /></p>
-<p><u>Figure 12</u>: Specializing module 3</p>
-<p>The figure 11 shows how to specialize module 3 in order to represent the reality. The US ERP will use the standard ERP module 3 with standard functions, whereas the French subsidiary will use a customized version of the module 3 containing the French customizations.</p>
+<p><img alt="Figure 12: Linking sub-modules" src="../../archi/Figure-10.png" /></p>
+<p><u>Figure 12</u>: Linking sub modules</p>
+<p>The Figure 12 proposes a way to reuse the sub-modules defined at the <code>(L1) ERP</code> level. This can be sufficient if only the French subsidiary is using the <code>(L2) ERP module 3</code>. But if the US subsidiary was to use also the module 3 <em>without</em> the French customization, we would have to reconsider the modeling in order to better represent the reality.</p>
+<p><img alt="Figure 13: Specializing module 3" src="../../archi/Figure-11.png" /></p>
+<p><u>Figure 13</u>: Specializing module 3</p>
+<p>The figure 13 shows how to specialize module 3 in order to represent the reality. The US ERP will use the standard ERP module 3 with standard functions, whereas the French subsidiary will use a customized version of the module 3 containing the French customizations.</p>
 <p>By creating another module, specialized from the original module 3, we were able to express the reality. The tags also enable the identification of the various dimensions that we want to keep track of:</p>
 <ul>
 <li>The various level of nesting of components,</li>
@@ -257,14 +272,14 @@
 <p>All the tags used in the model should be documented precisely in the model description. They represent a kind of specific taxonomy of the various artifacts and ease the understanding of complex situations.</p>
 <h2 id="managing-time-and-scenarios">Managing time and scenarios</h2>
 <p>Quite often in the digital transformation process, we need to establish the "as-is" situation and the "to-be" situation. This can be quite tricky if some naming conventions were not determined to make understand what are the "as-is" artifacts and the "to-be" ones.</p>
-<p>For instance, Figure 12 shows us a customized ERP module 3 for the French subsidiary. Let us suppose that this module is the "to-be" situation.</p>
-<p><img alt="Figure 13: As-is situation" src="../../archi/Figure-12.png" /></p>
-<p><u>Figure 13</u>: As-is situation</p>
-<p>The Figure 13 would describe the as-is situation.</p>
+<p>For instance, Figure 13 shows us a customized ERP module 3 for the French subsidiary. Let us suppose that this module is the "to-be" situation.</p>
+<p><img alt="Figure 14: As-is situation" src="../../archi/Figure-12.png" /></p>
+<p><u>Figure 14</u>: As-is situation</p>
+<p>The Figure 14 would describe the as-is situation.</p>
 <p>We know we need customized functions for the French subsidiary. Those functions will have to be implemented in some application component, being within the ERP module 3 or in an external module. That leads us to 2 scenarios.</p>
-<p><img alt="Figure 14: 2 scenarios" src="../../archi/Figure-13.png" /></p>
-<p><u>Figure 14</u>: 2 scenarios</p>
-<p>The Figure 14 shows a way of representing the 2 scenarios:</p>
+<p><img alt="Figure 15: 2 scenarios" src="../../archi/Figure-13.png" /></p>
+<p><u>Figure 15</u>: 2 scenarios</p>
+<p>The Figure 15 shows a way of representing the 2 scenarios:</p>
 <ul>
 <li>One being a direct modification of module 3 with the new functions (scenario 1);</li>
 <li>One being a light modification of module 3 with the access to an external application implementing the new functions.</li>
@@ -281,13 +296,13 @@
 <li>Step 1: Implementing the customized functions into the ERP module;</li>
 <li>Step 2: Getting those customized functions out of the ERP module.</li>
 </ul>
-<p>We would have the situation presented in Figure 15 with <code>(s1)</code> and <code>(s2)</code> representing the steps 1 and 2.</p>
-<p><img alt="Figure 15: Evolution of solutions with time" src="../../archi/Figure-14.png" /></p>
-<p><u>Figure 15</u>: Evolution of solutions with time</p>
+<p>We would have the situation presented in Figure 16 with <code>(s1)</code> and <code>(s2)</code> representing the steps 1 and 2.</p>
+<p><img alt="Figure 16: Evolution of solutions with time" src="../../archi/Figure-14.png" /></p>
+<p><u>Figure 16</u>: Evolution of solutions with time</p>
 <p>This solution has an advantage: the ERP content is always exact, because the tags "as-is" and "to-be" duplicated the "ERP" artifact. The drawback is that the ERP artifact is not unique.</p>
 <p>Another description choice would have been to keep only one artifact for the ERP component. The component would have aggregated the several various "versions" of the module 3. In that case, the links between the ERP and the version of sub-module should have been very explicit in order to keep track of the various modifications of the module 3.</p>
 <p>Using temporal tags enable to better formalize scenarios and successions of steps in a context of digital transformation. This use must be adapted to the purpose of the project. In all cases, the trade-off analysis result should be explained in the model itself.</p>
-<h2 id="about-tags">About tags</h2>
+<h2 id="about-tags_1">About tags</h2>
 <p>In this article, we have introduced the use of tags in several cases:</p>
 <ul>
 <li>Nesting</li>
@@ -297,9 +312,9 @@
 <p>The first case can be used for clarity and consistency. Using tags for nesting does not add semantic information to the model, but enables it to be more readable.</p>
 <p>The case of multiple instances is more complex, because we often want to represent several meanings at the same time, for instance two companies are using the same software but not really the same functions in it. In that case, a specific trade-off must be done in order to find the correct level of expressiveness.</p>
 <p>The case of time management is particularly useful to represent the various states of a digital transformation, or the various scenarios to go from one state to another. In that case also, the trade-off analysis is important and depends on what we really want to express.</p>
-<p>One simple rule can be to use different artifacts in the case when those artifacts can be estimated separately. For instance in Figure 14, the various versions of the module 3 will enable different sizing. The fact that we have only one ERP artifact would take the hypothesis that the version of the module 3 has no impact on the full ERP, whereas having 2 ERP artifacts will lead to think that depending on the version of the module 3, the ERP component could be impacted.</p>
+<p>One simple rule can be to use different artifacts in the case when those artifacts can be estimated separately. For instance in Figure 15, the various versions of the module 3 will enable different sizing. The fact that we have only one ERP artifact would take the hypothesis that the version of the module 3 has no impact on the full ERP, whereas having 2 ERP artifacts will lead to think that depending on the version of the module 3, the ERP component could be impacted.</p>
 <p>We can note that those tags are not adding new semantic content (like UML stereotypes can do for instance). In this situation, tags can really be of help in quite a large number of situations.</p>
-<p>In Figure 10, we used tags to propagate two Archimate information in the tags of the software:</p>
+<p>In Figure 11, we used tags to propagate two Archimate information in the tags of the software:</p>
 <ul>
 <li>Location</li>
 <li>Main organization using the software</li>
@@ -311,7 +326,7 @@
 <li><a href="../archimate-intro/">Introduction to Archimate</a></li>
 <li>Reports can be generated from the Archimate model. You can find <a href="https://github.com/orey/archi-report-template">here a report template</a> slightly modified compared to the original <a href="https://archimatetool.com">Archi</a> one.</li>
 </ul>
-<p>(<em>October 2019</em>)</p></div>
+<p>(<em>November 2019</em>)</p></div>
         </div>
 
         <footer class="col-md-12">
