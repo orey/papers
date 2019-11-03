@@ -8,7 +8,7 @@
         <meta name="author" content="Olivier Rey">
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>MBSE vs Enterprise Architecture - Papers</title>
+        <title>Military frameworks, systems engineering and enterprise architecture - Papers</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -135,18 +135,55 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#mbse-vs-enterprise-architecture">MBSE vs Enterprise Architecture</a></li>
-            <li><a href="#mbsembe">MBSE/MBE</a></li>
+        <li class="main active"><a href="#military-frameworks-systems-engineering-and-enterprise-architecture">Military frameworks, systems engineering and enterprise architecture</a></li>
+            <li><a href="#1-mbsembe">1 MBSE/MBE</a></li>
+            <li><a href="#2-about-the-complexity-of-modeling-hybrid-systems">2 About the complexity of modeling hybrid systems</a></li>
+            <li><a href="#3-modeling-enterprise-architecture">3 Modeling enterprise architecture</a></li>
+            <li><a href="#4-solutions-for-military-projects">4 Solutions for military projects</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="mbse-vs-enterprise-architecture">MBSE vs Enterprise Architecture</h1>
+<h1 id="military-frameworks-systems-engineering-and-enterprise-architecture">Military frameworks, systems engineering and enterprise architecture</h1>
 <p><img alt="Image illustrating architecture" src="../../images/mbse-archi.jpg" /></p>
-<p>In the world of modeling, two streams, answering to different objectives, evolve in parallel for decades: The model-based system engineering (MBSE) and the enterprise architecture (EA). If most of the company will never see the connection between those two worlds, some use techniques that want to "bridge" the two modeling domains together.</p>
-<p>In this article, we will analyze the main differences of the two approaches, their common points and the various approaches that aim to couple them in a single approach.</p>
-<h2 id="mbsembe">MBSE/MBE</h2>
-<h3 id="the-rflp-process">The RFLP process</h3>
+<p><em>(Courtesy of Pixaby on https://www.pexels.com)</em></p>
+<p>In the world of architecture modeling, the military frameworks like <a href="https://dodcio.defense.gov/Library/DoD-Architecture-Framework/">DoDAF</a> (US Department of Defense Architecture Framework), <a href="https://www.gov.uk/guidance/mod-architecture-framework">MoDAF</a> (UK Ministry of Defence) or <a href="https://www.nato.int/cps/en/natohq/topics_157575.htm">NAF</a> (NATO Architecture Framework) are trying to define a common modeling language for a set of purposes.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Dimension</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Product definition</td>
+<td>Can be an aircraft, weapon, complex system, etc. and all the related IT systems to manage them. The objective is to use a systems engineering approach (model-based in that case), based on requirements.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Product support</td>
+<td>The objective of this phase is to detail all the systems that will permit the support of the product. This is generally a wide topic including maintenance, parts procurement, plus the product integration into existing military organizations.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Product operational use</td>
+<td>The product use must be envisaged in operations preparation and in battle field in coordination with other systems and organizations.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Project plan</td>
+<td>The objective is to be able to describe the the plan to deliver the product conforming to the requirements (phases, milestones and so on) and to permit project steering.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 1: Structure of military requirements</em></p>
+<p>The objective searched by military organization is to be able to master a global project of several billions of dollars/euros from the design phase to the support and operational phase. Because those projects/programs can be very large and very complex, the idea was that everyone (military organization and supplier organizations) share the same set of "views" on the program in order to share understanding of what was to be done, how requirements were taken into account, the full lifecycle of the project and the product.</p>
+<p>In a certain way, the objective of military frameworks is to have, in a single repository, the <a href="https://sebokwiki.org">systems engineering</a> (MBE/MBSE) and <a href="https://en.wikipedia.org/wiki/Enterprise_architecture">enterprise architecture</a> <em>gathered together</em>.</p>
+<h2 id="1-mbsembe">1 MBSE/MBE</h2>
+<h3 id="11-the-rflp-process">1.1 The RFLP process</h3>
 <p>In manufacturing, the objective is to create products. The starting point of a product manufacturing is generally a set of requirements. To go from the requirements to the product is generally a long process involving the following phases:</p>
 <ul>
 <li><u>Requirements engineering</u>: The objective of this phase is to work on requirements in order to make them non ambiguous, to sort them by importance and to remove inconsistency between them; In this phase, all the operational conditions of the product are described, which is a crucial phase of the process;</li>
@@ -154,26 +191,102 @@
 <li><u>Logical system analysis</u>: Once the various functions at various levels are known, the assignment of functions to logical elements can be done; The objective of this phase is to create the appropriate logical systems to get the nearest possible from a possible industrial split of the realization of the product; When the logical analysis is finished, we have the detailed specification of each system ;</li>
 <li><u>Physical design</u>: Once the product has been split on several components, several teams can work in parallel on component design (at the level of granularity of the component); The product architecture will ensure that all detailed components fit together conforming to the specifications.</li>
 </ul>
-<p>This view is, for sure, simplified and some industries (or specific businesses inside the industries like embedded software, electronics, or mechatronics) are often using more complex processes. But, seen from a high level standpoint, the various phases of the MBSE are the 4 we mentioned, leading some people to call the MBSE process a "RFLP" process (RFLP standing for Requirements, Functional, Logical, Physical).</p>
-<p>Currently, we find more and more people skipping the "S" of MBSE to talk about MBE, for model-based engineering. The term becomes larger because it does not have this (embedded) system connotation anymore.</p>
-<h3 id="maintaining-the-digital-thread">Maintaining the digital thread</h3>
-<p>For sure, a RFLP process creates a digital "thread" or "link" between the various entities, at least between the requirements, the functions and the systems (plus all the connectivity semantics). The system entities are a solution matching the requirements, and so is their "physical" description; but this solution is the result of various levels of trade-off analysis. In other terms, solutions can (and will) evolve with time.</p>
-<p>The full digital thread of information will have to be maintained through changes. Changes in requirements will lead to changes in systems and changes in systems (like obsolescence) must be compliant with requirements.</p>
-<h3 id="rflp-processes-with-many-variable-dimensions">RFLP processes with many variable dimensions</h3>
-<p>The RFLP processes that we can find in the industry are generally describing many parameters attached to the various elements (requirements, functions, systems, etc.): the performance, the price, the various criteria of manufacturability, the respect of regulation and standards are among the most important of parameters (the weight also in aerospace). Those parameters are crucial because, during the various design phases:</p>
+<p>This view is, for sure, simplified and some industries (or specific businesses inside the industries like embedded software, electronics, or mechatronics) are often using more complex processes, with dedicated sub-processes for every discipline.</p>
+<p>However, seen from a high level standpoint, the various phases of the MBSE are the 4 we mentioned, leading some people to call the MBSE process a "RFLP" process (RFLP standing for Requirements, Functional, Logical, Physical).</p>
+<p>Currently, we find more and more people skipping the "S" of MBSE to talk about MBE, for model-based engineering. The term becomes larger because it does not have this embedded system connotation anymore.</p>
+<h3 id="12-maintaining-the-digital-thread">1.2 Maintaining the digital thread</h3>
+<p>For sure, a RFLP process aims to create a digital "thread" or "link" between the various entities, at least between the requirements, the functions and the systems (plus all the connectivity semantics). The system entities are a solution matching the requirements, and so is their "physical" description; but this solution is the result of various levels of trade-off analysis. In other terms, solutions can (and will) evolve with time.</p>
+<p>The full digital thread of information will have to be maintained through changes. Changes in requirements (or operational conditions) will lead to changes in systems and changes in systems (like obsolescence) must be compliant with requirements.</p>
+<h3 id="13-rflp-processes-with-many-variable-dimensions">1.3 RFLP processes with many variable dimensions</h3>
+<p>The RFLP processes that we can find in the industry are generally describing many parameters attached to the various elements (requirements, functions, systems, etc.): the performance, the price, the various criteria of manufacturability, the respect of regulation and standards are among the most important of parameters (the weight also in aerospace).</p>
+<p>Those parameters are crucial because, during the various design phases:</p>
 <ul>
 <li>They permit to use requirement quantification (with values and ranges) and not only requirement qualification;</li>
 <li>They enable to simulate the various elements working together (functional simulation, system simulation, or full product simulation in some known conditions);</li>
 <li>They enable complex trade-offs that lead to design the best product "under a certain set of constraints".</li>
 </ul>
-<h3 id="modeling-in-mbse">Modeling in MBSE</h3>
-<p>The topic is quite vast but we will, once again, try a simplification. Modeling can be done mainly with 2 different (and sometimes complementary) approaches:</p>
+<h3 id="14-modeling-in-mbse">1.4 Modeling in MBSE</h3>
+<p>The topic is quite vast but we will, once again, try a simplification. Modeling can be done mainly with 3 different approaches:</p>
 <ul>
-<li>The first one is to use "standard MBSE modeling language" like <a href="http://www.omgsysml.org/">SysML</a> or <a href="https://www.polarsys.org/capella/">Arcadia</a> to run the "RFL" part of the MBSE process (the "P" part will be done with specific tools like 3D design tools or electricity engineering tools); The objective is to model graphically the "RFL" part of the process and to keep links with the "P" parts;</li>
-<li>The second one is to use a simulation-oriented domain-specific language (DSL, the domain being systems engineering) like <a href="https://hal.archives-ouvertes.fr/hal-01273973/document">PMM</a> or <a href="http://www.ep.liu.se/ecp/096/130/ecp14096130.pdf">Form-L</a>;</li>
+<li>The first one is to do "manual" systems engineering with Office documents (Word and Excel mainly); This way of doing things is still very present in the industry; It is error prone, and very painful for the engineering teams;</li>
+<li>The second one is to use "standard MBSE modeling language" like <a href="http://www.omgsysml.org/">SysML</a> or <a href="https://www.polarsys.org/capella/">Capella</a> to run the "RFL" part of the MBSE process (the "P" part will be done with specific tools like 3D design tools or electricity engineering tools); The objective is to model graphically the "RFL" part of the process and to keep links with the "P" parts;</li>
+<li>The third one is to use a simulation/optimization-oriented domain-specific language (DSL, the domain being systems engineering) for requirements and systems like <a href="https://hal.archives-ouvertes.fr/hal-01273973/document">PMM</a> or <a href="http://www.ep.liu.se/ecp/096/130/ecp14096130.pdf">Form-L</a>.</li>
 </ul>
-<p>A third way of doing is not to do any MBSE approach, or doing it partially: requirements, functions and systems can be described in various tools and office documents, and at a certain point (generally the detailed design point), specific business tools are used to complete the study. In this kind of process, the digital thread is extremely difficult to maintain or trace, and generally, to be able to do it, a lot of manual and painful efforts are required.</p>
-<p>(<em>October 2019</em>)</p></div>
+<p>In the first style of systems engineering, the digital thread is extremely difficult to maintain or trace, and generally, to be able to do it, a lot of manual and painful efforts are required. Most of the time, the requirements are vague, not measurable, and the trade-offs analysis are not recorded.</p>
+<p>With time, we see a growing consciousness of the advantages of the third solution to be able to do complex trade-offs very early in the product design phase (see the system engineering book of knowledge <a href="https://sebokwiki.org">here</a>).</p>
+<h3 id="15-mbembse-seen-from-the-military">1.5 MBE/MBSE seen from the military</h3>
+<p>The MBE/MBSE modeling techniques are a way for military organizations to ensure that their requirements are correctly understood and are refined the right way. Especially, the requirements being tightly coupled with operational conditions (often called CONOPS for CONcept of OPerationS), the graphical modeling in a unified language is an enabler for common understanding, sharing of decisions in complex trade-offs and sharing of information.</p>
+<p>For sure, this is being true for the design phase of the system.</p>
+<h2 id="2-about-the-complexity-of-modeling-hybrid-systems">2 About the complexity of modeling hybrid systems</h2>
+<p>The fact is systems engineering is very adapted to design the early phases of a product and do the right structuring trade-offs.</p>
+<p>But the "products" of today are much more complex than the products of yesterday. If we take the sample of aerospace, the "ground segment", or the set of software that enable to manage the machines from the ground is much bigger and much more complex than before.</p>
+<p>Let us take a sample in a non military domain: the constellations of satellites. To be able to operate a constellation of more than 100 satellites in a crowded space, the ground segment complexity is very high.</p>
+<p>The thing is it is not easy to design the product (the satellite) as the set of software required to operate many instances of this very satellite. More and more military systems are facing the same kind of problems: they must be tightly coupled together.</p>
+<p>How to ensure that all the requirements are taken in charge by all sub-systems in the global system, above all when the way of model management software systems is more related to IT techniques such as enterprise architecture, IT architecture or software architecture?</p>
+<h2 id="3-modeling-enterprise-architecture">3 Modeling enterprise architecture</h2>
+<p>The enterprise architecture domain is very wide and our objective is not here to describe it extensively. We will just mention that this domain is mainly split in 2 concerns:</p>
+<ul>
+<li>What methodology to create a good IT architecture serving the business process transformation according to the strategic intentions?</li>
+<li>What are the relevant views and artifacts to use to model the digital transformation, starting with the strategy, going through the business layer, the application layer and the infrastructure layer?</li>
+</ul>
+<p>The most used enterprise architecture language is Archimate (see our <a href="../archimate-intro/">introductory article</a>). This language is particularly adapted to model most of the other dimensions of interest of the military project, especially the organizations, strategy, processes and IT systems, whatever the complexity. It proposes 13 basic viewpoints (see <a href="https://pubs.opengroup.org/architecture/archimate3-doc/apdxc.html">here</a>) but its global metamodel makes it adapted for complex representations not respecting the viewpoints.</p>
+<h2 id="4-solutions-for-military-projects">4 Solutions for military projects</h2>
+<h3 id="41-the-best-of-breed-solutions">4.1 The best of breed solutions</h3>
+<p>If we look at the market and take the best of breed solutions, considering the requirements of the Table 1, we can propose the solutions presented in Table 2.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Dimension</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Product definition</td>
+<td><a href="http://www.omgsysml.org/">SysML</a> systems engineering modeling language</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Product support</td>
+<td><a href="../archimate-intro/">Archimate</a> enterprise language</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Product operational use</td>
+<td>Mix of SysML (environment requirements) and Archimate</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Project plan</td>
+<td>Complex planning tools for programs (set of projects with dependencies) + Archimate with the implementation and migration package</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 2: Best of breed solutions for military programs</em></p>
+<p>As we can see in the table 2, we have 3 ways of modeling the full program: SysML, Archimate and a planning tool.</p>
+<p>The 3 metamodels not being integrated together, we may have problems at the "interfaces" of each domain.</p>
+<p>SysML proposes 9 kinds of diagrams and Archimate 13 basic viewpoints, what corresponds to 22 types of diagrams. If we had 2 or 3 viewpoints for planning, we would end up with a solution presenting around 25 viewpoints.</p>
+<h3 id="42-the-military-frameworks">4.2 The military frameworks</h3>
+<h4 id="421-many-viewpoints">4.2.1 Many viewpoints</h4>
+<p>The military frameworks, for decades, defined a set of artifacts and views to have it all covered.</p>
+<p>The Figure 1 shows the structure of views of DoDAF version 2.</p>
+<p><img alt="DoDAF viewpoint structure" src="../../images/dodaf.gif" /> (52 viewpoints)</p>
+<p>Figure 1: <a href="https://dodcio.defense.gov/Library/DoD-Architecture-Framework/dodaf20_viewpoints/dodaf20_services.aspx">DoDAF viewpoint structure</a></p>
+<p>The Figure 2 shows the structure of views of MoDAF.</p>
+<p><img alt="MoDAF viewpoint structure" src="../../images/modaf.png" /></p>
+<p>Figure 2: <a href="https://www.gov.uk/guidance/mod-architecture-framework#viewpoints-and-views">MoDAF viewpoint structure</a> (46 viewpoints)</p>
+<p>The Figure 3 shows the structure of views in NAF v4.</p>
+<p><img alt="NAF viewpoint structure" src="../../images/naf-v4.png" /> (46 viewpoints)</p>
+<p>Figure 3: <a href="https://www.nato.int/cps/en/natohq/topics_157575.htm">NAF viewpoint structure</a></p>
+<p>An attempt of "unification" of those three frameworks was done by the <a href="https://www.omg.org">OMG</a> with the so-called Unified Architecture Framework (<a href="https://www.omg.org/spec/UAF/1.0">UAF</a>).</p>
+<p>The Figure 4 shows the structure of views in UAF v1.</p>
+<p><img alt="UAF viewpoint structure" src="../../images/uaf-v1.png" /> (+70 viewpoints)</p>
+<p>Figure 4: <a href="https://www.omg.org/spec/UAF/1.0">UAF viewpoint structure</a></p>
+<p>All frameworks propose a metamodel that is often very rich... and so very complex.</p>
+<h3 id="422-a-problem-of-semantics">4.2.2 A problem of semantics</h3>
+<p>(<em>November 2019</em>)</p></div>
         </div>
 
         <footer class="col-md-12">
