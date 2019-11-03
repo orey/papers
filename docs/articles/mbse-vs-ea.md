@@ -90,13 +90,13 @@ The enterprise architecture domain is very wide and our objective is not here to
   * What methodology to create a good IT architecture serving the business process transformation according to the strategic intentions?
   * What are the relevant views and artifacts to use to model the digital transformation, starting with the strategy, going through the business layer, the application layer and the infrastructure layer?
 
-The most used enterprise architecture language is Archimate (see our [introductory article](archimate-intro.md)). This language is particularly adapted to model most of the other dimensions of interest of the military project, especially the organizations, strategy, processes and IT systems, whatever the complexity.
+The most used enterprise architecture language is Archimate (see our [introductory article](archimate-intro.md)). This language is particularly adapted to model most of the other dimensions of interest of the military project, especially the organizations, strategy, processes and IT systems, whatever the complexity. It proposes 13 basic viewpoints (see [here](https://pubs.opengroup.org/architecture/archimate3-doc/apdxc.html)) but its global metamodel makes it adapted for complex representations not respecting the viewpoints.
 
 ## 4 Solutions for military projects
 
 ### 4.1 The best of breed solutions
 
-If we look at the market and take the best of breed solutions, considering the requirements of the Table 1, we can end up having the analysis of the Table 2.
+If we look at the market and take the best of breed solutions, considering the requirements of the Table 1, we can propose the solutions presented in Table 2.
 
 | # | Dimension | Solution |
 | --- | --- | --- |
@@ -107,15 +107,21 @@ If we look at the market and take the best of breed solutions, considering the r
 
 *Table 2: Best of breed solutions for military programs*
 
-As we can see in the table 2, we have 3 ways of modeling the full program: SysML, Archimate and a planning tool. The 3 metamodels not being integrated can bring problems at the "interfaces" of each domain.
+As we can see in the table 2, we have 3 ways of modeling the full program: SysML, Archimate and a planning tool.
+
+The 3 metamodels not being integrated together, we may have problems at the "interfaces" of each domain.
+
+SysML proposes 9 kinds of diagrams and Archimate 13 basic viewpoints, what corresponds to 22 types of diagrams. If we had 2 or 3 viewpoints for planning, we would end up with a solution presenting around 25 viewpoints.
 
 ### 4.2 The military frameworks
+
+#### 4.2.1 Many viewpoints
 
 The military frameworks, for decades, defined a set of artifacts and views to have it all covered.
 
 The Figure 1 shows the structure of views of DoDAF version 2.
 
-![DoDAF viewpoint structure](../images/dodaf.gif)
+![DoDAF viewpoint structure](../images/dodaf.gif) (52 viewpoints)
 
 Figure 1: [DoDAF viewpoint structure](https://dodcio.defense.gov/Library/DoD-Architecture-Framework/dodaf20_viewpoints/dodaf20_services.aspx)
 
@@ -123,11 +129,11 @@ The Figure 2 shows the structure of views of MoDAF.
 
 ![MoDAF viewpoint structure](../images/modaf.png)
 
-Figure 2: [MoDAF viewpoint structure](https://www.gov.uk/guidance/mod-architecture-framework#viewpoints-and-views)
+Figure 2: [MoDAF viewpoint structure](https://www.gov.uk/guidance/mod-architecture-framework#viewpoints-and-views) (46 viewpoints)
 
 The Figure 3 shows the structure of views in NAF v4.
 
-![NAF viewpoint structure](../images/naf-v4.png)
+![NAF viewpoint structure](../images/naf-v4.png) (46 viewpoints)
 
 Figure 3: [NAF viewpoint structure](https://www.nato.int/cps/en/natohq/topics_157575.htm)
 
@@ -135,9 +141,15 @@ An attempt of "unification" of those three frameworks was done by the [OMG](http
 
 The Figure 4 shows the structure of views in UAF v1.
 
-![UAF viewpoint structure](../images/uaf-v1.png)
+![UAF viewpoint structure](../images/uaf-v1.png) (+70 viewpoints)
 
 Figure 4: [UAF viewpoint structure](https://www.omg.org/spec/UAF/1.0)
+
+All frameworks propose a metamodel that is often very rich... and so very complex.
+
+### 4.2.2 A problem of semantics
+
+
 
 
 
