@@ -121,9 +121,9 @@ The military frameworks, for decades, defined a set of artifacts and views to ha
 
 The Figure 1 shows the structure of views of DoDAF version 2.
 
-![DoDAF viewpoint structure](../images/dodaf.gif) (52 viewpoints)
+![DoDAF viewpoint structure](../images/dodaf.gif) 
 
-Figure 1: [DoDAF viewpoint structure](https://dodcio.defense.gov/Library/DoD-Architecture-Framework/dodaf20_viewpoints/dodaf20_services.aspx)
+Figure 1: [DoDAF viewpoint structure](https://dodcio.defense.gov/Library/DoD-Architecture-Framework/dodaf20_viewpoints/dodaf20_services.aspx) (52 viewpoints)
 
 The Figure 2 shows the structure of views of MoDAF.
 
@@ -133,17 +133,17 @@ Figure 2: [MoDAF viewpoint structure](https://www.gov.uk/guidance/mod-architectu
 
 The Figure 3 shows the structure of views in NAF v4.
 
-![NAF viewpoint structure](../images/naf-v4.png) (46 viewpoints)
+![NAF viewpoint structure](../images/naf-v4.png) 
 
-Figure 3: [NAF viewpoint structure](https://www.nato.int/cps/en/natohq/topics_157575.htm)
+Figure 3: [NAF viewpoint structure](https://www.nato.int/cps/en/natohq/topics_157575.htm) (46 viewpoints)
 
 An attempt of "unification" of those three frameworks was done by the [OMG](https://www.omg.org) with the so-called Unified Architecture Framework ([UAF](https://www.omg.org/spec/UAF/1.0)).
 
 The Figure 4 shows the structure of views in UAF v1.
 
-![UAF viewpoint structure](../images/uaf-v1.png) (+70 viewpoints)
+![UAF viewpoint structure](../images/uaf-v1.png) 
 
-Figure 4: [UAF viewpoint structure](https://www.omg.org/spec/UAF/1.0)
+Figure 4: [UAF viewpoint structure](https://www.omg.org/spec/UAF/1.0) (+70 viewpoints)
 
 All frameworks propose a metamodel that is often very rich... and so very complex.
 
