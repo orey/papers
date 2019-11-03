@@ -204,6 +204,10 @@ Archimate is, for me, *the* engineering revolution of digital transformation of 
 
 We must never forget that the enterprise architect should be a crucial change agent that proposes solutions to a strategic problem and should work in the plain knowledge of the business processes. Most digital transformation offices should also carefully consider using Archimate to manage their transformation plans and try to be in control of the costs and schedule.
 
+## See also
+
+  * [Archimate recipes](archimate-recipes.md)
+
 ## Notes
 
 [1] The only modeling approach that look like Archimate is the [Aris methodology](https://en.wikipedia.org/wiki/Architecture_of_Integrated_Information_Systems). Even if the methodology did not cover the full scope of Archimate, the theoretical approach was similar.
