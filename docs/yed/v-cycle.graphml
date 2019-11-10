@@ -13,9 +13,8 @@
   <key attr.name="description" attr.type="string" for="edge" id="d9"/>
   <key for="edge" id="d10" yfiles.type="edgegraphics"/>
   <graph edgedefault="directed" id="G">
-    <data key="d0"/>
+    <data key="d0" xml:space="preserve"/>
     <node id="n0">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="448.0" width="383.0" x="-102.71100800000102" y="-114.4608000000004"/>
@@ -27,7 +26,6 @@
       </data>
     </node>
     <node id="n1">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="30.0" x="-234.73536000000013" y="66.5391999999996"/>
@@ -46,7 +44,6 @@
       </data>
     </node>
     <node id="n2">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="30.0" x="437.57107200000155" y="66.07839999999919"/>
@@ -65,7 +62,6 @@
       </data>
     </node>
     <node id="n3">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="112.0" x="-137.53307200000046" y="-44.460800000000404"/>
@@ -77,7 +73,6 @@
       </data>
     </node>
     <node id="n4">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="112.0" x="-120.72318400000057" y="-4.921600000000808"/>
@@ -89,7 +84,6 @@
       </data>
     </node>
     <node id="n5">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="112.0" x="-103.1034080000008" y="34.61759999999879"/>
@@ -101,7 +95,6 @@
       </data>
     </node>
     <node id="n6">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="69.5391999999996" width="242.03553600000077" x="190.2291039999991" y="-4.921600000000808"/>
@@ -113,7 +106,6 @@
       </data>
     </node>
     <node id="n7">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="69.5391999999996" width="214.5" x="217.76463999999987" y="-84.0"/>
@@ -125,7 +117,6 @@
       </data>
     </node>
     <node id="n8">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="526.5564320000017" x="-94.2917920000018" y="-133.8983000000004"/>
@@ -137,7 +128,6 @@
       </data>
     </node>
     <node id="n9">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="49.0" width="582.6448640000001" x="-150.38022400000023" y="-200.4608000000004"/>
@@ -150,7 +140,6 @@ Procurement management<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:L
       </data>
     </node>
     <node id="n10">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="49.0" width="118.61977599999977" x="-70.14067200000068" y="134.23519999999758"/>
@@ -162,7 +151,6 @@ Procurement management<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:L
       </data>
     </node>
     <node id="n11">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="112.0" x="-150.38022400000023" y="-84.0"/>
@@ -174,7 +162,6 @@ Procurement management<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:L
       </data>
     </node>
     <node id="n12">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="49.0" width="118.61977599999977" x="29.479103999999097" y="213.23519999999758"/>
@@ -186,7 +173,6 @@ Procurement management<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:L
       </data>
     </node>
     <node id="n13">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="49.0" width="118.61977599999977" x="129.85932799999932" y="134.23519999999758"/>
@@ -198,7 +184,6 @@ Procurement management<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:L
       </data>
     </node>
     <node id="n14">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="30.0" x="-234.73536000000013" y="286.5391999999996"/>
@@ -217,7 +202,6 @@ Procurement management<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:L
       </data>
     </node>
     <node id="n15">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="30.0" x="-234.73536000000013" y="-227.7108000000004"/>
@@ -236,7 +220,6 @@ Procurement management<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:L
       </data>
     </node>
     <node id="n16">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="30.0" x="-180.72318400000051" y="-24.691200000000606"/>
@@ -248,7 +231,6 @@ Procurement management<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:L
       </data>
     </node>
     <node id="n17">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="30.0" x="454.7646399999999" y="-34.92160000000081"/>
@@ -260,7 +242,6 @@ Procurement management<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:L
       </data>
     </node>
     <node id="n18">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="30.0" x="454.7646399999999" y="-133.8983000000004"/>
@@ -272,7 +253,6 @@ Procurement management<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:L
       </data>
     </node>
     <node id="n19">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="30.0" x="454.7646399999999" y="-190.9608000000004"/>
@@ -284,21 +264,19 @@ Procurement management<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:L
       </data>
     </node>
     <node id="n20">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="49.0" width="242.03553600000077" x="226.7712239999986" y="241.7343847999996"/>
           <y:Fill color="#FFFFFF" transparent="false"/>
           <y:BorderStyle color="#C0C0C0" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="38.921875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#C0C0C0" verticalTextPosition="bottom" visible="true" width="223.1650390625" x="9.435248468750387" xml:space="preserve" y="5.0390625">Military framework concerns in the V-model
-Version 01 - November 10 2019
+Version 01 - November 2019
 Copyleft Olivier Rey<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
     </node>
     <node id="n21">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="10.0" width="10.0" x="18.896591999999202" y="-15.382400000001212"/>
@@ -317,7 +295,6 @@ Copyleft Olivier Rey<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:Lab
       </data>
     </node>
     <node id="n22">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="10.0" width="10.0" x="140.2291039999991" y="-15.382400000001212"/>
@@ -336,7 +313,6 @@ Copyleft Olivier Rey<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:Lab
       </data>
     </node>
     <edge id="e0" source="n1" target="n2">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -347,7 +323,6 @@ Copyleft Olivier Rey<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:Lab
       </data>
     </edge>
     <edge id="e1" source="n14" target="n1">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -360,7 +335,6 @@ world<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAng
       </data>
     </edge>
     <edge id="e2" source="n15" target="n1">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -373,7 +347,6 @@ world<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAng
       </data>
     </edge>
     <edge id="e3" source="n21" target="n22">
-      <data key="d9"/>
       <data key="d10">
         <y:SplineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
