@@ -287,7 +287,7 @@ Another option in the market is to consider that SysML can be used for everythin
 
 <a name="figure7"></a>*Figure 7: SysML and Archimate comparison*
 
-![SysML and Archimate comparison](../yed/mbse-vs-ea)
+![SysML and Archimate comparison](../yed/mbse-vs-ea.png)
 
 As we said earlier, the systems engineering area is introducing now more and more executable domain specific languages (DSL) to be able to simulate, optimize and perform early tradeoffs for system architecture. That is showing that SysML will never be the only systems engineering modeling language.
 
@@ -330,7 +330,7 @@ This problem is generally solved by two approaches:
 
 <a name="figure8"></a>*Figure 8: Sharing concepts between two modeling languages*
 
-![Sharing concepts](../yed/modeling-spaces)
+![Sharing concepts](../yed/modeling-spaces.png)
 
 The second approach is shown in figure 8. Doing the exercise of concept sharing between different modeling languages is very healthy, because it will define what we want to really pilot at the project level. As the modeling languages are domain specific, they will be used at specific moments of the project and so the interfaces between the various modeling activities can be formalized. With the help of the common semantic concepts and relationships, we can define quite easily a maturity process of exchanges between the various poles of expertise of the project.
 
