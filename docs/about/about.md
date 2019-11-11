@@ -5,6 +5,7 @@
   * [LinkedIn profile](https://www.linkedin.com/in/reyolivier/)
   * rey [dot] olivier [at] gmail [dot] com
   * [Papers](https://orey.github.io/)
+  * [ResearchGate](https://www.researchgate.net/profile/Olivier_Rey7)
 
 ## Areas of interest
 
