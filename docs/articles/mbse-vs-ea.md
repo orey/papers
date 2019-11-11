@@ -348,7 +348,8 @@ For the industry currently and unfortunately, syncretism of modeling languages s
 
 ## Notes
 
-  * <a name="note1"></a>[1] On the other hand, concerning the product lifecycle and specifically the links between engineering and support, some other industry-specific standards are covering the process aspect of such a challenge: the [ASD standards](http://www.sx000i.org/). [Back to text](#linknote1).
-  * <a name="note2"></a>[2] See the first NAF to Archimate mapping in the [online article](https://bizzdesign.com/blog/nato-architecture-framework-archimate/) of Mark Lankhorst. [Back to text](#linknote2).
+<a name="note1"></a>[1] On the other hand, concerning the product lifecycle and specifically the links between engineering and support, some other industry-specific standards are covering the process aspect of such a challenge: the [ASD standards](http://www.sx000i.org/). [Back to text](#linknote1).
+
+<a name="note2"></a>[2] See the first NAF to Archimate mapping in the [online article](https://bizzdesign.com/blog/nato-architecture-framework-archimate/) of Mark Lankhorst. [Back to text](#linknote2).
 
 (*November 2019*)
