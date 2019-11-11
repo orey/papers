@@ -9,7 +9,7 @@
   * [GraphQL And Classic Web Services](articles/graphql-web-services.md)
   * [A Simple Meta-Model for Portfolio Management](articles/portfolio.md)
   * [An Introduction to The Archimate Revolution](articles/archimate-intro.md)
-  * **NEW**: [Archimate Recipes](articles/archimate-recipes.md)
+  * [Archimate Recipes](articles/archimate-recipes.md)
   * **NEW**: [Military Frameworks, Systems Engineering and Enterprise Architecture](articles/mbse-vs-ea.md)
 
 ## Graph-oriented programming
@@ -18,7 +18,6 @@ This is a new section with some interesting materials about graph-oriented progr
 
   * [First article on graph-oriented programming](graph/first-article.md)
   * [Conference at the STAF/ICGT 2018 in Toulouse](graph/staf-icgt2018.md)
-  
-Ongoing works can be found here: [GraphApps.io](http://graphapps.io "GraphApps.io") or [here](https://github.com/orey/graphapps "GraphApps.io").
 
+Ongoing works can be found on [github](https://github.com/orey).
 
