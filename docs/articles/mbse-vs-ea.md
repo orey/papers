@@ -16,14 +16,14 @@ On the market today, 3 main frameworks are existing and used in military project
 
 The main objective searched by military organization is to be able to master a global project of several billions of dollars/euros from the design phase to the support and operational phase. Because those projects/programs can be very large and very complex, the idea was that everyone (military organization and supplier organizations) share the same set of "views" on the program in order to share understanding of what was to be done, how requirements were taken into account, the full lifecycle of the project and the product.
 
+<a name="table1"></a>*Table 1: Structure of military requirements*
+
 | # | Dimension | Details |
 | --- | --- | --- |
 | 1 | Product definition | Can be an aircraft, weapon, complex system, etc. and all the related IT systems to manage them. The objective is to use a systems engineering approach (model-based in that case), based on requirements. |
 | 2 | Product support and operations | The objective of this phase is to detail all the systems that will permit the support of the product. This is generally a wide topic including maintenance, parts procurement, etc. Moreover, the product use must be envisaged in operations preparation and in battle field in coordination with other systems and organizations. |
 | 3 | Digital transformation | The objective of this phase is to evaluate and deal with the impacts of the product and product support in the operational organization, processes and IT of the army. |
 | 4 | Project plan | The objective is to be able to describe the the plan to deliver the product conforming to the requirements (phases, milestones and so on), to permit project steering, and product support procurement. |
-
-<a name="table1"></a>*Table 1: Structure of military requirements*
 
 We can classify the military enterprise architecture frameworks as pursuing 4 objectives, as shown in table 1.
 
@@ -37,9 +37,9 @@ Those 4 objectives are traditionally modeled with 3 different modeling technique
     * Digital transformation,
   * Project modeling tools for project management.
 
-![The 3 modeling domains of military frameworks](../yed/mbse-ea-pm.png)
-
 <a name="figure1"></a>*Figure 1: The 3 domains Military framework concerns in the industrial V-model*
+
+![The 3 modeling domains of military frameworks](../yed/mbse-ea-pm.png)
 
 The figure 1 shows the 3 modeling modeling domains and the 4 areas of concerns that they are traditionally covering.
 
@@ -49,9 +49,9 @@ In terms of modeling, we could say that the core objective of the military frame
 
 Those 4 areas of concern can be mapped on an industrial [V-model](https://en.wikipedia.org/wiki/V-Model) as shown in Figure 2.
 
-![Military framework in V-model](../yed/v-cycle.png)
-
 <a name="figure2"></a>*Figure 2: Military framework concerns in the industrial V-model*
+
+![Military framework in V-model](../yed/v-cycle.png)
 
 The first dimension, product definition, is in the left part of the V and corresponds to the product architecture, from its operational conditions, requirements to its system design. The second dimension is corresponding to product support (we often speak about "support concept"). The two last dimensions are running all along the project, being at the project/program level or at the digital transformation level (integrate the new product into the current organizations).
 
@@ -157,14 +157,14 @@ Considering the military requirements of [table 1](#table1), the various framewo
 
 If we look at the market and take the best of breed modeling solutions adapted to the requirements of [table 1](#table1), we could propose the solutions presented in Table 2.
 
+<a name="table2"></a>*Table 2: Best of breed solutions for military programs*
+
 | # | Dimension | Solution |
 | --- | --- | --- |
 | 1 | Product definition | [SysML](http://www.omgsysml.org/) systems engineering modeling language |
 | 2 | Product support and operations | [Archimate](archimate-intro.md) enterprise architecture modeling language |
 | 3 | Digital transformation | Archimate enterprise architecture modeling language |
 | 4 | Project plan | Complex planning tools for programs (set of projects with dependencies) + Archimate with the implementation and migration package |
-
-<a name="table2"></a>*Table 2: Best of breed solutions for military programs*
 
 As we can see in the table 2, we have 3 ways of modeling the full program: SysML, Archimate and a planning tool.
 
@@ -180,25 +180,25 @@ The military frameworks, for decades, defined a set of artifacts and views to ha
 
 The Figure 3 shows the structure of views of DoDAF version 2.
 
-![DoDAF viewpoint structure](../images/dodaf.gif) 
-
 <a name="figure3"></a>Figure 3: [DoDAF viewpoint structure](https://dodcio.defense.gov/Library/DoD-Architecture-Framework/dodaf20_viewpoints/dodaf20_services.aspx) (52 viewpoints)
+
+![DoDAF viewpoint structure](../images/dodaf.gif) 
 
 #### MoDAF
 
 The Figure 4 shows the structure of views of MoDAF.
 
-![MoDAF viewpoint structure](../images/modaf.png)
-
 <a name="figure4"></a>Figure 4: [MoDAF viewpoint structure](https://www.gov.uk/guidance/mod-architecture-framework#viewpoints-and-views) (46 viewpoints)
+
+![MoDAF viewpoint structure](../images/modaf.png)
 
 #### NAF
 
 The Figure 5 shows the structure of views in NAF v4.
 
-![NAF viewpoint structure](../images/naf-v4.png) 
-
 <a name="figure5"></a>Figure 5: [NAF viewpoint structure](https://www.nato.int/cps/en/natohq/topics_157575.htm) (46 viewpoints)
+
+![NAF viewpoint structure](../images/naf-v4.png) 
 
 #### UAF
 
@@ -206,9 +206,9 @@ An attempt of "unification" of those three frameworks was done by the [OMG](http
 
 The Figure 6 shows the structure of views in UAF v1.
 
-![UAF viewpoint structure](../images/uaf-v1.png) 
-
 <a name="figure6"></a>Figure 6: [UAF viewpoint structure](https://www.omg.org/spec/UAF/1.0) (+70 viewpoints)
+
+![UAF viewpoint structure](../images/uaf-v1.png) 
 
 #### Views and metamodel
 
@@ -285,9 +285,9 @@ For instance, NAF v4 indicates that Archimate and UAF can be used for modeling.
 
 Another option in the market is to consider that SysML can be used for everything. We propose to look at figure 7 a comparison between Archimate and SysML on an abstract RFLP process, declined respectively in a product definition process for SysML and on a set of processes and IT systems definition process for Archimate.
 
-![SysML and Archimate comparison](../yed/mbse-vs-ea)
-
 <a name="figure7"></a>*Figure 7: SysML and Archimate comparison*
+
+![SysML and Archimate comparison](../yed/mbse-vs-ea)
 
 As we said earlier, the systems engineering area is introducing now more and more executable domain specific languages (DSL) to be able to simulate, optimize and perform early tradeoffs for system architecture. That is showing that SysML will never be the only systems engineering modeling language.
 
@@ -328,9 +328,9 @@ This problem is generally solved by two approaches:
   * A tool based approach, integrating several metamodels together (with the risk of creating many semantic ambiguities by sticking together metamodels that have semantic overlap);
   * A semantic approach where each modeling universe shares some concepts with other modeling universes, in an interoperability way.
 
-![Sharing concepts](../yed/modeling-spaces)
-
 <a name="figure8"></a>*Figure 8: Sharing concepts between two modeling languages*
+
+![Sharing concepts](../yed/modeling-spaces)
 
 The second approach is shown in figure 8. Doing the exercise of concept sharing between different modeling languages is very healthy, because it will define what we want to really pilot at the project level. As the modeling languages are domain specific, they will be used at specific moments of the project and so the interfaces between the various modeling activities can be formalized. With the help of the common semantic concepts and relationships, we can define quite easily a maturity process of exchanges between the various poles of expertise of the project.
 
