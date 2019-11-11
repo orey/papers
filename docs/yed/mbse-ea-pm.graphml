@@ -35,33 +35,34 @@
     <node id="n1">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="101.5391999999996" width="316.31553600000075" x="135.3157999999978" y="300.36839999999916"/>
-          <y:Fill color="#CCFFFF" color2="#99CCFF" transparent="false"/>
+          <y:Geometry height="184.9045846153843" width="364.31553600000075" x="184.78118461538247" y="223.856307692307"/>
+          <y:Fill color="#CCFFFF7F" color2="#99CCFF7F" transparent="false"/>
           <y:BorderStyle color="#000080" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="16" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="24.625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000080" verticalTextPosition="bottom" visible="true" width="316.31553600000075" x="0.0" xml:space="preserve" y="38.4570999999998">MBSE/SE<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
-          <y:Shape type="ellipse"/>
+          <y:NodeLabel alignment="left" autoSizePolicy="node_width" bottomInset="20" configuration="CroppingLabel" fontFamily="Dialog" fontSize="16" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="40.625" horizontalTextPosition="center" iconTextGap="4" leftInset="20" modelName="internal" modelPosition="b" rightInset="0" textColor="#000080" topInset="0" verticalTextPosition="bottom" visible="true" width="364.31553600000075" x="0.0" xml:space="preserve" y="140.2795846153843">MBSE/SE</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
     </node>
     <node id="n2">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="101.5391999999996" width="316.31553600000075" x="464.80223199999966" y="300.36839999999916"/>
-          <y:Fill color="#CCFFCC" color2="#99CC00" transparent="false"/>
+          <y:Geometry height="184.9045846153843" width="364.31553600000075" x="348.6869230769231" y="237.5297538461531"/>
+          <y:Fill color="#CCFFCC7F" color2="#99CC007F" transparent="false"/>
           <y:BorderStyle color="#003300" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" bottomInset="0" configuration="CroppingLabel" fontFamily="Dialog" fontSize="16" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="35.625" horizontalTextPosition="center" iconTextGap="4" leftInset="0" modelName="internal" modelPosition="t" rightInset="0" textColor="#003300" topInset="15" verticalTextPosition="bottom" visible="true" width="316.31553600000075" x="0.0" xml:space="preserve" y="4.0">Enterprise architecture</y:NodeLabel>
-          <y:Shape type="ellipse"/>
+          <y:NodeLabel alignment="right" autoSizePolicy="node_width" bottomInset="20" configuration="CroppingLabel" fontFamily="Dialog" fontSize="16" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="59.25" horizontalTextPosition="center" iconTextGap="4" leftInset="0" modelName="internal" modelPosition="b" rightInset="20" textColor="#003300" topInset="0" verticalTextPosition="bottom" visible="true" width="364.31553600000075" x="0.0" xml:space="preserve" y="121.6545846153843">Enterprise
+architecture</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
     </node>
     <node id="n3">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="101.5391999999996" width="316.31553600000075" x="300.0590159999988" y="168.82919999999956"/>
-          <y:Fill color="#CCFFFF" color2="#FFCC99" transparent="false"/>
+          <y:Geometry height="184.9045846153843" width="364.31553600000075" x="269.52690133333147" y="149.0253538461534"/>
+          <y:Fill color="#CCFFFF7F" color2="#FFCC997F" transparent="false"/>
           <y:BorderStyle color="#000080" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="16" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="24.625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000080" verticalTextPosition="bottom" visible="true" width="316.31553600000075" x="0.0" xml:space="preserve" y="38.4570999999998">Project management<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
-          <y:Shape type="ellipse"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" bottomInset="0" configuration="CroppingLabel" fontFamily="Dialog" fontSize="16" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="40.625" horizontalTextPosition="center" iconTextGap="4" leftInset="0" modelName="internal" modelPosition="t" rightInset="0" textColor="#000080" topInset="20" verticalTextPosition="bottom" visible="true" width="364.31553600000075" x="0.0" xml:space="preserve" y="4.0">Project management</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
     </node>
@@ -81,22 +82,12 @@ Copyleft Olivier Rey<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:Lab
     <node id="n5">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="40.539199999999596" width="120.82866400000148" x="499.63133599999856" y="348.36839999999916"/>
-          <y:Fill color="#CCFFCC" color2="#99CC00" transparent="false"/>
-          <y:BorderStyle color="#003300" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="19.96875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="l" textColor="#003300" verticalTextPosition="bottom" visible="true" width="120.82866400000148" x="4.0" xml:space="preserve" y="10.285224999999798">Product support</y:NodeLabel>
-          <y:Shape type="ellipse"/>
-        </y:ShapeNode>
-      </data>
-    </node>
-    <node id="n6">
-      <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="40.539199999999596" width="120.82866400000148" x="625.46" y="348.36839999999916"/>
+          <y:Geometry height="74.99689230769184" width="150.84020246153995" x="367.37226041025417" y="244.75475384615316"/>
           <y:Fill color="#CCFFCC" color2="#CC99FF" transparent="false"/>
           <y:BorderStyle color="#003300" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="33.9375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="l" textColor="#003300" verticalTextPosition="bottom" visible="true" width="120.82866400000148" x="4.0" xml:space="preserve" y="3.300849999999798">Digital transformation</y:NodeLabel>
-          <y:Shape type="ellipse"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" bottomInset="0" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="29.9375" horizontalTextPosition="center" iconTextGap="4" leftInset="5" modelName="internal" modelPosition="l" rightInset="5" textColor="#003300" topInset="0" verticalTextPosition="bottom" visible="true" width="150.84020246153995" x="4.0" xml:space="preserve" y="22.52969615384592">Military frameworks system of interest</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+          <y:DropShadow color="#B3A691" offsetX="5" offsetY="5"/>
         </y:ShapeNode>
       </data>
     </node>

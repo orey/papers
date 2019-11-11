@@ -23,7 +23,7 @@ The main objective searched by military organization is to be able to master a g
 | 3 | Digital transformation | The objective of this phase is to evaluate and deal with the impacts of the product and product support in the operational organization, processes and IT of the army. |
 | 4 | Project plan | The objective is to be able to describe the the plan to deliver the product conforming to the requirements (phases, milestones and so on), to permit project steering, and product support procurement. |
 
-*Table 1: Structure of military requirements*
+<a name="table1"></a>*Table 1: Structure of military requirements*
 
 We can classify the military enterprise architecture frameworks as pursuing 4 objectives, as shown in table 1.
 
@@ -39,7 +39,7 @@ Those 4 objectives are traditionally modeled with 3 different modeling technique
 
 ![The 3 modeling domains of military frameworks](../yed/mbse-ea-pm.png)
 
-*Figure 1: The 3 domains Military framework concerns in the industrial V-model*
+<a name="figure1"></a>*Figure 1: The 3 domains Military framework concerns in the industrial V-model*
 
 The figure 1 shows the 3 modeling modeling domains and the 4 areas of concerns that they are traditionally covering.
 
@@ -51,7 +51,7 @@ Those 4 areas of concern can be mapped on an industrial [V-model](https://en.wik
 
 ![Military framework in V-model](../yed/v-cycle.png)
 
-*Figure 2: Military framework concerns in the industrial V-model*
+<a name="figure2"></a>*Figure 2: Military framework concerns in the industrial V-model*
 
 The first dimension, product definition, is in the left part of the V and corresponds to the product architecture, from its operational conditions, requirements to its system design. The second dimension is corresponding to product support (we often speak about "support concept"). The two last dimensions are running all along the project, being at the project/program level or at the digital transformation level (integrate the new product into the current organizations).
 
@@ -151,11 +151,11 @@ Enterprise architecture, by its way of considering the processes and IT systems 
 
 ## Various solutions for military projects
 
-Considering the military requirements of table 1, the various frameworks we mentioned propose several methodological and modeling solutions.
+Considering the military requirements of [table 1](#table1), the various frameworks we mentioned propose several methodological and modeling solutions.
 
 ### The best of breed solutions
 
-If we look at the market and take the best of breed modeling solutions adapted to the requirements of table 1, we could propose the solutions presented in Table 2.
+If we look at the market and take the best of breed modeling solutions adapted to the requirements of [table 1](#table1), we could propose the solutions presented in Table 2.
 
 | # | Dimension | Solution |
 | --- | --- | --- |
@@ -164,7 +164,7 @@ If we look at the market and take the best of breed modeling solutions adapted t
 | 3 | Digital transformation | Archimate enterprise architecture modeling language |
 | 4 | Project plan | Complex planning tools for programs (set of projects with dependencies) + Archimate with the implementation and migration package |
 
-*Table 2: Best of breed solutions for military programs*
+<a name="table2"></a>*Table 2: Best of breed solutions for military programs*
 
 As we can see in the table 2, we have 3 ways of modeling the full program: SysML, Archimate and a planning tool.
 
@@ -182,7 +182,7 @@ The Figure 3 shows the structure of views of DoDAF version 2.
 
 ![DoDAF viewpoint structure](../images/dodaf.gif) 
 
-Figure 3: [DoDAF viewpoint structure](https://dodcio.defense.gov/Library/DoD-Architecture-Framework/dodaf20_viewpoints/dodaf20_services.aspx) (52 viewpoints)
+<a name="figure3"></a>Figure 3: [DoDAF viewpoint structure](https://dodcio.defense.gov/Library/DoD-Architecture-Framework/dodaf20_viewpoints/dodaf20_services.aspx) (52 viewpoints)
 
 #### MoDAF
 
@@ -190,7 +190,7 @@ The Figure 4 shows the structure of views of MoDAF.
 
 ![MoDAF viewpoint structure](../images/modaf.png)
 
-Figure 4: [MoDAF viewpoint structure](https://www.gov.uk/guidance/mod-architecture-framework#viewpoints-and-views) (46 viewpoints)
+<a name="figure4"></a>Figure 4: [MoDAF viewpoint structure](https://www.gov.uk/guidance/mod-architecture-framework#viewpoints-and-views) (46 viewpoints)
 
 #### NAF
 
@@ -198,7 +198,7 @@ The Figure 5 shows the structure of views in NAF v4.
 
 ![NAF viewpoint structure](../images/naf-v4.png) 
 
-Figure 5: [NAF viewpoint structure](https://www.nato.int/cps/en/natohq/topics_157575.htm) (46 viewpoints)
+<a name="figure5"></a>Figure 5: [NAF viewpoint structure](https://www.nato.int/cps/en/natohq/topics_157575.htm) (46 viewpoints)
 
 #### UAF
 
@@ -208,7 +208,7 @@ The Figure 6 shows the structure of views in UAF v1.
 
 ![UAF viewpoint structure](../images/uaf-v1.png) 
 
-Figure 6: [UAF viewpoint structure](https://www.omg.org/spec/UAF/1.0) (+70 viewpoints)
+<a name="figure6"></a>Figure 6: [UAF viewpoint structure](https://www.omg.org/spec/UAF/1.0) (+70 viewpoints)
 
 #### Views and metamodel
 
@@ -228,7 +228,7 @@ If we imagine a more complex project such as an aircraft, its ground segment and
 
 To address this problem of "specialization" of very general concepts (or meta-concepts), the military frameworks propose the "taxonomy" approach. By defining for the various kind of views the appropriate taxonomy, the architects define the content of the views which removes the ambiguity.
 
-In this spirit, each project will "instantiate" the military architecture framework according to its needs: the taxonomy of artifacts will clarify the meaning of abstract artifacts in the context of the project.
+In this spirit, each project will "instantiate" the military architecture framework according to its needs: the taxonomy of artifacts will clarify the meaning of abstract artifacts in the context of the project. This way of working is very common in military projects where a "guidance conference" at project start defines the various implementation options that are taken by the project.
 
 This way of working can be quite easy in a simple project but can quickly become very complicated when the project is suppose to build several "products" of several kinds (which is the case in big military programs).
 
@@ -238,18 +238,18 @@ For instance, to be able to create meaningful and useful views in a new aircraft
 
 The advantage of having an integrated framework is the bridges between various domains. In a best of breed solution, the bridging are almost impossible unless the modeling tool is unifying several modeling languages.
 
-Bridges can be very important in the lifecycle of a program, because they can link the two parts of the V-model (as shown in figure 2). Samples are numerous and at the heart of many industrial projects:
+Bridges can be very important in the lifecycle of a program, because they can link the two parts of the V-model (as shown in [figure 2](#figure2)). Samples are numerous and at the heart of many industrial projects:
 
   * Interlinking product support to product definition enables a better product maturity;
   * Interlinking all phases with an integrated planning is very interesting (product-based planning) especially if the product is an assembly of other subproducts;
   * Interlinking digital transformation to the two branches of the V-model enables to prepare the efficient changes required in the organizations, their processes and their IT systems;
   * Etc.
 
-When the modeling language and its metamodel enables to create those connections, the complexity of big programs can be described with many details [1].
+<a name="linknote1"></a>When the modeling language and its metamodel enables to create those connections, the complexity of big programs can be described with many details [[1](#note1)].
 
 ### A problem of semantics
 
-The problem, as we saw it in figure 2, is that, under the military frameworks are "concrete" semantic domains underlying. We identified 4 semantic areas in table 1 and figure 1 and 2:
+The problem, as we saw it in [figure 2](#figure2), is that, under the military frameworks are "concrete" semantic domains underlying. We identified 4 semantic areas in [table 1](#table1) and [figure 1](#figure1) and [2](#figure2):
 
   * Product definition,
   * Product support and operations,
@@ -267,25 +267,88 @@ In those conditions, the advantages brought by the chosen framework must be bala
   * The cost of training people outside the domain-specific standards;
   * The requirement of creating a tool implementing the metamodel of the framework (and maintaining it over time).
 
+## Syncretism or unification?
+
 ### Evolutions and work-arounds
 
-It is important to note that, with time, the military frameworks opened to some modeling standards, while keeping their own core metamodel, which is not totally consistent.
+It is important to note that, with time, the military frameworks opened to some modeling standards, while keeping their own core metamodel, which does not appear as fully totally consistent.
 
-For instance, NAF v4 indicates that Archimate and UAF can be used for modeling. Clearly, Archimate can be used only for product support and digital transformation (lines 2 and 3 of table1) but clearly, it is not adapted to model product definition. Concerning the project management Archimate has basic artifacts but that cannot enable the management of a complex program. That means that Archimate can be used in NAF, but *cannot cover all* that NAF intends to cover [2].
+### Using Archimate for everything
 
-UAF on the other hand can cover it all, because its metamodel is an extension of SySML to integrate an abstract model looking like other military system.
+For instance, NAF v4 indicates that Archimate and UAF can be used for modeling.
 
-## The temptation of a "one size fits all" framework
+<a name="linknote2"></a>Clearly, Archimate can be used for product support and digital transformation (lines 2 and 3 of table1) but it seems a bit light to model product definition (even with the physical package introduced in version 3). Concerning the project management Archimate has basic artifacts but that cannot enable the management of a complex program, in the way NAF or other military frameworks picture it. That means that Archimate can be used in NAF for certain kinds of projects, but *cannot cover all* that NAF intends to cover [[2](#note2)].
 
-If we have a detailed look at UAF, the most complex and abstract of the 4 frameworks, we could have the impression that this framework fulfills all requirements for all kinds of military projects. For some architects, having a universal framework would be a kind of Graal.
+[Figure 7](#figure7) shows the classic use of Archimate which deliverables are processes and IT systems.
 
-The problem is that 
+### Using SysML for everything
 
+Another option in the market is to consider that SysML can be used for everything. We propose to look at figure 7 a comparison between Archimate and SysML on an abstract RFLP process, declined respectively in a product definition process for SysML and on a set of processes and IT systems definition process for Archimate.
 
+![SysML and Archimate comparison](../yed/mbse-vs-ea)
+
+<a name="figure7"></a>*Figure 7: SysML and Archimate comparison*
+
+As we said earlier, the systems engineering area is introducing now more and more executable domain specific languages (DSL) to be able to simulate, optimize and perform early tradeoffs for system architecture. That is showing that SysML will never be the only systems engineering modeling language.
+
+Second of all, if we compare to Archimate, we can see basically that the two modeling languages are not targeting the same problem. As we said in the best of breed solution, each project which scope encompasses a physical product plus processes and IT would definitely need both approaches.
+
+### Using UAF for everything
+
+UAF on the other hand pretends to cover it all. Its metamodel being an extension of SySML, it seems well suited  for product definition. As the meta-model integrates many more artifacts, the coverage seems one of the most extensive of the market.
+
+The problem of NAF is, for us, the one we already described and that is attached to every military framework: in order to use it concretely, you have to instantiate it with the precise taxonomy of elements you will use. This is the way the military are doing things, but this way may not be adapted for every company.
+
+### Using a custom architecture framework for everything
+
+Some companies are inventing their own modeling frameworks, quite often by sticking various semantically incompatible metamodels together, or by redefining from scratch a large set of artifacts in a brand new metamodel. In 25 years, we never saw this approach work: worse, we always saw this approach end badly.
+
+The drawbacks of this approach are numerous:
+
+  * The new framework is generally not documented enough, so architects are interpreting it in a chaotic and non consistent way; This implies that generally diagrams made by one architect are not understandable by another, which generates errors, misunderstanding and inconsistency in the rest of the chain;
+  * The new framework knowledge is concentrated in methodology *gurus* who *know better*; They are on the critical path of everything and have, most of the time, *no real experience in modeling on large scale projects* (or they would not create a new metamodel on their own); They love methodology and metamodels but are not realizing that the quality of a metamodel is its semantic non ambiguity; They generally won't listen to any comment from operational people;
+  * The learning curve on the new framework is very long and complex, because there is not enough document, because the gurus are not reachable and because, as time passes, some errors in the metamodel are being corrected, which makes the old models incompatible with the new version of the framework;
+  * The new framework is generally based on a tool implementation with the metamodel; Generally, not everyone has access to the tool, which makes the adoption of the framework difficult for many users;
+  * There will always be experienced people that saw that the new framework is not working well (generally bringing semantic confusion) and that will keep on using standard  methodologies and tools, that proved to be efficient and *helpful* in projects.
+
+This word is very important: helpful. The modeling aims to *help* architects to build better systems, not to glorify the ego of the gurus.
+
+The path of creating a new framework with a new metamodel is very dangerous and always ends badly, so we do not recommend it at all. It is a waste of time, energy and brains.
+
+That's why standardization groups were created: to put a lot of people with skills and large experience to define frameworks that work in many contexts and projects. You can look at our [article](archimate-intro.md) on Archimate that explains why Archimate *works*.
+
+### One or many?
+
+We have to says that we don't believe in unification, in the single modeling approach that covers any use case, in the "one size fits all" universal modeling language. That means syncretism: taking modeling languages for what they do best.
+
+The problem of interlinking domains remains.
+
+This problem is generally solved by two approaches:
+
+  * A tool based approach, integrating several metamodels together (with the risk of creating many semantic ambiguities by sticking together metamodels that have semantic overlap);
+  * A semantic approach where each modeling universe shares some concepts with other modeling universes, in an interoperability way.
+
+![Sharing concepts](../yed/modeling-spaces)
+
+<a name="figure8"></a>*Figure 8: Sharing concepts between two modeling languages*
+
+The second approach is shown in figure 8. Doing the exercise of concept sharing between different modeling languages is very healthy, because it will define what we want to really pilot at the project level. As the modeling languages are domain specific, they will be used at specific moments of the project and so the interfaces between the various modeling activities can be formalized. With the help of the common semantic concepts and relationships, we can define quite easily a maturity process of exchanges between the various poles of expertise of the project.
+
+## Using military frameworks in the industry
+
+Military frameworks are tuned to be used on the customer side: they rely on the hypothesis that the army is the customer and the industrial company (or companies) is (or are) the supplier(s). [Table 1](#table1) explains the foundations of the military concerns. Military preoccupations are very concrete: features and performance, money, schedule, operational model.
+
+Those concerns are not the ones of the supplier company, as shown in [Figure 2](#figure2) in the V-model. The supplier company would target an integration at other levels to be able to perform other tradeoffs than the military.
+
+Even for UAF, we have to be cautious about the real intentions behind a modeling and methodology framework, because those intentions are materialized inside the framework itself which is the result of a set of constraints: if the set of constraints is not the same, the result will probably won't be the same either.
+
+The industrial world become more and more complex, some industrial companies are searching to define or reuse big modeling frameworks to ensure that every aspect of theirs problems is covered. Currently, there seem to be nothing obviously applicable for those industries on the market.
+
+For the industry currently and unfortunately, syncretism of modeling languages seems the only solution for now.
 
 ## Notes
 
-  * [1] On the other hand, concerning the product lifecycle and specifically the links between engineering and support, some other industry-specific standards are covering the process aspect of such a challenge: the [ASD standards](http://www.sx000i.org/).
-  * [2] See the first NAF to Archimate mapping in the [online article](https://bizzdesign.com/blog/nato-architecture-framework-archimate/) of Mark Lankhorst.
+  * <a name="note1"></a>[1] On the other hand, concerning the product lifecycle and specifically the links between engineering and support, some other industry-specific standards are covering the process aspect of such a challenge: the [ASD standards](http://www.sx000i.org/). [Back to text](#linknote1).
+  * <a name="note2"></a>[2] See the first NAF to Archimate mapping in the [online article](https://bizzdesign.com/blog/nato-architecture-framework-archimate/) of Mark Lankhorst. [Back to text](#linknote2).
 
 (*November 2019*)
