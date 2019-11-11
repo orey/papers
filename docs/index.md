@@ -10,6 +10,7 @@
   * [A Simple Meta-Model for Portfolio Management](articles/portfolio.md)
   * [An Introduction to The Archimate Revolution](articles/archimate-intro.md)
   * **NEW**: [Archimate Recipes](articles/archimate-recipes.md)
+  * **NEW**: [Military Frameworks, Systems Engineering and Enterprise Architecture](articles/mbse-vs-ea.md)
 
 ## Graph-oriented programming
 

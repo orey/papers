@@ -2,36 +2,32 @@
 
 ## Olivier Rey
 
-  * See my [LinkedIn profile](https://www.linkedin.com/in/reyolivier/)
-  * Write to me: rey [dot] olivier [at] gmail [dot] com
+  * [LinkedIn profile](https://www.linkedin.com/in/reyolivier/)
+  * rey [dot] olivier [at] gmail [dot] com
+  * [Papers](https://orey.github.io/)
 
 ## Areas of interest
 
-  * Software engineering, programming languages, programming paradigms
+  * Software engineering, programming languages, programming paradigms, semantic web
   * Modeling
     * Archimate and enterprise architecture modeling frameworks
-    * MBSE
+    * MBSE/MBE
     * Domain specific modeling
     * DSL
-  * Mathematics (topology, graphs, category theory, etc.)
+  * Mathematics (topology, graphs, category theory, algebraic geometry)
 
 ## Articles to write or migrate
 
-  * Archimate version of the [portfolio management metamodel](../articles/portfolio.md).
   * Deming and the system of profound knowledge
-  * French articles
+  * French articles?
   * Old stuff
 
     * Migrate interesting stuff from old blog (and translate)
-    * VB and Delphi refactoring practices
+    * VB and Delphi refactoring practices?
 
-## Graph-oriented programming
+## Archive
 
-  * New demo version (designer and web framework), open source this time
-
-## Ongoing graph studies and questions
-
-These are my current topics of interest.
+Topics:
 
   * Modeling complex temporal events with graphs and topological graph transformations
     * Like highway traffic
@@ -47,4 +43,4 @@ These are my current topics of interest.
   * Cloning nodes and sub-graph: rules?
 
 
-*(July 2018)*
+*(November 2019)*

@@ -17,6 +17,7 @@ pages:
     - 'A Simple Meta-Model for Portfolio Management': 'articles/portfolio.md'
     - 'An Introduction to The Archimate Revolution': 'articles/archimate-intro.md'
     - 'Archimate Recipes': 'articles/archimate-recipes.md'
+    - 'Military frameworks, systems engineering and enterprise architecture': 'articles/mbse-vs-ea.md'
 - Graph-oriented programming:
     - 'First article on graph-oriented programming': 'graph/first-article.md'
     - 'Conference at the STAF/ICGT 2018 in Toulouse': 'graph/staf-icgt2018.md'
