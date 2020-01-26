@@ -30,10 +30,11 @@ Semantic space</y:NodeLabel>
     <node id="n1">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="23.187839999999994" width="83.48096000000001" x="330.8636518400024" y="135.83791487999986"/>
+          <y:Geometry height="37.80000000000001" width="99.48096000000001" x="330.8636518400024" y="128.53183487999985"/>
           <y:Fill color="#CCFFFF" transparent="false"/>
           <y:BorderStyle color="#0000FF" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="15.640625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#0000FF" verticalTextPosition="bottom" visible="true" width="70.982421875" x="6.249269062499991" xml:space="preserve" y="3.773607499999997">Viewpoint 2</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="5" fontFamily="Dialog" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="33.28125" horizontalTextPosition="center" iconTextGap="4" leftInset="5" modelName="internal" modelPosition="c" rightInset="5" textColor="#0000FF" topInset="5" verticalTextPosition="bottom" visible="true" width="92.373046875" x="3.553956562499991" xml:space="preserve" y="2.2593750000000057">Viewpoint 2
+(application 2)</y:NodeLabel>
           <y:Shape type="rectangle"/>
           <y:DropShadow color="#B3A691" offsetX="3" offsetY="5"/>
         </y:ShapeNode>
@@ -42,10 +43,11 @@ Semantic space</y:NodeLabel>
     <node id="n2">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="23.187839999999994" width="83.48096000000001" x="149.49786368000466" y="260.4659174399999"/>
+          <y:Geometry height="37.80000000000001" width="99.48096000000001" x="141.49786368000468" y="260.4659174399999"/>
           <y:Fill color="#CCFFFF" transparent="false"/>
           <y:BorderStyle color="#0000FF" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="15.640625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#0000FF" verticalTextPosition="bottom" visible="true" width="70.982421875" x="6.249269062500019" xml:space="preserve" y="3.7736075000000255">Viewpoint 1</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="5" fontFamily="Dialog" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="33.28125" horizontalTextPosition="center" iconTextGap="4" leftInset="5" modelName="internal" modelPosition="c" rightInset="5" textColor="#0000FF" topInset="5" verticalTextPosition="bottom" visible="true" width="92.373046875" x="3.553956562499991" xml:space="preserve" y="2.2593749999999773">Viewpoint 1
+(application 1)</y:NodeLabel>
           <y:Shape type="rectangle"/>
           <y:DropShadow color="#B3A691" offsetX="3" offsetY="5"/>
         </y:ShapeNode>
@@ -54,7 +56,7 @@ Semantic space</y:NodeLabel>
     <node id="n3">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="53.0" width="255.03553600000077" x="105.05941376000004" y="329.38719487999975"/>
+          <y:Geometry height="53.0" width="255.03553600000077" x="105.05941376000004" y="359.38719487999975"/>
           <y:Fill color="#FFFFFF" transparent="false"/>
           <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="5" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="44.921875" horizontalTextPosition="center" iconTextGap="4" leftInset="5" modelName="custom" rightInset="5" textColor="#808080" topInset="5" verticalTextPosition="bottom" visible="true" width="153.134765625" x="50.95038518750039" xml:space="preserve" y="4.0390625">Version 02 - January 202
@@ -67,7 +69,7 @@ https://orey.github.io/papers<y:LabelModel><y:SmartNodeLabelModel distance="4.0"
     <node id="n4">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="23.187839999999994" width="255.03553600000077" x="105.05941376000004" y="306.19935487999976"/>
+          <y:Geometry height="23.187839999999994" width="255.03553600000077" x="105.05941376000004" y="336.19935487999976"/>
           <y:Fill color="#FFFFFF" transparent="false"/>
           <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="5" fontFamily="Dialog" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="21.640625" horizontalTextPosition="center" iconTextGap="4" leftInset="5" modelName="custom" rightInset="5" textColor="#808080" topInset="5" verticalTextPosition="bottom" visible="true" width="253.5986328125" x="0.7184515937503875" xml:space="preserve" y="0.7736075000000255">Data are viewpoints on the semantic space<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>

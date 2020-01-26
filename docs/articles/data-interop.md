@@ -79,6 +79,12 @@ But, if this reasoning is true, that would mean that a data lake is an *applicat
 
 But, if that is the case, that means that the data lake is also creating its own viewpoint on the semantic space, like shown if Figure 4.
 
+![Datalake as an application](../yed/datalake.png)
+
+<u>Figure 4</u>: The data lake as another kind of application
+
+
+---reprendre ici
 
 For sure, if the data lake is built by people knowing the business, there is a good chance the data correlations will be possible and fruitful. But, if data is considered from a technical point of view, the aggregated data will most probably not provide any
 
