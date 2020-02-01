@@ -64,60 +64,99 @@ Let us take an example: accounting. In the 80s, every company that had the finan
 
 With time and maturity, the considered business discovers progressively how to structure its business processes and business concepts.
 
-The Fig. 1 tries to represent this enrichment. At the beginning, both company 1 and company have implemented this interpretation of the regulation: They cover it but in different ways. At this stage, one company can have a competitive advantage on the other.
+The Fig. 1 tries to represent this enrichment in the case of a regulated business. At the beginning, both company 1 and company 2 have implemented their interpretation of the regulation: They both cover it (and more), but in different ways. At this stage, one company can have a competitive advantage on the other, if its interpretation is having better business impact.
 
-Then, the regulation expands: Company 1 covers it but company 2 has a hard time to do it. After a certain time, companies 1 and 2 will use an off-the-shelf software to cover the regulation. Company 2 will still have a specific application connected to the off-the-shelf software. In that case, company 2 may have a better digitization of its business domain than company 1 by covering more of the business semantic space with software.
+Then, the regulation expands (step 2 in Fig. 1): Company 1 covers it but company 2 has a hard time to do it. After a certain time, companies 1 and 2 will use an off-the-shelf software to cover the regulation (step n). Company 2 will still have a specific application connected to the off-the-shelf software. In that case, company 2 may have a better digitization of its business domain than company 1 by covering more of the business semantic space with software.
 
-This maturity cycle is a crucial dynamic process in IT that every IT architect should understand. One sign of the maturation of requirement is *when business concepts appear*.
+This maturity cycle is a crucial dynamic process in IT, and every IT architect should be aware of it. There are several signs that enable to to estimate the maturity of a business in terms of knowledge representation (business concepts and business processes).
 
-As long as the business concepts are not known for what they really are, every user can get satisfied with generic multi-purpose tools like Excel. As long as your business concepts are known, they have a structure, they have fields of a certain type, they have links with other concepts and you cannot manage them anymore with Excel. You need a software to manipulate your concepts and you need this software to manage at least a part of your business processes.
+### The path to maturity
 
-### Representations are not absolute
+As long as the business concepts are not known for what they really are, every user can get satisfied with generic multi-purpose tools like Excel. In that case, the business knowledge can be:
+
+* Located in procedures written in documents, and that everyone has to follow;
+* Personal: everyone is doing as he wishes provided the end result is obtained.
+
+As soon as your business concepts are known, they have a structure, they have fields of a certain type, they have links with other concepts and it is no more possible to manage them with Excel. A business software is required to manipulate the business concepts and to manage a part of the business processes.
+
+The first sign of the maturation of the business is *when business concepts appear*. This phase generally happens several times as Fig. 1 shows it:
+
+* At first, a specific application will be developed implementing a certain vision of the business concepts and processes;
+* Then, the applications evolutions will make evolve the business concepts and processes;
+* Then application rewriting can bring a new vision, sometimes more adapted to the new practices but exploring in more details a part of the business semantic space.
+
+Quite often, business processes can be ineffective because one or several concepts are hiding. They must be discovered (sometimes just "named") to unlock the business and enable the implementation of the business evolution in software.
+
+It is quite important to note here that the concepts of a business semantic spaces are just *representations* - and representations do change (with maturity, with time, with change of practices, with regulation, etc.). Thus, *there is no absolute representation of a business concept*: There is just a *valid representation* at a certain time for a certain amount of people of a specific business concept.
+
+Applications evolutions will, most of time, enhance the business concept representation, tweak it for it to be optimal. Maybe the original concept will see its structure evolve, maybe it will become 2 concepts or fusion with some other concepts. A business concept is an evolving object.
+
+For sure, application rewriting/replacement is an important indicator for IT architects because it determines quite often the maturity of the business. The question is: *how many generations of software* implemented this very business after the paper/Excel phase.
+
+Let us take back our accounting sample. Many companies are now running their 3rd generation of accounting software. We can consider that the business is quite mature, and for sure, if we see the large functional scope of modern accounting software, we see that most concepts, along with the regulation, are quite mature.
+
+### Connecting business domains
+
+Another important sign of business maturity is the *presence in the business of a multi-company exchange format*, like the IATA transactions in the travel business, the Swift system in the banking area or the Step and ASD standards of the aerospace industry. Those standards are generally impressive collective efforts to provide a multi-company shared vision of one or several business domains, in terms of business processes and in terms of business concepts: a collective effort to explore the semantic business domain.
+
+The presence of exchange standards are very important, not only because they define common business concepts and business processes, but because *they define a frontier* between different business semantic spaces.
+
+![Connecting several semantic spaces](../yed/semantic-space-several.png)
+
+<u>Figure 2</u>: Connecting several semantic spaces
+
+Indeed, even if the business semantic space is hard to define in terms of exact scope, collective efforts to define interchange formats lead to the conclusion that several business:
+
+* Are different;
+* Need to share some concepts and be part of a larger process.
+
+Fig. 2 is representing this situation of 2 business semantic spaces exchange concepts through an exchange format. Note that Fig. 2 represents 2 applications, application 1 and 2 respectively in the semantic spaces A and B. For them, for sure, the exchange format will be a subset of the concepts and processes they manipulate.
+
+We must insist on this fact, that is simple but heavy in its consequences: There are *several business domains* in the world, each of them having their own concepts and processes. They sometimes have to be part of a larger process and have to share concepts in that purpose. But being able to exchange concepts does not mean that they are in the same semantic space.
+
+The optimal frontiers between different semantic spaces are the root problem behind an efficient set of IT systems and an optimal function placement (in French: "urbanisation"). Some semantic spaces must be separated while some others are indeed the same. Generally, it is not difficult to identify those spaces and when the business is changing (concepts, processes, actors).
+
+As we will show, an extreme data orientation tends to believe that all business domains are just part of a single big semantic space... Which is untrue.
+
+## The real nature of data
+
+### A definition of data
+
+As we explain, business concepts are representations. They can have many representations in the same semantic space.
+
+We can define "data" (attached to an application) as follows:
+
+    *Data is a **viewpoint** on a semantic space*,
+    viewpoint brought by a business application
+    (actors, processes, concepts).
+
+Fig. 3 is representing this fact.
+
+![Data are viewpoints on business concepts of the semantic space](../yed/industry-data3.png)
+
+<u>Figure 3</u>: Data are viewpoints on business concepts of the semantic space
+
+That means that another application could have another *interpretation* of the same business concepts. If the interpretation differs a lot, maybe the 2 representations are in different semantic spaces and maybe we are considering the exchange format.
+
+--- reprendre ici
 
 
 
-
-# The real nature of data
-
-### Data is not absolute
-
-The first fact to understand is that *data is not "absolute"*.
-
-![The relative nature of data](../yed/industry-data.png)
-
-<u>Figure 1</u>: The relative nature of data
-
-Data is the result of 2 main factors:
-
-* A semantic space,
-* A viewpoint on that semantic space.
-
-A semantic space is a consistent knowledge space, where we can define a set of interlinked concepts. One of the most difficult problem in IT architecture is to determine the right frontiers between the semantic spaces and to make them communicate (we will come back on that).
-
-The Figure 1 illustrates the semantic spaces and various viewpoints on it that result on data. We can note that there as, on Figure 1, 4 kinds of "data":
-
-* Data type 1 and 2: Those data types are the ones we manipulate every day.
-  * The viewpoint 1 and 2 are defined by applications that use a certain data model to manage their data.
-* Data type 3: Data common to several viewpoints.
-  * In Figure 1, the viewpoints 1 and 2 have a common set of data, each of them being integrated in their larger viewpoint.
-  * A typical sample of that would be 2 applications exchanging data by using a common exchange model based on data type 3.
-* Data type 4: Data that is not addressed yet by any viewpoint but that resides in the same semantic space
-  * A sample of that would be, in the industry, when we begin to measure some physical dimensions that were, previously only seen in a qualitative way. The new measuring methods make those data "visible", whereas they were in the semantic space of the very domain from the beginning, but we had no access to them.
 
 ### Sample of data viewpoints
 
 ![Data models are relative](../yed/stubs01.png)
 
-<u>Figure 2</u>: Data models are relative
+<u>Figure 4</u>: Data models are relative
 
-If we consider Figure 2, we can see that data models are relative to the use cases.
+If we consider Fig. 4, we can see that data models are relative to the use cases.
 
-The data model of the applications 1 and 2 correspond respectively to the types 1 and 2 of data we saw in Figure 1, and the exchange format to the data type 3. Those 3 different representations of data are equivalent, on a semantic standpoint, but we see that their implementation is quite different:
+The data model of the applications 1 and 2 correspond respectively to the types 1 and 2 of data we saw in Fig. 3, and the exchange format to the data type 3. Those 3 different representations of data are equivalent, on a semantic standpoint, but we see that their implementation is quite different:
 
 * The are 4 business objects in the data model of application 1 and only 3 in the data model of application 2;
 * In the exchange format, there is no explicit mention of the links between ```A```, ```B```, ```C``` and ```D```, but a grouping of those business objects and a cardinality grammar.
 
-For sure, the data model of applications 1 and 2 are much larger than what we see on Figure 2, probably with concepts that are not known from one another (data of types 1 and 2).
+For sure, the data model of applications 1 and 2 are much larger than what we see on Fig. 4, probably with concepts that are not known from one another (data of types 1 and 2).
 
 ## Data lake or data swamp
 
@@ -125,11 +164,11 @@ For sure, the data model of applications 1 and 2 are much larger than what we se
 
 ![What data should be in the data lake?](../yed/stubs02.png)
 
-<u>Figure 3</u>: What data should be in the data lake?
+<u>Figure 5</u>: What data should be in the data lake?
 
-Continuing on the example of Figure 2 with Figure 3, if we were to gather all data in the same data lake starting from the data models, we would have twice the ```B``` and ```D``` objects, and once the ```A```, ```C``` and ```A-union-C``` objects. If we suppose that the application 1 is sending its data to application 2 at a certain point in time, we can suppose that the interface will transport "publishable" data, which means that, at a certain point in time, application 1 is likely to have more recent versions of the ```A```, ```B```, ```C``` and ```D``` business objects than the application 2. In the data lake, what would be the reference?
+Continuing on the example of Fig. 4 with Fig. 5, if we were to gather all data in the same data lake starting from the data models, we would have twice the ```B``` and ```D``` objects, and once the ```A```, ```C``` and ```A-union-C``` objects. If we suppose that the application 1 is sending its data to application 2 at a certain point in time, we can suppose that the interface will transport "publishable" data, which means that, at a certain point in time, application 1 is likely to have more recent versions of the ```A```, ```B```, ```C``` and ```D``` business objects than the application 2. In the data lake, what would be the reference?
 
-By looking at Figure 3, what to do about the business objects which scope changes with the application 1 to application 2 interface? Must the data lake store ```A```, ```C``` and/or ```A-union-C```? Most often, all will depend on the data that will be connected in application 2.
+By looking at Fig. 5, what to do about the business objects which scope changes with the application 1 to application 2 interface? Must the data lake store ```A```, ```C``` and/or ```A-union-C```? Most often, all will depend on the data that will be connected in application 2.
 
 For sure, with a little knowledge about the applications 1 and 2, their *functional* mechanisms, their very viewpoints on data (especially on data lifecycle), the reasons why they publish data at a certain moment to other applications, we can create a more intelligent data export in a data lake.
 
@@ -142,11 +181,11 @@ The concept of data lake is not bad in itself, but to be useful, the data lake m
 
 But, if this reasoning is true, that would mean that a data lake is an *application* rather than a *data store*, that it has some data ingestion *business logic* to be able to ingest data that fit in a global data landscape without introducing ambiguities or erroneous data links.
 
-But, if that is the case, that means that the data lake is also creating its own viewpoint on the semantic space, like shown if Figure 4.
+But, if that is the case, that means that the data lake is also creating its own viewpoint on the semantic space, like shown if Fig. 6.
 
 ![Datalake as an application](../yed/datalake.png)
 
-<u>Figure 4</u>: The data lake as another kind of application
+<u>Figure 6</u>: The data lake as another kind of application
 
 
 ---reprendre ici
@@ -158,6 +197,38 @@ But, if that is the case, that means that the data lake is also creating its own
 For some time, the simplistic idea of gathering all data from all sources in a single place, like a "data lake", is in the air. With time, this idea has been declined in several flavors, the most recent one being the semantic data lake: Indeed, with the proper data description (ontologies) and with the Semantic Web technologies, it seems possible to aggregate all sorts of data and link them together. To do what? To get the most out of them, for sure. Like years ago with data warehouses and data marts.
 
 
+
+
+
+
+
+
+### Data is not absolute in a single business semantic space
+
+As we explain, business concepts are representations. They can have many representations in the same semantic space.
+
+![The relative nature of data](../yed/industry-data.png)
+
+<u>Figure 3</u>: The relative nature of data
+
+
+
+
+
+We can define "data" (attached to an application) as the result of 2 main factors:
+
+* A business semantic space,
+* A *viewpoint* on that semantic space, brought by the application (actors, processes, concepts).
+
+The Fig. 3 illustrates a semantic space and various viewpoints on it that result on "data". We can note that there as, on Fig. 3, 4 kinds of "data":
+
+* Data type 1 and 2: Those data types are the ones we manipulate every day.
+  * The viewpoint 1 and 2 are defined by applications that use a certain data model to manage their data.
+* Data type 3: Data common to several viewpoints.
+  * In Fig. 3, the viewpoints 1 and 2 have a common set of data, each of them being integrated in their larger viewpoint.
+  * A typical sample of that would be 2 applications exchanging data by using a common exchange model based on data type 3.
+* Data type 4: Data that is not addressed yet by any viewpoint but that resides in the same semantic space
+  * A sample of that would be, in the industry, when we begin to measure some physical dimensions that were, previously only seen in a qualitative way. The new measuring methods make those data "visible", whereas they were in the semantic space of the very domain from the beginning, but we had no access to them.
 
 
 
