@@ -17,10 +17,10 @@
     <node id="n0">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="53.0" width="255.03553600000077" x="105.05941376000004" y="359.38719487999975"/>
+          <y:Geometry height="68.24559743999993" width="164.03553600000077" x="363.5965756800044" y="120.68311871999987"/>
           <y:Fill color="#FFFFFF" transparent="false"/>
           <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="5" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="44.921875" horizontalTextPosition="center" iconTextGap="4" leftInset="5" modelName="custom" rightInset="5" textColor="#808080" topInset="5" verticalTextPosition="bottom" visible="true" width="153.134765625" x="50.95038518750039" xml:space="preserve" y="4.0390625">Version 01 - January 202
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" bottomInset="5" configuration="CroppingLabel" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.921875" horizontalTextPosition="center" iconTextGap="4" leftInset="5" modelName="custom" rightInset="5" textColor="#808080" topInset="5" verticalTextPosition="bottom" visible="true" width="164.03553600000077" x="0.0" xml:space="preserve" y="10.661861219999963">Version 01 - January 202
 Copyleft Olivier Rey
 https://orey.github.io/papers<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:Shape type="rectangle"/>
@@ -30,10 +30,10 @@ https://orey.github.io/papers<y:LabelModel><y:SmartNodeLabelModel distance="4.0"
     <node id="n1">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="23.187839999999994" width="255.03553600000077" x="105.05941376000004" y="336.19935487999976"/>
+          <y:Geometry height="37.80000000000001" width="164.03553600000077" x="363.5965756800044" y="82.88311871999986"/>
           <y:Fill color="#FFFFFF" transparent="false"/>
           <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="5" fontFamily="Dialog" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="21.640625" horizontalTextPosition="center" iconTextGap="4" leftInset="5" modelName="custom" rightInset="5" textColor="#808080" topInset="5" verticalTextPosition="bottom" visible="true" width="238.96484375" x="8.035346125000387" xml:space="preserve" y="0.7736075000000255">Datalake as another kind of applications<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" bottomInset="5" configuration="CroppingLabel" fontFamily="Dialog" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="35.28125" horizontalTextPosition="center" iconTextGap="4" leftInset="5" modelName="custom" rightInset="5" textColor="#808080" topInset="5" verticalTextPosition="bottom" visible="true" width="164.03553600000077" x="0.0" xml:space="preserve" y="1.2593750000000057">Datalake as another kind of applications<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
@@ -44,27 +44,13 @@ https://orey.github.io/papers<y:LabelModel><y:SmartNodeLabelModel distance="4.0"
           <y:Geometry height="169.2" width="204.4" x="112.93541376000012" y="50.060319999999905"/>
           <y:Fill color="#FFFF99" color2="#FFFFFF" transparent="false"/>
           <y:BorderStyle color="#003300" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="31.9375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#003300" verticalTextPosition="bottom" visible="true" width="110.1484375" x="47.12578125" xml:space="preserve" y="4.0">
-Semantic space</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="5" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="28.96875" horizontalTextPosition="center" iconTextGap="4" leftInset="5" modelName="internal" modelPosition="t" rightInset="5" textColor="#003300" topInset="10" verticalTextPosition="bottom" visible="true" width="116.1484375" x="44.12578125" xml:space="preserve" y="4.0">Semantic space</y:NodeLabel>
           <y:Shape type="rectangle"/>
           <y:DropShadow color="#B3A691" offsetX="3" offsetY="5"/>
         </y:ShapeNode>
       </data>
     </node>
     <node id="n3">
-      <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="37.80000000000001" width="99.48096000000001" x="338.73965184000247" y="109.87183487999977"/>
-          <y:Fill color="#CCFFFF" transparent="false"/>
-          <y:BorderStyle color="#0000FF" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="5" fontFamily="Dialog" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="33.28125" horizontalTextPosition="center" iconTextGap="4" leftInset="5" modelName="internal" modelPosition="c" rightInset="5" textColor="#0000FF" topInset="5" verticalTextPosition="bottom" visible="true" width="92.373046875" x="3.553956562499991" xml:space="preserve" y="2.2593750000000057">Viewpoint 2
-(application 2)</y:NodeLabel>
-          <y:Shape type="rectangle"/>
-          <y:DropShadow color="#B3A691" offsetX="3" offsetY="5"/>
-        </y:ShapeNode>
-      </data>
-    </node>
-    <node id="n4">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="37.80000000000001" width="99.48096000000001" x="149.37386368000477" y="241.8059174399998"/>
@@ -77,7 +63,7 @@ Semantic space</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n5">
+    <node id="n4">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="114.00000000000006" width="53.20000000000002" x="172.51434368000474" y="97.8059174399998"/>
@@ -95,7 +81,7 @@ Semantic space</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n6">
+    <node id="n5">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="37.80000000000001" width="121.20000000000007" x="187.53965184000236" y="109.87183487999977"/>
@@ -113,7 +99,7 @@ Semantic space</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n7">
+    <node id="n6">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="88.80000000000001" width="108.3615500799954" x="149.37386368000477" y="92.8059174399998"/>
@@ -131,7 +117,7 @@ Semantic space</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n8">
+    <node id="n7">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="37.80000000000001" width="99.48096000000001" x="-7.9497843200022515" y="118.3059174399998"/>
@@ -144,7 +130,7 @@ Semantic space</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <edge id="e0" source="n3" target="n6">
+    <edge id="e0" source="n3" target="n4">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -154,17 +140,7 @@ Semantic space</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e1" source="n4" target="n5">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="none"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e2" source="n8" target="n7">
+    <edge id="e1" source="n7" target="n6">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>

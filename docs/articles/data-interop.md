@@ -4,19 +4,84 @@
 
 "Data is the new gold". "Data drives the world". "We are in a data driven world".
 
-All medias, and not especially the IT medias, are obsessed with data and the value they are representing or should represent. The fact is what is obvious for retail (data corresponding to what the customer is used to purchase), is not so obvious in a lot of other businesses, to begin with the industry. That does not mean that data has no value, far from it, but many topics hide behind the "data" topic.
+All medias, and not especially the IT medias, seem obsessed with data, especially big data, and the value they are representing or should represent.
 
-Maybe data is the new gold, but we are often like old miners: looking at a way to extract the value from it. Most of the time, in the IT systems of big companies, data are everywhere, in many places. Many applications store many data  that, most often, represent various temporal states of complex business objects, at a certain moment of their lifecycle.
+For decades now, we are running on data, and big data is just another step in a long-term trend that is selling continuously the same promises (datawarehouse, datamart, big data, analytics, etc.).
 
-For some time, the simplistic idea of gathering all data from all sources in a single place, like a "data lake", is in the air. With time, this idea has been declined in several flavors, the most recent one being the semantic data lake: Indeed, with the proper data description (ontologies) and with the Semantic Web technologies, it seems possible to aggregate all sorts of data and link them together. To do what? To get the most out of them, for sure. Like years ago with data warehouses and data marts.
+## Two kinds of approaches
 
-In this article, we will come back on two absolute dimensions to consider, that are a prerequisite to get the most of the data. For some readers, it may be a surprise, but for experienced IT people, it will be just a collection of well-known ideas.
+### Big data technologies for real use cases
 
-## The real nature of data
+In some business, the interest of manipulating a huge amount of data is obvious:
+
+* In Internet retail for instance: for big websites, you have a massive amount of data for each customer visiting your website with all information related to the consultations and to the purchases; Those data are being largely used for years;
+* In the industry: Most production assembly lines generate a lot of data that are used to monitor the quality of the product and the productivity;
+* In public services: Analyzing in details at the country level the various business trends, employment data and so on, can be done now from the real low level real data instead of using representative samples;
+* Etc.
+
+What is common between all those samples is that the use cases of those big data are very clear and the big data technologies are just a way to answer them. In a certain way, we are just talking about classical software applications using big data.
+
+### Big data technology for no use cases
+
+The fact is most big data projects are not focusing on real use cases: they do the reverse. They are infrastructure projects to enable future use cases.
+
+Big data vendors are so powerful (as datawarehouse vendors decades ago) and so trendy, that they convince enterprises to put in place big data infrastructure *prior* to having real use cases. In order to realize whatever use case, you need all company data in a data lake. This will enable you to correlate all data as you want and, like old miners, to find hidden gold in your sleeping data.
+
+For sure, as many enterprise applications store many data that, most often, represent various temporal states of complex business objects, at a certain moment of their lifecycle, the idea of putting all that together in a first step, to mine it afterwards and find value in a second, is very seductive to a lot of people:
+
+* End users understand the concept,
+* Tech people are thrilled.
+
+Yet, those projects lead, generally, to major under achievements in regard to the expected value, despite millions invested. Why is that?
+
+In this article, we will try to remember what is data and why some approaches are failing. Some ideas expressed here are well-known by a lot of people, but maybe not enough.
+
+## Describing the business
+
+### Business concepts and business processes
+
+In every business domain, we can exhibit business concepts. Those business concepts are linked together with various kinds of relationships. They establish a first *representation* of the business.
+
+Business processes are manipulating those business concepts, creating them, changing their state, linking or unlinking them together. Business processes establish the second dimension of the representation of business.
+
+From this double representation, IT people can do many things:
+
+* Create applications that manipulate those concepts and the concepts life cycles;
+* Create databases that store those concepts;
+* Create business workflows that will be a way to *assist* the business processes with software.
+
+For each business, we have a set of business processes and business concepts. In this article we will name this set the business *semantic space*.
+
+### Enriching the representations
+
+With time and business digital maturity, the business concepts and business processes are enriched. This phenomenon is a big constant of the IT world.
+
+Let us take an example: accounting. In the 80s, every company that had the financial means had their own accounting system, developed by themselves. The legislation was, often, not very detailed and each company had interpreted it in slightly different ways. With time, the legislation became more detailed and companies found it hard to implement the concepts and processes. Software companies provided generic accounting software that were taking in charge all concepts and processes from the accounting business and that could be parameterized to the very case of each company.
+
+![The evolution of the business concepts and processes](../yed/semantic-space.png)
+
+<u>Figure 1</u>: The evolution of the business concepts and processes
+
+With time and maturity, the considered business discovers progressively how to structure its business processes and business concepts.
+
+The Fig. 1 tries to represent this enrichment. At the beginning, both company 1 and company have implemented this interpretation of the regulation: They cover it but in different ways. At this stage, one company can have a competitive advantage on the other.
+
+Then, the regulation expands: Company 1 covers it but company 2 has a hard time to do it. After a certain time, companies 1 and 2 will use an off-the-shelf software to cover the regulation. Company 2 will still have a specific application connected to the off-the-shelf software. In that case, company 2 may have a better digitization of its business domain than company 1 by covering more of the business semantic space with software.
+
+This maturity cycle is a crucial dynamic process in IT that every IT architect should understand. One sign of the maturation of requirement is *when business concepts appear*.
+
+As long as the business concepts are not known for what they really are, every user can get satisfied with generic multi-purpose tools like Excel. As long as your business concepts are known, they have a structure, they have fields of a certain type, they have links with other concepts and you cannot manage them anymore with Excel. You need a software to manipulate your concepts and you need this software to manage at least a part of your business processes.
+
+### Representations are not absolute
+
+
+
+
+# The real nature of data
 
 ### Data is not absolute
 
-The first fact we must keep in mind is that *data is not "absolute"*.
+The first fact to understand is that *data is not "absolute"*.
 
 ![The relative nature of data](../yed/industry-data.png)
 
@@ -85,6 +150,22 @@ But, if that is the case, that means that the data lake is also creating its own
 
 
 ---reprendre ici
+
+
+
+
+
+For some time, the simplistic idea of gathering all data from all sources in a single place, like a "data lake", is in the air. With time, this idea has been declined in several flavors, the most recent one being the semantic data lake: Indeed, with the proper data description (ontologies) and with the Semantic Web technologies, it seems possible to aggregate all sorts of data and link them together. To do what? To get the most out of them, for sure. Like years ago with data warehouses and data marts.
+
+
+
+
+
+
+
+
+
+
 
 For sure, if the data lake is built by people knowing the business, there is a good chance the data correlations will be possible and fruitful. But, if data is considered from a technical point of view, the aggregated data will most probably not provide any
 
