@@ -203,13 +203,13 @@ What is common between all those samples is that the use cases of those big data
 
 ### The data lake for no use cases
 
-<a name="link-note1" />The fact is most data lakes projects are not focusing on real use cases: they do the reverse. They are infrastructure projects to *enable future use cases*. They are called *enablers* which is a nice word to say: "let's do a technical project and we'll see afterwards if it can be used on real use cases" [1](#note1).
+<a name="link-note1"><a/>The fact is most data lakes projects are not focusing on real use cases: they do the reverse. They are infrastructure projects to *enable future use cases*. They are called *enablers* which is a nice word to say: "let's do a technical project and we'll see afterwards if it can be used on real use cases" [1](#note1).
 
 Big data vendors are so powerful (as datawarehouse vendors decades ago) and so trendy, that they convince enterprises to put in place big data infrastructure *prior* to having real use cases.
 
 The speech is seductive: In order to realize whatever use case you will want to implement in the future, your company needs to put all company data in a data lake; This will enable you to correlate all data you want and  find value in your sleeping data.
 
-<a name="link-note2" />This speech has the advantage of seducing end users that understand the concept, and IT people that are thrilled by the introduction of new technology [2](#note2).
+<a name="link-note2"><a/>This speech has the advantage of seducing end users that understand the concept, and IT people that are thrilled by the introduction of new technology [2](#note2).
 
 For sure, the fact that data lakes with real use cases work are confusing the situation.
 
@@ -224,7 +224,7 @@ But, if that is the case, that means that the data lake is also creating its own
 
 ![Datalake as an application](../yed/datalake.png)
 
-<a name="figure6" /><u>Figure 6</u>: The data lake as another kind of application
+<a name="figure6"><a/><u>Figure 6</u>: The data lake as another kind of application
 
 ### Semantic technology applied to data lakes
 
@@ -251,9 +251,9 @@ Furthermore, big data will always be expensive, and as all expensive technologie
 
 ## Notes
 
-<a name="note1" />[1] - The modern vocabulary of IT is a real regression compared to UML for instance. By talking about "features" and "enablers", it opens the door to develop "features" for unknown business roles and business processes, and to put in place "enablers", so technical infrastructure for the day when people will need it. This semantic shift is the result of a large-scale technical marketing of the large Cloud companies: instead of thinking about enhancing the business, most IT people and more and more business people think about technology. [Back to text](#link-note1).
+<a name="note1"><a/>[1] - The modern vocabulary of IT is a real regression compared to UML for instance. By talking about "features" and "enablers", it opens the door to develop "features" for unknown business roles and business processes, and to put in place "enablers", so technical infrastructure for the day when people will need it. This semantic shift is the result of a large-scale technical marketing of the large Cloud companies: instead of thinking about enhancing the business, most IT people and more and more business people think about technology. [Back to text](#link-note1).
 
-<a name="note1" />[2] - Most IT people find it hard to enter into the knowledge of the business. They prefer working on technological assets. That is why, it is an important role of the IT management to continuously refocus IT people to answer business requirements or to help businesses use wisely the IT resources to solve their business problems. Without this continuous refocus, the gap between business and IT people is growing, opening the door to "IT done by the business" syndrome, sign of that impossibility to communicate. [Back to text](#link-note2).
+<a name="note1"><a/>[2] - Most IT people find it hard to enter into the knowledge of the business. They prefer working on technological assets. That is why, it is an important role of the IT management to continuously refocus IT people to answer business requirements or to help businesses use wisely the IT resources to solve their business problems. Without this continuous refocus, the gap between business and IT people is growing, opening the door to "IT done by the business" syndrome, sign of that impossibility to communicate. [Back to text](#link-note2).
 
 (*February 2020*)
 
