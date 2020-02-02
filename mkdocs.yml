@@ -1,7 +1,7 @@
 site_name: Papers
 site_description: Olivier Rey's Papers
 site_author: Olivier Rey
-copyright: Copyleft Olivier Rey 2017-2019 - Site licensed under the GNU FDL V3
+copyright: Copyleft Olivier Rey 2017-2020 - Site licensed under the GNU FDL V3
 google_analytics: ['UA-110156293-1', 'orey.github.io']
 repo_url: https://github.com/orey/papers/
 #theme: readthedocs
@@ -18,6 +18,7 @@ pages:
     - 'An Introduction to The Archimate Revolution': 'articles/archimate-intro.md'
     - 'Archimate Recipes': 'articles/archimate-recipes.md'
     - 'Military frameworks, systems engineering and enterprise architecture': 'articles/mbse-vs-ea.md'
+    - 'The real nature of data': 'articles/data-interop.md'
 - Graph-oriented programming:
     - 'First article on graph-oriented programming': 'graph/first-article.md'
     - 'Conference at the STAF/ICGT 2018 in Toulouse': 'graph/staf-icgt2018.md'
