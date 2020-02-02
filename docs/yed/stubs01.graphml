@@ -223,7 +223,7 @@ BusinessObject<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
           <y:Geometry height="53.0" width="255.03553600000077" x="911.4979926458327" y="80.75497999999988"/>
           <y:Fill color="#FFFFFF" transparent="false"/>
           <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="5" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="44.921875" horizontalTextPosition="center" iconTextGap="4" leftInset="5" modelName="custom" rightInset="5" textColor="#808080" topInset="5" verticalTextPosition="bottom" visible="true" width="153.134765625" x="50.95038518750039" xml:space="preserve" y="4.0390625">Version 01 - January 202
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="5" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="44.921875" horizontalTextPosition="center" iconTextGap="4" leftInset="5" modelName="custom" rightInset="5" textColor="#808080" topInset="5" verticalTextPosition="bottom" visible="true" width="153.134765625" x="50.95038518750039" xml:space="preserve" y="4.0390625">Version 01 - January 2020
 Copyleft Olivier Rey
 https://orey.github.io/papers<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:Shape type="rectangle"/>

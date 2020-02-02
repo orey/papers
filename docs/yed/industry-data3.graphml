@@ -17,11 +17,10 @@
     <node id="n0">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="169.2" width="204.4" x="105.05941376000003" y="68.72031999999999"/>
-          <y:Fill color="#FFFF99" color2="#FFFFFF" transparent="false"/>
+          <y:Geometry height="78.19999999999999" width="139.4" x="137.55941376000004" y="292.92031999999995"/>
+          <y:Fill color="#CCFFCC" color2="#FFFFFF" transparent="false"/>
           <y:BorderStyle color="#003300" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="31.9375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#003300" verticalTextPosition="bottom" visible="true" width="123.61328125" x="40.393359375" xml:space="preserve" y="4.0">
-Semantic space A</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="10" fontFamily="Dialog" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="26.640625" horizontalTextPosition="center" iconTextGap="4" leftInset="5" modelName="internal" modelPosition="b" rightInset="5" textColor="#003300" topInset="5" verticalTextPosition="bottom" visible="true" width="130.390625" x="4.504687499999989" xml:space="preserve" y="47.55937499999999">Technical constraints</y:NodeLabel>
           <y:Shape type="rectangle"/>
           <y:DropShadow color="#B3A691" offsetX="3" offsetY="5"/>
         </y:ShapeNode>
@@ -30,11 +29,10 @@ Semantic space A</y:NodeLabel>
     <node id="n1">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="37.80000000000001" width="99.48096000000001" x="-16.502136319995316" y="154.56591743999994"/>
-          <y:Fill color="#CCFFFF" transparent="false"/>
-          <y:BorderStyle color="#0000FF" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="5" fontFamily="Dialog" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="33.28125" horizontalTextPosition="center" iconTextGap="4" leftInset="5" modelName="internal" modelPosition="c" rightInset="5" textColor="#0000FF" topInset="5" verticalTextPosition="bottom" visible="true" width="92.373046875" x="3.553956562499991" xml:space="preserve" y="2.2593749999999773">Viewpoint 1
-(application 1)</y:NodeLabel>
+          <y:Geometry height="169.2" width="204.4" x="105.05941376000003" y="68.72031999999999"/>
+          <y:Fill color="#FFFF99" color2="#FFFFFF" transparent="false"/>
+          <y:BorderStyle color="#003300" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="5" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="28.96875" horizontalTextPosition="center" iconTextGap="4" leftInset="5" modelName="internal" modelPosition="t" rightInset="5" textColor="#003300" topInset="10" verticalTextPosition="bottom" visible="true" width="129.61328125" x="37.393359375" xml:space="preserve" y="4.0">Semantic space A</y:NodeLabel>
           <y:Shape type="rectangle"/>
           <y:DropShadow color="#B3A691" offsetX="3" offsetY="5"/>
         </y:ShapeNode>
@@ -43,7 +41,19 @@ Semantic space A</y:NodeLabel>
     <node id="n2">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="61.7455974399999" width="154.03553600000077" x="339.45941376" y="150.72032000000002"/>
+          <y:Geometry height="37.80000000000001" width="99.48096000000001" x="-25.502136319995316" y="302.02031999999997"/>
+          <y:Fill color="#CCFFFF" transparent="false"/>
+          <y:BorderStyle color="#0000FF" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" bottomInset="5" fontFamily="Dialog" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="21.640625" horizontalTextPosition="center" iconTextGap="4" leftInset="5" modelName="internal" modelPosition="c" rightInset="5" textColor="#0000FF" topInset="5" verticalTextPosition="bottom" visible="true" width="84.2236328125" x="7.628663593750005" xml:space="preserve" y="8.079687499999977">Application 1</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+          <y:DropShadow color="#B3A691" offsetX="3" offsetY="5"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n3">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="61.7455974399999" width="154.03553600000077" x="339.45941376" y="157.72032000000002"/>
           <y:Fill color="#FFFFFF" transparent="false"/>
           <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="node_width" bottomInset="5" configuration="CroppingLabel" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.921875" horizontalTextPosition="center" iconTextGap="4" leftInset="5" modelName="custom" rightInset="5" textColor="#808080" topInset="5" verticalTextPosition="bottom" visible="true" width="154.03553600000077" x="0.0" xml:space="preserve" y="7.411861219999935">Version 02 - January 202
@@ -53,63 +63,74 @@ https://orey.github.io/papers<y:LabelModel><y:SmartNodeLabelModel distance="4.0"
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n3">
-      <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="53.0" width="154.03553600000077" x="339.45941376" y="97.72032000000002"/>
-          <y:Fill color="#FFFFFF" transparent="false"/>
-          <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" bottomInset="5" configuration="CroppingLabel" fontFamily="Dialog" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="35.28125" horizontalTextPosition="center" iconTextGap="4" leftInset="5" modelName="custom" rightInset="5" textColor="#808080" topInset="5" verticalTextPosition="bottom" visible="true" width="154.03553600000077" x="0.0" xml:space="preserve" y="8.859375">Data are viewpoints on the semantic space<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
-          <y:Shape type="rectangle"/>
-        </y:ShapeNode>
-      </data>
-    </node>
     <node id="n4">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="114.00000000000006" width="53.20000000000002" x="164.63834368000465" y="116.46591743999988"/>
-          <y:Fill color="#99CCFF7F" transparent="false"/>
-          <y:BorderStyle color="#000080" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000080" verticalTextPosition="bottom" visible="true" width="4.0" x="24.600000000000023" y="55.00000000000003">
-            <y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-          <y:Shape type="roundrectangle"/>
+          <y:Geometry height="61.7455974399999" width="154.03553600000077" x="339.45941376" y="95.97472256000012"/>
+          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:BorderStyle color="#808080" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" bottomInset="5" configuration="CroppingLabel" fontFamily="Dialog" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="46.921875" horizontalTextPosition="center" iconTextGap="4" leftInset="5" modelName="custom" rightInset="5" textColor="#808080" topInset="5" verticalTextPosition="bottom" visible="true" width="154.03553600000077" x="0.0" xml:space="preserve" y="7.411861219999963">Data are projections of the business concepts on technical constraints<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
     </node>
     <node id="n5">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="20.0" width="20.0" x="181.23834368000468" y="163.4659174399999"/>
-          <y:Fill color="#FFFFFF" transparent="false"/>
-          <y:BorderStyle color="#333333" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="15.640625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#333333" verticalTextPosition="bottom" visible="true" width="10.9580078125" x="4.52099609375" xml:space="preserve" y="2.1796875">1<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
-          <y:Shape type="ellipse"/>
+          <y:Geometry height="96.00000000000003" width="88.20000000000002" x="164.63834368000465" y="116.46591743999987"/>
+          <y:Fill color="#99CCFF7F" transparent="false"/>
+          <y:BorderStyle color="#000080" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="64.203125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000080" verticalTextPosition="bottom" visible="true" width="88.20000000000002" x="0.0" xml:space="preserve" y="15.8984375">Business processes
+-
+Business concepts<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
     </node>
     <node id="n6">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="20.0" width="20.0" x="248.07668736000937" y="163.4659174399999"/>
-          <y:Fill color="#FFFFFF" transparent="false"/>
-          <y:BorderStyle color="#333333" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="10" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="15.640625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#333333" verticalTextPosition="bottom" visible="true" width="10.9580078125" x="4.52099609375" xml:space="preserve" y="2.1796875">2<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
-          <y:Shape type="ellipse"/>
+          <y:Geometry height="28.0" width="36.60000000000002" x="188.95941376000002" y="306.92031999999995"/>
+          <y:Fill color="#99CCFF7F" transparent="false"/>
+          <y:BorderStyle color="#000080" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="15.640625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000080" verticalTextPosition="bottom" visible="true" width="27.876953125" x="4.361523437500011" xml:space="preserve" y="6.1796875">Data<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
     </node>
-    <edge id="e0" source="n1" target="n4">
+    <edge id="e0" source="n2" target="n5">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
+            <y:Point x="24.23834368000469" y="164.46591743999988"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="dashed" width="1.0"/>
+          <y:Arrows source="none" target="concave"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" bottomInset="3" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="10" fontStyle="italic" height="29.28125" horizontalTextPosition="center" iconTextGap="4" leftInset="3" lineColor="#808080" modelName="custom" preferredPlacement="anywhere" ratio="0.5" rightInset="3" textColor="#333333" topInset="3" verticalTextPosition="bottom" visible="true" width="99.916015625" x="-49.95800832500019" xml:space="preserve" y="-152.19503226703137">Viewpoint
+on semantic space<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="1.0" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e1" source="n5" target="n6">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000080" type="line" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" bottomInset="3" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="10" fontStyle="italic" height="17.640625" horizontalTextPosition="center" iconTextGap="4" leftInset="3" lineColor="#808080" modelName="custom" preferredPlacement="anywhere" ratio="0.5" rightInset="3" textColor="#333333" topInset="3" verticalTextPosition="bottom" visible="true" width="56.1611328125" x="-28.526869904340856" xml:space="preserve" y="38.39342084402335">projection<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e2" source="n2" target="n6">
+      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
