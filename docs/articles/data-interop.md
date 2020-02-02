@@ -12,7 +12,7 @@ This article explains that data is not a simple absolute usable IT "product" tha
 
 ## Describing the business
 
-## Software development is all about representation
+### Software development is all about representation
 
 One of the main objectives of IT is to automate the business processes and enable a better business management. This is achieved by storing the business concepts and manage the business rules associated to them and that control their life cycle.
 
