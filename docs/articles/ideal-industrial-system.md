@@ -112,7 +112,7 @@ Interconnecting with customers for the in-service
 
 A flexible set of digital tools
 
-
+Thinking the product as an IT guy
 
 
 
