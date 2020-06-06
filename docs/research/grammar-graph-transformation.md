@@ -170,6 +170,3 @@ Complementary readings:
   * [Basic semantic graph transformations](basic-semantic-graph-transformations.md)
   * [Basic graph transformations](basic-graph-transformations.md)
 
-----
-
-Page under the [GNU FDL](GNU_FDL.md "GNU FDL") license.

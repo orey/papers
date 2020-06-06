@@ -4,7 +4,7 @@
 
 You can read the following article :
 
-  * [Using semantic web technologies for aerospace industrial data migration, Madics 2019](semantic/data-migration.md)
+  * [Using semantic web technologies for aerospace industrial data migration, Madics 2019](../semantic/data-migration.md)
 
 ## Elements
 
