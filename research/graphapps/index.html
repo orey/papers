@@ -227,8 +227,6 @@
             <li><a href="#what-is-graphapps">What is GraphApps?</a></li>
             <li><a href="#graph-oriented-programming-and-technical-debt">Graph-oriented programming and technical debt</a></li>
             <li><a href="#important-points">Important points</a></li>
-            <li><a href="#second-period-2018-now-exploring-semantic-graph-transformations-for-data-conversion">Second period (2018-now): Exploring (semantic) graph transformations for data conversion</a></li>
-            <li><a href="#various-notes-linked-to-graphs">Various notes linked to graphs</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -259,65 +257,7 @@
 <li><em>Graph transformations</em> to model business logic.</li>
 </ul>
 <p>This programming model is an intermediate between object-orientation and functional programming. Shortly said, it takes the best out of the two programming models while being totally consistent because based on the business semantics and not on technical considerations.</p>
-<p><em>(June 2020)</em></p>
-<hr />
-<h2 id="second-period-2018-now-exploring-semantic-graph-transformations-for-data-conversion">Second period (2018-now): Exploring (semantic) graph transformations for data conversion</h2>
-<h3 id="basic-graph-transformations">Basic graph transformations</h3>
-<p>As graph transformations can be composed easily, the idea is to build a set of basic graph transformations as a foundation for applications.</p>
-<p>Two repos are currently under development to study those dimensions:</p>
-<ul>
-<li>The <a href="https://github.com/orey/graph">graph</a> repo: The paper <a href="../basic-graph-transformations/">Basic graph transformations</a> explains the intention of this repo. This repo is in Python. See also <a href="https://github.com/orey/graph/blob/master/graph_transformations/README.md">a page in the repo</a>.</li>
-<li>The <a href="https://github.com/orey/graphappsjs">graphappsjs</a> repo, which is targeting the same objective but analyzes the link of the programming language in that problem.</li>
-</ul>
-<p>The underlying topic under those repos is also the capability of building a graph-oriented programming language with adapted constructs. A direction to explore would be to propotype a DSL of a graph-oriented programming language with Common Lisp.</p>
-<h3 id="semantic-data-conversion-draft-papers">Semantic data conversion draft papers</h3>
-<p>The following draft papers are exploring the semantic data conversion approach:</p>
-<ul>
-<li>The article <a href="arguments_semantic.md" title="arguments">Arguments for semantic use in data conversion</a> gathers the various reasons why using a semantic approach can be interesting.</li>
-<li>The paper <a href="../basic-semantic-graph-transformations/">Basic semantic graph transformations</a> aims at defining a set of basic graph transformations.</li>
-<li>The paper <a href="../industry-data/">Graphs and semantic data in industry</a> talks about the opportunity of using RDF approaches to convert efficiently industrial data.</li>
-</ul>
-<h3 id="graph-data-visualization">Graph data visualization</h3>
-<h4 id="converting-csv-data-into-rdf">Converting CSV data into RDF</h4>
-<p>Before being able to use semantic graph transformation on data, we must be able to convert CSV data to RDF. This is the objective of the <code>csv2rdf.py</code> tool available in the <a href="https://github.com/orey/csv2rdf">csv2rdf</a> repo.</p>
-<p>There are two options proposed by this tool to convert CSV data:</p>
-<ul>
-<li>The default conversion option,</li>
-<li>The semantic grammar option, which enables to determine precisely the triple construction.</li>
-</ul>
-<p>By reusing the same semantic grammar, multiple sources of data can be gathered in the same semantic database (current tests are using <a href="http://jena.apache.org/">Apache Jena</a>).</p>
-<h4 id="visualizing-rdf-data">Visualizing RDF data</h4>
-<p><em>Per se</em> RDF data are quite complicated to represent because of the hierachy of predicates. The following tools do not consider this hierarchy and generate one new edge object per predicate, while generating only one node for the subject and object across the full set of triples.</p>
-<p>The <a href="https://github.com/orey/rdfviz">rdfviz</a> repo contains two options of visualization:</p>
-<ul>
-<li><code>GML</code> conversion, to be imported in tools like <a href="https://www.yworks.com/products/yed">Yed</a> or <a href="https://cytoscape.org/">Cytoscape</a>;</li>
-<li><code>dot</code> conversion to be displayed with <a href="http://graphviz.org/">GraphViz</a>.</li>
-</ul>
-<h4 id="exploring-rdf-graph-data-through-neighborhoods">Exploring RDF graph data through neighborhoods</h4>
-<p>In the original GraphApps project, a lot of efforts were put in the use of node neighborhood as a basic element of knowledge navigation.</p>
-<p>The <a href="https://github.com/orey/ontovisu">ontovisu</a> repo aims at enabling the neighborhood-based visual navigation in RDF graph data. It is based on :</p>
-<ul>
-<li><a href="https://nodejs.org/en/">Node</a>,</li>
-<li><a href="http://jena.apache.org/">Apache Jena</a>),</li>
-<li><a href="https://js.cytoscape.org/">Cytoscape js graph library</a>.</li>
-</ul>
-<p>Development of this repo is ongoing.</p>
-<hr />
-<h2 id="various-notes-linked-to-graphs">Various notes linked to graphs</h2>
-<ul>
-<li>Using graph transformations at the grammar level, the case of RDBMS schema transformation for re-semantization: <a href="../grammar-graph-transformation/">Grammar graph transformations</a></li>
-<li><a href="../DSL-for-graph-topology-checks/">A DSL to check the graph topology</a></li>
-<li><a href="../graph-transformation-applicability/">Graph transformation applicability</a></li>
-<li>Also ongoing: it is quite difficult to properly design in the context of RDF/RDFS (without even talking Owl). This ongoing paper <a href="../rdf-design-patterns/">RDF design patterns</a> is a first attempt.</li>
-<li><a href="notes-dl.md">Notes on Description Logic</a></li>
-</ul>
-<hr />
-<p>See also</p>
-<ul>
-<li>The <a href="https://orey.github.io/papers">papers</a> on <a href="https://orey.github.io">orey.github.io</a>.</li>
-</ul>
-<hr />
-<p>Those documents are available under the <a href="GNU_FDL.md">GNU FDL</a> license.</p></div>
+<p><em>(June 2020)</em></p></div>
         </div>
 
         <footer class="col-md-12">
