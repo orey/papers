@@ -18,7 +18,7 @@
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="109.0" width="193.0" x="87.0" y="72.0"/>
+          <y:Geometry height="146.66666666666669" width="193.0" x="82.0" y="17.33333333333333"/>
           <y:Fill color="#CCFFFF" transparent="false"/>
           <y:BorderStyle color="#000080" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="21.09375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000080" verticalTextPosition="bottom" visible="true" width="193.0" x="0.0" y="4.0">Semantic space</y:NodeLabel>
@@ -30,7 +30,7 @@
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="64.0" width="142.0" x="112.5" y="105.0"/>
+          <y:Geometry height="64.0" width="142.0" x="107.5" y="88.0"/>
           <y:Fill color="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="36.1875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="142.0" x="0.0" y="13.90625">Semantic artifacts
@@ -49,10 +49,10 @@ Nodes + Edges<y:LabelModel>
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="109.0" width="193.0" x="-77.0" y="273.5"/>
+          <y:Geometry height="146.66666666666669" width="193.0" x="-77.0" y="261.3333333333333"/>
           <y:Fill color="#CCFFFF" transparent="false"/>
           <y:BorderStyle color="#000080" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="21.09375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="b" textColor="#000080" verticalTextPosition="bottom" visible="true" width="193.0" x="0.0" y="83.90625">Semantic space</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="21.09375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="b" textColor="#000080" verticalTextPosition="bottom" visible="true" width="193.0" x="0.0" y="121.57291666666669">Semantic space</y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
@@ -61,7 +61,7 @@ Nodes + Edges<y:LabelModel>
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="64.0" width="142.0" x="-51.5" y="289.0"/>
+          <y:Geometry height="64.0" width="142.0" x="-51.5" y="279.0"/>
           <y:Fill color="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="36.1875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="142.0" x="0.0" y="13.90625">Semantic artifacts
@@ -80,10 +80,10 @@ Nodes + Edges<y:LabelModel>
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="109.0" width="193.0" x="260.0" y="273.5"/>
+          <y:Geometry height="146.66666666666669" width="193.0" x="240.0" y="261.3333333333333"/>
           <y:Fill color="#CCFFFF" transparent="false"/>
           <y:BorderStyle color="#000080" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="21.09375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="b" textColor="#000080" verticalTextPosition="bottom" visible="true" width="193.0" x="0.0" y="83.90625">Semantic space</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="21.09375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="b" textColor="#000080" verticalTextPosition="bottom" visible="true" width="193.0" x="0.0" y="121.57291666666669">Semantic space</y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
@@ -92,7 +92,7 @@ Nodes + Edges<y:LabelModel>
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="64.0" width="142.0" x="285.5" y="289.0"/>
+          <y:Geometry height="64.0" width="142.0" x="265.5" y="279.0"/>
           <y:Fill color="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="36.1875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="142.0" x="0.0" y="13.90625">Semantic artifacts
@@ -111,10 +111,10 @@ Nodes + Edges<y:LabelModel>
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="64.0" width="175.0" x="96.0" y="423.0"/>
+          <y:Geometry height="64.0" width="175.0" x="91.0" y="445.0"/>
           <y:Fill color="#FFFFFF" transparent="false"/>
           <y:BorderStyle color="#333333" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="56.3125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#333333" verticalTextPosition="bottom" visible="true" width="175.0" x="0.0" y="3.84375">Links between semantic spaces
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="56.3125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#333333" verticalTextPosition="bottom" visible="true" width="175.0" x="0.0" y="3.84375">Global graph transformations
 Version 1.0 - January 2019
 Copyleft Olivier Rey
 GraphApps.io<y:LabelModel>
@@ -128,6 +128,78 @@ GraphApps.io<y:LabelModel>
         </y:ShapeNode>
       </data>
     </node>
+    <node id="n7">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="142.0" x="107.5" y="50.333333333333115"/>
+          <y:Fill color="#FFCC99" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="123.384765625" x="9.3076171875" y="5.6494140625">Graph transformations<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:Shape type="hexagon"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n8">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="142.0" x="-51.5" y="349.66666666666623"/>
+          <y:Fill color="#FFCC99" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="123.384765625" x="9.3076171875" y="5.6494140625">Graph transformations<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:Shape type="hexagon"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n9">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="142.0" x="265.5" y="350.9999999999993"/>
+          <y:Fill color="#FFCC99" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="123.384765625" x="9.3076171875" y="5.6494140625">Graph transformations<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:Shape type="hexagon"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n10">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="53.000000000001364" width="142.0" x="335.0" y="93.49999999999932"/>
+          <y:Fill color="#FFCC99" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="36.1875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="142.0" x="0.0" y="8.406250000000682">Global graph transformations<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:Shape type="hexagon"/>
+        </y:ShapeNode>
+      </data>
+    </node>
     <edge id="e0" source="n1" target="n3">
       <data key="d9"/>
       <data key="d10">
@@ -135,7 +207,7 @@ GraphApps.io<y:LabelModel>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#003300" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#CCFFCC" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" height="48.103515625" horizontalTextPosition="center" iconTextGap="4" lineColor="#003300" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#003300" verticalTextPosition="bottom" visible="true" width="70.697265625" x="-131.06936524093746" y="38.25457763671875">Semantic
+          <y:EdgeLabel alignment="center" backgroundColor="#CCFFCC" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" height="48.103515625" horizontalTextPosition="center" iconTextGap="4" lineColor="#003300" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#003300" verticalTextPosition="bottom" visible="true" width="70.697265625" x="-128.942087579502" y="41.48760986328125">Semantic
 inter-domain
 edges<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
@@ -156,7 +228,7 @@ edges<y:LabelModel>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#003300" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#CCFFCC" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" height="48.103515625" horizontalTextPosition="center" iconTextGap="4" lineColor="#003300" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#003300" verticalTextPosition="bottom" visible="true" width="70.697265625" x="64.62682555501516" y="38.48451232910156">Semantic
+          <y:EdgeLabel alignment="center" backgroundColor="#CCFFCC" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" height="48.103515625" horizontalTextPosition="center" iconTextGap="4" lineColor="#003300" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#003300" verticalTextPosition="bottom" visible="true" width="70.697265625" x="57.782183542241455" y="41.46441650390625">Semantic
 inter-domain
 edges<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
@@ -177,7 +249,7 @@ edges<y:LabelModel>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#003300" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#CCFFCC" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" height="48.103515625" horizontalTextPosition="center" iconTextGap="4" lineColor="#003300" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#003300" verticalTextPosition="bottom" visible="true" width="70.697265625" x="62.1513671875" y="-24.0517578125">Semantic
+          <y:EdgeLabel alignment="center" backgroundColor="#CCFFCC" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" height="48.103515625" horizontalTextPosition="center" iconTextGap="4" lineColor="#003300" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#003300" verticalTextPosition="bottom" visible="true" width="70.697265625" x="52.1513671875" y="-24.0517578125">Semantic
 inter-domain
 edges<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
