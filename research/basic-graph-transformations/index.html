@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Olivier Rey">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Basic graph transformations - Papers</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-110156293-1', 'orey.github.io');
+            ga('send', 'pageview');
+        </script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Papers</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Articles <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../articles/five-levels/">The Five Levels of Conceptual Maturity for IT Teams</a>
+</li>
+                                    
+<li >
+    <a href="../../articles/the-v2-vortex/">The V2 Vortex</a>
+</li>
+                                    
+<li >
+    <a href="../../articles/various-stages/">The Various Stages of Digital Transformation</a>
+</li>
+                                    
+<li >
+    <a href="../../articles/about-rest/">Considerations About Rest And Web Services</a>
+</li>
+                                    
+<li >
+    <a href="../../articles/graphql-web-services/">GraphQL And Classic Web Services</a>
+</li>
+                                    
+<li >
+    <a href="../../articles/portfolio/">A Simple Meta-Model for Portfolio Management</a>
+</li>
+                                    
+<li >
+    <a href="../../articles/archimate-intro/">An Introduction to The Archimate Revolution</a>
+</li>
+                                    
+<li >
+    <a href="../../articles/archimate-recipes/">Archimate Recipes</a>
+</li>
+                                    
+<li >
+    <a href="../../articles/mbse-vs-ea/">Military frameworks, systems engineering and enterprise architecture</a>
+</li>
+                                    
+<li >
+    <a href="../../articles/data-interop/">The real nature of data</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Graph-oriented programming <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../graph/first-article/">First article on graph-oriented programming</a>
+</li>
+                                    
+<li >
+    <a href="../../graph/staf-icgt2018/">Conference at the STAF/ICGT 2018 in Toulouse</a>
+</li>
+                                    
+<li >
+    <a href="../graphapps/">GraphApps project page</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Semantic Web <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../semantic/data-migration/">Aerospace data migration</a>
+</li>
+                                    
+<li >
+    <a href="../data-mig/">Semantic data migration project page</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Research <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../index-research/">Index</a>
+</li>
+                                    
+<li >
+    <a href="../graph-transfo/">Graph transformations</a>
+</li>
+                                    
+<li >
+    <a href="../../basic-graph-transformations.md">Basic graph transformations</a>
+</li>
+                                    
+<li >
+    <a href="../../basic-semantic-graph-transformations.md">Basic semantic graph transformations</a>
+</li>
+                                    
+<li >
+    <a href="../../DSL-for-graph-topology-checks.md">DSL for graph topology check</a>
+</li>
+                                    
+<li >
+    <a href="../../graph-transformation-applicability.md">Graph transformation applicability</a>
+</li>
+                                    
+<li >
+    <a href="../../grammar-graph-transformation.md">Grammar of graph transformation</a>
+</li>
+                                    
+<li >
+    <a href="../../graph-oriented-pl.md">Graph-oriented programming language</a>
+</li>
+                                    
+<li >
+    <a href="../../industry-data.md">Reflections on industry data</a>
+</li>
+                                    
+<li >
+    <a href="../../rdf-design-patterns.md">RDF design patterns</a>
+</li>
+                                    
+<li >
+    <a href="../../graph-oriented-pl.md">Towards a graph-oriented programming language?</a>
+</li>
+                                    
+<li >
+    <a href="../../resources.md">Resources</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../about/about/">Author</a>
+</li>
+                                    
+<li >
+    <a href="../../about/LICENSE/">License</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li>
+                                <a href="https://github.com/orey/papers/edit/master/docs/research/basic-graph-transformations.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#basic-graph-transformations">Basic graph transformations</a></li>
+            <li><a href="#node-structure">Node structure</a></li>
+            <li><a href="#relationship">Relationship</a></li>
+            <li><a href="#graph">Graph</a></li>
+            <li><a href="#unitary-gts">Unitary GTs</a></li>
+            <li><a href="#gt-interface">GT Interface</a></li>
+            <li><a href="#questions">Questions</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="basic-graph-transformations">Basic graph transformations</h1>
+<p>This page is written in the context of multi-labeled nodes as they are implemented in standard graph databases.</p>
+<h2 id="node-structure">Node structure</h2>
+<p>Basic Python structure features:</p>
+<ul>
+<li>Id with <strong>hash</strong> and <strong>eq</strong> function</li>
+<li>Type</li>
+<li>Domain</li>
+<li>Attributes are in a dictionary (real implementation of the multi-labelled graph, knowing that it is also the way Neo represents it)</li>
+</ul>
+<p>Questions:</p>
+<ul>
+<li>Link to a grammar or not</li>
+<li>Position semantics (in the case for instance we unserialize elements in a CSV file in which the line number is important relatively to the previous or the next one)</li>
+</ul>
+<h2 id="relationship">Relationship</h2>
+<ul>
+<li>Attributes dictionary also</li>
+</ul>
+<p>To be thought through: a graph based on arrays of neighborhood may be sufficient</p>
+<h2 id="graph">Graph</h2>
+<p>Node dictionary -&gt; Neighbors dictionary -&gt; Dictionary of attribute links</p>
+<h2 id="unitary-gts">Unitary GTs</h2>
+<p>GT have two modes:</p>
+<ul>
+<li>Destructive mode</li>
+<li>Copy mode</li>
+</ul>
+<p>Gt1: filter
+Remove void attributes/columns</p>
+<p>Gt2: a column is a type
+Change the type and remove the attribute</p>
+<p>Gt3: foreign key column
+Remove attribute and create a link</p>
+<p>Gt4: references hidden in a label
+Remove attribute and create a link</p>
+<p>Gt5 : references hidden towards a concept that does not exist</p>
+<p>Gt6 : link in the past PREVIOUS</p>
+<h2 id="gt-interface">GT Interface</h2>
+<pre><code>graph, rootnode, options = GT(graph, rootnode, options)
+</code></pre>
+
+<p><code>rootnode</code> is in the graph</p>
+<pre><code>options = {key : value, etc.}
+</code></pre>
+
+<p>For instance:</p>
+<ul>
+<li><code>Gt1 (graph, None, { "pattern" : "01001110"})</code></li>
+<li><code>Gt1 (graph, root, { "depth" : 3, "pattern" : "0100110"})</code></li>
+</ul>
+<p>GT can forward parameters such as:</p>
+<pre><code>CloneGt(None, root, params)
+Gt6(None, root, params) -&gt; None, root, params
+clonegt(Gt6) -&gt; None, root, params
+</code></pre>
+
+<p>By forwarding the rest, we can compose GTs.</p>
+<p>Edited: better interface</p>
+<pre><code>graph2, rootnode2 = GT1(graph1, rootnode1, options1)
+graph3, rootnode3 = GT2(*GT1(graph1, rootnode1, options1), option2)
+
+</code></pre>
+
+<p>This enables to set the options at each stage. For sure, depending on the case, the <code>graph</code> or the <code>rootnode</code> may be <code>None</code>.</p>
+<p>Flexible interface:</p>
+<ul>
+<li><code>Graph, None</code> =&gt; Enables to address all nodes issues</li>
+<li><code>Graph, root</code> =&gt; Considers the graph from the root, meaning, we can request any node or relationship in the graph in complement than accessing the graph through the root node</li>
+<li><code>None, root</code> =&gt; Or we consider a GT only touching the node, or the GT will access the graph through the root node only.</li>
+</ul>
+<h2 id="questions">Questions</h2>
+<ul>
+<li>Deal with subgraphs?</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyleft Olivier Rey 2017-2020 - Site licensed under the GNU FDL V3</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
