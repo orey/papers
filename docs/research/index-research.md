@@ -8,7 +8,7 @@ All research projects are founded on main ideas. Here are the main ideas that ar
 
 **<u>Idea 2</u>:** **Graphs enable better knowledge representation**, both static and within the evolution dynamics of programs and data. For instance, graphs can be used to address the technical debt problem (see [here](../graph/first-article.md) and [here](../graph/staf-icgt2018.md)) or to address complex data migration (see [here](../semantic/data-migration.md)).
 
-**<u>Idea 3</u>:** **Graph transformations are at the heart of new software engineering paradigms**, such as graph-oriented programming (see [here](../graph/first-article.md) and [here](../graph/staf-icgt2018.md)) or semantic data migration (see [here](../graph/data-migration.md)). For sure, a new generation of tools is required to be efficient with those paradigms (design, programming languages, data storage).
+**<u>Idea 3</u>:** **Graph transformations are at the heart of new software engineering paradigms**, such as graph-oriented programming (see [here](../graph/first-article.md) and [here](../graph/staf-icgt2018.md)) or semantic data migration (see [here](../semantic/data-migration.md)). For sure, a new generation of tools is required to be efficient with those paradigms (design, programming languages, data storage).
 
 **<u>Idea 4</u>:** With a real evolutive software and data, **the total worldwide software effort could be divided by more than 2, probably 3**, which means:
 
