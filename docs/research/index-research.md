@@ -42,6 +42,7 @@ Here is a list:
 
   * [Reflections on industry data](industry-data.md)
   * [RDF design patterns](rdf-design-patterns.md) - ongoing, important in a professional context
+  * [Towards a graph-oriented programming language?](graph-oriented-pl.md)
   * [Resources](resources.md)
 
 

@@ -62,8 +62,5 @@ Note: to be declined in Sparql.
 
 In the context of [the page on industry data](industry-data.md "industry data"), please have a look at the [grammar of graph transformation](grammar-graph-transformation.md).
 
-## Towards a graph-oriented programming language?
-
-See: [Here](graph-oriented-pl.md)
 
 *(Last update: June 2020)*

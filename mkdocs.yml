@@ -22,8 +22,23 @@ pages:
 - Graph-oriented programming:
     - 'First article on graph-oriented programming': 'graph/first-article.md'
     - 'Conference at the STAF/ICGT 2018 in Toulouse': 'graph/staf-icgt2018.md'
+    - 'GraphApps project page': 'research/graphapps.md'
 - Semantic Web:
     - 'Aerospace data migration': 'semantic/data-migration.md'
+    - 'Semantic data migration project page': 'research/data-mig.md'
+- Research:
+    - 'Index': 'research/index-research.md'
+    - 'Graph transformations': 'research/graph-transfo.md'
+    - 'Basic graph transformations': 'basic-graph-transformations.md'
+    - 'Basic semantic graph transformations': 'basic-semantic-graph-transformations.md'
+    - 'DSL for graph topology check': 'DSL-for-graph-topology-checks.md'
+    - 'Graph transformation applicability': 'graph-transformation-applicability.md'
+    - 'Grammar of graph transformation': 'grammar-graph-transformation.md'
+    - 'Graph-oriented programming language': 'graph-oriented-pl.md'
+    - 'Reflections on industry data': 'industry-data.md'
+    - 'RDF design patterns': 'rdf-design-patterns.md'
+    - 'Towards a graph-oriented programming language?': 'graph-oriented-pl.md'
+    - 'Resources': 'resources.md'
 - About:
-    - Author: 'about/about.md'
-    - License: 'about/LICENSE.md'
+    - 'Author': 'about/about.md'
+    - 'License': 'about/LICENSE.md'

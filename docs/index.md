@@ -20,12 +20,29 @@ This section contains materials about graph-oriented programming, solving the te
   * [First article on graph-oriented programming](graph/first-article.md)
   * [Conference at the STAF/ICGT 2018 in Toulouse](graph/staf-icgt2018.md)
 
-Ongoing works can be found on [github](https://github.com/orey).
+Project page: [GraphApps project](graphapps.md) project (2013-2018)
 
 ## Semantic web
 
 * [Using semantic web technologies for aerospace industrial data migration, Madics 2019](semantic/data-migration.md)
 
+Project page: [Semantic data migration project](data-mig.md) (2018-now)
+
+## Research section
+
+  * [Index](research/index-research.md)
+    * [Graph transformations](research/graph-transfo.md)
+      * [Basic graph transformations](basic-graph-transformations.md)
+      * [Basic semantic graph transformations](basic-semantic-graph-transformations.md)
+      * [DSL for graph topology check](DSL-for-graph-topology-checks.md)
+      * [Graph transformation applicability](graph-transformation-applicability.md)
+      * [Grammar of graph transformation](grammar-graph-transformation.md)
+      * [Graph-oriented programming language](graph-oriented-pl.md)
+  * More
+    * [Reflections on industry data](industry-data.md)
+    * [RDF design patterns](rdf-design-patterns.md) - ongoing, important in a professional context
+    * [Towards a graph-oriented programming language?](graph-oriented-pl.md)
+    * [Resources](resources.md)
 
 *(Last update: June 2020)*
 

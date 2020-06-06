@@ -23,4 +23,4 @@ This figure seems rather optimistic and the interval may more be 60-80% for main
 
 [Back to index](index-research.md)
 
-*(June 2020)*
+*(Last update: June 2020)*
