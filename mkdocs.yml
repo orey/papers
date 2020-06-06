@@ -7,7 +7,10 @@ repo_url: https://github.com/orey/papers/
 #theme: readthedocs
 site_dir: site
 pages:
-- Home: 'index.md'
+- Home:
+    - 'Index': 'index.md'
+    - 'Author': 'about/about.md'
+    - 'License': 'about/LICENSE.md'
 - Articles:
     - 'The Five Levels of Conceptual Maturity for IT Teams': 'articles/five-levels.md'
     - 'The V2 Vortex': 'articles/the-v2-vortex.md'
@@ -39,6 +42,3 @@ pages:
     - 'RDF design patterns': 'research/rdf-design-patterns.md'
     - 'Towards a graph-oriented programming language?': 'research/graph-oriented-pl.md'
     - 'Resources': 'research/resources.md'
-- About:
-    - 'Author': 'about/about.md'
-    - 'License': 'about/LICENSE.md'
