@@ -12,10 +12,10 @@ All research projects are founded on main ideas. Here are the main ideas that ar
 
 **<u>Idea 4</u>:** With a real evolutive software and data, **the total worldwide software effort could be divided by more than 2, probably 3**, which means:
 
-    * An enormous worldwide gain of productivity;
-    * A capability of evolving the business processes faster than ever before;
-    * A convergence of the design processes of software creation, software evolution and refactoring;
-    * A different mindset based on graph representation of knowledge and graph transformations for business rules.
+* An enormous worldwide gain of productivity;
+* A capability of evolving the business processes faster than ever before;
+* A convergence of the design processes of software creation, software evolution and refactoring;
+* A different mindset based on graph representation of knowledge and graph transformations for business rules.
 
 ## The Graph Transformations at the center
 
