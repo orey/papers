@@ -15,10 +15,19 @@
 
 ## Graph-oriented programming
 
-This is a new section with some interesting materials about graph-oriented programming, solving the technical debt issue and using graph transformations in software engineering.
+This section contains materials about graph-oriented programming, solving the technical debt issue and using graph transformations in software engineering.
 
   * [First article on graph-oriented programming](graph/first-article.md)
   * [Conference at the STAF/ICGT 2018 in Toulouse](graph/staf-icgt2018.md)
 
 Ongoing works can be found on [github](https://github.com/orey).
+
+## Semantic web
+
+* [Using semantic web technologies for aerospace industrial data migration, Madics 2019](semantic/data-migration.md)
+
+
+*(Last update: June 2020)*
+
+
 
