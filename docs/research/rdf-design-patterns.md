@@ -37,4 +37,14 @@ rdfs:Class a rdfs:Class ;
 ```
 
 
+## Common description of classes and instances
+
+Any class `C` can be said as being a rdfs:subClassOf rdfs:Class.
+
+Any class C can have members. This constitutes its formal definition.
+
+Class membership is defined by
+
+
+
 
