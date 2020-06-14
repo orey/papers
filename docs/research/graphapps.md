@@ -1,10 +1,10 @@
 # GraphApps project
 
-![GraphApps.tech](../logos/logo-graphapps-io-v2.png "GraphApps.tech")
+![GraphApps](../logos/logo-graphapps-v3.png "GraphApps")
 
 ## What is GraphApps?
 
-GraphApps was a research project (2013-2018) that aims to use graphs and graph transformations in the context of software engineering, like application building. It was focused on attributed directed graphs.
+GraphApps is a research project (first phase: 2013-2018) that aims to use graphs and graph transformations in the context of software engineering, like application building and data migration. The first phase of GraphApps was focused on the use of attributed directed graphs in software engineering.
 
 ## Graph-oriented programming and technical debt
 
@@ -31,6 +31,10 @@ This programming model is using:
   * *Graph transformations* to model business logic.
 
 This programming model is an intermediate between object-orientation and functional programming. Shortly said, it takes the best out of the two programming models while being totally consistent because based on the business semantics and not on technical considerations.
+
+## See also
+
+The [research page](index-research.md).
 
 *(June 2020)*
 

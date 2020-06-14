@@ -17,9 +17,13 @@ All research projects are founded on main ideas. Here are the main ideas that ar
 * A convergence of the design processes of software creation, software evolution and refactoring;
 * A different mindset based on graph representation of knowledge and graph transformations for business rules.
 
+-----
+
 ## The Graph Transformations at the center
 
 See the [Graph transformations](graph-transfo.md) page.
+
+-----
 
 ## Industrial Projects
 
@@ -27,6 +31,8 @@ See the [Graph transformations](graph-transfo.md) page.
 
   * [GraphApps project](graphapps.md) project (2013-2018)
   * [Semantic data migration project](data-mig.md) (2018-now)
+
+-----
 
 ## Open-source projects
 
