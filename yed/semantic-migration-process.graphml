@@ -300,7 +300,7 @@ graph transformation</y:NodeLabel>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#FFFF99" fontFamily="Dialog" fontSize="10" fontStyle="italic" height="27.28125" horizontalTextPosition="center" iconTextGap="0" lineColor="#C0C0C0" modelName="internal" modelPosition="c" textColor="#003300" verticalTextPosition="bottom" visible="true" width="110.93359375" x="-12.356081088789665" xml:space="preserve" y="1.6682290517458114">5. Create the data
-grapĥ transformation</y:NodeLabel>
+graph transformation</y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
@@ -608,6 +608,19 @@ grapĥ transformation</y:NodeLabel>
           </data>
         </node>
       </graph>
+    </node>
+    <node id="n25">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.617708103491594" width="86.22143157242067" x="216.89846242989745" y="271.0868723809522"/>
+          <y:Fill hasColor="false" transparent="false"/>
+          <y:BorderStyle hasColor="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#FFFF99" fontFamily="Dialog" fontSize="10" fontStyle="italic" height="27.28125" horizontalTextPosition="center" iconTextGap="0" lineColor="#C0C0C0" modelName="internal" modelPosition="c" textColor="#003300" verticalTextPosition="bottom" visible="true" width="108.3212890625" x="-11.049928745039665" xml:space="preserve" y="1.6682290517458114">6. Convert source
+data into target data</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
     </node>
     <edge id="e0" source="n2" target="n4">
       <data key="d9"/>
