@@ -32,7 +32,7 @@ The page [Graphs and semantic data in industry](industry-data.md) talks about th
 
 ## A systematic migration process (2020-)
 
-### The 4 steps of transformation
+### The 6 steps of transformation
 
 The process of data migration is linked to the transformation of ontologies.
 
@@ -43,6 +43,7 @@ The migration process that we target is the following:
  3. <u>Definition of the target ontology</u>: We want to convert data in a target format which is based on a target ontology. This ontology must be formalized. It must have its own namespace.
  3. <u>Definition of the graph transformation required to transform the source ontology in the target ontology</u>: This graph transformation should be defined with [Basic semantic graph transformations](basic-semantic-graph-transformations.md), and can also use certain abstract domain ontologies.
  5. <u>Derive from the ontology graph representation, a data graph transformation</u> that enables to transform the data from the source ontology in the target ontology.
+ 6. <u>Convert source data into target data</u>.
 
 ![Steps of data migration](../yed/semantic-migration-process.png)
 
