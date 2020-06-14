@@ -225,42 +225,86 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#rdf-design-patterns">RDF design patterns</a></li>
-            <li><a href="#sources">Sources</a></li>
-            <li><a href="#classes-and-instances">Classes and instances</a></li>
-            <li><a href="#common-description-of-classes-and-instances">Common description of classes and instances</a></li>
+            <li><a href="#references">References</a></li>
+            <li><a href="#correspondence-between-uml-and-rdfrdfs">Correspondence between UML and rdf/rdfs</a></li>
+            <li><a href="#defining-class-attribute-membership">Defining Class attribute membership</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="rdf-design-patterns">RDF design patterns</h1>
-<p>This page describe some design patterns to create application basic structures.</p>
-<p>The objective is less ambitious than to create complex ontologies. It aims to be an intermediate between <a href="https://orey.github.io/papers/graph/first-article/">graph-oriented design</a> (or object-oriented design) and ontology design with tools such as Protégé.</p>
-<h2 id="sources">Sources</h2>
-<p>The resources listed in the <code>./resources</code> are original and interpreted basic semantic web resources. They can be models to understand how the semantic web is really working.</p>
-<h2 id="classes-and-instances">Classes and instances</h2>
-<p>The semantic web frontier between classes and instances is not always clear, especially when the set of triples is representing a "grammar", so a set of structures that will be instanciated to create real data triples.</p>
-<p>One of the core ambiguity is represented by the <code>rdf:type</code> or <code>a</code> in Turtle. This relation is defining an instance of the class. The standard defines <code>rdf:type a rdf:Property .</code> which indicates that <code>rdf:type</code> is a "relation".</p>
-<p>However, things can quickly become complicated. Let's take the following sample slightly simplified extracted from the standard:</p>
-<pre><code>rdf:Property a rdfs:Class ;
-    rdfs:comment &quot;The class of RDF properties.&quot; ;
-    rdfs:subClassOf rdfs:Resource .
-
-rdfs:Resource a rdfs:Class ;
-    rdfs:label &quot;Resource&quot; ;
-    rdfs:comment &quot;The class resource, everything.&quot; .
+<h2 id="references">References</h2>
+<p>In a W3C article, <a href="https://www.w3.org/2001/sw/BestPractices/">Semantic Web Best Practices</a>, some indications are provided to compare the semantic web approach with the object-oriented approach. Those indications are very interesting but they are not complete to serve as a guide for software engineers trying to work with semantic web technologies.</p>
+<p>This page aims at gathering interesting elements about that topic.</p>
+<h2 id="correspondence-between-uml-and-rdfrdfs">Correspondence between UML and rdf/rdfs</h2>
+<p>Consider the following figure.</p>
+<p><img alt="UML versus rdf/rdfs" src="../../yed/uml-rdf-rdfs.png" /></p>
+<p>Several points must be noted:</p>
+<ul>
+<li>All classes are <code>subClassOf</code> <code>rdfs:Class</code>;</li>
+<li>All properties are <code>subPropertyOf</code> <code>rdf:Property</code>;</li>
+<li>There can be hierarchies of classes, and hierarchies of properties;</li>
+<li>A property is defined by its domain and its range:<ul>
+<li>If it exists <code>?x</code> and <code>?y</code> so that <code>?x p ?y</code>, that means that <code>?x</code> should be of type "domain of p" and <code>?y</code> of type "range of p".</li>
+</ul>
+</li>
+<li>Properties are linked to class by the domain and range, but there is not class link to property:<ul>
+<li>Something like: <code>exs:ClassA exs:something exs:attribute1</code> does not exist in rdf/rdfs.</li>
+<li>That means the predicate is the "linker" of nodes.</li>
+</ul>
+</li>
+</ul>
+<p>This model is great because the knowledge of the value of the attribute is delegated to the attribute.</p>
+<p>However, it may not be sufficient for what we are searching (an efficient software engineering model).</p>
+<h2 id="defining-class-attribute-membership">Defining Class attribute membership</h2>
+<p>We can question if it would be useful to create a membership concept or just to use <code>rdfs:member</code> property.</p>
+<p>Without it, we need to query the attributes of a class using their domain:</p>
+<pre><code>SELECT ?attribute
+WHERE
+{
+    ?attribute rdfs:domain exs:ClassA .
+}
 </code></pre>
 
-<p><code>rdf:Property</code> and <code>rdfs:Resource</code> are <code>rdfs:Class</code>, but </p>
-<pre><code>rdfs:Class a rdfs:Class ;
-    rdfs:label &quot;Class&quot; ;
-    rdfs:comment &quot;The class of classes.&quot; ;
-    rdfs:subClassOf rdfs:Resource .
+<p>If, we attach all attributes to the class like that:</p>
+<pre><code>exs:ClassA rdfs:member exs:attribute1 .
+exs:ClassA rdfs:member exs:attribute2 .
 </code></pre>
 
-<h2 id="common-description-of-classes-and-instances">Common description of classes and instances</h2>
-<p>Any class <code>C</code> can be said as being a rdfs:subClassOf rdfs:Class.</p>
-<p>Any class C can have members. This constitutes its formal definition.</p>
-<p>Class membership is defined by</p></div>
+<p>We can query attributes like that:</p>
+<pre><code>SELECT ?attribute
+WHERE
+{
+    exs:ClassA rdfs:member ?attribute .
+}
+</code></pre>
+
+<p>That is not more elegant than the previous one and not standard.</p>
+<p>However, we miss an important information from the UML model. The attribute 1 can be considered as a "final attribute", which value is intrinsically attached to the ClassA instance. The attribute 2 is a structural link between classes, and we know (<a href="../../graph/first-article/">graph-oriented programming</a>) that this kind of links is generating technical debt.</p>
+<p>rdf/rdfs modeling can enable us to model this case differently. We will consider as "final" the <code>rdfs:Literal</code>.</p>
+<p>We can now distinguish the realm attributes from the links between classes.</p>
+<pre><code>SELECT ?attribute
+WHERE
+{
+    ?attribute rdfs:domain exs:ClassA .
+    ?attribute rdfs:range rdfs:Literal .
+}
+</code></pre>
+
+<p>For sure, the literal types will probably be <code>rdfs:subClassOf rdfs:Literal</code> (that why we need Sparl).</p>
+<p>To find the structural links between concepts:</p>
+<pre><code>SELECT ?attribute
+WHERE
+{
+    ?attribute rdfs:domain exs:ClassA .
+    MINUS {
+        ?attribute rdfs:range rdfs:Literal .
+    }
+}
+</code></pre>
+
+<p>With this restriction, we can explore the topology of the classes and their real dependencies.</p>
+<p><em>(June 2020)</em></p></div>
         </div>
 
         <footer class="col-md-12">
