@@ -225,19 +225,20 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#semantic-data-migration-project">Semantic data migration project</a></li>
-            <li><a href="#presentation">Presentation</a></li>
-            <li><a href="#elements">Elements</a></li>
+            <li><a href="#presentation-to-cnrs-madics-conference-in-2019">Presentation to CNRS Madics conference in 2019</a></li>
+            <li><a href="#first-research-elements-2018-2020">First research elements (2018-2020)</a></li>
+            <li><a href="#a-systematic-migration-process-2020-">A systematic migration process (2020-)</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="semantic-data-migration-project">Semantic data migration project</h1>
-<h2 id="presentation">Presentation</h2>
+<h2 id="presentation-to-cnrs-madics-conference-in-2019">Presentation to CNRS Madics conference in 2019</h2>
 <p>You can read the following article :</p>
 <ul>
 <li><a href="../../semantic/data-migration/">Using semantic web technologies for aerospace industrial data migration, Madics 2019</a></li>
 </ul>
-<h2 id="elements">Elements</h2>
+<h2 id="first-research-elements-2018-2020">First research elements (2018-2020)</h2>
 <h3 id="why">Why?</h3>
 <p>Arguments for using the semantic graph technology to complex data conversion:</p>
 <ul>
@@ -253,6 +254,25 @@
 <p>In the context of <a href="../graph-transfo/">graph transformations</a>, the page <a href="../basic-semantic-graph-transformations/">Basic semantic graph transformations</a> aims at defining a set of basic graph transformations.</p>
 <h3 id="industry-data">Industry data</h3>
 <p>The page <a href="../industry-data/">Graphs and semantic data in industry</a> talks about the opportunity of using RDF approaches to convert efficiently industrial data.</p>
+<h2 id="a-systematic-migration-process-2020-">A systematic migration process (2020-)</h2>
+<h3 id="the-4-steps-of-transformation">The 4 steps of transformation</h3>
+<p>The process of data migration is linked to the transformation of ontologies.</p>
+<p>The migration process that we target is the following:</p>
+<ol>
+<li><u>Definition of the hidden source ontology</u>: In the data as they are structured today, a source ontology is hidden. The objective of this step is to exhibit the source ontology, and to create a triplestore with the existing data based on the source ontology. The source ontology must have its own namespace.</li>
+<li><u>Convert the source data</u> in the source ontology referential.</li>
+<li><u>Definition of the target ontology</u>: We want to convert data in a target format which is based on a target ontology. This ontology must be formalized. It must have its own namespace.</li>
+<li><u>Definition of the graph transformation required to transform the source ontology in the target ontology</u>: This graph transformation should be defined with <a href="../basic-semantic-graph-transformations/">Basic semantic graph transformations</a>, and can also use certain abstract domain ontologies.</li>
+<li><u>Derive from the ontology graph representation, a data graph transformation</u> that enables to transform the data from the source ontology in the target ontology.</li>
+</ol>
+<p><img alt="Steps of data migration" src="../../yed/semantic-migration-process.png" /></p>
+<h3 id="data-representation-is-relative">Data representation is relative</h3>
+<p>This process is based on the facts that:</p>
+<ul>
+<li>The same reality can be modeled differently,</li>
+<li>There is a path between the various modeling spaces when it comes to the same concept representations.</li>
+</ul>
+<p>See also: <a href="../../articles/data-interop/">The real nature of data</a>.</p>
 <p><em>(Last update: June 2020)</em></p></div>
         </div>
 
