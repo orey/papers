@@ -39,7 +39,7 @@ Project page: [Semantic data migration project](research/data-mig.md) (2018-now)
       * [Grammar of graph transformation](research/grammar-graph-transformation.md)
       * [Graph-oriented programming language](research/graph-oriented-pl.md)
   * More
-    * [UML to RDF considerations](rdf-design-patterns.md) - *Updated June 2020*
+    * [UML to RDF considerations](research/rdf-design-patterns.md) - *Updated June 2020*
     * [Reflections on industry data](research/industry-data.md)
     * [Towards a graph-oriented programming language?](research/graph-oriented-pl.md)
     * [Resources](research/resources.md)
