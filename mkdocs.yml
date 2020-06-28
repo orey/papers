@@ -39,6 +39,6 @@ nav:
     - 'Grammar of graph transformation': 'research/grammar-graph-transformation.md'
     - 'Graph-oriented programming language': 'research/graph-oriented-pl.md'
     - 'Reflections on industry data': 'research/industry-data.md'
-    - 'RDF design patterns': 'research/rdf-design-patterns.md'
+    - 'UML to RDF considerations': 'research/rdf-design-patterns.md'
     - 'Towards a graph-oriented programming language?': 'research/graph-oriented-pl.md'
     - 'Resources': 'research/resources.md'

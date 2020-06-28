@@ -1,4 +1,4 @@
-# RDF design patterns
+# UML to RDF considerations
 
 ## References
 

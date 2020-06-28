@@ -46,8 +46,8 @@ Here is a list:
 
 ## More
 
+  * [UML to RDF considerations](rdf-design-patterns.md) - *Updated June 2020*
   * [Reflections on industry data](industry-data.md)
-  * [RDF design patterns](rdf-design-patterns.md) - ongoing, important in a professional context
   * [Towards a graph-oriented programming language?](graph-oriented-pl.md)
   * [Resources](resources.md)
 
