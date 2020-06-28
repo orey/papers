@@ -226,8 +226,11 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#rdf-design-patterns">RDF design patterns</a></li>
             <li><a href="#references">References</a></li>
-            <li><a href="#correspondence-between-uml-and-rdfrdfs">Correspondence between UML and rdf/rdfs</a></li>
-            <li><a href="#defining-class-attribute-membership">Defining Class attribute membership</a></li>
+            <li><a href="#basic-correspondence-between-uml-and-rdfrdfs">Basic correspondence between UML and rdf/rdfs</a></li>
+            <li><a href="#types-are-instances-of-rdfproperty-and-rdfsclass">Types are instances of rdf:Property and rdfs:Class</a></li>
+            <li><a href="#first-translation">First translation</a></li>
+            <li><a href="#second-translation">Second translation</a></li>
+            <li><a href="#2-kinds-of-attribute-types">2 kinds of attribute types</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -236,74 +239,155 @@
 <h2 id="references">References</h2>
 <p>In a W3C article, <a href="https://www.w3.org/2001/sw/BestPractices/">Semantic Web Best Practices</a>, some indications are provided to compare the semantic web approach with the object-oriented approach. Those indications are very interesting but they are not complete to serve as a guide for software engineers trying to work with semantic web technologies.</p>
 <p>This page aims at gathering interesting elements about that topic.</p>
-<h2 id="correspondence-between-uml-and-rdfrdfs">Correspondence between UML and rdf/rdfs</h2>
+<h2 id="basic-correspondence-between-uml-and-rdfrdfs">Basic correspondence between UML and rdf/rdfs</h2>
 <p>Consider the following figure.</p>
-<p><img alt="UML versus rdf/rdfs" src="../../yed/uml-rdf-rdfs.png" /></p>
-<p>Several points must be noted:</p>
+<p><img alt="UML versus rdf/rdfs" src="../../yed/uml-rdf-rdfs-v02.png" /></p>
+<p>Several points must be noted.</p>
+<h2 id="types-are-instances-of-rdfproperty-and-rdfsclass">Types are instances of rdf:Property and rdfs:Class</h2>
+<p>Basically, in most existing (RDFS) ontologies, when a new class is created, it is declared as being <code>a rdfs:Class</code>, and when a new property type is created, it is declared as being <code>a rdf:Property</code>. We have this situation in the diagram for <code>exs:ClassA</code>, <code>exs:ClassB</code>, <code>exs:ClassC</code> and for <code>exs:attribute1</code> and <code>exs:attribute2</code>.</p>
+<p>That means that new types, being class types or property types, are considered as "instances" of the "meta-types" <code>rdfs:Class</code> and <code>rdf:Property</code>.</p>
+<h2 id="first-translation">First translation</h2>
+<p>In the UML diagram, <code>ClassB</code> derives from <code>ClassA</code>. That implies: <code>exs:ClassB rdfs:subClassOf exs:ClassA</code> as an obvious translation of the UML fact.</p>
+<p>We can stay like that and have a first UML to RDF translation like that:</p>
+<pre><code>@prefix rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix exs: &lt;https://orey.github.io/sample-schema.ttl#&gt; .
+
+exs:ClassA a rdfs:Class.
+
+exs:ClassB a rdfs:Class ;
+           rdfs:subClassOf exs:ClassA .
+
+exs:ClassC a rdfs:Class.
+
+exs:attribute1 a rdf:Property ;
+               rdfs:domain exs:ClassA ;
+               rdfs:range rdf:langString .
+
+exs:attribute2 a rdf:Property ;
+               rdfs:domain exs:ClassA ;
+               rdfs:range exs:ClassC .
+
+</code></pre>
+
+<h2 id="second-translation">Second translation</h2>
+<p>This first translation may be considered as having a slight problem. All new classes could be <code>subClassOf</code> another class, in order to enable reasoning based on sub-classes.</p>
+<p>We could enrich a bit our first translation by adding some lines.</p>
+<pre><code>@prefix rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix exs: &lt;https://orey.github.io/sample-schema.ttl#&gt; .
+
+exs:ClassA a rdfs:Class ;
+           rdfs:subClassOf rdfs:Class . &lt;= NEW
+
+exs:ClassB a rdfs:Class ;
+           rdfs:subClassOf exs:ClassA .
+
+exs:ClassC a rdfs:Class ;
+           rdfs:subClassOf rdfs:Class . &lt;= NEW
+
+exs:attribute1 a rdf:Property;
+               rdfs:subPropertyOf rdf:Property ; &lt;= NEW
+               rdfs:domain exs:ClassA ;
+               rdfs:range rdf:langString .
+
+exs:attribute2 a rdf:Property ;
+               rdfs:subPropertyOf rdf:Property ; &lt;= NEW
+               rdfs:domain exs:ClassA ;
+               rdfs:range exs:ClassC .
+
+</code></pre>
+
+<p>Semantically, the <code>a</code> indicates the real nature of the entity and the <code>rdfs:subClass/PropertyOf</code> its type hierarchy.</p>
+<h2 id="2-kinds-of-attribute-types">2 kinds of attribute types</h2>
+<p>Attribute types are not homogeneous. For a given attribute <code>exs:att</code>, <code>exs:att rdfs:range rdfs:Class</code> may indicate that we are talking about a link or relationship between two objects, whereas <code>exs:att rdfs:range rdfs:Literal</code> may indicate that we have a real attribute with a literal value.</p>
+<p>That is one UML and object-orientation deepest problem: the aggregation (and composition) relationships are represented at the same level than the attributes pointing to literal values (see <a href="../../graph/first-article/">paper on graph-oriented programming</a>). The semantic web enables us to get over this crucial limitation by defining the attribute outside of the class itself.</p>
+<p>But, if we want to be effective, we would need a specific root attribute type for the attribute types having a range in the <code>rdfs:Literal</code> world, and a root attribute type for the attribute types that point to objects.</p>
+<p>That leads us to the third translation below.</p>
+<pre><code>@prefix rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix dc: &lt;http://purl.org/dc/elements/1.1/&gt; .
+@prefix ga: &lt;https://orey.github.io/graphapps-V2#&gt; .
+
+@prefix exs: &lt;https://orey.github.io/sample-schema.ttl#&gt; .
+
+exs:ClassA a rdfs:Class ;
+           rdfs:subClassOf ga:Class . &lt;= NEW
+
+exs:ClassB a rdfs:Class ;
+           rdfs:subClassOf exs:ClassA .
+
+exs:ClassC a rdfs:Class ;
+           rdfs:subClassOf ga:Class . &lt;= NEW
+
+exs:attribute1 a rdf:Property ;
+               rdfs:subPropertyOf ga:attribute ; &lt;= NEW
+               rdfs:domain exs:ClassA ;
+               rdfs:range rdf:langString .
+
+exs:attribute2 a rdf:Property ;
+               rdfs:subPropertyOf ga:link ; &lt;= NEW
+               rdfs:domain exs:ClassA ;
+               rdfs:range exs:ClassC .
+</code></pre>
+
+<p>The root attribute type for attribute types having a range in <code>rdfs:Literal</code> is <code>ga:attribute</code>, and the root attribute type for attribute types that point to classes is <code>ga:link</code>.</p>
+<p>If we want to be sure that classes are realm classes, and because <code>rdfs:Class</code> maybe sometimes too large, we defined <code>ga:Class</code> as the root type for all classes.</p>
+<p>That provides the following RDFS-based ontology:</p>
+<pre><code>@prefix rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix dc: &lt;http://purl.org/dc/elements/1.1/&gt; .
+
+@prefix ga:   &lt;https://orey.github.io/graphapps-V2#&gt; .
+
+&lt;https://orey.github.io/graphapps-V2#&gt; a owl:Ontology ;
+        dc:title &quot;GraphApps ontology for building semantic applications&quot; ;
+        dc:date &quot;2020-06-21&quot; ;
+        dc:description &quot;This ontology describe the minimal set of constructs required to build applications in the spirit of the GraphApps works.&quot; .
+
+ga:Class a rdfs:Class ;
+         rdfs:subClassOf rdfs:Class ;
+         rdfs:isDefinedBy &lt;https://orey.github.io/graphapps-V2#&gt; ;
+         rdfs:label &quot;Class&quot; ;
+         rdfs:comment &quot;Root class of the GraphApps classes.&quot; .
+
+ga:attribute a rdf:Property ;
+             rdfs:subPropertyOf rdf:Property ;
+             rdfs:isDefinedBy &lt;https://orey.github.io/graphapps-V2#&gt; ;
+             rdfs:label &quot;attribute&quot; ;
+             rdfs:comment &quot;Root property of final data attributes.&quot; ;
+             rdfs:domain ga:Class ;
+             rdfs:range rdfs:Literal .
+
+ga:link a rdf:Property ;
+             rdfs:subPropertyOf rdf:Property ;
+             rdfs:isDefinedBy &lt;https://orey.github.io/graphapps-V2#&gt; ;
+             rdfs:label &quot;link&quot; ;
+             rdfs:comment &quot;Root property of link between ga:Class.&quot; ;
+             rdfs:domain ga:Class ;
+             rdfs:range rdfs:Class .
+
+ga:id a ga:attribute ;
+      rdfs:isDefinedBy &lt;https://orey.github.io/graphapps-V2#&gt; ;
+      rdfs:label &quot;id&quot; ;
+      rdfs:comment &quot;Instance of attribute type to define a unique id for ga:Class instances.&quot; ;
+      rdfs:domain ga:Class ;
+      rdfs:range rdfs:Literal .
+
+</code></pre>
+
+<p>Such a grammar is enabling several things:</p>
 <ul>
-<li>All classes are <code>subClassOf</code> <code>rdfs:Class</code>;</li>
-<li>All properties are <code>subPropertyOf</code> <code>rdf:Property</code>;</li>
-<li>There can be hierarchies of classes, and hierarchies of properties;</li>
-<li>A property is defined by its domain and its range:<ul>
-<li>If it exists <code>?x</code> and <code>?y</code> so that <code>?x p ?y</code>, that means that <code>?x</code> should be of type "domain of p" and <code>?y</code> of type "range of p".</li>
+<li>Translate UML concepts in semantic web concepts;</li>
+<li>Distinguish between topological links between concepts, and values of attributes;</li>
+<li>Reason on less ambiguous concepts;</li>
+<li>Benefit from the RDF/RDFS definition of attributes out of classes;</li>
+<li>Enable graph transformations based on a set of non ambiguous concepts.</li>
 </ul>
-</li>
-<li>Properties are linked to class by the domain and range, but there is not class link to property:<ul>
-<li>Something like: <code>exs:ClassA exs:something exs:attribute1</code> does not exist in rdf/rdfs.</li>
-<li>That means the predicate is the "linker" of nodes.</li>
-</ul>
-</li>
-</ul>
-<p>This model is great because the knowledge of the value of the attribute is delegated to the attribute.</p>
-<p>However, it may not be sufficient for what we are searching (an efficient software engineering model).</p>
-<h2 id="defining-class-attribute-membership">Defining Class attribute membership</h2>
-<p>We can question if it would be useful to create a membership concept or just to use <code>rdfs:member</code> property.</p>
-<p>Without it, we need to query the attributes of a class using their domain:</p>
-<pre><code>SELECT ?attribute
-WHERE
-{
-    ?attribute rdfs:domain exs:ClassA .
-}
-</code></pre>
-
-<p>If, we attach all attributes to the class like that:</p>
-<pre><code>exs:ClassA rdfs:member exs:attribute1 .
-exs:ClassA rdfs:member exs:attribute2 .
-</code></pre>
-
-<p>We can query attributes like that:</p>
-<pre><code>SELECT ?attribute
-WHERE
-{
-    exs:ClassA rdfs:member ?attribute .
-}
-</code></pre>
-
-<p>That is not more elegant than the previous one and not standard.</p>
-<p>However, we miss an important information from the UML model. The attribute 1 can be considered as a "final attribute", which value is intrinsically attached to the ClassA instance. The attribute 2 is a structural link between classes, and we know (<a href="../../graph/first-article/">graph-oriented programming</a>) that this kind of links is generating technical debt.</p>
-<p>rdf/rdfs modeling can enable us to model this case differently. We will consider as "final" the <code>rdfs:Literal</code>.</p>
-<p>We can now distinguish the realm attributes from the links between classes.</p>
-<pre><code>SELECT ?attribute
-WHERE
-{
-    ?attribute rdfs:domain exs:ClassA .
-    ?attribute rdfs:range rdfs:Literal .
-}
-</code></pre>
-
-<p>For sure, the literal types will probably be <code>rdfs:subClassOf rdfs:Literal</code> (that why we need Sparl).</p>
-<p>To find the structural links between concepts:</p>
-<pre><code>SELECT ?attribute
-WHERE
-{
-    ?attribute rdfs:domain exs:ClassA .
-    MINUS {
-        ?attribute rdfs:range rdfs:Literal .
-    }
-}
-</code></pre>
-
-<p>With this restriction, we can explore the topology of the classes and their real dependencies.</p>
 <p><em>(June 2020)</em></p></div>
         </div>
 
