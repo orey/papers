@@ -181,5 +181,6 @@ Such a grammar is enabling several things:
   * Benefit from the RDF/RDFS definition of attributes out of classes;
   * Enable graph transformations based on a set of non ambiguous concepts.
 
+The grammar can be found [here](https://orey.github.io/graphapps-V2).
 
 *(June 2020)*
