@@ -24,7 +24,7 @@ That means that new types, being class types or property types, are considered a
 
 In the UML diagram, `ClassB` derives from `ClassA`. That implies: `exs:ClassB rdfs:subClassOf exs:ClassA` as an obvious translation of the UML fact.
 
-We can stay like that and have a first UML to RDF translation like that:
+We can stay like that and have a first UML to RDF translation like follows.
 
 ```
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
