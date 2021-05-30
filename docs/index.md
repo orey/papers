@@ -2,7 +2,8 @@
 
 ## Papers
 
-* **NEW** - [The real nature of data](articles/data-interop.md)
+* **NEW** - [PLM and graph data](articles/about-plm.md)
+* [The real nature of data](articles/data-interop.md)
 * [Military Frameworks, Systems Engineering and Enterprise Architecture](articles/mbse-vs-ea.md)
 * [Archimate Recipes](articles/archimate-recipes.md)
 * [An Introduction to The Archimate Revolution](articles/archimate-intro.md)
@@ -44,7 +45,6 @@ Project page: [Semantic data migration project](research/data-mig.md) (2018-now)
     * [Towards a graph-oriented programming language?](research/graph-oriented-pl.md)
     * [Resources](research/resources.md)
 
-*(Last update: June 2020)*
-
+*(Last update: May 2021)*
 
 

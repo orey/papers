@@ -1,16 +1,12 @@
-# What is a PLM?
+# PLM and graph data
 
 ![gears](../images/engrenages.jpg)
 
-This article is intended to be a description of the basic functions a PLM is supposed to provide, and of the basic logic a PLM is supposed to implement. As the industry is beginning to look towards IT a bit more seriously that what was done in the last decades, it may be important for IT people inside and outside the industry:
+This article aims to describe the main core functions of a PLM by taking the perspective of graph data.
 
-* To understand what the PLM is all about;
-* To have some perspective about the reasons why things are as they are;
-* To have points of comparison with other kinds of IT systems that are met frequently outside of the industry (in the so-called "tertiary" sector).
+As the industry is beginning to look towards IT a bit more seriously that what was done in the last decades, it may be important for IT people inside and outside the industry to understand the basics of a PLM. This can lead to points of comparison with other kinds of IT systems that are met frequently outside of the industry (in the so-called "tertiary" sector).
 
-I hope this article will manage to bring some light on those points.
-
-## The PLM, the elementary parts and the assemblies
+## What is a PLM system?
 
 PLM means Product Lifecycle Management. This acronym generally describe systems that are used to manage the lifecycle of a manufacturing product (we will come back on the lifecycle notion).
 
@@ -23,7 +19,7 @@ A PLM is an IT system that is essentially manipulating a graph of business objec
 We can define a business class as a conceptual entity with:
 
 * A type (for instance "Part");
-* A set of characteristics (also called attributes or fields):
+* A set of characteristics (also called attributes, fields or properties):
   * Those attributes can be typed data (strings, numerical values, currencies, date, etc.) but also documents such as Office documents, 2D or 3D drawings, raw data resulting from simulation testing, etc.);
 * A set of sets of authorized links towards other classes.
 
@@ -88,17 +84,31 @@ The Figure 4 is showing the change of `B1` and then the change of `A1`.
 
 ![The change business object](../yed/plm04.png)
 
-The `Change1` change is referencing in a first step only the previous and present version of `B1` and in a second step the previous and current version of `A1`. Note that we could have created 2 versions of the `Change1` depending on our change policy.
+The `Change1` change is referencing in a first step only the previous and present version of `B1` and in a second step the previous and current version of `A1`.
+
+Note that we could have created 2 versions of the `Change1`, one for the original change of `B1` and the second one for the change of `B1` and the impacted change on `A1`. This kind of choice will depend on the industrial change policy.
 
 In the industry, the change object is crucial and often embeds documents. There are many reasons for that, to begin with the costs.
 
-If a manufacturing product is changed, that will have costly impacts on the production line and on the support of the product. In some industries like aerospace, the product may be "certified" (airworthiness for instance). Any change to the product will imply a certification impact assessment that could result in costly re-certification. One other reason is also to be able to find back in the past what reason caused a change that resulted in product performance regression.
+Indeed, any change on a manufactured product may imply costly impacts on the production line and on the support of the product. In some industries like aerospace, the product may be "certified" (airworthiness for instance). Any change to the product will imply a certification impact assessment that could result in costly re-certification. Another reason to manage changes is to be able to find back in the past what reason caused a change that resulted in product performance regression or problem.
 
-Generally, the change object is at the core of a special process, often named change board, where many teams gather in order to determine if the change is worth doing.
+Generally, the change object is at the core of a special process, often named "change board" or "change committee", where many teams gather in order to determine if the change is worth doing.
 
+## About the aggregation link
 
+In the previous figures (from 1 to 4), the links between business objects were standard arrows, such as the one on the left of the Figure 5 below.
 
------
+<a name="figure5"></a>*Figure 5: The semantics of links*
+
+![The semantic of links](../yed/plm05.png)
+
+On the right of Figure 5, IT people will have recognized a link with a white diamond shape. For UML users, this link means "aggregation".
+
+Aggregation can be considered as a special case of relationship between 2 classes: it just bears more meaning, the meaning that if `A1` is aggregating `B1`, that means that `A1` is a "bigger" structure than `B1` and `A1` is some kind of "container" object.
+
+The aggregation link asks a critical question in PLM: What is the elementary brick that contains only data and no other sub-brick?
+
+## The ambiguous notion of part
 
 Generally, a manufacturing product can be seen as made of "parts". There are  conceptually 2 kinds of parts:
 
@@ -107,33 +117,85 @@ Generally, a manufacturing product can be seen as made of "parts". There are  co
 
 This notion is very important because:
 
-* Defining properly the level of elementary parts is defining the scale at which a certain business will manage its data lifecycle;
+* Defining properly the level of elementary parts is defining the minimal scale at which a certain business will manage its data lifecycle;
 * Different businesses are often seeing the product at different levels (in terms of "elementary" parts).
 
-The industry often refers as "part" something that can be or an elementary part or an assembly. This is often confusing and leads to misunderstanding with IT people. In the rest of the article, we will talk about the "elementary part" or the "part" as being the agreed lowest level of data managed in lifecycle, and we will talk about assemblies if the object managed is a container for other objects.
+The industry often refers as "part" something that can be or an elementary part or an assembly. This is often confusing and leads to misunderstanding with IT people. In the rest of the article, we will talk about a "leaf of the graph" or just a "leaf" as being the agreed lowest level of data managed in lifecycle, and we will talk about "containers" if the object managed is a container for other objects.
+
+For instance, an assembly being a set of parts, the parts in that context could be "leafs", and the assembly would be a container.
+
+For sure, a container has fundamentally the exact same structure as the leaf, the structure shown in Figure 1:
+
+* It has properties with real data attached to its instance;
+* It has links to other business objects.
+
+The only difference between a leaf and a container is that, in the container case, there is at least *one link* that can be considered semantically as an aggregation (see Figure 5). A leaf should have no aggregation link.
+
+## Product structure, aggregation and semantic ambiguity
+
+As soon as we define a particular kind of links (aggregation), we can define "trees" which are partial representation of the global product graph just looking at the aggregation links between containers and leafs. This is often called: "product structure".
+
+Even if this view is still very used in the industry, we must never forget that it is only a very partial (and potentially misleading) view of the product.
+
+Indeed, semantically typing the links is opening the door to a lot of semantic ambiguities. If it seems obvious that a assembly can be represented as an object that "contains" other objects that would be "parts", the fact that a group of components are stored in the same functional area (like "all assemblies related to air conditioning") introduced a double meaning in the aggregation link:
+
+* The original meaning was: a physical component is physically the result of the assembly of smaller sub-components;
+* The second meaning of aggregation would be an administrative way of gathering things (like a set).
+
+The result is that, in the same "product structure", you can have quickly two or more different semantic interpretations of the same "aggregation" link.
+
+<a name="figure6"></a>*Figure 6: The danger of the aggregation link*
+
+![The danger of the aggregation link](../yed/plm06.png)
+
+In the Figure 6 above, it is easy to see that the aggregation link tagged `1` is representing the physical aggregation, and the aggregation link tagged `2` is representing the administrative classification.
+
+In reality, things are often much worse. Indeed, we can find many concepts in the "product structure":
+
+* The organization of the company (each organization will have a sub-tree with its own components);
+* The variants of the product;
+* The various versions of the same component (named "variable component" and aggregated under a "non-variable component");
+* Etc.
+
+## Modern PLM systems inspirations
+
+Modern PLMs try to avoid this big confusion of the simplistic "tree vision" of the product, by proposing other business classes and objects that enable the modeling of the industrial concepts.
+
+For instance, the organization of the company should have an impact on access rights but not on the structure of the graph of objects. The variants of the products can also be managed with new concepts that enable to manage smoothly options compatibility and incompatibility. Versions of the same business object can be managed without all versions to appear in the "product structure".
+
+In a certain way, the industrial PLMs propose more and more collection of business classes that everybody need in the industry. Even if, structurally, those objects are still conforming to the Figure 1 definition, they represent in a much more accurate way the semantics of the industry, being engineering, manufacturing or support.
+
+We could say that the PLMs evolve as the other ERP did in the last decades: towards a better description of the business semantics, while keeping the core graph, lifecycle and change engine. This, for sure, is a major step ahead.
+
+## About applicability
+
+Before closing this first overview of big PLM concepts, we must stop a while on the applicability context.
+
+Let's consider Figure 4 right bottom blue area. We have many versions of `A1` and `B1` that are existing. What version is really "applicable" to a certain product that was produced in the assembly line Saturday May 1st 2021?
+
+In a graph, the simplest way to do it would be to have a business object representing the various instances of the product and to create a link between the instance number `12` of the product and the proper version of `A1`and `B1` it is using.
+
+This is what is shown in Figure 7.
+
+<a name="figure7"></a>*Figure 7: Product evolution in product graph*
+
+![Product evolution in product graph](../yed/plm07.png)
+
+Product instance `12` and `13` are instances of the V1 of the product. After the change, `14` and `15` are instances of the V2 of the product.
+
+The idea here is to use the graph in order not to have to "calculate anything". As the product is made of released business objects, the product is a set of links to business objects (that on their side can also link to other objects). Here, we see the importance of having homogeneous semantic links, especially is the head of the tree (the release of the product) is supposed to be the head of the full product tree.
+
+For sure, if the graph is full of semantic ambiguity (like the ones we mentioned), we may end up in the necessity of adding complex management rules to get the real tree of applicable objects (which is often called "configuration calculation"). Criticizing this model would need a dedicated article.
+
+All that we need to say is that modern PLMs are more and more graph-aware and are managing the product configuration in manners that are used successfully for decades in the domain of complex huge softwares.
+
+## Getting inspired by PLMs outside of industry
+
+If the PLM systems are not easy to understand by people coming from the tertiary sector (like banks, insurances or public sectors), in a world obsessed with data (see [The real nature of data](https://orey.github.io/papers/articles/data-interop/)), the introduction of graphs in management data is a good idea (see [here](https://orey.github.io/papers/research/graphapps/) and [there](https://orey.github.io/papers/research/index-research/)) in this site.
+
+Other industry become more and more interested by the industrial concept of data lifecycle management.
+
+But we have to remember that tertiary sector applications are managing a lot of business rules while industry are managing much less (that will be the object of a future article about "end to end PLM"). The challenge of tertiary sector applications is to benefit from the graph data approach while being able to implement and maintain complex business rules. This is the purpose of most of the pages of this site.
 
 
-----
-
-
-As time goes on, the product lifecycle management (PLM) area proposes more and more functionality, linked together, in platforms that tend to be bigger with time.
-
-The increasing size of the PLM platforms is answering to a simplistic dream of users to have "everything linked together in the same place". In this article, we are going to analyze that dream that is, to our point of view, conveniently forgetting some of the most basic principles of large IT systems.
-
-## The three business domains of the industry
-
-An industrial company is generally architectured on 3 business domains:
-
-* Engineering Office: Where the products are designed, and certified in some industries;
-* Industry: Where the products are built;
-* Support: Where the products are supported.
-
-Those three domains, while working on the same data, have very distinct constraints and their optimal interfacing is a the center of many marketing speeches.
-
-
-
-
-
-
-
-
+(*May 2021*)

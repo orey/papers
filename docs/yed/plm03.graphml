@@ -29,7 +29,6 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
     </node>
     <node id="n1" yfiles.foldertype="group">
       <data key="d4" xml:space="preserve"/>
-      <data key="d5"/>
       <data key="d6">
         <y:ProxyAutoBoundsNode>
           <y:Realizers active="0">
@@ -108,7 +107,6 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
     </node>
     <node id="n2">
       <data key="d4" xml:space="preserve"/>
-      <data key="d5"/>
       <data key="d6">
         <y:SVGNode>
           <y:Geometry height="100.0" width="60.0" x="351.24999999999966" y="321.0332000000003"/>
@@ -124,7 +122,6 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
     </node>
     <node id="n3" yfiles.foldertype="group">
       <data key="d4" xml:space="preserve"/>
-      <data key="d5"/>
       <data key="d6">
         <y:ProxyAutoBoundsNode>
           <y:Realizers active="0">
@@ -181,7 +178,7 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
               <y:Geometry height="49.0" width="93.69999999999999" x="1076.3791710000005" y="177.20280000000002"/>
               <y:Fill color="#993300" color2="#800000" transparent="false"/>
               <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#FFFFFF" verticalTextPosition="bottom" visible="true" width="93.69999999999999" x="-1.1368683772161603E-13" xml:space="preserve" y="14.515625">C1::C<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+              <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#FFFFFF" verticalTextPosition="bottom" visible="true" width="93.69999999999999" x="0.0" xml:space="preserve" y="14.515625">C1::C<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
               <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#FFFF00" bottomInset="5" fontFamily="Dialog" fontSize="12" fontStyle="plain" height="23.96875" horizontalTextPosition="center" iconTextGap="4" leftInset="5" lineColor="#000000" modelName="custom" rightInset="5" textColor="#000000" topInset="5" verticalTextPosition="bottom" visible="true" width="25.84375" x="80.77812499999982" xml:space="preserve" y="-11.984375">V1<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.5" nodeRatioY="-0.5" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
               <y:Shape type="ellipse"/>
             </y:ShapeNode>
@@ -223,7 +220,6 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
       </data>
     </node>
     <node id="n5">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="23.96875" width="25.84375" x="405.20984468503985" y="40.61702500000001"/>
@@ -235,7 +231,6 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
       </data>
     </node>
     <node id="n6">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="23.96875" width="25.84375" x="883.2379246850401" y="40.61702500000001"/>
@@ -247,7 +242,6 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
       </data>
     </node>
     <node id="n7">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="23.96875" width="25.84375" x="1029.2854210000005" y="165.21842500000002"/>
@@ -259,7 +253,6 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
       </data>
     </node>
     <node id="n8">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="23.96875" width="25.84375" x="873.0354210000005" y="165.21842500000002"/>
@@ -272,46 +265,42 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
     </node>
     <edge id="n1::e0" source="n1::n0" target="n1::n1">
       <data key="d8" xml:space="preserve"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
             <y:Point x="266.78999999999985" y="77.10140000000001"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
     <edge id="n1::e1" source="n1::n0" target="n1::n2">
       <data key="d8" xml:space="preserve"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
             <y:Point x="504.9499999999996" y="77.10140000000001"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
     <edge id="n1::e2" source="n1::n0" target="n1::n3">
       <data key="d8" xml:space="preserve"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
     <edge id="e0" source="n2" target="n1::n3">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -324,46 +313,42 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
     </edge>
     <edge id="n3::e0" source="n3::n0" target="n3::n1">
       <data key="d8" xml:space="preserve"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
             <y:Point x="737.5691710000007" y="77.10140000000001"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
     <edge id="n3::e1" source="n3::n0" target="n3::n2">
       <data key="d8" xml:space="preserve"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
             <y:Point x="1123.2291710000004" y="77.10140000000001"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
     <edge id="n3::e2" source="n3::n0" target="n3::n3">
       <data key="d8" xml:space="preserve"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#FF0000" type="dashed" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
     <edge id="e1" source="n1" target="n3">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -374,7 +359,6 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
       </data>
     </edge>
     <edge id="e2" source="n2" target="n4">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -385,7 +369,6 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
       </data>
     </edge>
     <edge id="e3" source="n8" target="n7">
-      <data key="d9"/>
       <data key="d10">
         <y:SplineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -398,7 +381,6 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
     </edge>
     <edge id="n3::e3" source="n3::n0" target="n3::n4">
       <data key="d8" xml:space="preserve"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -406,7 +388,7 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
             <y:Point x="1008.2791710000006" y="138.2632000000002"/>
           </y:Path>
           <y:LineStyle color="#FF0000" type="dashed" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>

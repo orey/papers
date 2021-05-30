@@ -463,7 +463,7 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
             <y:Point x="266.78999999999985" y="-39.14859999999999"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -477,7 +477,7 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
             <y:Point x="504.9499999999996" y="-39.14859999999999"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -489,7 +489,7 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -515,7 +515,7 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
             <y:Point x="737.5691710000007" y="-39.14859999999999"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -529,7 +529,7 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
             <y:Point x="1123.2291710000004" y="-39.14859999999999"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -541,7 +541,7 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#FF0000" type="dashed" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -590,7 +590,7 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
             <y:Point x="1008.2791710000006" y="22.01320000000021"/>
           </y:Path>
           <y:LineStyle color="#FF0000" type="dashed" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -613,7 +613,7 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -625,7 +625,7 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -637,7 +637,7 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -651,7 +651,7 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
             <y:Point x="737.5691710000004" y="431.3792250000006"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -665,7 +665,7 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
             <y:Point x="1123.2291710000002" y="431.3792250000006"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -689,7 +689,7 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -701,7 +701,7 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -747,7 +747,7 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
             <y:Point x="724.7072960000003" y="371.0332000000003"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -759,7 +759,7 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#FF00FF" type="line" width="2.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -773,7 +773,7 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
             <y:Point x="899.7072960000003" y="477.5096000000003"/>
           </y:Path>
           <y:LineStyle color="#FF00FF" type="line" width="2.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -787,7 +787,7 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
             <y:Point x="959.7072960000003" y="476.2596000000003"/>
           </y:Path>
           <y:LineStyle color="#FF00FF" type="line" width="2.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -828,7 +828,7 @@ Copyleft Olivier Rey - Under GNU FDL licence<y:LabelModel><y:SmartNodeLabelModel
             <y:Point x="1136.6672960000003" y="371.0332000000003"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="white_diamond" target="none"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
