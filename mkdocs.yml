@@ -1,7 +1,7 @@
 site_name: Papers
 site_description: Olivier Rey's Papers
 site_author: Olivier Rey
-copyright: Copyleft Olivier Rey 2017-2020 - Site licensed under the GNU FDL V3
+copyright: Copyleft Olivier Rey 2017-2021 - Site licensed under the GNU FDL V3
 google_analytics: ['UA-110156293-1', 'orey.github.io']
 repo_url: https://github.com/orey/papers/
 #theme: readthedocs
