@@ -1,12 +1,34 @@
 # About End-To-End PLM
 
-![gears](../images/engrenages.jpg)
+![gears](../images/gears.png)
 
-As time goes on, the product lifecycle management (PLM) area proposes more and more functionality, linked together, in platforms that tend to be bigger with time.
+As time goes on, the product lifecycle management (PLM) systems propose more and more functionality, linked together, in platforms that tend to be always bigger with time.
 
-The increasing size of the PLM platforms is answering to a dream of many users to have "all data linked together in the same place". If this dream can be true for small products, it seems to us as a dangerous chimera in the case of complex products such as aircrafts.
+The increasing size of the PLM platforms, and their pretention to take in charge more and more processes, is answering to a dream of many users to have "all data linked together in the same place". If this dream can be true for small products, it seems to us as a dangerous chimera in the case of complex manufacturing products such as aircrafts.
 
-##The main features of a PLM
+In this article, we will explain the core reasons why we don't believe that this model of the "unique backbone" is applicable everywhere. Indeed, when changing semantic domains, the data needs to be transformed. If the tertiary sector takes as granted the adapter pattern (on which we will come back) for a long time, some PLM vendors are selling a model where the adapter can be reduced to *links between data*. This article is explaining the reasons why, in complex cases, this simplistic approach may appear as very dangerous.
+
+## PLM, nature of data and adaptation
+
+We explained in a [recent article](about-plm.md "About PLM") what we consider as being the basic functions of a PLM. We recommend the reading of this article before coming back to this one.
+
+In that article, we showed that, data being represented as a graph, it appears as quite easy to connect whatever object of a certain type to whatever other object of any other type with an instance of a link type.
+
+If we follow this statement, we quickly end up with the "no-limit approach" that could be be stated as follows: *As log as data can be connected together, then we can manage them in the same software*.
+
+However, contrary to what could appear, this model of linking data together has limits. Especially, in many cases, representing depedencies between business domains as links at the data level are a very bad representation of reality.
+
+In order to understand correctly the problem, we first recommended to have a look at [the real nature of data](data-interop.md "The real nature of data") article. In this article, we explain that data are created by business processes and that the way they are structured is dependant on the business domain. When data must flow from a business domain to another business domain, it must be "adapted out" the source business domain (transformed and reduced to a format that will be understandable by both the initiator and the receiver). Then the receiver will "adapt the data in" its own business universe. Then the receiver will be able to use the data.
+
+We often name the business domains "semantic domains", because when we change a data from business domain, it is generally not *meaning exactly* the same thing, and it is often not structured in the same way.
+
+For instance, if a "part" is created in the engineering semantic domain and sent to the support, this engineering part may be transformed into several "support parts" that will have support attributes and be localized at different use points. Concerning the engineering data attached to the part, most of them won't be useful for the support, even if they need to be secure in engineering system. For sure, the bridges between systems must ensure some traceability that enables to track back the same entity between systems.
+
+-----
+
+
+
+
 
 This section will try to explain, in simple words, how the PLM plays a central role in the transformation of the aerospace industry in the last decades.
 
