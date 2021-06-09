@@ -155,6 +155,24 @@ Most of the time, tagging artifacts with their level:
   * Enable not to confuse the levels of artifacts,
   * Get interested between the nested relationships between various levels of artifacts,
   * Think about coverage (in our case, processes of a certain level per role, or sub-processes of a certain process).
+  
+### Organisational consequences of nesting
+
+If a team of enterprise architects are working on the same model, it is generally required to organize frequent "consistency meetings" to ensure the consistency of the model. Indeed, categorizing processes of application functions in a nested environment may have impacts to the global model, and sometimes, the decision is quite structuring for the overall representation of reality we try to create.
+
+Don't underestimate this part because, at the end of the day, it can become an enormous (but rewarding) amount of work.
+
+In that case, a consistency meeting can re-assess at the team level the various levels of nesting that are attached to artifacts. All consequences can be analyzed at the proper level to ensure the model consistency. For that purpose, graph views of the model are more than needed.
+
+In my experience, leading a team of 4 enterprise architects for a global digital transformation projects, our "consistency workshops" lasted between one or two days (model of around 6,000 artifacts). We were locked in a room, synthetizing the situation and preparing a list of questions for the business teams and for the IT teams to clarify unclear points.
+
+In some complex cases, some entities were moving from one level to another depending on the information consolidated. Tasks would also be generated consequently to those changes in perspective in order to complement or clarify the descriptions (being artifact based or textual).
+
+At the end of the workshops, we had collective arguments to represent the reality as it was, and a real consistent global model, that would enable us to really plan the process/IT digital transformation.
+
+Ensuring this consistency enables to address core problems to the clients (business and IT), based on the cross-checking of all information they provided, and to bring added-value. It enables to be more pertinent and to understand more deeply the core functional problems that are at the heart of most digital transformation.
+
+We must never forget that *representing the reality* (or the next evolutions of that reality) is a complex exercise, even with a semantic language like Archimate. Quite often, we are bound to introduce bias in the representation, which is normal, but which should be explained at the beginning of the model, in a kind of "conventions" part.
 
 ## Several instances of the same software in different contexts
 
@@ -281,4 +299,4 @@ Remember that models are dynamic and often work in progress and that there is no
   * Reports can be generated from the Archimate model. You can find [here a report template](https://github.com/orey/archi-report-template) slightly modified compared to the original [Archi](https://archimatetool.com) one.
 
 
-(*November 2019*)
+(*Last update: June 2021*)
