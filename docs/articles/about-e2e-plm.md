@@ -26,10 +26,49 @@ For instance, if a "part" is created in the engineering semantic domain and sent
 
 -----
 
+https://www.linkedin.com/feed/update/urn:li:activity:6804804965635239936/?commentUrn=urn%3Ali%3Acomment%3A(activity%3A6804804965635239936%2C6809574091432054784)
+
+Hi Axel, I know the OSLC initiative.
+
+I like the idea that the central repository (monolith) is not the solution and that the industry has to think in distributed systems.
+
+However, what does not convince me fully is that the OSLC approach is still at the data level. If this statement is true, if links can be done at the data level between various data models in various systems, then conceptually it pushes again for more monoliths (super PLMs that can manage several business domains).
+
+Conceptually, the semantic web is using just a small subset of the possible distributed IT architectures by establishing a global data model that is spread amongst systems, but is still representing the reality under the form of a global data model.
+
+The fact is the tertiary sector is not working on this paradigm: data are spread between systems but there are many places where data are transformed from one semantic domain to another one, with business rules, aka treatments, aka programs with functions. I try to introduce this concept here: https://orey.github.io/papers/articles/data-interop/
+
+(following)
+
+Coming from outside of the industry, I am very puzzled about this systematic belief that data can be linked, as if a unique semantic representation was possible.
+
+In my article, I try to explain that modeling the reality can be done in many ways, and that the software industry (outside industry) proposed interchange standards that are enabling a program-based adaptation of data semantics between various business domains.
+
+And, what is very surprising to me also is that, when we look carefully to the existing systems, they are full of business rules and data transformation anyway.
+
+The first article on graph data in PLM is just an introduction which opens on another article on the structure of the bridges between systems. In a general way, those bridges, if they obey to the same rules as we can find in all the software industry - except industry - can embed some code to transform the semantics, so-called "adapters", that contain business rules.
+
+Maybe industry is the exception that confirms the rule and links between systems can be reduced to the very simple case of "data links", but I fear this statement is too reductive.
+
+(see message 3)
+
+(message 3)
+
+And it pushes for more monoliths and huge PLM platforms. I fear that this data-oriented approach will cause massive project failures in the future.
+
+For me, this is also a core structural problem of the semantic web. If you think that the reality can be described by linked data only, you just consider a modeling that is static and structural, but you omit the dynamic transformations that are also part of the representation of reality. When we see the troubles of data reconciliation in the semantic web, it is for me the illustration that this approach is not sufficient.
+
+Modeling the reality is a "domain-specific" activity and this is not because various domains can agree on an exchange protocol that their various semantics can be aggregated in a single model of linked data.
+
+I intend to bring more arguments of this fact in my next article.
+
+In all cases, it seems to me that this is a very interesting and crucial topic for the industry.
 
 
+**L'autre idée évidemment est que le PLM n'est plus générique mais complètement adapté à un business domain - d'où l'idée des ASD**
 
 
+-------
 This section will try to explain, in simple words, how the PLM plays a central role in the transformation of the aerospace industry in the last decades.
 
 The legacy programs of the \ag, such as the A320, A330, H225, etc., were designed originally without 3D models\footnote{For the oldest programs, the drawings were made with paper and Chinese ink.}. Progressively, with the new workstations, appeared a generation of software enabling to do 3D design (also called CAD\footnote{Computer-Aided Design.}). The 3D design was a major step in the product design because it enabled to see the product and to work on parts assemblies in a more ergonomic and productive way.
