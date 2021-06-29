@@ -40,15 +40,15 @@ Moreover, the configurations of products that were manufactured or built must be
 
 ### Manual version management in the product tree
 
-Generally, old PDMs don't manage natively the version management. When a leaf of the tree changes, a new version of the design solution is created by copying the previous one and its content and name it with a version number in its name.
+Generally, old PDMs don't manage natively the version management. When a leaf of the tree changes, a new version of the design solution must be crated manually by copying the previous one and its content and name it with a version number in its name.
 
-Let's take an example: The brake of my bicycle product is changing because my brake provider does not manufacture the old brake anymore. In my PDM, I must keep the old brake version because those information can be useful for the support of the already manufactured bicycles. I will create a new brake design solution by copying the old one, renaming it, and changing in it what needs to be changed to take into account the new version of the component.
+Let's take an example: The brake of the bicycle product (see Figure 1) is changing because the brake provider does not manufacture the old brake anymore. In the PDM, we must keep the old brake version because those information can be useful for the support of the already manufactured bicycles. We create a new brake design solution by copying the old one, renaming it, and changing in it what needs to be changed to take into account the new version of the component.
 
-From a certain point in time, from a certain instance of my product, all brakes will be of the new release (V2). Generally, industrially, I will move from the old version to the new one when my stock of old brakes will have been emptied.
+From a certain point in time, from a certain instance of the bicycle product, all brakes will be of the new release (V2). Generally, industrially, we will move from the old version to the new one when the stock of old brakes will be empty.
 
-In my PDM, I end up having, at the bottom of one branch, two versions of the brake. If I built my product tree getting inspired by a systems engineering approach, I will have a "brake branch", corresponding to the "brake function", with two possible implementations:
+In the PDM, we end up having, at the bottom of one branch, two versions of the brake. If the product tree was inspired by a systems engineering approach, we should have a "brake branch", corresponding to the "brake function", with two possible implementations:
 
-* One that was used from the first instance of my product up to instance N (we will often speak about product "serial number" or S/N to identify in a unique way the instances of the product),
+* One that was used from the first instance of the bicycle product up to instance N (we will often speak about product "serial number" or S/N to identify in a unique way the instances of the product),
 * And the second one that will be used from instance N+1 and for the future (see Figure 1).
 
 ![Basic applicability in PDM](../yed/cm01.png)
@@ -57,13 +57,13 @@ In my PDM, I end up having, at the bottom of one branch, two versions of the bra
 
 ### Configuration management with links
 
-We can provide a quick definition of applicability in this context: For a product with a serial number K, the brake version 1 is applicable to K if K is inferior or equal to N; From N+1, the version 2 of the brake is applicable. In PDMs, the applicability is traditionally attached to the links as shown in Figure 1.
+We can provide a quick definition of applicability in this context: For a product with a serial number K, the brake version 1 is applicable to S/N K if K is inferior or equal to N; From N+1, the version 2 of the brake is applicable. In PDMs, the applicability is traditionally attached to the links as shown in Figure 1. Applicabilities are, in that case, intervals of product S/N.
 
-This way of storing the applicability is associated to the filtering mechanisms that are generally available in PDMs: Indeed, having defined the applicabilities on all links, it is possible to filter the full product tree with a specific S/N to wee what is applicable to this S/N. The filtered tree will correspond to the subset of the product tree corresponding to the specific options that are present in the product which serial number is K. Applicabilities are, in that case, intervals of product S/N.
+Having defined the applicabilities on all links, it is possible to filter the full product tree with a specific S/N to see what is applicable to this S/N. The filtered tree will correspond to the subset of the product tree corresponding to the specific options that are present in the product which serial number is K.
 
-For sure, if we try to filter the product tree with a S/N that does not exist, we may retrieve (depending on how the filtering mechanism is implemented) the list of all possible design solutions that are applicable *from now*. In the case of Figure 1, for sure, the V1 of the Brakes will not be applicable anymore for any S/N superior to N. Without any particular definition of our S/N options, we may see more than 100% of a product because we did not defined the very features of that S/N yet, and I may get all available options (product catalog) with this filter.
+For sure, if we try to filter the product tree with a S/N that does not exist, we may retrieve (depending on how the filtering mechanism is implemented) the list of all possible design solutions that are applicable *from now*. In the case of Figure 1, for sure, the V1 of the Brakes will not be applicable anymore for any S/N superior to N. Without any particular definition of our S/N options, we may see more than 100% of a product because we did not defined the very features of that S/N yet, and we may get all available options (product catalog) with this filter.
 
-We must admit that this mechanism is quite confusing because it mixes various objectives:
+We must admit that this mechanism is quite confusing because the product tree mixes various objectives:
 
 * Determining the configuration of a specific product S/N: dynamic information, fruit of a filtering;
 * Keeping the information of the applicable options in the product catalog: dynamic, fruit of filtering;
