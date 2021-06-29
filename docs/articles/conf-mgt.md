@@ -15,9 +15,9 @@ In this article, we will try to examine the two different ways of performing CM:
 
 Strangely, this topic is not massively discussed on the web while it is at the heart of the industry performance (and non performance), being during the manufacturing phase of product life cycle or during its support phase.
 
-# The old way: Filtering the product tree
+## The old way: Filtering the product tree
 
-## The product tree
+### The product tree
 
 In old Part Data Management (PDM) systems, a product is represented by a tree, which leaves are parts or groups of parts (so-called "design solutions" in some industries).
 
@@ -38,22 +38,112 @@ The big challenges are, in this context:
 
 Moreover, the configurations of products that were manufactured or built must be preserved for maintenance. That can mean being able to create maintenance manuals and spare part lists for all products that were, at some point, manufactured and/or built. That would mean keeping track of the individual configuration of some product at some key moments of their life cycle.
 
-## The tree representation limitations
+### Manual version management in the product tree
 
 In old PDMs, we can see several limitations.
 
 The first one is that there is no real version management built in inside the system. When a leaf of the tree changes (let's consider from now on that the PDM is managing "design solutions" which are related to a small group of parts that will be used together in the product), a new version of the design solution is created by copying the previous one and its content and name it with a version number in its name.
 
-Let's take an example: The brake of my bicycle product is changing because my brake provider does not manufacture the old brake anymore. In my PDM, I must keep the old brake version because those information can be useful for the support of the already manufactured bicycles. I will create a new brake design solution by copying the old one, renaming it, and changing what needs to be changed.
+Let's take an example: The brake of my bicycle product is changing because my brake provider does not manufacture the old brake anymore. In my PDM, I must keep the old brake version because those information can be useful for the support of the already manufactured bicycles. I will create a new brake design solution by copying the old one, renaming it, and changing in it what needs to be changed.
 
-From a certain point in time, from a certain instance of my product, all brakes will be of the new release. Generally, I will do that when all my stock of old brakes will have been emptied.
+From a certain point in time, from a certain instance of my product, all brakes will be of the new release (V2). Generally, I will do that when all my stock of old brakes will have been emptied.
 
 In my PDM, I end up having, at the bottom of one branch, two versions of the brake. If I built my product tree getting inspired by a systems engineering approach, I will have a "brake branch" with two possible implementations:
 
 * One that was used from the first instance of my product up to instance N (we will often speak about product "serial number" or S/N),
-* And the second one that will be used from instance N+1 and for the future.
+* And the second one that will be used from instance N+1 and for the future (see Figure 1).
 
-We can provide a quick definition of applicability in this context: For a product with a serial number K, the brake version 1 is applicable to K if K is inferior or equal to N and, from N+1, the version 2 of the brake is applicable.
+![Basic applicability in PDM](../yed/cm01.png)
+
+*Figure 1: Basic applicability in PDM*
+
+### Configuration management with links
+
+We can provide a quick definition of applicability in this context: For a product with a serial number K, the brake version 1 is applicable to K if K is inferior or equal to N and, from N+1, the version 2 of the brake is applicable. The applicability is traditionally attached to the links as shown in Figure 1.
+
+This way of storing the applicability is associated to the filtering mechanisms that are generally available in PDMs: Indeed, having defined the applicabilities on all links, it is possible to filter the full product tree with a specific S/N to wee what is applicable to this S/N.
+
+For sure, in case a S/N is in the future, I may see more than 100% of a product because I did not defined the very features of that S/N yet, and I may get all available options (product catalog) with this filter.
+
+We must admit that this mechanism is quite confusing because it mixes various objectives:
+
+* Determining the configuration of a specific product S/N: dynamic information, fruit of a filtering;
+* Keeping the information of the applicable options in the product catalog: dynamic, fruit of filtering;
+* A segregation of data per function, organization, etc.
+
+### The product catalog
+
+With time, many PDMs were complexified without really solving this core problems.
+
+In order to maintain a catalog of options and to manage options compatibility, we need to have those data store somewhere (see Figure 2).
+
+![Basic PDM product catalog](../yed/cm02.png)
+
+*Figure 2: Basic PDM product catalog*
+
+In some cases, those crucial data will be maintained outside the PDM, in Excel; in some other times, those data will be maintained inside the PDM.
+
+Compatibility tables are an important element of this product catalog. Very frequently, they implement non trivial rules that depend on one another. The Figure 2 shows a sample of that: the basic break in V2 is compatible with both basic wheels in V3 and premium wheels in V2.
+
+### Managing the changes
+
+For, sure, as shown in Figure 2, components have versions, and we must track the changes between those versions. Change tracking is fundamental because it has an industrial impact, especially on stocks and possibly on procurement and on all the manufacturing process.
+
+In some businesses such as aerospace, the change is also tracked to prove to the authority that the aircraft can "inherit" from a past certification because the changes performed on it are just small ones. In case a change is important, a re-certification is required.
+
+Basically, during the life cycle of the product, all entities will change and will be versioned, including the compatibility tables for the various options.
+
+If we had to that the fact that the product itself can have variants, it become highly complex to maintain everything in the PDM tree structure.
+
+In this complex environment, filtering rules can become more and more complicated.
+
+### Complexifying the filtering with change management
+
+One of the possible complexification of the filtering process can come from a specific use of change as the criteria for "applicability".
+
+To explain the problem, we will simplify a bit the situation. A change is an entity that will replace one or several design solutions by one or several new ones. If we consider that an original design solution was created by a change (Change 1 in Figure 3 is creating the Brakes in V1), we can see the product as a "stack of changes".
+
+![Managing applicabilities with changes](../yed/cm03.png)
+
+*Figure 3: Managing applicabilities with changes*
+
+In Figure 3, we can see several states of the brakes:
+
+* The Change 1 is creating the design solution Brakes V1.
+* The Change 2 does a modification to the Brakes V1.
+    * In our example, we think about a "retrofit". The design solution "Modification to brakes V1" must be envisaged as being applicable on top of Brakes V1. This situation occurs when, for instance, a part was forgotten in the original Brakes V1 design solution.
+    * To apply this retrofit, both Change 1 and Change 2 will be applicable.
+    *  For sure, the manufacturing and the support will have to be aware that "Modification to brakes V1" is not a full design solution but some kind of "delta".
+* The Change 3 replaces the previous one with a full new design solution that is only pointing to Brakes V2.
+
+It is interesting to note that, in this model, we know if a design solution is applicable or not to a product serial number *if the change is applicable to the product serial number* ! The product is no more a set of components: It became a stack of changes! 
+
+We will call this way of proceeding an "administrative configuration management method", administrative because the product is *hidden behind the iterative process that lead to define it*.
+
+Finding it again is a dynamic complex filtering process which business rules depend on what we interpret as being an "applicable change". If it seems obvious for Change 1 and Change 3, it is less obvious for Change 2.
+
+Generally, this process is called "configuration calculation".
+
+If the filtering rules change, there is no guarantee that recalculating the configuration on an old product will give the configuration that was calculated at the time. This can be a real problem, because that means that the PDM is not reliable to find back the configurations of the already delivered products.
+
+Note that this model established a lineage of changes that, most of the time does not enable "forks" of design solutions, like shown in Figure 4.
+
+![Forking a design solution](../yed/cm04.png)
+
+*Figure 4: Forking a design solution*
+
+Brakes V3 are clearly a fork of Brakes V1, so the change should be between both. But, in a standard "stack-oriented change system", the Change 4 will be associated to the next iteration of Brakes V2, which is not the case.
+
+This method transforms the PDM into a "CLM", standing for Change Lifecycle Management, but not into a PLM (Product Lifecycle Management).
+
+### The limitations of filtering-based CM
+
+Filtering-based CM systems (being simple applicability oriented or change-based applicability oriented) are structural sources of problems.
+
+We already saw that the filtering rules may not be stable with time which causes the PDM not to be accurate on past
+
+
+
 
 
 
