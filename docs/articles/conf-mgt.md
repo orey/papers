@@ -62,27 +62,27 @@ We can provide a quick definition of applicability in this context: For a produc
 
 For an external eye, the three first surprising facts of \ah\ \cm\ are:
 \begin{itemize}
-\item The H/C product is represented as a tree with all product options (so-called ``150\%'', see Fig.~\ref{fig:cm-01-h175ps}),
+\item The H/C product is represented as a tree with all product options (so-called ``150\%'', see Fig.~\ref{fig:cm-01-aircraftps}),
 \item The tree classifies the various data, but only the leaves support the real content and the applicabilities (single level \cm);
 \item It requires a ``calculation process'' to see the real configuration of a specific instance of H/C\footnote{We will use the term MSN (Manufacturer Serial Number) in the rest of the document.}.
 \end{itemize}
 
 In the software industry, there is no notion of ``configuration calculation'', whatever the complexity of the various ``builds'' (equivalent to MSN).
 
-\imagepng{cm-01-h175ps}{H175 product structure}{0.7}
+\imagepng{cm-01-aircraftps}{aircraft product structure}{0.7}
 
 This filtering mechanism has several structural important drawbacks.
 
 %---------------------------------subsection
 \subsection{No built-in lifecycle nor stability in time of the result of filtering}
 
-When calculating the configuration of a H/C, a result of the filtering process is produced\footnote{Generally called ATBB (As To Be Built) in \ah.}. This result will be time-sensitive, meaning depending on when this result was calculated, and based on what applicability data were in the database at the time, a later calculation could calculate something else due to a change in applicability data.
+When calculating the configuration of a H/C, a result of the filtering process is produced\footnote{Generally called to be built (As To Be Built) in \ah.}. This result will be time-sensitive, meaning depending on when this result was calculated, and based on what applicability data were in the database at the time, a later calculation could calculate something else due to a change in applicability data.
 
-The client of the ATBB will have to manage by himself the ATBB variations over time as long as the ``definitive'' ATBB is not available. Indeed, there may never be any definitive ATBB because the product tree is continuously evolving, which is normal.
+The client of the to be built will have to manage by himself the to be built variations over time as long as the ``definitive'' to be built is not available. Indeed, there may never be any definitive to be built because the product tree is continuously evolving, which is normal.
 
-The problem is, when a set of changes were done in the product tree, the new ATBB will reflect those changes but the process will not be able to recalculate in the past the previous ATBB.
+The problem is, when a set of changes were done in the product tree, the new to be built will reflect those changes but the process will not be able to recalculate in the past the previous to be built.
 
-The problem is, for us, not in the fact that the ATBB changes, but more in the fat that the past ATBB cannot be built again as it was delivered once.
+The problem is, for us, not in the fact that the to be built changes, but more in the fat that the past to be built cannot be built again as it was delivered once.
 
 %---------------------------------subsection
 \subsection{Sensitiveness to change of calculation rules}
@@ -126,7 +126,7 @@ The fact is when we filter a product tree based on a stack of changes, the depen
 
 In other words, the union of all those constraints led to a situation where the design office PLM is proposing a change-oriented system in which the product is, most of the time, not easy to ``see''.
 
-In \ah, in the case of the H175, this situation will lead to industrial problems, when a particular H/C must be built with MCAs or CAs that have not the ``same level of changes'' (in case of reassignment of MCA or CA). The piling of changes method is not enabling \emph{going back in time}, especially looking back in the past just for some part of a particular machine. In the case of the H175, complex manual work is required just to address the question of the feasibility of the assignment.
+In \ah, in the case of the aircraft, this situation will lead to industrial problems, when a particular H/C must be built with MCAs or CAs that have not the ``same level of changes'' (in case of reassignment of MCA or CA). The piling of changes method is not enabling \emph{going back in time}, especially looking back in the past just for some part of a particular machine. In the case of the aircraft, complex manual work is required just to address the question of the feasibility of the assignment.
 
 In some way, the PLM systems based on change are determining in an indirect way the lifecycle of a product. They could be named \emph{change lifecycle management (CLM)} systems because they put the change concept first and the component concept in second position.
 
@@ -140,11 +140,11 @@ For sure, if a core product, like \ds\ 3DExperience, was to release the VPM cons
 %---------------------------------subsection
 \subsection{Steps towards digital continuity}
 
-With time, the addition of powerful features (such as the ECPDM/ILS-H175 interface or the CorePDM configurator) were a step towards digital continuity between the various actors.
+With time, the addition of powerful features (such as the ECPDM/ILS-aircraft interface or the CorePDM configurator) were a step towards digital continuity between the various actors.
 
 But one of the complexity of implementing this digital continuity remained the \cm\ topics and the robustness of interfaces from the engineering change process to the downwards actors and systems.
 
-In ILS for instance, a domain largely covered by the ASD S3000L standard, the lifecycle of ILS trees is different from the one of the design office \atbb\ (ATBB) configuration, especially because technical publication require a view on the past, as much as a view on the present.
+In ILS for instance, a domain largely covered by the ASD S3000L standard, the lifecycle of ILS trees is different from the one of the design office \to be built\ (to be built) configuration, especially because technical publication require a view on the past, as much as a view on the present.
 
 
 %============================SECTION
@@ -193,7 +193,7 @@ The modularization of H/C began years ago and was particularly at the center of 
 
 In order to generalize an approach based on components, the concepts of ``component'' and ``smart components'' are at the center of DDMS Product Line and Modeling and Simulation workgroups. Being able to think the A/C in components that can be reused on several products of the same family is a major industrial challenge of the next decades.
 
-For \ah, the challenges are at the center of the civil and military versions of the H160\footnote{The H160M will be delivered to the French MoD under the name of HIL (``Hélicoptère Inter-armées Léger'').}, but also in the future product family that could be derived from the H175.
+For \ah, the challenges are at the center of the civil and military versions of the H160\footnote{The H160M will be delivered to the French MoD under the name of HIL (``Hélicoptère Inter-armées Léger'').}, but also in the future product family that could be derived from the aircraft.
 
 \subsection{\cmm\ new principles and 3DExperience}
 
@@ -278,7 +278,7 @@ This causes many problems and inefficiencies in case of multiple retrofits durin
 
 \subsubsection{Branches or how to decouple the change process from the version management}
 
-In \ah\ H175 program, the change process is intimately intertwined to version management: as each version is a different VCI or design solution, and has attached to it its applicability information, expressed in applicable changes, it is not possible to decouple the version management on one side to the change process on the other.
+In \ah\ aircraft program, the change process is intimately intertwined to version management: as each version is a different VCI or design solution, and has attached to it its applicability information, expressed in applicable changes, it is not possible to decouple the version management on one side to the change process on the other.
 
 The fact is the decoupling of version management and change process is absolutely required when we want to analyze multi-criteria industrial trade-offs in order to find the best industrial compromise. It should be possible, for a certain change request to study several different evolutions of the same component before deciding what evolution is the best\footnote{The dimension of analysis can imply non engineering information such as stocks.}.
 
@@ -455,7 +455,7 @@ This section should be considered as a starting point of further analysis for th
 
 \subsection{Logical and physical components}
 
-If we first focus on the design office and the manufacturing organizations, currently in \ah, for the H175 program, the data structure are respectively a VPM tree organized mainly by ATA code, and a MCA/CA split, both reorganizing the same VCI/design solutions (the \myfig{cm-06}\ can be a good representation for that case).
+If we first focus on the design office and the manufacturing organizations, currently in \ah, for the aircraft program, the data structure are respectively a VPM tree organized mainly by ATA code, and a MCA/CA split, both reorganizing the same VCI/design solutions (the \myfig{cm-06}\ can be a good representation for that case).
 
 Contrary to the software industry, it seems that, most of the time in the industry, ``components that aggregate components'' are mostly void containers, meaning they do not have ``specific data''\footnote{This assertion should be challenged because, for instance, the mBOM is enriching the eBOM. In that situation, the link to original structure is very important, but the mBOM can be a data ``decoration'' of the eBOM that should be, in that case, manage in the upper-level component.}.
 
@@ -487,8 +487,8 @@ In order to assess the capability to transpose a \cocm\ model to aerospace, we s
 \begin{itemize}
 \item Does this model enable to work in context? As well as today or better?
 \item Is is possible to load quickly a DMU for a zone? For the whole A/C?
-\item Does the model enable to go from an ATBB to a manufacturing view easily?
-\item Is it possible to reassign already produced components that were part of a certain ATBB to another one?
+\item Does the model enable to go from an to be built to a manufacturing view easily?
+\item Is it possible to reassign already produced components that were part of a certain to be built to another one?
 \item Can we reuse past customizations? Is it possible to put them in context again just to see what the DMU looks like?
 \item Can we go back in time and compare components between today and several months ago? What exactly do we see?
 \item To what extent can we do concurrent engineering?
