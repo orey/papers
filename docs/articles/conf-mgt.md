@@ -1,19 +1,19 @@
 #About Configuration Management
 
-This article is the second one of a series on PLM. Please have a look at [PLM and Graph Data](about-plm.md) article.
+This article is the second one of a series on PLM. Please have a look at [PLM and Graph Data](about-plm.md) article for an introduction.
 
 ![engine](../images/engine.jpg)
 
 *Photo by [Martin Kessel](https://freeimages.com/photographer/ukmjk-31383) from [FreeImages](https://freeimages.com)*
 
-Configuration management (CM) is at the heart of the industry, being the traditional industry or the software industry. While the software industry massively invested on this area for decades, reaching a certain level of maturity in which CM is no longer a problem, some areas of the traditional industry still use old CM practices that prevent other digital evolutions to be massively used, such as works at the digital twin level.
+Configuration management (CM) is at the heart of the industry, being the traditional industry or the software industry. While the software industry massively invested on this area for decades, reaching a certain level of maturity in which CM is no longer a problem, some areas of the traditional industry still use old CM practices that prevent other digital evolutions to be massively used, such as works at the digital twin level. When CM stays a matter of experts and is not streamlined in the industrial process, inefficiencies, productivity losses and bad quality of data are everywhere.
 
 In this article, we will try to examine the two different ways of performing CM:
 
 * The dynamic one, where the configuration of a product is the result of a calculation (quite often based on a complex filtering);
 * The static one, where the configuration of a product is benefiting from the graph data that we can find in PLMs (see [PLM and Graph Data](about-plm.md) for more information).
 
-Strangely, this topic is not massively discussed on the web while it is at the heart of the industry performance (and non performance), being during the manufacturing phase of product life cycle or during its support phase.
+Strangely, this topic is not massively discussed on the web while it is at the heart of the industry performance (and non performance), being during the design process, the manufacturing phase of product life cycle or during its support phase.
 
 ## The old way: Filtering the product tree
 
@@ -21,36 +21,34 @@ Strangely, this topic is not massively discussed on the web while it is at the h
 
 In old Part Data Management (PDM) systems, a product is represented by a tree, which leaves are parts or groups of parts (so-called "design solutions" in some industries).
 
-The product tree structure is generally the fruit of several inspirations, for instance:
+The product tree structure is generally the fruit of several inspirations, amongst what we can find:
 
 * A functional split of the product (quite often coming from the [system engineering](https://en.wikipedia.org/wiki/Systems_engineering) view of the product);
 * A regulatory view of the product, e.g. a split of an aircraft product per ATA code in the aerospace world;
-* An organizational view of the product, e.g. mapping the product in the various organizations of the engineering office that design the product;
-* A mix between technical PDM systems capabilities and a mix of the previous constraints.
+* An organizational view of the product, e.g. mapping the product in the various organizations of the engineering office that design the product (mechanical engineering, electrical engineering, engine, air conditioning, etc.);
+* A mix between technical PDM systems capabilities (sometimes related to CM) and a mix of the previous constraints.
 
 The product tree, or "product structure", is containing the product with all its options, which is sometimes called the "150%". For sure, all options will not be applicable at the same time on a single instance of the product.
 
 The big challenges are, in this context:
 
-* To be able to get the exact list of applicable parts (or group of parts) for a certain instance of the product;
-* To be able to manage the catalog of options applicable at a certain moment to all instances of the product;
+* To be able to get the exact list of applicable parts (or design solutions) for a certain instance of the product;
+* To be able to manage the catalog of applicable options at a certain moment to future instances of the product;
 * To be able to manage change in this universe, for instance when some parts become obsolete and must be exchanged by something else.
 
 Moreover, the configurations of products that were manufactured or built must be preserved for maintenance. That can mean being able to create maintenance manuals and spare part lists for all products that were, at some point, manufactured and/or built. That would mean keeping track of the individual configuration of some product at some key moments of their life cycle.
 
 ### Manual version management in the product tree
 
-In old PDMs, we can see several limitations.
+Generally, old PDMs don't manage natively the version management. When a leaf of the tree changes, a new version of the design solution is created by copying the previous one and its content and name it with a version number in its name.
 
-The first one is that there is no real version management built in inside the system. When a leaf of the tree changes (let's consider from now on that the PDM is managing "design solutions" which are related to a small group of parts that will be used together in the product), a new version of the design solution is created by copying the previous one and its content and name it with a version number in its name.
+Let's take an example: The brake of my bicycle product is changing because my brake provider does not manufacture the old brake anymore. In my PDM, I must keep the old brake version because those information can be useful for the support of the already manufactured bicycles. I will create a new brake design solution by copying the old one, renaming it, and changing in it what needs to be changed to take into account the new version of the component.
 
-Let's take an example: The brake of my bicycle product is changing because my brake provider does not manufacture the old brake anymore. In my PDM, I must keep the old brake version because those information can be useful for the support of the already manufactured bicycles. I will create a new brake design solution by copying the old one, renaming it, and changing in it what needs to be changed.
+From a certain point in time, from a certain instance of my product, all brakes will be of the new release (V2). Generally, industrially, I will move from the old version to the new one when my stock of old brakes will have been emptied.
 
-From a certain point in time, from a certain instance of my product, all brakes will be of the new release (V2). Generally, I will do that when all my stock of old brakes will have been emptied.
+In my PDM, I end up having, at the bottom of one branch, two versions of the brake. If I built my product tree getting inspired by a systems engineering approach, I will have a "brake branch", corresponding to the "brake function", with two possible implementations:
 
-In my PDM, I end up having, at the bottom of one branch, two versions of the brake. If I built my product tree getting inspired by a systems engineering approach, I will have a "brake branch" with two possible implementations:
-
-* One that was used from the first instance of my product up to instance N (we will often speak about product "serial number" or S/N),
+* One that was used from the first instance of my product up to instance N (we will often speak about product "serial number" or S/N to identify in a unique way the instances of the product),
 * And the second one that will be used from instance N+1 and for the future (see Figure 1).
 
 ![Basic applicability in PDM](../yed/cm01.png)
@@ -59,21 +57,20 @@ In my PDM, I end up having, at the bottom of one branch, two versions of the bra
 
 ### Configuration management with links
 
-We can provide a quick definition of applicability in this context: For a product with a serial number K, the brake version 1 is applicable to K if K is inferior or equal to N and, from N+1, the version 2 of the brake is applicable. The applicability is traditionally attached to the links as shown in Figure 1.
+We can provide a quick definition of applicability in this context: For a product with a serial number K, the brake version 1 is applicable to K if K is inferior or equal to N; From N+1, the version 2 of the brake is applicable. In PDMs, the applicability is traditionally attached to the links as shown in Figure 1.
 
-This way of storing the applicability is associated to the filtering mechanisms that are generally available in PDMs: Indeed, having defined the applicabilities on all links, it is possible to filter the full product tree with a specific S/N to wee what is applicable to this S/N.
+This way of storing the applicability is associated to the filtering mechanisms that are generally available in PDMs: Indeed, having defined the applicabilities on all links, it is possible to filter the full product tree with a specific S/N to wee what is applicable to this S/N. The filtered tree will correspond to the subset of the product tree corresponding to the specific options that are present in the product which serial number is K. Applicabilities are, in that case, intervals of product S/N.
 
-For sure, in case a S/N is in the future, I may see more than 100% of a product because I did not defined the very features of that S/N yet, and I may get all available options (product catalog) with this filter.
+For sure, if we try to filter the product tree with a S/N that does not exist, we may retrieve (depending on how the filtering mechanism is implemented) the list of all possible design solutions that are applicable *from now*. In the case of Figure 1, for sure, the V1 of the Brakes will not be applicable anymore for any S/N superior to N. Without any particular definition of our S/N options, we may see more than 100% of a product because we did not defined the very features of that S/N yet, and I may get all available options (product catalog) with this filter.
 
 We must admit that this mechanism is quite confusing because it mixes various objectives:
 
 * Determining the configuration of a specific product S/N: dynamic information, fruit of a filtering;
 * Keeping the information of the applicable options in the product catalog: dynamic, fruit of filtering;
-* A segregation of data per function, organization, etc.
+* A segregation of data per function, organization, etc.;
+* A version management based on naming conventions (and so a filtering algorithm that relies also on that naming convention).
 
 ### The product catalog
-
-With time, many PDMs were complexified without really solving this core problems.
 
 In order to maintain a catalog of options and to manage options compatibility, we need to have those data store somewhere (see Figure 2).
 
@@ -81,25 +78,29 @@ In order to maintain a catalog of options and to manage options compatibility, w
 
 *Figure 2: Basic PDM product catalog*
 
-In some cases, those crucial data will be maintained outside the PDM, in Excel; in some other times, those data will be maintained inside the PDM.
+In some cases, those crucial data will be maintained outside the PDM, in Excel, or in a separate Access database; in some other times, those data will be maintained inside the PDM itself.
 
 Compatibility tables are an important element of this product catalog. Very frequently, they implement non trivial rules that depend on one another. The Figure 2 shows a sample of that: the basic break in V2 is compatible with both basic wheels in V3 and premium wheels in V2.
 
+The product catalog is crucial because it is enabling:
+
+* To create a vision of the product options for the marketing and sales department;
+* To attach to a specific S/N of product a list of options;
+* To guarantee that those options are compatible with one another.
+
+The product catalog introduces a S/N vision inside the PDM. From now on, without any product catalog vision, we could live with just S/N "intervals" of applicabilities (due to the fact that the filtering of the tree is a dynamic process). But if we make the S/N concrete and attached to a specific set of options, we can ask ourselves what is the best way of managing this information inside the system (we will come back on that point).
+
 ### Managing the changes
 
-For, sure, as shown in Figure 2, components have versions, and we must track the changes between those versions. Change tracking is fundamental because it has an industrial impact, especially on stocks and possibly on procurement and on all the manufacturing process.
+For, sure, as shown in Figure 2, components have versions, and we must track the changes between those versions. Change tracking is fundamental because it has an industrial impact, especially on stocks and possibly on procurement and on all the manufacturing process, and on the maintenance process. Change management is the set of required actions that are done to justify the change.
 
-In some businesses such as aerospace, the change is also tracked to prove to the authority that the aircraft can "inherit" from a past certification because the changes performed on it are just small ones. In case a change is important, a re-certification is required.
+In some businesses such as aerospace, the change is also tracked to prove to the authority that the aircraft can "inherit" from a past certification because the changes performed on it are just "small" ones. In case a change is important, a re-certification is required on a part or all the aircraft type.
 
-Basically, during the life cycle of the product, all entities will change and will be versioned, including the compatibility tables for the various options.
+Basically, during the life cycle of the product, all entities will change and will be versioned, including the compatibility tables for the various options. Change objects are interesting to track precisely why we did a change. In complex manufacturing products, change management ensure that the primary objective of the change is respected: fix something, enhance something else, take into account the impact of some other thing, etc.
 
-If we had to that the fact that the product itself can have variants, it become highly complex to maintain everything in the PDM tree structure.
+### Seeing the product through stacks of changes
 
-In this complex environment, filtering rules can become more and more complicated.
-
-### Complexifying the filtering with change management
-
-One of the possible complexification of the filtering process can come from a specific use of change as the criteria for "applicability".
+In some areas such as aerospace, the change is considered so important, because of the fact that it is linked to airworthiness certification of flying machines, that the full product is seen through changes - and not through physical components.
 
 To explain the problem, we will simplify a bit the situation. A change is an entity that will replace one or several design solutions by one or several new ones. If we consider that an original design solution was created by a change (Change 1 in Figure 3 is creating the Brakes in V1), we can see the product as a "stack of changes".
 
@@ -111,16 +112,20 @@ In Figure 3, we can see several states of the brakes:
 
 * The Change 1 is creating the design solution Brakes V1.
 * The Change 2 does a modification to the Brakes V1.
-    * In our example, we think about a "retrofit". The design solution "Modification to brakes V1" must be envisaged as being applicable on top of Brakes V1. This situation occurs when, for instance, a part was forgotten in the original Brakes V1 design solution.
-    * To apply this retrofit, both Change 1 and Change 2 will be applicable.
-    *  For sure, the manufacturing and the support will have to be aware that "Modification to brakes V1" is not a full design solution but some kind of "delta".
-* The Change 3 replaces the previous one with a full new design solution that is only pointing to Brakes V2.
+    * In our example, this situation is often called a "retrofit". The design solution "Modification to brakes V1" must be envisaged as being applicable on top of Brakes V1. This situation occurs when, for instance, a part was forgotten in the original Brakes V1 design solution.
+    * To apply this retrofit, both Change 1 and Change 2 will be applicable, but maybe some products were manufactured with only the Change 1 and so may have defects.
+    * For sure, the manufacturing and the support will have to be aware that "Modification to brakes V1" is not a full design solution but some kind of "delta" to be applied to the previous version of the component (here Brakes V1).
+* The Change 3 replaces the previous one with a full new design solution that is only pointing to Brakes V2. 
 
-It is interesting to note that, in this model, we know if a design solution is applicable or not to a product serial number *if the change is applicable to the product serial number* ! The product is no more a set of components: It became a stack of changes! 
+It is interesting to note that, in this model, we know if a design solution is applicable or not to a product serial number *if the change is applicable to the product serial number*. The product is no more a set of components: It is a "set of changes".
 
-We will call this way of proceeding an "administrative configuration management method", administrative because the product is *hidden behind the iterative process that lead to define it*.
+We will call this way of proceeding an "administrative configuration management method", administrative because the product is *hidden behind the administrative iterative process that leads to define it and to ensure its certification*.
 
-Finding it again is a dynamic complex filtering process which business rules depend on what we interpret as being an "applicable change". If it seems obvious for Change 1 and Change 3, it is less obvious for Change 2.
+Finding the product as a set of components is a dynamic complex filtering process which embeds business rules:
+
+* Business rules 
+
+ depend on what we interpret as being an "applicable change". If it seems obvious for Change 1 and Change 3, it is less obvious for Change 2.
 
 Generally, this process is called "configuration calculation".
 
