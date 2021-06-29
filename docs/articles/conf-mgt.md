@@ -4,6 +4,8 @@ This article is the second one of a series on PLM. Please have a look at [PLM an
 
 ![engine](../images/engine.jpg)
 
+*Photo by [Martin Kessel](https://freeimages.com/photographer/ukmjk-31383) from [FreeImages](https://freeimages.com)*
+
 Configuration management (CM) is at the heart of the industry, being the traditional industry or the software industry. While the software industry massively invested on this area for decades, reaching a certain level of maturity in which CM is no longer a problem, some areas of the traditional industry still use old CM practices that prevent other digital evolutions to be massively used, such as works at the digital twin level.
 
 In this article, we will try to examine the two different ways of performing CM:

@@ -1,6 +1,7 @@
 # PLM and graph data
 
 ![gears](../images/engrenages.png)
+*Photo by [Lotus Head](https://freeimages.com/photographer/LotusHead-31750) from [FreeImages](https://freeimages.com)*
 
 This article aims to describe the main core functions of a PLM by taking the perspective of graph data.
 
