@@ -171,6 +171,9 @@ Indeed, how can you work on the digital product if the vision you have of the pr
 
 We already mentioned the S/N as being a unique identifier of a product.
 
+
+
+
 Product line MCA/CA : reusing components between variants
 
 Same basic information but in a graph
