@@ -1,4 +1,4 @@
-#About Industrial Configuration Management
+# About Industrial Configuration Management
 
 This article is the second one of a series on PLM. Please have a look at [PLM and Graph Data](about-plm.md) article for an introduction.
 
@@ -167,12 +167,79 @@ Indeed, how can you work on the digital product if the vision you have of the pr
 
 ## The new way: Linking graph data
 
+### Reusing components in the industry
+
+Those last decades, the vision of the manufactured product changed a lot. If manufacturers were used to build all parts of their products, they transformed progressively into assemblers, letting the role of manufacturing subsystems to subcontractors (so-called "supplier"). In a lot of cases, the supplier is not only manufacturing components, but it is also in charge of designing them.
+
+The manufacturing industry entered the same constraints as the software industry. In order to build your product, you have to assemble components that you did not manufacture, so you have to master their compatibility with your own products. You must then take conventions with your suppliers about "interfaces".
+
+To come back to our brakes example, as a bike manufacturer, we buy the brakes from an external supplier that will provide brakes to our company but also to other bicycle manufacturers. We have to define in a contract what will be the interfaces between our bicycle and the brakes. Those interfaces can be mechanical, but also, in the general case, electrical, fluid based, etc.
+
+This definition of clear interfaces between components is the condition of component reusability. It also enabled a certain specialization of manufacturers that can perform R&D activities on their very domain and be innovative. This also created a component market that can imply large worldwide supply chains.
+
+Being in machines, in automotive or in aerospace, the assemblers must control the configuration of the components they use. Like in software, during the lifecycle of a product, there will be many versions of the same component available for series production. For each of them, every actor will need information:
+
+* In order to integrate it in the product tree (and possibly into the product 3D mock-up);
+* In order to assemble it to the other parts of the product;
+* In order to support it in the long run.
+
+### The site specialization
+
+Even if the assembler is mainly assembling components that are not manufactured internally, many manufacturers tend to specialize sites in order to implement the same component-oriented industrial strategy. Big manufacturers have the same constraints than their suppliers and, if they want to keep an expertise on some areas, it is better that they concentrate this expertise on a set of physical locations.
+
+### Variants and customizations
+
+Consequently, the challenge of modern manufacturing is to manage the product as a set of components, each of them having its own lifecycle, and most of them being more or less mastered by suppliers.
+
+This model has many advantages:
+
+* It is easier to create product variants, or product families, product lines, or different brands, considering that many components can be reused from one model to another;
+* The component reusability enables better innovation on each component level;
+* The industrial process is divided between component assembly process and final assembly processes, which implies a good performance of the logistics to be able to transport components to the different assembly lines.
+
+The main drawback of the model is to enter a cycle of incremental component improvements without any product redesign. Indeed, redesigning a product is a much bigger task that can change the scope of the various components. When a supply chain is optimized with many internal and external components, the global innovation may have a tendency to decrease. In this context, new players can enter the industry with other more effective approaches.
+
+### Consequences for configuration management
+
+The first consequence of this industrial reality is that the configuration must be managed at different levels:
+
+* At the component level, the configuration must support variants and options;
+* At the product level, the configuration must support which components are applicable.
+
+For some big manufacturing products, such as cars, ships or aircrafts, we can have intermediate levels, sort of "big components" that aggregate smaller components. The configuration of the product becomes a multi-level configuration management system.
+
+The product tree representation should materialize this tree of components like shown in Figure 5.
+
+![Hierarchy of components](../yed/cm05.png)
+
+*Figure 5: Hierarchy of components*
+
+We see that the product is composed of several layers of components. By seeing the diagram, we could analyze the various levels:
+
+* The blue level is the design solution level. In that sample, that is the only layer the manufacturer of the product P really masters in terms of detailed design.
+* The yellow level is the level of "Small Assemblies" (prefixed "SA"). Only the SA2 is mastered internally. All other small assembly are coming from suppliers.
+* The purple layer is the layer of "Big Assemblies" (prefixed "BA"). BA1 and BA2 are mastered by the manufacturing company because they are in charge of assembling the small assemblies that composed them. But BA3 is directly coming from a supplier.
+
+We can see that the way of organizing the data implies several things:
+
+1. When using components, we need to test the digital fit of components together before trying to assemble them physically. We can call this process the **digital integration** of components at the "digital twin" level. Note that this process can be quite complicated because it can imply the verification of many interfaces on many levels.
+2. The product tree is very linked to the manufacturing split of components, especially when the design is subcontracted to suppliers. But even in the case when the design stays an internal activity to the manufacturer, there is a great interest to act as if the component was a black box with interfaces.
+3. The component split comes from the early phases of the design, especially from the systems engineering that created a **product architecture** enabling to define the various components and their interfaces.
+
+Product architecture and digital integration are at the core of modern manufacturing. We can note that they are at the core of the software industry for decades.
+
+
+
+
+
+
+
 ### Materializing the S/N in the product tree
 
-We already mentioned the S/N as being a unique identifier of a product.
+We already mentioned the S/N as being a unique identifier of a product. 
 
 
-
+-------
 
 Product line MCA/CA : reusing components between variants
 
