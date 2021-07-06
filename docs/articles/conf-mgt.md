@@ -259,16 +259,57 @@ This way of creating graph data is another way (compared to the filtering approa
 The notion of applicability, as we saw it in the first part of the article, is twofold:
 
 * Indicate that a specific product S/N is using a specific component;
-* Indicate that, for future S/N, from a certain S/N, the component to be used should be a certain component in a certain version.
+* Indicate that, for future S/N, from a certain S/N, the component to be used should be a certain component in a certain version (something called sometimes effectivity).
 
-Looking at the tree of versions, for instance for `DS2`, 
+Looking at the tree of versions, for instance for `DS2`, we can see that we can decorrelate the versions of `DS2` and the versions of `SA2`: When `SA2` was only upgraded once, the `DS2` design solution had 2 intermediate versions that were not used to collaborate to the small assembly (`v1.2` and `v1.7`).
+
+In a graph mode, the applicability is divided into 2 concepts:
+
+* Real usage: A certain component really uses some other component in a certain version. The version used is *de facto* applicable to the component that aggregates the sub-component.
+* Future applicability: It is defined by the set of components that can be used in the future. In a certain way, this is an open choice because all releases of all components are for ever available in the system.
+
+In Figure 6, if we suppose that the components that we can produce are linked to the last one, we will be able to produce products using `BA1` in version `v25.4`, `BA2` in version `v56.6` and `BA3` in version `v4.12`, and all their graph of dependencies.
+
+We can note also, in Figure 6, that a specific "study S/N" `XXX01` points to a fork of a design solution located in the past (`DS2` in version `v1.2 study A`). That enables to potentially come back to a design solution that could be better in the past and to start from it.
+
+### Configuration
+
+If the dynamic filtering model was requiring a more or less complex algorithm to find the real S/N, the Figure 6 shows that the S/N (in a certain version) is the head of a tree of components that is defined down to the level that is relevant for the proper industry. And, each time a component is changing of release, an impact study can be led to see if this change should also impact the S/N that must be produced.
+
+The graph data approach enables, in that case, that all versions of the S/N configuration are secured forever inside the system. By the way, we can see here that the system can be called a "Product Lifecycle Management (PLM)" system because it contains the full history of the product line, of the product components (whatever the level) and of all the serial numbers. In a certain way, all configurations are there, are "solved", are calculated" (because there are no more calculation).
+
+The fact that all versions of the configuration are secured inside a PLM is critical for many processes, especially the concurrent engineering ones. Let's take an example.
+
+Let us suppose the engineering sent the version `v12.0` of `SA2` to the manufacturing preparation. Some people will work on the assembling instructions of this version of the small assembly pointing to specific versions of design solution `DS1` and `DS2`. Meanwhile, the engineering department worked in the version `v2.1` of the `DS2`. Everyone can work in parallel without having any conflict.
+
+### Change management
+
+In the graph model, changes will tag the various links between two versions of the same component. For a certain product instance (serial number), finding its delta of changes compared to a certain version in the history (for instance a certified baseline) will consist in aggregating all the changes that led to all versions of all its sub-components.
+
+In Figure 6, the component `SA2` changes version from `v11.8` to `v12.0` while skipping two versions of `DS2`. In a certain way, the change `3df59` corresponds to the union of changes `12bb5`, `aze129` and `1a44ho` (because also `v11.8` and `v12.0` of `SA2` are using the same version of `DS1`.
+
+In order to be able to commit, at the `SA2` level, the change, specific digital tools enabling to compare directly version `v2.0` and `v1.1` of `DS1` are very important. Contrary to the change management we saw in the first part of the article, each real state of each component is secured and there is no need to create tricks to recompose the true component or design solution.
+
+Using graph data in PLM enables to put the change *behind* the product and to enter the world of PLM, rather to keep working in a CLM world.
+
+### More PLM features
+
+Many features that are considered as basic and standard by the software industry would be of great interest in the industries that are not using PLM.
+
+For instance, the fixes on some components (retrofits) can be solved by forking a component (like `DS2` in version `v1.2 study A`) to fix it in a parallel branch. In order to get back the fix on the main branch, we will create a link between the version in the branch and the version in the main branch. Branching can then be used as in the software industry (see [branching](https://en.wikipedia.org/wiki/Branching_(version_control) "branching")). For sure, some "merge" strategy will have to be defined, but even with 3D data, a lot of software can be done to ease this process.
+
+We already saw the capability of studies that graph data offer: At any moment it is possible to create fake products in which specific components, applicable today, are replaced by:
+
+* New components, fruit of new studies;
+* Fake components;
+* Old components;
+* Any other kind of situation.
+
+If we had to this capability, the capability of merging, that means that studies 
+The PLM can become a real place where
 
 
 
-
-
-
-We already mentioned the S/N as being a unique identifier of a product. 
 
 
 -------
