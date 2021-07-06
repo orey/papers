@@ -199,7 +199,7 @@ This model has many advantages:
 
 The main drawback of the model is to enter a cycle of incremental component improvements without any product redesign. Indeed, redesigning a product is a much bigger task that can change the scope of the various components. When a supply chain is optimized with many internal and external components, the global innovation may have a tendency to decrease. In this context, new players can enter the industry with other more effective approaches.
 
-### Consequences for configuration management
+### Consequences for the product tree
 
 The first consequence of this industrial reality is that the configuration must be managed at different levels:
 
@@ -226,15 +226,47 @@ We can see that the way of organizing the data implies several things:
 2. The product tree is very linked to the manufacturing split of components, especially when the design is subcontracted to suppliers. But even in the case when the design stays an internal activity to the manufacturer, there is a great interest to act as if the component was a black box with interfaces.
 3. The component split comes from the early phases of the design, especially from the systems engineering that created a **product architecture** enabling to define the various components and their interfaces.
 
-Product architecture and digital integration are at the core of modern manufacturing. We can note that they are at the core of the software industry for decades.
+Product architecture and digital integration are at the core of modern manufacturing. We can note those two activities are at the core of the software industry for decades, and that the manufacturing area converges progressively to the software industry practices, even if some constraints (at the interface level) are more complex in the industry.
 
+### Adding versions to the product tree
 
+If we add the versions of the various components in the product tree, we obtain Figure 6.
 
+![Hierarchy of components with versions](../yed/cm06.png)
 
+*Figure 6: Hierarchy of components with versions*
 
+In this figure is shown the lifecycle of some components and their link together.
 
+Let's start by analyzing DS1. This design solution has many versions. Those versions are linked together by a change having a unique ID (e.g. `Change 1a2c3` is tagging the link between DS2 in v1.0 and DS2 in v1.1.
+
+In the schema, the chosen convention is that any change on version on a lower component implies a change on the upper one. DS2 in v1.1 is used by SA2 is version 1.18 and v2.0 is used by SA2 in v12.0 and in v12.1. The structural dependencies are shown with black arrows.
+
+The head of the product `P` is pointing to all heads (last versions) of all components. For sure, it is not because the product head is pointing to those components that they are applicable to every instance of the product.
 
 ### Materializing the S/N in the product tree
+
+At the top of the diagram, we have an instance of product P with S/N `1212` using the `BA1` and `BA2` respectively in `v25.4` and `v56.6`. Each of the big assemblies points to the small assemblies that are in it, and those small assemblies point to the design solution they are composed of.
+
+The first important thing to note is that there are no more calculation mechanism: The S/N `1212` in version `v234.3` is pointing to existing versions of big assemblies that are fully defined. If an upgrade would be done at whatever level on the tree (in Figure 6, at the design solution level, the small or big assembly level), the version management would enable to create a new version of product P S/N `1212` to point to those specific versions.
+
+Note that when a version is "wired" with links, it will never change in the future and ten years later, this past part of the graph will remain the same.
+
+This way of creating graph data is another way (compared to the filtering approach), *much more efficient*, to manage applicabilities, configuration and changes.
+
+### Applicability 
+
+The notion of applicability, as we saw it in the first part of the article, is twofold:
+
+* Indicate that a specific product S/N is using a specific component;
+* Indicate that, for future S/N, from a certain S/N, the component to be used should be a certain component in a certain version.
+
+Looking at the tree of versions, for instance for `DS2`, 
+
+
+
+
+
 
 We already mentioned the S/N as being a unique identifier of a product. 
 
