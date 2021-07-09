@@ -1,4 +1,4 @@
-# About Configuration Management of Industrial Products
+# About configuration management of industrial products
 
 This article is the second one of a series on PLM. Please have a look at [PLM and Graph Data](about-plm.md) article for an introduction.
 
@@ -17,7 +17,7 @@ Strangely, this topic is not massively discussed on the web while it is at the h
 
 ## The old way: Filtering the product tree
 
-### The product tree
+##- The product tree
 
 In Part Data Management (PDM) systems, a product is represented by a tree, which leaves are parts or groups of parts (often called "design solutions").
 
@@ -38,7 +38,7 @@ The big challenges are, in this context:
 
 Moreover, the configurations of products that were manufactured or built must be preserved for maintenance. That can mean being able to create maintenance manuals and spare part lists for all products that were, at some point, manufactured and/or built. That would mean keeping track of the individual configuration of some product at some key moments of their life cycle.
 
-### Manual version management in the product tree
+##- Manual version management in the product tree
 
 Generally, old PDM systems don't manage natively the version management. When a leaf of the tree changes, let's suppose it is a design solution, a new version of the design solution must be created manually by copying the previous one and its content and name it with a version number in its name.
 
@@ -55,7 +55,7 @@ In the PDM system, we end up having, at the bottom of one branch, two versions o
 
 *Figure 1: Basic applicability in PDM*
 
-### Configuration management using links
+##- Configuration management using links
 
 We can provide a quick definition of applicability in this context:
 
@@ -68,7 +68,7 @@ Having defined the applicabilities on all links, it is possible to *filter* the 
 
 For sure, if we try to filter the product tree with a S/N that does not exist (i.e. in the future), we may retrieve (depending on how the filtering mechanism is implemented) the list of all possible design solutions that are applicable *from now*. In the case of Figure 1, for sure, the `V1` of the brakes will not be applicable anymore for any S/N superior to `N`. Without any particular definition of our S/N options, we may see more than 100% of a product because we did not defined the very features of that S/N yet, and we may get all available options (product catalog) with this filter.
 
-### The product catalog
+##- The product catalog
 
 In order to maintain a catalog of options and to manage options compatibility, we need to have those data store somewhere (see Figure 2).
 
@@ -88,7 +88,7 @@ The product catalog is crucial because it is enabling:
 
 The product catalog introduces a S/N vision inside the PDM system. From now on, without any product catalog vision, we could live with just "S/N intervals" of applicabilities. But if we make the S/N concrete and attached to a specific set of options, we can ask ourselves what is the best way of managing this information inside the system (we will come back on that point).
 
-### Managing the changes
+##- Managing the changes
 
 For, sure, as shown in Figure 2, components have versions, and we must track the changes between those versions. Change tracking is fundamental because it has an industrial impact, especially on stocks, on procurement, on all the manufacturing process, and on the maintenance process. Change management is the set of required actions that are done to justify the change and master its impacts.
 
@@ -96,9 +96,7 @@ In some businesses such as aerospace, the change is also tracked to prove to the
 
 Basically, during the life cycle of the product, all entities will change and will be versioned, including the compatibility tables for the various options. Change objects are interesting to track precisely why we did a change. In complex manufacturing products, change management ensure that the primary objective of the change is respected: fix something, enhance something else, take into account the impact of obsolescence, etc.
 
-### Seeing the product through a stacks of changes
-
-#### Applicability management through changes
+##-- Special case: Applicability management through changes
 
 In some areas such as aerospace, the change is considered so important, because of the fact that it is linked to airworthiness certification of flying machines, that the *full product is seen through changes* - and not through physical components.
 
@@ -133,7 +131,7 @@ The problem of configuration calculation process is that it embeds *business rul
 
 This can lead to real problems because with this change in time, it is not guaranteed at all that when we recalculate the configuration of a S/N in the past, we will find again the exact same configuration that we have delivered top the manufacturing team. That is often interpreted, wrongly,  as a non reliability of the PDM system that cannot fond back the configurations of the already delivered products.
 
-#### Stacking the changes
+##-- Stacking the changes
 
 This model establishes a "lineage" between changes that, most of the time, does not enable "forks" of design solutions, like shown in Figure 4.
 
@@ -147,13 +145,13 @@ This lineage forces to see the product as a continuous set of changes, a pile or
 
 Undoing is generally a manual, costly and error prone process (incredible to people that come from the software industry, where forking is one very basic action in configuration management).
 
-#### From the PDM system to the CLM system
+##-- From the PDM system to the CLM system
 
 This stacking of changes method transforms the PDM system into what we could call a "CLM", standing for Change Lifecycle Management, but not into a PLM (Product Lifecycle Management).
 
 This statement is very important because, in a certain way, the administrative CM method based on change stacks is proposing an approach that is *diverging from the PLM world* where the product is at the center and the change on a secondary level. The CLM system, by putting the change first and the product "behind" it, closes the door to static graph data usage in PLM. This way of working, as we will see it in the rest of the article, creates cascading problems in all the manufacturing company.
 
-### The limitations of filtering-based CM
+##- The limitations of filtering-based CM
 
 Filtering-based CM systems (being simple applicability oriented or change-based applicability oriented) seem to us as being structural sources of problems. Moreover, when investigating their origin, it appears that they are very linked to the PDM system limitations of the 90s.
 
@@ -161,7 +159,7 @@ And the fact is PDM systems evolved into PLM systems leveraging the product grap
 
 Indeed, how can you work on the digital product if the vision you have of the product is the result of a dynamic filtering calculation that will not be persistent enough to enable the creation of the many links you need to do in the graph data?
 
-### Work around: Isolate from filtering-based configuration
+##- Work around: Isolate from filtering-based configuration
 
 If we try to implement concurrent engineering in an environment where the CM is dynamic, we immediately face problems. Let's suppose we work on component `C1` and this component is applicable to our S/N at `T0`. At a certain point in time `T1`, we discover that the configuration calculation declared `C1` not applicable anymore.
 
@@ -183,7 +181,7 @@ The most severe consequence in not having a mechanism of systematic persistence 
 
 ## The new way: Linking static graph data
 
-### Reusing components in the industry
+##- Reusing components in the industry
 
 Those last decades, the vision of the manufactured product changed a lot. If manufacturers were used to build almost all parts of their products, they transformed progressively into assemblers, letting the role of manufacturing subsystems to subcontractors (so-called "suppliers"). In a lot of cases, the supplier is not only manufacturing components, but it is also in charge of designing them.
 
@@ -199,11 +197,11 @@ Being in machines, in automotive or in aerospace, the assemblers must control th
 * In order to assemble it to the other parts of the product;
 * In order to support it in the long run.
 
-### The site specialization
+##- The site specialization
 
 Even if the assembler is mainly assembling components that are not manufactured internally, many manufacturers tend to specialize sites in order to implement the same component-oriented industrial strategy. Big manufacturers have the same constraints than their suppliers and, if they want to keep an expertise on some areas, it is better that they concentrate this expertise on a set of physical locations.
 
-### Variants and customizations
+##- Variants and customizations
 
 Consequently, the challenge of modern manufacturing is to manage the product as a set of components, each of them having its own lifecycle, and most of them being more or less mastered by suppliers.
 
@@ -215,7 +213,7 @@ This model has many advantages:
 
 The main drawback of the model is to enter a cycle of incremental component improvements without any product redesign. Indeed, redesigning a product is a much bigger task that can change the scope of the various components. When a supply chain is optimized with many internal and external components, the global innovation may have a tendency to decrease. In this context, new players can enter the industry with more effective approaches.
 
-### Consequences for the product tree
+##- Consequences for the product tree
 
 The first consequence of this industrial reality is that the configuration must be managed at different levels:
 
@@ -243,7 +241,7 @@ We can see that the way of organizing the data implies several things:
 
 Product architecture and digital integration are at the core of modern manufacturing. We can note those two activities are at the core of the software industry for decades, and that the manufacturing area converges progressively to the software industry practices, even if some constraints (at the interface level) are more complex in the industry.
 
-### Adding versions to the product tree
+##- Adding versions to the product tree
 
 If we add the versions of the various components in the product tree, we obtain Figure 7.
 
@@ -259,7 +257,7 @@ In the schema, the chosen convention is that any change on version on a lower co
 
 The head of the product `P` is pointing to all heads (last versions) of all components. For sure, it is not because the product head is pointing to those components that they are applicable to every instance of the product.
 
-### Materializing the S/N in the product tree
+##- Materializing the S/N in the product tree
 
 At the top of the diagram, we have an instance of product `P` with S/N `1212` using the `BA1` and `BA2` respectively in `v25.4` and `v56.6`. Each of the big assemblies points to the small assemblies that are in it, and those small assemblies point to the design solution they are composed of.
 
@@ -269,7 +267,7 @@ Note that when a version is "wired" with links, *it will never change in the fut
 
 This way of creating graph data is another way (compared to the filtering approach), *much more efficient*, to manage applicabilities, configuration and changes.
 
-### Applicability 
+##- Applicability 
 
 The notion of applicability, as we saw it in the first part of the article, is twofold:
 
@@ -287,7 +285,7 @@ In Figure 7, if we suppose that the components that we can produce are linked to
 
 We can note also, in Figure 7, that a specific "study S/N" `XXX01` points to a fork of a design solution located in the past (`DS2` in version `v1.2 study A`). That enables to potentially come back to a design solution that could be better in the past and to start from it.
 
-### Configuration
+##- Configuration
 
 If the dynamic filtering model was requiring a more or less complex algorithm to find the real S/N, the Figure 7 shows that the S/N (in a certain version) is the head of a tree of components that is defined down to the level that is relevant for the proper industry. And, each time a component is changing of release, an impact study can be led to see if this change should also impact the S/N that must be produced.
 
@@ -297,7 +295,7 @@ The fact that all versions of the configuration are secured inside a PLM is crit
 
 Let us suppose the engineering sent the version `v12.0` of `SA2` to the manufacturing preparation. Some people will work on the assembling instructions of this version of the small assembly pointing to specific versions of design solution `DS1` and `DS2`. Meanwhile, the engineering department worked in the version `v2.1` of the `DS2`. Everyone can work in parallel without having any conflict. That is a much better situation than the one we saw previously.
 
-### Change management
+##- Change management
 
 In the graph model, changes will tag the various links between two versions of the same component.
 
@@ -320,7 +318,7 @@ This model should be seen as the real product-oriented model. There are two majo
 
 In one word, the product comes **first** and the change comes second. A system with this kind of management can be called a product lifecycle management system.
 
-### Product catalog
+##- Product catalog
 
 An interesting thing to note is that is a "solved graph" containing all design solutions (or parts) in all versions, all assemblies, whatever their size, all serial numbers, it is very easy to create a product catalog (see Figure 7). 
 
@@ -333,7 +331,7 @@ We can also see that, if we put in place, inside the PLM, a process of choosing 
 
 In a certain way, we have defined a direct and non ambiguous link between marketing and sales, engineering, manufacturing and support.
 
-### More PLM features
+##- More PLM features
 
 Many features that are considered as basic and standard by the software industry would be of great interest in the industries that are not using PLM (or using PLM with a filtering configuration approach).
 
@@ -346,7 +344,7 @@ We already saw the capability of studies that graph data offer: At any moment it
 * Old components: To make some analysis in specific old configurations (in which we can apply possible retrofits);
 * Any other kind of situation where we need to create a product that we do not intend, at least at first, to industrialize.
 
-### Playing with the digital twin
+##- Playing with the digital twin
 
 The full graph in the PLM represents the digital twin of the product line, product line because all possible products are in it. In a certain way, the PLM of the product line is the global digital twin and contains each S/N which is the digital twin of each product.
 
