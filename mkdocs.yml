@@ -6,7 +6,7 @@ copyright: Copyleft Olivier Rey 2017-2021 - Site licensed under the GNU FDL V3
 theme:
     name: mkdocs
     analytics:
-        gtag: 278719260
+        gtag: G-278719260
 #google_analytics: ['UA-110156293-1', 'orey.github.io']
 #repo_url: https://github.com/orey/papers/
 #theme: readthedocs
