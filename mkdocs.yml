@@ -7,7 +7,7 @@ theme:
     name: mkdocs
     analytics:
         gtag: G-278719260
-#google_analytics: ['UA-110156293-1', 'orey.github.io']
+google_analytics: ['UA-110156293-1', 'orey.github.io']
 #repo_url: https://github.com/orey/papers/
 #theme: readthedocs
 site_dir: site
