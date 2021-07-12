@@ -2,7 +2,7 @@
 
 ## Papers
 
-* **NEW** - [About Configuration Management of Industrial Products](articles/conf-mgt.md)
+* **NEW** - [Configuration management of industrial products in PDM/PLM](articles/conf-mgt.md)
 * **NEW** - [PLM and graph data](articles/about-plm.md)
 * [The real nature of data](articles/data-interop.md)
 * [Military Frameworks, Systems Engineering and Enterprise Architecture](articles/mbse-vs-ea.md)

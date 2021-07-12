@@ -1,4 +1,4 @@
-# About configuration management of industrial products
+# Configuration management of industrial products in PDM/PLM
 
 This article is the second one of a series on PLM. Please have a look at [PLM and Graph Data](about-plm.md) article for an introduction.
 

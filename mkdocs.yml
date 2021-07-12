@@ -28,7 +28,7 @@ nav:
     - 'Military frameworks, systems engineering and enterprise architecture': 'articles/mbse-vs-ea.md'
     - 'The real nature of data': 'articles/data-interop.md'
     - 'PLM and graph data': 'articles/about-plm.md'
-    - 'About Configuration Management of Industrial Products': 'articles/conf-mgt.md'
+    - 'Configuration management of industrial products in PDM/PLM': 'articles/conf-mgt.md'
 - Graph-oriented programming:
     - 'First article on graph-oriented programming': 'graph/first-article.md'
     - 'Conference at the STAF/ICGT 2018 in Toulouse': 'graph/staf-icgt2018.md'
