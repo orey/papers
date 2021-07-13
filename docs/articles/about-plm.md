@@ -1,9 +1,10 @@
 # PLM and graph data
 
 ![gears](../images/engrenages.png)
+
 *Photo by [Lotus Head](https://freeimages.com/photographer/LotusHead-31750) from [FreeImages](https://freeimages.com)*
 
-This article aims to describe the main core functions of a PLM by taking the perspective of graph data.
+This article is the first of a series on PLM. It aims to describe the main core functions of a PLM by taking the perspective of graph data.
 
 As the industry is beginning to look towards IT a bit more seriously that what was done in the last decades, it may be important for IT people inside and outside the industry to understand the basics of a PLM. This can lead to points of comparison with other kinds of IT systems that are met frequently outside the industry (in the so-called "tertiary" sector).
 
@@ -214,6 +215,10 @@ If the PLM systems are not easy to understand by people coming from the tertiary
 But we have to remember that tertiary sector applications are managing a lot of business rules while industry are managing much less (that will be the object of a future article about "end to end PLM"). The challenge of tertiary sector applications is to benefit from the graph data approach while being able to implement and maintain complex business rules in a universe of graph data.
 
 This is not trivial and the purpose of most of the pages of this site.
+
+## See also
+
+Read also the second article on PLM: [Configuration management of industrial products in PDM/PLM](conf-mgt.md)
 
 
 (*May 2021*)
