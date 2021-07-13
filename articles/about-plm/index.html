@@ -12,11 +12,11 @@
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
 
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
         <script src="../../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -281,6 +281,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#see-also" class="nav-link">See also</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -289,9 +293,9 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="plm-and-graph-data">PLM and graph data</h1>
-<p><img alt="gears" src="../../images/engrenages.png" />
-<em>Photo by <a href="https://freeimages.com/photographer/LotusHead-31750">Lotus Head</a> from <a href="https://freeimages.com">FreeImages</a></em></p>
-<p>This article aims to describe the main core functions of a PLM by taking the perspective of graph data.</p>
+<p><img alt="gears" src="../../images/engrenages.png" /></p>
+<p><em>Photo by <a href="https://freeimages.com/photographer/LotusHead-31750">Lotus Head</a> from <a href="https://freeimages.com">FreeImages</a></em></p>
+<p>This article is the first of a series on PLM. It aims to describe the main core functions of a PLM by taking the perspective of graph data.</p>
 <p>As the industry is beginning to look towards IT a bit more seriously that what was done in the last decades, it may be important for IT people inside and outside the industry to understand the basics of a PLM. This can lead to points of comparison with other kinds of IT systems that are met frequently outside the industry (in the so-called "tertiary" sector).</p>
 <h2 id="what-is-a-plm-system">What is a PLM system?</h2>
 <p>PLM means Product Lifecycle Management. This acronym generally describes systems that are used to manage the "lifecycle" of a manufacturing product (we will come back on the lifecycle notion).</p>
@@ -430,6 +434,8 @@
 <p>If the PLM systems are not easy to understand by people coming from the tertiary sector (like banks, insurances or public sectors), in a world obsessed with data (see <a href="https://orey.github.io/papers/articles/data-interop/">The real nature of data</a>), the introduction of graphs in management data is definitely a good idea (see <a href="https://orey.github.io/papers/research/graphapps/">here</a> and <a href="https://orey.github.io/papers/research/index-research/">there</a> in this site). More and more, we see attempts of PLM use in the tertiary sector in business domains that are not obviously similar to industry use cases.</p>
 <p>But we have to remember that tertiary sector applications are managing a lot of business rules while industry are managing much less (that will be the object of a future article about "end to end PLM"). The challenge of tertiary sector applications is to benefit from the graph data approach while being able to implement and maintain complex business rules in a universe of graph data.</p>
 <p>This is not trivial and the purpose of most of the pages of this site.</p>
+<h2 id="see-also">See also</h2>
+<p>Read also the second article on PLM: <a href="../conf-mgt/">Configuration management of industrial products in PDM/PLM</a></p>
 <p>(<em>May 2021</em>)</p></div>
             </div>
         </div>
@@ -454,13 +460,16 @@
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
                 <form>
                     <div class="form-group">
                         <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+                <div id="mkdocs-search-results"></div>
             </div>
             <div class="modal-footer">
             </div>
