@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Olivier Rey">
+        <link rel="canonical" href="https://orey.github.io/papers/articles/spreadsheet-and-PLM/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>The four core functions showing a need for PLM - Papers</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-110156293-1', 'orey.github.io');
+            ga('send', 'pageview');
+        </script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Papers</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../.." class="dropdown-item">Index</a>
+</li>
+                                    
+<li>
+    <a href="../../about/about/" class="dropdown-item">Author</a>
+</li>
+                                    
+<li>
+    <a href="../../about/LICENSE/" class="dropdown-item">License</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Articles <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../five-levels/" class="dropdown-item">The Five Levels of Conceptual Maturity for IT Teams</a>
+</li>
+                                    
+<li>
+    <a href="../the-v2-vortex/" class="dropdown-item">The V2 Vortex</a>
+</li>
+                                    
+<li>
+    <a href="../various-stages/" class="dropdown-item">The Various Stages of Digital Transformation</a>
+</li>
+                                    
+<li>
+    <a href="../about-rest/" class="dropdown-item">Considerations About Rest And Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../graphql-web-services/" class="dropdown-item">GraphQL And Classic Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../portfolio/" class="dropdown-item">A Simple Meta-Model for Portfolio Management</a>
+</li>
+                                    
+<li>
+    <a href="../archimate-intro/" class="dropdown-item">An Introduction to The Archimate Revolution</a>
+</li>
+                                    
+<li>
+    <a href="../archimate-recipes/" class="dropdown-item">Archimate Recipes</a>
+</li>
+                                    
+<li>
+    <a href="../mbse-vs-ea/" class="dropdown-item">Military frameworks, systems engineering and enterprise architecture</a>
+</li>
+                                    
+<li>
+    <a href="../data-interop/" class="dropdown-item">The real nature of data</a>
+</li>
+                                    
+<li>
+    <a href="../about-plm/" class="dropdown-item">PLM and graph data</a>
+</li>
+                                    
+<li>
+    <a href="../conf-mgt/" class="dropdown-item">Configuration management of industrial products in PDM/PLM</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Graph-oriented programming <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../graph/first-article/" class="dropdown-item">First article on graph-oriented programming</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/staf-icgt2018/" class="dropdown-item">Conference at the STAF/ICGT 2018 in Toulouse</a>
+</li>
+                                    
+<li>
+    <a href="../../research/graphapps/" class="dropdown-item">GraphApps project page</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Semantic Web <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../semantic/data-migration/" class="dropdown-item">Aerospace data migration</a>
+</li>
+                                    
+<li>
+    <a href="../../research/data-mig/" class="dropdown-item">Semantic data migration project page</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Research <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../research/index-research/" class="dropdown-item">Index</a>
+</li>
+                                    
+<li>
+    <a href="../../research/graph-transfo/" class="dropdown-item">Graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../research/basic-graph-transformations/" class="dropdown-item">Basic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../research/basic-semantic-graph-transformations/" class="dropdown-item">Basic semantic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../research/DSL-for-graph-topology-checks/" class="dropdown-item">DSL for graph topology check</a>
+</li>
+                                    
+<li>
+    <a href="../../research/graph-transformation-applicability/" class="dropdown-item">Graph transformation applicability</a>
+</li>
+                                    
+<li>
+    <a href="../../research/grammar-graph-transformation/" class="dropdown-item">Grammar of graph transformation</a>
+</li>
+                                    
+<li>
+    <a href="../../research/graph-oriented-pl/" class="dropdown-item">Graph-oriented programming language</a>
+</li>
+                                    
+<li>
+    <a href="../../research/industry-data/" class="dropdown-item">Reflections on industry data</a>
+</li>
+                                    
+<li>
+    <a href="../../research/rdf-design-patterns/" class="dropdown-item">UML to RDF considerations</a>
+</li>
+                                    
+<li>
+    <a href="../../research/graph-oriented-pl/" class="dropdown-item">Towards a graph-oriented programming language?</a>
+</li>
+                                    
+<li>
+    <a href="../../research/resources/" class="dropdown-item">Resources</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#the-four-core-functions-showing-a-need-for-plm" class="nav-link">The four core functions showing a need for PLM</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#1-versioning-of-business-objects" class="nav-link">1. Versioning of business objects</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2-change-process" class="nav-link">2. Change process</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#3-collaboration" class="nav-link">3. Collaboration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#4-configuration-management" class="nav-link">4. Configuration management</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#a-common-anti-pattern-replacing-the-spreadsheet-by-a-website" class="nav-link">A common anti-pattern: Replacing the spreadsheet by a website</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="the-four-core-functions-showing-a-need-for-plm">The four core functions showing a need for PLM</h1>
+<p><img alt="Four" src="../../images/four.jpg" /></p>
+<p>Photo by <a href="https://unsplash.com/@jannerboy62?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Nick Fewings</a> on <a href="https://unsplash.com/photos/apdqPYw3z0s">Unsplash</a></p>
+<p>This article is the third one of a series about PLM, after <a href="../about-plm/">PLM and Graph Data</a> and <a href="../conf-mgt/">Configuration management of industrial products in PDM/PLM</a>.</p>
+<p>This article begins with spreadsheets, numerous, ubiquitous spreadsheets that seem to rule many manufacturing process, all along the product lifecycle, from engineering to manufacturing and support.</p>
+<p>Contrary to the tertiary sector where many areas that were using spreadsheets got out of them to use software applications (specific development or off-the-shelf software), it seems difficult, in some areas, to get out of spreadsheets.</p>
+<p>In our last two articles on PLM, we explained why the manufacturing area had a special vision of data, special versus the tertiary sector. In a certain way, in manufacturing, all data seem to be managed as the tertiary sector referential data. This vision of data makes it complicated to replace many spreadsheet-based processes because the underlying requirements are more complex than they appear to be in the first place.</p>
+<h2 id="1-versioning-of-business-objects">1. Versioning of business objects</h2>
+<p>Indeed, even if this function is often done manually by renaming spreadsheets with a version number, the real need that we can see is a versioning of the business object instances that are contained in the spreadsheet.</p>
+<p>The business objects can come from various processes of the product lifecyle:</p>
+<ul>
+<li><em>System engineering and early maintenance engineering</em>: Requirements, operational conditions, probability of failure, system, function, connector, trade-off, logical block, etc.</li>
+<li><em>Detailed design</em>: Part, assembly, drawing, 3D, document, standard part, tolerances, change, applicability, compatibility, build, etc.</li>
+<li><em>Simulation</em>: Test scenario, test campaign, business object composing the input data or the output data, configurations, etc.</li>
+<li><em>Assembly preparation</em>: Routing, instruction, part, elementary action, sequence, balancing information, resource, tool, duration, etc.</li>
+<li><em>Assembly</em>: Work order, part, resource, supplier, stock, quantity, tool, station, skills, clocking, warehouse, etc.</li>
+<li><em>Maintenance</em>: Maintenance plan, documentation, data module, spare part list, work order, task, frequency, threshold, cycle, tool, skills, duration, etc.</li>
+<li>Etc.</li>
+</ul>
+<p>Most of the time, some PDM/PLM tools manage the detailed design of the product because the 3D models have to be managed in a central place in order to be the bridge between engineering, manufacturing and support. But outside of those expensive and heavy software, we enter the world of spreadsheets.</p>
+<p>Versioning of data is the first fundamental function that many spreadsheet users need. Because the business objects that they manipulate evolve in versions, they have to keep track of those versions, even if doing that in a spreadsheet is often a very manual process.</p>
+<p>We have to not that, most of the time in the industry, a business object may have many data attached, each of them being the responsibility of a specific actor.</p>
+<p>Let's take an example: A part is a business object that will exist in many systems in many states at the same time. It will be manipulated by many people from many organizations at certain moments of the product lifecycle.</p>
+<h2 id="2-change-process">2. Change process</h2>
+<p>When a business object change versions, it is often mandatory to track several elements:</p>
+<ul>
+<li>Why the change was done?</li>
+<li>By whom?</li>
+<li>Who validated the change?</li>
+</ul>
+<p>The first question is becoming more and more important in the industry. Because, if the "why" is not captured, future modification to the product may violate some hypothesis done during the design. When a product evolves, it can be very useful to track back the reasons of certain modifications, especially the cases that were explored and that did not work.</p>
+<p>Each data, potentially each field of a business object, has at least one owner which is a role in the organization. This owner is able to modify the value of the particular filed of the particular business object. In a good data governance environment, the various roles and defined.</p>
+<p>The third element is the process of validation of the change: If there is a change, one or several roles in the organizations are here to validate that the change should be done. This must also be tracked because some responsibilities are involved.</p>
+<p>In most evolving spreadsheets, a kind of manual change process was put in place to secure the main reasons of changes and possible the decisions taken by the "approvers". This part is often badly done in a spreadsheet environment because it is hard to track if the data manipulated are big.</p>
+<h2 id="3-collaboration">3. Collaboration</h2>
+<p>As we saw, a business object can be shared by several roles. Even if only one people is able to modify the spreadsheet at a certain moment, this person will be bound to meet with many people to gather all the information, or to exchange many mails to consolidate information coming from many actors.</p>
+<p>This collaboration process is generally hidden. Indeed, it is very easy to assign the task of maintaining the spreadsheet to a person and to let the person do what's need to be done to gather all information and keep them up to date.</p>
+<p>But the real need would probably be that all involved persons update directly the data in an appropriate place.</p>
+<h2 id="4-configuration-management">4. Configuration management</h2>
+<p>Generally, in spreadsheets this functionality is basic and represented by a column with multiple value, typically:</p>
+<ul>
+<li>Applicable to case 1,</li>
+<li>Applicable to case 2,</li>
+<li>Etc.</li>
+<li>Applicable to all cases.</li>
+</ul>
+<p>For sure, those indicators can become quite complex in complex spreadsheets with macros. As we explained in the article about <a href="../conf-mgt/">configuration management in PLMs</a>, the manufacturing area needs to manage more or less complex configurations.</p>
+<p>Most of time, in spreadsheets managing some aspect of the lifecycle of some business objects, there is a notion of configuration management implemented in the data.</p>
+<h2 id="a-common-anti-pattern-replacing-the-spreadsheet-by-a-website">A common anti-pattern: Replacing the spreadsheet by a website</h2>
+<p>If the industrial area can reuse the same approaches used in the tertiary sector for some processes, there are many cases where the basic solutions of the tertiary sector are not applicable.</p>
+<p>A classic anti-pattern is the one of the website. The person in charge of the spreadsheet has troubles maintening it</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyleft Olivier Rey 2017-2021 - Site licensed under the GNU FDL V3</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
