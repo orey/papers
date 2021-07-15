@@ -8,14 +8,13 @@ Graph transformation is an essential concept to understand to understand those p
 
 The graph transformations signature is homogeneous:
 
-```
 Let g be a graph transformation.
+
 g(G) = G'
 
 If G &sub; G', then g is said to be non destructive.
 
 If G &nsub; G', then g is said to be destructive.
-```
 
 <u>Implementation notes</u>
 
