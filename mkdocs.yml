@@ -3,11 +3,11 @@ site_url: https://orey.github.io/papers/
 site_description: Olivier Rey's Papers
 site_author: Olivier Rey
 copyright: Copyleft Olivier Rey 2017-2021 - Site licensed under the GNU FDL V3
-#theme:
-#    name: mkdocs
-#    analytics:
-#        gtag: G-278719260
-google_analytics: ['UA-110156293-1', 'orey.github.io']
+theme:
+    name: mkdocs
+    analytics:
+        gtag: G-BZMZKWJP2V
+#google_analytics: ['UA-110156293-1', 'orey.github.io']
 #repo_url: https://github.com/orey/papers/
 #theme: readthedocs
 site_dir: site
