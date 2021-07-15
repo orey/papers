@@ -233,7 +233,23 @@
             
             <li class="nav-item" data-level="1"><a href="#graph-transformations" class="nav-link">Graph transformations</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#generalities" class="nav-link">Generalities</a>
+            <li class="nav-item" data-level="2"><a href="#definition-of-an-labeled-directed-graph" class="nav-link">Definition of an labeled directed graph</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#definition-of-a-semantic-graph" class="nav-link">Definition of a semantic graph</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#definition-of-a-graph-transformation" class="nav-link">Definition of a graph transformation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#definition-of-a-root-node" class="nav-link">Definition of a root node</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#limit-conditions" class="nav-link">Limit conditions</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -259,8 +275,7 @@
 <h1 id="graph-transformations">Graph transformations</h1>
 <p><img alt="Graph" src="../../yed/graph-transfo-small.png" /></p>
 <p>Graph transformation are mathematical objects that transform graphs.</p>
-<h2 id="generalities">Generalities</h2>
-<h3 id="definition-of-an-labeled-directed-graph">Definition of an labeled directed graph</h3>
+<h2 id="definition-of-an-labeled-directed-graph">Definition of an labeled directed graph</h2>
 <p>A graph is a mathematical object that contains nodes attached by edges. It is noted:</p>
 <ul>
 <li>G = {N, E} where N is a set of nodes, and E a set of pair of nodes n &isin; N</li>
@@ -282,7 +297,7 @@
 <li>B &sub; A if and only if &forall; n &isin; N<sub>2</sub>, n &isin; N<sub>1</sub>, and &forall; e &isin; E<sub>2</sub>, e &isin; E<sub>1</sub></li>
 </ul>
 <p>Note: That means that all labels are the same.</p>
-<h3 id="definition-of-a-semantic-graph">Definition of a semantic graph</h3>
+<h2 id="definition-of-a-semantic-graph">Definition of a semantic graph</h2>
 <p>A semantic graph is defined with RDF triples manipulating and linking resources (URI).</p>
 <p>We will often think about resources as bearing 3 kinds of information:</p>
 <ul>
@@ -298,7 +313,7 @@
 </ul>
 <p>Some cases are more complex but we will address them as they come.</p>
 <p>In a semantic graph, URIs can be used as nodes and edges, which make the semantic graph not a graph actually, and makes it complicated to manipulate without some specific hypothesis on an IT standpoint.</p>
-<h3 id="definition-of-a-graph-transformation">Definition of a graph transformation</h3>
+<h2 id="definition-of-a-graph-transformation">Definition of a graph transformation</h2>
 <p>Let <code>g</code> be a graph transformation. <code>g</code> is define as follows:</p>
 <ul>
 <li>g: D &rarr; R, D and R being sets of graphs, potentially reduced to a single graph</li>
@@ -331,7 +346,7 @@
 <li>The possible existence of a "graph transformation base" of basic graph transformations.</li>
 </ul>
 <p>See after.</p>
-<h3 id="definition-of-a-root-node">Definition of a root node</h3>
+<h2 id="definition-of-a-root-node">Definition of a root node</h2>
 <p>We will define a <em>root node</em> as a node of G that is preserved by <code>g</code> at least in its existence (maybe its labels were modified, all except its id). Using a root note <code>r</code> instead of the graph itself, we can write by extension of (1):</p>
 <ul>
 <li>g(r) = r with the first r &isin; G and the second r &isin; G'</li>
@@ -342,7 +357,7 @@
 <li>h = g<sub>p</sub> o g<sub>p-1</sub> o ... o g<sub>1</sub> if h(r) = g<sub>p</sub>(g<sub>p-1</sub>(... (g<sub>1</sub>(r)...)) = r</li>
 </ul>
 <p>But warning, at each step, <code>r</code> is representing a different graph.</p>
-<h3 id="limit-conditions">Limit conditions</h3>
+<h2 id="limit-conditions">Limit conditions</h2>
 <p>In the IT context, some graph transformations may be not applicable to a certain graph because some conditions are not met. Instead of being an error, we can enrich a bit the semantics by defining the <code>NOT_APPLICABLE</code> keyword.</p>
 <p>For <code>f</code> a graph transformation that is not applicable to a graph G, we can note:</p>
 <ul>
