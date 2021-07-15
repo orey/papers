@@ -233,11 +233,7 @@
             
             <li class="nav-item" data-level="1"><a href="#graph-transformations" class="nav-link">Graph transformations</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#signature" class="nav-link">Signature</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#graph-transformations-can-be-composed" class="nav-link">Graph transformations can be composed</a>
+            <li class="nav-item" data-level="2"><a href="#generalities" class="nav-link">Generalities</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -261,31 +257,102 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="graph-transformations">Graph transformations</h1>
-<p><img alt="Graph" src="../../yed/background01-small.png" /></p>
-<p>Graph transformation is an essential concept to understand to understand those projects.</p>
-<h2 id="signature">Signature</h2>
-<p>The graph transformations signature is homogeneous:</p>
-<p>Let g be a graph transformation.</p>
-<p>g(G) = G'</p>
-<p>If G &sub; G', then g is said to be non destructive.</p>
-<p>If G &nsub; G', then g is said to be destructive.</p>
-<p><u>Implementation notes</u></p>
-<p>a. A root node is often very practical to associate the applicability of a transformation from a certain root node.</p>
-<p>b.Domain and range of graph transformations are not so easily defined (lots of works in the mathematical fields on that topic).</p>
-<p>In order to create a workable model, we will define the special value <code>NOT_APPLICABLE</code>. Consequently, we can write:</p>
-<pre><code>g(G1) = NOT_APPLICABLE
-
-&amp;forall; g, graph transformation, g(NOT_APPLICABLE) = NOT_APPLICABLE
-</code></pre>
-
-<h2 id="graph-transformations-can-be-composed">Graph transformations can be composed</h2>
-<pre><code>Let g and h graph transformations. g o h and h o g are graph transformations.
-</code></pre>
-
+<p><img alt="Graph" src="../../yed/graph-transfo-small.png" /></p>
+<p>Graph transformation are mathematical objects that transform graphs.</p>
+<h2 id="generalities">Generalities</h2>
+<h3 id="definition-of-an-labeled-directed-graph">Definition of an labeled directed graph</h3>
+<p>A graph is a mathematical object that contains nodes attached by edges. It is noted:</p>
+<ul>
+<li>G = {N, E} where N is a set of nodes, and E a set of pair of nodes n &isin; N</li>
+</ul>
+<p>An labeled graph is a graph where nodes and edges can have labels. Because we are in IT, we will consider that each node and edge has at least one label that is its unique identifier named <code>id</code>.</p>
+<p>In all the pages of this site, we will often consider that the graph label is an attribute with a value, what could be represented as follows, for a node <code>n</code> &isin; N and for an edge <code>e</code> &isin; E:</p>
+<ul>
+<li>n{id:value, attribute1:value1, ..., attributen,valuen}</li>
+<li>e{id:value, sourcenode, destination node, attribute1:value1, ..., attributen,valuen}</li>
+</ul>
+<p>Note that the edges are directed in the graphs we are considering which means that they have a source and a destination. That enables to exhibit the notions of:</p>
+<ul>
+<li>Incoming relationships to a node: All edges pointing to that node</li>
+<li>Outgoing relationships from a node: All edges have the node as their source</li>
+</ul>
+<p>Graphs can be included in each other. At the level of attributed directed graphs, the inclusion can be defined as follows.</p>
+<p>Let A = {N<sub>1</sub>, E<sub>1</sub>} and B = {N<sub>2</sub>, E<sub>2</sub>} two graphs, we will note:</p>
+<ul>
+<li>B &sub; A if and only if &forall; n &isin; N<sub>2</sub>, n &isin; N<sub>1</sub>, and &forall; e &isin; E<sub>2</sub>, e &isin; E<sub>1</sub></li>
+</ul>
+<p>Note: That means that all labels are the same.</p>
+<h3 id="definition-of-a-semantic-graph">Definition of a semantic graph</h3>
+<p>A semantic graph is defined with RDF triples manipulating and linking resources (URI).</p>
+<p>We will often think about resources as bearing 3 kinds of information:</p>
+<ul>
+<li>Their domain</li>
+<li>Their type</li>
+<li>Their identifier</li>
+</ul>
+<p>For instance, the following URI <code>http://example.com/2021/07/product#item12345</code> can be split in:</p>
+<ul>
+<li>Domain: http://example.com/2021/07/</li>
+<li>Type: product</li>
+<li>Id: item12345</li>
+</ul>
+<p>Some cases are more complex but we will address them as they come.</p>
+<p>In a semantic graph, URIs can be used as nodes and edges, which make the semantic graph not a graph actually, and makes it complicated to manipulate without some specific hypothesis on an IT standpoint.</p>
+<h3 id="definition-of-a-graph-transformation">Definition of a graph transformation</h3>
+<p>Let <code>g</code> be a graph transformation. <code>g</code> is define as follows:</p>
+<ul>
+<li>g: D &rarr; R, D and R being sets of graphs, potentially reduced to a single graph</li>
+<li>For G &isin; D: g(G) = G' (1)<ul>
+<li>If G &sub; G', then g is said to be <em>non destructive</em>.</li>
+<li>If G &nsub; G', then g is said to be <em>destructive</em>.</li>
+</ul>
+</li>
+</ul>
+<p>Note: If some labels were modified, then g is qualified as destructive even if the node or edge is preserved.</p>
+<p>Non destructive graph transformations preserve the full input graph and all the labels attached to its nodes and edges. We can call this process <em>graph enrichment</em>. It is used in the process of <a href="../data-mig/">data migration</a>.</p>
+<p>That leads us to highlight the two kinds of graph transformations:</p>
+<ul>
+<li><em>Enrichment</em></li>
+<li><em>Modify</em>, which has two subtypes:<ul>
+<li>Modify destructive</li>
+<li>Modify non destructive</li>
+</ul>
+</li>
+</ul>
+<p>This split is quite important in IT where, implicitly, most graph transformation are in the modify mode to keep the same graph in memory. But, for operations that need to track all previous steps, we can use enrichment graph transformations.</p>
+<p>Naturally, graph transformations can be composed:</p>
+<ul>
+<li>Let f: D &rarr; R and g: R &rarr; P</li>
+<li>g o f is a graph transformation from D &rarr; P</li>
+</ul>
 <p>This defines:</p>
 <ul>
-<li>The basis of reusability;</li>
+<li>The basis of graph transformation reusability;</li>
 <li>The possible existence of a "graph transformation base" of basic graph transformations.</li>
+</ul>
+<p>See after.</p>
+<h3 id="definition-of-a-root-node">Definition of a root node</h3>
+<p>We will define a <em>root node</em> as a node of G that is preserved by <code>g</code> at least in its existence (maybe its labels were modified, all except its id). Using a root note <code>r</code> instead of the graph itself, we can write by extension of (1):</p>
+<ul>
+<li>g(r) = r with the first r &isin; G and the second r &isin; G'</li>
+</ul>
+<p>Note: Qualifying "root node" a node of G is relative and can only be done in the context of a graph transformation.</p>
+<p>This enables to create graph transformations <em>with an homogeneous IT signature</em> that enables cascades of function calls. Indeed, let's suppose <code>r</code> is a root node for g<sub>1</sub>, g<sub>2</sub> and g<sub>p</sub>, we can define <code>h</code>the composition of all graph transformations g<sub>i</sub> by:</p>
+<ul>
+<li>h = g<sub>p</sub> o g<sub>p-1</sub> o ... o g<sub>1</sub> if h(r) = g<sub>p</sub>(g<sub>p-1</sub>(... (g<sub>1</sub>(r)...)) = r</li>
+</ul>
+<p>But warning, at each step, <code>r</code> is representing a different graph.</p>
+<h3 id="limit-conditions">Limit conditions</h3>
+<p>In the IT context, some graph transformations may be not applicable to a certain graph because some conditions are not met. Instead of being an error, we can enrich a bit the semantics by defining the <code>NOT_APPLICABLE</code> keyword.</p>
+<p>For <code>f</code> a graph transformation that is not applicable to a graph G, we can note:</p>
+<ul>
+<li>f: D &rarr; R</li>
+<li>G &rarr;  NOT_APPLICABLE</li>
+</ul>
+<p>Even if it is only another way of expressing that G &notin; D, it can be very useful in IT because D is never really defined if <code>f</code> contains business rules.</p>
+<p>To make the model homogeneous, we can postulate, in order to have the composition of graph transformation work, that:</p>
+<ul>
+<li>&forall; g, graph transformation, g(NOT_APPLICABLE) = NOT_APPLICABLE</li>
 </ul>
 <h2 id="basic-set-of-graph-transformations">Basic set of graph transformations</h2>
 <p>See the special pages:</p>
@@ -302,7 +369,7 @@
 <p>Note: to be declined in Sparql.</p>
 <h2 id="grammar-for-graph-transformation">Grammar for graph transformation</h2>
 <p>In the context of <a href="../industry-data/" title="industry data">the page on industry data</a>, please have a look at the <a href="../grammar-graph-transformation/">grammar of graph transformation</a>.</p>
-<p><em>(Last update: June 2020)</em></p></div>
+<p><em>(Last update: July 2021)</em></p></div>
             </div>
         </div>
 
