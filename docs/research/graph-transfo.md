@@ -4,9 +4,7 @@
 
 Graph transformation are mathematical objects that transform graphs.
 
-## Generalities
-
-### Definition of an labeled directed graph
+## Definition of an labeled directed graph
 
 A graph is a mathematical object that contains nodes attached by edges. It is noted:
 
@@ -32,7 +30,7 @@ Let A = {N<sub>1</sub>, E<sub>1</sub>} and B = {N<sub>2</sub>, E<sub>2</sub>} tw
 
 Note: That means that all labels are the same.
 
-### Definition of a semantic graph
+## Definition of a semantic graph
 
 A semantic graph is defined with RDF triples manipulating and linking resources (URI).
 
@@ -52,7 +50,7 @@ Some cases are more complex but we will address them as they come.
 
 In a semantic graph, URIs can be used as nodes and edges, which make the semantic graph not a graph actually, and makes it complicated to manipulate without some specific hypothesis on an IT standpoint.
 
-### Definition of a graph transformation
+## Definition of a graph transformation
 
 Let `g` be a graph transformation. `g` is define as follows:
 
@@ -86,7 +84,7 @@ This defines:
 
 See after.
 
-### Definition of a root node
+## Definition of a root node
 
 We will define a *root node* as a node of G that is preserved by `g` at least in its existence (maybe its labels were modified, all except its id). Using a root note `r` instead of the graph itself, we can write by extension of (1):
 
@@ -100,7 +98,7 @@ This enables to create graph transformations *with an homogeneous IT signature* 
 
 But warning, at each step, `r` is representing a different graph.
 
-### Limit conditions
+## Limit conditions
 
 In the IT context, some graph transformations may be not applicable to a certain graph because some conditions are not met. Instead of being an error, we can enrich a bit the semantics by defining the `NOT_APPLICABLE` keyword.
 
