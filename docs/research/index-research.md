@@ -4,7 +4,7 @@
 
 All research projects are founded on main ideas. Here are the main ideas that are underlying to the GraphApps project.
 
-**<u>Idea 1</u>:** In the software engineering world, **our ways of representing knowledge are bad, inefficient and non evolutive**, being at the programmaning level or at the data level. This fact generates massive costs and pain in evolution of software or evolution of data storage. In one formula: Software is far from beware "soft".
+**<u>Idea 1</u>:** In the software engineering world, **our ways of representing knowledge are bad, inefficient and non evolutive**, being at the programming level or at the data level. This fact generates massive costs and pain in evolution of software or evolution of data storage. In one formula: Software is far from beware "soft".
 
 **<u>Idea 2</u>:** **Graphs enable better knowledge representation**, both static and within the evolution dynamics of programs and data. For instance, graphs can be used to address the technical debt problem (see [here](../graph/first-article.md) and [here](../graph/staf-icgt2018.md)) or to address complex data migration (see [here](../semantic/data-migration.md)).
 
