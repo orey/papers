@@ -8,6 +8,8 @@ theme:
     analytics:
         gtag: G-BZMZKWJP2V
 #google_analytics: ['UA-110156293-1', 'orey.github.io']
+markdown_extensions:
+  - meta
 #repo_url: https://github.com/orey/papers/
 #theme: readthedocs
 site_dir: site
