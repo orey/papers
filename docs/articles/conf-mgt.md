@@ -1,6 +1,9 @@
 ---
 title: Configuration management of industrial products in PDM/PLM
-description: This article explains the two ways of doing configuration management in the industry: The legacy one or dynamic one, based on more or less complex filtering; And the static one based on graphs.
+summary: This article explains the two ways of doing configuration management in the industry: The legacy one or dynamic one, based on more or less complex filtering; And the static one based on graphs.
+authors:
+    - Olivier Rey
+date: 2021-07-09
 ---
 
 # Configuration management of industrial products in PDM/PLM
