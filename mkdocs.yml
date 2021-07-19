@@ -9,6 +9,8 @@ theme:
         gtag: G-BZMZKWJP2V
     markdown_extensions:
         - meta
+        - toc:
+            baselevel: 2
 #google_analytics: ['UA-110156293-1', 'orey.github.io']
 #repo_url: https://github.com/orey/papers/
 #theme: readthedocs
