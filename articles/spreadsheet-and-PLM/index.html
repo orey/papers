@@ -310,15 +310,15 @@
 <p><img alt="Four" src="../../images/four.jpg" /></p>
 <p>Photo by <a href="https://unsplash.com/@jannerboy62?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Nick Fewings</a> on <a href="https://unsplash.com/photos/apdqPYw3z0s">Unsplash</a></p>
 <p>This article is the third one of a series about PLM, after <a href="../about-plm/">PLM and Graph Data</a> and <a href="../conf-mgt/">Configuration management of industrial products in PDM/PLM</a>.</p>
-<p>This article begins with spreadsheets, numerous, ubiquitous spreadsheets that seem to rule many manufacturing processes, all along the product lifecycle, from engineering to manufacturing and support.</p>
-<p>Contrary to the tertiary sector where many areas that were using spreadsheets got out of them to use software applications (specific development or off-the-shelf software), it seems difficult, in manufacturing, to get out of spreadsheets.</p>
+<p>This article begins with <em>spreadsheets</em>, numerous, ubiquitous spreadsheets that seem to rule many manufacturing processes, all along the product lifecycle, from engineering to manufacturing and support.</p>
+<p>Contrary to the tertiary sector where many areas that were using spreadsheets got out of them to use software applications (specific development or off-the-shelf software), it seems difficult, in manufacturing, to get out of spreadsheets. In this article, we will expose some of the reasons why spreadsheets are so hard to get rid of.</p>
 <h2 id="part-data-management-pdm">Part data management (PDM)</h2>
-<p>In our last two articles on PLM, we explained why the manufacturing area had a special vision of data, special comparing to the one of tertiary sector. In manufacturing, most data need to be managed as <em>referential data</em> even before to add business rules to them.</p>
-<p>That is why, some decades ago, the industry started to focus on "part data management" (PDM), which is, in reality, part data lifecycle management. Once this is taken in charge, it is possible to think about the product and its lifecycle, and enter the Product Lifecycle Management world (PLM).</p>
-<p>The specific industry needs around data management makes it complicated to replace many spreadsheet-based processes because the underlying requirements are more complex than they appear to be in the first place.</p>
+<p>In our last two articles on PLM, we explained why the manufacturing area had a special vision of data, special comparing to the one of tertiary sector. In manufacturing, most data need to be managed as <em>referential data</em> even before to attach business rules to them.</p>
+<p>That is why, some decades ago, the industry started to focus on "part data management" (PDM) systems, which are managing the part data lifecycles. Once this is taken in charge, it is possible to think about the product and its lifecycle, and enter the Product Lifecycle Management world (PLM).</p>
+<p>The specific industry needs around data management make it complicated to replace many spreadsheet-based processes because the underlying requirements are more complex than they appear to be in the first place.</p>
 <h2 id="a-large-variety-of-business-objects">A large variety of business objects</h2>
 <p>From now, we will suppose that we are taking about <em>business objects</em> and about their lifecycle.</p>
-<p>The most common industrial business object is a <em>part</em> but it can be many other objects, depending on the business domain, for instance:</p>
+<p>The most common industrial business object is the <em>part</em> but it can be many other objects, depending on the business domain, for instance:</p>
 <ul>
 <li><strong>System engineering and early maintenance engineering</strong>: Requirements, operational conditions, probability of failure, system, function, connector, trade-off, logical block, etc.</li>
 <li><strong>Detailed design</strong>: Part, assembly, drawing, 3D, document, standard part, tolerances, change, applicability, compatibility, build, etc.</li>
@@ -330,12 +330,12 @@
 </ul>
 <p>All those objects generally need, as a basis, four core functions to be able to be manipulated correctly and safely within a manufacturing company.</p>
 <h2 id="1-versioning-of-business-objects">1. Versioning of business objects</h2>
-<p>This function is often done manually by renaming spreadsheets with a version number. But the real need that we can see is a versioning of the business object instances that are contained in the spreadsheet.</p>
+<p>The versioning function is often done manually by renaming spreadsheets with a version number. But the real need that we can see is a versioning of the business object instances that are contained in the spreadsheet.</p>
 <p>Versioning of data is the first fundamental function that many spreadsheet users need. Because the business objects that they manipulate evolve in versions, they have to keep track of those versions, even if doing that in a spreadsheet is often a very manual process.</p>
 <p>The version management looks like the one that is done in the software industry especially because it is often relevant that several versions of the same business object are valid and used, <em>at the same time</em>, throughout the company or even outside.</p>
 <p>This is totally linked to the fundamentals of the manufacturing process:</p>
 <ul>
-<li>A part of the company is designing a product in version <code>N</code>,</li>
+<li>The engineering division of the company is designing a product in version <code>N</code>,</li>
 <li>The manufacturing part of the company is generally producing the version <code>N-1</code> of the product,</li>
 <li>The support organization is supporting all sold versions starting from <code>N-1</code>, <code>N-2</code>, <code>N-3</code>, etc.</li>
 <li>The customer of the product will have its product data in a certain version supported by the support organization.</li>
@@ -344,54 +344,61 @@
 <h2 id="2-change-process-management">2. Change process management</h2>
 <p>When a business object version changes, it is very recommended (and sometimes mandatory due to regulation, such as in aerospace) to track several elements:</p>
 <ul>
-<li>Why the change was done?</li>
+<li>Why was the change done?</li>
 <li>By whom?</li>
 <li>Who validated the change?</li>
 </ul>
-<p>The first question is becoming more and more important in the industry. Because, if the "why" is not captured, future modification to the product may violate some hypothesis done during the design phase. When a product evolves, it can be very useful to track back the reasons of certain modifications, especially the cases that were explored and that did not work (see <a href="#note1">note 1</a>).</p>
-<p>The change process can be done at the business object level but also at a lower level. Indeed, potentially each field of a business object has at least one owner which is a role in the organization. This owner is able to modify the value of the particular field of the particular business object. In a good data governance environment, the various roles are clearly defined. It is important to track who changed what, especially when the business object is complex.</p>
-<p>The third part of the change process is the process of validation of the change: If there is a change, one or several roles in the organizations are here to validate that the change should be done. This must also be tracked because some responsibilities are involved, especially to validate that, in a complex environment, the change impacts have correctly been estimated by the various functional disciplines that are concerned.</p>
-<p>In most evolving spreadsheets, a kind of manual change process is put in place to secure the main reasons of changes and possible the decisions taken by the "approvers". This part is often badly done in a spreadsheet environment because it is hard to track if the data manipulated are big and/or complex and/or used by several actors.</p>
+<p>The first question is becoming more and more important in the industry. Because, if the "why" is not captured, future modification to the product may violate some hypothesis done during the design phase. When a product evolves, it can be very useful to track back the reasons of certain modifications, especially the cases that were explored and that were not chosen (see <a href="#note1">note 1</a>).</p>
+<p>The change process can be done at the business object level but also at a lower level. Indeed, potentially each field of a business object has at least one owner which has a role in the organization. This owner is able to modify the value of the particular field of the particular business object. In a good data governance environment, the various roles are clearly defined. It is important to track who changed what, especially when the business object is complex.</p>
+<p>The third part of the change process is the process of validation of the change: If there is a change, one or several roles in the organizations are responsible to validate that the change, as it is, can be done. This must also be tracked because some responsibilities are involved, especially to validate that, in a complex environment, the change impacts have correctly been estimated by the various functional disciplines that are concerned.</p>
+<p>In most evolving spreadsheets, a kind of manual change process is put in place to secure the main reasons of changes and possible the decisions taken by the "approvers". This part is often badly done in a spreadsheet environment because it is hard to track if the data manipulated are big and/or complex and/or under the responsibility of several actors.</p>
 <h2 id="3-collaboration">3. Collaboration</h2>
 <p>As we saw, a business object can be shared by several roles, at different moments of a complex process.</p>
 <p>Even if only one people is able to modify the spreadsheet at a certain moment, this person will be bound to meet with many people to gather all the information, or to exchange many mails to consolidate information coming from many actors.</p>
-<p>This Excel-based collaboration process is generally hidden. Indeed, it is very easy to assign the task of maintaining the spreadsheet to a person and to let the person do what's need to be done to gather all information and keep them up to date.</p>
-<p>But the real need is generally to have the involved persons update directly the data in an appropriate place, while pumping versions and explaining the reasons for change.</p>
-<p>The word "collaboration" is quite vague in terms of functionality but, in the industry, it can cover several complex realities:</p>
+<p>This Excel-based collaboration process is not generally "hidden", in the sense that collaboration is hidden by the "people+spreadsheet" paradigm. As long as one person is maintaining the spreadsheet and is responsible for "gathering information", the collaboration feature that results from the data gathering process is often not visible.</p>
+<p>Indeed, the real need is generally to have the involved roles update directly the data in an appropriate place, while pumping versions and explaining the reasons for change.</p>
+<p>Even if the word "collaboration" is quite vague in terms of functionality, it can cover, in the industry, several complex realities:</p>
 <ul>
 <li>The capability of having many actors working on the same data;</li>
-<li>The capability of having many actors working on several versions of data at the same time;</li>
+<li>The capability of having many actors working on several versions of the same data at the same time;</li>
 <li>The capability of being notified about the impacts of a data change on linked data;</li>
 <li>Etc.</li>
 </ul>
+<p>Collaboration is a feature that must be analyze when an organization wants to get rid of a spreadsheet-based process.</p>
 <p>Collaboration around business object lifecycle can indicate the presence of complex collaboration processes between teams. The "concurrent engineering" is one of them, the idea being that the design phase is done taking into account one or several other phases of the product lifecycle, such as the manufacturing of products or their support.</p>
 <h2 id="4-applicability-management">4. Applicability management</h2>
-<p>Generally, in spreadsheets this functionality is basic and represented by a column with multiple value, typically:</p>
+<p>Generally, in spreadsheets this functionality is basic and represented by one or several columns with applicability indicators, typically:</p>
 <ul>
-<li>Applicable to case 1,</li>
-<li>Applicable to case 2,</li>
-<li>Etc.</li>
+<li>Applicable to case <code>1</code>,</li>
+<li>Applicable to case <code>2</code>,</li>
+<li>...</li>
+<li>Applicable to case <code>N</code>,</li>
 <li>Applicable to all cases.</li>
 </ul>
 <p>For sure, those indicators can become quite complex in complex spreadsheets with macros. As we explained in the article about <a href="../conf-mgt/">configuration management in PLMs</a>, the manufacturing area needs to manage more or less complex configurations.</p>
-<p>Most of time, in spreadsheets managing some aspect of the lifecycle of some business objects, there is a notion of applicability management that opens to the management of some business object configurations.</p>
+<p>Most of time, in spreadsheets managing some aspect of the lifecycle of some business objects, there is a notion of applicability management that opens to the management of some configurations.</p>
 <h2 id="pdm-and-detailed-design-centric-plm">PDM and detailed-design centric PLM</h2>
 <p>Most manufacturing companies use now PDM systems for their core detailed design process. Because many disciplines are collaborating to the design of a complex product (mechanical engineering, electrical engineering, electronics, engines, etc.), the product detailed design process was put in the center of preoccupations in many companies, which is understandable.</p>
-<p>However, many other domains are still not covered, despite the fact that the manipulated business objects are requiring the four core functions we just discussed. In the coming years, light PLM engines will be more and more used to address the requirements of managing the lifecycle of business objects that are around the detailed design.</p>
+<p>However, outside the detailed design world, many other domains are often still not covered by PLM software. When the manipulated business objects are requiring the four core functions we just discussed, light PLM engines can provide the four basic functions we just mentioned.</p>
+<p>We think this phenomenon will generalize in the coming years, as fast as the maturity of the industry to realize that most of the data that are managed in spreadsheets need the four core functions we just detailed.</p>
 <h2 id="extending-the-scope-of-plms-to-several-business-domains">Extending the scope of PLMs to several business domains</h2>
 <p>Modern PLM systems are able to manage many business object lifecycles. In most of them, it is also possible to easily implement your own business objects and to define their custom lifecycle, benefiting from the PLM engine.</p>
-<p>Considering those capabilities, the question is: Why not integrate many business objects coming from various business domains inside a single PLM that would be in charge of the management of all the business object lifecycle? It exists in the ERP (Enterprise Resource Planning) world and why wouldn't it be possible in the PLM world?</p>
-<p>This question is a complex one and it is linked to the optimal mapping of several interlinked business object lifecycles.</p>
-<p>We already brought some elements of response in previous articles such as <a href="../data-interop/">the real nature of data</a>. We intend to bring more elements in a next article of this series.</p>
+<p>Considering those capabilities, the question is: Why not integrate many new business objects coming from various business domains inside a single PLM that would be in charge of the management of all the business object lifecycle, on top of the existing detailed design process? This approach exists in the ERP (Enterprise Resource Planning) world and why wouldn't it be possible in the PLM world?</p>
+<p>This question is a complex one and it is linked to the optimal mapping of several interlinked business object lifecycles. We already brought some elements of response in previous articles such as <a href="../data-interop/">the real nature of data</a>. We intend to bring more elements in a next article of this series, dedicated to the question.</p>
 <h2 id="spreadsheet-replacement-risks">Spreadsheet replacement risks</h2>
 <p>If the industrial area can reuse the same approaches used in the tertiary sector for some processes, there are many cases where the basic solutions of the tertiary sector are not applicable, due to the specific core requirements attached to data we just saw.</p>
-<p>Classic solution of replacement of spreadsheet-based processes are, often, not applicable easily in the industry.</p>
-<p>The most classical cases are to try to replace a spreadsheet by a custom development, typically a web application, or a customized content management system (CMS). In the first situation, the focus was made on the data whereas in the second situation, the focus was made on attached documents.</p>
-<p>In both cases, if the business objects that are manipulated are requiring the four core functions we have detailed, the development team will progressively discover the extent of the complexity managed manually outside the spreadsheet. This can jeopardize the success of the project.</p>
-<p>Many projects that were appearing as simple reveal themselves as being very complex. This situation happens sometimes when IT service companies took commitments without understanding the full complexity of the project.</p>
+<p>The most classical cases are to try to replace a spreadsheet by a custom development, typically:</p>
+<ul>
+<li>A specific web application,</li>
+<li>A customized content management system (CMS).</li>
+</ul>
+<p>In the first situation, the focus is made on the data management whereas in the second situation, the focus is made on attached documents.</p>
+<p>In both cases, if the business objects that are manipulated are requiring the four core functions we have detailed, the development team may progressively discover the extent of the complexity managed manually outside the spreadsheet. This can jeopardize the success of the project.</p>
+<p>Many projects that were appearing as simple reveal themselves as being very complex. This situation happens regularly when IT service companies took commitments without understanding the full complexity of the project.</p>
 <h2 id="the-difficulty-of-replacing-spreadsheet-based-processes">The difficulty of replacing spreadsheet-based processes</h2>
-<p>We think the need for the four core functions we detailed indicates that there is a need for a PLM engine, even if it is a simple one, and that need cannot be easily satisfied with other more common IT solutions.</p>
+<p>We think the need for the four core functions we detailed indicates that there is a need for a PLM engine, even if it is a simple one, and that need cannot be easily satisfied with other more common IT solutions (unless people want to redevelop those four core functions).</p>
 <p>In the manufacturing business, for instance in the aerospace, many people ask why so many processes are based on spreadsheets. A possible explanation is that, considering the very nature of industrial data, it is often surprisingly complex to replace some manual spreadsheet-based processes.</p>
+<p>If your business data need the four functions we detailed, you need a PLM.</p>
 <h2 id="notes">Notes</h2>
 <ul>
 <li><a name="note1"></a> <strong>Note 1</strong>: We can note that it appears more and more important to also track the very early choices, or "design justification". Quite often, during the early design phase, system engineering methods were applied in order to perform complex trade-offs that lead to a certain product architecture. This can be seen as an "generalization" of the change management process, i.e. the capability of going back in the past to find back the original design choices.</li>
