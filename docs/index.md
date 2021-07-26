@@ -2,7 +2,7 @@
 
 ## Papers on PLM
 
-* **NEW** - [The four core functions showing you need a PLM](spreadsheet-and-PLM.md)
+* **NEW** - [The four core functions showing you need a PLM](articles/spreadsheet-and-PLM.md)
 * **NEW** - [Configuration management of industrial products in PDM/PLM](articles/conf-mgt.md)
 * [PLM and graph data](articles/about-plm.md)
 
