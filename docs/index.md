@@ -1,16 +1,26 @@
 # Olivier Rey's Papers
 
-## Papers
+## Papers on PLM
 
+* **NEW** - [The four core functions showing you need a PLM](spreadsheet-and-PLM.md)
 * **NEW** - [Configuration management of industrial products in PDM/PLM](articles/conf-mgt.md)
-* **NEW** - [PLM and graph data](articles/about-plm.md)
-* [The real nature of data](articles/data-interop.md)
+* [PLM and graph data](articles/about-plm.md)
+
+## Papers on modeling
+
 * [Military Frameworks, Systems Engineering and Enterprise Architecture](articles/mbse-vs-ea.md)
 * [Archimate Recipes](articles/archimate-recipes.md)
 * [An Introduction to The Archimate Revolution](articles/archimate-intro.md)
 * [A Simple Meta-Model for Portfolio Management](articles/portfolio.md)
+
+## Papers on data and interoperability
+
+* [The real nature of data](articles/data-interop.md)
 * [GraphQL And Classic Web Services](articles/graphql-web-services.md)
 * [Considerations about Rest and Web Services](articles/about-rest.md)
+
+## Papers on IT processes
+
 * [The Various Stages of Digital Transformation](articles/various-stages.md)
 * [The V2 Vortex](articles/the-v2-vortex.md)
 * [The Five Levels of Conceptual Maturity for IT Teams](articles/five-levels.md)
@@ -46,6 +56,6 @@ Project page: [Semantic data migration project](research/data-mig.md) (2018-now)
     * [Towards a graph-oriented programming language?](research/graph-oriented-pl.md)
     * [Resources](research/resources.md)
 
-*(Last update: May 2021)*
+*(Last update: July 2021)*
 
 

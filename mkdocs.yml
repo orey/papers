@@ -20,20 +20,24 @@ nav:
     - 'Index': 'index.md'
     - 'Author': 'about/about.md'
     - 'License': 'about/LICENSE.md'
-- Articles:
-    - 'The Five Levels of Conceptual Maturity for IT Teams': 'articles/five-levels.md'
-    - 'The V2 Vortex': 'articles/the-v2-vortex.md'
-    - 'The Various Stages of Digital Transformation': 'articles/various-stages.md'
-    - 'Considerations About Rest And Web Services': 'articles/about-rest.md'
-    - 'GraphQL And Classic Web Services': 'articles/graphql-web-services.md'
+- PLM:
+    - 'PLM and graph data': 'articles/about-plm.md'
+    - 'Configuration management of industrial products in PDM/PLM': 'articles/conf-mgt.md'
+    - 'The four core functions showing you need a PLM': 'articles/spreadsheet-and-PLM.md'
+- Modeling:
     - 'A Simple Meta-Model for Portfolio Management': 'articles/portfolio.md'
     - 'An Introduction to The Archimate Revolution': 'articles/archimate-intro.md'
     - 'Archimate Recipes': 'articles/archimate-recipes.md'
     - 'Military frameworks, systems engineering and enterprise architecture': 'articles/mbse-vs-ea.md'
+- Data:
+    - 'Considerations About Rest And Web Services': 'articles/about-rest.md'
+    - 'GraphQL And Classic Web Services': 'articles/graphql-web-services.md'
     - 'The real nature of data': 'articles/data-interop.md'
-    - 'PLM and graph data': 'articles/about-plm.md'
-    - 'Configuration management of industrial products in PDM/PLM': 'articles/conf-mgt.md'
-- Graph-oriented programming:
+- IT:    
+    - 'The Five Levels of Conceptual Maturity for IT Teams': 'articles/five-levels.md'
+    - 'The V2 Vortex': 'articles/the-v2-vortex.md'
+    - 'The Various Stages of Digital Transformation': 'articles/various-stages.md'
+- Graph:
     - 'First article on graph-oriented programming': 'graph/first-article.md'
     - 'Conference at the STAF/ICGT 2018 in Toulouse': 'graph/staf-icgt2018.md'
     - 'GraphApps project page': 'research/graphapps.md'
