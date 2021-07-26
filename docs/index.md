@@ -58,4 +58,3 @@ Project page: [Semantic data migration project](research/data-mig.md) (2018-now)
 
 *(Last update: July 2021)*
 
-
