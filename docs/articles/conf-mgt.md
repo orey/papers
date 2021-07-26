@@ -367,4 +367,17 @@ The migration from the first to the second is a complicated but very interesting
 
 The graph data are at the core of the PLM systems.
 
+## See also
+
+The series of articles about PLM:
+
+* Article 1: [PLM and graph data](about-plm.md "PLM and graph data")
+* Article 3: [The four core functions showing you need a PLM](spreadsheet-and-PLM.md)
+
+Other connected articles:
+
+* [The real nature of data](data-interop.md "The real nature of data")
+
+
 *(July 2021)*
+

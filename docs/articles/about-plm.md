@@ -218,7 +218,14 @@ This is not trivial and the purpose of most of the pages of this site.
 
 ## See also
 
-Read also the second article on PLM: [Configuration management of industrial products in PDM/PLM](conf-mgt.md)
+Other articles on the PLM series:
 
+* Article 2: [Configuration management of industrial products in PDM/PLM](conf-mgt.md)
+* Article 3: [The four core functions showing you need a PLM](spreadsheet-and-PLM.md)
 
-(*May 2021*)
+Other connected articles:
+
+* [The real nature of data](data-interop.md "The real nature of data")
+
+(*May 2021, updated July 2021*)
+
