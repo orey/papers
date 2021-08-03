@@ -271,8 +271,10 @@
 <p>Let us note X<sub>k</sub> = (x<sub>k1</sub>, x<sub>k2</sub>, ..., x<sub>kn</sub>) and Y<sub>m</sub> = (y<sub>m1</sub>, y<sub>m2</sub>, ..., y<sub>mp</sub>).</p>
 <p>Let us suppose we have a set of known inputs and related known outputs, (X<sub>k</sub>, Y<sub>m</sub>) for (k,m) known.</p>
 <p>Considering a predefined neural network with nodes and edges in layers, we can use an algorithm to define characteristics of nodes and edges so that we define a function f like following:</p>
+<blockquote>
 <p>f : D<sub>1</sub> x D<sub>2</sub> x ... X D<sub>n</sub> &rarr; R<sub>1</sub> x R<sub>2</sub> x ... x R<sub>p</sub></p>
 <p>(x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>) &rarr; (y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>p</sub>)</p>
+</blockquote>
 <p>For this function: f(X<sub>k</sub>) = Y<sub>m</sub></p>
 <p>f is an interpolation function, defined by an algorithm.</p>
 <p>The idea of neural networks is that f is a continuous function and so, if we take X<sub>i</sub> so that | X<sub>k</sub> - X<sub>i</sub> | &lt; &epsi; then we can use f to evaluate f(X<sub>i</sub>).</p>
