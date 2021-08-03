@@ -58,4 +58,4 @@ nav:
     - Various:
         - 'Reflections on industry data': 'research/industry-data.md'
         - 'UML to RDF considerations': 'research/rdf-design-patterns.md'
-    - 'Resources': 'research/resources.md'
+        - 'Resources': 'research/resources.md'

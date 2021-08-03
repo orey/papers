@@ -1,8 +1,36 @@
 # Reflections on  machine learning (ML)
 
+![Robot](../images/robot.jpg)
+
+*Photo by [oliver brandt](https://freeimages.com/photographer/ollinger-36628) from [FreeImages](https://freeimages.com)*
+
+Machine learning based on neural networks attracted much attention and credits those last decades, up to the point that, boosted by marketing, an anti-scientific approach is sold as being the solution to all problems.
+
 ## An interpolation function working in extrapolation mode
 
-The banana disappears
+Basically, a neural network is the fruit of an algorithm of multi-variable function construction based on interpolation.
+
+Suppose we have a problem with n dimensions in input and p dimensions in output. For every know assertion that we know, an input of the problem (x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>) and its corresponding output (y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>p</sub>) are known.
+
+Let us note X<sub>k</sub> = (x<sub>k1</sub>, x<sub>k2</sub>, ..., x<sub>kn</sub>) and Y<sub>m</sub> = (y<sub>m1</sub>, y<sub>m2</sub>, ..., y<sub>mp</sub>).
+
+Let us suppose we have a set of known inputs and related known outputs, (X<sub>k</sub>, Y<sub>m</sub>) for (k,m) known.
+
+Considering a predefined neural network with nodes and edges in layers, we can use an algorithm to define characteristics of nodes and edges so that we define a function f like following:
+
+f : D<sub>1</sub> x D<sub>2</sub> x ... X D<sub>n</sub> &rarr; R<sub>1</sub> x R<sub>2</sub> x ... x R<sub>p</sub>
+
+(x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>) &rarr; (y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>p</sub>)
+
+For this function: f(X<sub>k</sub>) = Y<sub>m</sub>
+
+f is an interpolation function, defined by an algorithm.
+
+The idea of neural networks is that f is a continuous function and so, if we take X<sub>i</sub> so that | X<sub>k</sub> - X<sub>i</sub> | < &epsi; then we can use f to evaluate f(X<sub>i</sub>).
+
+That means that the f function that is an *interpolation* function can be used, under certain conditions, as an *extrapolation* function.
+
+## The banana disappears
 
 ## A delirium about artificial intelligence
 
