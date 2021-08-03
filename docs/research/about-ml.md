@@ -1,19 +1,27 @@
-# Reflections on  machine learning (ML)
+# Reflections on neural networks and machine learning
 
 ![Robot](../images/robot.jpg)
 
 *Photo by [oliver brandt](https://freeimages.com/photographer/ollinger-36628) from [FreeImages](https://freeimages.com)*
 
-Machine learning based on neural networks attracted much attention and credits those last decades, up to the point that, boosted by marketing, an anti-scientific approach is sold as being the solution to all problems.
+Machine learning based on neural networks attracted much attention and credits those last decades (after a long "winter of AI") up to the point that, boosted by marketing, an anti-scientific approach is sold as being the solution to all problems.
 
-## An interpolation function working in extrapolation mode
+In this article, we will try to recall the simple mathematical foundation behind neural networks.
 
-Basically, a neural network is the fruit of an algorithm of multi-variable function construction based on interpolation.
+## What is a neural network?
 
-Suppose we have a problem with n dimensions in input and p dimensions in output. For every know assertion that we know:
+Basically, a built neural network in "supervised learning" is:
 
-* An input of the problem (x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>),
-* Its corresponding output (y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>p</sub>) are known.
+* A mathematical function `f` of several variable;
+* A complex function construction algorithm:
+    * Using a representation of neurons and axons that was used to create the function `f`,
+    * Based on a list of inputs of the form (x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>), matching with outputs of the form (y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>p</sub>).
+
+There are many techniques to build the function `f`, hence the variety of machine learning algorithms.
+
+We will not talk now on unsupervised learning.
+
+## An interpolation function
 
 Let us note :
 
@@ -29,31 +37,105 @@ Considering a predefined neural network with nodes and edges in layers, we can u
 
 > (x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>) &rarr; (y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>p</sub>)
 
-For this function: f(X<sub>k</sub>) = Y<sub>m</sub>
+To create this function, the algorithm used tried, more of less, to satisfy the following hypothesis:
 
-f is an interpolation function, defined by an algorithm.
+> f(X<sub>k</sub>) = Y<sub>m</sub>
 
-The idea of neural networks is that f is a continuous function and so, if we take X<sub>i</sub> so that | X<sub>k</sub> - X<sub>i</sub> | < &epsi; then we can use f to evaluate f(X<sub>i</sub>).
+This is called "training the network".
 
-That means that the f function that is an *interpolation* function can be used, under certain conditions, as an *extrapolation* function.
+`f` is an interpolation function, defined by an algorithm. Once defined, `f` is a function of many variables that has the following characteristics:
 
-## The banana disappears
+* It is probable that | f(X<sub>k</sub>) - Y<sub>m</sub> | < &epsi; if not f(X<sub>k</sub>) = Y<sub>m</sub>
+* The determined global function is not mathematically known: So, it can have singular points.
 
+## An interpolation function working in extrapolation mode
+
+The idea of neural networks is to assume that `f` is a continuous function at least in the neighborhood of the known hyper-points X<sub>i</sub>, which means that:
+
+> Let X<sub>i</sub> so that | X<sub>k</sub> - X<sub>i</sub> | < &epsi;
+
+> This implies that | f(X<sub>k</sub>) - f(X<sub>i</sub>) | < &epsi;'
+
+When `f` matches this assertion, that means that we can use `f` as an extrapolation function and consider that its evaluation on X<sub>i</sub> is valid.
+
+But the problem is that we have no ways of *knowing* that `f` is really continuous in a neighborhood of an hyperpoint.
 
 ![Alt text](../images/potential-well.gif)
 
-Figure 1: Two potential wells in a surface. *Image from [wired.com](https://www.wired.com/wp-content/uploads/2014/06/63-plaster-logarithmics.gif)*
+*Figure 1: Two potential wells in a surface. Image from [wired.com](https://www.wired.com/wp-content/uploads/2014/06/63-plaster-logarithmics.gif)*
 
+In the Figure 1, we can see an artist representation of two singularities in a 3D curve:
 
+* One where `z` tends to +&infin;,
+* One where `z` tends to -&infin;.
 
+That means, for the first singularity, that we have the following situation:
 
-## A delirium about artificial intelligence
+> For a X<sub>i</sub> so that | X<sub>k</sub> - X<sub>i</sub> | < &epsi;
 
-not intelligence
+> | f(X<sub>k</sub>) - f(X<sub>i</sub>) | >> &epsi;'
 
-## ML is anti-science
+Even if this case is a bit simplistic, this simple sample shows that the hyper-surface created by the neural network construction algorithm is *unknown*.
 
-philosophical arguments
+Indeed, it shows what every mathematician knows for ages: That an interpolation function should not be used as an extrapolation function.
+
+## The strange idea to compensate by big data
+
+Well, then why so many people are relying on machine learning algorithms? First of all because they don't understand what they do, and secondly because they believe that big data will solve it all.
+
+The first idea (which is an engineer's idea) is that if we have many many data to feed the algorithm with, we will have many hyper-points in the `f(X)` hyper-surface. This will imply that the `f(X)` will generate a reliable function to be used in extrapolation mode.
+
+For sure, even if the idea is not stupid, in the general case, it is just a wish.
+
+The second idea (also an engineer's idea) is to say that better have the neural network than nothing. At least, "most of the time", the extrapolation does work and provides relevant results.
+
+This second idea is backed by a very worrying corollary that is that humans make mistakes, and so it is acceptable that computers do too...
+
+We can note three philosophical points that are shifting from the past:
+
+* There is a belief that brute force can compensate bad mathematics;
+* There is a new definition of "good" which is no more "exact", but "exact most of the time", which is an acceptation of a significant error level;
+* It becomes acceptable that the computer makes errors, as an human would have done.
+
+## But the banana disappears
+
+![The banana experiment](../images/banana.png)
+
+*Figure 2: The banana disappears. Taken from [Brown et al. 2017](https://arxiv.org/pdf/1712.09665.pdf)*
+
+Without any surprise, Brown et al. demonstrated in their article *Adversarial patch* that it was possible to mislead a neural network training to recognize some images. What they claim is even worse, because they claim it was possible to structurally mislead all neural networks that were used as image classifiers.
+
+That is showing the structural flows of this technique. For sure, there are flaws but in many processes where the artificial neural networks are used, do we really know where are the flaws?
+
+## The marvelous ubiquitous tool for unskilled people
+
+In the hype of machine learning, another element is crucial. It is possible to learn all those data crunching techniques and to pretend being able to apply them to whatever domain. In a sense, machine learning is the *ubiquitous tool*.
+
+More: We don't need to be skilled, meaning *in the business area where we do data science*. Our skills in machine learning will be enough.
+
+We tried to explain, in our article [the real nature of data](../articles/data-interop.md), why data was a complex output product, result of the intersection of a semantic domain and some use cases.
+
+With machine learning, we take a reverse approach: Data becomes the input and you can discover things from it with generic tools without even knowing their limitations!
+
+## This is not intelligence, this is even not science
+
+For sure, artificial neural networks are not intelligence, far from it. It is not science, because science always took the same method:
+
+* First, observe what is;
+* Second, try to model what is, with laws and operational models implementing those laws;
+* Third, iterate and compare the laws of your model and the reality and align your laws on the reality.
+
+Neural networks are a complete perversion of the scientific method because:
+
+* There is no thinking about a law; instead, this is replaced by an algorithm generating a function based on data;
+* The only way to enrich your model when you don't understand what it is doing is to retrain it with all the samples that were in error, hoping that the new model will be better because it was trained on more data; That means you can't enrich your laws but just throw your model and create a new one with more data, without any indication that this new model will be better than the previous one or will not show flows where the previous one didn't have those.
+
+Indeed, you don't enhance knowledge, because the create model is not the fruit of intelligence, observation, modeling and tuning; it is the fruit of an algorithm working on data.
+
+There is no understanding on what's going on at all. There is no progress of science. On the contrary, by taking output products as input products, we can be in incredibly absurd situations. A good image would be to try to understand how Emacs works on a PC with the database of all electrical currents in a computer. Data are an output product, and they were generated in a very specific semantic context with very specific business rules.
+
+**Reprendre ici**
+
 
 ## Semantic representation of reality
 
