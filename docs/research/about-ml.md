@@ -10,9 +10,16 @@ Machine learning based on neural networks attracted much attention and credits t
 
 Basically, a neural network is the fruit of an algorithm of multi-variable function construction based on interpolation.
 
-Suppose we have a problem with n dimensions in input and p dimensions in output. For every know assertion that we know, an input of the problem (x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>) and its corresponding output (y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>p</sub>) are known.
+Suppose we have a problem with n dimensions in input and p dimensions in output. For every know assertion that we know:
 
-Let us note X<sub>k</sub> = (x<sub>k1</sub>, x<sub>k2</sub>, ..., x<sub>kn</sub>) and Y<sub>m</sub> = (y<sub>m1</sub>, y<sub>m2</sub>, ..., y<sub>mp</sub>).
+* An input of the problem (x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>),
+* Its corresponding output (y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>p</sub>) are known.
+
+Let us note :
+
+> X<sub>k</sub> = (x<sub>k1</sub>, x<sub>k2</sub>, ..., x<sub>kn</sub>)
+
+> And Y<sub>m</sub> = (y<sub>m1</sub>, y<sub>m2</sub>, ..., y<sub>mp</sub>).
 
 Let us suppose we have a set of known inputs and related known outputs, (X<sub>k</sub>, Y<sub>m</sub>) for (k,m) known.
 
@@ -31,6 +38,14 @@ The idea of neural networks is that f is a continuous function and so, if we tak
 That means that the f function that is an *interpolation* function can be used, under certain conditions, as an *extrapolation* function.
 
 ## The banana disappears
+
+
+![Alt text](../images/potential-well.gif)
+
+Figure 1: Two potential wells in a surface. *Image from [wired.com](https://www.wired.com/wp-content/uploads/2014/06/63-plaster-logarithmics.gif)*
+
+
+
 
 ## A delirium about artificial intelligence
 
