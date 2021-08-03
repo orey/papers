@@ -42,7 +42,7 @@ nav:
     - 'Conference at the STAF/ICGT 2018 in Toulouse': 'graph/staf-icgt2018.md'
     - 'GraphApps project page': 'research/graphapps.md'
 - Semantic Web:
-    - 'Aerospace data migration': 'semantic/data-migration.md'
+    - 'Aerospace data migration': 'research/data-mig.md#madics'
     - 'Semantic data migration project page': 'research/data-mig.md'
 - Research:
     - 'Index': 'research/index-research.md'

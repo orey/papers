@@ -34,27 +34,25 @@ This section contains materials about graph-oriented programming, solving the te
 
 Project page: [GraphApps project](research/graphapps.md) project (2013-2018)
 
-## Semantic web
+## Research section: Graph transformations and semantic data migration
 
-* [Using semantic web technologies for aerospace industrial data migration, Madics 2019](semantic/data-migration.md)
+[Index](research/index-research.md)
 
-Project page: [Semantic data migration project](research/data-mig.md) (2018-now)
-
-## Research section
-
-  * [Index](research/index-research.md)
-    * [Graph transformations](research/graph-transfo.md)
-      * [Basic graph transformations](research/basic-graph-transformations.md)
-      * [Basic semantic graph transformations](research/basic-semantic-graph-transformations.md)
-      * [DSL for graph topology check](research/DSL-for-graph-topology-checks.md)
-      * [Graph transformation applicability](research/graph-transformation-applicability.md)
-      * [Grammar of graph transformation](research/grammar-graph-transformation.md)
-      * [Graph-oriented programming language](research/graph-oriented-pl.md)
-  * More
+* [Graph transformations](research/graph-transfo.md)
+    * [Basic graph transformations](research/basic-graph-transformations.md)
+    * [Basic semantic graph transformations](research/basic-semantic-graph-transformations.md)
+    * [DSL for graph topology check](research/DSL-for-graph-topology-checks.md)
+    * [Graph transformation applicability](research/graph-transformation-applicability.md)
+    * [Grammar of graph transformation](research/grammar-graph-transformation.md)
+    * [Graph-oriented programming language](research/graph-oriented-pl.md)
+* [Semantic data migration project](research/data-mig.md) (2018-now)
+    * [Using semantic web technologies for aerospace industrial data migration, Madics 2019](research/data-mig.md#madics)
+* More
     * [UML to RDF considerations](research/rdf-design-patterns.md) - *Updated June 2020*
     * [Reflections on industry data](research/industry-data.md)
     * [Towards a graph-oriented programming language?](research/graph-oriented-pl.md)
     * [Resources](research/resources.md)
 
-*(Last update: July 2021)*
+
+*(Last update: August 2021)*
 

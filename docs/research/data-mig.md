@@ -1,11 +1,5 @@
 # Semantic data migration project
 
-## Presentation to CNRS Madics conference in 2019
-
-You can read the following article :
-
-  * [Using semantic web technologies for aerospace industrial data migration, Madics 2019](../semantic/data-migration.md)
-
 ## First research elements (2018-2020)
 
 ### Why?
@@ -29,6 +23,17 @@ In the context of [graph transformations](graph-transfo.md), the page [Basic sem
 ### Industry data
 
 The page [Graphs and semantic data in industry](industry-data.md) talks about the opportunity of using RDF approaches to convert efficiently industrial data.
+
+## Presentation to CNRS Madics conference in Rennes in 2019
+<a name="madics"></a>
+
+![Madics 2019](../images/madics2019.png)
+
+The aerospace industry is managing aircraft products with PLM (product lifecycle management) software. Most of the time, the PLM software used are very customized and very old. Moreover in the day to day life, people are using a mix of various PLM systems and Excel spreadsheets. In order to change the business practices for the 3 core businesses of the aerospace companies (design office, manufacturing, support and services), the PLM backbones must evolve on two dimensions: first they must gather all data spread across various tools per business, and second they must integrate the three businesses together (digital continuity) in order to perform efficient concurrent engineering and gain on lead times. New end to end PLM backbones are available on the market but the migration to those products is slowed down by the lack of method and tools to properly migrate the data. The main constraint of PLM data migration is to be able to keep all the semantic links of past data into the new system, because the aircraft certification is tied to those links and data. At the intersection of all those constraints, the semantic web technologies (RDF/RDFS, Triplestores, SPARQL-based rules, etc.) can help Airbus to convert its core industrial data to migrate them into new generations of PLM systems.
+
+The presentation exposes a concrete industrial case and explain the status of the works and the tool chain involved in those works.
+
+[Presentation](../pdf/20190628-UsingSemanticWebTechnologiesForIndustrialDataMigration-ORey-v1-0.pdf)
 
 ## A systematic migration process (2020-)
 
@@ -56,5 +61,5 @@ This process is based on the facts that:
 
 See also: [The real nature of data](../articles/data-interop.md).
 
-*(Last update: June 2020)*
+*(Last update: August 2021)*
 
