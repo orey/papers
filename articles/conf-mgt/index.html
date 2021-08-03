@@ -9,225 +9,230 @@
         <link rel="canonical" href="https://orey.github.io/papers/articles/conf-mgt/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Configuration management of industrial products in PDM/PLM - Papers</title>
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZMZKWJP2V"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-BZMZKWJP2V');
-        </script> 
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
     <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
-                <a class="navbar-brand" href="../..">Papers</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Papers</a>
+                </div>
 
                 <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
+                <div class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li>
-    <a href="../.." class="dropdown-item">Index</a>
+<li >
+    <a href="../..">Index</a>
 </li>
                                     
-<li>
-    <a href="../../about/about/" class="dropdown-item">Author</a>
+<li >
+    <a href="../../about/about/">Author</a>
 </li>
                                     
-<li>
-    <a href="../../about/LICENSE/" class="dropdown-item">License</a>
+<li >
+    <a href="../../about/LICENSE/">License</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">PLM <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">PLM <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li>
-    <a href="../about-plm/" class="dropdown-item">PLM and graph data</a>
+<li >
+    <a href="../about-plm/">PLM and graph data</a>
 </li>
                                     
-<li>
-    <a href="./" class="dropdown-item active">Configuration management of industrial products in PDM/PLM</a>
+<li class="active">
+    <a href="./">Configuration management of industrial products in PDM/PLM</a>
 </li>
                                     
-<li>
-    <a href="../spreadsheet-and-PLM/" class="dropdown-item">The four core functions showing you need a PLM</a>
+<li >
+    <a href="../spreadsheet-and-PLM/">The four core functions showing you need a PLM</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Modeling <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Modeling <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li>
-    <a href="../portfolio/" class="dropdown-item">A Simple Meta-Model for Portfolio Management</a>
+<li >
+    <a href="../portfolio/">A Simple Meta-Model for Portfolio Management</a>
 </li>
                                     
-<li>
-    <a href="../archimate-intro/" class="dropdown-item">An Introduction to The Archimate Revolution</a>
+<li >
+    <a href="../archimate-intro/">An Introduction to The Archimate Revolution</a>
 </li>
                                     
-<li>
-    <a href="../archimate-recipes/" class="dropdown-item">Archimate Recipes</a>
+<li >
+    <a href="../archimate-recipes/">Archimate Recipes</a>
 </li>
                                     
-<li>
-    <a href="../mbse-vs-ea/" class="dropdown-item">Military frameworks, systems engineering and enterprise architecture</a>
+<li >
+    <a href="../mbse-vs-ea/">Military frameworks, systems engineering and enterprise architecture</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Data <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li>
-    <a href="../about-rest/" class="dropdown-item">Considerations About Rest And Web Services</a>
+<li >
+    <a href="../about-rest/">Considerations About Rest And Web Services</a>
 </li>
                                     
-<li>
-    <a href="../graphql-web-services/" class="dropdown-item">GraphQL And Classic Web Services</a>
+<li >
+    <a href="../graphql-web-services/">GraphQL And Classic Web Services</a>
 </li>
                                     
-<li>
-    <a href="../data-interop/" class="dropdown-item">The real nature of data</a>
+<li >
+    <a href="../data-interop/">The real nature of data</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">IT <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">IT <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li>
-    <a href="../five-levels/" class="dropdown-item">The Five Levels of Conceptual Maturity for IT Teams</a>
+<li >
+    <a href="../five-levels/">The Five Levels of Conceptual Maturity for IT Teams</a>
 </li>
                                     
-<li>
-    <a href="../the-v2-vortex/" class="dropdown-item">The V2 Vortex</a>
+<li >
+    <a href="../the-v2-vortex/">The V2 Vortex</a>
 </li>
                                     
-<li>
-    <a href="../various-stages/" class="dropdown-item">The Various Stages of Digital Transformation</a>
+<li >
+    <a href="../various-stages/">The Various Stages of Digital Transformation</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Graph <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Graph <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li>
-    <a href="../../graph/first-article/" class="dropdown-item">First article on graph-oriented programming</a>
+<li >
+    <a href="../../graph/first-article/">First article on graph-oriented programming</a>
 </li>
                                     
-<li>
-    <a href="../../graph/staf-icgt2018/" class="dropdown-item">Conference at the STAF/ICGT 2018 in Toulouse</a>
+<li >
+    <a href="../../graph/staf-icgt2018/">Conference at the STAF/ICGT 2018 in Toulouse</a>
 </li>
                                     
-<li>
-    <a href="../../research/graphapps/" class="dropdown-item">GraphApps project page</a>
+<li >
+    <a href="../../research/graphapps/">GraphApps project page</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Semantic Web <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Semantic Web <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li>
-    <a href="../../semantic/data-migration/" class="dropdown-item">Aerospace data migration</a>
+<li >
+    <a href="../../research/data-mig.md#madics">Aerospace data migration</a>
 </li>
                                     
-<li>
-    <a href="../../research/data-mig/" class="dropdown-item">Semantic data migration project page</a>
+<li >
+    <a href="../../research/data-mig/">Semantic data migration project page</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Research <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Research <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li>
-    <a href="../../research/index-research/" class="dropdown-item">Index</a>
+<li >
+    <a href="../../research/index-research/">Index</a>
 </li>
                                     
-<li>
-    <a href="../../research/graph-transfo/" class="dropdown-item">Graph transformations</a>
+<li >
+    <a href="../../research/graph-transfo/">Graph transformations</a>
 </li>
                                     
-<li>
-    <a href="../../research/basic-graph-transformations/" class="dropdown-item">Basic graph transformations</a>
+<li >
+    <a href="../../research/basic-graph-transformations/">Basic graph transformations</a>
 </li>
                                     
-<li>
-    <a href="../../research/basic-semantic-graph-transformations/" class="dropdown-item">Basic semantic graph transformations</a>
+<li >
+    <a href="../../research/basic-semantic-graph-transformations/">Basic semantic graph transformations</a>
 </li>
                                     
-<li>
-    <a href="../../research/DSL-for-graph-topology-checks/" class="dropdown-item">DSL for graph topology check</a>
+<li >
+    <a href="../../research/DSL-for-graph-topology-checks/">DSL for graph topology check</a>
 </li>
                                     
-<li>
-    <a href="../../research/graph-transformation-applicability/" class="dropdown-item">Graph transformation applicability</a>
+<li >
+    <a href="../../research/graph-transformation-applicability/">Graph transformation applicability</a>
 </li>
                                     
-<li>
-    <a href="../../research/grammar-graph-transformation/" class="dropdown-item">Grammar of graph transformation</a>
+<li >
+    <a href="../../research/grammar-graph-transformation/">Grammar of graph transformation</a>
 </li>
                                     
-<li>
-    <a href="../../research/graph-oriented-pl/" class="dropdown-item">Graph-oriented programming language</a>
+<li >
+    <a href="../../research/graph-oriented-pl/">Graph-oriented programming language</a>
 </li>
                                     
-<li>
-    <a href="../../research/industry-data/" class="dropdown-item">Reflections on industry data</a>
+<li >
+    <a href="../../research/industry-data/">Reflections on industry data</a>
 </li>
                                     
-<li>
-    <a href="../../research/rdf-design-patterns/" class="dropdown-item">UML to RDF considerations</a>
+<li >
+    <a href="../../research/rdf-design-patterns/">UML to RDF considerations</a>
 </li>
                                     
-<li>
-    <a href="../../research/graph-oriented-pl/" class="dropdown-item">Towards a graph-oriented programming language?</a>
+<li >
+    <a href="../../research/graph-oriented-pl/">Towards a graph-oriented programming language?</a>
 </li>
                                     
-<li>
-    <a href="../../research/resources/" class="dropdown-item">Resources</a>
+<li >
+    <a href="../../research/resources/">Resources</a>
 </li>
                                 </ul>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../about-plm/" class="nav-link">
+                            <li >
+                                <a rel="next" href="../about-plm/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../spreadsheet-and-PLM/" class="nav-link">
+                            <li >
+                                <a rel="prev" href="../spreadsheet-and-PLM/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -237,122 +242,36 @@
         </div>
 
         <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
-
-    
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-level="1"><a href="#configuration-management-of-industrial-products-in-pdmplm" class="nav-link">Configuration management of industrial products in PDM/PLM</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#the-old-way-filtering-the-product-tree" class="nav-link">The old way: Filtering the product tree</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#the-product-tree" class="nav-link">The product tree</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#manual-version-management-in-the-product-tree" class="nav-link">Manual version management in the product tree</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#configuration-management-using-links" class="nav-link">Configuration management using links</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#the-product-catalog" class="nav-link">The product catalog</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#managing-the-changes" class="nav-link">Managing the changes</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#special-case-applicability-management-through-changes" class="nav-link">Special case: Applicability management through changes</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#the-limitations-of-filtering-based-cm" class="nav-link">The limitations of filtering-based CM</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#work-around-isolate-from-filtering-based-configuration" class="nav-link">Work around: Isolate from filtering-based configuration</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#the-new-way-linking-static-graph-data" class="nav-link">The new way: Linking static graph data</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#reusing-components-in-the-industry" class="nav-link">Reusing components in the industry</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#the-site-specialization" class="nav-link">The site specialization</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#variants-and-customizations" class="nav-link">Variants and customizations</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#consequences-for-the-product-tree" class="nav-link">Consequences for the product tree</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#adding-versions-to-the-product-tree" class="nav-link">Adding versions to the product tree</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#materializing-the-sn-in-the-product-tree" class="nav-link">Materializing the S/N in the product tree</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#applicability" class="nav-link">Applicability</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#configuration" class="nav-link">Configuration</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#change-management" class="nav-link">Change management</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#product-catalog" class="nav-link">Product catalog</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#more-plm-features" class="nav-link">More PLM features</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#playing-with-the-digital-twin" class="nav-link">Playing with the digital twin</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#conclusion" class="nav-link">Conclusion</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#see-also" class="nav-link">See also</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
-    </div>
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#configuration-management-of-industrial-products-in-pdmplm">Configuration management of industrial products in PDM/PLM</a></li>
+            <li><a href="#the-old-way-filtering-the-product-tree">The old way: Filtering the product tree</a></li>
+            <li><a href="#the-product-tree">The product tree</a></li>
+            <li><a href="#manual-version-management-in-the-product-tree">Manual version management in the product tree</a></li>
+            <li><a href="#configuration-management-using-links">Configuration management using links</a></li>
+            <li><a href="#the-product-catalog">The product catalog</a></li>
+            <li><a href="#managing-the-changes">Managing the changes</a></li>
+            <li><a href="#special-case-applicability-management-through-changes">Special case: Applicability management through changes</a></li>
+            <li><a href="#the-limitations-of-filtering-based-cm">The limitations of filtering-based CM</a></li>
+            <li><a href="#work-around-isolate-from-filtering-based-configuration">Work around: Isolate from filtering-based configuration</a></li>
+            <li><a href="#the-new-way-linking-static-graph-data">The new way: Linking static graph data</a></li>
+            <li><a href="#reusing-components-in-the-industry">Reusing components in the industry</a></li>
+            <li><a href="#the-site-specialization">The site specialization</a></li>
+            <li><a href="#variants-and-customizations">Variants and customizations</a></li>
+            <li><a href="#consequences-for-the-product-tree">Consequences for the product tree</a></li>
+            <li><a href="#adding-versions-to-the-product-tree">Adding versions to the product tree</a></li>
+            <li><a href="#materializing-the-sn-in-the-product-tree">Materializing the S/N in the product tree</a></li>
+            <li><a href="#applicability">Applicability</a></li>
+            <li><a href="#configuration">Configuration</a></li>
+            <li><a href="#change-management">Change management</a></li>
+            <li><a href="#product-catalog">Product catalog</a></li>
+            <li><a href="#more-plm-features">More PLM features</a></li>
+            <li><a href="#playing-with-the-digital-twin">Playing with the digital twin</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="#see-also">See also</a></li>
+    </ul>
 </div></div>
-                    <div class="col-md-9" role="main">
+                <div class="col-md-9" role="main">
 
 <h1 id="configuration-management-of-industrial-products-in-pdmplm">Configuration management of industrial products in PDM/PLM</h1>
 <p>This article is the second one of a series on PLM. Please have a look at <a href="../about-plm/">PLM and Graph Data</a> article for an introduction.</p>
@@ -606,7 +525,6 @@
 <li><a href="../data-interop/" title="The real nature of data">The real nature of data</a></li>
 </ul>
 <p><em>(July 2021)</em></p></div>
-            </div>
         </div>
 
         <footer class="col-md-12">
@@ -616,37 +534,40 @@
         </footer>
         <script>
             var base_url = "../..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
         </script>
         <script src="../../js/base.js" defer></script>
         <script src="../../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
             </div>
             <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
                     <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+                <div id="mkdocs-search-results"></div>
             </div>
             <div class="modal-footer">
             </div>
         </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
             </div>
             <div class="modal-body">
               <table class="table">
