@@ -224,12 +224,12 @@
 <li >
     <a href="../rdf-design-patterns/">UML to RDF considerations</a>
 </li>
-    </ul>
-  </li>
-                                    
+            
 <li >
     <a href="../resources/">Resources</a>
 </li>
+    </ul>
+  </li>
                                 </ul>
                             </li>
                         </ul>
@@ -250,6 +250,7 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#reflections-on-machine-learning-ml">Reflections on  machine learning (ML)</a></li>
             <li><a href="#an-interpolation-function-working-in-extrapolation-mode">An interpolation function working in extrapolation mode</a></li>
+            <li><a href="#the-banana-disappears">The banana disappears</a></li>
             <li><a href="#a-delirium-about-artificial-intelligence">A delirium about artificial intelligence</a></li>
             <li><a href="#ml-is-anti-science">ML is anti-science</a></li>
             <li><a href="#semantic-representation-of-reality">Semantic representation of reality</a></li>
@@ -261,8 +262,22 @@
                 <div class="col-md-9" role="main">
 
 <h1 id="reflections-on-machine-learning-ml">Reflections on  machine learning (ML)</h1>
+<p><img alt="Robot" src="../../images/robot.jpg" /></p>
+<p><em>Photo by <a href="https://freeimages.com/photographer/ollinger-36628">oliver brandt</a> from <a href="https://freeimages.com">FreeImages</a></em></p>
+<p>Machine learning based on neural networks attracted much attention and credits those last decades, up to the point that, boosted by marketing, an anti-scientific approach is sold as being the solution to all problems.</p>
 <h2 id="an-interpolation-function-working-in-extrapolation-mode">An interpolation function working in extrapolation mode</h2>
-<p>The banana disappears</p>
+<p>Basically, a neural network is the fruit of an algorithm of multi-variable function construction based on interpolation.</p>
+<p>Suppose we have a problem with n dimensions in input and p dimensions in output. For every know assertion that we know, an input of the problem (x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>) and its corresponding output (y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>p</sub>) are known.</p>
+<p>Let us note X<sub>k</sub> = (x<sub>k1</sub>, x<sub>k2</sub>, ..., x<sub>kn</sub>) and Y<sub>m</sub> = (y<sub>m1</sub>, y<sub>m2</sub>, ..., y<sub>mp</sub>).</p>
+<p>Let us suppose we have a set of known inputs and related known outputs, (X<sub>k</sub>, Y<sub>m</sub>) for (k,m) known.</p>
+<p>Considering a predefined neural network with nodes and edges in layers, we can use an algorithm to define characteristics of nodes and edges so that we define a function f like following:</p>
+<p>f : D<sub>1</sub> x D<sub>2</sub> x ... X D<sub>n</sub> &rarr; R<sub>1</sub> x R<sub>2</sub> x ... x R<sub>p</sub></p>
+<p>(x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>) &rarr; (y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>p</sub>)</p>
+<p>For this function: f(X<sub>k</sub>) = Y<sub>m</sub></p>
+<p>f is an interpolation function, defined by an algorithm.</p>
+<p>The idea of neural networks is that f is a continuous function and so, if we take X<sub>i</sub> so that | X<sub>k</sub> - X<sub>i</sub> | &lt; &epsi; then we can use f to evaluate f(X<sub>i</sub>).</p>
+<p>That means that the f function that is an <em>interpolation</em> function can be used, under certain conditions, as an <em>extrapolation</em> function.</p>
+<h2 id="the-banana-disappears">The banana disappears</h2>
 <h2 id="a-delirium-about-artificial-intelligence">A delirium about artificial intelligence</h2>
 <p>not intelligence</p>
 <h2 id="ml-is-anti-science">ML is anti-science</h2>
