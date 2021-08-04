@@ -8,7 +8,7 @@
         <meta name="author" content="Olivier Rey">
         <link rel="canonical" href="https://orey.github.io/papers/research/about-ml/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Reflections on artificial neural networks and machine learning - Papers</title>
+        <title>About artificial neural networks and machine learning - Papers</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -248,8 +248,8 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#reflections-on-artificial-neural-networks-and-machine-learning">Reflections on artificial neural networks and machine learning</a></li>
-            <li><a href="#what-is-a-neural-network">What is a neural network?</a></li>
+        <li class="main active"><a href="#about-artificial-neural-networks-and-machine-learning">About artificial neural networks and machine learning</a></li>
+            <li><a href="#what-is-an-artificial-neural-network">What is an artificial neural network?</a></li>
             <li><a href="#an-interpolation-function">An interpolation function</a></li>
             <li><a href="#an-interpolation-function-working-in-extrapolation-mode">An interpolation function working in extrapolation mode</a></li>
             <li><a href="#big-data-and-processing-power">Big data and processing power</a></li>
@@ -259,21 +259,22 @@
             <li><a href="#belief-2-programs-can-make-mistakes-like-humans">Belief 2: Programs can make mistakes like humans</a></li>
             <li><a href="#belief-3-the-marvelous-ubiquitous-set-of-tools-for-functionally-unskilled-people">Belief 3: The marvelous ubiquitous set of tools for functionally unskilled people</a></li>
             <li><a href="#belief-4-finding-meaning-in-data-without-knowing-the-business-domain">Belief 4: Finding meaning in data without knowing the business domain</a></li>
-            <li><a href="#belief-5-the-average-wins">Belief 5: The average wins</a></li>
+            <li><a href="#belief-5-the-average-wins-and-thats-ok">Belief 5: The average wins and that's OK</a></li>
             <li><a href="#philosophical-aspects-on-science">Philosophical aspects on science</a></li>
             <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="#the-alternate-model-reasoning-on-semantic-data">The alternate model: Reasoning on semantic data</a></li>
             <li><a href="#note-on-image-encoder">Note on image encoder</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="reflections-on-artificial-neural-networks-and-machine-learning">Reflections on artificial neural networks and machine learning</h1>
+<h1 id="about-artificial-neural-networks-and-machine-learning">About artificial neural networks and machine learning</h1>
 <p><img alt="Photo of a toy robot from the 50s" src="../../images/robot.jpg" /></p>
 <p><em>Photo by <a href="https://freeimages.com/photographer/ollinger-36628">oliver brandt</a> from <a href="https://freeimages.com">FreeImages</a></em></p>
 <p>Machine learning based on artificial neural networks attracted much attention and credits those last decades (after a long "winter of AI") up to the point that, boosted by marketing, an anti-scientific approach is sold as being the solution to all problems.</p>
 <p>In this article, we will try to recall the simple mathematical foundation behind artificial neural networks, and why this technology is not reliable, even if it attracks massive investments. We will also analyze the philosophical side of the neural networks.</p>
 <p>Note: We will focus on supervised learning artificial neural networks and  will not talk now about other variants such as unsupervised learning.</p>
-<h2 id="what-is-a-neural-network">What is a neural network?</h2>
+<h2 id="what-is-an-artificial-neural-network">What is an artificial neural network?</h2>
 <p>Basically, an artificial neural network is:</p>
 <ul>
 <li>A mathematical function <code>f</code> of several variable;</li>
@@ -373,9 +374,9 @@
 <p>With machine learning, we take a reverse approach: Data becomes the <em>input</em> and you are suppose to be able to "discover" things from it, with generic tools, without, most of the time realizing those tools have limitations.</p>
 <p>In the case where the analyzed data are the fruit of a highly semantically standardized business domain (which is the case in many areas where the regulator or standards structured a particular business domain like accounting, aerospace, travel, etc.), machine learning can "rediscover" elements of this underlying structure, feeding the illusion that it found sense in data.</p>
 <p>For sure, the reasoning is bad: Data was, at the beginning, the fruit of a structured and standardized business, and machine learning will just find back some dimensions already present in the data in the first place. Generally, those discovery will established very challenge-able correlations that can be analyzed as relevant or not, only by the ones knowing the business domain.</p>
-<h2 id="belief-5-the-average-wins">Belief 5: The average wins</h2>
-<p>If we need billions of data to determine an interpolation function, we will create an interpolation function with a good score on the particular data that were used for the training. But that phenomenon will have an "averaging" effect. Indeed, statistically, the interpolation function can be quite efficient on many data but maybe not so efficient on marginal data.</p>
-<p>In a certain way, the model could erase the specificity and the particular cases. If some singular points are clearly errors of the algorithm itself, we risk creating the reverse phenomenon: Erase the margin cases under billions of average cases.</p>
+<h2 id="belief-5-the-average-wins-and-thats-ok">Belief 5: The average wins and that's OK</h2>
+<p>If we need billions of data to determine an interpolation function, we will create an interpolation function that will tend to favor the average data. And the fact is, some phenomena are not correctly represented with averages, but more with signal having a certain diversity. The more data, the more the non average data (particular cases, legitimous singular points) will be erased in the resulting interpolation function.</p>
+<p>The belief is in the fact that seeing the world through average is OK, whereas most of the time, the diversity is the real nature of the world.</p>
 <h2 id="philosophical-aspects-on-science">Philosophical aspects on science</h2>
 <p>The scientific method is what built the technical foundations of our world. Science is a method and is aiming at being exact or at mastering the margin of error.</p>
 <p>Science always took the same approach:</p>
@@ -396,9 +397,10 @@
 <p>A good image would be to try to understand how Emacs works on a PC with all the data of all electrical currents in a computer. Data are an output product, and they were generated in a very specific semantic context with very specific business rules.</p>
 <p>In a way, machine learning is nearer from the magical thinking than from science.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>Machine learning is a technique that must be used with caution for all the points that we have detailed in this article.</p>
-<p>Data being output products, they embed a lot of semantic prerequisites, or in their structure or in their values. It would be probably much more efficient to work on the semantic modeling of data, to interpret a certain set of data based on their semantic content and then reason on those data with logical paradigms.</p>
-<p>But relying on machine learning may only provide quick wins in some cases, with the everlasting risk of being completely wrong, without having a real technique to better things.</p>
+<p>Machine learning is a technique that must be used with much caution for all the points that we have detailed in this article.</p>
+<p>The especially worrying phenomenon is the generalization of machine learning in various areas of our daily life, without us to be aware that some people changed the fundamental paradigm of computer science that tasks can be delegated to machines provided machines do it perfectly. Here, we are delegating tasks to machine that will structurally make mistakes without a lot of people to even realize the change.</p>
+<h2 id="the-alternate-model-reasoning-on-semantic-data">The alternate model: Reasoning on semantic data</h2>
+<p>Data being output products, they embed a lot of semantic prerequisites, in their structure and in their values. It would be probably much more efficient to work on the semantic modeling of data, to interpret a certain set of data based on their semantic content and then reason on those data with logical paradigms.</p>
 <hr />
 <h2 id="note-on-image-encoder">Note on image encoder</h2>
 <p><a name="note1"></a>One interesting question that we can ask considering the <a href="https://arxiv.org/pdf/1712.09665.pdf">article of Brown et al.</a> is: Is the second image with the sticker in the "neighborhood" of the first one?</p>
