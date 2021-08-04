@@ -1,4 +1,4 @@
-# Reflections on artificial neural networks and machine learning
+# About artificial neural networks and machine learning
 
 ![Photo of a toy robot from the 50s](../images/robot.jpg)
 
@@ -10,7 +10,7 @@ In this article, we will try to recall the simple mathematical foundation behind
 
 Note: We will focus on supervised learning artificial neural networks and  will not talk now about other variants such as unsupervised learning.
 
-## What is a neural network?
+## What is an artificial neural network?
 
 Basically, an artificial neural network is:
 
@@ -169,11 +169,11 @@ In the case where the analyzed data are the fruit of a highly semantically stand
 
 For sure, the reasoning is bad: Data was, at the beginning, the fruit of a structured and standardized business, and machine learning will just find back some dimensions already present in the data in the first place. Generally, those discovery will established very challenge-able correlations that can be analyzed as relevant or not, only by the ones knowing the business domain.
 
-## Belief 5: The average wins
+## Belief 5: The average wins and that's OK
 
-If we need billions of data to determine an interpolation function, we will create an interpolation function with a good score on the particular data that were used for the training. But that phenomenon will have an "averaging" effect. Indeed, statistically, the interpolation function can be quite efficient on many data but maybe not so efficient on marginal data.
+If we need billions of data to determine an interpolation function, we will create an interpolation function that will tend to favor the average data. And the fact is, some phenomena are not correctly represented with averages, but more with signal having a certain diversity. The more data, the more the non average data (particular cases, legitimous singular points) will be erased in the resulting interpolation function.
 
-In a certain way, the model could erase the specificity and the particular cases. If some singular points are clearly errors of the algorithm itself, we risk creating the reverse phenomenon: Erase the margin cases under billions of average cases.
+The belief is in the fact that seeing the world through average is OK, whereas most of the time, the diversity is the real nature of the world.
 
 ## Philosophical aspects on science
 
@@ -202,11 +202,13 @@ In a way, machine learning is nearer from the magical thinking than from science
 
 ## Conclusion
 
-Machine learning is a technique that must be used with caution for all the points that we have detailed in this article.
+Machine learning is a technique that must be used with much caution for all the points that we have detailed in this article.
 
-Data being output products, they embed a lot of semantic prerequisites, or in their structure or in their values. It would be probably much more efficient to work on the semantic modeling of data, to interpret a certain set of data based on their semantic content and then reason on those data with logical paradigms.
+The especially worrying phenomenon is the generalization of machine learning in various areas of our daily life, without us to be aware that some people changed the fundamental paradigm of computer science that tasks can be delegated to machines provided machines do it perfectly. Here, we are delegating tasks to machine that will structurally make mistakes without a lot of people to even realize the change.
 
-But relying on machine learning may only provide quick wins in some cases, with the everlasting risk of being completely wrong, without having a real technique to better things.
+## The alternate model: Reasoning on semantic data
+
+Data being output products, they embed a lot of semantic prerequisites, in their structure and in their values. It would be probably much more efficient to work on the semantic modeling of data, to interpret a certain set of data based on their semantic content and then reason on those data with logical paradigms.
 
 -----
 
