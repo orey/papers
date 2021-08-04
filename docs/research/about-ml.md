@@ -1,29 +1,35 @@
-# Reflections on neural networks and machine learning
+# Reflections on artificial neural networks and machine learning
 
-![Robot](../images/robot.jpg)
+![Photo of a toy robot from the 50s](../images/robot.jpg)
 
 *Photo by [oliver brandt](https://freeimages.com/photographer/ollinger-36628) from [FreeImages](https://freeimages.com)*
 
-Machine learning based on neural networks attracted much attention and credits those last decades (after a long "winter of AI") up to the point that, boosted by marketing, an anti-scientific approach is sold as being the solution to all problems.
+Machine learning based on artificial neural networks attracted much attention and credits those last decades (after a long "winter of AI") up to the point that, boosted by marketing, an anti-scientific approach is sold as being the solution to all problems.
 
-In this article, we will try to recall the simple mathematical foundation behind neural networks.
+In this article, we will try to recall the simple mathematical foundation behind artificial neural networks, and why this technology is not reliable, even if it attracks massive investments. We will also analyze the philosophical side of the neural networks.
+
+Note: We will focus on supervised learning artificial neural networks and  will not talk now about other variants such as unsupervised learning.
 
 ## What is a neural network?
 
-Basically, a built neural network in "supervised learning" is:
+Basically, an artificial neural network is:
 
 * A mathematical function `f` of several variable;
 * A complex function construction algorithm:
     * Using a representation of neurons and axons that was used to create the function `f`,
     * Based on a list of inputs of the form (x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>), matching with outputs of the form (y<sub>1</sub>, y<sub>2</sub>, ..., y<sub>p</sub>).
 
-There are many techniques to build the function `f`, hence the variety of machine learning algorithms.
+![Image of a neural network](../yed/ann.png)
 
-We will not talk now on unsupervised learning.
+*Figure 1: A simple artificial neural network*
+
+The Figure 1 shows a sample of an artificial neural network.
+
+There are many techniques to build the function `f`, hence the variety of machine learning algorithms.
 
 ## An interpolation function
 
-Let us note :
+Let us go a bit more into the details. Let us note :
 
 > X<sub>k</sub> = (x<sub>k1</sub>, x<sub>k2</sub>, ..., x<sub>kn</sub>)
 
@@ -31,7 +37,7 @@ Let us note :
 
 Let us suppose we have a set of known inputs and related known outputs, (X<sub>k</sub>, Y<sub>m</sub>) for (k,m) known.
 
-Considering a predefined neural network with nodes and edges in layers, we can use an algorithm to define characteristics of nodes and edges so that we define a function f like following:
+Considering a predefined neural network with nodes and edges in layers, we can use an algorithm to define characteristics of nodes and edges so that we define a function `f` like following:
 
 > f : D<sub>1</sub> x D<sub>2</sub> x ... X D<sub>n</sub> &rarr; R<sub>1</sub> x R<sub>2</sub> x ... x R<sub>p</sub>
 
@@ -41,30 +47,34 @@ To create this function, the algorithm used tried, more of less, to satisfy the 
 
 > f(X<sub>k</sub>) = Y<sub>m</sub>
 
-This is called "training the network".
+This process is called "training the network".
 
-`f` is an interpolation function, defined by an algorithm. Once defined, `f` is a function of many variables that has the following characteristics:
+The resulting function `f` is an *interpolation* function, defined by an algorithm. Once defined, `f` is a function of many variables that has the following characteristics:
 
-* It is probable that | f(X<sub>k</sub>) - Y<sub>m</sub> | < &epsi; if not f(X<sub>k</sub>) = Y<sub>m</sub>
-* The determined global function is not mathematically known: So, it can have singular points.
+* It is probable that f(X<sub>k</sub>) = Y<sub>m</sub> or | f(X<sub>k</sub>) - Y<sub>m</sub> | < &epsi; with "|" a norm in the R<sub>1</sub> x R<sub>2</sub> x ... x R<sub>p</sub> space;
+* The determined global function is not globally mathematically known, which implies it can have singular points, often called "potential wells".
 
 ## An interpolation function working in extrapolation mode
 
-The idea of neural networks is to assume that `f` is a continuous function at least in the neighborhood of the known hyper-points X<sub>i</sub>, which means that:
+The idea of neural networks is to assume that `f` is a continuous function at least in the neighborhood of the known hyper-points X<sub>i</sub>. That means that:
 
-> Let X<sub>i</sub> so that | X<sub>k</sub> - X<sub>i</sub> | < &epsi;
+> If we take X<sub>i</sub> so that | X<sub>k</sub> - X<sub>i</sub> | < &epsi;
 
-> This implies that | f(X<sub>k</sub>) - f(X<sub>i</sub>) | < &epsi;'
+> Then | f(X<sub>k</sub>) - f(X<sub>i</sub>) | < &epsi;'
 
-When `f` matches this assertion, that means that we can use `f` as an extrapolation function and consider that its evaluation on X<sub>i</sub> is valid.
+Said differently, any point in the neighborhood of X<sub>k</sub> will have its image by `f` in the neighborhood of f(X<sub>k</sub>).
 
-But the problem is that we have no ways of *knowing* that `f` is really continuous in a neighborhood of an hyperpoint.
+When `f` matches this assertion, we can use `f` as an extrapolation function and consider that its evaluation on X<sub>i</sub> is valid.
+
+The problem is that we have no ways of *knowing* that `f` is really continuous in a neighborhood of an hyper-point.
+
+Let us consider the Figure 2.
 
 ![Alt text](../images/potential-well.gif)
 
-*Figure 1: Two potential wells in a surface. Image from [wired.com](https://www.wired.com/wp-content/uploads/2014/06/63-plaster-logarithmics.gif)*
+*Figure 2: Two potential wells in a surface. Image from [wired.com](https://www.wired.com/wp-content/uploads/2014/06/63-plaster-logarithmics.gif)*
 
-In the Figure 1, we can see an artist representation of two singularities in a 3D curve:
+The Figure 2 is an artist representation of two singularities in a 3D curve:
 
 * One where `z` tends to +&infin;,
 * One where `z` tends to -&infin;.
@@ -75,47 +85,111 @@ That means, for the first singularity, that we have the following situation:
 
 > | f(X<sub>k</sub>) - f(X<sub>i</sub>) | >> &epsi;'
 
-Even if this case is a bit simplistic, this simple sample shows that the hyper-surface created by the neural network construction algorithm is *unknown*.
+The presence of potential wells in neural networks was a well known phenomenon in the 80s, and one of the reasons of the AI winter. Because neural networks were considered as non reliable "by construction", those techniques were temporarily abandoned.
 
-Indeed, it shows what every mathematician knows for ages: That an interpolation function should not be used as an extrapolation function.
+Mathematically speaking, the situation is quite simple: An interpolation function should not be used as an extrapolation function.
 
-## The strange idea to compensate by big data
+## New beliefs and arguments: Big data and processing power
 
-Well, then why so many people are relying on machine learning algorithms? First of all because they don't understand what they do, and secondly because they believe that big data will solve it all.
+The development and explosion of machine learning beginning of the 2000s was funded on new beliefs that overpass the previous arguments and mathematical reality.
 
-The first idea (which is an engineer's idea) is that if we have many many data to feed the algorithm with, we will have many hyper-points in the `f(X)` hyper-surface. This will imply that the `f(X)` will generate a reliable function to be used in extrapolation mode.
+The first idea (which is an engineer's idea) is that if we have a huge number of data (i.e. a lot of couples of the form (X<sub>k</sub>, Y<sub>m</sub>)) to feed the algorithm, we will be able to generate many hyper-points in the `f` hyper-surface.
 
-For sure, even if the idea is not stupid, in the general case, it is just a wish.
+This will imply that the `f` function will be more "dense" in R<sub>1</sub> x R<sub>2</sub> x ... x R<sub>p</sub> and so we will "reduce" the risk of potential well.
 
-The second idea (also an engineer's idea) is to say that better have the neural network than nothing. At least, "most of the time", the extrapolation does work and provides relevant results.
+This idea is, from an engineering standpoint, of good sense, but mathematically, being able to generate one thousand points or one billion points will not change the mathematical reality of potential wells, especially when we talk about functions of many variables.
 
-This second idea is backed by a very worrying corollary that is that humans make mistakes, and so it is acceptable that computers do too...
+Let's take the example of the image classifier. First of all, we have to create a program to "encode" whatever image in the X<sub>k</sub> form. Then, in supervised learning, we will associate to an image representation X<sub>k</sub> a value Y<sub>m</sub> representing the result, for instance a number. Let us suppose the number is `12` and it represents the banana.
 
-We can note three philosophical points that are shifting from the past:
+The `f` function that will be generated by the algorithm will be the result of "training" of many images associated with the result we expect. Then, when a new image will come, we will transform if into a X<sub>i</sub>, *hoping* that f(X<sub>i</sub>) will be meaningful.
 
-* There is a belief that brute force can compensate bad mathematics;
-* There is a new definition of "good" which is no more "exact", but "exact most of the time", which is an acceptation of a significant error level;
-* It becomes acceptable that the computer makes errors, as an human would have done.
+![Image: The chain of image recognition](../yed/encoding.png)
 
-## But the banana disappears
+*Figure 3: The banana disappears. Taken from [Brown et al. 2017](https://arxiv.org/pdf/1712.09665.pdf)*
 
-![The banana experiment](../images/banana.png)
+The fact is, it is a hope. What is funny is that *it works* in many cases. And when it doesn't, some various techniques are existing to try to make it work anyway.
 
-*Figure 2: The banana disappears. Taken from [Brown et al. 2017](https://arxiv.org/pdf/1712.09665.pdf)*
+We can note that, in that process, the encoding function may be quite important. In a certain way, it can hide a structural analysis of the problem, as it is representing the reality.
 
-Without any surprise, Brown et al. demonstrated in their article *Adversarial patch* that it was possible to mislead a neural network training to recognize some images. What they claim is even worse, because they claim it was possible to structurally mislead all neural networks that were used as image classifiers.
+## But the banana disappears...
 
-That is showing the structural flows of this technique. For sure, there are flaws but in many processes where the artificial neural networks are used, do we really know where are the flaws?
+![Image: The banana experiment](../images/banana.png)
 
-## The marvelous ubiquitous tool for unskilled people
+*Figure 4: The banana disappears. Taken from [Brown et al. 2017](https://arxiv.org/pdf/1712.09665.pdf)*
 
-In the hype of machine learning, another element is crucial. It is possible to learn all those data crunching techniques and to pretend being able to apply them to whatever domain. In a sense, machine learning is the *ubiquitous tool*.
+Without any surprise, Brown et al. demonstrated in their [article](https://arxiv.org/pdf/1712.09665.pdf) *Adversarial patch* (see Figure 4) that it was possible to mislead a neural network training to recognize some images. It may be even worse, because they claim it is possible to structurally mislead all neural networks that were used as image classifiers.
 
-More: We don't need to be skilled, meaning *in the business area where we do data science*. Our skills in machine learning will be enough.
+For us, despite the interest of the article, we are only rediscovering the structural mathematical problem of this technique.
 
-We tried to explain, in our article [the real nature of data](../articles/data-interop.md), why data was a complex output product, result of the intersection of a semantic domain and some use cases.
+## New beliefs contradicting the scientific method
 
-With machine learning, we take a reverse approach: Data becomes the input and you can discover things from it with generic tools without even knowing their limitations!
+The scientific method is what built the technical foundations of our world. Science is a method and is aiming at being exact or at mastering the margin of error. With machine learning, the scientific is completely violated.
+
+### Belief 1: Big data and brute force can solve mathematical problems
+
+This a way to reformulate the big data belief: If we inject billions of images to create an image classifier with an artificial neural network, we will overcome the mathematical problem. For sure, to be able to do that, we need an enormous processing power.
+
+We saw that this approach was not working.
+
+Without despising engineering (the author himself is an engineer ;), we see here an engineering reasoning: find all recipes to *make it work* for the maximum number of cases. Unfortunately, mathematics cannot be solved by brute force.
+
+Another issue that we see with big data is that no data set is completely neutral. Data sets are coming from somewhere and they have inherent bias attached to them. This is natural when we consider [the real nature of data](../articles/data-interop.md).
+
+### Belief 2: Programs can make mistakes like humans
+
+The second idea (also an engineer's idea) is to say that *better have the neural network than nothing*. At least, "most of the time", the extrapolation does work and provides relevant results.
+
+That is a fundamental regression compared to the objectives that computer science targeted from the beginning of the discipline. Computers, as they were automating human tasks were trustable because they were exact. In a certain sense, we can delegate tasks to computers *provided* they make no mistake and we can trust them, better than if the tasks were performed by humans.
+
+We even created the notion of "bug" to name a problem to be fixed in a program, for the computer to to exact, and so reliable.
+
+The argumentation is that, as humans make mistakes, it is acceptable that computers do too...
+
+If computer make errors in a structural way (which is the case of artificial neural networks), we change the complete computer science paradigm.
+
+Computers could be at the source of serious administrative mistakes, medical mistakes, justice mistakes... Even is statistically, those mistakes happen 1% of the time, how to trust computer programs anymore?
+
+If we accept to generalize techniques that make errors, we enter into a non certain world, that looks like the Brazil movie.
+
+### Belief 3: The marvelous ubiquitous set of tools for functionally unskilled people
+
+In the hype of machine learning, another element is crucial. It is possible to learn the data crunching techniques separately from any other functional knowledge, and to pretend being able to apply them to whatever functional domain. In a sense, machine learning is the *ubiquitous set of tools*.
+
+More: We don't need to be functionally skilled, meaning *in the business area where we do data science*. Our skills in machine learning will be enough.
+
+We tried to explain, in our article [the real nature of data](../articles/data-interop.md), why data was a complex *output product*, result of the intersection of a semantic domain and some use cases.
+
+With machine learning, we take a reverse approach: Data becomes the *input* and you can discover things from it with generic tools without even knowing their limitations!
+
+We can note that if the analyzed data are the fruit of a highly semantically standardized process (which is the case in many areas where the regulator or standards structured a business domain), machine learning can "rediscover" elements of this standardization, alimenting the illusion that it found sense in data - whereas it only uncovered a part of the semantic standardization that help created the data!
+
+
+
+
+
+
+
+
+
+
+
+One interesting question that we can ask considering this article is: Is the second image with the sticker in the "neighborhood" of the first one? We can see, asking this question, that the very notion of neighborhood seems not defined in the "space of images". It seems only defined in the space of (X<sub>i</sub>) which are the results of the encoding of the images.
+
+In a certain way, we lack of a mathematical theory to define properly the notion of continuity in our input space. Intuitively the second image is close to the first one in many areas (even identical) but it is radically different in others. So maybe by changing the encoder, we could obtain better results. For instance, an encoder that would encode various zones would train the neural network with a specific structure, fruit of a functional analysis.
+
+We begin to see this approach in some articles, especially when machine learning is associated with structured data. Provided the input is structured data and the encoder is "well defined", then the machine learning algorithm can create an interpolation function that will rely on encoded structured data as its input.
+
+This does not solve the structural problem of mathematical potential wells, but it can enhance this imperfect technology. Note that, to enhance it, we have to get back to a representation of reality that is the fruit of functional analysis and so, we have to come back to standard science: Analysis of reality, creation of a model for reality, testing the model versus the reality, enhancing the model to fit better to reality.
+
+
+
+
+
+
+
+
+
+
 
 ## This is not intelligence, this is even not science
 
