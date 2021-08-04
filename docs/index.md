@@ -15,6 +15,7 @@
 
 ## Papers on data and interoperability
 
+* **NEW** - [About artificial neural networks and machine learning](research/about-ml.md)
 * [The real nature of data](articles/data-interop.md)
 * [GraphQL And Classic Web Services](articles/graphql-web-services.md)
 * [Considerations about Rest and Web Services](articles/about-rest.md)

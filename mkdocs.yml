@@ -30,6 +30,7 @@ nav:
     - 'Archimate Recipes': 'articles/archimate-recipes.md'
     - 'Military frameworks, systems engineering and enterprise architecture': 'articles/mbse-vs-ea.md'
 - Data:
+    - 'About artificial neural networks and machine learning': 'research/about-ml.md'
     - 'Considerations About Rest And Web Services': 'articles/about-rest.md'
     - 'GraphQL And Classic Web Services': 'articles/graphql-web-services.md'
     - 'The real nature of data': 'articles/data-interop.md'
