@@ -4,9 +4,9 @@
 
 *Photo by [oliver brandt](https://freeimages.com/photographer/ollinger-36628) from [FreeImages](https://freeimages.com)*
 
-Machine learning based on artificial neural networks attracted much attention and credits those last decades (after a long "winter of AI") up to the point that, boosted by marketing, an anti-scientific approach is sold as being the solution to all problems.
+Machine learning based on artificial neural networks attracted much attention and credits those last decades (after a long "winter of AI") up to the point where, boosted by marketing, an anti-scientific approach is sold as being the solution to all problems.
 
-In this article, we will try to recall the simple mathematical foundation behind artificial neural networks, and why this technology is not reliable, even if it attracks massive investments. We will also analyze the philosophical side of the neural networks.
+In this article, we will try to recall the simple mathematical reality behind artificial neural networks, and why this technology is not reliable, even if it attracks massive investments. We will also analyze the philosophical side of the neural networks.
 
 Note: We will focus on supervised learning artificial neural networks and  will not talk now about other variants such as unsupervised learning.
 
@@ -26,6 +26,27 @@ Basically, an artificial neural network is:
 The Figure 1 shows a sample of an artificial neural network.
 
 There are many techniques to build the function `f`, hence the variety of machine learning algorithms.
+
+## Characteristics of a standard artificial neural network
+
+![Detailed view of a neuron](../yed/ann-detail.png)
+
+*Figure 2: Detailed view of a neuron*
+
+A neural network is a specific kind of directed labeled graph with the following characteristics:
+
+* It has "layers".
+    * Every node on every layer (except the first one named "entry layer") is the *target* of nodes from the previous layer.
+    * Except for the last layer or "output layer", each node of each layer is the source of edges going to the next layer.
+    * Generally neural networks are represented from left to right.
+* Every edge has a label that is called the "weight".
+* Every node has an internal function called "activation function" that is a function of the linear combination of inputs.
+
+For instance, in the Figure 2, the node `N` has an activation function `f` that is a function of &Sigma; = (X<sub>1</sub> x w<sub>1</sub>) + (X<sub>2</sub> x w<sub>2</sub>) + ... + (X<sub>5</sub> x w<sub>5</sub>). That function is often name &sigma; and we can note:
+
+> &sigma; = f(&Sigma; + b), typically &sigma; = 1 / (1 - e<sup>-(&Sigma; + b)</sup>) (sigmoid or "logistic function")
+
+If the set of nodes tagged X<sub>i</sub> are not the input layer, that means that *************
 
 ## An interpolation function
 
@@ -221,5 +242,14 @@ We can see, asking this question, that the very notion of "neighborhood" seems n
 This problem is currently addressed by various techniques of image labelling, decomposing the image in parts.
 
 We see that, in order to make the function more relevant, we tend to add complex pre-processing based on business rules and possibly complex post-processing based also on business rules. The neural network part is decreased at the benefit of more traditional approaches.
+
+## Bibliography
+
+* (1997) An introduction to neural networks - Gurney. [Link](https://www.inf.ed.ac.uk/teaching/courses/nlu/assets/reading/Gurney_et_al.pdf).
+* (2018) Adversarial Patch - Brown et al. - [Link](https://arxiv.org/pdf/1712.09665.pdf).
+* (2018) Introduction to representation theory - Etingof et al. [Link](http://www-math.mit.edu/~etingof/repbookcor1.pdf).
+* (2019) Thesis - Mathematical Analysis of Neural Networks - Leidinger. [Link](http://www-m15.ma.tum.de/foswiki/pub/M15/Allgemeines/PublicationsEN/Thesis_ALeidinger_final.pdf).
+* (2020) Topology of Deep Neural Networks - Naitzat et al. [Link](http://www.stat.uchicago.edu/~lekheng/work/topdeep.pdf).
+* (2021) The Representation Theory of Neural Networks - Armanta et al. [Link](https://arxiv.org/pdf/2007.12213.pdf).
 
 *(Last update: August 2021)*
