@@ -245,7 +245,10 @@ We see that, in order to make the function more relevant, we tend to add complex
 
 ## Bibliography
 
+* (1986) Parallel distributed computing - vol 1 & 2 - McClelland et al. - MIT Press. [Link](https://stanford.edu/~jlmcc/papers/PDP/).
 * (1997) An introduction to neural networks - Gurney. [Link](https://www.inf.ed.ac.uk/teaching/courses/nlu/assets/reading/Gurney_et_al.pdf).
+* (2003) Matrix representation of a Neural Network - Christensen. [Link](https://backend.orbit.dtu.dk/ws/portalfiles/portal/131600547/Matrix_representation_of_a_Neural_Network.pdf).
+* (2005) Catastrophic forgetting in neural networks - Moe-Helgesen et al. [Link](http://ox.no/files/catastrophic_forgetting_in_neural_networks.pdf).
 * (2018) Adversarial Patch - Brown et al. - [Link](https://arxiv.org/pdf/1712.09665.pdf).
 * (2018) Introduction to representation theory - Etingof et al. [Link](http://www-math.mit.edu/~etingof/repbookcor1.pdf).
 * (2019) Thesis - Mathematical Analysis of Neural Networks - Leidinger. [Link](http://www-m15.ma.tum.de/foswiki/pub/M15/Allgemeines/PublicationsEN/Thesis_ALeidinger_final.pdf).
