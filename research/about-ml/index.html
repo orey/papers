@@ -264,6 +264,7 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#about-artificial-neural-networks-and-machine-learning">About artificial neural networks and machine learning</a></li>
             <li><a href="#what-is-an-artificial-neural-network">What is an artificial neural network?</a></li>
+            <li><a href="#characteristics-of-a-standard-artificial-neural-network">Characteristics of a standard artificial neural network</a></li>
             <li><a href="#an-interpolation-function">An interpolation function</a></li>
             <li><a href="#an-interpolation-function-working-in-extrapolation-mode">An interpolation function working in extrapolation mode</a></li>
             <li><a href="#big-data-and-processing-power">Big data and processing power</a></li>
@@ -278,6 +279,7 @@
             <li><a href="#conclusion">Conclusion</a></li>
             <li><a href="#the-alternate-model-reasoning-on-semantic-data">The alternate model: Reasoning on semantic data</a></li>
             <li><a href="#note-on-image-encoder">Note on image encoder</a></li>
+            <li><a href="#bibliography">Bibliography</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -285,8 +287,8 @@
 <h1 id="about-artificial-neural-networks-and-machine-learning">About artificial neural networks and machine learning</h1>
 <p><img alt="Photo of a toy robot from the 50s" src="../../images/robot.jpg" /></p>
 <p><em>Photo by <a href="https://freeimages.com/photographer/ollinger-36628">oliver brandt</a> from <a href="https://freeimages.com">FreeImages</a></em></p>
-<p>Machine learning based on artificial neural networks attracted much attention and credits those last decades (after a long "winter of AI") up to the point that, boosted by marketing, an anti-scientific approach is sold as being the solution to all problems.</p>
-<p>In this article, we will try to recall the simple mathematical foundation behind artificial neural networks, and why this technology is not reliable, even if it attracks massive investments. We will also analyze the philosophical side of the neural networks.</p>
+<p>Machine learning based on artificial neural networks attracted much attention and credits those last decades (after a long "winter of AI") up to the point where, boosted by marketing, an anti-scientific approach is sold as being the solution to all problems.</p>
+<p>In this article, we will try to recall the simple mathematical reality behind artificial neural networks, and why this technology is not reliable, even if it attracks massive investments. We will also analyze the philosophical side of the neural networks.</p>
 <p>Note: We will focus on supervised learning artificial neural networks and  will not talk now about other variants such as unsupervised learning.</p>
 <h2 id="what-is-an-artificial-neural-network">What is an artificial neural network?</h2>
 <p>Basically, an artificial neural network is:</p>
@@ -302,6 +304,25 @@
 <p><em>Figure 1: A simple artificial neural network</em></p>
 <p>The Figure 1 shows a sample of an artificial neural network.</p>
 <p>There are many techniques to build the function <code>f</code>, hence the variety of machine learning algorithms.</p>
+<h2 id="characteristics-of-a-standard-artificial-neural-network">Characteristics of a standard artificial neural network</h2>
+<p><img alt="Detailed view of a neuron" src="../../yed/ann-detail.png" /></p>
+<p><em>Figure 2: Detailed view of a neuron</em></p>
+<p>A neural network is a specific kind of directed labeled graph with the following characteristics:</p>
+<ul>
+<li>It has "layers".<ul>
+<li>Every node on every layer (except the first one named "entry layer") is the <em>target</em> of nodes from the previous layer.</li>
+<li>Except for the last layer or "output layer", each node of each layer is the source of edges going to the next layer.</li>
+<li>Generally neural networks are represented from left to right.</li>
+</ul>
+</li>
+<li>Every edge has a label that is called the "weight".</li>
+<li>Every node has an internal function called "activation function" that is a function of the linear combination of inputs.</li>
+</ul>
+<p>For instance, in the Figure 2, the node <code>N</code> has an activation function <code>f</code> that is a function of &Sigma; = (X<sub>1</sub> x w<sub>1</sub>) + (X<sub>2</sub> x w<sub>2</sub>) + ... + (X<sub>5</sub> x w<sub>5</sub>). That function is often name &sigma; and we can note:</p>
+<blockquote>
+<p>&sigma; = f(&Sigma; + b), typically &sigma; = 1 / (1 - e<sup>-(&Sigma; + b)</sup>) (sigmoid or "logistic function")</p>
+</blockquote>
+<p>If the set of nodes tagged X<sub>i</sub> are not the input layer, that means that <strong><em>*</em></strong><strong>*</strong>*</p>
 <h2 id="an-interpolation-function">An interpolation function</h2>
 <p>Let us go a bit more into the details. Let us note :</p>
 <blockquote>
@@ -421,6 +442,15 @@
 <p>We can see, asking this question, that the very notion of "neighborhood" seems not defined in the "space of images". This is normal because we are entering the world of mathematics and function building <em>only after the encoding of the image</em> (see <a href="#Figure3">Figure 3</a>). Indeed, the notion of neighborhood is only defined in the space of (X<sub>i</sub>) which are the results of the encoding of the images. We need to define a mathematical notion of topology in the space of images.</p>
 <p>This problem is currently addressed by various techniques of image labelling, decomposing the image in parts.</p>
 <p>We see that, in order to make the function more relevant, we tend to add complex pre-processing based on business rules and possibly complex post-processing based also on business rules. The neural network part is decreased at the benefit of more traditional approaches.</p>
+<h2 id="bibliography">Bibliography</h2>
+<ul>
+<li>(1997) An introduction to neural networks - Gurney. <a href="https://www.inf.ed.ac.uk/teaching/courses/nlu/assets/reading/Gurney_et_al.pdf">Link</a>.</li>
+<li>(2018) Adversarial Patch - Brown et al. - <a href="https://arxiv.org/pdf/1712.09665.pdf">Link</a>.</li>
+<li>(2018) Introduction to representation theory - Etingof et al. <a href="http://www-math.mit.edu/~etingof/repbookcor1.pdf">Link</a>.</li>
+<li>(2019) Thesis - Mathematical Analysis of Neural Networks - Leidinger. <a href="http://www-m15.ma.tum.de/foswiki/pub/M15/Allgemeines/PublicationsEN/Thesis_ALeidinger_final.pdf">Link</a>.</li>
+<li>(2020) Topology of Deep Neural Networks - Naitzat et al. <a href="http://www.stat.uchicago.edu/~lekheng/work/topdeep.pdf">Link</a>.</li>
+<li>(2021) The Representation Theory of Neural Networks - Armanta et al. <a href="https://arxiv.org/pdf/2007.12213.pdf">Link</a>.</li>
+</ul>
 <p><em>(Last update: August 2021)</em></p></div>
         </div>
 
