@@ -46,9 +46,11 @@ The first layer is considered as the input. It acts as a &sigma;<sub>layer,rank_
 
 Indeed, this representation is very complex, and does not show properly the mathematical objects that are at stake, even if those objects are very simple.
 
+## Representing neural networks with matrices
+
 If we go back to Figure 1 and take X = (x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>D(1)</sub>) as an input, and consider X as the "first layer". The &Sigma;-s of the second layer can be written with a matrix.
 
-Let's consider the following matrix M<sub>1,2</sub>:
+Let's consider the following matrix W<sub>1,2</sub>:
 
 |  |  |  |  |
 |-----|-----|-----|-----|
@@ -57,11 +59,50 @@ Let's consider the following matrix M<sub>1,2</sub>:
 | ... | ... | ... | ... |
 | &omega;<sub>1,1,D(2)</sub> | &omega;<sub>1,2,D(2)</sub> | ... | &omega;<sub>1,D(1),D(2)</sub> |
 
-The dimension of the matrix is D(2) x D(1) and it enables a vector like X or dimension D(1) to be projected in a space of dimension D(2).
+The dimension of the matrix is D(2) x D(1) and it enables a vector like X of dimension D(1) to be projected in a space of dimension D(2).
 
 If we define the &Sigma;<sub>2</sub> vector for rank 2, with &Sigma;<sub>2</sub> = (&Sigma;<sub>2,1</sub>, &Sigma;<sub>2,2</sub>, ..., &Sigma;<sub>2,D(2)</sub>) then we have:
 
-> &Sigma;<sub>2</sub> = M<sub>1,2</sub> . X
+> &Sigma;<sub>2</sub> = W<sub>1,2</sub> . X
+
+We just did half of the work. We must now consider:
+
+* Taking into account the bias &beta;<sub>i</sub> in all coordinates of &Sigma;<sub>2</sub>,
+* And then to apply the &sigma; function.
+
+The first operation is a simple vector addition:
+
+> With &Beta;<sub>2</sub> = (&beta;<sub>2,1</sub>, &beta;<sub>2,2</sub>, ..., &beta;<sub>2,D(2)</sub>)
+
+> &alpha;<sub>2</sub> = &Sigma;<sub>2</sub> + &Beta;<sub>2</sub>
+
+&sigma; is then applied to &alpha;<sub>2</sub>.
+
+The result vector in step 2 can be written with only structural characteristics of the neural network: W<sub>1,2</sub> and &Beta;<sub>2</sub>.
+
+Let's call Y<sub>2</sub> this result. We have:
+
+> Y<sub>2</sub> = &sigma;( (W<sub>1,2</sub> . X) + &Beta;<sub>2</sub> )
+
+For sure, the formula does not depend on indices, so we have:
+
+> Y<sub>3</sub> = &sigma;( (W<sub>2,3</sub> . Y<sub>2</sub>) + &Beta;<sub>3</sub> )
+
+> Y<sub>3</sub> = &sigma;( (W<sub>2,3</sub> . ( &sigma;( (W<sub>1,2</sub> . X) + &Beta;<sub>2</sub> ) ) + &Beta;<sub>3</sub> )
+
+And so on.
+
+We reached, in a certain way, a good idea of a simple representation of the neural network: A mix of various matrix operations
+
+
+
+
+
+
+
+And so on. Which gives, to get back the notation of Figure 1:
+
+> 
 
 
 ------------
@@ -288,6 +329,7 @@ We see that, in order to make the function more relevant, we tend to add complex
 * (2018) Adversarial Patch - Brown et al. - [Link](https://arxiv.org/pdf/1712.09665.pdf).
 * (2018) Introduction to representation theory - Etingof et al. [Link](http://www-math.mit.edu/~etingof/repbookcor1.pdf).
 * (2019) Thesis - Mathematical Analysis of Neural Networks - Leidinger. [Link](http://www-m15.ma.tum.de/foswiki/pub/M15/Allgemeines/PublicationsEN/Thesis_ALeidinger_final.pdf).
+* (2019) Optimization for deep learning - theory and algorithms - Sun. [Link](https://arxiv.org/pdf/1912.08957.pdf).
 * (2020) Topology of Deep Neural Networks - Naitzat et al. [Link](http://www.stat.uchicago.edu/~lekheng/work/topdeep.pdf).
 * (2021) The Representation Theory of Neural Networks - Armanta et al. [Link](https://arxiv.org/pdf/2007.12213.pdf).
 
