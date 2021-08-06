@@ -265,6 +265,7 @@
         <li class="main active"><a href="#about-artificial-neural-networks-and-machine-learning">About artificial neural networks and machine learning</a></li>
             <li><a href="#what-is-an-artificial-neural-network">What is an artificial neural network?</a></li>
             <li><a href="#characteristics-of-a-standard-artificial-neural-network">Characteristics of a standard artificial neural network</a></li>
+            <li><a href="#representing-neural-networks-with-matrices">Representing neural networks with matrices</a></li>
             <li><a href="#an-interpolation-function">An interpolation function</a></li>
             <li><a href="#an-interpolation-function-working-in-extrapolation-mode">An interpolation function working in extrapolation mode</a></li>
             <li><a href="#big-data-and-processing-power">Big data and processing power</a></li>
@@ -320,8 +321,9 @@
 </ul>
 <p>The first layer is considered as the input. It acts as a &sigma;<sub>layer,rank_of_node</sub>, except that the value is imposed by the user. It is shown as X in Figure 1. The last layer will be the fruit of the calculation.</p>
 <p>Indeed, this representation is very complex, and does not show properly the mathematical objects that are at stake, even if those objects are very simple.</p>
+<h2 id="representing-neural-networks-with-matrices">Representing neural networks with matrices</h2>
 <p>If we go back to Figure 1 and take X = (x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>D(1)</sub>) as an input, and consider X as the "first layer". The &Sigma;-s of the second layer can be written with a matrix.</p>
-<p>Let's consider the following matrix M<sub>1,2</sub>:</p>
+<p>Let's consider the following matrix W<sub>1,2</sub>:</p>
 <table>
 <thead>
 <tr>
@@ -358,11 +360,36 @@
 </tr>
 </tbody>
 </table>
-<p>The dimension of the matrix is D(2) x D(1) and it enables a vector like X or dimension D(1) to be projected in a space of dimension D(2).</p>
+<p>The dimension of the matrix is D(2) x D(1) and it enables a vector like X of dimension D(1) to be projected in a space of dimension D(2).</p>
 <p>If we define the &Sigma;<sub>2</sub> vector for rank 2, with &Sigma;<sub>2</sub> = (&Sigma;<sub>2,1</sub>, &Sigma;<sub>2,2</sub>, ..., &Sigma;<sub>2,D(2)</sub>) then we have:</p>
 <blockquote>
-<p>&Sigma;<sub>2</sub> = M<sub>1,2</sub> . X</p>
+<p>&Sigma;<sub>2</sub> = W<sub>1,2</sub> . X</p>
 </blockquote>
+<p>We just did half of the work. We must now consider:</p>
+<ul>
+<li>Taking into account the bias &beta;<sub>i</sub> in all coordinates of &Sigma;<sub>2</sub>,</li>
+<li>And then to apply the &sigma; function.</li>
+</ul>
+<p>The first operation is a simple vector addition:</p>
+<blockquote>
+<p>With &Beta;<sub>2</sub> = (&beta;<sub>2,1</sub>, &beta;<sub>2,2</sub>, ..., &beta;<sub>2,D(2)</sub>)</p>
+<p>&alpha;<sub>2</sub> = &Sigma;<sub>2</sub> + &Beta;<sub>2</sub></p>
+</blockquote>
+<p>&sigma; is then applied to &alpha;<sub>2</sub>.</p>
+<p>The result vector in step 2 can be written with only structural characteristics of the neural network: W<sub>1,2</sub> and &Beta;<sub>2</sub>.</p>
+<p>Let's call Y<sub>2</sub> this result. We have:</p>
+<blockquote>
+<p>Y<sub>2</sub> = &sigma;( (W<sub>1,2</sub> . X) + &Beta;<sub>2</sub> )</p>
+</blockquote>
+<p>For sure, the formula does not depend on indices, so we have:</p>
+<blockquote>
+<p>Y<sub>3</sub> = &sigma;( (W<sub>2,3</sub> . Y<sub>2</sub>) + &Beta;<sub>3</sub> )</p>
+<p>Y<sub>3</sub> = &sigma;( (W<sub>2,3</sub> . ( &sigma;( (W<sub>1,2</sub> . X) + &Beta;<sub>2</sub> ) ) + &Beta;<sub>3</sub> )</p>
+</blockquote>
+<p>And so on.</p>
+<p>We reached, in a certain way, a good idea of a simple representation of the neural network: A mix of various matrix operations</p>
+<p>And so on. Which gives, to get back the notation of Figure 1:</p>
+<blockquote></blockquote>
 <hr />
 <p>A neural network is a specific kind of directed labeled graph with the following characteristics:</p>
 <ul>
@@ -508,6 +535,7 @@
 <li>(2018) Adversarial Patch - Brown et al. - <a href="https://arxiv.org/pdf/1712.09665.pdf">Link</a>.</li>
 <li>(2018) Introduction to representation theory - Etingof et al. <a href="http://www-math.mit.edu/~etingof/repbookcor1.pdf">Link</a>.</li>
 <li>(2019) Thesis - Mathematical Analysis of Neural Networks - Leidinger. <a href="http://www-m15.ma.tum.de/foswiki/pub/M15/Allgemeines/PublicationsEN/Thesis_ALeidinger_final.pdf">Link</a>.</li>
+<li>(2019) Optimization for deep learning - theory and algorithms - Sun. <a href="https://arxiv.org/pdf/1912.08957.pdf">Link</a>.</li>
 <li>(2020) Topology of Deep Neural Networks - Naitzat et al. <a href="http://www.stat.uchicago.edu/~lekheng/work/topdeep.pdf">Link</a>.</li>
 <li>(2021) The Representation Theory of Neural Networks - Armanta et al. <a href="https://arxiv.org/pdf/2007.12213.pdf">Link</a>.</li>
 </ul>
