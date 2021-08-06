@@ -31,7 +31,43 @@ There are many techniques to build the function `f`, hence the variety of machin
 
 ![Detailed view of a neuron](../yed/ann-detail.png)
 
-*Figure 2: Detailed view of a neuron*
+*Figure 2: Detailed view of an artificial neural network*
+
+If we take the most common case, an artificial neural network is a set of artificial neurons arranged in layers (vertical layers in Figure 2) defined by the following characteristics:
+
+* Each layer has a number of nodes, that we will call the layer "dimension". In Figure 2, the dimension is noted D(n) for the n<sup>th</sup> layer.
+* Each node of layer n has a link to all other nodes of the layer n+1. On each of those nodes, we have "weights" that are noted &omega;<sub>layer,rank_of_source_node,rank_of_target_node</sub>.
+* Each node belonging to a layer, except nodes from the first and the last layers, will have in a way 3 parts (as shown in detail in Figure 2 for the k<sup>th</sup> node of the n<sup>th</sup> layer:
+    * A first part noted &Sigma;<sub>n,k</sub> = (&sigma;<sub>n-1,1</sub> x  &omega;<sub>n-1,1,k</sub>) + (&sigma;<sub>n-1,2</sub> x  &omega;<sub>n-1,2,k</sub>) + ... + (&sigma;<sub>n-1,D(n-1),k</sub> x  &omega;<sub>n-1,D(n-1)</sub>) which is the sum of the products of the activation function &sigma; on the weights &omega; for all incoming links.
+    * A second part that will be the application of the &Sigma; function to this sum &Sigma; to which we add a constant called the bias and noted &beta;.
+    * The result of this calculation is shown on the last rectangle and is noted &sigma;<sub>layer,rank_of_node</sub>. The same value will be used for the calculation of the &Sigma; of the following layer.
+
+The first layer is considered as the input. It acts as a &sigma;<sub>layer,rank_of_node</sub>, except that the value is imposed by the user. It is shown as X in Figure 1. The last layer will be the fruit of the calculation.
+
+Indeed, this representation is very complex, and does not show properly the mathematical objects that are at stake, even if those objects are very simple.
+
+If we go back to Figure 1 and take X = (x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>D(1)</sub>) as an input, and consider X as the "first layer". The &Sigma;-s of the second layer can be written with a matrix.
+
+Let's consider the following matrix M<sub>1,2</sub>:
+
+|  |  |  |  |
+|-----|-----|-----|-----|
+| &omega;<sub>1,1,1</sub> | &omega;<sub>1,2,1</sub> | ... | &omega;<sub>1,D(1),1</sub> |
+| &omega;<sub>1,1,2</sub> | &omega;<sub>1,2,2</sub> | ... | &omega;<sub>1,D(1),2</sub> |
+| ... | ... | ... | ... |
+| &omega;<sub>1,1,D(2)</sub> | &omega;<sub>1,2,D(2)</sub> | ... | &omega;<sub>1,D(1),D(2)</sub> |
+
+The dimension of the matrix is D(2) x D(1) and it enables a vector like X or dimension D(1) to be projected in a space of dimension D(2).
+
+If we define the &Sigma;<sub>2</sub> vector for rank 2, with &Sigma;<sub>2</sub> = (&Sigma;<sub>2,1</sub>, &Sigma;<sub>2,2</sub>, ..., &Sigma;<sub>2,D(2)</sub>) then we have:
+
+> &Sigma;<sub>2</sub> = M<sub>1,2</sub> . X
+
+
+------------
+
+
+
 
 A neural network is a specific kind of directed labeled graph with the following characteristics:
 
