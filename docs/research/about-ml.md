@@ -6,9 +6,12 @@
 
 Machine learning based on artificial neural networks attracted much attention and credits those last decades (after a long "winter of AI") up to the point where, boosted by marketing, an anti-scientific approach is sold as being the solution to all problems.
 
-In this article, we will try to recall the simple mathematical reality behind artificial neural networks, and why this technology is not reliable, even if it attracks massive investments. We will also analyze the philosophical side of the neural networks.
+In this article, we will try to recall the simple mathematical reality behind artificial neural networks, and why this technology is not reliable, even if it attracts massive investments. We will also analyze the philosophical side of the neural networks.
 
-Note: We will focus on supervised learning artificial neural networks and  will not talk now about other variants such as unsupervised learning.
+Notes:
+
+* We will focus on supervised learning artificial neural networks and  will not talk now about other variants such as unsupervised learning.
+* We detail the artificial neural network working later in the article [here](#detail).
 
 ## What is an artificial neural network?
 
@@ -26,104 +29,6 @@ Basically, an artificial neural network is:
 The Figure 1 shows a sample of an artificial neural network.
 
 There are many techniques to build the function `f`, hence the variety of machine learning algorithms.
-
-## Characteristics of a standard artificial neural network
-
-![Detailed view of a neuron](../yed/ann-detail.png)
-
-*Figure 2: Detailed view of an artificial neural network*
-
-If we take the most common case, an artificial neural network is a set of artificial neurons arranged in layers (vertical layers in Figure 2) defined by the following characteristics:
-
-* Each layer has a number of nodes, that we will call the layer "dimension". In Figure 2, the dimension is noted D(n) for the n<sup>th</sup> layer.
-* Each node of layer n has a link to all other nodes of the layer n+1. On each of those nodes, we have "weights" that are noted &omega;<sub>layer,rank_of_source_node,rank_of_target_node</sub>.
-* Each node belonging to a layer, except nodes from the first and the last layers, will have in a way 3 parts (as shown in detail in Figure 2 for the k<sup>th</sup> node of the n<sup>th</sup> layer:
-    * A first part noted &Sigma;<sub>n,k</sub> = (&sigma;<sub>n-1,1</sub> x  &omega;<sub>n-1,1,k</sub>) + (&sigma;<sub>n-1,2</sub> x  &omega;<sub>n-1,2,k</sub>) + ... + (&sigma;<sub>n-1,D(n-1),k</sub> x  &omega;<sub>n-1,D(n-1)</sub>) which is the sum of the products of the activation function &sigma; on the weights &omega; for all incoming links.
-    * A second part that will be the application of the &Sigma; function to this sum &Sigma; to which we add a constant called the bias and noted &beta;.
-    * The result of this calculation is shown on the last rectangle and is noted &sigma;<sub>layer,rank_of_node</sub>. The same value will be used for the calculation of the &Sigma; of the following layer.
-
-The first layer is considered as the input. It acts as a &sigma;<sub>layer,rank_of_node</sub>, except that the value is imposed by the user. It is shown as X in Figure 1. The last layer will be the fruit of the calculation.
-
-Indeed, this representation is very complex, and does not show properly the mathematical objects that are at stake, even if those objects are very simple.
-
-## Representing neural networks with matrices
-
-If we go back to Figure 1 and take X = (x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>D(1)</sub>) as an input, and consider X as the "first layer". The &Sigma;-s of the second layer can be written with a matrix.
-
-Let's consider the following matrix W<sub>1,2</sub>:
-
-|  |  |  |  |
-|-----|-----|-----|-----|
-| &omega;<sub>1,1,1</sub> | &omega;<sub>1,2,1</sub> | ... | &omega;<sub>1,D(1),1</sub> |
-| &omega;<sub>1,1,2</sub> | &omega;<sub>1,2,2</sub> | ... | &omega;<sub>1,D(1),2</sub> |
-| ... | ... | ... | ... |
-| &omega;<sub>1,1,D(2)</sub> | &omega;<sub>1,2,D(2)</sub> | ... | &omega;<sub>1,D(1),D(2)</sub> |
-
-The dimension of the matrix is D(2) x D(1) and it enables a vector like X of dimension D(1) to be projected in a space of dimension D(2).
-
-If we define the &Sigma;<sub>2</sub> vector for rank 2, with &Sigma;<sub>2</sub> = (&Sigma;<sub>2,1</sub>, &Sigma;<sub>2,2</sub>, ..., &Sigma;<sub>2,D(2)</sub>) then we have:
-
-> &Sigma;<sub>2</sub> = W<sub>1,2</sub> . X
-
-We just did half of the work. We must now consider:
-
-* Taking into account the bias &beta;<sub>i</sub> in all coordinates of &Sigma;<sub>2</sub>,
-* And then to apply the &sigma; function.
-
-The first operation is a simple vector addition:
-
-> With &Beta;<sub>2</sub> = (&beta;<sub>2,1</sub>, &beta;<sub>2,2</sub>, ..., &beta;<sub>2,D(2)</sub>)
-
-> &alpha;<sub>2</sub> = &Sigma;<sub>2</sub> + &Beta;<sub>2</sub>
-
-&sigma; is then applied to &alpha;<sub>2</sub>.
-
-The result vector in step 2 can be written with only structural characteristics of the neural network: W<sub>1,2</sub> and &Beta;<sub>2</sub>.
-
-Let's call Y<sub>2</sub> this result. We have:
-
-> Y<sub>2</sub> = &sigma;( (W<sub>1,2</sub> . X) + &Beta;<sub>2</sub> )
-
-For sure, the formula does not depend on indices, so we have:
-
-> Y<sub>3</sub> = &sigma;( (W<sub>2,3</sub> . Y<sub>2</sub>) + &Beta;<sub>3</sub> )
-
-> Y<sub>3</sub> = &sigma;( (W<sub>2,3</sub> . ( &sigma;( (W<sub>1,2</sub> . X) + &Beta;<sub>2</sub> ) ) + &Beta;<sub>3</sub> )
-
-And so on.
-
-We reached, in a certain way, a good idea of a simple representation of the neural network: A mix of various matrix operations
-
-
-
-
-
-
-
-And so on. Which gives, to get back the notation of Figure 1:
-
-> 
-
-
-------------
-
-
-
-
-A neural network is a specific kind of directed labeled graph with the following characteristics:
-
-* It has "layers".
-    * Every node on every layer (except the first one named "entry layer") is the *target* of nodes from the previous layer.
-    * Except for the last layer or "output layer", each node of each layer is the source of edges going to the next layer.
-    * Generally neural networks are represented from left to right.
-* Every edge has a label that is called the "weight".
-* Every node has an internal function called "activation function" that is a function of the linear combination of inputs.
-
-For instance, in the Figure 2, the node `N` has an activation function `f` that is a function of &Sigma; = (X<sub>1</sub> x w<sub>1</sub>) + (X<sub>2</sub> x w<sub>2</sub>) + ... + (X<sub>5</sub> x w<sub>5</sub>). That function is often name &sigma; and we can note:
-
-> &sigma; = f(&Sigma; + b), typically &sigma; = 1 / (1 - e<sup>-(&Sigma; + b)</sup>) (sigmoid or "logistic function")
-
-If the set of nodes tagged X<sub>i</sub> are not the input layer, that means that *************
 
 ## An interpolation function
 
@@ -320,12 +225,151 @@ This problem is currently addressed by various techniques of image labelling, de
 
 We see that, in order to make the function more relevant, we tend to add complex pre-processing based on business rules and possibly complex post-processing based also on business rules. The neural network part is decreased at the benefit of more traditional approaches.
 
+-----
+
+## Detailed analysis
+
+<a name="detail"></a>The history of neural networks is quite funny. It started from the modeling of mathematical structures that were inspired by the biological neurons. The idea of training by backpropagation (indeed distance reduction through partial derivation equations) led to a complete field that investigated a lot and in several phases in the study of the "stuff" created.
+
+For sure, as the artificial neural network is a complex object, and as many different design options can be chosen, it opened the place to many research in the field, up to convolutional neural networks (CNN) that begin to look like standard processing chains, more than neural networks.
+
+We will, in this part, try to dig into the core of neural networks and exhibit some elements that appear core to us.
+
+## Characteristics of a standard artificial neural network
+
+![Detailed view of a neuron](../yed/ann-detail.png)
+
+*Figure 5: Detailed view of an artificial neural network*
+
+If we take the most common case, an artificial neural network is a set of artificial neurons arranged in layers (vertical layers in Figure 5) defined by the following characteristics:
+
+* Each layer has a number of nodes, that we will call the layer "dimension". In Figure 5, the dimension is noted D(n) for the n<sup>th</sup> layer.
+* Each node of layer n has a link to all other nodes of the layer n+1. On each of those nodes, we have "weights" that are noted &omega;<sub>layer,rank_of_source_node,rank_of_target_node</sub>.
+* Each node belonging to a layer, except nodes from the first and the last layers, will have in a way 3 parts (as shown in detail in Figure 5 for the k<sup>th</sup> node of the n<sup>th</sup> layer:
+    * A first part noted &Sigma;<sub>n,k</sub> = (&sigma;<sub>n-1,1</sub> x  &omega;<sub>n-1,1,k</sub>) + (&sigma;<sub>n-1,2</sub> x  &omega;<sub>n-1,2,k</sub>) + ... + (&sigma;<sub>n-1,D(n-1),k</sub> x  &omega;<sub>n-1,D(n-1)</sub>) which is the sum of the products of the activation function &sigma; on the weights &omega; for all incoming links.
+    * A second part that will be the application of the &Sigma; function to this sum &Sigma; to which we add a constant called the bias and noted &beta;.
+    * The result of this calculation is shown on the last rectangle and is noted &sigma;<sub>layer,rank_of_node</sub>. The same value will be used for the calculation of the &Sigma; of the following layer.
+
+The first layer is considered as the input. It acts as a &sigma;<sub>layer,rank_of_node</sub>, except that the value is imposed by the user. It is shown as X in Figure 1. The last layer will be the fruit of the calculation.
+
+Indeed, this representation is very complex, and does not show properly the mathematical objects that are at stake, even if those objects are very simple.
+
+## Representing neural networks with matrices
+
+If we go back to Figure 1 and take X = (x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>D(1)</sub>) as an input, and consider X as the "first layer". The &Sigma;-s of the second layer can be written with a matrix.
+
+Let's consider the following matrix W<sub>1,2</sub>:
+
+|  |  |  |  |
+|-----|-----|-----|-----|
+| &omega;<sub>1,1,1</sub> | &omega;<sub>1,2,1</sub> | ... | &omega;<sub>1,D(1),1</sub> |
+| &omega;<sub>1,1,2</sub> | &omega;<sub>1,2,2</sub> | ... | &omega;<sub>1,D(1),2</sub> |
+| ... | ... | ... | ... |
+| &omega;<sub>1,1,D(2)</sub> | &omega;<sub>1,2,D(2)</sub> | ... | &omega;<sub>1,D(1),D(2)</sub> |
+
+The dimension of the matrix is D(2) x D(1) and it enables a vector like X of dimension D(1) to be projected in a space of dimension D(2).
+
+If we define the &Sigma;<sub>2</sub> vector for rank 2, with &Sigma;<sub>2</sub> = (&Sigma;<sub>2,1</sub>, &Sigma;<sub>2,2</sub>, ..., &Sigma;<sub>2,D(2)</sub>) then we have:
+
+> &Sigma;<sub>2</sub> = W<sub>1,2</sub> . X
+
+We just did half of the work. We must now consider:
+
+* Taking into account the bias &beta;<sub>i</sub> in all coordinates of &Sigma;<sub>2</sub>,
+* And then to apply the &sigma; function.
+
+The first operation is a simple vector addition:
+
+> With &Beta;<sub>2</sub> = (&beta;<sub>2,1</sub>, &beta;<sub>2,2</sub>, ..., &beta;<sub>2,D(2)</sub>)
+
+> &alpha;<sub>2</sub> = &Sigma;<sub>2</sub> + &Beta;<sub>2</sub>
+
+&sigma; is then applied to &alpha;<sub>2</sub>.
+
+The result vector in step 2 can be written with only structural characteristics of the neural network: W<sub>1,2</sub> and &Beta;<sub>2</sub>.
+
+Let's call Z<sub>2</sub> this result. We have:
+
+> Z<sub>2</sub> = &sigma;( (W<sub>1,2</sub> . X) + &Beta;<sub>2</sub> )
+
+For sure, the formula does not depend on indices, so we have:
+
+> Z<sub>3</sub> = &sigma;( (W<sub>2,3</sub> . Z<sub>2</sub>) + &Beta;<sub>3</sub> )
+
+> Z<sub>3</sub> = &sigma;( (W<sub>2,3</sub> . ( &sigma;( (W<sub>1,2</sub> . X) + &Beta;<sub>2</sub> ) ) + &Beta;<sub>3</sub> )
+
+And so on. For the last layer, we will have Y = Z<sub>p</sub> with p the number of layers.
+
+We reached, in a certain way, a good idea of a simple representation of the neural network: A mix of various matrix operations that make the input signal progressively change space to arrive to the wished result.
+
+We can represent the neural network by a chain of functions.
+
+First function: Change of space (going from a space with D(1) dimensions to a space with D(2) dimensions.
+
+> W<sub>1,2</sub>: X &rarr; W<sub>1,2</sub> . X = &Sigma;<sub>2</sub>
+
+Second function: Translation in the D(2) dimension space.
+
+> T<sub>2</sub>: &Sigma;<sub>2</sub> &rarr; &Sigma;<sub>2</sub> + &Beta;<sub>2</sub> = &alpha;<sub>2</sub>
+
+Third function: Filtering the result vector with a &sigma; function
+
+> &sigma;: &alpha;<sub>2</sub> &rarr; &sigma;(&alpha;<sub>2</sub>)
+
+So:
+
+> Z<sub>2</sub> = (&sigma; o T<sub>2</sub> o W<sub>1,2</sub>) (X)
+
+> Z<sub>2</sub> = (&sigma; o T<sub>3</sub> o W<sub>2,3</sub>) o (&sigma; o T<sub>2</sub> o W<sub>1,2</sub>) (X)
+
+With M the number of layers, we have:
+
+> Y = (&sigma; o T<sub>M</sub> o W<sub>M-1,M</sub>) o ... o (&sigma; o T<sub>3</sub> o W<sub>2,3</sub>) o (&sigma; o T<sub>2</sub> o W<sub>1,2</sub>) (X)
+
+In that context, the training consists in minimizing the distance between the various values of Y we want to achieve at the end of the neural network and the real values that we got.
+
+If we take X<sub>i</sub>, the input values that we have, Y<sub>i</sub> the results of the network and Y'<sub>i</sub> the wished results, we can define a measurement of the distances between the various Y<sub>i</sub> and the various Y'<sub>i</sub> by defining a loss function of the kind:
+
+> L = 1/M . &Sigma;<sub>1</sub><sup>M</sup> || Y<sub>i</sub> - Y'<sub>i</sub> ||
+
+Here, we are using the standard euclidean distance.
+
+Then, the backpropagation process consists in using an algorithm, generally based on partial derivation, to change the weight matrices and the bias vectors in order to minimize the loss function.
+
+## Advantages of the chain of function representation
+
+The chain of function representation makes it possible to understand what is going on in the various layers. Indeed, the three transformations of the input signal Z<sub>i</sub> into Z<sub>i+1</sub> (change of space, translation and filtering) opens the way to less "neural-inspired" design and more "efficient engineering-designed" networks (are they neural anymore?).
+
+Indeed a standard artificial neural network can be represented like follows:
+
+![Standard structure of the artificial neural network](../yed/ann-structure.png)
+
+*Figure 6: Standard structure of the artificial neural network*
+
+We can see that a neural network is indeed a series of processing steps, which intention is to reduce complexity. A complex object X must be transformed into a simple object Y based on a series of complex transformations.
+
+When we realize that those treatments can be virtually anything, we can imagine more complex architectures, such as the CNN, which is adapted to image processing.
+
+![Standard structure of the CNN](../yed/ann-convolution.png)
+
+*Figure 6: Standard structure of the CNN*
+
+A CNN is composed of two main parts:
+
+* A part where the image is filtered by kernels (matrices in charge of finding the image features);
+* A part that is the real neural network used as a classifier.
+
+In a certain way, a CNN is a specific architecture of treatments used for a specific purpose which is image classification. We see that the part of the neural network is decreasing to the benefit of more classic processing (filtering and subsampling).
+
+-----
+
 ## Bibliography
 
 * (1986) Parallel distributed computing - vol 1 & 2 - McClelland et al. - MIT Press. [Link](https://stanford.edu/~jlmcc/papers/PDP/).
 * (1997) An introduction to neural networks - Gurney. [Link](https://www.inf.ed.ac.uk/teaching/courses/nlu/assets/reading/Gurney_et_al.pdf).
 * (2003) Matrix representation of a Neural Network - Christensen. [Link](https://backend.orbit.dtu.dk/ws/portalfiles/portal/131600547/Matrix_representation_of_a_Neural_Network.pdf).
 * (2005) Catastrophic forgetting in neural networks - Moe-Helgesen et al. [Link](http://ox.no/files/catastrophic_forgetting_in_neural_networks.pdf).
+* (2015) Matrix Backpropagation for ICCV - Ionescu. [Link](https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Ionescu_Matrix_Backpropagation_for_ICCV_2015_paper.pdf).
 * (2018) Adversarial Patch - Brown et al. - [Link](https://arxiv.org/pdf/1712.09665.pdf).
 * (2018) Introduction to representation theory - Etingof et al. [Link](http://www-math.mit.edu/~etingof/repbookcor1.pdf).
 * (2019) Thesis - Mathematical Analysis of Neural Networks - Leidinger. [Link](http://www-m15.ma.tum.de/foswiki/pub/M15/Allgemeines/PublicationsEN/Thesis_ALeidinger_final.pdf).
