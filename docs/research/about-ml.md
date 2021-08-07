@@ -361,6 +361,8 @@ A CNN is composed of two main parts:
 
 In a certain way, a CNN is a specific architecture of treatments used for a specific purpose which is image classification. We see that the part of the neural network is decreasing to the benefit of more classic processing (filtering and subsampling).
 
+This enforces the vision that the more we know the data we are talking about, the more we can create relevant simulation programs.
+
 -----
 
 ## Bibliography
