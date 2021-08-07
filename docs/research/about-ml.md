@@ -365,7 +365,7 @@ In a certain way, a CNN is a specific architecture of treatments used for a spec
 
 ## Bibliography
 
-* (1986) Parallel distributed computing - vol 1 & 2 - McClelland et al. - MIT Press. [Link](https://stanford.edu/~jlmcc/papers/PDP/).
+* (1986) Parallel distributed processing (PDP) - vol 1 & 2 - McClelland et al. - MIT Press. [Link](https://stanford.edu/~jlmcc/papers/PDP/).
 * (1997) An introduction to neural networks - Gurney. [Link](https://www.inf.ed.ac.uk/teaching/courses/nlu/assets/reading/Gurney_et_al.pdf).
 * (2003) Matrix representation of a Neural Network - Christensen. [Link](https://backend.orbit.dtu.dk/ws/portalfiles/portal/131600547/Matrix_representation_of_a_Neural_Network.pdf).
 * (2005) Catastrophic forgetting in neural networks - Moe-Helgesen et al. [Link](http://ox.no/files/catastrophic_forgetting_in_neural_networks.pdf).
