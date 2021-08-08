@@ -50,6 +50,7 @@ nav:
         - 'Semantic data migration project page': 'research/data-mig.md'
     - 'Graph transformations':
         - 'Graph transformations': 'research/graph-transfo.md'
+        - 'A general interoperability model using graph transformations': 'research/graph-interop.md'
         - 'Basic graph transformations': 'research/basic-graph-transformations.md'
         - 'Basic semantic graph transformations': 'research/basic-semantic-graph-transformations.md'
         - 'DSL for graph topology check': 'research/DSL-for-graph-topology-checks.md'

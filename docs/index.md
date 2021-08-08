@@ -40,6 +40,7 @@ Project page: [GraphApps project](research/graphapps.md) project (2013-2018)
 [Index](research/index-research.md)
 
 * [Graph transformations](research/graph-transfo.md)
+    * [A general interoperability model using graph transformations](research/graph-interop.md)
     * [Basic graph transformations](research/basic-graph-transformations.md)
     * [Basic semantic graph transformations](research/basic-semantic-graph-transformations.md)
     * [DSL for graph topology check](research/DSL-for-graph-topology-checks.md)
