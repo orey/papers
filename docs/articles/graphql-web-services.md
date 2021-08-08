@@ -196,7 +196,7 @@ In this context, the fundamental principle of interoperability is that the clien
 
 Because the client and the server don't have to commit on their internal structure and functional aspects, the interchange is described with a semantic that must be the simplest possible and that can enable the client and server to define different modeling of the same "exchanged data model".
 
-![Interoperability explained](..//yed/interop.png)
+![Interoperability explained](../yed/interop.png)
 
 The figure above shows the core problem of interoperability:
 
