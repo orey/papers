@@ -126,6 +126,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://orey.github.io/papers/research/graph-interop/</loc>
+     <lastmod>2021-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://orey.github.io/papers/research/basic-graph-transformations/</loc>
      <lastmod>2021-08-08</lastmod>
      <changefreq>daily</changefreq>
