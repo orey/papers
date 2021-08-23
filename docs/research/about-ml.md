@@ -6,7 +6,7 @@
 
 Machine learning based on artificial neural networks attracted much attention and credits those last decades (after a long "winter of AI") up to the point where, boosted by marketing, an anti-scientific approach is sold as being the solution to all problems.
 
-In this article, we will try to recall the simple mathematical reality behind artificial neural networks, and why this technology is not reliable, even if it attracts massive investments. We will also analyze the philosophical side of the neural networks.
+In this article, we will try to recall the simple mathematical reality behind artificial neural networks, and why this technology is not reliable, even if it attracts massive investments and crystallizes many hopes. We will also analyze the philosophical side of the neural networks.
 
 Notes:
 
