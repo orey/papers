@@ -4,33 +4,61 @@
 
 As time goes on, the product lifecycle management (PLM) systems propose more and more functionality, linked together, in platforms that tend to be always bigger with time.
 
-The increasing size of the PLM platforms, and their pretention to take in charge more and more processes, is answering to a dream of many users to have "all data linked together in the same place". If this dream can be true for small products, it seems to us as a dangerous chimera in the case of complex manufacturing products such as aircrafts.
+The increasing size of the PLM platforms, and their objective to take in charge more and more processes, is answering to a dream of many users to have "all data linked together in the same place". If this dream can be true for small products, it seems to us as a dangerous chimera in the case of complex manufacturing products such as aircrafts.
 
-In this article, we will explain the core reasons why we don't believe that this model of the "unique backbone" is applicable everywhere. Indeed, when changing semantic domains, the data needs to be transformed. If the tertiary sector takes as granted the adapter pattern (on which we will come back) for a long time, some PLM vendors are selling a model where the adapter can be reduced to *links between data*. This article is explaining the reasons why, in complex cases, this simplistic approach may appear as very dangerous.
+In this article, we will explain the core reasons why we don't believe that this model of the "unique backbone" is applicable everywhere. Indeed, when changing semantic domains, the data needs to be adapted, their lifecycle may change, and the timing of change may be different from one semantic universe to another.
+
+When the tertiary sector takes as granted the [adapter pattern](https://en.wikipedia.org/wiki/Adapter_pattern) (on which we will come back) for a long time, some PLM vendors are selling a model where the adapter can be reduced to *links between data*.
+
+This article is explaining the reasons why, in complex cases, this simplistic approach may appear as very dangerous.
 
 ## PLM, nature of data and adaptation
 
-We explained in a [recent article](about-plm.md "About PLM") what we consider as being the basic functions of a PLM. We recommend the reading of this article before coming back to this one.
+We explained in a [recent article](about-plm.md "About PLM") what we consider as being the basic functions of a PLM. In that article, we showed that, data being represented as a graph, it appears as quite easy to interconnect whatever object of a certain type to whatever other object of any other type with an instance of a link type.
 
-In that article, we showed that, data being represented as a graph, it appears as quite easy to connect whatever object of a certain type to whatever other object of any other type with an instance of a link type.
+If we follow this statement, we quickly end up with the "no-limit approach" that could be be stated as follows: *As long as data can be connected together, then we can manage them in the same software*.
 
-If we follow this statement, we quickly end up with the "no-limit approach" that could be be stated as follows: *As log as data can be connected together, then we can manage them in the same software*.
+However, contrary to what could appear, this model of linking data together has its limits. Especially, in many cases, representing dependencies between business domains as links at the data level are a very bad representation of reality.
 
-However, contrary to what could appear, this model of linking data together has limits. Especially, in many cases, representing depedencies between business domains as links at the data level are a very bad representation of reality.
+In order to understand correctly the problem, we first recommended to have a look at [the real nature of data](data-interop.md "The real nature of data") article. In this article, we explain that data are created by business processes and that the way they are structured is dependant on the business domain. When data must flow from a business domain to another business domain, it must be "adapted *out*" the source business domain (transformed and reduced to a format that will be understandable by both the initiator and the receiver). Then the receiver will "adapt the data *in*" its own business universe. Then the receiver will be able to use the data.
 
-In order to understand correctly the problem, we first recommended to have a look at [the real nature of data](data-interop.md "The real nature of data") article. In this article, we explain that data are created by business processes and that the way they are structured is dependant on the business domain. When data must flow from a business domain to another business domain, it must be "adapted out" the source business domain (transformed and reduced to a format that will be understandable by both the initiator and the receiver). Then the receiver will "adapt the data in" its own business universe. Then the receiver will be able to use the data.
+In our articles, we often name the business domains "semantic domains", because when we change a data from business domain, it is generally not *meaning exactly* the same thing, and it is often not structured in the same way.
 
-We often name the business domains "semantic domains", because when we change a data from business domain, it is generally not *meaning exactly* the same thing, and it is often not structured in the same way.
+For instance, if a "part" is created in the engineering semantic domain and sent to the support, this engineering part may be transformed into several "support parts" that will have support attributes and be localized at different use points. Concerning the engineering data attached to the part, most of them won't be useful for the support, even if they need to be secured in engineering system. For sure, the bridges between systems must ensure some traceability that enables to track back the same entity between systems. But that traceability requirement does not mean the data are "the same".
 
-For instance, if a "part" is created in the engineering semantic domain and sent to the support, this engineering part may be transformed into several "support parts" that will have support attributes and be localized at different use points. Concerning the engineering data attached to the part, most of them won't be useful for the support, even if they need to be secure in engineering system. For sure, the bridges between systems must ensure some traceability that enables to track back the same entity between systems.
+## A sample: Data delivery from engineering to support
 
------
+Data in the real world are not perfect, especially in the industrial world. Moreover, they obey to the constraints of each category of users.
 
-https://www.linkedin.com/feed/update/urn:li:activity:6804804965635239936/?commentUrn=urn%3Ali%3Acomment%3A(activity%3A6804804965635239936%2C6809574091432054784)
+Let's take an example and examine the sample case of data delivery from engineering to support. As the word "delivery" indicates, we suppose that the engineering is doing a conscious act of delivery, which corresponds generally to a certain state of data, let's say "release".
 
-Hi Axel, I know the OSLC initiative.
+For the sake of the sample, we will take an engineering  delivery granularity that is not at part level but at design solution (DS) level, a design solution being a set of related parts answering to a certain function. When the engineering office works on a DS, this DS is "in work", and when the DS is validated, it is "released". In terms of configuration management, the design office will manage the applicability of the DS with the formalization of a set of products, identified by their serial number (S/N).
 
-I like the idea that the central repository (monolith) is not the solution and that the industry has to think in distributed systems.
+Let's take now, the support vision. Quite frequently, many engineering structured data are still located inside Office documents, and so, are not usable by software. If, at the support level, we want some MTBF data about a part, it is probable that we will have to open and read an Office document (that contains unstructured data) to create in my support application the structured data that is missing from the raw engineering delivery. This simple act represents an "adaptation" of the content of the DS in which we have the Office document.
+
+![Difference of vision between engineering and support](../yed/e2e-plm01.png)
+
+*Figure 1: Difference of vision between engineering and support*
+
+The Figure 1 shows several fundamental differences between the engineering vision and the support vision:
+
+* The engineering vision is based on DS, while the support vision is part-based.
+* The data found in the Office document enabled to fill some of the structured data in purple in the support area.
+* The part `Part-01` seen from the engineering is actually existing at two different use points in the support, with two different maintenance procedure attached. However, there is only one set of procurability and logistics data.
+* The bill of materials of the `DS-01` is implicit for the engineering: it is the list of parts in the 3D model. For the support, we need an explicit list.
+
+In this simplistic sample, we can see that for good reasons, the support will build a specific "view" based on engineering data. But the term "view" is misleading. Instead, we should use the term of "data model" and rephrase: the support will build a specific data model based on information coming from the engineering department.
+
+When the `DS-01` which is actually `DS-01-V1`, used on products in range `[10, 100[`, will evolve in `DS-01-V2`, used on products in range `[101, 200[`, the support may have to manage the "same parts" than in the first release of the DS, but in another context.
+
+*Reprendre ici*
+
+
+## CM article link
+
+In a previous article about [configuration management in PLMs](conf-mgt.md), we explained 
+
+## Remaining of a forum
 
 However, what does not convince me fully is that the OSLC approach is still at the data level. If this statement is true, if links can be done at the data level between various data models in various systems, then conceptually it pushes again for more monoliths (super PLMs that can manage several business domains).
 
@@ -64,6 +92,7 @@ I intend to bring more arguments of this fact in my next article.
 
 In all cases, it seems to me that this is a very interesting and crucial topic for the industry.
 
+## L'idée des ASD
 
 **L'autre idée évidemment est que le PLM n'est plus générique mais complètement adapté à un business domain - d'où l'idée des ASD**
 
