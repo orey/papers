@@ -9,232 +9,227 @@
         <link rel="canonical" href="https://orey.github.io/papers/articles/about-rest/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Considerations About Rest And Web Services - Papers</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
 
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZMZKWJP2V"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-BZMZKWJP2V');
+        </script> 
     </head>
 
     <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../..">Papers</a>
-                </div>
+                <a class="navbar-brand" href="../..">Papers</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
+                <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../..">Index</a>
+<li>
+    <a href="../.." class="dropdown-item">Index</a>
 </li>
                                     
-<li >
-    <a href="../../about/about/">Author</a>
+<li>
+    <a href="../../about/about/" class="dropdown-item">Author</a>
 </li>
                                     
-<li >
-    <a href="../../about/LICENSE/">License</a>
+<li>
+    <a href="../../about/LICENSE/" class="dropdown-item">License</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">PLM <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">PLM <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../about-plm/">PLM and graph data</a>
+<li>
+    <a href="../about-plm/" class="dropdown-item">PLM and graph data</a>
 </li>
                                     
-<li >
-    <a href="../conf-mgt/">Configuration management of industrial products in PDM/PLM</a>
+<li>
+    <a href="../conf-mgt/" class="dropdown-item">Configuration management of industrial products in PDM/PLM</a>
 </li>
                                     
-<li >
-    <a href="../spreadsheet-and-PLM/">The four core functions showing you need a PLM</a>
+<li>
+    <a href="../spreadsheet-and-PLM/" class="dropdown-item">The four core functions showing you need a PLM</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Modeling <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Modeling <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../portfolio/">A Simple Meta-Model for Portfolio Management</a>
+<li>
+    <a href="../portfolio/" class="dropdown-item">A Simple Meta-Model for Portfolio Management</a>
 </li>
                                     
-<li >
-    <a href="../archimate-intro/">An Introduction to The Archimate Revolution</a>
+<li>
+    <a href="../archimate-intro/" class="dropdown-item">An Introduction to The Archimate Revolution</a>
 </li>
                                     
-<li >
-    <a href="../archimate-recipes/">Archimate Recipes</a>
+<li>
+    <a href="../archimate-recipes/" class="dropdown-item">Archimate Recipes</a>
 </li>
                                     
-<li >
-    <a href="../mbse-vs-ea/">Military frameworks, systems engineering and enterprise architecture</a>
+<li>
+    <a href="../mbse-vs-ea/" class="dropdown-item">Military frameworks, systems engineering and enterprise architecture</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown active">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Data <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../../research/about-ml/">About artificial neural networks and machine learning</a>
+<li>
+    <a href="../../research/about-ml/" class="dropdown-item">About artificial neural networks and machine learning</a>
 </li>
                                     
-<li class="active">
-    <a href="./">Considerations About Rest And Web Services</a>
+<li>
+    <a href="./" class="dropdown-item active">Considerations About Rest And Web Services</a>
 </li>
                                     
-<li >
-    <a href="../graphql-web-services/">GraphQL And Classic Web Services</a>
+<li>
+    <a href="../graphql-web-services/" class="dropdown-item">GraphQL And Classic Web Services</a>
 </li>
                                     
-<li >
-    <a href="../data-interop/">The real nature of data</a>
+<li>
+    <a href="../data-interop/" class="dropdown-item">The real nature of data</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">IT <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">IT <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../five-levels/">The Five Levels of Conceptual Maturity for IT Teams</a>
+<li>
+    <a href="../five-levels/" class="dropdown-item">The Five Levels of Conceptual Maturity for IT Teams</a>
 </li>
                                     
-<li >
-    <a href="../the-v2-vortex/">The V2 Vortex</a>
+<li>
+    <a href="../the-v2-vortex/" class="dropdown-item">The V2 Vortex</a>
 </li>
                                     
-<li >
-    <a href="../various-stages/">The Various Stages of Digital Transformation</a>
+<li>
+    <a href="../various-stages/" class="dropdown-item">The Various Stages of Digital Transformation</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Research <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Research <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../../research/index-research/">Index</a>
+<li>
+    <a href="../../research/index-research/" class="dropdown-item">Index</a>
 </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#">Graph-oriented programming</a>
+    <a href="#" class="dropdown-item">Graph-oriented programming</a>
     <ul class="dropdown-menu">
             
-<li >
-    <a href="../../graph/first-article/">First article on graph-oriented programming</a>
+<li>
+    <a href="../../graph/first-article/" class="dropdown-item">First article on graph-oriented programming</a>
 </li>
             
-<li >
-    <a href="../../graph/staf-icgt2018/">Conference at the STAF/ICGT 2018 in Toulouse</a>
+<li>
+    <a href="../../graph/staf-icgt2018/" class="dropdown-item">Conference at the STAF/ICGT 2018 in Toulouse</a>
 </li>
             
-<li >
-    <a href="../../research/graphapps/">GraphApps project page</a>
+<li>
+    <a href="../../research/graphapps/" class="dropdown-item">GraphApps project page</a>
 </li>
             
-<li >
-    <a href="../../research/graph-oriented-pl/">Towards a graph-oriented programming language?</a>
+<li>
+    <a href="../../research/graph-oriented-pl/" class="dropdown-item">Towards a graph-oriented programming language?</a>
 </li>
     </ul>
   </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#">Semantic Web</a>
+    <a href="#" class="dropdown-item">Semantic Web</a>
     <ul class="dropdown-menu">
             
-<li >
-    <a href="../../research/data-mig/">Aerospace data migration</a>
+<li>
+    <a href="../../research/data-mig/" class="dropdown-item">Aerospace data migration</a>
 </li>
             
-<li >
-    <a href="../../research/data-mig/">Semantic data migration project page</a>
+<li>
+    <a href="../../research/data-mig/" class="dropdown-item">Semantic data migration project page</a>
 </li>
     </ul>
   </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#">Graph transformations</a>
+    <a href="#" class="dropdown-item">Graph transformations</a>
     <ul class="dropdown-menu">
             
-<li >
-    <a href="../../research/graph-transfo/">Graph transformations</a>
+<li>
+    <a href="../../research/graph-transfo/" class="dropdown-item">Graph transformations</a>
 </li>
             
-<li >
-    <a href="../../research/graph-interop/">A general interoperability model using graph transformations</a>
+<li>
+    <a href="../../research/graph-interop/" class="dropdown-item">A general interoperability model using graph transformations</a>
 </li>
             
-<li >
-    <a href="../../research/basic-graph-transformations/">Basic graph transformations</a>
+<li>
+    <a href="../../research/basic-graph-transformations/" class="dropdown-item">Basic graph transformations</a>
 </li>
             
-<li >
-    <a href="../../research/basic-semantic-graph-transformations/">Basic semantic graph transformations</a>
+<li>
+    <a href="../../research/basic-semantic-graph-transformations/" class="dropdown-item">Basic semantic graph transformations</a>
 </li>
             
-<li >
-    <a href="../../research/DSL-for-graph-topology-checks/">DSL for graph topology check</a>
+<li>
+    <a href="../../research/DSL-for-graph-topology-checks/" class="dropdown-item">DSL for graph topology check</a>
 </li>
             
-<li >
-    <a href="../../research/graph-transformation-applicability/">Graph transformation applicability</a>
+<li>
+    <a href="../../research/graph-transformation-applicability/" class="dropdown-item">Graph transformation applicability</a>
 </li>
             
-<li >
-    <a href="../../research/grammar-graph-transformation/">Grammar of graph transformation</a>
+<li>
+    <a href="../../research/grammar-graph-transformation/" class="dropdown-item">Grammar of graph transformation</a>
 </li>
             
-<li >
-    <a href="../../research/graph-oriented-pl/">Graph-oriented programming language</a>
+<li>
+    <a href="../../research/graph-oriented-pl/" class="dropdown-item">Graph-oriented programming language</a>
 </li>
     </ul>
   </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#">Various</a>
+    <a href="#" class="dropdown-item">Various</a>
     <ul class="dropdown-menu">
             
-<li >
-    <a href="../../research/industry-data/">Reflections on industry data</a>
+<li>
+    <a href="../../research/industry-data/" class="dropdown-item">Reflections on industry data</a>
 </li>
             
-<li >
-    <a href="../../research/rdf-design-patterns/">UML to RDF considerations</a>
+<li>
+    <a href="../../research/rdf-design-patterns/" class="dropdown-item">UML to RDF considerations</a>
 </li>
             
-<li >
-    <a href="../../research/resources/">Resources</a>
+<li>
+    <a href="../../research/resources/" class="dropdown-item">Resources</a>
 </li>
     </ul>
   </li>
@@ -242,19 +237,19 @@
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li >
-                                <a rel="next" href="../../research/about-ml/">
+                            <li class="nav-item">
+                                <a rel="prev" href="../../research/about-ml/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
-                            <li >
-                                <a rel="prev" href="../graphql-web-services/">
+                            <li class="nav-item">
+                                <a rel="next" href="../graphql-web-services/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -264,19 +259,54 @@
         </div>
 
         <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#considerations-about-rest-and-web-services">Considerations About Rest And Web Services</a></li>
-            <li><a href="#a-bit-of-history">A Bit Of History</a></li>
-            <li><a href="#what-is-rpc">What Is RPC?</a></li>
-            <li><a href="#the-corba-failed-attempt">The Corba Failed Attempt</a></li>
-            <li><a href="#the-core-problem-of-resource-orientation">The Core Problem of Resource Orientation</a></li>
-            <li><a href="#conclusion">Conclusion</a></li>
-            <li><a href="#see-also">See Also</a></li>
-            <li><a href="#notes">Notes</a></li>
-    </ul>
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#considerations-about-rest-and-web-services" class="nav-link">Considerations About Rest And Web Services</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#a-bit-of-history" class="nav-link">A Bit Of History</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#what-is-rpc" class="nav-link">What Is RPC?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#the-corba-failed-attempt" class="nav-link">The Corba Failed Attempt</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#the-core-problem-of-resource-orientation" class="nav-link">The Core Problem of Resource Orientation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#conclusion" class="nav-link">Conclusion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#see-also" class="nav-link">See Also</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#notes" class="nav-link">Notes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
 </div></div>
-                <div class="col-md-9" role="main">
+                    <div class="col-md-9" role="main">
 
 <h1 id="considerations-about-rest-and-web-services">Considerations About Rest And Web Services</h1>
 <p><img alt="Image with various protocol names" src="../../images/rpcorb.png" /> </p>
@@ -365,6 +395,7 @@
 <h2 id="notes">Notes</h2>
 <p>[1] - In some businesses, like the airline one (standardized by <a href="https://www.iata.org">IATA</a>), services have big requests and big responses for decades because the business requires it.</p>
 <p>(<em>December 2017</em>)</p></div>
+            </div>
         </div>
 
         <footer class="col-md-12">
@@ -374,40 +405,37 @@
         </footer>
         <script>
             var base_url = "../..",
-                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../../js/base.js" defer></script>
         <script src="../../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
             </div>
             <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form role="form">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results"></div>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
             </div>
             <div class="modal-footer">
             </div>
         </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
             </div>
             <div class="modal-body">
               <table class="table">
