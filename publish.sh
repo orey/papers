@@ -1,5 +1,4 @@
 #!/bin/bash
-clear
 
 if [ $# -eq 0 ]
 then
@@ -12,6 +11,7 @@ git add *
 message=$@
 git commit -a -m "$message"
 git push origin master
+mkdocs gh-deploy --force
 
 echo "Done"
 
