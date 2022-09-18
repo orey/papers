@@ -121,6 +121,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://orey.github.io/papers/research/cartan/</loc>
+         <lastmod>2022-09-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://orey.github.io/papers/research/data-mig/</loc>
          <lastmod>2022-09-18</lastmod>
          <changefreq>daily</changefreq>

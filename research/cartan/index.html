@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Olivier Rey">
-        <link rel="canonical" href="https://orey.github.io/papers/research/rdf-design-patterns/">
+        <link rel="canonical" href="https://orey.github.io/papers/research/cartan/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>UML to RDF considerations - Papers</title>
+        <title>Einstein, Cartan et la géométrie différentielle - Papers</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -221,7 +221,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../cartan/" class="dropdown-item">Einstein, Cartan et la géométrie différentielle</a>
+    <a href="./" class="dropdown-item active">Einstein, Cartan et la géométrie différentielle</a>
 </li>
             
 <li>
@@ -229,7 +229,7 @@
 </li>
             
 <li>
-    <a href="./" class="dropdown-item active">UML to RDF considerations</a>
+    <a href="../rdf-design-patterns/" class="dropdown-item">UML to RDF considerations</a>
 </li>
             
 <li>
@@ -248,12 +248,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../industry-data/" class="nav-link">
+                                <a rel="prev" href="../graph-oriented-pl/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../resources/" class="nav-link">
+                                <a rel="next" href="../industry-data/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -275,32 +275,8 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#uml-to-rdf-considerations" class="nav-link">UML to RDF considerations</a>
+            <li class="nav-item" data-level="1"><a href="#einstein-cartan-et-la-geometrie-differentielle" class="nav-link">Einstein, Cartan et la géométrie différentielle</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#references" class="nav-link">References</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#basic-correspondence-between-uml-and-rdfrdfs" class="nav-link">Basic correspondence between UML and rdf/rdfs</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#types-are-instances-of-rdfproperty-and-rdfsclass" class="nav-link">Types are instances of rdf:Property and rdfs:Class</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#first-translation" class="nav-link">First translation</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#second-translation" class="nav-link">Second translation</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#2-kinds-of-attribute-types" class="nav-link">2 kinds of attribute types</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -308,161 +284,42 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="uml-to-rdf-considerations">UML to RDF considerations</h1>
-<h2 id="references">References</h2>
-<p>In a W3C article, <a href="https://www.w3.org/2001/sw/BestPractices/">Semantic Web Best Practices</a>, some indications are provided to compare the semantic web approach with the object-oriented approach. Those indications are very interesting but they are not complete to serve as a guide for software engineers trying to work with semantic web technologies.</p>
-<p>This page aims at gathering interesting elements about that topic.</p>
-<h2 id="basic-correspondence-between-uml-and-rdfrdfs">Basic correspondence between UML and rdf/rdfs</h2>
-<p>Consider the following figure.</p>
-<p><img alt="UML versus rdf/rdfs" src="../../yed/uml-rdf-rdfs-v02.png" /></p>
-<p>Several points must be noted.</p>
-<h2 id="types-are-instances-of-rdfproperty-and-rdfsclass">Types are instances of rdf:Property and rdfs:Class</h2>
-<p>Basically, in most existing (RDFS) ontologies, when a new class is created, it is declared as being <code>a rdfs:Class</code>, and when a new property type is created, it is declared as being <code>a rdf:Property</code>. We have this situation in the diagram for <code>exs:ClassA</code>, <code>exs:ClassB</code>, <code>exs:ClassC</code> and for <code>exs:attribute1</code> and <code>exs:attribute2</code>.</p>
-<p>That means that new types, being class types or property types, are considered as "instances" of the "meta-types" <code>rdfs:Class</code> and <code>rdf:Property</code>.</p>
-<h2 id="first-translation">First translation</h2>
-<p>In the UML diagram, <code>ClassB</code> derives from <code>ClassA</code>. That implies: <code>exs:ClassB rdfs:subClassOf exs:ClassA</code> as an obvious translation of the UML fact.</p>
-<p>We can stay like that and have a first UML to RDF translation like follows.</p>
-<pre><code>@prefix rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
-@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
-@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
-@prefix exs: &lt;https://orey.github.io/sample-schema.ttl#&gt; .
-
-exs:ClassA a rdfs:Class.
-
-exs:ClassB a rdfs:Class ;
-           rdfs:subClassOf exs:ClassA .
-
-exs:ClassC a rdfs:Class.
-
-exs:attribute1 a rdf:Property ;
-               rdfs:domain exs:ClassA ;
-               rdfs:range rdf:langString .
-
-exs:attribute2 a rdf:Property ;
-               rdfs:domain exs:ClassA ;
-               rdfs:range exs:ClassC .
-
-</code></pre>
-
-<h2 id="second-translation">Second translation</h2>
-<p>This first translation may be considered as having a slight problem. All new classes could be <code>subClassOf</code> another class, in order to enable reasoning based on sub-classes.</p>
-<p>We could enrich a bit our first translation by adding some lines.</p>
-<pre><code>@prefix rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
-@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
-@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
-@prefix exs: &lt;https://orey.github.io/sample-schema.ttl#&gt; .
-
-exs:ClassA a rdfs:Class ;
-           rdfs:subClassOf rdfs:Class . &lt;= NEW
-
-exs:ClassB a rdfs:Class ;
-           rdfs:subClassOf exs:ClassA .
-
-exs:ClassC a rdfs:Class ;
-           rdfs:subClassOf rdfs:Class . &lt;= NEW
-
-exs:attribute1 a rdf:Property;
-               rdfs:subPropertyOf rdf:Property ; &lt;= NEW
-               rdfs:domain exs:ClassA ;
-               rdfs:range rdf:langString .
-
-exs:attribute2 a rdf:Property ;
-               rdfs:subPropertyOf rdf:Property ; &lt;= NEW
-               rdfs:domain exs:ClassA ;
-               rdfs:range exs:ClassC .
-
-</code></pre>
-
-<p>Semantically, the <code>a</code> indicates the real nature of the entity and the <code>rdfs:subClass/PropertyOf</code> its type hierarchy.</p>
-<h2 id="2-kinds-of-attribute-types">2 kinds of attribute types</h2>
-<p>Attribute types are not homogeneous. For a given attribute <code>exs:att</code>, <code>exs:att rdfs:range rdfs:Class</code> may indicate that we are talking about a link or relationship between two objects, whereas <code>exs:att rdfs:range rdfs:Literal</code> may indicate that we have a real attribute with a literal value.</p>
-<p>That is one UML and object-orientation deepest problem: the aggregation (and composition) relationships are represented at the same level than the attributes pointing to literal values (see <a href="../../graph/first-article/">paper on graph-oriented programming</a>). The semantic web enables us to get over this crucial limitation by defining the attribute outside of the class itself.</p>
-<p>But, if we want to be effective, we would need a specific root attribute type for the attribute types having a range in the <code>rdfs:Literal</code> world, and a root attribute type for the attribute types that point to objects.</p>
-<p>That leads us to the third translation below.</p>
-<pre><code>@prefix rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
-@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
-@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
-@prefix dc: &lt;http://purl.org/dc/elements/1.1/&gt; .
-@prefix ga: &lt;https://orey.github.io/graphapps-V2#&gt; .
-
-@prefix exs: &lt;https://orey.github.io/sample-schema.ttl#&gt; .
-
-exs:ClassA a rdfs:Class ;
-           rdfs:subClassOf ga:Class . &lt;= NEW
-
-exs:ClassB a rdfs:Class ;
-           rdfs:subClassOf exs:ClassA .
-
-exs:ClassC a rdfs:Class ;
-           rdfs:subClassOf ga:Class . &lt;= NEW
-
-exs:attribute1 a rdf:Property ;
-               rdfs:subPropertyOf ga:attribute ; &lt;= NEW
-               rdfs:domain exs:ClassA ;
-               rdfs:range rdf:langString .
-
-exs:attribute2 a rdf:Property ;
-               rdfs:subPropertyOf ga:link ; &lt;= NEW
-               rdfs:domain exs:ClassA ;
-               rdfs:range exs:ClassC .
-</code></pre>
-
-<p>The root attribute type for attribute types having a range in <code>rdfs:Literal</code> is <code>ga:attribute</code>, and the root attribute type for attribute types that point to classes is <code>ga:link</code>.</p>
-<p>If we want to be sure that classes are realm classes, and because <code>rdfs:Class</code> maybe sometimes too large, we defined <code>ga:Class</code> as the root type for all classes.</p>
-<p>That provides the following RDFS-based ontology:</p>
-<pre><code>@prefix rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
-@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
-@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
-@prefix dc: &lt;http://purl.org/dc/elements/1.1/&gt; .
-
-@prefix ga:   &lt;https://orey.github.io/graphapps-V2#&gt; .
-
-&lt;https://orey.github.io/graphapps-V2#&gt; a owl:Ontology ;
-        dc:title &quot;GraphApps ontology for building semantic applications&quot; ;
-        dc:date &quot;2020-06-21&quot; ;
-        dc:description &quot;This ontology describe the minimal set of constructs required to build applications in the spirit of the GraphApps works.&quot; .
-
-ga:Class a rdfs:Class ;
-         rdfs:subClassOf rdfs:Class ;
-         rdfs:isDefinedBy &lt;https://orey.github.io/graphapps-V2#&gt; ;
-         rdfs:label &quot;Class&quot; ;
-         rdfs:comment &quot;Root class of the GraphApps classes.&quot; .
-
-ga:attribute a rdf:Property ;
-             rdfs:subPropertyOf rdf:Property ;
-             rdfs:isDefinedBy &lt;https://orey.github.io/graphapps-V2#&gt; ;
-             rdfs:label &quot;attribute&quot; ;
-             rdfs:comment &quot;Root property of final data attributes.&quot; ;
-             rdfs:domain ga:Class ;
-             rdfs:range rdfs:Literal .
-
-ga:link a rdf:Property ;
-             rdfs:subPropertyOf rdf:Property ;
-             rdfs:isDefinedBy &lt;https://orey.github.io/graphapps-V2#&gt; ;
-             rdfs:label &quot;link&quot; ;
-             rdfs:comment &quot;Root property of link between ga:Class.&quot; ;
-             rdfs:domain ga:Class ;
-             rdfs:range rdfs:Class .
-
-ga:id a ga:attribute ;
-      rdfs:isDefinedBy &lt;https://orey.github.io/graphapps-V2#&gt; ;
-      rdfs:label &quot;id&quot; ;
-      rdfs:comment &quot;Instance of attribute type to define a unique id for ga:Class instances.&quot; ;
-      rdfs:domain ga:Class ;
-      rdfs:range rdfs:Literal .
-
-</code></pre>
-
-<p>Such a grammar is enabling several things:</p>
-<ul>
-<li>Translate UML concepts in semantic web concepts;</li>
-<li>Distinguish between topological links between concepts, and values of attributes;</li>
-<li>Reason on less ambiguous concepts;</li>
-<li>Benefit from the RDF/RDFS definition of attributes out of classes;</li>
-<li>Enable graph transformations based on a set of non ambiguous concepts.</li>
-</ul>
-<p>The grammar can be found <a href="https://orey.github.io/graphapps-V2">here</a>.</p>
-<p><em>(June 2020)</em></p></div>
+<h1 id="einstein-cartan-et-la-geometrie-differentielle">Einstein, Cartan et la géométrie différentielle</h1>
+<p>Il m'arrive de rechercher des choses sur la structure de l'univers. Par exemple, je n'ai jamais cru à l'existence des trous noirs. Je vois plutôt le centre des galaxies comme un genre de cristal, avec des étoiles qui se bloquent les unes les autres dans leurs champs gravitationnels respectifs. Le centre des galaxies serait donc un milieu ayant les propriétés d'un solide très légèrement ductile, du fait de la rotation (qu'est-ce qui d'ailleurs fait tourner les galaxies, l'inertie ?). En s'éloignant du centre en rotation, les forces gravitationnelles passent par des grappes d'étoiles d'où cet aspect filandreux.</p>
+<p>Le sujet de la matière noire me fait aussi bien rigoler. Quand on a une théorie qui prédit que l'on ne voit pas 85% de la matière de l'univers, il faut changer de théorie ! Commençons par supposer que le photon ait une masse et refaisons les calculs !</p>
+<p>J'ai lu ce weekend quelques articles de Cartan sur la géométrie différentielle et les variétés à connexion affines, notamment <em>Sur les variétés à connexion affine et la théorie de la relativité généralisée</em> : <a href="http://archive.numdam.org/item/ASENS_1923_3_40__325_0/">là</a>, <a href="http://archive.numdam.org/item/ASENS_1924_3_41__1_0/">ici</a> et <a href="http://archive.numdam.org/item/ASENS_1925_3_42__17_0/">là</a>.</p>
+<p>Je pense avoir compris deux grands concepts de ces lectures assez fascinantes.</p>
+<ol>
+<li>
+<p>La géométrie différentielle s'intéresse aux propriétés des espaces non euclidiens au voisinage des points en envisageant des transformations locales pouvant être assimilées à des transformations euclidiennes. Ces transformations, selon Cartan, se décomposent en trois transformations fondamentales (chacune représentée par un tenseur) : la torsion (translation) et la courbure (ayant une composante de rotation et une composante d'homothétie). Cartan est intéressé par les invariants de ces transformations, invariants qui, au final, caractérisent l'espace en question.</p>
+</li>
+<li>
+<p>Ces transformations permettent d'expliquer comment passer progressivement d'espaces aux propriétés macroscopiques différentes selon les endroits. Par exemple, si le point considéré est dans le vide, alors il ne sera pas soumis aux mêmes champs gravitationnels qu'au voisinage d'une étoile en rotation.</p>
+</li>
+</ol>
+<p>Les variétés permettent donc de caractériser ces espaces non homogènes en recollant des espaces homogènes locaux via des transformations (les connexions).</p>
+<p>Ce qui est intéressant, dans ce champ des mathématiques, est que les outils qui sont développés sont justement parfaitement adaptés à des physiciens qui voudraient "recoller des théories entre elles", surtout lorsque ces théories ne sont potentiellement pas à la même échelle. Car, ce que permet la géométrie différentielle, c'est de travailler sur des transformations de points dans des voisinages minuscules et donc d'étudier les transitions des espaces non euclidiens par des successions de transformations plus connues sur des espaces tangentes.</p>
+<p>Einstein avait eu recours, pour la théorie de la relativité générale, à un espace de Riemann dans lequel la torsion était considérée comme nulle. Cartan, dans ses lettres à Einstein, partage le sujet d'une inclusion de paramètre de torsion, oublié (?) par Einstein.</p>
+<p>Extrait de la lettre de Cartan à Einstein du 3 décembre 1929 :</p>
+<p><img alt="Cartan06" src="../../images/cartan06.png" /></p>
+<p>Cartan met en lumière l'importance de la torsion, oubliée ou négligée par Einstein dans sa théorie. En fait, Einstein ne comprend pas la remarque comme l'introduction du livre (<em>Elie Cartan and Albert Einstein: Letters on Absolute Parallelism, 1929-1932</em>) sur la correspondance de Cartan avec Einstein le souligne :</p>
+<p><img alt="Cartan07" src="../../images/cartan07.png" /></p>
+<p><img alt="Cartan08" src="../../images/cartan08.png" /></p>
+<p>(<em>Robert Debever</em>)</p>
+<p>En 1923, Cartan a écrit le premier volume de son mémoire <em>Sur les variétés à connexion affine et la théorie de la relativité généralisée</em>. Les citations suivantes sont quand même hallucinantes :</p>
+<p>Page 11 du mémoire (première partie, suite) :</p>
+<p><img alt="Cartan01" src="../../images/cartan01.png" /></p>
+<p>Puis page 17 :</p>
+<p><img alt="cartan02" src="../../images/cartan02.png" /></p>
+<p>Puis 21, 22 et 23 :</p>
+<p><img alt="cartan03" src="../../images/cartan03.png" /></p>
+<p><img alt="cartan04" src="../../images/cartan04.png" /></p>
+<p><img alt="cartan05" src="../../images/cartan05.png" /></p>
+<p>"Sans entrer dans plus de détails à ce sujet" ? Hé quoi ? Cartan indique une méthode pour unifier la gravitation et l'électromagnétisme, en 1923, et son travail reste lettre morte... C'est incompréhensible.</p>
+<p>La description géométrique de Cartan des espaces non euclidiens est particulièrement intéressante : en distinguant les trois composantes de transformation locale d'un espace non euclidien dans le voisinage d'un point (translation, rotation et homothétie, et donc "torsion" et "courbure"), Cartan caractérise des espaces où des règles différentes peuvent s'appliquer suivant les différents endroits de cet espace. De fait, suivant les endroits, les différentes composantes vont prendre des valeurs plus ou moins importantes tout en restant homogènes, au niveau microscopiques. La décomposition de ces transformations en invariants permet de décrire la structure de notre univers, une structure dans laquelle les lois que nous connaissons sont applicables, dans un voisinage donné.</p>
+<p>Ainsi, philosophiquement, il est naturel que ce je vis dans le référentiel euclidien du système solaire ne soit pas tout à fait applicable au centre de la galaxie, ni dans le vide entre deux galaxies, bien que nous soyons dans un univers "continu", que ce soit géographiquement ou au niveau des échelles.</p>
+<p>Enfin, si le modèle avec torsion est une généralisation de la relativité générale incluant l'électromagnétisme, pourquoi les physiciens recherchent-ils encore l'unification des forces ?</p>
+<p><em>11 septembre 2022</em></p></div>
             </div>
         </div>
 
