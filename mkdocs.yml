@@ -58,7 +58,8 @@ nav:
         - 'Grammar of graph transformation': 'research/grammar-graph-transformation.md'
         - 'Graph-oriented programming language': 'research/graph-oriented-pl.md'
     - Various:
-        - 'Einstein, Cartan et la géométrie différentielle': 'research/cartan.md'
+        - 'A propos de la relativité générale': 'research/relativite.md'
+            - 'Einstein, Cartan et la géométrie différentielle': 'research/cartan.md'
         - 'Reflections on industry data': 'research/industry-data.md'
         - 'UML to RDF considerations': 'research/rdf-design-patterns.md'
         - 'Resources': 'research/resources.md'
