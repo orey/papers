@@ -325,7 +325,6 @@ Tn attribute Cn .
 Cn SubClassOf Typen .
 
 </code></pre>
-
 <h2 id="basic-rdbms-schema-transformation-in-a-multi-attributes-graph-database">Basic RDBMS schema transformation in a multi-attributes graph database</h2>
 <p>The following transformations are basic RDBMS schema transformations.</p>
 <p>Note that graph transformations are not commutative and their order is important.</p>
@@ -350,7 +349,6 @@ T1 foreign_key T2 .
 T2 attribute Kl .
 Kl SubClassOf Typel .
 </code></pre>
-
 <p>The predicate <code>foreign_key</code> will enable real data transformation later.</p>
 <h3 id="simple-class-split-and-simple-class-merge">Simple class split and simple class merge</h3>
 <p>Those graph transformations are exploiting the <code>1-1</code> relationship. In case of split, semantically the table <code>T</code> aggregates 2 concepts that are implicitly linked together.</p>
@@ -380,7 +378,6 @@ T' a Table .
 T' attribute C3 .
 T' attribute C4 .
 </code></pre>
-
 <p>Symmetrically, we have the merge.</p>
 <pre><code># Before
 T attribute C1 .
@@ -402,7 +399,6 @@ T attribute C2 .
 T attribute C3 .
 T attribute C4 .
 </code></pre>
-
 <p>For sure, if <code>T'</code> is removed, we have to ensure before that, in the semantic space, the type is not required elsewhere.</p>
 <h3 id="complex-class-split">Complex class split</h3>
 <p>One problem of table design is that we have sometimes different types hiding in the same table. Those cases are frequent in RDBMS and can be due to:</p>

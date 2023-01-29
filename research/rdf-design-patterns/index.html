@@ -343,7 +343,6 @@ exs:attribute2 a rdf:Property ;
                rdfs:range exs:ClassC .
 
 </code></pre>
-
 <h2 id="second-translation">Second translation</h2>
 <p>This first translation may be considered as having a slight problem. All new classes could be <code>subClassOf</code> another class, in order to enable reasoning based on sub-classes.</p>
 <p>We could enrich a bit our first translation by adding some lines.</p>
@@ -372,7 +371,6 @@ exs:attribute2 a rdf:Property ;
                rdfs:range exs:ClassC .
 
 </code></pre>
-
 <p>Semantically, the <code>a</code> indicates the real nature of the entity and the <code>rdfs:subClass/PropertyOf</code> its type hierarchy.</p>
 <h2 id="2-kinds-of-attribute-types">2 kinds of attribute types</h2>
 <p>Attribute types are not homogeneous. For a given attribute <code>exs:att</code>, <code>exs:att rdfs:range rdfs:Class</code> may indicate that we are talking about a link or relationship between two objects, whereas <code>exs:att rdfs:range rdfs:Literal</code> may indicate that we have a real attribute with a literal value.</p>
@@ -406,7 +404,6 @@ exs:attribute2 a rdf:Property ;
                rdfs:domain exs:ClassA ;
                rdfs:range exs:ClassC .
 </code></pre>
-
 <p>The root attribute type for attribute types having a range in <code>rdfs:Literal</code> is <code>ga:attribute</code>, and the root attribute type for attribute types that point to classes is <code>ga:link</code>.</p>
 <p>If we want to be sure that classes are realm classes, and because <code>rdfs:Class</code> maybe sometimes too large, we defined <code>ga:Class</code> as the root type for all classes.</p>
 <p>That provides the following RDFS-based ontology:</p>
@@ -452,7 +449,6 @@ ga:id a ga:attribute ;
       rdfs:range rdfs:Literal .
 
 </code></pre>
-
 <p>Such a grammar is enabling several things:</p>
 <ul>
 <li>Translate UML concepts in semantic web concepts;</li>

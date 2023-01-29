@@ -334,7 +334,6 @@
   a S .
 o a O .
 </code></pre>
-
 <h2 id="time-management">Time management</h2>
 <p>Rich piece of information: adding time information:</p>
 <pre><code>s p_23DEC2018 o ;
@@ -343,7 +342,6 @@ o a O .
 p_23DEC2018 a P .
 P a Time_Predicate .
 </code></pre>
-
 <p>This is practical because <code>s P o .</code> can be deduced easily even if <code>s p_23DEC2018 o .</code> is more precise.</p>
 <p>The statement <code>P a Time-Predicate .</code> indicates that P is a time-enabled predicate.</p>
 <h2 id="version-management">Version management</h2>
@@ -354,19 +352,16 @@ o a O .
 p_V2 a P .
 P a Version_Predicate .
 </code></pre>
-
 <h2 id="managing-life-cycle">Managing life-cycle</h2>
 <p>Case of subject modification and history keeping.</p>
 <p>Step 1. We have:</p>
 <pre><code>s1 p o .
 </code></pre>
-
 <p>Step 2: s1 becomes s2. We have:</p>
 <pre><code>s1 p o .
 s2 previous s1 .
 s2 p o . // &quot;Rewiring&quot;
 </code></pre>
-
 <p>This is ambiguous because the 3rd statement was made after the first. Let's use a time predicate.</p>
 <pre><code>s1 p_12DEC2018 o .
 p_12DEC2018 a P .
@@ -375,21 +370,18 @@ s2 previous s1 .
 s2 p_23DEC2018 o . // &quot;Rewiring&quot;
 p_23DEC2018 a P .
 </code></pre>
-
 <p>We can look at the graph at various moments.</p>
 <p>Indeed, we still have:</p>
 <pre><code>s1 P o .
 s2 previous s1 .
 s2 P o . // &quot;Rewiring&quot;
 </code></pre>
-
 <p>But we also encoded a more precise information.</p>
 <p>We could think about removing <code>s1 p o .</code> after <code>s2</code> is created but as the semantic web is a cumulative system, this does not seem very interesting.</p>
 <h2 id="shortcuts">Shortcuts</h2>
 <p>Let's consider the pattern:</p>
 <pre><code>q = p(1) o p(2) o ... o p(n)
 </code></pre>
-
 <p>with <code>p(i)</code> a set of predicates.</p>
 <pre><code>s q a .
 if
@@ -398,7 +390,6 @@ and x(n-1) p(n-1) x(n) .
 and ..
 and s p(1) x(2) . 
 </code></pre>
-
 <p><code>q</code> id just a new "predicate name".</p>
 <p>This can be very useful to present the same reality in another perspective/point of view.</p>
 <h2 id="filters">Filters</h2>
@@ -406,7 +397,6 @@ and s p(1) x(2) .
 <p>We can define a subgraph by "removing" the  <code>q</code>  predicate:</p>
 <pre><code>graph(s , depth=1) \ {q} =&gt; s p o .
 </code></pre>
-
 <h2 id="classical-inferences">Classical inferences</h2>
 <p>The use of classical inferences is very important also.</p>
 <h2 id="temporal-inferences">Temporal inferences</h2>
@@ -417,18 +407,15 @@ p(t1) a P .
 p(t2) a P .
 P a Time_Predicate .
 </code></pre>
-
 <p>and a and b were not existing before the predicates were created, we could deduce:</p>
 <pre><code>a before b .
 </code></pre>
-
 <p>Not sure it is useful.</p>
 <p>Simpler like that:</p>
 <pre><code>a2 previous a1 .
 a3 previous a2 .
 =&gt; a3 previous a1 .
 </code></pre>
-
 <p>Some predicates can have special transitivity features.</p>
 <h2 id="special-predicates">Special predicates</h2>
 <ul>

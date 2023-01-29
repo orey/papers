@@ -349,11 +349,9 @@ Remove attribute and create a link</p>
 <h2 id="gt-interface">GT Interface</h2>
 <pre><code>graph, rootnode, options = GT(graph, rootnode, options)
 </code></pre>
-
 <p><code>rootnode</code> is in the graph</p>
 <pre><code>options = {key : value, etc.}
 </code></pre>
-
 <p>For instance:</p>
 <ul>
 <li><code>Gt1 (graph, None, { "pattern" : "01001110"})</code></li>
@@ -364,14 +362,12 @@ Remove attribute and create a link</p>
 Gt6(None, root, params) -&gt; None, root, params
 clonegt(Gt6) -&gt; None, root, params
 </code></pre>
-
 <p>By forwarding the rest, we can compose GTs.</p>
 <p>Edited: better interface</p>
 <pre><code>graph2, rootnode2 = GT1(graph1, rootnode1, options1)
 graph3, rootnode3 = GT2(*GT1(graph1, rootnode1, options1), option2)
 
 </code></pre>
-
 <p>This enables to set the options at each stage. For sure, depending on the case, the <code>graph</code> or the <code>rootnode</code> may be <code>None</code>.</p>
 <p>Flexible interface:</p>
 <ul>
