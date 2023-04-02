@@ -2,7 +2,7 @@ site_name: Papers
 site_url: https://orey.github.io/papers/
 site_description: Olivier Rey's Papers
 site_author: Olivier Rey
-copyright: Copyleft Olivier Rey 2017-2022 - Site licensed under the GNU FDL V3
+copyright: Copyleft Olivier Rey 2017-2023 - Site licensed under the GNU FDL V3
 theme:
     name: mkdocs
     analytics:
@@ -58,6 +58,7 @@ nav:
         - 'Grammar of graph transformation': 'research/grammar-graph-transformation.md'
         - 'Graph-oriented programming language': 'research/graph-oriented-pl.md'
     - Various:
+        - 'Paradoxe de Zénon et dépassement de la vitesse de la lumière': 'research/zenon-lumiere.md'
         - 'Einstein, Cartan et la géométrie différentielle': 'research/cartan.md'
         - 'Reflections on industry data': 'research/industry-data.md'
         - 'UML to RDF considerations': 'research/rdf-design-patterns.md'
