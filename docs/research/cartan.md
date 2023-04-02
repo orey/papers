@@ -57,3 +57,4 @@ Ainsi, philosophiquement, il est naturel que ce je vis dans le référentiel euc
 Enfin, si le modèle avec torsion est une généralisation de la relativité générale incluant l'électromagnétisme, pourquoi les physiciens recherchent-ils encore l'unification des forces ?
 
 _11 septembre 2022_
+
