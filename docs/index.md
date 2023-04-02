@@ -50,13 +50,9 @@ Project page: [GraphApps project](research/graphapps.md) project (2013-2018)
 * [Semantic data migration project](research/data-mig.md) (2018-now)
     * [Using semantic web technologies for aerospace industrial data migration, Madics 2019](research/data-mig.md#madics)
 * More
-<<<<<<< HEAD
     * **NEW** - [Paradoxe de Zénon et dépassement de la vitesse de la lumière](research/zenon-lumiere.md)
+    * [A propos de la relativité générale](research/relativite.md)
     * [Einstein, Cartan et la géométrie différentielle](research/cartan.md)
-=======
-    * **NEW** - [A propos de la relativité générale](research/relativite.md) - *Mise à jour Septembre 2022*
-    * **NEW** - [Einstein, Cartan et la géométrie différentielle](research/cartan.md) - *Mise à jour Septembre 2022*
->>>>>>> 0eb57a8fd2cfb3bd8753906fdbad2f708015a0c9
     * [UML to RDF considerations](research/rdf-design-patterns.md)
     * [Reflections on industry data](research/industry-data.md)
     * [Towards a graph-oriented programming language?](research/graph-oriented-pl.md)
