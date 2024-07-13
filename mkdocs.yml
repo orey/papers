@@ -2,7 +2,7 @@ site_name: Papers
 site_url: https://orey.github.io/papers/
 site_description: Olivier Rey's Papers
 site_author: Olivier Rey
-copyright: Copyleft Olivier Rey 2017-2023 - Site licensed under the GNU FDL V3
+copyright: Copyleft Olivier Rey 2017-2024 - Site licensed under the GNU FDL V3
 theme:
     name: mkdocs
     analytics:
