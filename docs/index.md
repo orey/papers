@@ -20,8 +20,9 @@
 * [GraphQL And Classic Web Services](articles/graphql-web-services.md)
 * [Considerations about Rest and Web Services](articles/about-rest.md)
 
-## Papers on IT processes
+## Papers on IT
 
+* **NEW** - [Legends of IT](articles/legends-of-it.md)
 * [The Various Stages of Digital Transformation](articles/various-stages.md)
 * [The V2 Vortex](articles/the-v2-vortex.md)
 * [The Five Levels of Conceptual Maturity for IT Teams](articles/five-levels.md)
@@ -50,7 +51,7 @@ Project page: [GraphApps project](research/graphapps.md) project (2013-2018)
 * [Semantic data migration project](research/data-mig.md) (2018-now)
     * [Using semantic web technologies for aerospace industrial data migration, Madics 2019](research/data-mig.md#madics)
 * More
-    * **NEW** - [Paradoxe de Zénon et dépassement de la vitesse de la lumière](research/zenon-lumiere.md)
+    * [Paradoxe de Zénon et dépassement de la vitesse de la lumière](research/zenon-lumiere.md)
     * [A propos de la relativité générale](research/relativite.md)
     * [Einstein, Cartan et la géométrie différentielle](research/cartan.md)
     * [UML to RDF considerations](research/rdf-design-patterns.md)
@@ -59,5 +60,5 @@ Project page: [GraphApps project](research/graphapps.md) project (2013-2018)
     * [Resources](research/resources.md)
 
 
-*(Last update: April 2023)*
+*(Last update: July 2024)*
 

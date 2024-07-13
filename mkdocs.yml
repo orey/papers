@@ -35,6 +35,7 @@ nav:
     - 'GraphQL And Classic Web Services': 'articles/graphql-web-services.md'
     - 'The real nature of data': 'articles/data-interop.md'
 - IT:    
+    - 'Legends of IT': 'articles/legends-of-it.md'
     - 'The Five Levels of Conceptual Maturity for IT Teams': 'articles/five-levels.md'
     - 'The V2 Vortex': 'articles/the-v2-vortex.md'
     - 'The Various Stages of Digital Transformation': 'articles/various-stages.md'
