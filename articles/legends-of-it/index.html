@@ -117,9 +117,13 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">IT <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Legends of IT</a>
+</li>
                                     
 <li>
     <a href="../five-levels/" class="dropdown-item">The Five Levels of Conceptual Maturity for IT Teams</a>
@@ -255,6 +259,16 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../data-interop/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../five-levels/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -275,7 +289,7 @@
             
             <li class="nav-item" data-level="1"><a href="#legends-of-it" class="nav-link">Legends of IT</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#what-criteria-to-judge-legends" class="nav-link">What criteria to judge legends?</a>
+            <li class="nav-item" data-level="2"><a href="#what-criteria-to-judge-it-legends" class="nav-link">What criteria to judge IT legends?</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -323,7 +337,15 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#legend-6-we-can-replace-interfaces-by-sharing-tables-in-the-database" class="nav-link">Legend #6: We can replace interfaces by sharing tables in the database</a>
+            <li class="nav-item" data-level="2"><a href="#legend-6-we-can-replace-interfaces-by-sharing-tables-in-a-database" class="nav-link">Legend #6: We can replace interfaces by sharing tables in a database</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#legend-7-we-have-great-tools-to-develop-applications" class="nav-link">Legend #7: We have great tools to develop applications</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#we-are-at-the-beginning-of-the-story-of-it" class="nav-link">We are at the beginning of the story of IT</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -337,21 +359,21 @@
 <h1 id="legends-of-it">Legends of IT</h1>
 <p><img alt="gears" src="../../images/dupondt-mirage.jpg" />
 <em>(Image from</em> Les aventures de Tintin <em>by Hergé)</em></p>
-<p>Information technology (IT) is a very recent engineering discipline and no one implied in IT projects should never forget this fact. Like all recent technological discipline at the heart of all modern businesses, it is both a marvelous tool, because it is "soft"-ware, a formidable enabler for business, and as it is representing lots of money, it is also a great place for legends.</p>
+<p>Information technology (IT) is a very recent engineering discipline and no one implied in IT projects should never forget this fact. Like all recent technological discipline at the heart of all modern businesses, it is both a marvelous tool, because it is "soft"-ware, a formidable enabler for business, and as it is representing lots of money, it is also a great place for legends and marketing messages.</p>
 <p>As IT is a very intellectual discipline, both an engineering discipline and a creative activity, as the entry ticket of making a program run is very low, it is very easy to believe things that are untrue and to loose the global perspective of what IT is for and what are the problems it should answer to.</p>
-<h2 id="what-criteria-to-judge-legends">What criteria to judge legends?</h2>
-<p>The first problem we face in IT when trying to get some perspective is the problem of defining a criteria that will enable us to categorize the IT practices as "good" or "bad".</p>
-<p>It is incredible that those criteria are not better known and shared, but after looking more carefully, it is easy to realize that there is no real consensus about those criteria.</p>
+<h2 id="what-criteria-to-judge-it-legends">What criteria to judge IT legends?</h2>
+<p>The first problem we face in IT when trying to get some perspective is the problem of defining a set of criteria that will enable us to categorize the IT practices as "good" or "bad".</p>
+<p>It is incredible that those criteria are not better known and shared, but after looking more carefully, it is easy to realize that there is no real consensus about those criteria. For sure, the consensus would mean that we could be able to estimate if some application is badly done. There are some books and some corporate or community practices but no real accepted consensus (except at low level coding).</p>
 <p>So, we will define our own set of criteria as a kind of compass that will guide us through this journey of illusions.</p>
 <h2 id="criteria-1-simplicity">Criteria #1: Simplicity</h2>
 <p>Simplicity will be our first criteria. Software should be the simplest possible, software architecture also and so is IT architecture.</p>
-<p>Where complexity is, failure will be and high maintenance costs.</p>
+<p>Where complexity is, failure will be as high maintenance costs.</p>
 <h2 id="criteria-2-as-little-dependencies-as-possible">Criteria #2: As little dependencies as possible</h2>
 <p>Dependencies should be limited to their bare minimum because they will bring constraints on your application.</p>
-<p>In particular, reusability of external components creates dependencies that jeopardize the value of the application and its capacity to evolve freely.</p>
+<p>In particular, reusability of external components creates dependencies that jeopardize the value of the application and its capacity to evolve freely. Are you writing valuable programs or are you developing plugins for the last trendy giga-framework?</p>
 <h2 id="criteria-3-adaptability">Criteria #3: Adaptability</h2>
 <p>Adaptability must be understood in the sense of ease of change. Adaptability is the reverse of <em>technical debt</em>: when a technology aggravates technical debt, it should never be used.</p>
-<p>Our notion of technical debt is defined very precisely in the article <a href="../../pdf/20161026-TheGraphOrientedProgrammingParadigm-ORey-PreliminaryVersion.pdf">The graph-oriented programming paradigm</a>. Adaptability means as less couplings as possible.</p>
+<p>The definition we take for technical debt is defined very precisely in the article <a href="../../pdf/20161026-TheGraphOrientedProgrammingParadigm-ORey-PreliminaryVersion.pdf">The graph-oriented programming paradigm</a>. Adaptability means as little couplings as possible.</p>
 <p>That's why reusability of external components can be a bad idea on the long run.</p>
 <h2 id="criteria-4-stick-to-standards-in-particular-in-programming-languages">Criteria #4: Stick to standards, in particular in programming languages</h2>
 <p>At any cost, stick to the standard programming language and avoid, if you can proprietary languages. Standard languages you use should be supported by a stable community. This community does not have to be large, but you will be safer if the language specification is opened and/or massively supported and/or standardized by ANSI, ISO or any standardization office.</p>
@@ -361,16 +383,89 @@
 <p>The real cost of a software encompasses all the phases of the project, that's why business process analysis, functional specifications and functional testing are core skills to the success of a project and to the economical data attached to it, before go-live and afterwards.</p>
 <h2 id="representing-a-business-domain">Representing a business domain</h2>
 <p>We'll not talk about games in this article but about professional applications and technology which aim is to automate some business domain.</p>
-<p>Before automating a business domain, it is necessary to realize that IT primary movement is to "represent" it. We can qualify this representation:</p>
+<p>Before automating a business domain, it is necessary to realize that IT primary movement is to "represent" it.</p>
+<p>We can qualify this representation:</p>
 <ul>
 <li>The representation of any business is partial,</li>
 <li>It is included in the semantic space of the particular business,</li>
-<li>This representation is relative (we'll come back on this one),</li>
+<li>This representation is relative,</li>
 <li>It is composed by 2 parts: representing the data often with database tools and representing the business rules via programs.</li>
 </ul>
 <h2 id="legend-1-data-are-absolute">Legend #1: Data are absolute</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Criteria</th>
+<th>Applicable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Simplicity</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>2</td>
+<td>No dependencies</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Adaptability</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Standards</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Economics</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
 <p>For sure, this statement or belief is wrong, as we have shown in our article, <a href="../data-interop/">The real nature of data</a>: data are the intersection of use cases and the semantic space. In the same semantic space, change the use cases and you will get different data models.</p>
 <h2 id="legend-2-for-a-certain-problem-there-is-only-one-code-design">Legend #2: For a certain problem, there is only one code design</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Criteria</th>
+<th>Applicable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Simplicity</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>2</td>
+<td>No dependencies</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Adaptability</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Standards</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Economics</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
 <p>This legend is, first of all, correlated to the last point. Depending on the various use cases you will implement, you will have an application design that will change.</p>
 <p>Second of all, depending on the evolutions of your application, evolutions that will be very complicated to anticipate, you will realize that a design was adapted or not to the direction the application goes to, during its lifetime.</p>
 <p>Most of the time, experience shows that software engineers are very bad at predicting in what direction the application will grow. This is quite normal because to be able to forecast correctly in what direction a software will develop during years, you have to know very well the business and the trends of this particular business.</p>
@@ -380,40 +475,149 @@
 <p>A wrong design pattern brings complexity (inverse of simplicity) and increased technical debt, sometimes huge increase (and this is the reverse of adaptability).</p>
 <p>So be very careful about design patterns, because they may damage a lot your code.</p>
 <h2 id="legend-3-reusability-is-good">Legend #3: Reusability is good</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Criteria</th>
+<th>Applicable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Simplicity</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>2</td>
+<td>No dependencies</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Adaptability</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Standards</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Economics</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
 <p>Reusability is a double-edged sword and not at all a sign of good software.</p>
 <p>First of all, because software are made by creative humans, software generates attachment in the heart of the software engineers. When you worked several hours on a large program and realize that it is useless, you should be able to delete it without feelings. But the fact is, people get attached to the programs they did, because they did suffer doing them, and making them work.</p>
 <p>There comes reusability as a way to save bad code. If the bad code is saved, you will generate more technical debt reusing it and it will generate useless complexity.</p>
 <p><img alt="ANSI Common Lisp" src="../../images/ansi-common-lisp-19.jpeg" /></p>
-<p>For sure, very often, when a feature seems generic, software engineers tend to make reusable code. At micro level, this is quite often necessary (see the bottom-up programming notion of Paul Graham in his <a href="https://paulgraham.com/acl.html">ANSI Common Lisp</a> book, or even the <a href="https://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">C++ Standard libray</a>).</p>
+<p>For sure, very often, when a feature seems generic, software engineers tend to make reusable code. We have to note that the first reusability movement is to create a function (!).</p>
+<p>At micro level, this is for sure quite often necessary (see the bottom-up programming notion of Paul Graham in his <a href="https://paulgraham.com/acl.html">ANSI Common Lisp</a> book, or even the <a href="https://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">C++ Standard libray</a>).</p>
 <p>But, when it goes to higher level of code, the danger is everywhere. Should we reuse? Should we create some reusable code?</p>
-<p>I remind a principle from an ancient VP Software Engineering at Amadeus, François Weissert, saying: "Reusability starts at 3". When you have twice the same code, you should be very careful about the code to be really reusable. When you have the same code 3 times, you can consider reusability.</p>
+<p>I remind a principle from an ancient VP Software Engineering at Amadeus, François Weissert, saying: "Reusability starts at 3". When you have twice the same code, you should be very careful about the code to be really reusable. When you have the same code 3 times, you can consider reusability (which does not mean you'll do something reusable outside your code).</p>
 <p>We have to remember that the semantic of the business itself is not "reusable" and so reusability should be dealt with with a great deal of caution.</p>
-<p>For some companies, reusability has become a way to make you a prisoner of their "framework", and especially of the mandatory updates that you must do if you want to keep been supported. Consider the giant Javascript frameworks such as Angular or React. Being forced to reuse their framework will change drastically your design because you will need to adapt to their.</p>
+<p>For some companies, reusability has become a way to make you a prisoner of their giga-framework, and especially of the mandatory updates that you must do if you want to keep been supported. Consider the giga Javascript frameworks such as Angular or React. Being forced to reuse their framework will change drastically your design because you will need to adapt to theirs.</p>
 <p>Are there ways to do better? What are those frameworks provide that you really need? What is the real code you need to reuse? In some technical areas, that is obvious. As application developers, we don't want to recode the TLS protocol, so we reuse.</p>
 <p>But in order to call an API in Javascript, do I need a big framework? No. Do I need some fancy components? Maybe yes, but what are the strings attached to this reusability? Will this corrupt my programming model? Do we really know what contract we are signing when we reuse a big framework?</p>
-<p>Reusability is a powerful tool but also a very dangerous team. It also brings a dependency on your knowledge. By reusing, you make the choice of never knowing what really occurs but to stay on the surface of what the reusable component will show you.</p>
+<p>Reusability is a powerful tool but also a very dangerous one. It also brings a dependency on your knowledge. By reusing, you make the choice of never knowing what really occurs underneath, but to stay on the surface of what the reusable component will show you.</p>
 <h2 id="legend-4-you-should-use-this-framework-because-everyone-uses-it">Legend #4: You should use this framework because everyone uses it</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Criteria</th>
+<th>Applicable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Simplicity</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>2</td>
+<td>No dependencies</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Adaptability</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Standards</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Economics</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
 <p>Who says you should? Your IT service provider because they have trained people and they want to amortize the trainings of their employees? The framework provider to lock you up?</p>
 <p>What are the consequences of such a choice?</p>
 <ul>
 <li>How often the framework provider delivers big updates?</li>
 <li>How often are you bound to migrate?</li>
-<li>If you do not migrate to the last framework versions, what are the risks you take?</li>
+<li>If you do not migrate to the last framework versions, what risks are you taking?</li>
 <li>Did you consider securing the code of the framework, if you have access to it?</li>
 <li>Did you consider securing the documentation?</li>
 <li>If you have skilled software engineers in the technology, can they adapt easily to the framework? Now? In 5 years?</li>
-<li>Is it easy to get rid of the framework or are you bound to change everything?</li>
+<li>Is it easy to get rid of the framework or are you bound to rewrite everything?</li>
 </ul>
 <p>We won't cite too many samples but we have, in the recent history of IT, so many examples of bad technology that "you should use because everyone uses it".</p>
-<p>GWT is the perfect example of Google marketing non-industrial project, so are the first versions of Angular. I wish the software companies use their own crappy software before providing them to the community. Look at Angular: it is not used by Google on Google Workspace. Ask them why? Maybe because Angular is a marketing project that does not respect backward compatibility and is not reliable enough to be in production at Google's?</p>
-<p>Be reassured, Google is not the only one to propose marvelous magic tools which happen to be very bad choices on the long run, React from Facebook is the same kind of software components.</p>
-<p>Front-end development is the place of all "innovations", so also the place where the "economics matter" principle is the most at stake. If your team code in HTML, Javascript and CSS, your code may still run and be maintainable in 10 years, whereas in 3 years, no one will still use the framework that you choose now.</p>
-<p>We can wonder who really needs those very big frameworks, maybe some marketing companies for which rewriting the full front every 2 years is OK. If you are an institution, you can do a lot in plain JS with a few simple components (easily replaceable). If you are developing an application for your company, you mainly need forms and tables (some companies may need more).</p>
-<p>For backend developments, choose a standard programming language. This choice is complicated nowadays, because Java is not free anymore (as it was feared), and C# is Microsoft IP (even if it runs under Linux). That makes server side Python or JS more appealing, even if the programming model is not the same.</p>
-<p>Let's say, your choice should never be driven by your supplier or by the IT marketing messages. You will have sufficient problems to maintain your own code, don't reuse components and frameworks when you can avoid it. It violates the 4 criteria.</p>
+<p>GWT is the canonical example of a Google marketing non-industrial project, so are the first versions of Angular. I wish the software companies use their own crappy software before providing them to the community. Look at Angular: it is not used by Google on Google Workspace. Ask them why. Maybe because Angular is a marketing project that does not respect backward compatibility and is not reliable enough, or too complicated, or too unstable to be in production at Google's? So why would that framework be good for my company - which is not a software company...</p>
+<p>Be reassured, Google is not the only one to propose marvelous magic tools which happen to be very bad choices on the long run, React from Facebook is the same kind of software components. Some design ideas are very interesting but often use just a small part of those giga-frameworks.</p>
+<p>Front-end development is the place of all "innovations", so also the place where the "economics matter" principle is the most at stake. If your team code in HTML, Javascript and CSS, your code may still run and be maintainable in 10 years, whereas in 3 years, no one will still use the giga-framework that you choose now.</p>
+<p>We can wonder who really needs those giga-frameworks, maybe some marketing companies for which rewriting the full front every 2 years is OK. If you are an institution, you can do a lot in plain JS with a few simple components (easily replaceable). If you are developing an application for your company, you mainly need forms and tables so you can stick to simple stuff (some companies may need more).</p>
+<p>For backend developments, choose a standard programming language. This choice is complicated nowadays, because Java is not free anymore (as it was feared), and C# is Microsoft IP (even if it runs under Linux). That makes server side Python, JS or even PHP more appealing, even if the programming model is not the same.</p>
+<p>Let's say, your choice should never be driven by your supplier or by the IT marketing messages. You will have sufficient problems to maintain your own code, don't reuse components and frameworks when you can avoid it. It violates the whole 5 criteria.</p>
 <h2 id="legend-5-we-are-in-a-digital-world-with-reliable-data">Legend #5: We are in a digital world with reliable data</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Criteria</th>
+<th>Applicable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Simplicity</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>No dependencies</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Adaptability</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Standards</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Economics</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
 <p>Depending on the business domains, the data are more or less reliable.</p>
-<p>When they are, we can build interfaces between systems that will exchange structured data, each of them sharing the same view of the grammar of the data (see case #1 in Figure 1 below). When the traffic is slow or when systems may have trouble interoperating or when the traffic is asynchronous, files containing structured data can be exchanged (see case #2 in Figure 1 below).</p>
+<p>When they are, we can build interfaces between systems that will exchange structured data, each of them sharing the same view of the grammar of the data (see case #1 in Figure 1 below). When the traffic is slow, when systems may have trouble interoperating or when the traffic is asynchronous, files containing structured data can be exchanged (see case #2 in Figure 1 below).</p>
 <p>Take the referential data, for instance the list of customers of a retail company, the list of enterprises upon which collect social taxes, the list of parts mounted on an aircraft, all that data should be reliable but, quite often, they are not.</p>
 <p>There are many reasons for that:</p>
 <ul>
@@ -421,7 +625,7 @@
 <li>The number of data in the referential is very big so, even a small percentage of errors, represents a potential large problem,</li>
 <li>The global process of management of those data is based partially under spreadsheets,</li>
 <li>Several actors share responsibilities in a global inconsistent process with no reliable interfaces between systems (or between spreadsheets),</li>
-<li>Where there should exist only one referential, there are multiple inconsistent referential with a difficulty of knowing what is the correct data,</li>
+<li>Where there should exist only one referential, there are multiple inconsistent referential systems with a difficulty of knowing what is the correct data,</li>
 <li>Etc.</li>
 </ul>
 <p>We have to face it: the world is not perfect, and so are the data.</p>
@@ -429,28 +633,64 @@
 <p>To face such a reality, two strategies can be chosen:</p>
 <ul>
 <li>Denial, which leads to build software that expect data to be complete, consistent and perfect;</li>
-<li>Acceptation, which leads to more of less complex ways to protect the application.</li>
+<li>Acceptation, which leads to more or less complex ways to protect the application.</li>
 </ul>
 <p>Denial leads to applications that are never working properly because they expect correct data.</p>
 <p>That can be solved by people correcting the data on the long run, or by opening special rights inside the application, which can put at stake its security and integrity.</p>
 <p>Quite often, the application is realized to be consistent, but, facing the reality of impossibility of use because of rotten data, the application controls are released to make it usable which creates an explosion of maintenance costs and does not solve really the data quality problems.</p>
 <p>Acceptation has a cost that must be integrated into the cost of the application, both at build time and at maintenance time.</p>
 <h3 id="the-facade-pattern">The "façade" pattern</h3>
-<p>One common solution is consisting in using the façade pattern: Instead of loading data inside your application, you are loading data into a façade that will be in charge of cleaning/disambiguating/complementing the data before the output is loaded  into the application.</p>
+<p>One common solution consequence of accepting bad data as a requirement, is consisting in using the façade pattern: Instead of loading data inside your application, you are loading data into a façade that will be in charge of cleaning/disambiguating/complementing the data before the output is loaded into the application.</p>
 <p><img alt="Various kinds of façade" src="../../yed/app-facade.png" />
 <em>Figure 1: Various kinds of façades</em></p>
 <p>The simplest case of façade is the case #3: the façade is a set of programs that which transforms <code>data1</code> and <code>data2</code> into <code>data</code> that can be loaded safely insde the target application.</p>
 <p>Depending on the gravity of data inconsistency, the façade could be a small application with its own database, its own data processing chain, able potentially to calculate and store data versions and deltas between versions and to apply complex business rules to chose the right data to be imported inside the application (case #4).</p>
 <p>For sure, if the flow of data is continuous, the façade must be monitored and tuned with the right rules, in order to sustain the flow and be able to feed the application with correct and reliable data.</p>
 <h3 id="never-mix-concerns">Never mix concerns</h3>
-<p>In all cases, the data cleanup should never pollute the application itself and so, be segregated. The façade must be a separate component, separate database if needed, and separate software. Because the application has a job to do, the data cleanup must be done up-front.</p>
-<p>The consequence of denial is to mix the 2 kinds of feature inside the same application, and that's why this solution ends up inevitably in bad software and bad data.</p>
-<h2 id="legend-6-we-can-replace-interfaces-by-sharing-tables-in-the-database">Legend #6: We can replace interfaces by sharing tables in the database</h2>
+<p>In all cases, the data cleanup should never pollute the application itself and so, be segregated from it. The façade must be a separate component, a separate database if needed, and separate software. Because the application has a job to do and its design should be done considering it, the data cleanup must be done up-front.</p>
+<p>The consequence of denial is to mix the 2 kinds of features inside the same application (business functionality and data cleansing), and that's why this solution ends up inevitably in bad software and bad data.</p>
+<h2 id="legend-6-we-can-replace-interfaces-by-sharing-tables-in-a-database">Legend #6: We can replace interfaces by sharing tables in a database</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Criteria</th>
+<th>Applicable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Simplicity</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>2</td>
+<td>No dependencies</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Adaptability</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Standards</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Economics</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
 <p>Each application is answering to a set of use cases, and the application data are the result of the intersection between the list of use cases with the business semantic space (see <a href="../data-interop/">The real nature of data</a>).</p>
 <p>That means that each application deserves a data model fit to its needs so different the one from the other. For sure, applications may share data, but their sharing must remains as minimal as possible and bear the less structure as possible.</p>
 <p><img alt="Data interop" src="../../yed/stubs01.png" /></p>
 <p><em>Figure 2: Data models are adapted to each application</em></p>
-<p>In Figure2, we can see how 3 different data representations are semantically equivalent but absolutely not technically equivalent. We'll note that the exchange format is the most loose format. That enables each stakeholder in the exchange to rebuild data structures conforming to its use cases.</p>
+<p>In Figure2, we can see how 3 different data representations are semantically equivalent but absolutely not technically equivalent. We'll note that the exchange format is the most "loose" format. That enables each stakeholder in the exchange to rebuild its data structures conforming to its use cases.</p>
 <p>Figure 2 is showing an interface between systems. If we were to project the <code>viewpoint1</code> directly in Application 2, we would distort the data model of Application 2 imposing, as a constraint, a part of the datamodel of Application 1. Let's suppose we do that with database materialized views, we will distort and create code of Application 2 based on data structures (that can change) of Application 1.</p>
 <p>This practice is very dirty and very risky because:</p>
 <ul>
@@ -458,10 +698,71 @@
 <li>It creates a dependency that is useless, because an interface would have transform this hard dependency into a loose dependency (at the exchange format level and not at the database level),</li>
 <li>It creates a design and code distortion in the Application 2, because the <code>viewpoint1</code> is not what was imagined as a design for Application 2.</li>
 </ul>
-<p>The last point is quite interesting: by transforming the <code>viewpoint1</code> into <code>viewpoint2</code>, the Application 2 can do some modifications on the objects transported by the exchange format to make them its own. In other terms, the transformation can include business rules and never store A or C but A union C. This code would have to be moved into the database requests in case the data model of Application is partially imposed to Application 2.</p>
+<p>The last point is quite interesting: by transforming the exchange format into <code>viewpoint2</code>, the Application 2 can do some modifications on the objects transported by the exchange format to make them its own. In other terms, the transformation can include business rules and never store A or C but A union C. Quite often, transactions between systems are triggering business rules to adapt the incoming data to the target semantic space.</p>
 <p>The conclusion is, for sure, we can't replace interfaces by sharing of data structures.</p>
-<p>The second conclusion is: we can't have a single database with all data in it, that's stupid, because data are structured and live at the rhythm of their use cases and semantic business domain.</p>
-<p>The third conclusion is: we can't group several business domains inside the same database, because one of them will drive and the others will live at the rhythm of the dominant.</p></div>
+<p>The second conclusion is: we can't group several business domains inside the same database, because one of them will drive and the others will live at the rhythm of the dominant.</p>
+<h3 id="the-strange-message-of-plm-vendors">The strange message of PLM vendors</h3>
+<p>We will make a specific note for marketing messages coming from PLM (Product Lifecycle Management) vendors. Each of them proposes products that can address the 3 engineering divisions of any industrial company:</p>
+<ul>
+<li>Engineering,</li>
+<li>Manufacturing engineering,</li>
+<li>Support engineering.</li>
+</ul>
+<p>The problem is those 3 domains are really different semantic spaces, and so, only in rare industrial cases, 2 or 3 of those domains can fit in the same PLM instance, so in the same database.</p>
+<p>In the general case, it is possible to use 3 instances of those PLMs, one for each business domain, and interconnect them with real interfaces (cases #1 and #2  on Figure 1).</p>
+<p>But trying to make those semantic domains cohabit in the same instance is leading almost inevitably to one semantic domain A imposing its rules (rhythm, lifecycle, data model) to another semantic domain B. That generates downstream systems that will recreate the models and lifecycle that B cannot operate in a PLM dominated by A.</p>
+<p>This also generates horrible costs and non convergence of projects.</p>
+<p>The PLMs are sold as "collaborative tools" but as soon as they are more than an electronic document management system (that can store the 3 domains together) and manage structure data and lifecycles, the standard business semantic space rule apply: <em>we can't put 2 different business semantic spaces in the same database</em> (because it does not work).</p>
+<p>Note that many companies tried and spent millions trying to do it, and failing, at least partially. Because, you can, but the second semantic space is slave to the first. And so, look at your IT systems: the slave domain generated many spreadsheets or small applications to be able to live with its own rhythm, lifecycles and data structures.</p>
+<p>What is strange is that this message is the one of the "mega-monolith". Due to the fact that the PLM is parameterizable, the vendors consider that they are legitimate to push for a mega-monolith encompassing everything. Furthermore, this message appears to be contradictory to the IT architecture trends everywhere else apart from industry.</p>
+<p>It is possible those vendors believe what they sell, which is why it is good to point out that it is a real legend. Most of the time, in the real-life, the three divisions of the industry have 3 sets of processes, rhythms and lifecycles, and objects, and this is not because they all manipulate "parts" that they can fit in the same database, how parameterizable it can be.</p>
+<h2 id="legend-7-we-have-great-tools-to-develop-applications">Legend #7: We have great tools to develop applications</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Criteria</th>
+<th>Applicable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Simplicity</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>2</td>
+<td>No dependencies</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Adaptability</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Standards</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Economics</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p>This part will introduce <a href="../../pdf/20161026-TheGraphOrientedProgrammingParadigm-ORey-PreliminaryVersion.pdf">The graph-oriented programming paradigm</a> article.</p>
+<p>Even if we can realize applications in object-oriented programming and with relational databases, this technology is very bad in terms of coupling and generates, from day 1, a huge technical debt, making it a logical consequence to have an exponential explosion of the maintenance costs with time (cost of the function point tending towards the infinite).</p>
+<p>Can we stick to this set of tools and technologies that we have since almost 30 years: OOP + relational DB? Can we open our eyes on the economical heresy brought by this technology, especially in maintenance phases? Can we see our software activities differently, by taking a step back on those last decades?</p>
+<p>Are we doomed to accept that a front-end must use giga-frameworks and must be rewritten every 2 years while the backend has inevitably exponential maintenance costs over 10 years?</p>
+<h2 id="we-are-at-the-beginning-of-the-story-of-it">We are at the beginning of the story of IT</h2>
+<p>No, we are not doomed, because we are just at the beginning of the history of IT. Some could say that AI will enhance our capacity to write code. Yes, maybe, but AI won't find alternate programming systems to enter the new phase of our IT discovery. I fear we have to do the job.</p>
+<p><a href="../../pdf/20161026-TheGraphOrientedProgrammingParadigm-ORey-PreliminaryVersion.pdf">Graph-oriented programming paradigm</a> is a way forward that seems very promising, but there should be plenty of alternate ways of doing stuff.</p>
+<p>I just hope AI won't prevent us to be as creative as the 70s/80s where, instead of just following marketing-led companies, software engineers and researchers were experimenting, creating and discovering.</p>
+<p>Don't believe in legends. Find new paths. We need them.</p>
+<p><em>(July 13 2014)</em></p></div>
             </div>
         </div>
 
