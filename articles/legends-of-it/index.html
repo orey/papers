@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Olivier Rey">
+        <link rel="canonical" href="https://orey.github.io/papers/articles/legends-of-it/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Legends of IT - Papers</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZMZKWJP2V"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-BZMZKWJP2V');
+        </script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Papers</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../.." class="dropdown-item">Index</a>
+</li>
+                                    
+<li>
+    <a href="../../about/about/" class="dropdown-item">Author</a>
+</li>
+                                    
+<li>
+    <a href="../../about/LICENSE/" class="dropdown-item">License</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">PLM <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../about-plm/" class="dropdown-item">PLM and graph data</a>
+</li>
+                                    
+<li>
+    <a href="../conf-mgt/" class="dropdown-item">Configuration management of industrial products in PDM/PLM</a>
+</li>
+                                    
+<li>
+    <a href="../spreadsheet-and-PLM/" class="dropdown-item">The four core functions showing you need a PLM</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Modeling <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../portfolio/" class="dropdown-item">A Simple Meta-Model for Portfolio Management</a>
+</li>
+                                    
+<li>
+    <a href="../archimate-intro/" class="dropdown-item">An Introduction to The Archimate Revolution</a>
+</li>
+                                    
+<li>
+    <a href="../archimate-recipes/" class="dropdown-item">Archimate Recipes</a>
+</li>
+                                    
+<li>
+    <a href="../mbse-vs-ea/" class="dropdown-item">Military frameworks, systems engineering and enterprise architecture</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Data <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../research/about-ml/" class="dropdown-item">About artificial neural networks and machine learning</a>
+</li>
+                                    
+<li>
+    <a href="../about-rest/" class="dropdown-item">Considerations About Rest And Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../graphql-web-services/" class="dropdown-item">GraphQL And Classic Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../data-interop/" class="dropdown-item">The real nature of data</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">IT <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../five-levels/" class="dropdown-item">The Five Levels of Conceptual Maturity for IT Teams</a>
+</li>
+                                    
+<li>
+    <a href="../the-v2-vortex/" class="dropdown-item">The V2 Vortex</a>
+</li>
+                                    
+<li>
+    <a href="../various-stages/" class="dropdown-item">The Various Stages of Digital Transformation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Research <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../research/index-research/" class="dropdown-item">Index</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Graph-oriented programming</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../graph/first-article/" class="dropdown-item">First article on graph-oriented programming</a>
+</li>
+            
+<li>
+    <a href="../../graph/staf-icgt2018/" class="dropdown-item">Conference at the STAF/ICGT 2018 in Toulouse</a>
+</li>
+            
+<li>
+    <a href="../../research/graphapps/" class="dropdown-item">GraphApps project page</a>
+</li>
+            
+<li>
+    <a href="../../research/graph-oriented-pl/" class="dropdown-item">Towards a graph-oriented programming language?</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Semantic Web</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../research/data-mig/" class="dropdown-item">Aerospace data migration</a>
+</li>
+            
+<li>
+    <a href="../../research/data-mig/" class="dropdown-item">Semantic data migration project page</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Graph transformations</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../research/graph-transfo/" class="dropdown-item">Graph transformations</a>
+</li>
+            
+<li>
+    <a href="../../research/graph-interop/" class="dropdown-item">A general interoperability model using graph transformations</a>
+</li>
+            
+<li>
+    <a href="../../research/basic-graph-transformations/" class="dropdown-item">Basic graph transformations</a>
+</li>
+            
+<li>
+    <a href="../../research/basic-semantic-graph-transformations/" class="dropdown-item">Basic semantic graph transformations</a>
+</li>
+            
+<li>
+    <a href="../../research/DSL-for-graph-topology-checks/" class="dropdown-item">DSL for graph topology check</a>
+</li>
+            
+<li>
+    <a href="../../research/graph-transformation-applicability/" class="dropdown-item">Graph transformation applicability</a>
+</li>
+            
+<li>
+    <a href="../../research/grammar-graph-transformation/" class="dropdown-item">Grammar of graph transformation</a>
+</li>
+            
+<li>
+    <a href="../../research/graph-oriented-pl/" class="dropdown-item">Graph-oriented programming language</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Various</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../research/zenon-lumiere/" class="dropdown-item">Paradoxe de Zénon et dépassement de la vitesse de la lumière</a>
+</li>
+            
+<li>
+    <a href="../../research/relativite/" class="dropdown-item">A propos de la relativité générale</a>
+</li>
+            
+<li>
+    <a href="../../research/cartan/" class="dropdown-item">Einstein, Cartan et la géométrie différentielle</a>
+</li>
+            
+<li>
+    <a href="../../research/industry-data/" class="dropdown-item">Reflections on industry data</a>
+</li>
+            
+<li>
+    <a href="../../research/rdf-design-patterns/" class="dropdown-item">UML to RDF considerations</a>
+</li>
+            
+<li>
+    <a href="../../research/resources/" class="dropdown-item">Resources</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#legends-of-it" class="nav-link">Legends of IT</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#what-criteria-to-judge-legends" class="nav-link">What criteria to judge legends?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#criteria-1-simplicity" class="nav-link">Criteria #1: Simplicity</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#criteria-2-as-little-dependencies-as-possible" class="nav-link">Criteria #2: As little dependencies as possible</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#criteria-3-adaptability" class="nav-link">Criteria #3: Adaptability</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#criteria-4-stick-to-standards-in-particular-in-programming-languages" class="nav-link">Criteria #4: Stick to standards, in particular in programming languages</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#criteria-5-economics-matter" class="nav-link">Criteria #5: Economics matter</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#representing-a-business-domain" class="nav-link">Representing a business domain</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#legend-1-data-are-absolute" class="nav-link">Legend #1: Data are absolute</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#legend-2-for-a-certain-problem-there-is-only-one-code-design" class="nav-link">Legend #2: For a certain problem, there is only one code design</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#legend-3-reusability-is-good" class="nav-link">Legend #3: Reusability is good</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#legend-4-you-should-use-this-framework-because-everyone-uses-it" class="nav-link">Legend #4: You should use this framework because everyone uses it</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#legend-5-we-are-in-a-digital-world-with-reliable-data" class="nav-link">Legend #5: We are in a digital world with reliable data</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#legend-6-we-can-replace-interfaces-by-sharing-tables-in-the-database" class="nav-link">Legend #6: We can replace interfaces by sharing tables in the database</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="legends-of-it">Legends of IT</h1>
+<p><img alt="gears" src="../../images/dupondt-mirage.jpg" />
+<em>(Image from</em> Les aventures de Tintin <em>by Hergé)</em></p>
+<p>Information technology (IT) is a very recent engineering discipline and no one implied in IT projects should never forget this fact. Like all recent technological discipline at the heart of all modern businesses, it is both a marvelous tool, because it is "soft"-ware, a formidable enabler for business, and as it is representing lots of money, it is also a great place for legends.</p>
+<p>As IT is a very intellectual discipline, both an engineering discipline and a creative activity, as the entry ticket of making a program run is very low, it is very easy to believe things that are untrue and to loose the global perspective of what IT is for and what are the problems it should answer to.</p>
+<h2 id="what-criteria-to-judge-legends">What criteria to judge legends?</h2>
+<p>The first problem we face in IT when trying to get some perspective is the problem of defining a criteria that will enable us to categorize the IT practices as "good" or "bad".</p>
+<p>It is incredible that those criteria are not better known and shared, but after looking more carefully, it is easy to realize that there is no real consensus about those criteria.</p>
+<p>So, we will define our own set of criteria as a kind of compass that will guide us through this journey of illusions.</p>
+<h2 id="criteria-1-simplicity">Criteria #1: Simplicity</h2>
+<p>Simplicity will be our first criteria. Software should be the simplest possible, software architecture also and so is IT architecture.</p>
+<p>Where complexity is, failure will be and high maintenance costs.</p>
+<h2 id="criteria-2-as-little-dependencies-as-possible">Criteria #2: As little dependencies as possible</h2>
+<p>Dependencies should be limited to their bare minimum because they will bring constraints on your application.</p>
+<p>In particular, reusability of external components creates dependencies that jeopardize the value of the application and its capacity to evolve freely.</p>
+<h2 id="criteria-3-adaptability">Criteria #3: Adaptability</h2>
+<p>Adaptability must be understood in the sense of ease of change. Adaptability is the reverse of <em>technical debt</em>: when a technology aggravates technical debt, it should never be used.</p>
+<p>Our notion of technical debt is defined very precisely in the article <a href="../../pdf/20161026-TheGraphOrientedProgrammingParadigm-ORey-PreliminaryVersion.pdf">The graph-oriented programming paradigm</a>. Adaptability means as less couplings as possible.</p>
+<p>That's why reusability of external components can be a bad idea on the long run.</p>
+<h2 id="criteria-4-stick-to-standards-in-particular-in-programming-languages">Criteria #4: Stick to standards, in particular in programming languages</h2>
+<p>At any cost, stick to the standard programming language and avoid, if you can proprietary languages. Standard languages you use should be supported by a stable community. This community does not have to be large, but you will be safer if the language specification is opened and/or massively supported and/or standardized by ANSI, ISO or any standardization office.</p>
+<p>Avoid technologies owned by private companies or privately owned specific tools (like transpilers), those companies have the IP of the product and you will not be able to switch to another provider if they decide to make their language/tool paying, or if they decide to kill it.</p>
+<h2 id="criteria-5-economics-matter">Criteria #5: Economics matter</h2>
+<p>The real cost of an adaptable application should be known, so is the cost of the maintenance phase and the constraints that will come attached to this maintenance (technology, skills).</p>
+<p>The real cost of a software encompasses all the phases of the project, that's why business process analysis, functional specifications and functional testing are core skills to the success of a project and to the economical data attached to it, before go-live and afterwards.</p>
+<h2 id="representing-a-business-domain">Representing a business domain</h2>
+<p>We'll not talk about games in this article but about professional applications and technology which aim is to automate some business domain.</p>
+<p>Before automating a business domain, it is necessary to realize that IT primary movement is to "represent" it. We can qualify this representation:</p>
+<ul>
+<li>The representation of any business is partial,</li>
+<li>It is included in the semantic space of the particular business,</li>
+<li>This representation is relative (we'll come back on this one),</li>
+<li>It is composed by 2 parts: representing the data often with database tools and representing the business rules via programs.</li>
+</ul>
+<h2 id="legend-1-data-are-absolute">Legend #1: Data are absolute</h2>
+<p>For sure, this statement or belief is wrong, as we have shown in our article, <a href="../data-interop/">The real nature of data</a>: data are the intersection of use cases and the semantic space. In the same semantic space, change the use cases and you will get different data models.</p>
+<h2 id="legend-2-for-a-certain-problem-there-is-only-one-code-design">Legend #2: For a certain problem, there is only one code design</h2>
+<p>This legend is, first of all, correlated to the last point. Depending on the various use cases you will implement, you will have an application design that will change.</p>
+<p>Second of all, depending on the evolutions of your application, evolutions that will be very complicated to anticipate, you will realize that a design was adapted or not to the direction the application goes to, during its lifetime.</p>
+<p>Most of the time, experience shows that software engineers are very bad at predicting in what direction the application will grow. This is quite normal because to be able to forecast correctly in what direction a software will develop during years, you have to know very well the business and the trends of this particular business.</p>
+<p><img alt="Design Patterns, elements of reusable OO software" src="../../images/design-patterns.jpeg" /></p>
+<p>The Gamma et al. <em>Design Patterns</em> book aggravated this feeling that there is only one code design to every problem. Despite the fact that the patterns are presented like theorems, with applicability conditions that must absolutely be respected, their industrial use results most of time in aggravating the software technical debt. Why?</p>
+<p>Our explanation is quite simple: because software engineers are bad at anticipating the future of their software, because they are no business experts. So, when they choose a pattern, even if this pattern seems relevant at the moment of choice, it is a bet on the future. And this bet is often wrong.</p>
+<p>A wrong design pattern brings complexity (inverse of simplicity) and increased technical debt, sometimes huge increase (and this is the reverse of adaptability).</p>
+<p>So be very careful about design patterns, because they may damage a lot your code.</p>
+<h2 id="legend-3-reusability-is-good">Legend #3: Reusability is good</h2>
+<p>Reusability is a double-edged sword and not at all a sign of good software.</p>
+<p>First of all, because software are made by creative humans, software generates attachment in the heart of the software engineers. When you worked several hours on a large program and realize that it is useless, you should be able to delete it without feelings. But the fact is, people get attached to the programs they did, because they did suffer doing them, and making them work.</p>
+<p>There comes reusability as a way to save bad code. If the bad code is saved, you will generate more technical debt reusing it and it will generate useless complexity.</p>
+<p><img alt="ANSI Common Lisp" src="../../images/ansi-common-lisp-19.jpeg" /></p>
+<p>For sure, very often, when a feature seems generic, software engineers tend to make reusable code. At micro level, this is quite often necessary (see the bottom-up programming notion of Paul Graham in his <a href="https://paulgraham.com/acl.html">ANSI Common Lisp</a> book, or even the <a href="https://en.wikipedia.org/wiki/C%2B%2B_Standard_Library">C++ Standard libray</a>).</p>
+<p>But, when it goes to higher level of code, the danger is everywhere. Should we reuse? Should we create some reusable code?</p>
+<p>I remind a principle from an ancient VP Software Engineering at Amadeus, François Weissert, saying: "Reusability starts at 3". When you have twice the same code, you should be very careful about the code to be really reusable. When you have the same code 3 times, you can consider reusability.</p>
+<p>We have to remember that the semantic of the business itself is not "reusable" and so reusability should be dealt with with a great deal of caution.</p>
+<p>For some companies, reusability has become a way to make you a prisoner of their "framework", and especially of the mandatory updates that you must do if you want to keep been supported. Consider the giant Javascript frameworks such as Angular or React. Being forced to reuse their framework will change drastically your design because you will need to adapt to their.</p>
+<p>Are there ways to do better? What are those frameworks provide that you really need? What is the real code you need to reuse? In some technical areas, that is obvious. As application developers, we don't want to recode the TLS protocol, so we reuse.</p>
+<p>But in order to call an API in Javascript, do I need a big framework? No. Do I need some fancy components? Maybe yes, but what are the strings attached to this reusability? Will this corrupt my programming model? Do we really know what contract we are signing when we reuse a big framework?</p>
+<p>Reusability is a powerful tool but also a very dangerous team. It also brings a dependency on your knowledge. By reusing, you make the choice of never knowing what really occurs but to stay on the surface of what the reusable component will show you.</p>
+<h2 id="legend-4-you-should-use-this-framework-because-everyone-uses-it">Legend #4: You should use this framework because everyone uses it</h2>
+<p>Who says you should? Your IT service provider because they have trained people and they want to amortize the trainings of their employees? The framework provider to lock you up?</p>
+<p>What are the consequences of such a choice?</p>
+<ul>
+<li>How often the framework provider delivers big updates?</li>
+<li>How often are you bound to migrate?</li>
+<li>If you do not migrate to the last framework versions, what are the risks you take?</li>
+<li>Did you consider securing the code of the framework, if you have access to it?</li>
+<li>Did you consider securing the documentation?</li>
+<li>If you have skilled software engineers in the technology, can they adapt easily to the framework? Now? In 5 years?</li>
+<li>Is it easy to get rid of the framework or are you bound to change everything?</li>
+</ul>
+<p>We won't cite too many samples but we have, in the recent history of IT, so many examples of bad technology that "you should use because everyone uses it".</p>
+<p>GWT is the perfect example of Google marketing non-industrial project, so are the first versions of Angular. I wish the software companies use their own crappy software before providing them to the community. Look at Angular: it is not used by Google on Google Workspace. Ask them why? Maybe because Angular is a marketing project that does not respect backward compatibility and is not reliable enough to be in production at Google's?</p>
+<p>Be reassured, Google is not the only one to propose marvelous magic tools which happen to be very bad choices on the long run, React from Facebook is the same kind of software components.</p>
+<p>Front-end development is the place of all "innovations", so also the place where the "economics matter" principle is the most at stake. If your team code in HTML, Javascript and CSS, your code may still run and be maintainable in 10 years, whereas in 3 years, no one will still use the framework that you choose now.</p>
+<p>We can wonder who really needs those very big frameworks, maybe some marketing companies for which rewriting the full front every 2 years is OK. If you are an institution, you can do a lot in plain JS with a few simple components (easily replaceable). If you are developing an application for your company, you mainly need forms and tables (some companies may need more).</p>
+<p>For backend developments, choose a standard programming language. This choice is complicated nowadays, because Java is not free anymore (as it was feared), and C# is Microsoft IP (even if it runs under Linux). That makes server side Python or JS more appealing, even if the programming model is not the same.</p>
+<p>Let's say, your choice should never be driven by your supplier or by the IT marketing messages. You will have sufficient problems to maintain your own code, don't reuse components and frameworks when you can avoid it. It violates the 4 criteria.</p>
+<h2 id="legend-5-we-are-in-a-digital-world-with-reliable-data">Legend #5: We are in a digital world with reliable data</h2>
+<p>Depending on the business domains, the data are more or less reliable.</p>
+<p>When they are, we can build interfaces between systems that will exchange structured data, each of them sharing the same view of the grammar of the data (see case #1 in Figure 1 below). When the traffic is slow or when systems may have trouble interoperating or when the traffic is asynchronous, files containing structured data can be exchanged (see case #2 in Figure 1 below).</p>
+<p>Take the referential data, for instance the list of customers of a retail company, the list of enterprises upon which collect social taxes, the list of parts mounted on an aircraft, all that data should be reliable but, quite often, they are not.</p>
+<p>There are many reasons for that:</p>
+<ul>
+<li>The data life cycle is short and things change quickly,</li>
+<li>The number of data in the referential is very big so, even a small percentage of errors, represents a potential large problem,</li>
+<li>The global process of management of those data is based partially under spreadsheets,</li>
+<li>Several actors share responsibilities in a global inconsistent process with no reliable interfaces between systems (or between spreadsheets),</li>
+<li>Where there should exist only one referential, there are multiple inconsistent referential with a difficulty of knowing what is the correct data,</li>
+<li>Etc.</li>
+</ul>
+<p>We have to face it: the world is not perfect, and so are the data.</p>
+<h3 id="denial-or-acceptation">Denial or acceptation</h3>
+<p>To face such a reality, two strategies can be chosen:</p>
+<ul>
+<li>Denial, which leads to build software that expect data to be complete, consistent and perfect;</li>
+<li>Acceptation, which leads to more of less complex ways to protect the application.</li>
+</ul>
+<p>Denial leads to applications that are never working properly because they expect correct data.</p>
+<p>That can be solved by people correcting the data on the long run, or by opening special rights inside the application, which can put at stake its security and integrity.</p>
+<p>Quite often, the application is realized to be consistent, but, facing the reality of impossibility of use because of rotten data, the application controls are released to make it usable which creates an explosion of maintenance costs and does not solve really the data quality problems.</p>
+<p>Acceptation has a cost that must be integrated into the cost of the application, both at build time and at maintenance time.</p>
+<h3 id="the-facade-pattern">The "façade" pattern</h3>
+<p>One common solution is consisting in using the façade pattern: Instead of loading data inside your application, you are loading data into a façade that will be in charge of cleaning/disambiguating/complementing the data before the output is loaded  into the application.</p>
+<p><img alt="Various kinds of façade" src="../../yed/app-facade.png" />
+<em>Figure 1: Various kinds of façades</em></p>
+<p>The simplest case of façade is the case #3: the façade is a set of programs that which transforms <code>data1</code> and <code>data2</code> into <code>data</code> that can be loaded safely insde the target application.</p>
+<p>Depending on the gravity of data inconsistency, the façade could be a small application with its own database, its own data processing chain, able potentially to calculate and store data versions and deltas between versions and to apply complex business rules to chose the right data to be imported inside the application (case #4).</p>
+<p>For sure, if the flow of data is continuous, the façade must be monitored and tuned with the right rules, in order to sustain the flow and be able to feed the application with correct and reliable data.</p>
+<h3 id="never-mix-concerns">Never mix concerns</h3>
+<p>In all cases, the data cleanup should never pollute the application itself and so, be segregated. The façade must be a separate component, separate database if needed, and separate software. Because the application has a job to do, the data cleanup must be done up-front.</p>
+<p>The consequence of denial is to mix the 2 kinds of feature inside the same application, and that's why this solution ends up inevitably in bad software and bad data.</p>
+<h2 id="legend-6-we-can-replace-interfaces-by-sharing-tables-in-the-database">Legend #6: We can replace interfaces by sharing tables in the database</h2>
+<p>Each application is answering to a set of use cases, and the application data are the result of the intersection between the list of use cases with the business semantic space (see <a href="../data-interop/">The real nature of data</a>).</p>
+<p>That means that each application deserves a data model fit to its needs so different the one from the other. For sure, applications may share data, but their sharing must remains as minimal as possible and bear the less structure as possible.</p>
+<p><img alt="Data interop" src="../../yed/stubs01.png" /></p>
+<p><em>Figure 2: Data models are adapted to each application</em></p>
+<p>In Figure2, we can see how 3 different data representations are semantically equivalent but absolutely not technically equivalent. We'll note that the exchange format is the most loose format. That enables each stakeholder in the exchange to rebuild data structures conforming to its use cases.</p>
+<p>Figure 2 is showing an interface between systems. If we were to project the <code>viewpoint1</code> directly in Application 2, we would distort the data model of Application 2 imposing, as a constraint, a part of the datamodel of Application 1. Let's suppose we do that with database materialized views, we will distort and create code of Application 2 based on data structures (that can change) of Application 1.</p>
+<p>This practice is very dirty and very risky because:</p>
+<ul>
+<li>It creates an operational complexity, Application 2 not being autonomous anymore,</li>
+<li>It creates a dependency that is useless, because an interface would have transform this hard dependency into a loose dependency (at the exchange format level and not at the database level),</li>
+<li>It creates a design and code distortion in the Application 2, because the <code>viewpoint1</code> is not what was imagined as a design for Application 2.</li>
+</ul>
+<p>The last point is quite interesting: by transforming the <code>viewpoint1</code> into <code>viewpoint2</code>, the Application 2 can do some modifications on the objects transported by the exchange format to make them its own. In other terms, the transformation can include business rules and never store A or C but A union C. This code would have to be moved into the database requests in case the data model of Application is partially imposed to Application 2.</p>
+<p>The conclusion is, for sure, we can't replace interfaces by sharing of data structures.</p>
+<p>The second conclusion is: we can't have a single database with all data in it, that's stupid, because data are structured and live at the rhythm of their use cases and semantic business domain.</p>
+<p>The third conclusion is: we can't group several business domains inside the same database, because one of them will drive and the others will live at the rhythm of the dominant.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyleft Olivier Rey 2017-2024 - Site licensed under the GNU FDL V3</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
