@@ -341,15 +341,15 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#legend-7-abandon-monolith-welcome-micro-services" class="nav-link">Legend #7: Abandon monolith, welcome micro-services</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#legend-8-we-have-great-tools-to-develop-applications" class="nav-link">Legend #8: We have great tools to develop applications</a>
+            <li class="nav-item" data-level="2"><a href="#legend-7-we-have-great-tools-to-develop-applications" class="nav-link">Legend #7: We have great tools to develop applications</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#we-are-at-the-beginning-of-the-story-of-it" class="nav-link">We are at the beginning of the story of IT</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#annex-1-the-message-of-plm-vendors-a-legend-rooted-in-the-past" class="nav-link">Annex 1: The message of PLM vendors, a legend rooted in the past</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -705,39 +705,8 @@
 <p>The last point is quite interesting: by transforming the exchange format into <code>viewpoint2</code>, the Application 2 can do some modifications on the objects transported by the exchange format to make them its own. In other terms, the transformation can include business rules and never store A or C but A union C. Quite often, transactions between systems are triggering business rules to adapt the incoming data to the target semantic space.</p>
 <p>The conclusion is, for sure, we can't replace interfaces by sharing of data structures.</p>
 <p>The second conclusion is: we can't group several business domains inside the same database, because one of them will drive and the others will live at the rhythm of the dominant.</p>
-<h3 id="the-message-of-plm-vendors-a-legend-rooted-in-the-past">The message of PLM vendors, a legend rooted in the past</h3>
-<p>We will make a specific note for marketing messages coming from PLM (Product Lifecycle Management) vendors. Each of them proposes products that can address the 3 engineering divisions of any industrial company:</p>
-<ul>
-<li>Engineering,</li>
-<li>Manufacturing engineering,</li>
-<li>Support engineering.</li>
-</ul>
-<p>Each PLM vendor indicates that everything can cohabit in the same database, whereas it is not the case, as we will show.</p>
-<p>Maybe, it is worth reminding the history of those systems and make a little legend archaeology.</p>
-<p><img alt="From EDMS to PLM" src="../../yed/steps-to-plm.png" /></p>
-<p><em>Figure 3: From EDMS to PLM</em></p>
-<p>At the beginning, the 3 engineering disciplines are working in paper separately and exchange documents (#1 in Figure 3). When IT comes from the first tools, the documents are becoming office documents and models and are shared in a Electronic Document Management System (EDMS, #2 in Figure 3). This phase is called "collaboration", because each organization can access to the documents of the other.</p>
-<p>Then comes the PDM: What if we index all documents on the part number? Every stakeholder will be able to better find the documents applicable to its parts, whatever the perspective (design , manufacturing or support). This is shown in #3 in Picture 3.</p>
-<p>We can note that this evolution follows the general application evolution described in the <a href="../data-interop/">Real Nature of Data</a>.</p>
-<p>The technology advancing, the products are becoming more complex and we have to manage lots of configurations and options. All data must be put inside a database in a data model that is adapted to...
-To what exactly the PLM data model is adapted? To Engineering requirements of course, because they design the product. We keep the collaboration and every stakeholder can benefit from structured data... of the Engineering (case #4 on Figure 3). Ah, too bad for Manufacturing and Support?</p>
-<p>This is where the software companies are wrong: When you enter the step of designing the activities of the semantic domain names "Engineering", the objects that you model and their lifecycle are not always the ones that are used by Manufacturing or Support.</p>
-<p>For sure, you can try to "extend" the objects and the lifecycle of the support to integrate new requirements, but if you keep one single database, you will have the problem of <em>translation</em> that you have when changing semantic spaces. Because Manufacturing engineering not Engineering, nor is Support Engineering.</p>
-<p>The case #5 of the Figure 3 shows the general case:</p>
-<ul>
-<li>You have 3 PLMs, one for each domain, perfectly adapted to the use cases, the objects, the lifecycles and the rhythms of processes;</li>
-<li>You have potentially 2 façade applications that can be complex enough to have their own databases, make their own deltas between 2 Engineering deliveries;</li>
-<li>You have a delivery software in Engineering that is producing something consistent for the downstream activities, being Manufacturing engineering or Support Engineering.</li>
-</ul>
-<p>Sometimes, the case #4 can work if your products are simple, if the engineering is knowing 100% of the mounted parts and if the support is simple. But in big industries such as aerospace, the model #4 is not working.</p>
-<p>The case of industry is not a particular case: You can't fit 2 or more different business semantic domains in the same database. Trying to make those semantic domains cohabit in the same instance is leading almost inevitably to one semantic domain A imposing its rules (rhythm, lifecycle, data model, etc.) to another semantic domain B. That generates downstream systems that will recreate the models and lifecycle that B cannot operate in a PLM dominated by A (often with spreadsheets, small databases, reports and manual works).</p>
-<p>This also generates horrible costs and non convergence of projects, which is common in the PLM area.</p>
-<p>The real challenge becomes to identify properly those "semantic domains". The article <a href="../../pdf/20161026-TheGraphOrientedProgrammingParadigm-ORey-PreliminaryVersion.pdf">The graph-oriented programming paradigm</a> proposes a vision semantic domains identification.</p>
-<p>PLM vendors, intoxicated in a way by their historical "collaboration"-based marketing message, did not realize that making a real application with structured data was specializing the product to a certain set of use cases, and so to a particular business.</p>
-<p>They end up selling "mega-monoliths" without realizing that this message is contradictory to the IT architecture trends everywhere else apart from industry.</p>
-<h2 id="legend-7-abandon-monolith-welcome-micro-services">Legend #7: Abandon monolith, welcome micro-services</h2>
-<p>Ongoing.</p>
-<h2 id="legend-8-we-have-great-tools-to-develop-applications">Legend #8: We have great tools to develop applications</h2>
+<p>See also the annex 1:<a href="#annexe1"> The message of PLM vendors, a legend rooted in the past</a></p>
+<h2 id="legend-7-we-have-great-tools-to-develop-applications">Legend #7: We have great tools to develop applications</h2>
 <table>
 <thead>
 <tr>
@@ -783,6 +752,52 @@ To what exactly the PLM data model is adapted? To Engineering requirements of co
 <p><a href="../../pdf/20161026-TheGraphOrientedProgrammingParadigm-ORey-PreliminaryVersion.pdf">Graph-oriented programming paradigm</a> is a way forward that seems very promising, but there should be plenty of alternate ways of doing stuff.</p>
 <p>I just hope AI won't prevent us to be as creative as the 70s/80s where, instead of just following marketing-led companies, software engineers and researchers were experimenting, creating and discovering.</p>
 <p>Don't believe in legends. Find new paths. We need them.</p>
+<p><a name="annexe1"></p>
+<h2 id="annex-1-the-message-of-plm-vendors-a-legend-rooted-in-the-past">Annex 1: The message of PLM vendors, a legend rooted in the past</h2>
+<h3 id="a-legend-shared-between-plm-software-companies">A legend shared between PLM software companies</h3>
+<p>We will make a specific note to analyze the marketing messages coming from PLM (Product Lifecycle Management) vendors. For memory, a PLM is a complex software that manages the lifecycle of industrial products. The main characteristics of a PLM is to consider data as belonging to a temporal graph that, with time replaces old parts by new parts in the newer products.</p>
+<p>Every PLM supplier proposes products that can address the 3 engineering "divisions" of any industrial company:</p>
+<ul>
+<li>Engineering,</li>
+<li>Manufacturing engineering, also named Manufacturing preparation,</li>
+<li>Support engineering, or how to design the maintenance of the industrial product.</li>
+</ul>
+<p>Each PLM vendor indicates that all the industrial data of the three domains can and should cohabit in the same database, whereas it is not the case, as we will show.</p>
+<h3 id="the-plm-a-software-coming-from-older-collaboration-software">The PLM, a software coming from older collaboration software</h3>
+<p>Maybe, it is worth reminding the history of those systems and make a little legend archaeology.</p>
+<p><img alt="From EDMS to PLM" src="../../yed/steps-to-plm.png" /></p>
+<p><em>Figure 3: From EDMS to PLM</em></p>
+<p>At the beginning, the 3 engineering disciplines are working in paper separately and exchange documents (#1 in Figure 3).</p>
+<p>When the first digital tools enter the industry, the documents did become office documents and models. Putting in place an Electronic Document Management System (EDMS, #2 in Figure 3) was a way to enable collaboration because each organization could now access to the documents of the other.</p>
+<p>Then came the "PDM" (Part Data Management) systems: What if all documents were indexed based on the part number they are referring to? In this system, every stakeholder is able to better find the documents applicable to its parts, whatever the perspective (design , manufacturing or support). This is shown in #3 in Picture 3.</p>
+<p>We can note that this evolution follows the general application evolution described in the <a href="../data-interop/">Real Nature of Data</a>.</p>
+<p><img alt="Semantic space" src="../../yed/semantic-space.png" /></p>
+<p><em>Figure 4: consult the <a href="../data-interop/">Real Nature of Data</a> article for more information</em></p>
+<h3 id="the-plm-changes-everything">The PLM changes everything</h3>
+<p>The technology advancing, the products are becoming more complex and we have to manage lots of configurations and options. All data must be put inside a database in a data model that is adapted to...</p>
+<p>To what exactly the PLM data model is adapted? To Engineering requirements of course, because they design the product.</p>
+<p>Keeping the collaboration on the PLM for actors that are not Engineering is good for every other stakeholder that will be able to benefit from structured data (understand "Engineering structured data"), which is what is represented by the case #4 on Figure 3.</p>
+<p>This is where the PLM software companies are making a terrible mistake: When you enter the step of designing the activities of the semantic domain named "Engineering", the objects that you model and their lifecycle are specific to Engineering, and do not apply straight away to Manufacturing or Support.</p>
+<p>For sure, you can try to "extend" the objects and the lifecycle of the support to integrate new requirements, but if you keep one single database, your core model will be designed for Engineering, with an Engineering specific model.</p>
+<h3 id="3-models-for-3-semantic-businesses">3 models for 3 semantic businesses</h3>
+<p>The case #5 of the Figure 3 shows the general case:</p>
+<ul>
+<li>You have 3 PLMs, one for each domain, perfectly adapted to the use cases, the objects, the lifecycles and the rhythms of the processes of each domain;</li>
+<li>You have a delivery software in Engineering that is producing something consistent for the downstream activities, being Manufacturing engineering or Support Engineering;</li>
+<li>You have potentially 2 façade applications that can be complex enough to have their own databases, make their own deltas between 2 Engineering deliveries.</li>
+</ul>
+<p>Sometimes, the case #4 can work if your products are simple, if the engineering is knowing 100% of the mounted parts and if the manufacturing and support is simple. But in big industries such as aerospace, the model #4 is not working.</p>
+<p>The case of industry is not a particular case: You can't fit 2 or more different business semantic domains in the same database. Trying to make those semantic domains cohabit in the same instance is leading almost inevitably to one semantic domain <code>A</code> imposing its rules (rhythm, lifecycle, data model, etc.) to another semantic domain <code>B</code>. That generates downstream systems that will recreate the models and lifecycle that <code>B</code> cannot operate in a PLM dominated by <code>A</code> (often with spreadsheets, small databases, reports and manual works).</p>
+<p>This also generates horrible costs and non convergence of projects, which is common in the PLM area.</p>
+<p><a name="semantic-domain"></p>
+<h3 id="what-are-the-business-semantic-domains">What are the business semantic domains?</h3>
+<p>The real challenge becomes to identify properly those "business semantic domains" that drive the perimeter where an application can be built on a single data model.</p>
+<p>To determine those semantic spaces, the knowledge of the company organization and business processes is crucial. Business processes exhibit business concepts, cardinalities between concepts, lifecycles of the various types of objects, and rhythms of the various processes.</p>
+<p>The enterprise architecture description language <a href="../archimate-intro/">Archimate</a> is one of the best tools to understand where the semantic space begins and where it ends (even is sometimes, some <a href="../archimate-recipes/">recipes</a> are required).</p>
+<p>Once the semantic domains are identified, we can assess their limits by analyzing the internal dependencies of intra-domain concepts and "bridges" wit extra-domain concepts (see the <a href="../../pdf/20161026-TheGraphOrientedProgrammingParadigm-ORey-PreliminaryVersion.pdf">Graph-oriented programming paradigm</a> for more information).</p>
+<h3 id="a-legend-grounded-in-past-software">A legend grounded in past software</h3>
+<p>PLM vendors, intoxicated by their historical "collaboration"-based marketing message, did not realize that making a real application with structured data was specializing the product to a certain set of use cases, and so to a particular business.</p>
+<p>They end up selling "mega-monoliths" without realizing that this message is contradictory to the IT architecture trends everywhere else, apart from industry.</p>
 <p><em>(July 14 2014)</em></p></div>
             </div>
         </div>
