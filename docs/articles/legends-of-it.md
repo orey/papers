@@ -265,7 +265,7 @@ The conclusion is, for sure, we can't replace interfaces by sharing of data stru
 
 The second conclusion is: we can't group several business domains inside the same database, because one of them will drive and the others will live at the rhythm of the dominant.
 
-### The strange message of PLM vendors
+### The message of PLM vendors, a legend rooted in the past
 
 We will make a specific note for marketing messages coming from PLM (Product Lifecycle Management) vendors. Each of them proposes products that can address the 3 engineering divisions of any industrial company:
 
@@ -273,23 +273,50 @@ We will make a specific note for marketing messages coming from PLM (Product Lif
 * Manufacturing engineering,
 * Support engineering.
 
-The problem is those 3 domains are really different semantic spaces, and so, only in rare industrial cases, 2 or 3 of those domains can fit in the same PLM instance, so in the same database.
+Each PLM vendor indicates that everything can cohabit in the same database, whereas it is not the case, as we will show.
 
-In the general case, it is possible to use 3 instances of those PLMs, one for each business domain, and interconnect them with real interfaces (cases #1 and #2  on Figure 1).
+Maybe, it is worth reminding the history of those systems and make a little legend archaeology.
 
-But trying to make those semantic domains cohabit in the same instance is leading almost inevitably to one semantic domain A imposing its rules (rhythm, lifecycle, data model) to another semantic domain B. That generates downstream systems that will recreate the models and lifecycle that B cannot operate in a PLM dominated by A.
+![From EDMS to PLM](../yed/steps-to-plm.png)
 
-This also generates horrible costs and non convergence of projects.
+*Figure 3: From EDMS to PLM*
 
-The PLMs are sold as "collaborative tools" but as soon as they are more than an electronic document management system (that can store the 3 domains together) and manage structure data and lifecycles, the standard business semantic space rule apply: *we can't put 2 different business semantic spaces in the same database* (because it does not work).
+At the beginning, the 3 engineering disciplines are working in paper separately and exchange documents (#1 in Figure 3). When IT comes from the first tools, the documents are becoming office documents and models and are shared in a Electronic Document Management System (EDMS, #2 in Figure 3). This phase is called "collaboration", because each organization can access to the documents of the other.
 
-Note that many companies tried and spent millions trying to do it, and failing, at least partially. Because, you can, but the second semantic space is slave to the first. And so, look at your IT systems: the slave domain generated many spreadsheets or small applications to be able to live with its own rhythm, lifecycles and data structures.
+Then comes the PDM: What if we index all documents on the part number? Every stakeholder will be able to better find the documents applicable to its parts, whatever the perspective (design , manufacturing or support). This is shown in #3 in Picture 3.
 
-What is strange is that this message is the one of the "mega-monolith". Due to the fact that the PLM is parameterizable, the vendors consider that they are legitimate to push for a mega-monolith encompassing everything. Furthermore, this message appears to be contradictory to the IT architecture trends everywhere else apart from industry.
+We can note that this evolution follows the general application evolution described in the [Real Nature of Data](./data-interop.md).
 
-It is possible those vendors believe what they sell, which is why it is good to point out that it is a real legend. Most of the time, in the real-life, the three divisions of the industry have 3 sets of processes, rhythms and lifecycles, and objects, and this is not because they all manipulate "parts" that they can fit in the same database, how parameterizable it can be.
+The technology advancing, the products are becoming more complex and we have to manage lots of configurations and options. All data must be put inside a database in a data model that is adapted to...
+To what exactly the PLM data model is adapted? To Engineering requirements of course, because they design the product. We keep the collaboration and every stakeholder can benefit from structured data... of the Engineering (case #4 on Figure 3). Ah, too bad for Manufacturing and Support?
 
-## Legend #7: We have great tools to develop applications
+This is where the software companies are wrong: When you enter the step of designing the activities of the semantic domain names "Engineering", the objects that you model and their lifecycle are not always the ones that are used by Manufacturing or Support.
+
+For sure, you can try to "extend" the objects and the lifecycle of the support to integrate new requirements, but if you keep one single database, you will have the problem of *translation* that you have when changing semantic spaces. Because Manufacturing engineering not Engineering, nor is Support Engineering.
+
+The case #5 of the Figure 3 shows the general case:
+
+* You have 3 PLMs, one for each domain, perfectly adapted to the use cases, the objects, the lifecycles and the rhythms of processes;
+* You have potentially 2 façade applications that can be complex enough to have their own databases, make their own deltas between 2 Engineering deliveries;
+* You have a delivery software in Engineering that is producing something consistent for the downstream activities, being Manufacturing engineering or Support Engineering.
+
+Sometimes, the case #4 can work if your products are simple, if the engineering is knowing 100% of the mounted parts and if the support is simple. But in big industries such as aerospace, the model #4 is not working.
+
+The case of industry is not a particular case: You can't fit 2 or more different business semantic domains in the same database. Trying to make those semantic domains cohabit in the same instance is leading almost inevitably to one semantic domain A imposing its rules (rhythm, lifecycle, data model, etc.) to another semantic domain B. That generates downstream systems that will recreate the models and lifecycle that B cannot operate in a PLM dominated by A (often with spreadsheets, small databases, reports and manual works).
+
+This also generates horrible costs and non convergence of projects, which is common in the PLM area.
+
+The real challenge becomes to identify properly those "semantic domains". The article [The graph-oriented programming paradigm](../pdf/20161026-TheGraphOrientedProgrammingParadigm-ORey-PreliminaryVersion.pdf) proposes a vision semantic domains identification.
+
+PLM vendors, intoxicated in a way by their historical "collaboration"-based marketing message, did not realize that making a real application with structured data was specializing the product to a certain set of use cases, and so to a particular business.
+
+They end up selling "mega-monoliths" without realizing that this message is contradictory to the IT architecture trends everywhere else apart from industry.
+
+## Legend #7: Abandon monolith, welcome micro-services
+
+Ongoing.
+
+## Legend #8: We have great tools to develop applications
 
 | # | Criteria        | Applicable |
 |---|-----------------|------------|
@@ -317,6 +344,6 @@ I just hope AI won't prevent us to be as creative as the 70s/80s where, instead 
 
 Don't believe in legends. Find new paths. We need them.
 
-*(July 13 2014)*
+*(July 14 2014)*
 
 
