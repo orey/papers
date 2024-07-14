@@ -265,58 +265,9 @@ The conclusion is, for sure, we can't replace interfaces by sharing of data stru
 
 The second conclusion is: we can't group several business domains inside the same database, because one of them will drive and the others will live at the rhythm of the dominant.
 
-### The message of PLM vendors, a legend rooted in the past
+See also the annex 1:[ The message of PLM vendors, a legend rooted in the past](#annexe1)
 
-We will make a specific note for marketing messages coming from PLM (Product Lifecycle Management) vendors. Each of them proposes products that can address the 3 engineering divisions of any industrial company:
-
-* Engineering,
-* Manufacturing engineering,
-* Support engineering.
-
-Each PLM vendor indicates that everything can cohabit in the same database, whereas it is not the case, as we will show.
-
-Maybe, it is worth reminding the history of those systems and make a little legend archaeology.
-
-![From EDMS to PLM](../yed/steps-to-plm.png)
-
-*Figure 3: From EDMS to PLM*
-
-At the beginning, the 3 engineering disciplines are working in paper separately and exchange documents (#1 in Figure 3). When IT comes from the first tools, the documents are becoming office documents and models and are shared in a Electronic Document Management System (EDMS, #2 in Figure 3). This phase is called "collaboration", because each organization can access to the documents of the other.
-
-Then comes the PDM: What if we index all documents on the part number? Every stakeholder will be able to better find the documents applicable to its parts, whatever the perspective (design , manufacturing or support). This is shown in #3 in Picture 3.
-
-We can note that this evolution follows the general application evolution described in the [Real Nature of Data](./data-interop.md).
-
-The technology advancing, the products are becoming more complex and we have to manage lots of configurations and options. All data must be put inside a database in a data model that is adapted to...
-To what exactly the PLM data model is adapted? To Engineering requirements of course, because they design the product. We keep the collaboration and every stakeholder can benefit from structured data... of the Engineering (case #4 on Figure 3). Ah, too bad for Manufacturing and Support?
-
-This is where the software companies are wrong: When you enter the step of designing the activities of the semantic domain names "Engineering", the objects that you model and their lifecycle are not always the ones that are used by Manufacturing or Support.
-
-For sure, you can try to "extend" the objects and the lifecycle of the support to integrate new requirements, but if you keep one single database, you will have the problem of *translation* that you have when changing semantic spaces. Because Manufacturing engineering not Engineering, nor is Support Engineering.
-
-The case #5 of the Figure 3 shows the general case:
-
-* You have 3 PLMs, one for each domain, perfectly adapted to the use cases, the objects, the lifecycles and the rhythms of processes;
-* You have potentially 2 façade applications that can be complex enough to have their own databases, make their own deltas between 2 Engineering deliveries;
-* You have a delivery software in Engineering that is producing something consistent for the downstream activities, being Manufacturing engineering or Support Engineering.
-
-Sometimes, the case #4 can work if your products are simple, if the engineering is knowing 100% of the mounted parts and if the support is simple. But in big industries such as aerospace, the model #4 is not working.
-
-The case of industry is not a particular case: You can't fit 2 or more different business semantic domains in the same database. Trying to make those semantic domains cohabit in the same instance is leading almost inevitably to one semantic domain A imposing its rules (rhythm, lifecycle, data model, etc.) to another semantic domain B. That generates downstream systems that will recreate the models and lifecycle that B cannot operate in a PLM dominated by A (often with spreadsheets, small databases, reports and manual works).
-
-This also generates horrible costs and non convergence of projects, which is common in the PLM area.
-
-The real challenge becomes to identify properly those "semantic domains". The article [The graph-oriented programming paradigm](../pdf/20161026-TheGraphOrientedProgrammingParadigm-ORey-PreliminaryVersion.pdf) proposes a vision semantic domains identification.
-
-PLM vendors, intoxicated in a way by their historical "collaboration"-based marketing message, did not realize that making a real application with structured data was specializing the product to a certain set of use cases, and so to a particular business.
-
-They end up selling "mega-monoliths" without realizing that this message is contradictory to the IT architecture trends everywhere else apart from industry.
-
-## Legend #7: Abandon monolith, welcome micro-services
-
-Ongoing.
-
-## Legend #8: We have great tools to develop applications
+## Legend #7: We have great tools to develop applications
 
 | # | Criteria        | Applicable |
 |---|-----------------|------------|
@@ -343,6 +294,86 @@ No, we are not doomed, because we are just at the beginning of the history of IT
 I just hope AI won't prevent us to be as creative as the 70s/80s where, instead of just following marketing-led companies, software engineers and researchers were experimenting, creating and discovering.
 
 Don't believe in legends. Find new paths. We need them.
+
+<a name="annexe1">
+
+## Annex 1: The message of PLM vendors, a legend rooted in the past
+
+### A legend shared between PLM software companies
+
+We will make a specific note to analyze the marketing messages coming from PLM (Product Lifecycle Management) vendors. For memory, a PLM is a complex software that manages the lifecycle of industrial products. The main characteristics of a PLM is to consider data as belonging to a temporal graph that, with time replaces old parts by new parts in the newer products.
+
+Every PLM supplier proposes products that can address the 3 engineering "divisions" of any industrial company:
+
+* Engineering,
+* Manufacturing engineering, also named Manufacturing preparation,
+* Support engineering, or how to design the maintenance of the industrial product.
+
+Each PLM vendor indicates that all the industrial data of the three domains can and should cohabit in the same database, whereas it is not the case, as we will show.
+
+### The PLM, a software coming from older collaboration software
+
+Maybe, it is worth reminding the history of those systems and make a little legend archaeology.
+
+![From EDMS to PLM](../yed/steps-to-plm.png)
+
+*Figure 3: From EDMS to PLM*
+
+At the beginning, the 3 engineering disciplines are working in paper separately and exchange documents (#1 in Figure 3).
+
+When the first digital tools enter the industry, the documents did become office documents and models. Putting in place an Electronic Document Management System (EDMS, #2 in Figure 3) was a way to enable collaboration because each organization could now access to the documents of the other.
+
+Then came the "PDM" (Part Data Management) systems: What if all documents were indexed based on the part number they are referring to? In this system, every stakeholder is able to better find the documents applicable to its parts, whatever the perspective (design , manufacturing or support). This is shown in #3 in Picture 3.
+
+We can note that this evolution follows the general application evolution described in the [Real Nature of Data](./data-interop.md).
+
+![Semantic space](../yed/semantic-space.png)
+
+*Figure 4: consult the [Real Nature of Data](./data-interop.md) article for more information*
+
+### The PLM changes everything
+
+The technology advancing, the products are becoming more complex and we have to manage lots of configurations and options. All data must be put inside a database in a data model that is adapted to...
+
+To what exactly the PLM data model is adapted? To Engineering requirements of course, because they design the product.
+
+Keeping the collaboration on the PLM for actors that are not Engineering is good for every other stakeholder that will be able to benefit from structured data (understand "Engineering structured data"), which is what is represented by the case #4 on Figure 3.
+
+This is where the PLM software companies are making a terrible mistake: When you enter the step of designing the activities of the semantic domain named "Engineering", the objects that you model and their lifecycle are specific to Engineering, and do not apply straight away to Manufacturing or Support.
+
+For sure, you can try to "extend" the objects and the lifecycle of the support to integrate new requirements, but if you keep one single database, your core model will be designed for Engineering, with an Engineering specific model.
+
+### 3 models for 3 semantic businesses
+
+The case #5 of the Figure 3 shows the general case:
+
+* You have 3 PLMs, one for each domain, perfectly adapted to the use cases, the objects, the lifecycles and the rhythms of the processes of each domain;
+* You have a delivery software in Engineering that is producing something consistent for the downstream activities, being Manufacturing engineering or Support Engineering;
+* You have potentially 2 façade applications that can be complex enough to have their own databases, make their own deltas between 2 Engineering deliveries.
+
+Sometimes, the case #4 can work if your products are simple, if the engineering is knowing 100% of the mounted parts and if the manufacturing and support is simple. But in big industries such as aerospace, the model #4 is not working.
+
+The case of industry is not a particular case: You can't fit 2 or more different business semantic domains in the same database. Trying to make those semantic domains cohabit in the same instance is leading almost inevitably to one semantic domain `A` imposing its rules (rhythm, lifecycle, data model, etc.) to another semantic domain `B`. That generates downstream systems that will recreate the models and lifecycle that `B` cannot operate in a PLM dominated by `A` (often with spreadsheets, small databases, reports and manual works).
+
+This also generates horrible costs and non convergence of projects, which is common in the PLM area.
+
+<a name="semantic-domain">
+
+### What are the business semantic domains?
+
+The real challenge becomes to identify properly those "business semantic domains" that drive the perimeter where an application can be built on a single data model.
+
+To determine those semantic spaces, the knowledge of the company organization and business processes is crucial. Business processes exhibit business concepts, cardinalities between concepts, lifecycles of the various types of objects, and rhythms of the various processes.
+
+The enterprise architecture description language [Archimate](./archimate-intro.md) is one of the best tools to understand where the semantic space begins and where it ends (even is sometimes, some [recipes](./archimate-recipes.md) are required).
+
+Once the semantic domains are identified, we can assess their limits by analyzing the internal dependencies of intra-domain concepts and "bridges" wit extra-domain concepts (see the [Graph-oriented programming paradigm](../pdf/20161026-TheGraphOrientedProgrammingParadigm-ORey-PreliminaryVersion.pdf) for more information).
+
+### A legend grounded in past software
+
+PLM vendors, intoxicated by their historical "collaboration"-based marketing message, did not realize that making a real application with structured data was specializing the product to a certain set of use cases, and so to a particular business.
+
+They end up selling "mega-monoliths" without realizing that this message is contradictory to the IT architecture trends everywhere else, apart from industry.
 
 *(July 14 2014)*
 
