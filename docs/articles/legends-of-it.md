@@ -7,7 +7,7 @@ Information technology (IT) is a very recent engineering discipline and no one i
 
 As IT is a very intellectual discipline, both an engineering discipline and a creative activity, as the entry ticket of making a program run is very low, it is very easy to believe things that are untrue and to loose the global perspective of what IT is for and what are the problems it should answer to.
 
-## What criteria to judge IT legends?
+## Criterias to judge IT legends
 
 The first problem we face in IT when trying to get some perspective is the problem of defining a set of criteria that will enable us to categorize the IT practices as "good" or "bad".
 
@@ -15,13 +15,13 @@ It is incredible that those criteria are not better known and shared, but after 
 
 So, we will define our own set of criteria as a kind of compass that will guide us through this journey of illusions.
 
-## Criteria #1: Simplicity
+### Criteria #1: Simplicity
 
 Simplicity will be our first criteria. Software should be the simplest possible, software architecture also and so is IT architecture.
 
 Where complexity is, failure will be, as high maintenance costs.
 
-## Criteria #2: As little dependencies as possible
+### Criteria #2: As little dependencies as possible
 
 Dependencies should be limited to their bare minimum because they will bring constraints on our applications.
 
@@ -31,7 +31,7 @@ Are we writing valuable programs with added-value for the business or are we dev
 
 Software is an asset on which the business is done, so it should rely on as less other stuff as possible.
 
-## Criteria #3: Adaptability
+### Criteria #3: Adaptability
 
 Adaptability must be understood in the sense of ease of change. Adaptability is the reverse of *technical debt*: when a technology aggravates technical debt, it should never be used.
 
@@ -39,7 +39,7 @@ The definition we take for technical debt is defined very precisely in the artic
 
 That's why reusability of external components can be a bad idea on the long run, we'll come back on that.
 
-## Criteria #4: Stick to standards, in particular in programming languages
+### Criteria #4: Stick to standards, in particular in programming languages
 
 At any cost, we should stick to the standard programming language and avoid, if we can, proprietary languages.
 
@@ -49,7 +49,7 @@ Moreover, we are safer if the language specification is opened and/or massively 
 
 Avoiding technologies owned by private companies or privately owned specific tools (like transpilers) should be a must: those companies have the IP of the products and we will not be able to switch to another provider if they decide to make their language/tool paying, or if they decide to stop maintaining it.
 
-## Criteria #5: Economics matter
+### Criteria #5: Economics matter
 
 The real cost of an adaptable application should be known, so is the cost of the maintenance phase and the constraints that will come attached to this maintenance (technology, skills).
 
@@ -57,7 +57,9 @@ The real cost of a software encompasses all the phases of the project, that's wh
 
 Remember: Software is an asset and it deserves to be treated as we treat our buildings or factories.
 
-## Representing a business domain
+## Legends of IT
+
+### Representing a business domain
 
 We'll not talk about games in this article but about professional applications and technology which aim is to automate some business domain.
 
@@ -76,7 +78,7 @@ So, even if this statement is obvious, creating business applications is consist
 
 Modern programming introduced the choice of using giga-frameworks that bring a lot of constraints on the application software while pretending to solve all the common problems.
 
-## Legend #1: Data are absolute
+### Legend #1: Data are absolute
 
 | # | Criteria        | Applicable |
 |---|-----------------|------------|
@@ -90,7 +92,7 @@ For sure, this statement or belief is wrong, as we have shown in our article, [T
 
 In the same semantic space, change the use cases and we will get a different application and so different data models.
 
-## Legend #2: For a certain problem, there is only one code design
+### Legend #2: For a certain problem, there is only one code design
 
 | # | Criteria        | Applicable |
 |---|-----------------|------------|
@@ -108,7 +110,7 @@ Second of all, application evolutions are very difficult to anticipate, that's a
 
 Most of the time, experience shows that software engineers are very bad at predicting in what direction the application will grow. This is quite normal because to be able to forecast correctly in what direction a software will develop during years, we have to know very well the business and the trends of this particular business.
 
-### Will design patterns help?
+#### Will design patterns help?
 
 ![Design Patterns, elements of reusable OO software](../images/design-patterns.jpeg)
 
@@ -120,7 +122,7 @@ A wrong design pattern brings complexity (inverse of simplicity) and increased t
 
 So we must be very careful about design patterns, because they may damage a lot our code.
 
-### The consequences of having different designs answering to the same problem
+#### The consequences of having different designs answering to the same problem
 
 The fact is there are many ways to represent the same reality. In order to be convinced of that, consider the code written in IT school by students facing the same requirements. We will get one different software per person with one different design per designer.
 
@@ -138,7 +140,7 @@ Because the software can always end up "working" with crappy practices, a lot of
 
 ![](../images/technical-debt.webp)
 
-### Document the design and design hypothesis
+#### Document the design and design hypothesis
 
 In encountered twice problems coming from undocumented industry product (tangible ones), once in the aerospace and once in the nuclear area. All problems came after an incident that needed to be fixed. How can you fix an incident in a system that was optimized a long time ago without any documentation explaining what trade-off hypothesis were taken?
 
@@ -146,7 +148,7 @@ In both cases, the fix created a bigger incident. Why? Because fixing the proble
 
 As a conclusion, taking into account the variety of ways to do things should lead us to enforce documentation of the design and design hypothesis. An personally, I can't insist more on the role of diagrams to capture the essence of some design choices.
 
-## Legend #3: Reusability is good
+### Legend #3: Reusability is good
 
 | # | Criteria        | Applicable |
 |---|-----------------|------------|
@@ -158,7 +160,7 @@ As a conclusion, taking into account the variety of ways to do things should lea
 
 Reusability is a double-edged sword and not at all a sign of good software.
 
-### Reusing our creations
+#### Reusing our creations
 
 Because software are made by creative humans, software generates *attachment* in the heart of the software engineers. When we worked several hours on a large program and realize that it is useless, we should be able to delete it without any feelings. But the fact is, people get attached to the programs they did, because they did suffer doing them, and making them work.
 
@@ -172,13 +174,13 @@ At micro level, this is for sure quite often necessary (see the bottom-up progra
 
 But, when it goes to higher level of code, the danger is everywhere. Should we reuse? Should we create some reusable code?
 
-### Reusability starts at 3
+#### Reusability starts at 3
 
 I remind a principle from an ancient VP Software Engineering at Amadeus, François Weissert, saying: "Reusability starts at 3".
 
 When we have twice the same code, we should be very careful about the code to be really reusable. When we write 3 times the same code, we can consider creating a reusable component (meaning for others than ourselves).
 
-### The business semantics are not reusable
+#### The business semantics are not reusable
 
 We have to remember that the semantic of the business itself is not "reusable" and so reusability should be dealt with a great deal of caution.
 
@@ -186,7 +188,7 @@ That may seem a stupid statement, but a lot of problems can come from not unders
 
 Even if things look similar, we have to refrain ourselves from creating reusable components when there are not.
 
-### Reusing giga-frameworks
+#### Reusing giga-frameworks
 
 For some software companies, reusability has become a way to make us prisoners of their giga-framework, and especially of the mandatory updates that we must do if we want to keep been "supported". Consider the giga Javascript frameworks such as Angular or React. Being forced to reuse their framework will change drastically our design because we will need to adapt to the programming model they defined.
 
@@ -194,7 +196,7 @@ Are there ways to do better? What are those giga-frameworks provide that we real
 
 But in order to call an API in Javascript, do we need a giga-framework? No. Do we need some fancy components? Maybe yes, but what are the strings attached to this reusability? Will this corrupt our programming model? Do we really know what contract we are signing when we reuse a giga-framework? I don't think so.
 
-### Reusing is making the application cheaper
+#### Reusing is making the application cheaper
 
 Unfortunately, this is most often not the case.
 
@@ -228,11 +230,11 @@ So, by order of magnitude :
 
 * *PL = Programming Languages*
 
-### Conclusion about reusability
+#### Conclusion about reusability
 
 Reusability is a powerful tool but also a very dangerous one. It also brings a dependency on your knowledge. By reusing, you make the choice of never knowing what really occurs underneath, but to stay on the surface of what the reusable component will show you.
 
-## Legend #4: We should use this framework because everyone uses it
+### Legend #4: We should use this framework because everyone uses it
 
 | # | Criteria        | Applicable |
 |---|-----------------|------------|
@@ -268,7 +270,7 @@ For backend developments, we should choose standard programming languages. This 
 
 Let's say, our choice should never be driven by your supplier or by the IT marketing messages. We will have sufficient problems to maintain our own code, we should not reuse components and frameworks when we can avoid it. It violates the whole 5 criteria.
 
-## Legend #5: We are in a digital world with reliable data
+### Legend #5: We are in a digital world with reliable data
 
 | # | Criteria        | Applicable |
 |---|-----------------|------------|
@@ -295,7 +297,7 @@ There are many reasons for that:
 
 We have to face it: the world is not perfect, and so are the data.
 
-### Denial or acceptation
+#### Denial or acceptation
 
 To face such a reality, two strategies can be chosen:
 
@@ -310,7 +312,7 @@ Quite often, the application is realized to be consistent, but, facing the reali
 
 Acceptation has a cost that must be integrated into the cost of the application, both at build time and at maintenance time.
 
-### The "façade" pattern
+#### The "façade" pattern
 
 One common solution consequence of accepting bad data as a requirement, is consisting in using the façade pattern: Instead of loading data inside our application, we are loading data into a "façade" that will be in charge of cleaning/disambiguating/complementing the data before the output is loaded into the application.
 
@@ -325,13 +327,13 @@ Depending on the gravity of data inconsistency, the façade could be a small app
 
 For sure, if the flow of data is continuous, the façade must be monitored and tuned with the right rules, in order to sustain the flow and be able to feed the application with correct and reliable data.
 
-### Never mix concerns
+#### Never mix concerns
 
 In all cases, the data cleanup should never pollute the application itself and so, be segregated from it. The façade must be a separate component, a separate database if needed, and separate software. Because the application has a job to do and its design should be done considering it, the data cleanup must be done up-front.
 
 The consequence of denial is to mix the 2 kinds of features inside the same application (business functionality and data cleansing), and that's why this solution ends up inevitably in bad software and bad data.
 
-## Legend #6: We can replace interfaces by sharing tables in a database
+### Legend #6: We can replace interfaces by sharing tables in a database
 
 | # | Criteria        | Applicable |
 |---|-----------------|------------|
@@ -367,7 +369,7 @@ The second conclusion is: we can't group several business domains inside the sam
 
 See also the annex 1:[ The message of PLM vendors, a legend rooted in the past](#annexe1)
 
-## Legend #7: We have great tools to develop applications
+### Legend #7: We have great tools to develop applications
 
 | # | Criteria        | Applicable |
 |---|-----------------|------------|
