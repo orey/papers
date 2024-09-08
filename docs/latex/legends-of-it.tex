@@ -6,16 +6,9 @@
 \newcommand{\mytitle}{Legends of IT}
 \newcommand{\mydate}{July 22 2024}
 
-\newcommand{\criterias}[5]
-{\begin{tabular}{|c|l|l|}
-\textbf{\#} & \textbf{Criteria} & \textbf{Applicable} \\
-\hline
-1 & Simplicity      & \#1 \\
-2 & No dependencies & \#2 \\
-3 & Adaptability    & \#3 \\
-4 & Standards       & \#4 \\
-5 & Economics       & \#5 \\
-\end{tabular}}
+\usepackage[table]{xcolor}    % loads also colortbl
+\usepackage{graphicx}
+\graphicspath{{../yed/}{../images/}}
 
 %---------------Hyperref
 \usepackage{hyperref}
@@ -31,6 +24,23 @@
   bookmarksopen={false},
   bookmarksnumbered={true}
 }
+
+\usepackage{biblatex} %Imports biblatex package
+\addbibresource{mybib.bib} %Import the bibliography file
+
+\newcommand{\criterias}[5]
+{\begin{center}
+\rowcolors{2}{gray!25}{white}
+{\small\begin{tabular}{clc}
+\rowcolor{gray!50}
+\textbf{\#} & \textbf{Criteria} & \textbf{Applicable} \\
+1 & Simplicity      & #1 \\
+2 & No dependencies & #2 \\
+3 & Adaptability    & #3 \\
+4 & Standards       & #4 \\
+5 & Economics       & #5 \\
+\end{tabular}}
+\end{center}}
 
 %opening
 \title{\mytitle}
@@ -73,9 +83,9 @@ Software is an asset on which the business is done, so it should rely on as less
 
 \subsection{Criteria \#3: Adaptability}
 
-Adaptability must be understood in the sense of ease of change. Adaptability is the reverse of *technical debt*: when a technology aggravates technical debt, it should never be used.
+Adaptability must be understood in the sense of ease of change. Adaptability is the reverse of \emph{technical debt}: when a technology aggravates technical debt, it should never be used.
 
-The definition we take for technical debt is defined very precisely in the article [The graph-oriented programming paradigm](../pdf/20161026-TheGraphOrientedProgrammingParadigm-ORey-PreliminaryVersion.pdf). Adaptability means as little couplings as possible.
+The definition we take for technical debt is defined very precisely in \cite{gop}. Adaptability means as little couplings as possible.
 
 That's why reusability of external components can be a bad idea on the long run, we'll come back on that.
 
@@ -83,7 +93,7 @@ That's why reusability of external components can be a bad idea on the long run,
 
 At any cost, we should stick to the standard programming language and avoid, if we can, proprietary languages.
 
-Standard languages we use should be supported by a *stable* community. This community does not have to be large, but it must be steady in time.
+Standard languages we use should be supported by a \emph{stable} community. This community does not have to be large, but it must be steady in time.
 
 Moreover, we are safer if the language specification is opened and/or massively supported and/or standardized by ANSI, ISO or any standardization office.
 
@@ -168,8 +178,6 @@ It is also obvious to say that without any design diagram, we rely on the fact t
 
 Because the software can always end up "working" with crappy practices, a lot of companies are interested in the short term result rather than in the long term maintainability. But if we could imagine the software like our house, we would panic.
 
-![](../images/technical-debt.webp)
-
 \subsubsection{Document the design and design hypothesis}
 
 In encountered twice problems coming from undocumented industry product (tangible ones), once in the aerospace and once in the nuclear area. All problems came after an incident that needed to be fixed. How can you fix an incident in a system that was optimized a long time ago without any documentation explaining what trade-off hypothesis were taken?
@@ -186,7 +194,7 @@ Reusability is a double-edged sword and not at all a sign of good software.
 
 \subsubsection{Reusing our creations}
 
-Because software are made by creative humans, software generates *attachment* in the heart of the software engineers. When we worked several hours on a large program and realize that it is useless, we should be able to delete it without any feelings. But the fact is, people get attached to the programs they did, because they did suffer doing them, and making them work.
+Because software are made by creative humans, software generates \emph{attachment} in the heart of the software engineers. When we worked several hours on a large program and realize that it is useless, we should be able to delete it without any feelings. But the fact is, people get attached to the programs they did, because they did suffer doing them, and making them work.
 
 There comes reusability as a way to save bad code. If the bad code is saved, we will generate more technical debt reusing it and it will generate useless complexity.
 
@@ -224,13 +232,15 @@ But in order to call an API in Javascript, do we need a giga-framework? No. Do w
 
 Unfortunately, this is most often not the case.
 
-Consider the various generations of client server in Figure 1 below.
+Consider the various generations of client server in Figure \ref{fig:cs-gen}.
 
-![Client server generations](../yed/client-server-generations.png)
+\begin{figure}[t]
+\caption{Client-server generations}
+\includegraphics[width=\textwidth]{client-server-generations.png}
+\label{fig:cs-gen}
+\end{figure}
 
-*Figure 1: Client-server generations*
-
-2 applications architectures are proposing a thin client architecture: the good old mainframe (case \#1 in Figure 1) and the first generation of web clients (case \#4). Those technologies were/are less expensive due to the fact that the application is almost completely located in the backend. In a certain way, the case \#2 of heavy client is also quite economic but only works with a small number of users accessible on the LAN.
+2 applications architectures are proposing a thin client architecture: the good old mainframe (case \#1 in Figure \ref{fig:cs-gen}) and the first generation of web clients (case \#4). Those technologies were/are less expensive due to the fact that the application is almost completely located in the backend. In a certain way, the case \#2 of heavy client is also quite economic but only works with a small number of users accessible on the LAN.
 
 Expensive applications are the ones that are using both a heavy client and a server:
 
@@ -244,27 +254,24 @@ We can go to extreme cases of case \#6 where we have 2 layers of application ser
 We can exhibit some basic rules:
 
 \begin{itemize}
-\item *The more places to code, the more expensive the application*.
-\item *The more frameworks, the more dependencies*.
+\item The more places to code, the more expensive the application.
+\item The more frameworks, the more dependencies.
 \end{itemize}
 
 So, by order of magnitude :
 
-\begin{tabular}{|l|c|l|l|c|l|}
+\begin{center}
+\rowcolors{2}{gray!25}{white}
+{\small\begin{tabular}{lcllcl}
+\rowcolor{gray!50}
 \textbf{Architecture} & \textbf{\# of PLs\textsuperscript{1}} & \textbf{CSF\textsuperscript{2}} & \textbf{SSF\textsuperscript{3}} & \textbf{Cost} & \textbf{DL\textsuperscript{4}} \\
-\hline
 Case \#4 & 1 (2) & No  & Yes             & Cheapest & Low\\
 Case \#5 & 2 (1) & Yes & Yes             & High     & High\\
-Case \#6 & 2 (3) & Yes & Yes (2 of them) & Highest  & Highest\\
-\end{tabular}
+Case \#6 & 2 (3) & Yes & Yes (2) & Highest  & Highest\\
+\end{tabular}}
+\end{center}
 
-Legend:
-\begin{description}
-\item[\textsuperscript{1}] Programming Languages
-\item[\textsuperscript{2}] Client-Side Framework
-\item[\textsuperscript{3}] Server-Side Framework
-\item[\textsuperscript{4}] Dependency Level
-\end{description}
+\noindent{\footnotesize \textsuperscript{1} Programming Languages, \textsuperscript{2} Client-Side Framework, \textsuperscript{3} Server-Side Framework, \textsuperscript{4} Dependency Level}.
 
 \subsubsection{Conclusion about reusability}
 
@@ -310,7 +317,7 @@ Let's say, our choice should never be driven by your supplier or by the IT marke
 
 Depending on the business domains, the data are more or less reliable.
 
-When they are, we can build interfaces between systems that will exchange structured data, each of them sharing the same view of the grammar of the data (see case \#1 in Figure 2 below). When the traffic is slow, when systems may have trouble interoperating or when the traffic is asynchronous, files containing structured data can be exchanged (see case \#2 in Figure 2 below).
+When they are, we can build interfaces between systems that will exchange structured data, each of them sharing the same view of the grammar of the data (see case \#1 in Figure \ref{fig:facade}). When the traffic is slow, when systems may have trouble interoperating or when the traffic is asynchronous, files containing structured data can be exchanged (see case \#2 in Figure \ref{fig:facade}).
 
 Take the referential data, for instance the list of customers of a retail company, the list of enterprises upon which collect social taxes, the list of parts mounted on an aircraft, all that data should be reliable but, quite often, they are not.
 
@@ -344,14 +351,17 @@ Quite often, the application is realized to be consistent, but, facing the reali
 
 Acceptation has a cost that must be integrated into the cost of the application, both at build time and at maintenance time.
 
-\subsubsection{The facade pattern}
+\subsubsection{The ``façade'' pattern}
 
-One common solution consequence of accepting bad data as a requirement, is consisting in using the façade pattern: Instead of loading data inside our application, we are loading data into a "façade" that will be in charge of cleaning/disambiguating/complementing the data before the output is loaded into the application.
+One common solution consequence of accepting bad data as a requirement, is consisting in using the façade pattern: Instead of loading data inside our application, we are loading data into a façade that will be in charge of cleaning/disambiguating/complementing the data before the output is loaded into the application.
 
 Note: Façade is originally a design pattern that appears primarily in the Gamma et al. But the concept is interesting in IT architecture.
 
-![Various kinds of façade](../yed/app-facade.png)
-*Figure 2: Various kinds of façades*
+\begin{figure}[t]
+\caption{Various kinds of façades}
+\includegraphics[width=\textwidth]{app-facade.png}
+\label{fig:facade}
+\end{figure}
 
 The simplest case of façade is the case \#3: the façade is a set of programs that which transforms `data1` and `data2` into `data` that can be loaded safely inside the target application.
 
@@ -373,13 +383,15 @@ Each application is answering to a set of use cases, and the application data ar
 
 That means that each application deserves a data model fit to its needs, so different the one from the other. For sure, applications may share data, but their sharing must remains as minimal as possible and bear the less structure as possible.
 
-![Data interop](../yed/stubs01.png)
+\begin{figure}[t]
+\caption{Data models are adapted to each application}
+\includegraphics[width=\textwidth]{stubs01.png}
+\label{fig:data-interop}
+\end{figure}
 
-*Figure 3: Data models are adapted to each application*
+In Figure \ref{fig:data-interop}, we can see how 3 different data representations are semantically equivalent but absolutely not technically equivalent. We'll note that the exchange format is the most "loose" format. That enables each stakeholder in the exchange to rebuild its data structures conforming to its use cases.
 
-In Figure 3, we can see how 3 different data representations are semantically equivalent but absolutely not technically equivalent. We'll note that the exchange format is the most "loose" format. That enables each stakeholder in the exchange to rebuild its data structures conforming to its use cases.
-
-Figure 3 is showing an interface between systems. If we were to project the `viewpoint1` directly in Application 2, we would distort the data model of Application 2 imposing, as a constraint, a part of the datamodel of Application 1. Let's suppose we do that with database materialized views, we will distort and create code of Application 2 based on data structures (that can change) of Application 1.
+Figure \ref{fig:data-interop} is showing an interface between systems. If we were to project the `viewpoint1` directly in Application 2, we would distort the data model of Application 2 imposing, as a constraint, a part of the datamodel of Application 1. Let's suppose we do that with database materialized views, we will distort and create code of Application 2 based on data structures (that can change) of Application 1.
 
 This practice is very dirty and very risky because:
 
@@ -413,13 +425,13 @@ Take your time to read the article, at least the explanation on why what we are 
 
 \section{We are at the beginning of the story of IT}
 
-We have to realize that we are just *at the beginning of the history of IT*. Some could say that AI will enhance our capacity to write code. Yes, maybe, but AI won't find alternate programming models to enter the new phase of our IT discovery. I fear we have to do the job.
+We have to realize that we are just \emph{at the beginning of the history of IT}. Some could say that AI will enhance our capacity to write code. Yes, maybe, but AI won't find alternate programming models to enter the new phase of our IT discovery. I fear we have to do the job.
 
 \href{https://orey.github.io/papers/pdf/20161026-TheGraphOrientedProgrammingParadigm-ORey-PreliminaryVersion.pdf}{Graph-oriented programming paradigm} is a way forward that seems very promising, but there should be plenty of alternate ways of doing stuff.
 
 I just hope AI won't prevent us to be as creative as the 70s/80s where. Instead of just following marketing-led companies, software engineers and researchers were experimenting, creating and discovering. Where are those guys, now?
 
-We should identify the legends in order to cease believing in them. We must find new paths, find the real "soft" in our "ware", and target a real economical efficiency of softare development. We need those new paradigms.
+We should identify the legends in order to cease believing in them. We must find new paths, find the real "soft" in our "ware", and target a real economical efficiency of software development. We need those new paradigms.
 
 \section{Annex 1: The message of PLM vendors, a legend rooted in the past}
 
@@ -442,21 +454,25 @@ Each PLM vendor indicates that all the industrial data of the three domains can 
 
 Maybe, it is worth reminding the history of those systems and make a little legend archaeology.
 
-![From EDMS to PLM](../yed/steps-to-plm.png)
+\begin{figure}[t]
+\caption{From EDMS to PLM}
+\includegraphics[height=\textheight]{steps-to-plm.png}
+\label{fig:to-plm}
+\end{figure}
 
-*Figure 4: From EDMS to PLM*
+At the beginning, the 3 engineering disciplines are working in paper separately and exchange physical documents (\#1 in Figure \ref{fig:to-plm}).
 
-At the beginning, the 3 engineering disciplines are working in paper separately and exchange physical documents (\#1 in Figure 4).
-
-When the first digital tools enter the industry, the documents did become office documents and 2D/3D models. Putting in place an Electronic Document Management System (EDMS, \#2 in Figure 4) was a way to enable collaboration because each organization could now access to the documents of the other without paper transfer.
+When the first digital tools enter the industry, the documents did become office documents and 2D/3D models. Putting in place an Electronic Document Management System (EDMS, \#2 in Figure \ref{fig:to-plm}) was a way to enable collaboration because each organization could now access to the documents of the other without paper transfer.
 
 Then came the "PDM" (Part Data Management) systems: What if all documents are indexed based on the part number they are referring to? In this system, every stakeholder is able to better find the documents applicable to its parts, whatever the perspective (design , manufacturing or support). This is shown in \#3 in Picture 3.
 
-We can note that this evolution follows the general application evolution described in the [Real Nature of Data](./data-interop.md).
+We can note that this evolution follows the general application evolution described in the \href{https://orey.github.io/papers/articles/data-interop/}{The real nature of data}.
 
-![Semantic space](../yed/semantic-space.png)
-
-*Figure 5: consult the [Real Nature of Data](./data-interop.md) article for more information*
+\begin{figure}[t]
+\caption{Evolution of the digitization of the semantic space with time}
+\includegraphics[width=\textwidth]{semantic-space.png}
+\label{fig:semantic-space}
+\end{figure}
 
 \subsection{The PLM changes everything}
 
@@ -464,7 +480,7 @@ The technology advancing, the products are becoming more complex and we have to 
 
 To what exactly the PLM data model is adapted? To Engineering requirements of course, because as they design the product, they are at the core of the system.
 
-Keeping the collaboration on the PLM for actors that are not Engineering is good for every other stakeholder that will be able to benefit from structured data (understand "Engineering structured data"), which is what is represented by the case \#4 on Figure 4.
+Keeping the collaboration on the PLM for actors that are not Engineering is good for every other stakeholder that will be able to benefit from structured data (understand "Engineering structured data"), which is what is represented by the case \#4 on Figure \ref{fig:to-plm}.
 
 This is where the PLM software companies are making a terrible mistake: When you enter the step of designing the activities of the semantic domain named "Engineering", the objects that you model and their lifecycle are specific to Engineering, and do not apply straight away to Manufacturing or Support.
 
@@ -472,7 +488,7 @@ For sure, you can try to "extend" the objects and the lifecycle of the support t
 
 \subsection{3 models for 3 semantic businesses}
 
-The case \#5 of the Figure 4 shows the general case:
+The case \#5 of the Figure \ref{fig:to-plm} shows the general case:
 
 \begin{itemize}
 \item You have 3 PLMs, one for each domain, perfectly adapted to the use cases, the objects, the lifecycles and the rhythms of the processes of each domain;
@@ -501,5 +517,7 @@ Once the semantic domains are identified, we can assess their limits by analyzin
 PLM vendors, intoxicated by their historical "collaboration"-based marketing message, did not realize that making a real application with structured data was specializing the product to a certain set of use cases, and so to a particular business.
 
 They end up selling "mega-monoliths" without realizing that this message is contradictory to the IT architecture trends everywhere else, apart from industry.
+
+\printbibliography
 
 \end{document}
