@@ -10,8 +10,8 @@ GraphApps is a research project (first phase: 2013-2018) that aims to use graphs
 
 You can read the following articles:
 
-  * [First article on graph oriented programming](../graph/first-article.md)
-  * [Slides from the ICGT 2018 conference](../graph/staf-icgt2018.md)
+  * [First article on graph oriented programming](first-article.md)
+  * [Slides from the ICGT 2018 conference](staf-icgt2018.md)
 
 The code that was produced during this period is under copyright and so, unfortunately, this code is not available.
 

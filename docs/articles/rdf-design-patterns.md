@@ -88,7 +88,7 @@ Semantically, the `a` indicates the real nature of the entity and the `rdfs:subC
 
 Attribute types are not homogeneous. For a given attribute `exs:att`, `exs:att rdfs:range rdfs:Class` may indicate that we are talking about a link or relationship between two objects, whereas `exs:att rdfs:range rdfs:Literal` may indicate that we have a real attribute with a literal value.
 
-That is one UML and object-orientation deepest problem: the aggregation (and composition) relationships are represented at the same level than the attributes pointing to literal values (see [paper on graph-oriented programming](../graph/first-article.md)). The semantic web enables us to get over this crucial limitation by defining the attribute outside of the class itself.
+That is one UML and object-orientation deepest problem: the aggregation (and composition) relationships are represented at the same level than the attributes pointing to literal values (see [paper on graph-oriented programming](first-article.md)). The semantic web enables us to get over this crucial limitation by defining the attribute outside of the class itself.
 
 But, if we want to be effective, we would need a specific root attribute type for the attribute types having a range in the `rdfs:Literal` world, and a root attribute type for the attribute types that point to objects.
 

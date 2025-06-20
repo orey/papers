@@ -1,64 +1,59 @@
 # Olivier Rey's Papers
 
-## Papers on PLM
+## BlogAI
 
-* [The four core functions showing you need a PLM](articles/spreadsheet-and-PLM.md)
-* [Configuration management of industrial products in PDM/PLM](articles/conf-mgt.md)
+In 2025, I started a blog on AI. Yes, we have a topic here.
+
+* [Year 2025](blog/2025.md)
+
+## PLM
+
 * [PLM and graph data](articles/about-plm.md)
+* [Configuration management of industrial products in PDM/PLM](articles/conf-mgt.md)
+* [The four core functions showing you need a PLM](articles/spreadsheet-and-PLM.md)
+* [Semantic data migration in Industry](articles/data-mig.md)
+* [Reflections on industry data](articles/industry-data.md)
 
-## Papers on modeling
+## IT, Modeling & Data
 
-* [Military Frameworks, Systems Engineering and Enterprise Architecture](articles/mbse-vs-ea.md)
-* [Archimate Recipes](articles/archimate-recipes.md)
-* [An Introduction to The Archimate Revolution](articles/archimate-intro.md)
-* [A Simple Meta-Model for Portfolio Management](articles/portfolio.md)
-
-## Papers on data and interoperability
-
-* [About artificial neural networks and machine learning](research/about-ml.md)
+* [Legends of IT](articles/legends-of-it.md)
 * [The real nature of data](articles/data-interop.md)
-* [GraphQL And Classic Web Services](articles/graphql-web-services.md)
+* [Military Frameworks, Systems Engineering and Enterprise Architecture](articles/mbse-vs-ea.md)
+* [A Simple Meta-Model for Portfolio Management](articles/portfolio.md)
+* [An Introduction to The Archimate Revolution](articles/archimate-intro.md)
+* [Archimate Recipes](articles/archimate-recipes.md)
+<!-- * [About artificial neural networks and machine learning](articles/about-ml.md) -->
 * [Considerations about Rest and Web Services](articles/about-rest.md)
-
-## Papers on IT
-
-* **NEW** - [Legends of IT](articles/legends-of-it.md)
-* [The Various Stages of Digital Transformation](articles/various-stages.md)
-* [The V2 Vortex](articles/the-v2-vortex.md)
+* [GraphQL And Classic Web Services](articles/graphql-web-services.md)
 * [The Five Levels of Conceptual Maturity for IT Teams](articles/five-levels.md)
+* [The V2 Vortex](articles/the-v2-vortex.md)
+* [The Various Stages of Digital Transformation](articles/various-stages.md)
 
 ## Graph-oriented programming
 
-This section contains materials about graph-oriented programming, solving the technical debt issue and using graph transformations in software engineering.
+* [Graph-Oriented Programming](articles/first-article.md)
+* [Conference at the STAF/ICGT 2018 in Toulouse](articles/staf-icgt2018.md)
+* [GraphApps project page](articles/graphapps.md)
+* [Towards a graph-oriented programming language?](articles/graph-oriented-pl.md)
 
-* [First article on graph-oriented programming](graph/first-article.md)
-* [Conference at the STAF/ICGT 2018 in Toulouse](graph/staf-icgt2018.md)
+## Graph Transformations
 
-Project page: [GraphApps project](research/graphapps.md) project (2013-2018)
+* [Index](articles/index-research.md)
+* [Graph transformations](articles/graph-transfo.md)
+* [A general interoperability model using graph transformations](articles/graph-interop.md)
+* [Basic graph transformations](articles/basic-graph-transformations.md)
+* [Basic semantic graph transformations](articles/basic-semantic-graph-transformations.md)
+* [DSL for graph topology check](articles/DSL-for-graph-topology-checks.md)
+* [Graph transformation applicability](articles/graph-transformation-applicability.md)
+* [Grammar of graph transformation](articles/grammar-graph-transformation.md)
+* [UML to RDF considerations](articles/rdf-design-patterns.md)
 
-## Research section: Graph transformations and semantic data migration
+## Various
 
-[Index](research/index-research.md)
+* [Paradoxe de Zénon et dépassement de la vitesse de la lumière](articles/zenon-lumiere.md)
+* [A propos de la relativité générale](articles/relativite.md)
+* [Einstein, Cartan et la géométrie différentielle](articles/cartan.md)
+* [Resources](articles/resources.md)
 
-* [Graph transformations](research/graph-transfo.md)
-    * [A general interoperability model using graph transformations](research/graph-interop.md)
-    * [Basic graph transformations](research/basic-graph-transformations.md)
-    * [Basic semantic graph transformations](research/basic-semantic-graph-transformations.md)
-    * [DSL for graph topology check](research/DSL-for-graph-topology-checks.md)
-    * [Graph transformation applicability](research/graph-transformation-applicability.md)
-    * [Grammar of graph transformation](research/grammar-graph-transformation.md)
-    * [Graph-oriented programming language](research/graph-oriented-pl.md)
-* [Semantic data migration project](research/data-mig.md) (2018-now)
-    * [Using semantic web technologies for aerospace industrial data migration, Madics 2019](research/data-mig.md#madics)
-* More
-    * [Paradoxe de Zénon et dépassement de la vitesse de la lumière](research/zenon-lumiere.md)
-    * [A propos de la relativité générale](research/relativite.md)
-    * [Einstein, Cartan et la géométrie différentielle](research/cartan.md)
-    * [UML to RDF considerations](research/rdf-design-patterns.md)
-    * [Reflections on industry data](research/industry-data.md)
-    * [Towards a graph-oriented programming language?](research/graph-oriented-pl.md)
-    * [Resources](research/resources.md)
-
-
-*(Last update: July 2024)*
+*(Last update: June 2025)*
 
