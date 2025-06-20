@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Olivier Rey">
+        <link rel="canonical" href="https://orey.github.io/papers/articles/rdf-design-patterns/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>UML to RDF considerations - Papers</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZMZKWJP2V"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', "G-BZMZKWJP2V");
+        </script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Papers</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">BlogAI</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../blog/2025/" class="dropdown-item">Year 2025</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">PLM</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../about-plm/" class="dropdown-item">PLM and graph data</a>
+</li>
+                                    
+<li>
+    <a href="../conf-mgt/" class="dropdown-item">Configuration management of industrial products in PDM/PLM</a>
+</li>
+                                    
+<li>
+    <a href="../spreadsheet-and-PLM/" class="dropdown-item">The four core functions showing you need a PLM</a>
+</li>
+                                    
+<li>
+    <a href="../data-mig/" class="dropdown-item">Semantic data migration in Industry</a>
+</li>
+                                    
+<li>
+    <a href="../industry-data/" class="dropdown-item">Reflections on industry data</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">IT, Modeling & Data</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../legends-of-it/" class="dropdown-item">Legends of IT</a>
+</li>
+                                    
+<li>
+    <a href="../data-interop/" class="dropdown-item">The real nature of data</a>
+</li>
+                                    
+<li>
+    <a href="../mbse-vs-ea/" class="dropdown-item">Military frameworks, systems engineering and enterprise architecture</a>
+</li>
+                                    
+<li>
+    <a href="../portfolio/" class="dropdown-item">A Simple Meta-Model for Portfolio Management</a>
+</li>
+                                    
+<li>
+    <a href="../archimate-intro/" class="dropdown-item">An Introduction to The Archimate Revolution</a>
+</li>
+                                    
+<li>
+    <a href="../archimate-recipes/" class="dropdown-item">Archimate Recipes</a>
+</li>
+                                    
+<li>
+    <a href="../about-rest/" class="dropdown-item">Considerations About Rest And Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../graphql-web-services/" class="dropdown-item">GraphQL And Classic Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../five-levels/" class="dropdown-item">The Five Levels of Conceptual Maturity for IT Teams</a>
+</li>
+                                    
+<li>
+    <a href="../the-v2-vortex/" class="dropdown-item">The V2 Vortex</a>
+</li>
+                                    
+<li>
+    <a href="../various-stages/" class="dropdown-item">The Various Stages of Digital Transformation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Graph-Oriented Programming</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../first-article/" class="dropdown-item">Graph-oriented programming</a>
+</li>
+                                    
+<li>
+    <a href="../staf-icgt2018/" class="dropdown-item">Conference at the STAF/ICGT 2018 in Toulouse</a>
+</li>
+                                    
+<li>
+    <a href="../graphapps/" class="dropdown-item">GraphApps project page</a>
+</li>
+                                    
+<li>
+    <a href="../graph-oriented-pl/" class="dropdown-item">Towards a graph-oriented programming language?</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Graph transformations</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../index-research/" class="dropdown-item">Index</a>
+</li>
+                                    
+<li>
+    <a href="../graph-transfo/" class="dropdown-item">Graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../graph-interop/" class="dropdown-item">A general interoperability model using graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../basic-graph-transformations/" class="dropdown-item">Basic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../basic-semantic-graph-transformations/" class="dropdown-item">Basic semantic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../DSL-for-graph-topology-checks/" class="dropdown-item">DSL for graph topology check</a>
+</li>
+                                    
+<li>
+    <a href="../graph-transformation-applicability/" class="dropdown-item">Graph transformation applicability</a>
+</li>
+                                    
+<li>
+    <a href="../grammar-graph-transformation/" class="dropdown-item">Grammar of graph transformation</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">UML to RDF considerations</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Various</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../zenon-lumiere/" class="dropdown-item">Paradoxe de Zénon et dépassement de la vitesse de la lumière</a>
+</li>
+                                    
+<li>
+    <a href="../relativite/" class="dropdown-item">A propos de la relativité générale</a>
+</li>
+                                    
+<li>
+    <a href="../cartan/" class="dropdown-item">Einstein, Cartan et la géométrie différentielle</a>
+</li>
+                                    
+<li>
+    <a href="../resources/" class="dropdown-item">Resources</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../about/about/" class="dropdown-item">Author</a>
+</li>
+                                    
+<li>
+    <a href="../../about/LICENSE/" class="dropdown-item">License</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../grammar-graph-transformation/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../zenon-lumiere/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#uml-to-rdf-considerations" class="nav-link">UML to RDF considerations</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#references" class="nav-link">References</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#basic-correspondence-between-uml-and-rdfrdfs" class="nav-link">Basic correspondence between UML and rdf/rdfs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#types-are-instances-of-rdfproperty-and-rdfsclass" class="nav-link">Types are instances of rdf:Property and rdfs:Class</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#first-translation" class="nav-link">First translation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#second-translation" class="nav-link">Second translation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-kinds-of-attribute-types" class="nav-link">2 kinds of attribute types</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="uml-to-rdf-considerations">UML to RDF considerations</h1>
+<h2 id="references">References</h2>
+<p>In a W3C article, <a href="https://www.w3.org/2001/sw/BestPractices/">Semantic Web Best Practices</a>, some indications are provided to compare the semantic web approach with the object-oriented approach. Those indications are very interesting but they are not complete to serve as a guide for software engineers trying to work with semantic web technologies.</p>
+<p>This page aims at gathering interesting elements about that topic.</p>
+<h2 id="basic-correspondence-between-uml-and-rdfrdfs">Basic correspondence between UML and rdf/rdfs</h2>
+<p>Consider the following figure.</p>
+<p><img alt="UML versus rdf/rdfs" src="../../yed/uml-rdf-rdfs-v02.png" /></p>
+<p>Several points must be noted.</p>
+<h2 id="types-are-instances-of-rdfproperty-and-rdfsclass">Types are instances of rdf:Property and rdfs:Class</h2>
+<p>Basically, in most existing (RDFS) ontologies, when a new class is created, it is declared as being <code>a rdfs:Class</code>, and when a new property type is created, it is declared as being <code>a rdf:Property</code>. We have this situation in the diagram for <code>exs:ClassA</code>, <code>exs:ClassB</code>, <code>exs:ClassC</code> and for <code>exs:attribute1</code> and <code>exs:attribute2</code>.</p>
+<p>That means that new types, being class types or property types, are considered as "instances" of the "meta-types" <code>rdfs:Class</code> and <code>rdf:Property</code>.</p>
+<h2 id="first-translation">First translation</h2>
+<p>In the UML diagram, <code>ClassB</code> derives from <code>ClassA</code>. That implies: <code>exs:ClassB rdfs:subClassOf exs:ClassA</code> as an obvious translation of the UML fact.</p>
+<p>We can stay like that and have a first UML to RDF translation like follows.</p>
+<pre><code>@prefix rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix exs: &lt;https://orey.github.io/sample-schema.ttl#&gt; .
+
+exs:ClassA a rdfs:Class.
+
+exs:ClassB a rdfs:Class ;
+           rdfs:subClassOf exs:ClassA .
+
+exs:ClassC a rdfs:Class.
+
+exs:attribute1 a rdf:Property ;
+               rdfs:domain exs:ClassA ;
+               rdfs:range rdf:langString .
+
+exs:attribute2 a rdf:Property ;
+               rdfs:domain exs:ClassA ;
+               rdfs:range exs:ClassC .
+
+</code></pre>
+<h2 id="second-translation">Second translation</h2>
+<p>This first translation may be considered as having a slight problem. All new classes could be <code>subClassOf</code> another class, in order to enable reasoning based on sub-classes.</p>
+<p>We could enrich a bit our first translation by adding some lines.</p>
+<pre><code>@prefix rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix exs: &lt;https://orey.github.io/sample-schema.ttl#&gt; .
+
+exs:ClassA a rdfs:Class ;
+           rdfs:subClassOf rdfs:Class . &lt;= NEW
+
+exs:ClassB a rdfs:Class ;
+           rdfs:subClassOf exs:ClassA .
+
+exs:ClassC a rdfs:Class ;
+           rdfs:subClassOf rdfs:Class . &lt;= NEW
+
+exs:attribute1 a rdf:Property;
+               rdfs:subPropertyOf rdf:Property ; &lt;= NEW
+               rdfs:domain exs:ClassA ;
+               rdfs:range rdf:langString .
+
+exs:attribute2 a rdf:Property ;
+               rdfs:subPropertyOf rdf:Property ; &lt;= NEW
+               rdfs:domain exs:ClassA ;
+               rdfs:range exs:ClassC .
+
+</code></pre>
+<p>Semantically, the <code>a</code> indicates the real nature of the entity and the <code>rdfs:subClass/PropertyOf</code> its type hierarchy.</p>
+<h2 id="2-kinds-of-attribute-types">2 kinds of attribute types</h2>
+<p>Attribute types are not homogeneous. For a given attribute <code>exs:att</code>, <code>exs:att rdfs:range rdfs:Class</code> may indicate that we are talking about a link or relationship between two objects, whereas <code>exs:att rdfs:range rdfs:Literal</code> may indicate that we have a real attribute with a literal value.</p>
+<p>That is one UML and object-orientation deepest problem: the aggregation (and composition) relationships are represented at the same level than the attributes pointing to literal values (see <a href="../first-article/">paper on graph-oriented programming</a>). The semantic web enables us to get over this crucial limitation by defining the attribute outside of the class itself.</p>
+<p>But, if we want to be effective, we would need a specific root attribute type for the attribute types having a range in the <code>rdfs:Literal</code> world, and a root attribute type for the attribute types that point to objects.</p>
+<p>That leads us to the third translation below.</p>
+<pre><code>@prefix rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix dc: &lt;http://purl.org/dc/elements/1.1/&gt; .
+@prefix ga: &lt;https://orey.github.io/graphapps-V2#&gt; .
+
+@prefix exs: &lt;https://orey.github.io/sample-schema.ttl#&gt; .
+
+exs:ClassA a rdfs:Class ;
+           rdfs:subClassOf ga:Class . &lt;= NEW
+
+exs:ClassB a rdfs:Class ;
+           rdfs:subClassOf exs:ClassA .
+
+exs:ClassC a rdfs:Class ;
+           rdfs:subClassOf ga:Class . &lt;= NEW
+
+exs:attribute1 a rdf:Property ;
+               rdfs:subPropertyOf ga:attribute ; &lt;= NEW
+               rdfs:domain exs:ClassA ;
+               rdfs:range rdf:langString .
+
+exs:attribute2 a rdf:Property ;
+               rdfs:subPropertyOf ga:link ; &lt;= NEW
+               rdfs:domain exs:ClassA ;
+               rdfs:range exs:ClassC .
+</code></pre>
+<p>The root attribute type for attribute types having a range in <code>rdfs:Literal</code> is <code>ga:attribute</code>, and the root attribute type for attribute types that point to classes is <code>ga:link</code>.</p>
+<p>If we want to be sure that classes are realm classes, and because <code>rdfs:Class</code> maybe sometimes too large, we defined <code>ga:Class</code> as the root type for all classes.</p>
+<p>That provides the following RDFS-based ontology:</p>
+<pre><code>@prefix rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix dc: &lt;http://purl.org/dc/elements/1.1/&gt; .
+
+@prefix ga:   &lt;https://orey.github.io/graphapps-V2#&gt; .
+
+&lt;https://orey.github.io/graphapps-V2#&gt; a owl:Ontology ;
+        dc:title &quot;GraphApps ontology for building semantic applications&quot; ;
+        dc:date &quot;2020-06-21&quot; ;
+        dc:description &quot;This ontology describe the minimal set of constructs required to build applications in the spirit of the GraphApps works.&quot; .
+
+ga:Class a rdfs:Class ;
+         rdfs:subClassOf rdfs:Class ;
+         rdfs:isDefinedBy &lt;https://orey.github.io/graphapps-V2#&gt; ;
+         rdfs:label &quot;Class&quot; ;
+         rdfs:comment &quot;Root class of the GraphApps classes.&quot; .
+
+ga:attribute a rdf:Property ;
+             rdfs:subPropertyOf rdf:Property ;
+             rdfs:isDefinedBy &lt;https://orey.github.io/graphapps-V2#&gt; ;
+             rdfs:label &quot;attribute&quot; ;
+             rdfs:comment &quot;Root property of final data attributes.&quot; ;
+             rdfs:domain ga:Class ;
+             rdfs:range rdfs:Literal .
+
+ga:link a rdf:Property ;
+             rdfs:subPropertyOf rdf:Property ;
+             rdfs:isDefinedBy &lt;https://orey.github.io/graphapps-V2#&gt; ;
+             rdfs:label &quot;link&quot; ;
+             rdfs:comment &quot;Root property of link between ga:Class.&quot; ;
+             rdfs:domain ga:Class ;
+             rdfs:range rdfs:Class .
+
+ga:id a ga:attribute ;
+      rdfs:isDefinedBy &lt;https://orey.github.io/graphapps-V2#&gt; ;
+      rdfs:label &quot;id&quot; ;
+      rdfs:comment &quot;Instance of attribute type to define a unique id for ga:Class instances.&quot; ;
+      rdfs:domain ga:Class ;
+      rdfs:range rdfs:Literal .
+
+</code></pre>
+<p>Such a grammar is enabling several things:</p>
+<ul>
+<li>Translate UML concepts in semantic web concepts;</li>
+<li>Distinguish between topological links between concepts, and values of attributes;</li>
+<li>Reason on less ambiguous concepts;</li>
+<li>Benefit from the RDF/RDFS definition of attributes out of classes;</li>
+<li>Enable graph transformations based on a set of non ambiguous concepts.</li>
+</ul>
+<p>The grammar can be found <a href="https://orey.github.io/graphapps-V2">here</a>.</p>
+<p><em>(June 2020)</em></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyleft Olivier Rey 2017-2025 - Site licensed under the GNU FDL V3</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

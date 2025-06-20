@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Olivier Rey">
+        <link rel="canonical" href="https://orey.github.io/papers/articles/graph-interop/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>A general interoperability model using graph transformations - Papers</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZMZKWJP2V"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', "G-BZMZKWJP2V");
+        </script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Papers</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">BlogAI</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../blog/2025/" class="dropdown-item">Year 2025</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">PLM</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../about-plm/" class="dropdown-item">PLM and graph data</a>
+</li>
+                                    
+<li>
+    <a href="../conf-mgt/" class="dropdown-item">Configuration management of industrial products in PDM/PLM</a>
+</li>
+                                    
+<li>
+    <a href="../spreadsheet-and-PLM/" class="dropdown-item">The four core functions showing you need a PLM</a>
+</li>
+                                    
+<li>
+    <a href="../data-mig/" class="dropdown-item">Semantic data migration in Industry</a>
+</li>
+                                    
+<li>
+    <a href="../industry-data/" class="dropdown-item">Reflections on industry data</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">IT, Modeling & Data</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../legends-of-it/" class="dropdown-item">Legends of IT</a>
+</li>
+                                    
+<li>
+    <a href="../data-interop/" class="dropdown-item">The real nature of data</a>
+</li>
+                                    
+<li>
+    <a href="../mbse-vs-ea/" class="dropdown-item">Military frameworks, systems engineering and enterprise architecture</a>
+</li>
+                                    
+<li>
+    <a href="../portfolio/" class="dropdown-item">A Simple Meta-Model for Portfolio Management</a>
+</li>
+                                    
+<li>
+    <a href="../archimate-intro/" class="dropdown-item">An Introduction to The Archimate Revolution</a>
+</li>
+                                    
+<li>
+    <a href="../archimate-recipes/" class="dropdown-item">Archimate Recipes</a>
+</li>
+                                    
+<li>
+    <a href="../about-rest/" class="dropdown-item">Considerations About Rest And Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../graphql-web-services/" class="dropdown-item">GraphQL And Classic Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../five-levels/" class="dropdown-item">The Five Levels of Conceptual Maturity for IT Teams</a>
+</li>
+                                    
+<li>
+    <a href="../the-v2-vortex/" class="dropdown-item">The V2 Vortex</a>
+</li>
+                                    
+<li>
+    <a href="../various-stages/" class="dropdown-item">The Various Stages of Digital Transformation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Graph-Oriented Programming</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../first-article/" class="dropdown-item">Graph-oriented programming</a>
+</li>
+                                    
+<li>
+    <a href="../staf-icgt2018/" class="dropdown-item">Conference at the STAF/ICGT 2018 in Toulouse</a>
+</li>
+                                    
+<li>
+    <a href="../graphapps/" class="dropdown-item">GraphApps project page</a>
+</li>
+                                    
+<li>
+    <a href="../graph-oriented-pl/" class="dropdown-item">Towards a graph-oriented programming language?</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Graph transformations</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../index-research/" class="dropdown-item">Index</a>
+</li>
+                                    
+<li>
+    <a href="../graph-transfo/" class="dropdown-item">Graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">A general interoperability model using graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../basic-graph-transformations/" class="dropdown-item">Basic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../basic-semantic-graph-transformations/" class="dropdown-item">Basic semantic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../DSL-for-graph-topology-checks/" class="dropdown-item">DSL for graph topology check</a>
+</li>
+                                    
+<li>
+    <a href="../graph-transformation-applicability/" class="dropdown-item">Graph transformation applicability</a>
+</li>
+                                    
+<li>
+    <a href="../grammar-graph-transformation/" class="dropdown-item">Grammar of graph transformation</a>
+</li>
+                                    
+<li>
+    <a href="../rdf-design-patterns/" class="dropdown-item">UML to RDF considerations</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Various</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../zenon-lumiere/" class="dropdown-item">Paradoxe de Zénon et dépassement de la vitesse de la lumière</a>
+</li>
+                                    
+<li>
+    <a href="../relativite/" class="dropdown-item">A propos de la relativité générale</a>
+</li>
+                                    
+<li>
+    <a href="../cartan/" class="dropdown-item">Einstein, Cartan et la géométrie différentielle</a>
+</li>
+                                    
+<li>
+    <a href="../resources/" class="dropdown-item">Resources</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../about/about/" class="dropdown-item">Author</a>
+</li>
+                                    
+<li>
+    <a href="../../about/LICENSE/" class="dropdown-item">License</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../graph-transfo/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../basic-graph-transformations/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#a-general-interoperability-model-using-graph-transformations" class="nav-link">A general interoperability model using graph transformations</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#introduction" class="nav-link">Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#exchanging-a-single-data-between-systems" class="nav-link">Exchanging a single data between systems</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#transferring-an-object" class="nav-link">Transferring an object</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="a-general-interoperability-model-using-graph-transformations">A general interoperability model using graph transformations</h1>
+<p><img alt="Image representing a natural spider web" src="../../images/web.jpg" /></p>
+<p>This article proposes a general model of interoperability between systems using the concept of <a href="../graph-transfo/">graph transformation</a>.</p>
+<p><em>Photo by <a href="https://freeimages.com/photographer/kliverap-40511">kliverap</a> from <a href="https://freeimages.com">FreeImages</a></em></p>
+<h2 id="introduction">Introduction</h2>
+<p>In the <a href="../data-interop/">real nature of data</a>, we discussed many important dimensions of data:</p>
+<ul>
+<li>Data can be considered as the <em>intersection</em> between the semantic domain and the point of view defined by the actor and the use case;</li>
+<li>Data are organized in a <em>relative</em> way, meaning that there are several ways to represent the same reality;</li>
+<li>Data is an <em>output product</em>, result of a process and business rules that were applied before, and considering it as a "entry product" may lead to anti-scientific approaches (see the <a href="../about-ml/">article on artificial neural networks</a>).</li>
+</ul>
+<p>The model of interoperability that we propose is grounded on the understanding that data is organized relatively to the use cases. In the general case, as shown in Figure 1 below, we can count 3 data models in every interoperability problem:</p>
+<ol>
+<li>The source data model, being located in the source system,</li>
+<li>The interchange data model, that is what is actually transferred between systems,</li>
+<li>The target data model, being located in the target system.</li>
+</ol>
+<p><img alt="Alt text" src="../../yed/interop.png" /></p>
+<p><em>Figure 1: Sample of three semantically equivalent data representation in an interoperability context (extract from our <a href="../graphql-web-services/">article on Graphql</a>)</em></p>
+<p>In this article, we will focus on the data models that are in the source and target systems only, because the objective of this study is to analyze what are the characteristics of graph transformations that enable to go from the source data model to the target data model.</p>
+<p>Those considerations have huge impacts on:</p>
+<ul>
+<li>The optimal architecture of distributed IT systems;</li>
+<li>The potential software architecture of big platforms.</li>
+</ul>
+<p>With the graph transformation based representation of the problem, we believe we propose an understandable general way of representing interoperability between systems.</p>
+<h2 id="exchanging-a-single-data-between-systems">Exchanging a single data between systems</h2>
+<p>We will first consider the very basic case of exchanging a single data between two systems, this case being the simplest case we can think of.</p>
+<p>A single piece of data, in the source system, will be characterized by:</p>
+<ul>
+<li>Its name,</li>
+<li>Its type (explicit or implicit),</li>
+<li>Its value.</li>
+</ul>
+<p>We already know that some information maybe not transported during interoperability, the data name for instance.</p>
+<p>When it goes from one system to another, we have several possibility, some of them being shown in Figure 2.</p>
+<p><img alt="Alt text" src="../../yed/graph-interop01.png" /></p>
+<p><em>Figure 2: Basic interoperability with one source data</em></p>
+<p>The source data can be represented differently in the target system:</p>
+<ul>
+<li>It can be preserved as it is in the source system, named identically, having the same type, and the same value (not shown in Figure 2);</li>
+<li>It can renamed, retyped, and its value can change;<ul>
+<li>That is frequent when just a part of data is used in the target system;<ul>
+<li>For instance, if the source data is <code>(Name1, Type1, Value1) = (address, string, "12 avenue des Champs-Elysées")</code>, we can have the target data being: <code>(Name2, Type2, Value2) = (address_nb, number, "12")</code> (<code>gt1</code>);</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The data can be split in parts, or mixed by other data in the target system to create new data (<code>gt2</code>).</li>
+</ul>
+<p>For sure, our objective is not to list all existing cases that are numerous, even in the context of this simple example.</p>
+<p>Conceptually, to go from one system to the next system, there will be a data transformation. Even if we currently don't see any graph, we will consider that the transformation is a graph transformation (this will be more understandable later).</p>
+<p><code>gt1</code> and <code>gt2</code> have business rules. <code>gt1</code> renames, extracts and retype data, while <code>gt2</code> will reorganize it, possibly mixing the source data with target system data. </p>
+<p>The important element here is that the graph transformation embeds business rules, even in this simple case, to adapt the data that is being transferred to the target system in which the system are not representing the same data the exact same way than in the source system.</p>
+<h2 id="transferring-an-object">Transferring an object</h2>
+<p>In Figure 3, we enter a more complex case, the one of transferred an object of type <code>ObjectType1</code> to a target system. We represented on the figure the conceptual graph transformation <code>gt</code> in charge of the transformation.</p>
+<p><img alt="Alt text" src="../../yed/graph-interop02.png" /></p>
+<p><em>Figure 3: Graph transformation of object in interoperability context</em></p>
+<p>Seen from high level, <code>gt</code> is transforming the source into the destination, the source being one object and the destination being a complex landscape of nodes and links (blue arrows).</p>
+<p>In dashed green,we represented the manipulation of the <code>ID1</code> instance by sub parts of <code>gt</code>, meaning <code>T1</code>, <code>T2</code> and <code>T3</code>.</p>
+<p>We can comment the Figure 3 through a table describing the various actions done by the various graph transformations involved in the process.</p>
+<table>
+<thead>
+<tr>
+<th>Graph transformation</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>T1</code></td>
+<td>Creates and instance of <code>ObjectType2</code> (<code>ID2</code>)and copies the fields of <code>ID1</code> into <code>ID2</code></td>
+</tr>
+<tr>
+<td><code>T2</code></td>
+<td>Creates and instance of <code>ObjectType3</code> (<code>ID3</code>) and creates new fields based on some fields of <code>ID1</code></td>
+</tr>
+<tr>
+<td><code>T3</code></td>
+<td>Creates and instance of <code>ObjectType4</code> (<code>ID4</code>) and creates new fields based on some fields of <code>ID1</code> and preexisting data (<code>ID5</code>)</td>
+</tr>
+<tr>
+<td><code>gt</code></td>
+<td>Coordinates the actions of the three graph transformations (<code>T1</code>, <code>T2</code> and <code>T3</code>) and creates the target data topology, i.e. the links (<code>ID6</code> and <code>ID7</code>) between the 3 new object instances in the target system</td>
+</tr>
+</tbody>
+</table>
+<p>Indeed the source object was modified to become a graph, with data coming from the source system, but not only.</p>
+<p>We distinguished in the diagram graph transformation that were only manipulating data  in instances and the master graph transformation <code>gt</code> that creates the topology. This split is the result of a concern to be able to reuse internal graph transformation components (here <code>T1</code>, <code>T2</code> and <code>T3</code>) and to limit the knowledge of the graph to the master graph transformation (more information can be found on the <a href="../graph-transfo/">section</a> on graph transformations).</p>
+<p>Even with this simple sample, we can see:</p>
+<ul>
+<li>How complex can be a simple object exchange between two systems;</li>
+<li>The various levels of business rules that we can find applied during the transformation.</li>
+</ul>
+<p><em>(Last update: August 2021)</em></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyleft Olivier Rey 2017-2025 - Site licensed under the GNU FDL V3</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

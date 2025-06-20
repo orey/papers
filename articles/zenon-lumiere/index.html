@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Olivier Rey">
+        <link rel="canonical" href="https://orey.github.io/papers/articles/zenon-lumiere/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Paradoxe de Zénon et dépassement de la vitesse de la lumière - Papers</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZMZKWJP2V"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', "G-BZMZKWJP2V");
+        </script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Papers</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">BlogAI</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../blog/2025/" class="dropdown-item">Year 2025</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">PLM</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../about-plm/" class="dropdown-item">PLM and graph data</a>
+</li>
+                                    
+<li>
+    <a href="../conf-mgt/" class="dropdown-item">Configuration management of industrial products in PDM/PLM</a>
+</li>
+                                    
+<li>
+    <a href="../spreadsheet-and-PLM/" class="dropdown-item">The four core functions showing you need a PLM</a>
+</li>
+                                    
+<li>
+    <a href="../data-mig/" class="dropdown-item">Semantic data migration in Industry</a>
+</li>
+                                    
+<li>
+    <a href="../industry-data/" class="dropdown-item">Reflections on industry data</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">IT, Modeling & Data</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../legends-of-it/" class="dropdown-item">Legends of IT</a>
+</li>
+                                    
+<li>
+    <a href="../data-interop/" class="dropdown-item">The real nature of data</a>
+</li>
+                                    
+<li>
+    <a href="../mbse-vs-ea/" class="dropdown-item">Military frameworks, systems engineering and enterprise architecture</a>
+</li>
+                                    
+<li>
+    <a href="../portfolio/" class="dropdown-item">A Simple Meta-Model for Portfolio Management</a>
+</li>
+                                    
+<li>
+    <a href="../archimate-intro/" class="dropdown-item">An Introduction to The Archimate Revolution</a>
+</li>
+                                    
+<li>
+    <a href="../archimate-recipes/" class="dropdown-item">Archimate Recipes</a>
+</li>
+                                    
+<li>
+    <a href="../about-rest/" class="dropdown-item">Considerations About Rest And Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../graphql-web-services/" class="dropdown-item">GraphQL And Classic Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../five-levels/" class="dropdown-item">The Five Levels of Conceptual Maturity for IT Teams</a>
+</li>
+                                    
+<li>
+    <a href="../the-v2-vortex/" class="dropdown-item">The V2 Vortex</a>
+</li>
+                                    
+<li>
+    <a href="../various-stages/" class="dropdown-item">The Various Stages of Digital Transformation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Graph-Oriented Programming</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../first-article/" class="dropdown-item">Graph-oriented programming</a>
+</li>
+                                    
+<li>
+    <a href="../staf-icgt2018/" class="dropdown-item">Conference at the STAF/ICGT 2018 in Toulouse</a>
+</li>
+                                    
+<li>
+    <a href="../graphapps/" class="dropdown-item">GraphApps project page</a>
+</li>
+                                    
+<li>
+    <a href="../graph-oriented-pl/" class="dropdown-item">Towards a graph-oriented programming language?</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Graph transformations</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../index-research/" class="dropdown-item">Index</a>
+</li>
+                                    
+<li>
+    <a href="../graph-transfo/" class="dropdown-item">Graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../graph-interop/" class="dropdown-item">A general interoperability model using graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../basic-graph-transformations/" class="dropdown-item">Basic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../basic-semantic-graph-transformations/" class="dropdown-item">Basic semantic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../DSL-for-graph-topology-checks/" class="dropdown-item">DSL for graph topology check</a>
+</li>
+                                    
+<li>
+    <a href="../graph-transformation-applicability/" class="dropdown-item">Graph transformation applicability</a>
+</li>
+                                    
+<li>
+    <a href="../grammar-graph-transformation/" class="dropdown-item">Grammar of graph transformation</a>
+</li>
+                                    
+<li>
+    <a href="../rdf-design-patterns/" class="dropdown-item">UML to RDF considerations</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Various</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Paradoxe de Zénon et dépassement de la vitesse de la lumière</a>
+</li>
+                                    
+<li>
+    <a href="../relativite/" class="dropdown-item">A propos de la relativité générale</a>
+</li>
+                                    
+<li>
+    <a href="../cartan/" class="dropdown-item">Einstein, Cartan et la géométrie différentielle</a>
+</li>
+                                    
+<li>
+    <a href="../resources/" class="dropdown-item">Resources</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../about/about/" class="dropdown-item">Author</a>
+</li>
+                                    
+<li>
+    <a href="../../about/LICENSE/" class="dropdown-item">License</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../rdf-design-patterns/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../relativite/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#paradoxe-de-zenon-et-depassement-de-la-vitesse-de-la-lumiere" class="nav-link">Paradoxe de Zénon et dépassement de la vitesse de la lumière</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#le-paradoxe-de-zenon" class="nav-link">Le paradoxe de Zénon</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#depassement-de-la-vitesse-de-la-lumiere" class="nav-link">Dépassement de la vitesse de la lumière</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#voyager-dans-le-futur-ou-remonter-le-temps" class="nav-link">Voyager dans le futur ou remonter le temps ?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#quest-ce-que-le-temps" class="nav-link">Qu'est-ce que le temps ?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="paradoxe-de-zenon-et-depassement-de-la-vitesse-de-la-lumiere">Paradoxe de Zénon et dépassement de la vitesse de la lumière</h1>
+<p>Certains faux problèmes semblent habiter le monde de la physique depuis longtemps. Le problème du dépassement de la vitesse de la lumière pour remonter le temps est du même genre : un faux problème.</p>
+<h2 id="le-paradoxe-de-zenon">Le paradoxe de Zénon</h2>
+<p><img alt="Zeno_Achilles_Paradox.png" src="../../images/Zeno_Achilles_Paradox.png" /></p>
+<p><em>Figure 1 : Paradoxe d'Achille et de la Tortue (image de <a href="http://www.martingrandjean.ch/bergson-paradoxes-zenon-achille-tortue/">Martin Grangjean</a>)</em></p>
+<p>Le paradoxe d'Achille et de la tortue en est un très connu : en prenant pour base le chemin parcouru par la tortue à l'itération <code>n-1</code>, et en calculant à l'itération <code>n</code>, le chemin parcouru  par Achille, la tortue aura avancé à l'itération <code>n</code> et donc Achille ne pourra jamais la rattraper (en tous cas avec cette méthode de calcul).</p>
+<h2 id="depassement-de-la-vitesse-de-la-lumiere">Dépassement de la vitesse de la lumière</h2>
+<p>Pour moi, ce sujet fait partie des vices de logique les plus simples et j'avoue que je suis toujours surpris par les raisonnements ayant trait à ce sujet. Certains racontent qu'Einstein se serait posé la question de savoir ce que l'on voyait si l'on remontait un flux lumineux plus rapidement que la vitesse de la lumière. D'aucuns prétendent que cette procédure permettrait de remonter le temps. Nous allons répondre à ces deux questions avec des arguments de bon sens.</p>
+<p>Prenons dans notre modélisation, deux points <code>I</code> et <code>S</code>, pour "Initial" et "Source". La source de lumière émet de la lumière vers la gauche et nous allons nous intéresser à ce que voit un observateur <code>O</code> allant vers la source <code>S</code> depuis <code>I</code> en allant <em>deux fois plus vite</em> que la vitesse de la lumière.</p>
+<p>La lumière est composée de photons, il est donc naturel de considérer qu'à l'instar d'un distributeur de balles de tennis, la source <code>S</code> envoie un flux de photons continus. cela donne la figure 2.</p>
+<p><img alt="remonter-temps-01.png" src="../../images/remonter-temps-01.png" /></p>
+<p><em>Figure 2 : Dispositif</em></p>
+<p>Les photons sont les petites balles jaunes (et verte) et la flèche montre leur sens de progression.</p>
+<p>Nous allons prendre pour principe que la figure 2 est une photo à TO.</p>
+<p><img alt="remonter-temps-02.png" src="../../images/remonter-temps-02.png" /></p>
+<p><em>Figure 3 : Avancée du photon vert</em></p>
+<p>La figure 3 montre l'avancée du photon vert d'un "cran" vers la gauche. L'observateur a, lui, avancé de deux crans vers la droite. L'avancée d'un cran sera notre mesure du temps : &Delta;T. La figure 3 est donc une photo prise à T0 + &Delta;T.</p>
+<p>La figure 4 ne présente aucune surprise.</p>
+<p><img alt="remonter-temps-03.png" src="../../images/remonter-temps-03.png" /></p>
+<p><em>Figure 4 : Progression parallèle</em></p>
+<p>En effet, l'observateur allant deux fois plus vite que le photon vert, il arrive au milieu du chemin entre <code>I</code> et <code>S</code> alors que le photon vert n'a parcouru qu'un quart du chemin. La photo est prise à T0+2&Delta;T.</p>
+<p><img alt="remonter-temps-04.png" src="../../images/remonter-temps-04.png" /></p>
+<p><em>Figure 5 : Arrivée à destination</em></p>
+<p>La figure 5 montre l'arrivée à destination de l'observateur, de manière concomitante avec l'arrivée du photon vert au point d'origine. Le moment auquel la photo est prise est donc T0+4&Delta;T.</p>
+<p>Cette modélisation est simple et nous pourrions, en lieu et place d'avoir des photons et un observateur, avoir des voitures qui se croisent sur une route. Cela donnerait le même résultat.</p>
+<p>Le fait est que l'hypothèse sous-jacente à cette petite explication est que le temps est uniforme et qu'il se déroule de la même façon n'importe où dans l'univers. En effet, le temps s'écoule aussi vite en <code>S</code> qu'en <code>I</code>. Dès lors, l'observateur <code>O</code> verra l'histoire de <code>S</code> <em>en accéléré</em> jusqu'à arriver au présent de <code>S</code> qui est le même présent que celui de <code>I</code> au même instant.</p>
+<h2 id="voyager-dans-le-futur-ou-remonter-le-temps">Voyager dans le futur ou remonter le temps ?</h2>
+<p>Écartons de suite la possibilité de remonter le temps sur <code>S</code> avant T0. En effet, il semble raisonnable de postuler qu'à T0, l'univers est dans un certain état, que ce soit en <code>I</code> ou en <code>S</code>. Si <code>O</code> part de <code>I</code> à T0, il ne peut pas arriver en <code>S</code> avant T0 ; cela semble évident.</p>
+<p>Cette hypothèse signifie que si nous placions une horloge atomiques en <code>I</code> et en <code>S</code>, que ces endroits ne sont soumis à aucune distorsion grave (de gravitation, de vitesse, électromagnétique ou autre), nous aurons la fonction <code>t</code> du temps en <code>I</code> et en <code>S</code> qui sera la même.</p>
+<p>L'expérience prouve que le temps s'écoule plus lentement dans le référentiel de celui qui va vite en comparaison du temps qui s'écoule chez celui qui ne bouge pas (à supposer que cela existe dans l'univers). La théorie d'Einstein de la relativité restreinte puis générale modélise ces variations, dont une des plus célèbres fictions dérivées est la <em>Planète des Singes</em>. Des astronautes voyagent à la vitesse de la lumière et reviennent dans une terre du futur alors que eux n'ont vécu que quelques années.</p>
+<p>Ce phénomène est décrit par l'expérience des deux horloges atomiques : la première horloge reste dans un référentiel fixe (la terre) et la seconde voyage dans l'espace.</p>
+<p><img alt="horloge" src="../../images/horloge.png" /></p>
+<p><em>Figure 6 : La seconde horloge perd une seconde par rapport à la première</em></p>
+<p>Dans le cas de la figure 6, l'horloge se "recale" avec la fonction de temps partagée entre <code>I</code> et <code>S</code>. L'observateur est donc plus jeune de 1 seconde par rapport aux habitants de <code>I</code> et <code>S</code>.</p>
+<p>Prenons le cas général où <code>O</code> a voyagé non pas en 4&Delta;T mais en 4&Delta;T-&epsilon;. Sa vitesse lui a fait perdre &epsilon;.</p>
+<p>Nous pourrions argumenter que le temps en <code>S</code> est donc T0+4&Delta;T-&epsilon; (il est perçu comme cela par <code>O</code>) et donc effectivement, <code>O</code> aurait, en quelque sorte, remonté le temps dans la mesure où il serait arrivé plus vite que la durée de son voyage vu de <code>I</code>. Mais cela serait contraire à l'hypothèse que <code>S</code> a un écoulement du temps identique de celui de <code>I</code>.</p>
+<p>Le scénario de la <em>Planète des Singes</em> est donc plus crédible, en un sens : seul le référentiel de temps touché par la distorsion vit les choses différemment, mais ce dernier se recale lorsque la distorsion se termine.</p>
+<h2 id="quest-ce-que-le-temps">Qu'est-ce que le temps ?</h2>
+<p>Nous en revenons à la question de la définition du temps. Il est indéniable que l'univers existe maintenant dans un état différent de son état d'il y a un milliard d'années. Il semble indéniable que l'univers existe dans le présent, et cela indépendemment de l'observateur. Par contre, si l'observateur est soumis à des conditions gravito-électromagnétiques spéciales, il est possible que ce dernier ne "perçoive" pas vraiment les choses comme les autres observateurs.</p>
+<p>Comme tout bouge dans l'univers, aucun observateur n'est vraiment dans des conditions idéales de "point fixe" ou "point neutre" en termes d'influences gravito-électromagnétiques. Chacun aura donc de légères variations dans sa perception du temps. Pour autant, la réalité se "recalant" sur le présent, sommes nous certains que nous mesurons bien ce temps ?</p>
+<p>En effet, tous les dispositifs expérimentaux très élaborés inventés par les humains pour mesure le temps (horloge atomique, horloge optique, etc.) se basent sur des phénomènes gravito-électromagnétiques dont la maîtrise complète est faible, il faut le reconnaître. Nos théories actuelles permettent d'expliquer des choses mais tant de choses restent pour nous des énigmes.</p>
+<p>Par exemple, la théorie de la relativité générale semble omettre la partie électromagnétique (voir l'article sur <a href="../cartan/">Cartan</a>) qui est juste la moitié du "problème". Serait-il possible qu'en réincluant cette partie, nous puissions progresser dans notre compréhension de l'univers et du temps ?</p>
+<p><em>02 avril 2023</em></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyleft Olivier Rey 2017-2025 - Site licensed under the GNU FDL V3</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

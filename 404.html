@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,21 +10,22 @@
         <link rel="shortcut icon" href="/papers/img/favicon.ico">
         <title>Papers</title>
         <link href="/papers/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/papers/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/papers/css/fontawesome.min.css" rel="stylesheet">
+        <link href="/papers/css/brands.min.css" rel="stylesheet">
+        <link href="/papers/css/solid.min.css" rel="stylesheet">
+        <link href="/papers/css/v4-font-face.min.css" rel="stylesheet">
         <link href="/papers/css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
-
-        <script src="/papers/js/jquery-1.10.2.min.js" defer></script>
-        <script src="/papers/js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZMZKWJP2V"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-BZMZKWJP2V');
+          gtag('config', "G-BZMZKWJP2V");
         </script> 
     </head>
 
@@ -33,7 +34,7 @@
             <div class="container">
                 <a class="navbar-brand" href="/papers/.">Papers</a>
                 <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -41,25 +42,17 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">BlogAI</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="/papers/." class="dropdown-item">Index</a>
-</li>
-                                    
-<li>
-    <a href="/papers/about/about/" class="dropdown-item">Author</a>
-</li>
-                                    
-<li>
-    <a href="/papers/about/LICENSE/" class="dropdown-item">License</a>
+    <a href="/papers/blog/2025/" class="dropdown-item">Year 2025</a>
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">PLM <b class="caret"></b></a>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">PLM</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -73,11 +66,31 @@
 <li>
     <a href="/papers/articles/spreadsheet-and-PLM/" class="dropdown-item">The four core functions showing you need a PLM</a>
 </li>
+                                    
+<li>
+    <a href="/papers/articles/data-mig/" class="dropdown-item">Semantic data migration in Industry</a>
+</li>
+                                    
+<li>
+    <a href="/papers/articles/industry-data/" class="dropdown-item">Reflections on industry data</a>
+</li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Modeling <b class="caret"></b></a>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">IT, Modeling & Data</a>
                                 <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="/papers/articles/legends-of-it/" class="dropdown-item">Legends of IT</a>
+</li>
+                                    
+<li>
+    <a href="/papers/articles/data-interop/" class="dropdown-item">The real nature of data</a>
+</li>
+                                    
+<li>
+    <a href="/papers/articles/mbse-vs-ea/" class="dropdown-item">Military frameworks, systems engineering and enterprise architecture</a>
+</li>
                                     
 <li>
     <a href="/papers/articles/portfolio/" class="dropdown-item">A Simple Meta-Model for Portfolio Management</a>
@@ -92,37 +105,11 @@
 </li>
                                     
 <li>
-    <a href="/papers/articles/mbse-vs-ea/" class="dropdown-item">Military frameworks, systems engineering and enterprise architecture</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Data <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="/papers/research/about-ml/" class="dropdown-item">About artificial neural networks and machine learning</a>
-</li>
-                                    
-<li>
     <a href="/papers/articles/about-rest/" class="dropdown-item">Considerations About Rest And Web Services</a>
 </li>
                                     
 <li>
     <a href="/papers/articles/graphql-web-services/" class="dropdown-item">GraphQL And Classic Web Services</a>
-</li>
-                                    
-<li>
-    <a href="/papers/articles/data-interop/" class="dropdown-item">The real nature of data</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">IT <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="/papers/articles/legends-of-it/" class="dropdown-item">Legends of IT</a>
 </li>
                                     
 <li>
@@ -138,124 +125,107 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Research <b class="caret"></b></a>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Graph-Oriented Programming</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="/papers/research/index-research/" class="dropdown-item">Index</a>
+    <a href="/papers/articles/first-article/" class="dropdown-item">Graph-oriented programming</a>
 </li>
                                     
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Graph-oriented programming</a>
-    <ul class="dropdown-menu">
-            
 <li>
-    <a href="/papers/graph/first-article/" class="dropdown-item">First article on graph-oriented programming</a>
+    <a href="/papers/articles/staf-icgt2018/" class="dropdown-item">Conference at the STAF/ICGT 2018 in Toulouse</a>
 </li>
-            
-<li>
-    <a href="/papers/graph/staf-icgt2018/" class="dropdown-item">Conference at the STAF/ICGT 2018 in Toulouse</a>
-</li>
-            
-<li>
-    <a href="/papers/research/graphapps/" class="dropdown-item">GraphApps project page</a>
-</li>
-            
-<li>
-    <a href="/papers/research/graph-oriented-pl/" class="dropdown-item">Towards a graph-oriented programming language?</a>
-</li>
-    </ul>
-  </li>
                                     
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Semantic Web</a>
-    <ul class="dropdown-menu">
-            
 <li>
-    <a href="/papers/research/data-mig/" class="dropdown-item">Aerospace data migration</a>
+    <a href="/papers/articles/graphapps/" class="dropdown-item">GraphApps project page</a>
 </li>
-            
-<li>
-    <a href="/papers/research/data-mig/" class="dropdown-item">Semantic data migration project page</a>
-</li>
-    </ul>
-  </li>
                                     
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Graph transformations</a>
-    <ul class="dropdown-menu">
-            
 <li>
-    <a href="/papers/research/graph-transfo/" class="dropdown-item">Graph transformations</a>
+    <a href="/papers/articles/graph-oriented-pl/" class="dropdown-item">Towards a graph-oriented programming language?</a>
 </li>
-            
-<li>
-    <a href="/papers/research/graph-interop/" class="dropdown-item">A general interoperability model using graph transformations</a>
-</li>
-            
-<li>
-    <a href="/papers/research/basic-graph-transformations/" class="dropdown-item">Basic graph transformations</a>
-</li>
-            
-<li>
-    <a href="/papers/research/basic-semantic-graph-transformations/" class="dropdown-item">Basic semantic graph transformations</a>
-</li>
-            
-<li>
-    <a href="/papers/research/DSL-for-graph-topology-checks/" class="dropdown-item">DSL for graph topology check</a>
-</li>
-            
-<li>
-    <a href="/papers/research/graph-transformation-applicability/" class="dropdown-item">Graph transformation applicability</a>
-</li>
-            
-<li>
-    <a href="/papers/research/grammar-graph-transformation/" class="dropdown-item">Grammar of graph transformation</a>
-</li>
-            
-<li>
-    <a href="/papers/research/graph-oriented-pl/" class="dropdown-item">Graph-oriented programming language</a>
-</li>
-    </ul>
-  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Graph transformations</a>
+                                <ul class="dropdown-menu">
                                     
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Various</a>
-    <ul class="dropdown-menu">
-            
 <li>
-    <a href="/papers/research/zenon-lumiere/" class="dropdown-item">Paradoxe de Zénon et dépassement de la vitesse de la lumière</a>
+    <a href="/papers/articles/index-research/" class="dropdown-item">Index</a>
 </li>
-            
+                                    
 <li>
-    <a href="/papers/research/relativite/" class="dropdown-item">A propos de la relativité générale</a>
+    <a href="/papers/articles/graph-transfo/" class="dropdown-item">Graph transformations</a>
 </li>
-            
+                                    
 <li>
-    <a href="/papers/research/cartan/" class="dropdown-item">Einstein, Cartan et la géométrie différentielle</a>
+    <a href="/papers/articles/graph-interop/" class="dropdown-item">A general interoperability model using graph transformations</a>
 </li>
-            
+                                    
 <li>
-    <a href="/papers/research/industry-data/" class="dropdown-item">Reflections on industry data</a>
+    <a href="/papers/articles/basic-graph-transformations/" class="dropdown-item">Basic graph transformations</a>
 </li>
-            
+                                    
 <li>
-    <a href="/papers/research/rdf-design-patterns/" class="dropdown-item">UML to RDF considerations</a>
+    <a href="/papers/articles/basic-semantic-graph-transformations/" class="dropdown-item">Basic semantic graph transformations</a>
 </li>
-            
+                                    
 <li>
-    <a href="/papers/research/resources/" class="dropdown-item">Resources</a>
+    <a href="/papers/articles/DSL-for-graph-topology-checks/" class="dropdown-item">DSL for graph topology check</a>
 </li>
-    </ul>
-  </li>
+                                    
+<li>
+    <a href="/papers/articles/graph-transformation-applicability/" class="dropdown-item">Graph transformation applicability</a>
+</li>
+                                    
+<li>
+    <a href="/papers/articles/grammar-graph-transformation/" class="dropdown-item">Grammar of graph transformation</a>
+</li>
+                                    
+<li>
+    <a href="/papers/articles/rdf-design-patterns/" class="dropdown-item">UML to RDF considerations</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Various</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="/papers/articles/zenon-lumiere/" class="dropdown-item">Paradoxe de Zénon et dépassement de la vitesse de la lumière</a>
+</li>
+                                    
+<li>
+    <a href="/papers/articles/relativite/" class="dropdown-item">A propos de la relativité générale</a>
+</li>
+                                    
+<li>
+    <a href="/papers/articles/cartan/" class="dropdown-item">Einstein, Cartan et la géométrie différentielle</a>
+</li>
+                                    
+<li>
+    <a href="/papers/articles/resources/" class="dropdown-item">Resources</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="/papers/about/about/" class="dropdown-item">Author</a>
+</li>
+                                    
+<li>
+    <a href="/papers/about/LICENSE/" class="dropdown-item">License</a>
+</li>
                                 </ul>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav ml-auto">
+                    <ul class="nav navbar-nav ms-md-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
@@ -280,22 +250,23 @@
 
         <footer class="col-md-12">
             <hr>
-                <p>Copyleft Olivier Rey 2017-2024 - Site licensed under the GNU FDL V3</p>
+                <p>Copyleft Olivier Rey 2017-2025 - Site licensed under the GNU FDL V3</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
+        <script src="/papers/js/bootstrap.bundle.min.js"></script>
         <script>
             var base_url = "/papers/",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="/papers/js/base.js" defer></script>
-        <script src="/papers/search/main.js" defer></script>
+        <script src="/papers/js/base.js"></script>
+        <script src="/papers/search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <p>From here you can search these documents. Enter your search terms below.</p>
@@ -315,7 +286,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <table class="table">

@@ -1,39 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+        <meta name="description" content="Olivier Rey's Papers">
         <meta name="author" content="Olivier Rey">
         <link rel="canonical" href="https://orey.github.io/papers/">
         <link rel="shortcut icon" href="img/favicon.ico">
-        <title>Index - Papers</title>
+        <title>Papers</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
         <link href="css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
-
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZMZKWJP2V"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-BZMZKWJP2V');
+          gtag('config', "G-BZMZKWJP2V");
         </script> 
     </head>
 
-    <body>
+    <body class="homepage">
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
                 <a class="navbar-brand" href=".">Papers</a>
                 <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -41,25 +42,17 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">BlogAI</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="." class="dropdown-item active">Index</a>
-</li>
-                                    
-<li>
-    <a href="about/about/" class="dropdown-item">Author</a>
-</li>
-                                    
-<li>
-    <a href="about/LICENSE/" class="dropdown-item">License</a>
+    <a href="blog/2025/" class="dropdown-item">Year 2025</a>
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">PLM <b class="caret"></b></a>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">PLM</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -73,11 +66,31 @@
 <li>
     <a href="articles/spreadsheet-and-PLM/" class="dropdown-item">The four core functions showing you need a PLM</a>
 </li>
+                                    
+<li>
+    <a href="articles/data-mig/" class="dropdown-item">Semantic data migration in Industry</a>
+</li>
+                                    
+<li>
+    <a href="articles/industry-data/" class="dropdown-item">Reflections on industry data</a>
+</li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Modeling <b class="caret"></b></a>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">IT, Modeling & Data</a>
                                 <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="articles/legends-of-it/" class="dropdown-item">Legends of IT</a>
+</li>
+                                    
+<li>
+    <a href="articles/data-interop/" class="dropdown-item">The real nature of data</a>
+</li>
+                                    
+<li>
+    <a href="articles/mbse-vs-ea/" class="dropdown-item">Military frameworks, systems engineering and enterprise architecture</a>
+</li>
                                     
 <li>
     <a href="articles/portfolio/" class="dropdown-item">A Simple Meta-Model for Portfolio Management</a>
@@ -92,37 +105,11 @@
 </li>
                                     
 <li>
-    <a href="articles/mbse-vs-ea/" class="dropdown-item">Military frameworks, systems engineering and enterprise architecture</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Data <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="research/about-ml/" class="dropdown-item">About artificial neural networks and machine learning</a>
-</li>
-                                    
-<li>
     <a href="articles/about-rest/" class="dropdown-item">Considerations About Rest And Web Services</a>
 </li>
                                     
 <li>
     <a href="articles/graphql-web-services/" class="dropdown-item">GraphQL And Classic Web Services</a>
-</li>
-                                    
-<li>
-    <a href="articles/data-interop/" class="dropdown-item">The real nature of data</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">IT <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="articles/legends-of-it/" class="dropdown-item">Legends of IT</a>
 </li>
                                     
 <li>
@@ -138,137 +125,110 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Research <b class="caret"></b></a>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Graph-Oriented Programming</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="research/index-research/" class="dropdown-item">Index</a>
+    <a href="articles/first-article/" class="dropdown-item">Graph-oriented programming</a>
 </li>
                                     
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Graph-oriented programming</a>
-    <ul class="dropdown-menu">
-            
 <li>
-    <a href="graph/first-article/" class="dropdown-item">First article on graph-oriented programming</a>
+    <a href="articles/staf-icgt2018/" class="dropdown-item">Conference at the STAF/ICGT 2018 in Toulouse</a>
 </li>
-            
-<li>
-    <a href="graph/staf-icgt2018/" class="dropdown-item">Conference at the STAF/ICGT 2018 in Toulouse</a>
-</li>
-            
-<li>
-    <a href="research/graphapps/" class="dropdown-item">GraphApps project page</a>
-</li>
-            
-<li>
-    <a href="research/graph-oriented-pl/" class="dropdown-item">Towards a graph-oriented programming language?</a>
-</li>
-    </ul>
-  </li>
                                     
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Semantic Web</a>
-    <ul class="dropdown-menu">
-            
 <li>
-    <a href="research/data-mig/" class="dropdown-item">Aerospace data migration</a>
+    <a href="articles/graphapps/" class="dropdown-item">GraphApps project page</a>
 </li>
-            
-<li>
-    <a href="research/data-mig/" class="dropdown-item">Semantic data migration project page</a>
-</li>
-    </ul>
-  </li>
                                     
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Graph transformations</a>
-    <ul class="dropdown-menu">
-            
 <li>
-    <a href="research/graph-transfo/" class="dropdown-item">Graph transformations</a>
+    <a href="articles/graph-oriented-pl/" class="dropdown-item">Towards a graph-oriented programming language?</a>
 </li>
-            
-<li>
-    <a href="research/graph-interop/" class="dropdown-item">A general interoperability model using graph transformations</a>
-</li>
-            
-<li>
-    <a href="research/basic-graph-transformations/" class="dropdown-item">Basic graph transformations</a>
-</li>
-            
-<li>
-    <a href="research/basic-semantic-graph-transformations/" class="dropdown-item">Basic semantic graph transformations</a>
-</li>
-            
-<li>
-    <a href="research/DSL-for-graph-topology-checks/" class="dropdown-item">DSL for graph topology check</a>
-</li>
-            
-<li>
-    <a href="research/graph-transformation-applicability/" class="dropdown-item">Graph transformation applicability</a>
-</li>
-            
-<li>
-    <a href="research/grammar-graph-transformation/" class="dropdown-item">Grammar of graph transformation</a>
-</li>
-            
-<li>
-    <a href="research/graph-oriented-pl/" class="dropdown-item">Graph-oriented programming language</a>
-</li>
-    </ul>
-  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Graph transformations</a>
+                                <ul class="dropdown-menu">
                                     
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Various</a>
-    <ul class="dropdown-menu">
-            
 <li>
-    <a href="research/zenon-lumiere/" class="dropdown-item">Paradoxe de Zénon et dépassement de la vitesse de la lumière</a>
+    <a href="articles/index-research/" class="dropdown-item">Index</a>
 </li>
-            
+                                    
 <li>
-    <a href="research/relativite/" class="dropdown-item">A propos de la relativité générale</a>
+    <a href="articles/graph-transfo/" class="dropdown-item">Graph transformations</a>
 </li>
-            
+                                    
 <li>
-    <a href="research/cartan/" class="dropdown-item">Einstein, Cartan et la géométrie différentielle</a>
+    <a href="articles/graph-interop/" class="dropdown-item">A general interoperability model using graph transformations</a>
 </li>
-            
+                                    
 <li>
-    <a href="research/industry-data/" class="dropdown-item">Reflections on industry data</a>
+    <a href="articles/basic-graph-transformations/" class="dropdown-item">Basic graph transformations</a>
 </li>
-            
+                                    
 <li>
-    <a href="research/rdf-design-patterns/" class="dropdown-item">UML to RDF considerations</a>
+    <a href="articles/basic-semantic-graph-transformations/" class="dropdown-item">Basic semantic graph transformations</a>
 </li>
-            
+                                    
 <li>
-    <a href="research/resources/" class="dropdown-item">Resources</a>
+    <a href="articles/DSL-for-graph-topology-checks/" class="dropdown-item">DSL for graph topology check</a>
 </li>
-    </ul>
-  </li>
+                                    
+<li>
+    <a href="articles/graph-transformation-applicability/" class="dropdown-item">Graph transformation applicability</a>
+</li>
+                                    
+<li>
+    <a href="articles/grammar-graph-transformation/" class="dropdown-item">Grammar of graph transformation</a>
+</li>
+                                    
+<li>
+    <a href="articles/rdf-design-patterns/" class="dropdown-item">UML to RDF considerations</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Various</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="articles/zenon-lumiere/" class="dropdown-item">Paradoxe de Zénon et dépassement de la vitesse de la lumière</a>
+</li>
+                                    
+<li>
+    <a href="articles/relativite/" class="dropdown-item">A propos de la relativité générale</a>
+</li>
+                                    
+<li>
+    <a href="articles/cartan/" class="dropdown-item">Einstein, Cartan et la géométrie différentielle</a>
+</li>
+                                    
+<li>
+    <a href="articles/resources/" class="dropdown-item">Resources</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="about/about/" class="dropdown-item">Author</a>
+</li>
+                                    
+<li>
+    <a href="about/LICENSE/" class="dropdown-item">License</a>
+</li>
                                 </ul>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav ml-auto">
+                    <ul class="nav navbar-nav ms-md-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li class="nav-item">
-                                <a rel="prev" class="nav-link disabled">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="about/about/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                     </ul>
                 </div>
             </div>
@@ -276,40 +236,40 @@
 
         <div class="container">
             <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
             <span class="fa fa-angle-down"></span>
         </button>
     </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#olivier-reys-papers" class="nav-link">Olivier Rey's Papers</a>
+            <li class="nav-item" data-bs-level="1"><a href="#olivier-reys-papers" class="nav-link">Olivier Rey's Papers</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#papers-on-plm" class="nav-link">Papers on PLM</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#papers-on-modeling" class="nav-link">Papers on modeling</a>
+            <li class="nav-item" data-bs-level="2"><a href="#blogai" class="nav-link">BlogAI</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#papers-on-data-and-interoperability" class="nav-link">Papers on data and interoperability</a>
+            <li class="nav-item" data-bs-level="2"><a href="#plm" class="nav-link">PLM</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#papers-on-it" class="nav-link">Papers on IT</a>
+            <li class="nav-item" data-bs-level="2"><a href="#it-modeling-data" class="nav-link">IT, Modeling &amp; Data</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#graph-oriented-programming" class="nav-link">Graph-oriented programming</a>
+            <li class="nav-item" data-bs-level="2"><a href="#graph-oriented-programming" class="nav-link">Graph-oriented programming</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#research-section-graph-transformations-and-semantic-data-migration" class="nav-link">Research section: Graph transformations and semantic data migration</a>
+            <li class="nav-item" data-bs-level="2"><a href="#graph-transformations" class="nav-link">Graph Transformations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#various" class="nav-link">Various</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -321,90 +281,85 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="olivier-reys-papers">Olivier Rey's Papers</h1>
-<h2 id="papers-on-plm">Papers on PLM</h2>
+<h2 id="blogai">BlogAI</h2>
+<p>In 2025, I started a blog on AI. Yes, we have a topic here.</p>
 <ul>
-<li><a href="articles/spreadsheet-and-PLM/">The four core functions showing you need a PLM</a></li>
-<li><a href="articles/conf-mgt/">Configuration management of industrial products in PDM/PLM</a></li>
+<li><a href="blog/2025/">Year 2025</a></li>
+</ul>
+<h2 id="plm">PLM</h2>
+<ul>
 <li><a href="articles/about-plm/">PLM and graph data</a></li>
+<li><a href="articles/conf-mgt/">Configuration management of industrial products in PDM/PLM</a></li>
+<li><a href="articles/spreadsheet-and-PLM/">The four core functions showing you need a PLM</a></li>
+<li><a href="articles/data-mig/">Semantic data migration in Industry</a></li>
+<li><a href="articles/industry-data/">Reflections on industry data</a></li>
 </ul>
-<h2 id="papers-on-modeling">Papers on modeling</h2>
+<h2 id="it-modeling-data">IT, Modeling &amp; Data</h2>
 <ul>
-<li><a href="articles/mbse-vs-ea/">Military Frameworks, Systems Engineering and Enterprise Architecture</a></li>
-<li><a href="articles/archimate-recipes/">Archimate Recipes</a></li>
-<li><a href="articles/archimate-intro/">An Introduction to The Archimate Revolution</a></li>
-<li><a href="articles/portfolio/">A Simple Meta-Model for Portfolio Management</a></li>
-</ul>
-<h2 id="papers-on-data-and-interoperability">Papers on data and interoperability</h2>
-<ul>
-<li><a href="research/about-ml/">About artificial neural networks and machine learning</a></li>
+<li><a href="articles/legends-of-it/">Legends of IT</a></li>
 <li><a href="articles/data-interop/">The real nature of data</a></li>
-<li><a href="articles/graphql-web-services/">GraphQL And Classic Web Services</a></li>
-<li><a href="articles/about-rest/">Considerations about Rest and Web Services</a></li>
+<li><a href="articles/mbse-vs-ea/">Military Frameworks, Systems Engineering and Enterprise Architecture</a></li>
+<li><a href="articles/portfolio/">A Simple Meta-Model for Portfolio Management</a></li>
+<li><a href="articles/archimate-intro/">An Introduction to The Archimate Revolution</a></li>
+<li><a href="articles/archimate-recipes/">Archimate Recipes</a></li>
 </ul>
-<h2 id="papers-on-it">Papers on IT</h2>
+<!-- * [About artificial neural networks and machine learning](articles/about-ml.md) -->
 <ul>
-<li><strong>NEW</strong> - <a href="articles/legends-of-it/">Legends of IT</a></li>
-<li><a href="articles/various-stages/">The Various Stages of Digital Transformation</a></li>
-<li><a href="articles/the-v2-vortex/">The V2 Vortex</a></li>
+<li><a href="articles/about-rest/">Considerations about Rest and Web Services</a></li>
+<li><a href="articles/graphql-web-services/">GraphQL And Classic Web Services</a></li>
 <li><a href="articles/five-levels/">The Five Levels of Conceptual Maturity for IT Teams</a></li>
+<li><a href="articles/the-v2-vortex/">The V2 Vortex</a></li>
+<li><a href="articles/various-stages/">The Various Stages of Digital Transformation</a></li>
 </ul>
 <h2 id="graph-oriented-programming">Graph-oriented programming</h2>
-<p>This section contains materials about graph-oriented programming, solving the technical debt issue and using graph transformations in software engineering.</p>
 <ul>
-<li><a href="graph/first-article/">First article on graph-oriented programming</a></li>
-<li><a href="graph/staf-icgt2018/">Conference at the STAF/ICGT 2018 in Toulouse</a></li>
+<li><a href="articles/first-article/">Graph-Oriented Programming</a></li>
+<li><a href="articles/staf-icgt2018/">Conference at the STAF/ICGT 2018 in Toulouse</a></li>
+<li><a href="articles/graphapps/">GraphApps project page</a></li>
+<li><a href="articles/graph-oriented-pl/">Towards a graph-oriented programming language?</a></li>
 </ul>
-<p>Project page: <a href="research/graphapps/">GraphApps project</a> project (2013-2018)</p>
-<h2 id="research-section-graph-transformations-and-semantic-data-migration">Research section: Graph transformations and semantic data migration</h2>
-<p><a href="research/index-research/">Index</a></p>
+<h2 id="graph-transformations">Graph Transformations</h2>
 <ul>
-<li><a href="research/graph-transfo/">Graph transformations</a><ul>
-<li><a href="research/graph-interop/">A general interoperability model using graph transformations</a></li>
-<li><a href="research/basic-graph-transformations/">Basic graph transformations</a></li>
-<li><a href="research/basic-semantic-graph-transformations/">Basic semantic graph transformations</a></li>
-<li><a href="research/DSL-for-graph-topology-checks/">DSL for graph topology check</a></li>
-<li><a href="research/graph-transformation-applicability/">Graph transformation applicability</a></li>
-<li><a href="research/grammar-graph-transformation/">Grammar of graph transformation</a></li>
-<li><a href="research/graph-oriented-pl/">Graph-oriented programming language</a></li>
+<li><a href="articles/index-research/">Index</a></li>
+<li><a href="articles/graph-transfo/">Graph transformations</a></li>
+<li><a href="articles/graph-interop/">A general interoperability model using graph transformations</a></li>
+<li><a href="articles/basic-graph-transformations/">Basic graph transformations</a></li>
+<li><a href="articles/basic-semantic-graph-transformations/">Basic semantic graph transformations</a></li>
+<li><a href="articles/DSL-for-graph-topology-checks/">DSL for graph topology check</a></li>
+<li><a href="articles/graph-transformation-applicability/">Graph transformation applicability</a></li>
+<li><a href="articles/grammar-graph-transformation/">Grammar of graph transformation</a></li>
+<li><a href="articles/rdf-design-patterns/">UML to RDF considerations</a></li>
 </ul>
-</li>
-<li><a href="research/data-mig/">Semantic data migration project</a> (2018-now)<ul>
-<li><a href="research/data-mig/#madics">Using semantic web technologies for aerospace industrial data migration, Madics 2019</a></li>
+<h2 id="various">Various</h2>
+<ul>
+<li><a href="articles/zenon-lumiere/">Paradoxe de Zénon et dépassement de la vitesse de la lumière</a></li>
+<li><a href="articles/relativite/">A propos de la relativité générale</a></li>
+<li><a href="articles/cartan/">Einstein, Cartan et la géométrie différentielle</a></li>
+<li><a href="articles/resources/">Resources</a></li>
 </ul>
-</li>
-<li>More<ul>
-<li><a href="research/zenon-lumiere/">Paradoxe de Zénon et dépassement de la vitesse de la lumière</a></li>
-<li><a href="research/relativite/">A propos de la relativité générale</a></li>
-<li><a href="research/cartan/">Einstein, Cartan et la géométrie différentielle</a></li>
-<li><a href="research/rdf-design-patterns/">UML to RDF considerations</a></li>
-<li><a href="research/industry-data/">Reflections on industry data</a></li>
-<li><a href="research/graph-oriented-pl/">Towards a graph-oriented programming language?</a></li>
-<li><a href="research/resources/">Resources</a></li>
-</ul>
-</li>
-</ul>
-<p><em>(Last update: July 2024)</em></p></div>
+<p><em>(Last update: June 2025)</em></p></div>
             </div>
         </div>
 
         <footer class="col-md-12">
             <hr>
-                <p>Copyleft Olivier Rey 2017-2024 - Site licensed under the GNU FDL V3</p>
+                <p>Copyleft Olivier Rey 2017-2025 - Site licensed under the GNU FDL V3</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
         <script>
             var base_url = ".",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <p>From here you can search these documents. Enter your search terms below.</p>
@@ -424,7 +379,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <table class="table">
@@ -462,3 +417,8 @@
 
     </body>
 </html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2025-06-20 14:47:05.112335+00:00
+-->
