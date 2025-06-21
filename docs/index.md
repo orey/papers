@@ -57,3 +57,5 @@ In 2025, I started a blog on AI. Yes, we have a topic here.
 
 *(Last update: June 2025)*
 
+
+
