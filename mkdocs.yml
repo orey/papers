@@ -37,13 +37,12 @@ nav:
     - 'The Five Levels of Conceptual Maturity for IT Teams': 'articles/five-levels.md'
     - 'The V2 Vortex': 'articles/the-v2-vortex.md'
     - 'The Various Stages of Digital Transformation': 'articles/various-stages.md'
-- Graph-Oriented Programming:
+- About Graphs:
     - 'Graph-oriented programming': 'articles/first-article.md'
     - 'Conference at the STAF/ICGT 2018 in Toulouse': 'articles/staf-icgt2018.md'
     - 'GraphApps project page': 'articles/graphapps.md'
     - 'Towards a graph-oriented programming language?': 'articles/graph-oriented-pl.md'
-- Graph transformations:
-    - 'Index': 'articles/index-research.md'
+    - 'Graph transformation index page': 'articles/index-research.md'
     - 'Graph transformations': 'articles/graph-transfo.md'
     - 'A general interoperability model using graph transformations': 'articles/graph-interop.md'
     - 'Basic graph transformations': 'articles/basic-graph-transformations.md'
