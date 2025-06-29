@@ -14,6 +14,9 @@ theme:
 #google_analytics: ['UA-110156293-1', 'orey.github.io']
 #repo_url: https://github.com/orey/papers/
 #theme: readthedocs
+markdown_extensions:
+    - toc:
+        permalink: "#"
 site_dir: site
 nav:
 - BlogAI:
