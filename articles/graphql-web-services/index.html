@@ -292,18 +292,18 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="graphql-and-classic-web-services">GraphQL And Classic Web Services</h1>
+<h1 id="graphql-and-classic-web-services">GraphQL And Classic Web Services<a class="headerlink" href="#graphql-and-classic-web-services" title="Permanent link">#</a></h1>
 <p><img alt="GraphQL logo" src="../../images/graphql.png" /> </p>
 <p>Facebook produced the <a href="http://graphql.org/">GraphQL specification</a> in order to be an alternative to Rest.</p>
 <p>We already explained <a href="../about-rest/">what we thought of Rest services</a>.</p>
 <p>GraphQL appears to us as a new way to do the same thing that what the industry is doing for decades.</p>
 <p>This article is an analysis of GraphQL principles, their consequences and a comparison with traditional ways of doing web services.</p>
-<h2 id="the-basics-of-services">The Basics of Services</h2>
-<h3 id="various-standards-same-spirit">Various Standards, Same Spirit</h3>
+<h2 id="the-basics-of-services">The Basics of Services<a class="headerlink" href="#the-basics-of-services" title="Permanent link">#</a></h2>
+<h3 id="various-standards-same-spirit">Various Standards, Same Spirit<a class="headerlink" href="#various-standards-same-spirit" title="Permanent link">#</a></h3>
 <p>The underlying basis of services is RPC (Remote Procedure Call, <a href="../about-rest/">see the dedicated article on the subject</a>). For decades, this concept is reinvented again and again with various flavors.</p>
 <p>Apart from RPC protocols or proprietary protocols (like the <a href="https://en.wikipedia.org/wiki/Tuxedo_(software)">Tuxedo</a> ones), <a href="https://en.wikipedia.org/wiki/EDIFACT">Edifact</a> was for a long time an industry standard in some business domains like travel, banking, medical and logistics. Edifact was replaced by <a href="https://en.wikipedia.org/wiki/XML">XML</a> then by <a href="https://en.wikipedia.org/wiki/JSON">JSON</a>.</p>
 <p>Every of those standards aimed to provide the same functionality: exchanging structured data between two different systems, probably implemented with different programming languages and/or paradigms, and having a client system benefiting from a service provided by a server system.</p>
-<h3 id="basic-requirements-for-a-service-oriented-language">Basic Requirements For a Service Oriented Language</h3>
+<h3 id="basic-requirements-for-a-service-oriented-language">Basic Requirements For a Service Oriented Language<a class="headerlink" href="#basic-requirements-for-a-service-oriented-language" title="Permanent link">#</a></h3>
 <p>The first requirement is to have a "verb", meaning the name of the "transaction" we expect the remote system to process.</p>
 <p>The second requirement is to have a type system to be able to send structured data under the form of a tree of objects. This is generally achieved by proposing basic types (like string, integer, float, etc.) and the capability of defining fields that have those properties and that can be grouped into classes. Classes will generally have to indicate what fields are required and what fields are optional. This is generally done within the context of one particular transaction.</p>
 <p>Once classes are defined, they can be grouped in larger structures or other classes to define groups of object structures than define larger entities, most of the time, better suitable to express the business semantics.</p>
@@ -313,7 +313,7 @@
 <li>Without an explicit schema definition, the validation code is generally hand written.</li>
 </ul>
 <p>All those requirements are defined in the <a href="https://en.wikipedia.org/wiki/OSI_model">OSI model</a> in the "presentation layer".</p>
-<h3 id="dont-forget-the-protocol">Don't forget the protocol</h3>
+<h3 id="dont-forget-the-protocol">Don't forget the protocol<a class="headerlink" href="#dont-forget-the-protocol" title="Permanent link">#</a></h3>
 <p>The last requirement is to have some kind of underlying protocol to:</p>
 <ul>
 <li>Send and receive messages between systems;</li>
@@ -329,12 +329,12 @@
 <li>The presentation layer (layer 6) manages the content of data, their structure and their values.</li>
 </ul>
 <p>In the current JSON world, <a href="http://www.jsonrpc.org/specification">JSON-RPC</a> is presenting a very basic protocol that can manage the basic single statement and request response messages.</p>
-<h2 id="graphql-answers-to-service-oriented-requirements">GraphQL Answers To Service Oriented Requirements</h2>
+<h2 id="graphql-answers-to-service-oriented-requirements">GraphQL Answers To Service Oriented Requirements<a class="headerlink" href="#graphql-answers-to-service-oriented-requirements" title="Permanent link">#</a></h2>
 <p>GraphQL seems to us as a new flavor of the same old story. It brings some interesting new stuff (and we will come back on that), but the important point is that we can implement traditional services with this language.</p>
-<h3 id="the-verb">The "Verb"</h3>
+<h3 id="the-verb">The "Verb"<a class="headerlink" href="#the-verb" title="Permanent link">#</a></h3>
 <p>Each GraphQL service is an named <code>http</code> entry point. The <code>get</code> method will be used to access the <code>query</code> part of the service and the <code>post</code> method will access the <code>mutation</code> part of it.</p>
 <p>This looks like Rest but this is rather different, because the idea seems not to access to a single resource (even if it is possible), but to perform a service.</p>
-<h3 id="the-type-system">The Type System</h3>
+<h3 id="the-type-system">The Type System<a class="headerlink" href="#the-type-system" title="Permanent link">#</a></h3>
 <p>GraphQL proposes an extended type system that proposes:</p>
 <ul>
 <li>Basic types,</li>
@@ -347,10 +347,10 @@
 <p>Moreover, it is possible to have a richer interface on existing services and a more adaptative way of performing transactions.</p>
 <p>This seems rather promising for mobile or chatbot accesses for instance. Those two UIs manipulate a small amount of data and may require some server services to adapt their reply to their particular use.</p>
 <p>For sure, we could argue saying: with standard web services in JSON, as a client, we can always extract the subset of the response that is interesting to us. The fact is this feature goes beyond the subset approach and enables to ask the server to adapt the contents of its response to the client.</p>
-<h3 id="and-the-protocol">And The Protocol?</h3>
+<h3 id="and-the-protocol">And The Protocol?<a class="headerlink" href="#and-the-protocol" title="Permanent link">#</a></h3>
 <p>In the Web, the protocol is <code>http</code> and the approach seems inspired by both Rest and Ajax kind of calls.</p>
-<h2 id="a-promising-standard">A Promising Standard</h2>
-<h3 id="an-intermediate-between-json-rpc-and-rest">An Intermediate Between JSON-RPC and Rest?</h3>
+<h2 id="a-promising-standard">A Promising Standard<a class="headerlink" href="#a-promising-standard" title="Permanent link">#</a></h2>
+<h3 id="an-intermediate-between-json-rpc-and-rest">An Intermediate Between JSON-RPC and Rest?<a class="headerlink" href="#an-intermediate-between-json-rpc-and-rest" title="Permanent link">#</a></h3>
 <p>GraphQL seems to target the intermediate path between JSON-RPC (which is a simplified SOAP) and Rest. The fact of publishing a schema enables both approaches:</p>
 <ul>
 <li>Perform elaborated services (like before);</li>
@@ -358,20 +358,20 @@
 </ul>
 <p>GraphQL seems to propose a way to benefit from both approaches.</p>
 <p>The fact of being able to perform complex queries (with a lot of flavours) also adds intelligence to the protocol, an intelligence driven by the client.</p>
-<h2 id="but-what-impact-on-the-server-design">But What Impact On The Server Design?</h2>
+<h2 id="but-what-impact-on-the-server-design">But What Impact On The Server Design?<a class="headerlink" href="#but-what-impact-on-the-server-design" title="Permanent link">#</a></h2>
 <p>This seems very interesting but the problem caused by this new protocol is located on the backend part.</p>
 <p>Some questions must be answered:</p>
 <ul>
 <li>What kind of models and/or application this protocol is targeting? All applications? Applications that should be able to disclose a part of their model?</li>
 <li>Do we know the extend of the server impacts in terms of design?</li>
 </ul>
-<h3 id="model-your-business-domain-as-a-graph">Model Your Business Domain As A Graph</h3>
+<h3 id="model-your-business-domain-as-a-graph">Model Your Business Domain As A Graph<a class="headerlink" href="#model-your-business-domain-as-a-graph" title="Permanent link">#</a></h3>
 <p>We are entering here into delicate topics.</p>
 <p>For those how already performed some semantic modeling with <a href="https://www.w3.org/RDF/">RDF</a>, <a href="https://www.w3.org/TR/rdf-schema/">RDFS</a> or <a href="https://www.w3.org/OWL/">OWL</a>, I think you're convinced about the fact that we can model a business domain with a graph.</p>
 <p>For those who already used graph databases such as <a href="https://neo4j.com/">Neo</a> or <a href="http://orientdb.com/">Orient</a> in Big Data use cases or fraud recognition or social applications, may be convinced that a business model can be modeled as a graph.</p>
 <p>But for the vast majority of IT people, this assertion is not obvious.</p>
 <p>Well, we'll come back on this particular topic in future articles, so we'll take for granted that a business domain can be modeled with a graph.</p>
-<h3 id="graph-data-means-graph-database">Graph Data Means Graph Database</h3>
+<h3 id="graph-data-means-graph-database">Graph Data Means Graph Database<a class="headerlink" href="#graph-data-means-graph-database" title="Permanent link">#</a></h3>
 <p>What Facebook is proposing us is a protocol that enables to query the internal structure of the graph of data.</p>
 <p>So, the first consequences seem to be:</p>
 <ul>
@@ -379,7 +379,7 @@
 <li>You probably use a graph database of some sort.</li>
 </ul>
 <p>Consequently, your GraphQL schema is more or less the same thing as your graph database schema (when this sort of things exists such as in <a href="http://orientdb.com/">OrientDB</a>).</p>
-<h3 id="open-heart-data-model">Open Heart Data Model</h3>
+<h3 id="open-heart-data-model">Open Heart Data Model<a class="headerlink" href="#open-heart-data-model" title="Permanent link">#</a></h3>
 <p>The second consequence is also double:</p>
 <ol>
 <li>You published your graph business model to your clients;</li>
@@ -388,7 +388,7 @@
 <p>This second point is very problematic. Indeed, it explains why the protocol is proposing so much complexity in some of its part: because it is supposed to be, at the same time, a protocol and a graph query language (like <a href="https://www.opencypher.org/">Cypher</a>).</p>
 <p>In a certain sense, it is supposed to be the new <a href="http://www.orafaq.com/wiki/SQL*Net">SQL*Net</a> or <a href="https://docs.microsoft.com/fr-fr/sql/odbc/microsoft-open-database-connectivity-odbc">ODBC</a> but for graphs.</p>
 <p>And this is where the approach is questionable.</p>
-<h3 id="the-myth-of-the-single-representation-of-reality">The Myth Of The Single Representation Of Reality</h3>
+<h3 id="the-myth-of-the-single-representation-of-reality">The Myth Of The Single Representation Of Reality<a class="headerlink" href="#the-myth-of-the-single-representation-of-reality" title="Permanent link">#</a></h3>
 <p>There are many myths in IT, and this one is a big one. Many people believe that there is only one way of representing the reality-theirs, indeed. And the reality is, they are wrong.</p>
 <p>Note that, throughout the history of science, many great scientists had the same debate as the <a href="https://en.wikipedia.org/wiki/Brouwer%E2%80%93Hilbert_controversy">intuitionist debate of the beginning of the 20th Century</a>.</p>
 <p>Any software designer that worked sufficiently in the domain should have seen several facts:</p>
@@ -397,7 +397,7 @@
 <li>Two designer confronted to the same problem will produce two different designs.</li>
 </ul>
 <p>Indeed, design is very subjective and, for a lot of reasons we won't explain here, it is not a bad thing that there is no unique model for a particular business domain, on the contrary.</p>
-<h3 id="when-client-and-server-share-everything">When Client and Server Share Everything</h3>
+<h3 id="when-client-and-server-share-everything">When Client and Server Share Everything<a class="headerlink" href="#when-client-and-server-share-everything" title="Permanent link">#</a></h3>
 <p>GraphQL is proposing a way for the customer to be very near from its server, so near that its data model is perfectly known, right from the client.</p>
 <p>This can be very useful when you work with yourself, when you develop your own client and server in a kind of symbiosis. If you are on an Internet application, you also must know that you core model will be known from the outside, which can be a problems in terms of IP and in terms of security.</p>
 <p>So:</p>
@@ -405,7 +405,7 @@
 <li>GraphQL is OK if your API is <strong>internal</strong>;</li>
 <li>GraphQL seems not OK if your API is external.</li>
 </ul>
-<h3 id="publishing-a-graphql-api">Publishing a GraphQL API</h3>
+<h3 id="publishing-a-graphql-api">Publishing a GraphQL API<a class="headerlink" href="#publishing-a-graphql-api" title="Permanent link">#</a></h3>
 <p>Well, if you want to publish a GraphQL API, you have to consider several things:</p>
 <ul>
 <li>You will impose to your client the graph model of your business domain, and maybe it is relevant and maybe not (see next part);</li>
@@ -419,7 +419,7 @@
 <li>You can work for non profit organizations;</li>
 <li>You can have a system that will not cause any loss of money, loss of IP or loss of value if hacked.</li>
 </ul>
-<h2 id="the-fundamental-principle-of-interoperability">The Fundamental Principle Of Interoperability</h2>
+<h2 id="the-fundamental-principle-of-interoperability">The Fundamental Principle Of Interoperability<a class="headerlink" href="#the-fundamental-principle-of-interoperability" title="Permanent link">#</a></h2>
 <p>In complement to the <a href="../about-rest/">article on REST</a>, we will explain the fundamental principle of interoperability.</p>
 <p>The context of interoperability is the following:</p>
 <ul>
@@ -440,11 +440,11 @@
 <p>This is because the client and the server are different software parts that there is no need to impose more constraints.</p>
 <p>In this context, we do not recommend using GraphQL for an external business domain interface, but we can recommend it if the application architecture needs a kinf of ODBC or SQL*Net directly from the UI, and in a context where the API is not made to be exposed to unknown third parties.</p>
 <p>Note that we did not really enter into the core details of "how do we really build a graph-oriented business application"? This will come in later articles.</p>
-<h2 id="a-correct-intuition">A Correct Intuition?</h2>
+<h2 id="a-correct-intuition">A Correct Intuition?<a class="headerlink" href="#a-correct-intuition" title="Permanent link">#</a></h2>
 <p>If we try to step back one minute, we can say that the Facebook team may have had an intuition that, with the graph-oriented modeling approach, this fundamental principle or interoperability could be declared obsolete (and consequently graphs could be in the client, in the server, in the database, with exactly the same structure).</p>
 <p>In some cases, that's true: if you master both ends of the wire, that's probably one very efficient way to do it. But it looks like ODBC or SQL*Net anyway.</p>
 <p>One thing is sure, the graph-oriented modeling of business domains will revolution the IT world, but perhaps not the way the Facebook team imagined it. We'll come back on that in the future.</p>
-<h2 id="conclusion">Conclusion</h2>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">#</a></h2>
 <p>GraphQL is a very interesting attempt to propose a middle term between REST and JSON-RPC, as the following diagram is showing it.</p>
 <p><img alt="Facebook schema showing a business layer" src="../../images/business_layer.png" /></p>
 <p>However, this diagram is very misleading because the 3 inbound protocols have many different impacts on the server design, contrary to what's presented. Indeed, both REST and GraphQL imply a very specific programming model:</p>
@@ -455,7 +455,7 @@
 <p>The conclusion is it seems to us that, so far, only RPC enables to design and deliver reliable and secure business applications, and to do it the way you want. RPC defines a contract that can lead to many various programming paradigms, which is not the case for REST or for GraphQL.</p>
 <p>The GraphQL has, however, opened publicly the case of graph-orientation in the design of business applications.</p>
 <p>This area is really a core game changer for the IT business and it will be a topic described and explained in the future in this site.</p>
-<h2 id="see-also">See also</h2>
+<h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="../about-rest/">About Rest</a></li>
 </ul>

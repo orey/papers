@@ -292,18 +292,18 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="archimate-recipes">Archimate recipes</h1>
+<h1 id="archimate-recipes">Archimate recipes<a class="headerlink" href="#archimate-recipes" title="Permanent link">#</a></h1>
 <p><img alt="Image of the mAirbus Helicopters meeting" src="../../images/swiss-knife.jpg" /></p>
 <p>Modeling in <a href="../archimate-intro/">Archimate</a> can sometimes present some difficulties.</p>
 <p>In this article, we will expose some tips and tricks that can facilitate your daily life as an enterprise architect using Archimate in your modeling activities.</p>
-<h2 id="prerequisites">Prerequisites</h2>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
 <p>This article is using <a href="https://archimatetool.com">Archi</a>. This tool is great. If you are using it, please consider making a donation.</p>
-<h2 id="introduction-to-tags">Introduction to tags</h2>
-<h3 id="about-tags">About tags</h3>
+<h2 id="introduction-to-tags">Introduction to tags<a class="headerlink" href="#introduction-to-tags" title="Permanent link">#</a></h2>
+<h3 id="about-tags">About tags<a class="headerlink" href="#about-tags" title="Permanent link">#</a></h3>
 <p>Archimate is a very powerful language but sometimes, it can be very useful to create tags to distinguish artifacts or group them into sets.</p>
 <p>We will put some tags in the name of the artifact in some cases, and in other cases, we can benefit from the use of properties (for instance to process some calculation based on some property values). The convention we use in this article is to "tag" the names of the artifacts by placing a label between parenthesis.</p>
 <p>Tags are sometimes linked to <a href="http://pubs.opengroup.org/architecture/archimate3-doc/chap05.html">derived relationships</a> but often they answer to other needs.</p>
-<h3 id="why-not-using-stereotypes">Why not using stereotypes?</h3>
+<h3 id="why-not-using-stereotypes">Why not using stereotypes?<a class="headerlink" href="#why-not-using-stereotypes" title="Permanent link">#</a></h3>
 <p>Modeling languages like UML or SysML use stereotypes to specialialize model elements and to create new artifacts that derive from a master artifact (one from the standard).</p>
 <p>Example: If you want to model a graph of data, you may need 2 new artifacts: <code>Node</code> and <code>Relationship</code> instead of <code>Data Objet</code>. You can use the left representation of Figure 1 and create new data objects from the specializations with the UML convention <code>&lt;&lt;stereotype&gt;&gt;</code>.</p>
 <p><img alt="Figure 1: Modeling a graph with and without stereotypes" src="../../archi/Figure-15.png" /></p>
@@ -311,8 +311,8 @@
 <p>Stereotypes are creating new classes of objects. Mentioning stereotypes can be a good way to indicate to your fellow modelers (having a UML or SysML background) what were your intentions.</p>
 <p>But you can also use the right representation and make your classes derive directly from <code>Node</code> and <code>Relationship</code>, considered as implicitit stereotypes of <code>Data Objet</code>.</p>
 <p>In the rest of the page, we will more focus on tags that are not supposed to replace the stereotype specialization.</p>
-<h2 id="levels-of-nesting">Levels of nesting</h2>
-<h3 id="basics">Basics</h3>
+<h2 id="levels-of-nesting">Levels of nesting<a class="headerlink" href="#levels-of-nesting" title="Permanent link">#</a></h2>
+<h3 id="basics">Basics<a class="headerlink" href="#basics" title="Permanent link">#</a></h3>
 <p>In an Archimate model, it is quite common to model nested objects like shown in Figure 2.</p>
 <p><img alt="Figure 2: Sample of nesting in the business layer" src="../../archi/Figure-01.png" /></p>
 <p><u>Figure 2</u>: Sample of nesting in the business layer</p>
@@ -320,7 +320,7 @@
 <p>Being the highest level of "granularity" of our processes (in some cases, this level can be the one of the quality system of the company), we can tag the <code>Accounting</code> artifact with the level <code>(L1)</code> to indicate its level.</p>
 <p>All the business processes and/or business functions that will be nested into it will be tagged <code>(L2)</code> for "level 2". All nested objects inside level 2 objects will be tagged level 3 <code>(L3)</code> and so on.</p>
 <p>An option is to flag the relationship with the level as shown in Figure 2. This can be superfluous if the artifacts are already tagged.</p>
-<h3 id="graph-view">Graph view</h3>
+<h3 id="graph-view">Graph view<a class="headerlink" href="#graph-view" title="Permanent link">#</a></h3>
 <p>This simple system enables to sort artifacts per level on the Archimate graph view (see Figure 3).</p>
 <p><img alt="Figure 3: Archimate graph centered in the Accountant artifact" src="../../archi/Accountant.png" /></p>
 <p><u>Figure 3</u>: Archimate graph centered in the Accountant artifact</p>
@@ -329,7 +329,7 @@
 <p><img alt="Figure 4: Sorted Archimate graph centered in the Accountant artifact" src="../../archi/Accountant2.png" /></p>
 <p><u>Figure 4</u>: Sorted Archimate graph centered in the Accountant artifact</p>
 <p>When the model has many views with many artifacts at various different levels, the graph view helps making the model consistent.</p>
-<h3 id="working-at-different-levels">Working at different levels</h3>
+<h3 id="working-at-different-levels">Working at different levels<a class="headerlink" href="#working-at-different-levels" title="Permanent link">#</a></h3>
 <p>In Figure 5, working with process levels enabled the enterprise architect to indicate that, at a certain level <code>(L2)</code>, the main role taking in charge the <code>Closing</code> process is the <code>Accountant</code>, but at a lower level, we have other roles taking in charge a part of the process.</p>
 <p><img alt="Figure 5: Main role and secondary role" src="../../archi/Figure-04.png" /></p>
 <p><u>Figure 5</u>: Main role and secondary role</p>
@@ -338,7 +338,7 @@
 <p><img alt="Figure 6: Main role and secondary role" src="../../archi/Figure-05.png" /></p>
 <p><u>Figure 6</u>: Main role and secondary role (less ambiguous view)</p>
 <p>Figure 6 is showing a much less ambiguous view. For sure, as soon as we we look at those processes at the <code>(L2)</code> level, the <code>Business controller</code> role will become invisible.</p>
-<h3 id="note-on-derived-relationships">Note on derived relationships</h3>
+<h3 id="note-on-derived-relationships">Note on derived relationships<a class="headerlink" href="#note-on-derived-relationships" title="Permanent link">#</a></h3>
 <p>Semantically, we try to express an ambiguity. Figure 2 could say that the <code>Accountant</code> role is assigned to <code>Closing</code> and "in a more general way" to the <code>Accounting</code> function. But we know nothing about the other <code>(L2)</code> functions and if the <code>Accountant</code> role is really assigned to all <code>(L2)</code> functions that would compose the <code>Accounting</code> function.</p>
 <p>The definition of a relationship is not really helping:</p>
 <blockquote>
@@ -354,7 +354,7 @@
 <p>So, in the context of structural relationships derivation rules, we could say that <code>R3 + R1 &amp;rarr; R2</code>. That means that <code>R2</code> is a derived relationship.</p>
 <p>In the activity of modeling, derived relationships are not always interesting. Indeed, in Figure 5, we don't want to have <code>Business controller</code> assigned to <code>Closing</code>, even if <code>Closing</code> is composed with <code>Validate provisions</code>.</p>
 <p>We believe that, in such cases, it is clearer to use tags. When watching a role, we can see immediately at what level of process he is assigned. If we don't use the derive relationship, we can express complex situation of drill down that are, strictly speaking, not complete, but that "fit" better to the reality.</p>
-<h3 id="functional-content-of-application-components">Functional content of application components</h3>
+<h3 id="functional-content-of-application-components">Functional content of application components<a class="headerlink" href="#functional-content-of-application-components" title="Permanent link">#</a></h3>
 <p>A very common requirement that we have in modeling the IT systems in Archimate is the requirement of modeling application functions at different levels.</p>
 <p><img alt="Figure 7: Accounting system compressed" src="../../archi/Figure-06.png" /></p>
 <p><u>Figure 7</u>: Accounting system basic view</p>
@@ -368,10 +368,10 @@
 <p>Indeed the relationship <code>Accounting System</code> to <code>Monthly closing management</code> that we created in a certain viewpoint is a derived relationship, and the consequence of <code>Monthly closing management</code> being aggregated into <code>General ledger management</code>. Without tags, this relation could be ambiguous. With tags, we know right away in Figure 8 that the assignment relation is probably some kind of shortcut, used to highlight a specific point, and that <code>(L1)</code> functions are also assigned to <code>Accounting System</code>, the <code>(L2) Monthly closing management</code> being a <code>(L2)</code> function.</p>
 <p>We have to be vigilant of those relationships to <code>(L2)</code> elements because they will probably not enable the talk about coverage. If the <code>(L1)</code> functions present a full coverage representation of the application component, the <code>(L2)</code> level may not. Indeed, when using a <code>(L2)</code> level in in <code>(L1)</code>, we should think about the fact that the set of <code>(L2)</code> elements is representing correctly the <code>(L1)</code>.</p>
 <p>In this sample, the underlying hypothesis is that every application component will be assigned to a hierarchy of <code>(L1)</code> functions. Using tags in this way enables to have a more precise vision of the reality.</p>
-<h2 id="alternates-solution-for-nesting">Alternates solution for nesting</h2>
+<h2 id="alternates-solution-for-nesting">Alternates solution for nesting<a class="headerlink" href="#alternates-solution-for-nesting" title="Permanent link">#</a></h2>
 <p>An alternate solution was proposed by <a href="https://www.linkedin.com/in/philippe-augras-a2a5432/">Philippe Augras</a> in <a href="https://www.linkedin.com/posts/reyolivier_archimate-recipes-activity-6593541962756878336-98X7">LinkedIn</a> using hierarchy of meanings tagging the various levels of nesting (artifacts and relationships).</p>
 <p>Another alternate solution was propose by <a href="https://www.linkedin.com/in/nfigay/">Nicolas Figay</a> in <a href="https://www.linkedin.com/posts/reyolivier_archimate-recipes-activity-6593541962756878336-98X7">LinkedIn</a> using properties and specific views.</p>
-<h3 id="conclusion-on-nesting">Conclusion on nesting</h3>
+<h3 id="conclusion-on-nesting">Conclusion on nesting<a class="headerlink" href="#conclusion-on-nesting" title="Permanent link">#</a></h3>
 <p>Nesting is an important part of big Archimate models. Generally, it is very useful to have certain artifacts (like active structures for instance) attached to several different levels of behaviors depending on the views.</p>
 <p>Most of the time, tagging artifacts with their level:</p>
 <ul>
@@ -379,7 +379,7 @@
 <li>Get interested between the nested relationships between various levels of artifacts,</li>
 <li>Think about coverage (in our case, processes of a certain level per role, or sub-processes of a certain process).</li>
 </ul>
-<h3 id="organisational-consequences-of-nesting">Organisational consequences of nesting</h3>
+<h3 id="organisational-consequences-of-nesting">Organisational consequences of nesting<a class="headerlink" href="#organisational-consequences-of-nesting" title="Permanent link">#</a></h3>
 <p>If a team of enterprise architects are working on the same model, it is generally required to organize frequent "consistency meetings" to ensure the consistency of the model. Indeed, categorizing processes of application functions in a nested environment may have impacts to the global model, and sometimes, the decision is quite structuring for the overall representation of reality we try to create.</p>
 <p>Don't underestimate this part because, at the end of the day, it can become an enormous (but rewarding) amount of work.</p>
 <p>In that case, a consistency meeting can re-assess at the team level the various levels of nesting that are attached to artifacts. All consequences can be analyzed at the proper level to ensure the model consistency. For that purpose, graph views of the model are more than needed.</p>
@@ -388,7 +388,7 @@
 <p>At the end of the workshops, we had collective arguments to represent the reality as it was, and a real consistent global model, that would enable us to really plan the process/IT digital transformation.</p>
 <p>Ensuring this consistency enables to address core problems to the clients (business and IT), based on the cross-checking of all information they provided, and to bring added-value. It enables to be more pertinent and to understand more deeply the core functional problems that are at the heart of most digital transformation.</p>
 <p>We must never forget that <em>representing the reality</em> (or the next evolutions of that reality) is a complex exercise, even with a semantic language like Archimate. Quite often, we are bound to introduce bias in the representation, which is normal, but which should be explained at the beginning of the model, in a kind of "conventions" part.</p>
-<h2 id="several-instances-of-the-same-software-in-different-contexts">Several instances of the same software in different contexts</h2>
+<h2 id="several-instances-of-the-same-software-in-different-contexts">Several instances of the same software in different contexts<a class="headerlink" href="#several-instances-of-the-same-software-in-different-contexts" title="Permanent link">#</a></h2>
 <p>Big software such as ERP often propose several modules. Documenting the proposed modules can be of interest to be able to capitalize on the descriptions, especially of some customizations were done inside the off-the-shelf software.</p>
 <p>The figure 10 shows an illustration of that case: The module 3 of the ERP was customized centrally to the company for the needs of the French subsidiary.</p>
 <p><img alt="Figure 10: Standard and customized modules" src="../../archi/Figure-08.png" /></p>
@@ -413,7 +413,7 @@
 <li>The business domains.</li>
 </ul>
 <p>All the tags used in the model should be documented precisely in the model description. They represent a kind of specific taxonomy of the various artifacts and ease the understanding of complex situations.</p>
-<h2 id="managing-time-and-scenarios">Managing time and scenarios</h2>
+<h2 id="managing-time-and-scenarios">Managing time and scenarios<a class="headerlink" href="#managing-time-and-scenarios" title="Permanent link">#</a></h2>
 <p>Quite often in the digital transformation process, we need to establish the "as-is" situation and the "to-be" situation. This can be quite tricky if some naming conventions were not determined to make understand what are the "as-is" artifacts and the "to-be" ones.</p>
 <p>For instance, Figure 13 shows us a customized ERP module 3 for the French subsidiary. Let us suppose that this module is the "to-be" situation.</p>
 <p><img alt="Figure 14: As-is situation" src="../../archi/Figure-12.png" /></p>
@@ -445,7 +445,7 @@
 <p>This solution has an advantage: the ERP content is always exact, because the tags "as-is" and "to-be" duplicated the "ERP" artifact. The drawback is that the ERP artifact is not unique.</p>
 <p>Another description choice would have been to keep only one artifact for the ERP component. The component would have aggregated the several various "versions" of the module 3. In that case, the links between the ERP and the version of sub-module should have been very explicit in order to keep track of the various modifications of the module 3.</p>
 <p>Using temporal tags enable to better formalize scenarios and successions of steps in a context of digital transformation. This use must be adapted to the purpose of the project. In all cases, the trade-off analysis result should be explained in the model itself.</p>
-<h2 id="about-tags_1">About tags</h2>
+<h2 id="about-tags_1">About tags<a class="headerlink" href="#about-tags_1" title="Permanent link">#</a></h2>
 <p>In this article, we have introduced the use of tags in several cases:</p>
 <ul>
 <li>Nesting</li>
@@ -464,7 +464,7 @@
 </ul>
 <p>This use should be balanced and challenged. We did that in order to materialize the various instances of the software and the fact that those instances were really depending on the where and the who. On the other hand, native Archimate artifacts are existing which can be ambiguous. Sometimes, tags are just temporary ways to represent a complex reality before using a more standard way to do it.</p>
 <p>Remember that models are dynamic and often work in progress and that there is no definitive way of modeling complex reality.</p>
-<h2 id="see-also">See also</h2>
+<h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="../archimate-intro/">Introduction to Archimate</a></li>
 <li>Reports can be generated from the Archimate model. You can find <a href="https://github.com/orey/archi-report-template">here a report template</a> slightly modified compared to the original <a href="https://archimatetool.com">Archi</a> one.</li>

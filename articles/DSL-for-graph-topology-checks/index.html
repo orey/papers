@@ -276,14 +276,14 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="a-dsl-for-checking-the-topology-of-the-graph-before-transforming-it">A DSL for checking the topology of the graph before transforming it</h1>
-<h2 id="two-kinds-of-graph-transformations-gt">Two kinds of graph transformations (GT)</h2>
+<h1 id="a-dsl-for-checking-the-topology-of-the-graph-before-transforming-it">A DSL for checking the topology of the graph before transforming it<a class="headerlink" href="#a-dsl-for-checking-the-topology-of-the-graph-before-transforming-it" title="Permanent link">#</a></h1>
+<h2 id="two-kinds-of-graph-transformations-gt">Two kinds of graph transformations (GT)<a class="headerlink" href="#two-kinds-of-graph-transformations-gt" title="Permanent link">#</a></h2>
 <ul>
 <li>GTs that start with a root node.</li>
 <li>GTs that aim at making several modifications in the graph (generally using pattern matching expressions).</li>
 </ul>
 <p>We are focused on the first kind of GT.</p>
-<h2 id="a-dsl-to-chack-the-topology">A DSL to chack the topology</h2>
+<h2 id="a-dsl-to-chack-the-topology">A DSL to chack the topology<a class="headerlink" href="#a-dsl-to-chack-the-topology" title="Permanent link">#</a></h2>
 <p>It is possible to create a DSL to check the basic applicability of a GT. The DSL can propose a set of primitives to make assertions on the graph, typically seen as starting at a certain root node (so we have an artefact for root node, let's says it is "root").</p>
 <p>For instance <code>root:A -[:]-&gt; :B -[:R]-&gt; :C</code> means that the root node which is an instance of A should be connected through whatever relationship to an instance of B which is connected by a relationship of type R to an instance of C.</p>
 <p>This syntax is inspired by <a href="http://www.opencypher.org/" title="open cypher">Open Cypher</a>.</p>
@@ -303,7 +303,7 @@
 </ul>
 <p>It would be a pure graph structure analysis.</p>
 <p>But, even if the topology conditions are met, if the DSL is too simple, we have to recode the graph navigation in the GT in order, for instance, to make a check on the instance of C.</p>
-<h2 id="advantages-and-drawbacks">Advantages and drawbacks</h2>
+<h2 id="advantages-and-drawbacks">Advantages and drawbacks<a class="headerlink" href="#advantages-and-drawbacks" title="Permanent link">#</a></h2>
 <p>This DSL works. However, I am not entirely satisfied about it, in the same way that I am not completely satisfied about the rules description in general.</p>
 <p>Being a kind of pseudo-code (even if more generic), the DSL:</p>
 <ul>
@@ -312,7 +312,7 @@
 <li>The topology checks are often depending on complex business conditions, which means that in real code, you may have topology conditions that you must code manually and that we cannot express really by this DSL.</li>
 </ul>
 <p>So, the DSL is reduced to a kind of "helper" that is addressing many cases in simple applications (or let's say in applications where the rules are simple), but cannot be used as a new "structural way of coding" graph transformations.</p>
-<h2 id="limitations">Limitations</h2>
+<h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">#</a></h2>
 <p>This limitation opens the problem of theoretical check of GT applicabilities in case of GT forks (see <a href="https://orey.github.io/papers/graph/staf-icgt2018/">the fork concept</a>.</p></div>
             </div>
         </div>

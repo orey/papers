@@ -284,18 +284,18 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="uml-to-rdf-considerations">UML to RDF considerations</h1>
-<h2 id="references">References</h2>
+<h1 id="uml-to-rdf-considerations">UML to RDF considerations<a class="headerlink" href="#uml-to-rdf-considerations" title="Permanent link">#</a></h1>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">#</a></h2>
 <p>In a W3C article, <a href="https://www.w3.org/2001/sw/BestPractices/">Semantic Web Best Practices</a>, some indications are provided to compare the semantic web approach with the object-oriented approach. Those indications are very interesting but they are not complete to serve as a guide for software engineers trying to work with semantic web technologies.</p>
 <p>This page aims at gathering interesting elements about that topic.</p>
-<h2 id="basic-correspondence-between-uml-and-rdfrdfs">Basic correspondence between UML and rdf/rdfs</h2>
+<h2 id="basic-correspondence-between-uml-and-rdfrdfs">Basic correspondence between UML and rdf/rdfs<a class="headerlink" href="#basic-correspondence-between-uml-and-rdfrdfs" title="Permanent link">#</a></h2>
 <p>Consider the following figure.</p>
 <p><img alt="UML versus rdf/rdfs" src="../../yed/uml-rdf-rdfs-v02.png" /></p>
 <p>Several points must be noted.</p>
-<h2 id="types-are-instances-of-rdfproperty-and-rdfsclass">Types are instances of rdf:Property and rdfs:Class</h2>
+<h2 id="types-are-instances-of-rdfproperty-and-rdfsclass">Types are instances of rdf:Property and rdfs:Class<a class="headerlink" href="#types-are-instances-of-rdfproperty-and-rdfsclass" title="Permanent link">#</a></h2>
 <p>Basically, in most existing (RDFS) ontologies, when a new class is created, it is declared as being <code>a rdfs:Class</code>, and when a new property type is created, it is declared as being <code>a rdf:Property</code>. We have this situation in the diagram for <code>exs:ClassA</code>, <code>exs:ClassB</code>, <code>exs:ClassC</code> and for <code>exs:attribute1</code> and <code>exs:attribute2</code>.</p>
 <p>That means that new types, being class types or property types, are considered as "instances" of the "meta-types" <code>rdfs:Class</code> and <code>rdf:Property</code>.</p>
-<h2 id="first-translation">First translation</h2>
+<h2 id="first-translation">First translation<a class="headerlink" href="#first-translation" title="Permanent link">#</a></h2>
 <p>In the UML diagram, <code>ClassB</code> derives from <code>ClassA</code>. That implies: <code>exs:ClassB rdfs:subClassOf exs:ClassA</code> as an obvious translation of the UML fact.</p>
 <p>We can stay like that and have a first UML to RDF translation like follows.</p>
 <pre><code>@prefix rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
@@ -319,7 +319,7 @@ exs:attribute2 a rdf:Property ;
                rdfs:range exs:ClassC .
 
 </code></pre>
-<h2 id="second-translation">Second translation</h2>
+<h2 id="second-translation">Second translation<a class="headerlink" href="#second-translation" title="Permanent link">#</a></h2>
 <p>This first translation may be considered as having a slight problem. All new classes could be <code>subClassOf</code> another class, in order to enable reasoning based on sub-classes.</p>
 <p>We could enrich a bit our first translation by adding some lines.</p>
 <pre><code>@prefix rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
@@ -348,7 +348,7 @@ exs:attribute2 a rdf:Property ;
 
 </code></pre>
 <p>Semantically, the <code>a</code> indicates the real nature of the entity and the <code>rdfs:subClass/PropertyOf</code> its type hierarchy.</p>
-<h2 id="2-kinds-of-attribute-types">2 kinds of attribute types</h2>
+<h2 id="2-kinds-of-attribute-types">2 kinds of attribute types<a class="headerlink" href="#2-kinds-of-attribute-types" title="Permanent link">#</a></h2>
 <p>Attribute types are not homogeneous. For a given attribute <code>exs:att</code>, <code>exs:att rdfs:range rdfs:Class</code> may indicate that we are talking about a link or relationship between two objects, whereas <code>exs:att rdfs:range rdfs:Literal</code> may indicate that we have a real attribute with a literal value.</p>
 <p>That is one UML and object-orientation deepest problem: the aggregation (and composition) relationships are represented at the same level than the attributes pointing to literal values (see <a href="../first-article/">paper on graph-oriented programming</a>). The semantic web enables us to get over this crucial limitation by defining the attribute outside of the class itself.</p>
 <p>But, if we want to be effective, we would need a specific root attribute type for the attribute types having a range in the <code>rdfs:Literal</code> world, and a root attribute type for the attribute types that point to objects.</p>

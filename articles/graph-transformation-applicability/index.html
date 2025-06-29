@@ -272,12 +272,12 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="graph-transformation-applicability">Graph transformation applicability</h1>
+<h1 id="graph-transformation-applicability">Graph transformation applicability<a class="headerlink" href="#graph-transformation-applicability" title="Permanent link">#</a></h1>
 <p>The note <a href="../DSL-for-graph-topology-checks/">about the DSL</a> opens the problem of GT applicability. This is a theoretical problem but rather interesting.</p>
 <p>We are in the context of GTs that are attached to root nodes.</p>
-<h2 id="dictionary-of-applicable-gts-per-type">Dictionary of applicable GTs per type</h2>
+<h2 id="dictionary-of-applicable-gts-per-type">Dictionary of applicable GTs per type<a class="headerlink" href="#dictionary-of-applicable-gts-per-type" title="Permanent link">#</a></h2>
 <p>It is possible to record in a dictionary the list of GTs applicable from a certain root node type. Once recorded, we can find the rules that enable to determine if each of the GT, that is potentially applicable is really applicable.</p>
-<h2 id="position-of-the-applicability-code">Position of the applicability code</h2>
+<h2 id="position-of-the-applicability-code">Position of the applicability code<a class="headerlink" href="#position-of-the-applicability-code" title="Permanent link">#</a></h2>
 <p>When a GT is created and then forked, we can consider we have 2 versions of the GT: <code>GTv1</code> and <code>GTv2</code> for instance. <code>GTv1</code> will be at the beginning applicable forever until it is forked.</p>
 <p>There seem to be 3 cases:</p>
 <ul>
@@ -290,7 +290,7 @@
 </ul>
 <p>The first case will require a possible modification of the <code>GTv1</code> when <code>GTv2</code> appears, because it will need to chack its version or a certain date of applicability from which it becomes not applicable.</p>
 <p>In the second case, we can imagine a controler that knows what rule to apply considering, for instance, the age of data we are looking for. In that case, that would be, for instance, the age of the root node that would be a good first indicator to determine what version is applicable.</p>
-<h2 id="heterogeneous-encoding-of-knowledge">Heterogeneous encoding of knowledge</h2>
+<h2 id="heterogeneous-encoding-of-knowledge">Heterogeneous encoding of knowledge<a class="headerlink" href="#heterogeneous-encoding-of-knowledge" title="Permanent link">#</a></h2>
 <p>The core problem of the graph-oriented programming works was the placement of the rules in transient structures representing the graph. Here also, we have the same problem. It is not easy to encode a certain knowledge right inside the various artifacts that we have. Quite often, this is a design choice, which implies that we cannot find a rule that answers to all cases. </p>
 <p>Knowledge adequate/optimized/relevant encoding is very complex.</p>
 <p>Maybe the GT should be analyzed in semantic graphs that are simpler than directed multi-labeled graphs.</p></div>

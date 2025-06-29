@@ -330,7 +330,7 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="about-artificial-neural-networks-and-machine-learning">About artificial neural networks and machine learning</h1>
+<h1 id="about-artificial-neural-networks-and-machine-learning">About artificial neural networks and machine learning<a class="headerlink" href="#about-artificial-neural-networks-and-machine-learning" title="Permanent link">#</a></h1>
 <p><img alt="Photo of a toy robot from the 50s" src="../../images/robot.jpg" /></p>
 <p><em>Photo by <a href="https://freeimages.com/photographer/ollinger-36628">oliver brandt</a> from <a href="https://freeimages.com">FreeImages</a></em></p>
 <p>Machine learning based on artificial neural networks attracted much attention and credits those last decades (after a long "winter of AI") up to the point where, boosted by marketing, an anti-scientific approach is sold as being the solution to all problems.</p>
@@ -340,7 +340,7 @@
 <li>We will focus on supervised learning artificial neural networks and  will not talk now about other variants such as unsupervised learning.</li>
 <li>We detail the artificial neural network working later in the article <a href="#detail">here</a>.</li>
 </ul>
-<h2 id="what-is-an-artificial-neural-network">What is an artificial neural network?</h2>
+<h2 id="what-is-an-artificial-neural-network">What is an artificial neural network?<a class="headerlink" href="#what-is-an-artificial-neural-network" title="Permanent link">#</a></h2>
 <p>Basically, an artificial neural network is:</p>
 <ul>
 <li>A mathematical function <code>f</code> of several variable;</li>
@@ -354,7 +354,7 @@
 <p><em>Figure 1: A simple artificial neural network</em></p>
 <p>The Figure 1 shows a sample of an artificial neural network.</p>
 <p>There are many techniques to build the function <code>f</code>, hence the variety of machine learning algorithms.</p>
-<h2 id="an-interpolation-function">An interpolation function</h2>
+<h2 id="an-interpolation-function">An interpolation function<a class="headerlink" href="#an-interpolation-function" title="Permanent link">#</a></h2>
 <p>Let us go a bit more into the details. Let us note :</p>
 <blockquote>
 <p>X<sub>k</sub> = (x<sub>k1</sub>, x<sub>k2</sub>, ..., x<sub>kn</sub>)</p>
@@ -376,7 +376,7 @@
 <li>It is probable that f(X<sub>k</sub>) = Y<sub>m</sub> or | f(X<sub>k</sub>) - Y<sub>m</sub> | &lt; &epsi; with "|" a norm in the R<sub>1</sub> x R<sub>2</sub> x ... x R<sub>p</sub> space;</li>
 <li>The determined global function is not globally mathematically known, which implies it can have singular points, often called "potential wells".</li>
 </ul>
-<h2 id="an-interpolation-function-working-in-extrapolation-mode">An interpolation function working in extrapolation mode</h2>
+<h2 id="an-interpolation-function-working-in-extrapolation-mode">An interpolation function working in extrapolation mode<a class="headerlink" href="#an-interpolation-function-working-in-extrapolation-mode" title="Permanent link">#</a></h2>
 <p>The idea of neural networks is to assume that <code>f</code> is a continuous function at least in the neighborhood of the known hyper-points X<sub>i</sub>. That means that:</p>
 <blockquote>
 <p>If we take X<sub>i</sub> so that | X<sub>k</sub> - X<sub>i</sub> | &lt; &epsi;</p>
@@ -400,7 +400,7 @@
 </blockquote>
 <p>The presence of potential wells in neural networks was a well known phenomenon in the 80s, and one of the reasons of the AI winter. Because neural networks were considered as non reliable "by construction", those techniques were temporarily abandoned.</p>
 <p>Mathematically speaking, the situation is quite simple: An interpolation function should not be used as an extrapolation function.</p>
-<h2 id="big-data-and-processing-power">Big data and processing power</h2>
+<h2 id="big-data-and-processing-power">Big data and processing power<a class="headerlink" href="#big-data-and-processing-power" title="Permanent link">#</a></h2>
 <p>The development and explosion of machine learning beginning of the 2000s was funded on new beliefs that overpass the previous arguments and mathematical reality.</p>
 <p>The first idea (which is an engineer's idea) is that if we have a huge number of data (i.e. a lot of couples of the form (X<sub>k</sub>, Y<sub>m</sub>)) to feed the algorithm, we will be able to generate many hyper-points in the <code>f</code> hyper-surface.</p>
 <p>This will imply that the <code>f</code> function will be more "dense" in R<sub>1</sub> x R<sub>2</sub> x ... x R<sub>p</sub> and so we will "reduce" the risk of potential well.</p>
@@ -411,20 +411,20 @@
 <p><a name="Figure3"></a><em>Figure 3: The chain of image recognition</em></p>
 <p>The fact is, it is a hope. What is funny is that <em>it works</em> in many cases. And when it doesn't, some various techniques are existing to try to make it work anyway.</p>
 <p>We can note that, in that process, the encoding function may be quite important. In a certain way, it can hide a structural analysis of the problem, as it is representing the reality.</p>
-<h2 id="but-the-banana-disappears">But the banana disappears...</h2>
+<h2 id="but-the-banana-disappears">But the banana disappears...<a class="headerlink" href="#but-the-banana-disappears" title="Permanent link">#</a></h2>
 <p><img alt="Image: The banana experiment" src="../../images/banana.png" /></p>
 <p><a name="Figure4"></a>*<em>Figure 4: The banana disappears. Taken from <a href="https://arxiv.org/pdf/1712.09665.pdf">Brown et al. 2017</a></em></p>
 <p>Without any surprise, Brown et al. demonstrated in their <a href="https://arxiv.org/pdf/1712.09665.pdf">article</a> <em>Adversarial patch</em> (see Figure 4) that it was possible to mislead a neural network training to recognize some images. It may be even worse, because they claim it is possible to structurally mislead all neural networks that were used as image classifiers.</p>
 <p>For us, despite the interest of the article, we are only rediscovering the structural mathematical problem of this technique.</p>
 <p>See also our <a href="#note1">note on encoder</a>.</p>
-<h2 id="new-beliefs-brought-by-the-machine-learning-era">New beliefs brought by the machine learning era</h2>
+<h2 id="new-beliefs-brought-by-the-machine-learning-era">New beliefs brought by the machine learning era<a class="headerlink" href="#new-beliefs-brought-by-the-machine-learning-era" title="Permanent link">#</a></h2>
 <p>The machine learning trend brought new beliefs among IT people, some of them being totally the opposite of the usual computer science paradigm. We will list some of them.</p>
-<h2 id="belief-1-big-data-and-brute-force-can-solve-mathematical-problems">Belief 1: Big data and brute force can solve mathematical problems</h2>
+<h2 id="belief-1-big-data-and-brute-force-can-solve-mathematical-problems">Belief 1: Big data and brute force can solve mathematical problems<a class="headerlink" href="#belief-1-big-data-and-brute-force-can-solve-mathematical-problems" title="Permanent link">#</a></h2>
 <p>This a way to reformulate the big data belief: If we inject billions of images to create an image classifier with an artificial neural network, we will overcome the mathematical problem. For sure, to be able to do that, we need an enormous processing power.</p>
 <p>We saw that this approach was not working.</p>
 <p>Without despising engineering (the author himself is an engineer ;), we see here an engineering reasoning: find all recipes to <em>make it work</em> for the maximum number of cases. Unfortunately, mathematics cannot be overcome by brute force.</p>
 <p>Another issue that we see with big data is that no data set is completely neutral. Data sets are coming from somewhere and they have inherent bias attached to them. This is natural when we consider <a href="../data-interop/">the real nature of data</a>. data is an output product that is the result of the intersection of a semantic field, business rules and use cases.</p>
-<h2 id="belief-2-programs-can-make-mistakes-like-humans">Belief 2: Programs can make mistakes like humans</h2>
+<h2 id="belief-2-programs-can-make-mistakes-like-humans">Belief 2: Programs can make mistakes like humans<a class="headerlink" href="#belief-2-programs-can-make-mistakes-like-humans" title="Permanent link">#</a></h2>
 <p>The second idea (also an engineer's idea) is to say that <em>better have the neural network than nothing</em>. At least, "most of the time", the extrapolation does work and provides relevant results.</p>
 <p>That is a fundamental regression compared to the objectives that computer science targeted from the beginning of the discipline. Computers, as they were automating human tasks were trustable because they were exact. In a certain sense, we can delegate tasks to computers <em>provided</em> they make no mistake and we can trust them, better than if the tasks were performed by humans.</p>
 <p>We even created the notion of "bug" to name a problem to be fixed in a program, for the computer to to exact, and so reliable.</p>
@@ -432,18 +432,18 @@
 <p>If computer make errors in a structural way (which is the case of artificial neural networks), we change the complete computer science paradigm.</p>
 <p>Computers could be at the source of serious administrative mistakes, medical mistakes, justice mistakes... Even is statistically, those mistakes happen 1% of the time, how to trust computer programs anymore?</p>
 <p>If we accept to generalize techniques that make errors, we enter into a non certain world, that looks like the Brazil movie.</p>
-<h2 id="belief-3-the-marvelous-ubiquitous-set-of-tools-for-functionally-unskilled-people">Belief 3: The marvelous ubiquitous set of tools for functionally unskilled people</h2>
+<h2 id="belief-3-the-marvelous-ubiquitous-set-of-tools-for-functionally-unskilled-people">Belief 3: The marvelous ubiquitous set of tools for functionally unskilled people<a class="headerlink" href="#belief-3-the-marvelous-ubiquitous-set-of-tools-for-functionally-unskilled-people" title="Permanent link">#</a></h2>
 <p>In the hype of machine learning, another element is crucial. It is possible to learn the data crunching techniques <em>separately</em> from any other functional knowledge, and to pretend being able to apply them to whatever functional domain. In a sense, machine learning is the <em>ubiquitous set of tools</em>.</p>
 <p>More: We don't need to be functionally skilled, meaning <em>in the business area where we do data science</em>. Our skills in machine learning will be enough.</p>
-<h2 id="belief-4-finding-meaning-in-data-without-knowing-the-business-domain">Belief 4: Finding meaning in data without knowing the business domain</h2>
+<h2 id="belief-4-finding-meaning-in-data-without-knowing-the-business-domain">Belief 4: Finding meaning in data without knowing the business domain<a class="headerlink" href="#belief-4-finding-meaning-in-data-without-knowing-the-business-domain" title="Permanent link">#</a></h2>
 <p>We tried to explain, in our article <a href="../data-interop/">the real nature of data</a>, why data was a complex <em>output product</em>, result of the intersection of a semantic domain, some business rules and some use cases.</p>
 <p>With machine learning, we take a reverse approach: Data becomes the <em>input</em> and you are suppose to be able to "discover" things from it, with generic tools, without, most of the time realizing those tools have limitations.</p>
 <p>In the case where the analyzed data are the fruit of a highly semantically standardized business domain (which is the case in many areas where the regulator or standards structured a particular business domain like accounting, aerospace, travel, etc.), machine learning can "rediscover" elements of this underlying structure, feeding the illusion that it found sense in data.</p>
 <p>For sure, the reasoning is bad: Data was, at the beginning, the fruit of a structured and standardized business, and machine learning will just find back some dimensions already present in the data in the first place. Generally, those discovery will established very challenge-able correlations that can be analyzed as relevant or not, only by the ones knowing the business domain.</p>
-<h2 id="belief-5-the-average-wins-and-thats-ok">Belief 5: The average wins and that's OK</h2>
+<h2 id="belief-5-the-average-wins-and-thats-ok">Belief 5: The average wins and that's OK<a class="headerlink" href="#belief-5-the-average-wins-and-thats-ok" title="Permanent link">#</a></h2>
 <p>If we need billions of data to determine an interpolation function, we will create an interpolation function that will tend to favor the average data. And the fact is, some phenomena are not correctly represented with averages, but more with signal having a certain diversity. The more data, the more the non average data (particular cases, legitimous singular points) will be erased in the resulting interpolation function.</p>
 <p>The belief is in the fact that seeing the world through average is OK, whereas most of the time, the diversity is the real nature of the world.</p>
-<h2 id="philosophical-aspects-on-science">Philosophical aspects on science</h2>
+<h2 id="philosophical-aspects-on-science">Philosophical aspects on science<a class="headerlink" href="#philosophical-aspects-on-science" title="Permanent link">#</a></h2>
 <p>The scientific method is what built the technical foundations of our world. Science is a method and is aiming at being exact or at mastering the margin of error.</p>
 <p>Science always took the same approach:</p>
 <ul>
@@ -462,23 +462,23 @@
 <p>There is no understanding on what's going on at all. There is no progress of science. On the contrary, by taking output products as input products, we can be in incredibly absurd situations.</p>
 <p>A good image would be to try to understand how Emacs works on a PC with all the data of all electrical currents in a computer. Data are an output product, and they were generated in a very specific semantic context with very specific business rules.</p>
 <p>In a way, machine learning is nearer from the magical thinking than from science.</p>
-<h2 id="conclusion">Conclusion</h2>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">#</a></h2>
 <p>Machine learning is a technique that must be used with much caution for all the points that we have detailed in this article.</p>
 <p>The especially worrying phenomenon is the generalization of machine learning in various areas of our daily life, without us to be aware that some people changed the fundamental paradigm of computer science that tasks can be delegated to machines provided machines do it perfectly. Here, we are delegating tasks to machine that will structurally make mistakes without a lot of people to even realize the change.</p>
-<h2 id="the-alternate-model-reasoning-on-semantic-data">The alternate model: Reasoning on semantic data</h2>
+<h2 id="the-alternate-model-reasoning-on-semantic-data">The alternate model: Reasoning on semantic data<a class="headerlink" href="#the-alternate-model-reasoning-on-semantic-data" title="Permanent link">#</a></h2>
 <p>Data being output products, they embed a lot of semantic prerequisites, in their structure and in their values. It would be probably much more efficient to work on the semantic modeling of data, to interpret a certain set of data based on their semantic content and then reason on those data with logical paradigms.</p>
 <hr />
-<h2 id="note-on-image-encoder">Note on image encoder</h2>
+<h2 id="note-on-image-encoder">Note on image encoder<a class="headerlink" href="#note-on-image-encoder" title="Permanent link">#</a></h2>
 <p><a name="note1"></a>One interesting question that we can ask considering the <a href="https://arxiv.org/pdf/1712.09665.pdf">article of Brown et al.</a> is: Is the second image with the sticker in the "neighborhood" of the first one?</p>
 <p>We can see, asking this question, that the very notion of "neighborhood" seems not defined in the "space of images". This is normal because we are entering the world of mathematics and function building <em>only after the encoding of the image</em> (see <a href="#Figure3">Figure 3</a>). Indeed, the notion of neighborhood is only defined in the space of (X<sub>i</sub>) which are the results of the encoding of the images. We need to define a mathematical notion of topology in the space of images.</p>
 <p>This problem is currently addressed by various techniques of image labelling, decomposing the image in parts.</p>
 <p>We see that, in order to make the function more relevant, we tend to add complex pre-processing based on business rules and possibly complex post-processing based also on business rules. The neural network part is decreased at the benefit of more traditional approaches.</p>
 <hr />
-<h2 id="detailed-analysis">Detailed analysis</h2>
+<h2 id="detailed-analysis">Detailed analysis<a class="headerlink" href="#detailed-analysis" title="Permanent link">#</a></h2>
 <p><a name="detail"></a>The history of neural networks is quite funny. It started from the modeling of mathematical structures that were inspired by the biological neurons. The idea of training by backpropagation (indeed distance reduction through partial derivation equations) led to a complete field that investigated a lot and in several phases in the study of the "stuff" created.</p>
 <p>For sure, as the artificial neural network is a complex object, and as many different design options can be chosen, it opened the place to many research in the field, up to convolutional neural networks (CNN) that begin to look like standard processing chains, more than neural networks.</p>
 <p>We will, in this part, try to dig into the core of neural networks and exhibit some elements that appear core to us.</p>
-<h2 id="characteristics-of-a-standard-artificial-neural-network">Characteristics of a standard artificial neural network</h2>
+<h2 id="characteristics-of-a-standard-artificial-neural-network">Characteristics of a standard artificial neural network<a class="headerlink" href="#characteristics-of-a-standard-artificial-neural-network" title="Permanent link">#</a></h2>
 <p><img alt="Detailed view of a neuron" src="../../yed/ann-detail.png" /></p>
 <p><em>Figure 5: Detailed view of an artificial neural network</em></p>
 <p>If we take the most common case, an artificial neural network is a set of artificial neurons arranged in layers (vertical layers in Figure 5) defined by the following characteristics:</p>
@@ -494,7 +494,7 @@
 </ul>
 <p>The first layer is considered as the input. It acts as a &sigma;<sub>layer,rank_of_node</sub>, except that the value is imposed by the user. It is shown as X in Figure 1. The last layer will be the fruit of the calculation.</p>
 <p>Indeed, this representation is very complex, and does not show properly the mathematical objects that are at stake, even if those objects are very simple.</p>
-<h2 id="representing-neural-networks-with-matrices">Representing neural networks with matrices</h2>
+<h2 id="representing-neural-networks-with-matrices">Representing neural networks with matrices<a class="headerlink" href="#representing-neural-networks-with-matrices" title="Permanent link">#</a></h2>
 <p>If we go back to Figure 1 and take X = (x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>D(1)</sub>) as an input, and consider X as the "first layer". The &Sigma;-s of the second layer can be written with a matrix.</p>
 <p>Let's consider the following matrix W<sub>1,2</sub>:</p>
 <table>
@@ -590,7 +590,7 @@
 </blockquote>
 <p>Here, we are using the standard euclidean distance.</p>
 <p>Then, the backpropagation process consists in using an algorithm, generally based on partial derivation, to change the weight matrices and the bias vectors in order to minimize the loss function.</p>
-<h2 id="advantages-of-the-chain-of-function-representation">Advantages of the chain of function representation</h2>
+<h2 id="advantages-of-the-chain-of-function-representation">Advantages of the chain of function representation<a class="headerlink" href="#advantages-of-the-chain-of-function-representation" title="Permanent link">#</a></h2>
 <p>The chain of function representation makes it possible to understand what is going on in the various layers. Indeed, the three transformations of the input signal Z<sub>i</sub> into Z<sub>i+1</sub> (change of space, translation and filtering) opens the way to less "neural-inspired" design and more "efficient engineering-designed" networks (are they neural anymore?).</p>
 <p>Indeed a standard artificial neural network can be represented like follows:</p>
 <p><img alt="Standard structure of the artificial neural network" src="../../yed/ann-structure.png" /></p>
@@ -607,7 +607,7 @@
 <p>In a certain way, a CNN is a specific architecture of treatments used for a specific purpose which is image classification. We see that the part of the neural network is decreasing to the benefit of more classic processing (filtering and subsampling).</p>
 <p>This enforces the vision that the more we know the data we are talking about, the more we can create relevant simulation programs.</p>
 <hr />
-<h2 id="bibliography">Bibliography</h2>
+<h2 id="bibliography">Bibliography<a class="headerlink" href="#bibliography" title="Permanent link">#</a></h2>
 <ul>
 <li>(1986) Parallel distributed processing (PDP) - vol 1 &amp; 2 - McClelland et al. - MIT Press. <a href="https://stanford.edu/~jlmcc/papers/PDP/">Link</a>.</li>
 <li>(1997) An introduction to neural networks - Gurney. <a href="https://www.inf.ed.ac.uk/teaching/courses/nlu/assets/reading/Gurney_et_al.pdf">Link</a>.</li>

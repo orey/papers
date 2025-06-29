@@ -280,7 +280,7 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="a-simple-meta-model-for-portfolio-management">A Simple Meta-Model for Portfolio Management</h1>
+<h1 id="a-simple-meta-model-for-portfolio-management">A Simple Meta-Model for Portfolio Management<a class="headerlink" href="#a-simple-meta-model-for-portfolio-management" title="Permanent link">#</a></h1>
 <p><img alt="Portfolio image" src="../../images/portfolio.jpg" /></p>
 <p><em>Image courtesy of freedigitalphotos.net</em>.</p>
 <p>One of the main problems of companies is to manage many IT projects at the same time. Most often, the companies facing this problem are managing project portfolios.</p>
@@ -292,7 +292,7 @@
 </ul>
 <p>This article presents a very simple method to use to address all those points. We will present the original version of the meta-model. An <a href="../archimate-intro/">Archimate</a> version of this model will be presented in another article.</p>
 <p>This method mostly targets enterprise or IT architects, program managers or project portfolio managers. Due to its simplicity, many other profiles can use it.</p>
-<h2 id="meta-model-presentation">Meta-Model Presentation</h2>
+<h2 id="meta-model-presentation">Meta-Model Presentation<a class="headerlink" href="#meta-model-presentation" title="Permanent link">#</a></h2>
 <p>The first objective is to formalize the client of the IT project. Each organization has several departments in which we have several different customers.</p>
 <p>Our first artifact type will be <code>Organization</code>. We will assume that every organization can include several other organizations. Each organization will also have a customer name as an attribute.</p>
 <p>When the projects intentions are declared, the materials that are produced by the various customers inside the same organization will generally be a list of many projects, with a project name and a more or less developed functional description.</p>
@@ -314,10 +314,10 @@
 </ul>
 <p>The resulting meta-model is presented on the following figure.</p>
 <p><img alt="Image representing the meta model" src="../../yed/portfolio.png" /></p>
-<h2 id="methodology">Methodology</h2>
+<h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">#</a></h2>
 <p>Let's suppose we use this model during the budgeting process that usually happens once a year in companies. Budget time is often the time for difficult choices.</p>
 <p>The following method is easy to use, can neutralize affects and help the top level management to choose between projects and to create a feasible roadmap within the limits of a feasible budget.</p>
-<h3 id="step-1-accept-all-project-requests-and-identify-functions">Step 1: Accept All Project Requests and Identify Functions</h3>
+<h3 id="step-1-accept-all-project-requests-and-identify-functions">Step 1: Accept All Project Requests and Identify Functions<a class="headerlink" href="#step-1-accept-all-project-requests-and-identify-functions" title="Permanent link">#</a></h3>
 <p>The first step is consisting in gathering all projects intentions from all organizations.</p>
 <p>We will analyze organization per organization. For each customer within a particular organization, the project intentions are gathered.</p>
 <p>The objective is to get the best functional description of the requirements possible and to identify the required functions. Very often, the requirements are a list of features (warning: some of them may already have been implemented without the customer to know about it).</p>
@@ -328,7 +328,7 @@
 <li>Analyze his requirements along with all other requirements and projects and do our best to develop what is required;</li>
 <li>Provide a detailed feedback on the demands when all demands have been captured.</li>
 </ul>
-<h3 id="step-2-identify-common-functions-to-highlight-dependencies">Step 2: Identify Common Functions to Highlight Dependencies</h3>
+<h3 id="step-2-identify-common-functions-to-highlight-dependencies">Step 2: Identify Common Functions to Highlight Dependencies<a class="headerlink" href="#step-2-identify-common-functions-to-highlight-dependencies" title="Permanent link">#</a></h3>
 <p>Several customers could have defined different projects that are using the same subset of functions. Identifying those functions is very important, this for several reasons:</p>
 <ul>
 <li>To avoid several projects to develop several times the same function, or worse, variations of the same function;</li>
@@ -349,7 +349,7 @@
 </li>
 </ul>
 <p>Functions, once identified, should be assigned with a number characterizing the number of projects that require them. The highest number will lead the global roadmapping exercise. We will call this number the <em>dependency number</em>.</p>
-<h3 id="step-3-associate-functions-to-applications">Step 3: Associate Functions to Applications</h3>
+<h3 id="step-3-associate-functions-to-applications">Step 3: Associate Functions to Applications<a class="headerlink" href="#step-3-associate-functions-to-applications" title="Permanent link">#</a></h3>
 <p>This is a back office step that will be done between IT people, most of the time by architects. It is time to review the main functions of the existing applications to be accurate in the exercise.</p>
 <p>Functions will be classified into 3 categories:</p>
 <ol>
@@ -359,14 +359,14 @@
 </ol>
 <p>The two last steps can give birth to more advanced architecture studies. Covering this topic is not in the scope of this article, but we can insist on leading careful analysis, because function misplacement is a problem that will cause painful and costly problems for years if not for decades.</p>
 <p>All the functions that are not in existing applications should be gathered and analyzed as a whole to determine the opportunity of developing new applications.</p>
-<h3 id="step-4-analyze-the-roadmap-of-each-application-size-it-roughly-and-compare-with-the-skills-available">Step 4: Analyze the Roadmap of Each Application, Size it Roughly and Compare With The Skills Available</h3>
+<h3 id="step-4-analyze-the-roadmap-of-each-application-size-it-roughly-and-compare-with-the-skills-available">Step 4: Analyze the Roadmap of Each Application, Size it Roughly and Compare With The Skills Available<a class="headerlink" href="#step-4-analyze-the-roadmap-of-each-application-size-it-roughly-and-compare-with-the-skills-available" title="Permanent link">#</a></h3>
 <p>Once all functions were assigned to applications, we can size them roughly and have a view of the roadmap of each application. For sure, this roadmap is still theoretical and the pure consequence of the customer's requirements.</p>
-<h4 id="the-case-of-application-maintenance-and-evolution">The Case of Application Maintenance and Evolution</h4>
+<h4 id="the-case-of-application-maintenance-and-evolution">The Case of Application Maintenance and Evolution<a class="headerlink" href="#the-case-of-application-maintenance-and-evolution" title="Permanent link">#</a></h4>
 <p>All functions of an existing application can be prioritized in the best order of feasibility to create a first credible application roadmap, that is compliant with technical constraints.</p>
 <p>At this stage, we can also identify the functions that are nice to have compared to the ones that are must haves. This classification, even if it can be debated with the business may lead to some negotiation margins during the year to come.</p>
 <p>The skills available for each application is important because it will determine the real feasibility of the roadmap per application: We mean IT skills (project manager, product owner, developer, QA) but also business skills.</p>
 <p>Indeed, in that phase, we can identify the bottlenecks in terms of IT people, when not enough people are skilled to develop the expected application roadmap. Depending on the global priorities of the company, it is possible in that phase to plan people transfer, trainings or recruitments.</p>
-<h4 id="the-case-of-new-applications">The Case of New Applications</h4>
+<h4 id="the-case-of-new-applications">The Case of New Applications<a class="headerlink" href="#the-case-of-new-applications" title="Permanent link">#</a></h4>
 <p>Those projects are always more risky than the previous ones.</p>
 <p>In some cases, it is obvious for the customer that the new requirements will lead to a new application. In some other cases, it is not. Those cases must be dealt with carefully because the customer may argue that the new requirements are part of an existing application. In those cases, the objective is to avoid function misplacement.</p>
 <p>However, it is more difficult to create a new application:</p>
@@ -376,14 +376,14 @@
 <li>The business expert(s) has to be named.</li>
 </ul>
 <p>Some business people may be a bit worried about the application creation projects because they cause HR troubles and they can face more delays or failures than evolution projects.</p>
-<h4 id="end-of-the-phase">End of the Phase</h4>
+<h4 id="end-of-the-phase">End of the Phase<a class="headerlink" href="#end-of-the-phase" title="Permanent link">#</a></h4>
 <p>At the end of the step 4, we should have:</p>
 <ul>
 <li>All functions identified;</li>
 <li>All application roadmap sized;</li>
 <li>All HR requirements.</li>
 </ul>
-<h3 id="step-5-introduction-of-dependencies-to-create-project-visions">Step 5: Introduction of Dependencies to Create Project Visions</h3>
+<h3 id="step-5-introduction-of-dependencies-to-create-project-visions">Step 5: Introduction of Dependencies to Create Project Visions<a class="headerlink" href="#step-5-introduction-of-dependencies-to-create-project-visions" title="Permanent link">#</a></h3>
 <p>To determine which projects to do first in the project portfolio, we need to take the reusable functions with the highest dependency number, in order to schedule them first.</p>
 <p>Then, the purpose is to play with the constraints to determine the less worst global path considering:</p>
 <ul>
@@ -394,19 +394,19 @@
 <p>Generally, the functions with the highest dependency number will drive the roadmap. That means that a function will be develop if and only if it is in the same project than a function with a high dependency number. That means also that generally a lot of new functions required by the business will not be able to be developed in the coming year, just because they are not part of an "important" project.</p>
 <p>Indeed, this method enables to show to the top level management what is important to the company throughout the functions that are required by many projects (i.e. that have the highest dependency numbers).</p>
 <p>Once everything is done, the exercise can be redone if the budget is bigger or lower in some parts.</p>
-<h2 id="limits-of-the-method">Limits of the Method</h2>
+<h2 id="limits-of-the-method">Limits of the Method<a class="headerlink" href="#limits-of-the-method" title="Permanent link">#</a></h2>
 <p>We can argue that the functions with the highest dependency numbers may not be the most crucial functions. That can be true.</p>
 <p>We can use some tricks in using several levels of functions if needed. Indeed, a function (level 1) required by a certain project could be divided into 3 functions of a smaller granularity (level 2). The level 2 functions could be the functions implemented by the applications. With this model adjustment, we can have a high level view of the function with "project functions" (level 1) and an IT view of functions (level 2).</p>
 <p>The artifact type <code>Function</code> must then be able to aggregate a list of <code>Function</code>s. We let the reader update the meta-model.</p>
-<h2 id="what-tools-can-help">What Tools Can Help?</h2>
-<h3 id="yed">Yed</h3>
+<h2 id="what-tools-can-help">What Tools Can Help?<a class="headerlink" href="#what-tools-can-help" title="Permanent link">#</a></h2>
+<h3 id="yed">Yed<a class="headerlink" href="#yed" title="Permanent link">#</a></h3>
 <p>When this method was used for the first time, <a href="https://www.yworks.com/products/yed">Yed</a> was the tool used. A Yed model was realized per organization.</p>
 <p>The advantage of Yed is its simplicity and its powerful set of graph layout algorithms. The drawback of Yed is when the number of projects is big (we had to deal with the Digital Division and their 130 projects), the model is hardly usable.</p>
-<h3 id="emf-and-sirius">EMF and Sirius</h3>
+<h3 id="emf-and-sirius">EMF and Sirius<a class="headerlink" href="#emf-and-sirius" title="Permanent link">#</a></h3>
 <p>Indeed, when the number of projects is high, a multiple view design tool is required. A possible option is to create and <a href="https://en.wikipedia.org/wiki/Eclipse_Modeling_Framework">EMF</a> model and to create the edition views with <a href="http://www.eclipse.org/sirius/">Sirius</a>. You can also use <a href="http://www.metacase.com/">MetaEdit+</a> that is a powerful metamodeler.</p>
-<h3 id="roadmapping-with-archimate">Roadmapping With Archimate</h3>
+<h3 id="roadmapping-with-archimate">Roadmapping With Archimate<a class="headerlink" href="#roadmapping-with-archimate" title="Permanent link">#</a></h3>
 <p><a href="../archimate-intro/">Archimate</a> is probably the best language to realize this kind of portfolio management. We will explain in a bit more details a possible use of Archimate enterprise architecture modeling language for portfolio roadmapping in another article.</p>
-<h2 id="conclusion">Conclusion</h2>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">#</a></h2>
 <p>With this meta-model, it is possible to create and operate a feasible, logic and auditable project portfolio and to have explanations about the constraints and the process of deciding what project should be done in priority.</p>
 <p>Most often, this kind of tools pacifies the battleground.</p>
 <p>Even if projects can go wrong during the year to come, with this method, many problems will have been anticipated and will, as per magic, not occur during the year.</p>

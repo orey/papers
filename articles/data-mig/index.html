@@ -272,9 +272,9 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="semantic-data-migration-project">Semantic data migration project</h1>
-<h2 id="first-research-elements-2018-2020">First research elements (2018-2020)</h2>
-<h3 id="why">Why?</h3>
+<h1 id="semantic-data-migration-project">Semantic data migration project<a class="headerlink" href="#semantic-data-migration-project" title="Permanent link">#</a></h1>
+<h2 id="first-research-elements-2018-2020">First research elements (2018-2020)<a class="headerlink" href="#first-research-elements-2018-2020" title="Permanent link">#</a></h2>
+<h3 id="why">Why?<a class="headerlink" href="#why" title="Permanent link">#</a></h3>
 <p>Arguments for using the semantic graph technology to complex data conversion:</p>
 <ul>
 <li>It is relatively easy to turn whatever table into sets of triples.</li>
@@ -283,20 +283,20 @@
 <li>The semantic databases (For instance AllegroGraph or Apache Jena) are working in an incremental way: if a triple already exists, the attempt to import it again will do nothing, which "by design" eliminates redundant information.</li>
 <li>Sparql enables easy graph transformations, first of all to visualize data (Gruff on AllegroGraph is a good triplestore visualization tool), and then to transform them.</li>
 </ul>
-<h3 id="timed-of-life-cycled-data">Timed of life-cycled data</h3>
+<h3 id="timed-of-life-cycled-data">Timed of life-cycled data<a class="headerlink" href="#timed-of-life-cycled-data" title="Permanent link">#</a></h3>
 <p>Data versions (being time-based versions or life-cycle versions) can be managed with a link timestamp or a link version stamp. The timestamp relation will have to be a <code>rdfs:SubClassOf</code> the theoretical link type.</p>
-<h3 id="basic-semantic-graph-transformation-in-work">Basic semantic graph transformation (in work)</h3>
+<h3 id="basic-semantic-graph-transformation-in-work">Basic semantic graph transformation (in work)<a class="headerlink" href="#basic-semantic-graph-transformation-in-work" title="Permanent link">#</a></h3>
 <p>In the context of <a href="../graph-transfo/">graph transformations</a>, the page <a href="../basic-semantic-graph-transformations/">Basic semantic graph transformations</a> aims at defining a set of basic graph transformations.</p>
-<h3 id="industry-data">Industry data</h3>
+<h3 id="industry-data">Industry data<a class="headerlink" href="#industry-data" title="Permanent link">#</a></h3>
 <p>The page <a href="../industry-data/">Graphs and semantic data in industry</a> talks about the opportunity of using RDF approaches to convert efficiently industrial data.</p>
-<h2 id="presentation-to-cnrs-madics-conference-in-rennes-in-2019">Presentation to CNRS Madics conference in Rennes in 2019</h2>
+<h2 id="presentation-to-cnrs-madics-conference-in-rennes-in-2019">Presentation to CNRS Madics conference in Rennes in 2019<a class="headerlink" href="#presentation-to-cnrs-madics-conference-in-rennes-in-2019" title="Permanent link">#</a></h2>
 <p><a name="madics"></a></p>
 <p><img alt="Madics 2019" src="../../images/madics2019.png" /></p>
 <p>The aerospace industry is managing aircraft products with PLM (product lifecycle management) software. Most of the time, the PLM software used are very customized and very old. Moreover in the day to day life, people are using a mix of various PLM systems and Excel spreadsheets. In order to change the business practices for the 3 core businesses of the aerospace companies (design office, manufacturing, support and services), the PLM backbones must evolve on two dimensions: first they must gather all data spread across various tools per business, and second they must integrate the three businesses together (digital continuity) in order to perform efficient concurrent engineering and gain on lead times. New end to end PLM backbones are available on the market but the migration to those products is slowed down by the lack of method and tools to properly migrate the data. The main constraint of PLM data migration is to be able to keep all the semantic links of past data into the new system, because the aircraft certification is tied to those links and data. At the intersection of all those constraints, the semantic web technologies (RDF/RDFS, Triplestores, SPARQL-based rules, etc.) can help Airbus to convert its core industrial data to migrate them into new generations of PLM systems.</p>
 <p>The presentation exposes a concrete industrial case and explain the status of the works and the tool chain involved in those works.</p>
 <p><a href="../../pdf/20190628-UsingSemanticWebTechnologiesForIndustrialDataMigration-ORey-v1-0.pdf">Presentation</a></p>
-<h2 id="a-systematic-migration-process-2020-">A systematic migration process (2020-)</h2>
-<h3 id="the-6-steps-of-transformation">The 6 steps of transformation</h3>
+<h2 id="a-systematic-migration-process-2020-">A systematic migration process (2020-)<a class="headerlink" href="#a-systematic-migration-process-2020-" title="Permanent link">#</a></h2>
+<h3 id="the-6-steps-of-transformation">The 6 steps of transformation<a class="headerlink" href="#the-6-steps-of-transformation" title="Permanent link">#</a></h3>
 <p>The process of data migration is linked to the transformation of ontologies.</p>
 <p>The migration process that we target is the following:</p>
 <ol>
@@ -308,7 +308,7 @@
 <li><u>Convert source data into target data</u>.</li>
 </ol>
 <p><img alt="Steps of data migration" src="../../yed/semantic-migration-process.png" /></p>
-<h3 id="data-representation-is-relative">Data representation is relative</h3>
+<h3 id="data-representation-is-relative">Data representation is relative<a class="headerlink" href="#data-representation-is-relative" title="Permanent link">#</a></h3>
 <p>This process is based on the facts that:</p>
 <ul>
 <li>The same reality can be modeled differently,</li>

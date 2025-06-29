@@ -276,15 +276,15 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="grammar-graph-transformation">Grammar graph transformation</h1>
+<h1 id="grammar-graph-transformation">Grammar graph transformation<a class="headerlink" href="#grammar-graph-transformation" title="Permanent link">#</a></h1>
 <p>Graphs in general, and semantic graphs in particular, can be used to migrate very efficiently data from one format to another.</p>
-<h2 id="grammar">Grammar</h2>
+<h2 id="grammar">Grammar<a class="headerlink" href="#grammar" title="Permanent link">#</a></h2>
 <p>By grammar, we mean several possible things:</p>
 <ol>
 <li>A description of the schema of a RDBMS, especially of tables, specifying the type of each table and the types of each columns. In that case, the grammar corresponds to the information contained in the database schema.</li>
 <li>The grammar that we can have to generate triples from a structured table format source. See <a href="../industry-data/" title="industry data">the page on industry data</a> for a sample. In that page, the description of the types of all data in a particular semantic space can be called the "grammar" of the semantic space.</li>
 </ol>
-<h2 id="transforming-grammars-with-reusable-basic-graph-transformations">Transforming grammars with reusable basic graph transformations</h2>
+<h2 id="transforming-grammars-with-reusable-basic-graph-transformations">Transforming grammars with reusable basic graph transformations<a class="headerlink" href="#transforming-grammars-with-reusable-basic-graph-transformations" title="Permanent link">#</a></h2>
 <p>Grammars can be expressed in graphs.</p>
 <p>Let's take the very simple example of the following RDMS schema (see Figure 1).</p>
 <p><img alt="Grammar graph transformation 01" src="../../yed/grammar-graph-transformation-01.png" /></p>
@@ -301,10 +301,10 @@ Tn attribute Cn .
 Cn SubClassOf Typen .
 
 </code></pre>
-<h2 id="basic-rdbms-schema-transformation-in-a-multi-attributes-graph-database">Basic RDBMS schema transformation in a multi-attributes graph database</h2>
+<h2 id="basic-rdbms-schema-transformation-in-a-multi-attributes-graph-database">Basic RDBMS schema transformation in a multi-attributes graph database<a class="headerlink" href="#basic-rdbms-schema-transformation-in-a-multi-attributes-graph-database" title="Permanent link">#</a></h2>
 <p>The following transformations are basic RDBMS schema transformations.</p>
 <p>Note that graph transformations are not commutative and their order is important.</p>
-<h3 id="transforming-foreign-key-into-a-relationship">Transforming foreign key into a relationship</h3>
+<h3 id="transforming-foreign-key-into-a-relationship">Transforming foreign key into a relationship<a class="headerlink" href="#transforming-foreign-key-into-a-relationship" title="Permanent link">#</a></h3>
 <p>Let's suppose <code>Ck</code> is a foreign key of <code>Table1</code> to <code>Table2</code>, referencing column <code>Kl</code>.</p>
 <pre><code># Before
 T1 attribute Ck .
@@ -326,7 +326,7 @@ T2 attribute Kl .
 Kl SubClassOf Typel .
 </code></pre>
 <p>The predicate <code>foreign_key</code> will enable real data transformation later.</p>
-<h3 id="simple-class-split-and-simple-class-merge">Simple class split and simple class merge</h3>
+<h3 id="simple-class-split-and-simple-class-merge">Simple class split and simple class merge<a class="headerlink" href="#simple-class-split-and-simple-class-merge" title="Permanent link">#</a></h3>
 <p>Those graph transformations are exploiting the <code>1-1</code> relationship. In case of split, semantically the table <code>T</code> aggregates 2 concepts that are implicitly linked together.</p>
 <p>It is possible to reorder the attributes in that case. Let's consider a table <code>T</code> with 4 attributes <code>C1</code>, <code>C2</code>, <code>C3</code> and <code>C4</code>.</p>
 <p>The graph transformation will create a new resource <code>T'</code> and use a new semantic predicate (here <code>linked_to</code>) so that:</p>
@@ -376,7 +376,7 @@ T attribute C3 .
 T attribute C4 .
 </code></pre>
 <p>For sure, if <code>T'</code> is removed, we have to ensure before that, in the semantic space, the type is not required elsewhere.</p>
-<h3 id="complex-class-split">Complex class split</h3>
+<h3 id="complex-class-split">Complex class split<a class="headerlink" href="#complex-class-split" title="Permanent link">#</a></h3>
 <p>One problem of table design is that we have sometimes different types hiding in the same table. Those cases are frequent in RDBMS and can be due to:</p>
 <ul>
 <li>A compromise between the object oriented approach and the RDMS (see Figure 2);</li>
@@ -387,7 +387,7 @@ T attribute C4 .
 <p>Figure 2: Many types hiding in a table</p>
 <p>The class split will exhibit new concepts <code>Type1</code>, <code>Type2</code> and <code>Type3</code>, all those concepts not having anymore the attribute of type indication (<code>C2</code> in Figure 2).</p>
 <p>The transformation will have to manage the various values in <code>C2</code> and, depending on those values, choose what attributes to move from one resource to another.</p>
-<h2 id="non-destructiveness-and-changing-the-semantic-domain">Non destructiveness and changing the semantic domain</h2>
+<h2 id="non-destructiveness-and-changing-the-semantic-domain">Non destructiveness and changing the semantic domain<a class="headerlink" href="#non-destructiveness-and-changing-the-semantic-domain" title="Permanent link">#</a></h2>
 <p>If we don't want to be destructive on the original grammar, we might want to contextualize the grammar to a semantic space describing the source world (here the RDBMS world).</p>
 <p>This could be done by using a specific URI prefix, like <code>rdbms</code>.</p>
 <p>The consequence is that we need basic transformations to transform <code>rdbms:Table</code> artifact into <code>graph:Concept</code> artifact, and <code>rdms:attribute</code> into <code>graph:attribute</code>. Those transformations are like "translations".</p>

@@ -274,21 +274,21 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="about-end-to-end-plm">About End-To-End PLM</h1>
+<h1 id="about-end-to-end-plm">About End-To-End PLM<a class="headerlink" href="#about-end-to-end-plm" title="Permanent link">#</a></h1>
 <p><img alt="gears" src="../../images/gears.png" /></p>
 <p>As time goes on, the product lifecycle management (PLM) systems propose more and more functionality, linked together, in platforms that tend to be always bigger with time.</p>
 <p>The increasing size of the PLM platforms, and their objective to take in charge more and more processes, is answering to a dream of many users to have "all data linked together in the same place". If this dream can be true for small products, it seems to us as a dangerous chimera in the case of complex manufacturing products such as aircrafts.</p>
 <p>In this article, we will explain the core reasons why we don't believe that this model of the "unique backbone" is applicable everywhere. Indeed, when changing semantic domains, the data needs to be adapted, their lifecycle may change, and the timing of change may be different from one semantic universe to another.</p>
 <p>When the tertiary sector takes as granted the <a href="https://en.wikipedia.org/wiki/Adapter_pattern">adapter pattern</a> (on which we will come back) for a long time, some PLM vendors are selling a model where the adapter can be reduced to <em>links between data</em>.</p>
 <p>This article is explaining the reasons why, in complex cases, this simplistic approach may appear as very dangerous.</p>
-<h2 id="plm-nature-of-data-and-adaptation">PLM, nature of data and adaptation</h2>
+<h2 id="plm-nature-of-data-and-adaptation">PLM, nature of data and adaptation<a class="headerlink" href="#plm-nature-of-data-and-adaptation" title="Permanent link">#</a></h2>
 <p>We explained in a <a href="../about-plm/" title="About PLM">recent article</a> what we consider as being the basic functions of a PLM. In that article, we showed that, data being represented as a graph, it appears as quite easy to interconnect whatever object of a certain type to whatever other object of any other type with an instance of a link type.</p>
 <p>If we follow this statement, we quickly end up with the "no-limit approach" that could be be stated as follows: <em>As long as data can be connected together, then we can manage them in the same software</em>.</p>
 <p>However, contrary to what could appear, this model of linking data together has its limits. Especially, in many cases, representing dependencies between business domains as links at the data level are a very bad representation of reality.</p>
 <p>In order to understand correctly the problem, we first recommended to have a look at <a href="../data-interop/" title="The real nature of data">the real nature of data</a> article. In this article, we explain that data are created by business processes and that the way they are structured is dependant on the business domain. When data must flow from a business domain to another business domain, it must be "adapted <em>out</em>" the source business domain (transformed and reduced to a format that will be understandable by both the initiator and the receiver). Then the receiver will "adapt the data <em>in</em>" its own business universe. Then the receiver will be able to use the data.</p>
 <p>In our articles, we often name the business domains "semantic domains", because when we change a data from business domain, it is generally not <em>meaning exactly</em> the same thing, and it is often not structured in the same way.</p>
 <p>For instance, if a "part" is created in the engineering semantic domain and sent to the support, this engineering part may be transformed into several "support parts" that will have support attributes and be localized at different use points. Concerning the engineering data attached to the part, most of them won't be useful for the support, even if they need to be secured in engineering system. For sure, the bridges between systems must ensure some traceability that enables to track back the same entity between systems. But that traceability requirement does not mean the data are "the same".</p>
-<h2 id="a-sample-data-delivery-from-engineering-to-support">A sample: Data delivery from engineering to support</h2>
+<h2 id="a-sample-data-delivery-from-engineering-to-support">A sample: Data delivery from engineering to support<a class="headerlink" href="#a-sample-data-delivery-from-engineering-to-support" title="Permanent link">#</a></h2>
 <p>Data in the real world are not perfect, especially in the industrial world. Moreover, they obey to the constraints of each category of users.</p>
 <p>Let's take an example and examine the sample case of data delivery from engineering to support. As the word "delivery" indicates, we suppose that the engineering is doing a conscious act of delivery, which corresponds generally to a certain state of data, let's say "release".</p>
 <p>For the sake of the sample, we will take an engineering  delivery granularity that is not at part level but at design solution (DS) level, a design solution being a set of related parts answering to a certain function. When the engineering office works on a DS, this DS is "in work", and when the DS is validated, it is "released". In terms of configuration management, the design office will manage the applicability of the DS with the formalization of a set of products, identified by their serial number (S/N).</p>
@@ -305,9 +305,9 @@
 <p>In this simplistic sample, we can see that for good reasons, the support will build a specific "view" based on engineering data. But the term "view" is misleading. Instead, we should use the term of "data model" and rephrase: the support will build a specific data model based on information coming from the engineering department.</p>
 <p>When the <code>DS-01</code> which is actually <code>DS-01-V1</code>, used on products in range <code>[10, 100[</code>, will evolve in <code>DS-01-V2</code>, used on products in range <code>[101, 200[</code>, the support may have to manage the "same parts" than in the first release of the DS, but in another context.</p>
 <p><em>Reprendre ici</em></p>
-<h2 id="cm-article-link">CM article link</h2>
+<h2 id="cm-article-link">CM article link<a class="headerlink" href="#cm-article-link" title="Permanent link">#</a></h2>
 <p>In a previous article about <a href="../conf-mgt/">configuration management in PLMs</a>, we explained </p>
-<h2 id="remaining-of-a-forum">Remaining of a forum</h2>
+<h2 id="remaining-of-a-forum">Remaining of a forum<a class="headerlink" href="#remaining-of-a-forum" title="Permanent link">#</a></h2>
 <p>However, what does not convince me fully is that the OSLC approach is still at the data level. If this statement is true, if links can be done at the data level between various data models in various systems, then conceptually it pushes again for more monoliths (super PLMs that can manage several business domains).</p>
 <p>Conceptually, the semantic web is using just a small subset of the possible distributed IT architectures by establishing a global data model that is spread amongst systems, but is still representing the reality under the form of a global data model.</p>
 <p>The fact is the tertiary sector is not working on this paradigm: data are spread between systems but there are many places where data are transformed from one semantic domain to another one, with business rules, aka treatments, aka programs with functions. I try to introduce this concept here: https://orey.github.io/papers/articles/data-interop/</p>
@@ -324,7 +324,7 @@
 <p>Modeling the reality is a "domain-specific" activity and this is not because various domains can agree on an exchange protocol that their various semantics can be aggregated in a single model of linked data.</p>
 <p>I intend to bring more arguments of this fact in my next article.</p>
 <p>In all cases, it seems to me that this is a very interesting and crucial topic for the industry.</p>
-<h2 id="lidee-des-asd">L'idée des ASD</h2>
+<h2 id="lidee-des-asd">L'idée des ASD<a class="headerlink" href="#lidee-des-asd" title="Permanent link">#</a></h2>
 <p><strong>L'autre idée évidemment est que le PLM n'est plus générique mais complètement adapté à un business domain - d'où l'idée des ASD</strong></p>
 <hr />
 <p>This section will try to explain, in simple words, how the PLM plays a central role in the transformation of the aerospace industry in the last decades.</p>
@@ -420,7 +420,7 @@
 <p>Out of this core scope, \ah\ should, for sure, participate to the investigations (so-called ``incubators'') that are put in place at the \ag\ level, in the DDMS program.</p>
 <p>\styledreco{core}</p>
 <p>That means: Catia 3DX, Enovia 3DX (variant management, configuration management, change management) and Delmia 3DX\footnote{The support functions of \tdx\ (that could one day enable to decommission ILS H175) will not be ready before 2021 best case scenario.}.</p>
-<h2 id="the-three-business-domains-of-the-industry">The three business domains of the industry</h2>
+<h2 id="the-three-business-domains-of-the-industry">The three business domains of the industry<a class="headerlink" href="#the-three-business-domains-of-the-industry" title="Permanent link">#</a></h2>
 <p>An industrial company is generally architectured on 3 business domains:</p>
 <ul>
 <li>Engineering Office: Where the products are designed, and certified in some industries;</li>

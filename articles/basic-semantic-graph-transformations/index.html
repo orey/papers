@@ -300,9 +300,9 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="basic-semantic-graph-transformations">Basic semantic graph transformations</h1>
+<h1 id="basic-semantic-graph-transformations">Basic semantic graph transformations<a class="headerlink" href="#basic-semantic-graph-transformations" title="Permanent link">#</a></h1>
 <p>This page is following <a href="../basic-graph-transformations/">Basic graph transformations</a> but with a semantic graph perspective.</p>
-<h2 id="richpoor-level-of-information">Rich/poor level of information</h2>
+<h2 id="richpoor-level-of-information">Rich/poor level of information<a class="headerlink" href="#richpoor-level-of-information" title="Permanent link">#</a></h2>
 <p>A single triple is a "poor piece of information", but other triples with the same subjects can build a rich set of information.</p>
 <p>Poor piece of information: <code>s p o .</code></p>
 <p>Rich piece of information:</p>
@@ -310,7 +310,7 @@
   a S .
 o a O .
 </code></pre>
-<h2 id="time-management">Time management</h2>
+<h2 id="time-management">Time management<a class="headerlink" href="#time-management" title="Permanent link">#</a></h2>
 <p>Rich piece of information: adding time information:</p>
 <pre><code>s p_23DEC2018 o ;
   a S .
@@ -320,7 +320,7 @@ P a Time_Predicate .
 </code></pre>
 <p>This is practical because <code>s P o .</code> can be deduced easily even if <code>s p_23DEC2018 o .</code> is more precise.</p>
 <p>The statement <code>P a Time-Predicate .</code> indicates that P is a time-enabled predicate.</p>
-<h2 id="version-management">Version management</h2>
+<h2 id="version-management">Version management<a class="headerlink" href="#version-management" title="Permanent link">#</a></h2>
 <p>We can have a variation of what we saw with version tagging.</p>
 <pre><code>s p_V2 o ;
   a S .
@@ -328,7 +328,7 @@ o a O .
 p_V2 a P .
 P a Version_Predicate .
 </code></pre>
-<h2 id="managing-life-cycle">Managing life-cycle</h2>
+<h2 id="managing-life-cycle">Managing life-cycle<a class="headerlink" href="#managing-life-cycle" title="Permanent link">#</a></h2>
 <p>Case of subject modification and history keeping.</p>
 <p>Step 1. We have:</p>
 <pre><code>s1 p o .
@@ -354,7 +354,7 @@ s2 P o . // &quot;Rewiring&quot;
 </code></pre>
 <p>But we also encoded a more precise information.</p>
 <p>We could think about removing <code>s1 p o .</code> after <code>s2</code> is created but as the semantic web is a cumulative system, this does not seem very interesting.</p>
-<h2 id="shortcuts">Shortcuts</h2>
+<h2 id="shortcuts">Shortcuts<a class="headerlink" href="#shortcuts" title="Permanent link">#</a></h2>
 <p>Let's consider the pattern:</p>
 <pre><code>q = p(1) o p(2) o ... o p(n)
 </code></pre>
@@ -368,14 +368,14 @@ and s p(1) x(2) .
 </code></pre>
 <p><code>q</code> id just a new "predicate name".</p>
 <p>This can be very useful to present the same reality in another perspective/point of view.</p>
-<h2 id="filters">Filters</h2>
+<h2 id="filters">Filters<a class="headerlink" href="#filters" title="Permanent link">#</a></h2>
 <p>If we have: <code>s p o ; q a .</code></p>
 <p>We can define a subgraph by "removing" the  <code>q</code>  predicate:</p>
 <pre><code>graph(s , depth=1) \ {q} =&gt; s p o .
 </code></pre>
-<h2 id="classical-inferences">Classical inferences</h2>
+<h2 id="classical-inferences">Classical inferences<a class="headerlink" href="#classical-inferences" title="Permanent link">#</a></h2>
 <p>The use of classical inferences is very important also.</p>
-<h2 id="temporal-inferences">Temporal inferences</h2>
+<h2 id="temporal-inferences">Temporal inferences<a class="headerlink" href="#temporal-inferences" title="Permanent link">#</a></h2>
 <p>If we have:</p>
 <pre><code>s p(t1) a .
 s p(t2) b .
@@ -393,13 +393,13 @@ a3 previous a2 .
 =&gt; a3 previous a1 .
 </code></pre>
 <p>Some predicates can have special transitivity features.</p>
-<h2 id="special-predicates">Special predicates</h2>
+<h2 id="special-predicates">Special predicates<a class="headerlink" href="#special-predicates" title="Permanent link">#</a></h2>
 <ul>
 <li>Transitive predicates: <code>a r b .</code> and <code>b r c .</code> =&gt; <code>a r c .</code> </li>
 <li>Commutative predicates: <code>a r b .</code> =&gt; <code>b r a .</code></li>
 <li>Semantic inversion (very used in Owl): <code>p</code> is the inverse of <code>r</code>, so if <code>a r b .</code> =&gt; <code>b p a .</code></li>
 </ul>
-<h2 id="to-do">To do</h2>
+<h2 id="to-do">To do<a class="headerlink" href="#to-do" title="Permanent link">#</a></h2>
 <ul>
 <li>Re-analyze the list notion in the RDF standard</li>
 <li>Re-analyze the Gruf temporal display</li>
