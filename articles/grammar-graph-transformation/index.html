@@ -12,20 +12,12 @@
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
 
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
         <script src="../../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZMZKWJP2V"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-BZMZKWJP2V');
-        </script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
     <body>
@@ -248,7 +240,7 @@
     </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
             <li class="nav-item" data-level="1"><a href="#grammar-graph-transformation" class="nav-link">Grammar graph transformation</a>
@@ -301,6 +293,7 @@ Tn attribute Cn .
 Cn SubClassOf Typen .
 
 </code></pre>
+
 <h2 id="basic-rdbms-schema-transformation-in-a-multi-attributes-graph-database">Basic RDBMS schema transformation in a multi-attributes graph database<a class="headerlink" href="#basic-rdbms-schema-transformation-in-a-multi-attributes-graph-database" title="Permanent link">#</a></h2>
 <p>The following transformations are basic RDBMS schema transformations.</p>
 <p>Note that graph transformations are not commutative and their order is important.</p>
@@ -325,6 +318,7 @@ T1 foreign_key T2 .
 T2 attribute Kl .
 Kl SubClassOf Typel .
 </code></pre>
+
 <p>The predicate <code>foreign_key</code> will enable real data transformation later.</p>
 <h3 id="simple-class-split-and-simple-class-merge">Simple class split and simple class merge<a class="headerlink" href="#simple-class-split-and-simple-class-merge" title="Permanent link">#</a></h3>
 <p>Those graph transformations are exploiting the <code>1-1</code> relationship. In case of split, semantically the table <code>T</code> aggregates 2 concepts that are implicitly linked together.</p>
@@ -354,6 +348,7 @@ T' a Table .
 T' attribute C3 .
 T' attribute C4 .
 </code></pre>
+
 <p>Symmetrically, we have the merge.</p>
 <pre><code># Before
 T attribute C1 .
@@ -375,6 +370,7 @@ T attribute C2 .
 T attribute C3 .
 T attribute C4 .
 </code></pre>
+
 <p>For sure, if <code>T'</code> is removed, we have to ensure before that, in the semantic space, the type is not required elsewhere.</p>
 <h3 id="complex-class-split">Complex class split<a class="headerlink" href="#complex-class-split" title="Permanent link">#</a></h3>
 <p>One problem of table design is that we have sometimes different types hiding in the same table. Those cases are frequent in RDBMS and can be due to:</p>
@@ -425,13 +421,16 @@ T attribute C4 .
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
                 <form>
                     <div class="form-group">
                         <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+                <div id="mkdocs-search-results"></div>
             </div>
             <div class="modal-footer">
             </div>

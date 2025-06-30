@@ -12,20 +12,12 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
 
         <script src="js/jquery-1.10.2.min.js" defer></script>
         <script src="js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZMZKWJP2V"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-BZMZKWJP2V');
-        </script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
     <body class="homepage">
@@ -238,7 +230,7 @@
     </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
             <li class="nav-item" data-level="1"><a href="#olivier-reys-papers" class="nav-link">Olivier Rey's Papers</a>
@@ -295,10 +287,8 @@
 <li><a href="articles/mbse-vs-ea/">Military Frameworks, Systems Engineering and Enterprise Architecture</a></li>
 <li><a href="articles/portfolio/">A Simple Meta-Model for Portfolio Management</a></li>
 <li><a href="articles/archimate-intro/">An Introduction to The Archimate Revolution</a></li>
-<li><a href="articles/archimate-recipes/">Archimate Recipes</a></li>
-</ul>
-<!-- * [About artificial neural networks and machine learning](articles/about-ml.md) -->
-<ul>
+<li><a href="articles/archimate-recipes/">Archimate Recipes</a>
+<!-- * <a href="articles/about-ml.md">About artificial neural networks and machine learning</a> --></li>
 <li><a href="articles/about-rest/">Considerations about Rest and Web Services</a></li>
 <li><a href="articles/graphql-web-services/">GraphQL And Classic Web Services</a></li>
 <li><a href="articles/five-levels/">The Five Levels of Conceptual Maturity for IT Teams</a></li>
@@ -355,13 +345,16 @@
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
                 <form>
                     <div class="form-group">
                         <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+                <div id="mkdocs-search-results"></div>
             </div>
             <div class="modal-footer">
             </div>
@@ -412,6 +405,6 @@
 </html>
 
 <!--
-MkDocs version : 1.4.2
-Build Date UTC : 2025-06-29 19:32:50.835489+00:00
+MkDocs version : 1.1.2
+Build Date UTC : 2025-06-30 21:39:18.684675+00:00
 -->

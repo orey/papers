@@ -12,20 +12,12 @@
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
 
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
         <script src="../../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZMZKWJP2V"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-BZMZKWJP2V');
-        </script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
     <body>
@@ -248,7 +240,7 @@
     </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
             <li class="nav-item" data-level="1"><a href="#uml-to-rdf-considerations" class="nav-link">UML to RDF considerations</a>
@@ -319,6 +311,7 @@ exs:attribute2 a rdf:Property ;
                rdfs:range exs:ClassC .
 
 </code></pre>
+
 <h2 id="second-translation">Second translation<a class="headerlink" href="#second-translation" title="Permanent link">#</a></h2>
 <p>This first translation may be considered as having a slight problem. All new classes could be <code>subClassOf</code> another class, in order to enable reasoning based on sub-classes.</p>
 <p>We could enrich a bit our first translation by adding some lines.</p>
@@ -347,6 +340,7 @@ exs:attribute2 a rdf:Property ;
                rdfs:range exs:ClassC .
 
 </code></pre>
+
 <p>Semantically, the <code>a</code> indicates the real nature of the entity and the <code>rdfs:subClass/PropertyOf</code> its type hierarchy.</p>
 <h2 id="2-kinds-of-attribute-types">2 kinds of attribute types<a class="headerlink" href="#2-kinds-of-attribute-types" title="Permanent link">#</a></h2>
 <p>Attribute types are not homogeneous. For a given attribute <code>exs:att</code>, <code>exs:att rdfs:range rdfs:Class</code> may indicate that we are talking about a link or relationship between two objects, whereas <code>exs:att rdfs:range rdfs:Literal</code> may indicate that we have a real attribute with a literal value.</p>
@@ -380,6 +374,7 @@ exs:attribute2 a rdf:Property ;
                rdfs:domain exs:ClassA ;
                rdfs:range exs:ClassC .
 </code></pre>
+
 <p>The root attribute type for attribute types having a range in <code>rdfs:Literal</code> is <code>ga:attribute</code>, and the root attribute type for attribute types that point to classes is <code>ga:link</code>.</p>
 <p>If we want to be sure that classes are realm classes, and because <code>rdfs:Class</code> maybe sometimes too large, we defined <code>ga:Class</code> as the root type for all classes.</p>
 <p>That provides the following RDFS-based ontology:</p>
@@ -425,6 +420,7 @@ ga:id a ga:attribute ;
       rdfs:range rdfs:Literal .
 
 </code></pre>
+
 <p>Such a grammar is enabling several things:</p>
 <ul>
 <li>Translate UML concepts in semantic web concepts;</li>
@@ -458,13 +454,16 @@ ga:id a ga:attribute ;
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
                 <form>
                     <div class="form-group">
                         <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+                <div id="mkdocs-search-results"></div>
             </div>
             <div class="modal-footer">
             </div>
