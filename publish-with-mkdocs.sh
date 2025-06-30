@@ -11,7 +11,7 @@ git add *
 message=$@
 git commit -a -m "$message"
 git push origin master
-#mkdocs gh-deploy --force
+mkdocs gh-deploy --force
 
 echo "Done"
 
