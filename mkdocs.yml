@@ -5,18 +5,17 @@ site_author: Olivier Rey
 copyright: Copyleft Olivier Rey 2017-2025 - Content 100% human made, 0% AI made - Site licensed under the GNU FDL V3
 theme:
     name: mkdocs
-    analytics:
-        gtag: G-BZMZKWJP2V
-    markdown_extensions:
-        - meta
-        - toc:
-            baselevel: 2
+analytics:
+    gtag: G-BZMZKWJP2V
+markdown_extensions:
+    - meta
+    - toc:
+        permalink: "#"
+            #baselevel: 3
+            #toc_depth: 3
 #google_analytics: ['UA-110156293-1', 'orey.github.io']
 #repo_url: https://github.com/orey/papers/
 #theme: readthedocs
-markdown_extensions:
-    - toc:
-        permalink: "#"
 site_dir: site
 nav:
 - BlogAI:
