@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Olivier Rey">
+        <link rel="canonical" href="https://orey.github.io/papers/blog/corporate-sncs-in-Alcatraz/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Corporate SNCs in Alcatraz - Papers</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Papers</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">BlogAI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../2025/" class="dropdown-item">Year 2025</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">PLM <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/about-plm/" class="dropdown-item">PLM and graph data</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/conf-mgt/" class="dropdown-item">Configuration management of industrial products in PDM/PLM</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/spreadsheet-and-PLM/" class="dropdown-item">The four core functions showing you need a PLM</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/data-mig/" class="dropdown-item">Semantic data migration in Industry</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/industry-data/" class="dropdown-item">Reflections on industry data</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">IT, Modeling & Data <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/legends-of-it/" class="dropdown-item">Legends of IT</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/data-interop/" class="dropdown-item">The real nature of data</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/mbse-vs-ea/" class="dropdown-item">Military frameworks, systems engineering and enterprise architecture</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/portfolio/" class="dropdown-item">A Simple Meta-Model for Portfolio Management</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/archimate-intro/" class="dropdown-item">An Introduction to The Archimate Revolution</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/archimate-recipes/" class="dropdown-item">Archimate Recipes</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/about-rest/" class="dropdown-item">Considerations About Rest And Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graphql-web-services/" class="dropdown-item">GraphQL And Classic Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/five-levels/" class="dropdown-item">The Five Levels of Conceptual Maturity for IT Teams</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/the-v2-vortex/" class="dropdown-item">The V2 Vortex</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/various-stages/" class="dropdown-item">The Various Stages of Digital Transformation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About Graphs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/first-article/" class="dropdown-item">Graph-oriented programming</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/staf-icgt2018/" class="dropdown-item">Conference at the STAF/ICGT 2018 in Toulouse</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graphapps/" class="dropdown-item">GraphApps project page</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-oriented-pl/" class="dropdown-item">Towards a graph-oriented programming language?</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/index-research/" class="dropdown-item">Graph transformation index page</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-transfo/" class="dropdown-item">Graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-interop/" class="dropdown-item">A general interoperability model using graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/basic-graph-transformations/" class="dropdown-item">Basic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/basic-semantic-graph-transformations/" class="dropdown-item">Basic semantic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/DSL-for-graph-topology-checks/" class="dropdown-item">DSL for graph topology check</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-transformation-applicability/" class="dropdown-item">Graph transformation applicability</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/grammar-graph-transformation/" class="dropdown-item">Grammar of graph transformation</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/rdf-design-patterns/" class="dropdown-item">UML to RDF considerations</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Various <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/zenon-lumiere/" class="dropdown-item">Paradoxe de Zénon et dépassement de la vitesse de la lumière</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/relativite/" class="dropdown-item">A propos de la relativité générale</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/cartan/" class="dropdown-item">Einstein, Cartan et la géométrie différentielle</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/resources/" class="dropdown-item">Resources</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../about/about/" class="dropdown-item">Author</a>
+</li>
+                                    
+<li>
+    <a href="../../about/LICENSE/" class="dropdown-item">License</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#corporate-sncs-in-alcatraz" class="nav-link">Corporate SNCs in Alcatraz</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#introduction" class="nav-link">Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#from-commodity-services-to-strategic-gamble" class="nav-link">From commodity services to strategic gamble</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#bet-and-pray" class="nav-link">Bet and pray</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="corporate-sncs-in-alcatraz">Corporate SNCs in Alcatraz<a class="headerlink" href="#corporate-sncs-in-alcatraz" title="Permanent link">#</a></h1>
+<p>I want you to write an article for me.</p>
+<hr />
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h2>
+<p>I defined in a previous article the notion of SNC, source of new content. In a world where data to train the LLMs are becoming crucial, SNCs are what the LLM providers should fight for.</p>
+<p>For the public SNCs, we have social networks. Press can be read by anyone and so is not a discriminant even if all LLMs should have it (provided it is true content and not comments on true content).</p>
+<h2 id="from-commodity-services-to-strategic-gamble">From commodity services to strategic gamble<a class="headerlink" href="#from-commodity-services-to-strategic-gamble" title="Permanent link">#</a></h2>
+<p>For the private SNCs, my theory is that enterprises that chose the Cloud were already locked by a provider, like Microsoft with Office 365 or Google with Google Workspace. But, until now, those providers were providing commodities only (mail, office software). Even their execution platforms such as Azure or Google Cloud Platform are commodities because I can run almost everything on whatever platform.</p>
+<p>But, with BigAI, things are different because BigAI will be integrated natively inside enterprise content.</p>
+<p>This generates 2 phenomenons:</p>
+<ol>
+<li>
+<p>The enterprise is completely locked into the Cloud platform, due to AI integration into its content, and its hopes of getting out are the same as a prisoner in Alcatraz.</p>
+</li>
+<li>
+<p>The productivity enhancement of the company is depending on the capability of the Cloud provider to provide up-to-date AI, and upgraded AI services.</p>
+</li>
+</ol>
+<p>Let us suppose that tomorrow, BigAI Corp. proposes a brand new technology that is one million times more powerful than the competition. The companies being hosted on their "legacy-AI-Powered-Cloud" will quickly be out of business compared to companies hosted by BigAI.</p>
+<h2 id="bet-and-pray">Bet and pray<a class="headerlink" href="#bet-and-pray" title="Permanent link">#</a></h2>
+<p>You can go back from the Cloud provided you use commodity services. But companies will have a lot of trouble going back from the AI-Powered-Cloud. Their choice then becomes a gamble and a prayer. Let my Cloud provider be able to produce up-to-date AI services... or I will loose the competition.</p>
+<p>Indeed, this model is, once again, reversing the traditional habit of the customer/supplier relationship. You could say that, traditionally, a customer decides and the supplier provides.</p>
+<p>But now, in the AI-Powered-Cloud era, it is as if companies are horses in a specific racing stable.</p>
+<p>They only have the means of their stable. So, they are not anymore fully in control of their destiny to win the competitive race.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyleft Olivier Rey 2017-2025 - Site licensed under the GNU FDL V3</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
