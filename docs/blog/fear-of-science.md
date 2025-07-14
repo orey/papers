@@ -1,61 +1,7 @@
 
-## Fear of Science?
+# Fear of science?
 
-### Are There Thinkers in Silicon Valley?
-
-![Peter Thiel.png](../images/Peter Thiel.png)
-
-Peter Thiel continues to be a paradox: a billionaire investor who also fancies himself a philosopher. His writings and interviews often raise uncomfortable questions—questions that seem absent from European intellectual circles. That alone says something unsettling about the current state of Western thought:
-
-* He is an American investor who dares to think deeply about technology.
-* He frequently quotes French philosopher [René Girard](https://en.wikipedia.org/wiki/Ren%C3%A9_Girard), particularly on mimetic desire.
-* He speaks about Europe, its decline, and contrasts it with American ambition.
-
-Where are the French or German philosophers to challenge him? Why is it a Silicon Valley figure leading these conversations?
-
-Instead of criticizing tech entrepreneurs for lacking intellectual depth, perhaps academia should ask itself why it has become so cautious, so risk-averse, that it no longer produces voices capable of shaping the public discourse on innovation.
-
-### Why Has Innovation Slowed?
-
-Thiel suggests that innovation began to decelerate around 1969—symbolically, at Woodstock. The optimism of the Apollo program gave way to introspection, retreat, and ultimately, fear. He argues that technological progress frightened society, especially after World War II and the dawn of the atomic age.
-
-But Thiel may be overlooking deeper, structural causes.
-
-### The Rule of the Old
-
-One major factor is demographics. Western societies are aging. Baby Boomers have extended their lifespan and, more critically, their time in positions of power. Risk-taking is not the preferred mode of the elderly. As a population ages, it tends to favor predictability over uncertainty, stability over progress.
-
-Even worse, aging leadership tends to replicate itself. Older, risk-averse leaders often recruit and promote those who resemble them: conservative in mindset, loyal to legacy systems, resistant to change. Thus, innovation is not only stifled by aging bodies, but by an aging culture.
-
-### The Safe Paths to Wealth
-
-Another culprit is economic incentives. In a society where taking risks is discouraged, careers in science are no longer attractive. The paths to wealth today lie in finance, law, and content creation—not in labs or workshops.
-
-This is especially true in Europe, where launching a startup often requires navigating a bureaucratic labyrinth or relying on state contracts. In such an environment, young innovators are pushed away from science and into safer, more lucrative fields.
-
-### A Society Turned Inward
-
-Finally, our culture no longer celebrates science. Once seen as the vehicle for solving humanity’s biggest challenges, science is now treated as just another interest group. As society fractures into individual struggles and niche identities, there is little collective vision left to rally around grand scientific endeavors.
-
-Instead of building the future, we optimize for engagement metrics. We look inward, not outward. We trust influencers more than researchers. And so the idea of science as a noble, shared mission has eroded.
-
-### The Return of the Technologists
-
-![ITcrowd](../images/IT-Crowd.png)
-
-But now, the geeks are having their revenge. With the rise of large-scale AI, technology has once again forced its way into the public imagination. The IT crowd, long treated as second-class citizens in the intellectual world, has delivered something that cannot be ignored.
-
-And who is framing the discussion? Once again, it’s Silicon Valley.
-
-That should scare us.
-
-If philosophers and public intellectuals want to reclaim the conversation around innovation, they need to do more than complain. They need to show up—with clarity, with courage, and most of all, with vision.
-
--------------------
-
-## Fear of science?
-
-### Are they thinkers in Silicon Valley?
+## Are they thinkers in Silicon Valley?
 
 ![Peter Thiel.png](../images/Peter Thiel.png)
 
@@ -71,7 +17,7 @@ The same question could be asked to famous English and American universities. In
 
 Hello? Anyone?
 
-### The reasons for innovation deceleration
+## The reasons for innovation deceleration
 
 Thiel is not a real philosopher but one of the few people to interrogate our relationship to technology and the arrival of BigAI is a good pretext to ask those questions again.
 
@@ -79,7 +25,7 @@ In a [recent interview](https://www.youtube.com/watch?v=918qslcfwfY), he indicat
 
 I disagree. I think he neglects fundamental phenomenons.
 
-### We are run by old people
+## We are run by old people
 
 The first one is the age of the Boomers. At some point, Thiel says we abandoned the will to live old. But we are living very old already. And boomers are living very old, and a lot of them are still in responsibility positions. Risk is not an old's person combat. So, I would say society is focusing on less risks as soon as the population is aging. When people become old, they vote for conservative parties that will make laws to prevent anything dangerous to happen.
 
@@ -92,7 +38,7 @@ For sure, you don't have to be old to be old in your head. When old-minded peopl
 
 So, in a sense, Thiel is completely wrong: The Boomers succeeded in living much longer than the previous generations. And they are doing everything since the 70s to slow down every innovation that could be "risky". Hence the need to forbid more and more things in Europe and in the US.
 
-### Making money in a world with less innovation
+## Making money in a world with less innovation
 
 The second phenomenon is the path to make money. In a society dominated by risk aversion, how can you become rich, in the US at least? You enter into Finance or work as an attorney - but you won't go into science. Going into science to gain what?
 
@@ -100,7 +46,7 @@ The society Boomers left us is a society where you don't have many choices if yo
 
 Believe me, I find that horrifying. It is a deep sign of the Western societies decline because in Russia or in China, being a doctor or an engineer is important, whereas for young westerners, being a YouTube influencer is great.
 
-### Society does not like science anymore
+## Society does not like science anymore
 
 The third phenomenon is that society turned its back to science. Decades ago, the society was expecting the technology to solve big human problems, but now, it seems that it is not important anymore. The society of individuals being a fight of everyone against each other, it is complicated to realize great science projects.
 
@@ -114,7 +60,7 @@ In a certain way, and Thiel says also that, IT was never appealing to society, a
 
 We saw that in the last decades, where productivity in the West decreased whereas it has always increase for centuries.
 
-### The revenge of the geeks
+## The revenge of the geeks
 
 ![ITcrowd](../images/IT-Crowd.png)
 
