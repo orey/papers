@@ -4,7 +4,8 @@
 
 In 2025, I started a blog on AI. Yes, we have a topic here.
 
-* [Year 2025](blog/2025.md)
+* [Year 2025 Part 2](blog/2025_2.md)
+* [Year 2025 Part 1](blog/2025_1.md)
 
 ## PLM
 

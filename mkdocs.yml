@@ -19,7 +19,8 @@ markdown_extensions:
 site_dir: site
 nav:
 - BlogAI:
-    - 'Year 2025': 'blog/2025.md'
+    - '2025 Part 2': 'blog/2025_2.md'
+    - '2025 Part 1': 'blog/2025_1.md'
 - PLM:
     - 'PLM and graph data': 'articles/about-plm.md'
     - 'Configuration management of industrial products in PDM/PLM': 'articles/conf-mgt.md'
