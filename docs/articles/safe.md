@@ -59,15 +59,18 @@ During each sprint, the users can prioritize their demands and adjust the scope 
 
 In a way, seen from a project management standpoint, Agile is a way to organize in the development phase.
 
+## Agile and Waterfall responsibilities
+
 Waterfall is another way: The development team develops all the product and shows it to the clients at the end of the full development. For functional people, it is a bit different compared to Agile because they must make a complete set of requirements at the beginning of the project and have no real possibility to change the scope during the development phase. In Agile, they can specify the software progressively.
 
-Comparing those 2 development methods, we can see that there is a complete change of responsibilities with Agile. The table 1 synthesize those changes.
+Comparing those 2 development methods, we can see that there is a complete change of responsibilities with Agile.
 
-| Topic            | Waterfall                               | Agile                            |
-|------------------|-----------------------------------------|----------------------------------|
-| Specifications   | Complete before development             | Elaborated during development    |
-| Scope commitment | Functional are writing 100% of the spec | Functional team can change scope |
-| Scope commitment | Dev team can commit on the scope        | Dev team cannot commit           |
+In Waterfall, the functional team creates a set of requirements/specifications that aims to be complete. The development team can commit on the costs/plan to develop this finite scope. They can even take fixed-price contract commitments. The risk is assumed by the development team that commits on a scope/costs/plan.
+
+In Agile, due to the fact that the functional team can reprioritize the backlog at each sprint, the functional team is taking no commitment on the scope. The development team cannot commit on the scope/plan and costs are just the price of each sprint. As no one is committing on anything, the Agile methodology requires very mature functional people, people that will follow their core scope, and a project management that follows the number of sprints (costs).
+
+Many IT service companies will try to sell to clients that they are in an *almost-fixed-price* contract in Agile: For sure, they estimated the original requirements to develop, and published a proposition with a number of sprints of a certain team (costs) addressing the requirements (scope) in a particular timeframe (plan). But as long as the functional people can alter the backlog at each sprint, they can prioritize nice-to-have features versus core features and so, the budget of the project can be spent while the scope is done realized.
+
 
 
 ## Management of "IT programs" before SAFe
