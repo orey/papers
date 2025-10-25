@@ -4,71 +4,86 @@
 
 We need methods in IT like in any other engineering disciplines. But there are good and bad methods.
 
-I would like, in this article, to show how the SAFe methodology, that is unfortunately trendy in France (I'll come back to the why) is damaging the IT systems and limiting the productivity of many companies.
+I would like, in this article, to show how the SAFe methodology, that is unfortunately trendy in France (I'll come back to the why) is damaging the IT systems and limiting the productivity and innovation of many companies.
 
 It may be seen as attacking an idol, but people have to realize there are better ways.
 
 ## Origin of Rational Unified Process (RUP)
 
-SAFe has his roots in RUP, another enormous useless methodology. The roots of RUP trace back to the merger of the Objectory AB (founded by Ivar Jacobson) and Rational Software Corporation in the mid-1990s. In June 1998, Rational publishes the Rational Unified Process (RUP) version 5.0.
+SAFe has its origin in RUP, another enormous useless methodology. The roots of RUP trace back to the merger of the Objectory AB (founded by Ivar Jacobson) and Rational Software Corporation in the mid-1990s. In June 1998, Rational publishes the Rational Unified Process (RUP) version 5.0.
 
 ![../images/RUP1999.jpeg](../images/RUP1999.jpeg)
 
-RUP was developed by a team at Rational (e.g. Philippe Kruchten) and incorporated use-cases, UML, and iterative development practices. It was a heavyweight process framework (nine disciplines, roles, artifacts, workflows) tailored theoretically for large systems and heavy modeling.
+RUP was developed by a team at Rational (including Philippe Kruchten) and incorporated use-cases, UML, and iterative development practices. It was a very heavyweight process framework (nine disciplines, roles, artifacts, workflows) tailored theoretically for large systems and heavy modeling.
 
-Quickly, the software ecosystem observed that RUP was overly complex, documentation heavy and required ideally skilled staff.
+Quickly, the software ecosystem observed that RUP was overly complex, documentation heavy and not efficient. In other terms, the market did not adopt it.
 
 ## Origin of SAFe
 
-SAFe was developed by Dean Leffingwell (and collaborators) and first publicly described around 2011. The framework draws on lean-agile, systems thinking, and agile development practices, and is sold by Scaled Agile, Inc.
+SAFe was developed by Dean Leffingwell (and collaborators) and first publicly described around 2011. The framework draws on lean-agile, systems thinking, and agile development practices.
 
-It was positioned as a solution to “scaling agile” practices across the enterprise (many teams, large programs) rather than single-team agile.
+It was positioned as a solution to "scaling agile" practices across the enterprise (many teams, large programs) rather than single-team agile.
 
 ## Linkage between RUP and SAFe
 
-Leffingwell’s earlier works include large-scale systems engineering and process frameworks, including RUP. Indeed the same defaults that were rejected by the whole IT community in RUP can be found in SAFe and we are going to detail all that.
+Leffingwell’s earlier works include large-scale systems engineering and process frameworks, including RUP. Indeed, similar defaults that were rejected by the whole IT community in RUP can be found in SAFe.
+
+We are now detailing the points that seem to us the most problematic.
+
+## The dimensions of IT project management
+
+In order to be able to discuss about the problems caused by SAFe, we need to make a little background on the basics of IT project management.
+
+An IT project has 4 characteristics:
+
+* A scope,
+* A workload in men-days 
+
+
 
 ## Problem #1: SAFe is hiding project dependencies
 
-Before SAFe, a complex project had to have 2 key skills embedded:
+Before SAFe, to succeed in a complex project, you needed 2 key skills:
 
 * A program manager, able to manage a set of interlinked projects,
-* An enterprise architect, knowing the IT landscape and the functional/technical dependencies between applications.
+* An enterprise architect, knowing the IT landscape and the functional/technical dependencies between applications and project scopes.
 
 Those two persons had to work hand in hand: The program manager was gathering the dependencies highlighted by the architect and was creating milestones of synchronization where necessary. The target was to determine *who* was delivering *what* to *whom* and *when*.
 
-With SAFe, the architecture is negated: it is no longer a problem. Everyone can deliver whatever to anyone provided they delivering at the end of the Program Increment (PI).
+With SAFe, the architecture problems are becoming hidden : Even if you may have many more architects working on your "solution", the fact that all stream can depend all streams has a tendency to hide the real dependencies. Everyone is delivering at the end of the Program Increment (PI) in his silo.
 
-This has many perverse consequences:
+This has several annoying consequences:
 
-* Useless dependencies are created: As everyone can depend on anyone, it is easy to create complexity in the architecture and on the function placement without alerting anybody;
-* The SAFe administrative layer (see below)  may discover lately that projects have dependencies;
-* You can make bad architecture durable.
+* Useless dependencies are often created: As everyone can depend on anyone, it is easy to create complexity in the architecture and on the function placement without alerting anybody, quite often for "the sake of reuse";
+* The SAFe administrative layer - people that have neither business or functional knowledge nor any IT knowledge - may understand very lately that projects have dependencies;
+* You have a tendency to make bad architecture durable - because everyone is in its silo.
 
 ## Problem #2: SAFe is slow
 
-By the simple fact that you deliver all projects at the same pace, and that your pace is a PI:
+By the simple fact that you deliver all projects at the same pace, and that your pace is a PI (quite often several months):
 
 * You ruin every possible optimization in your plan,
 * You align every project on the same pace, whereas in the real life, some projects can deliver every 2 weeks and some other every month, or every 3 weeks.
 
-The deliveries inter trains will inevitably consume much more time that if you had managed a program with dependencies where they really are.
+Inside a "train", you could imagine to deliver and manage internal dependencies, but the fact that the "enablers" are grouped in a train often means that you need to wait for the PI delivery to get your dependency.
 
-Everyone that had worked in SAFe should feel this deceleration in deliveries. You just cannot deliver "quickly".
+The inter-train deliveries will inevitably consume much more time that if you had managed a program with dependencies where they really are.
+
+The fun fact is that everyone that have worked in SAFe is feeling this deceleration in deliveries. With SAFe, you just cannot deliver "quickly".
 
 ## Problem #3 : SAFe is (very) expensive
 
-You have plenty of new roles in SAFe, administrative roles that are supposed to manage the Agile Release Trains without knowing about their content or architecture. SAFe has an overhead of structure that can be quickly enormous. It introduces a huge bureaucracy, hiding structurally the real IT guys.
+You have plenty of new roles in SAFe, administrative roles that are supposed to manage the Agile Release Trains without knowing about their content or architecture. SAFe has an overhead of structure that can be quickly enormous. It introduces a huge bureaucracy, hiding structurally the real IT guys. For many people, it seems like a relief: being able to "pilot" many IT projects with no IT skills.
 
-In the overhead structure, enterprise architects are supposed to be the only role that can make sense of those parallel streams, but indeed, this role is most often useless because of the structure of the whole project.
+In the overhead structure, enterprise architects are supposed to be the only role that can make sense of those parallel streams, but indeed, this role is most often useless because of the structure of the whole project. When all silos are progressing in parallel, the architect is often powerless.
 
 ## Problem #4: SAFe is hiding the real constraints, especially resource issues and priorities
 
 Let's suppose you have several IT products and a team attached to each of them to perform maintenance and evolutions.
 
-In SAFe, it will be complicated to realize that one team is understaffed and the others are overstaffed if all of them have a filled roadmap, which is generally the case. Because you are managing the trains with people that are *external to the software reality*, you may not see that the overstaffed team is developing only nice to have features, while the understaffed team will take many PIs to get the important features done. In a certain way, SAFe hides resource problems
+In SAFe, it will be complicated to realize that one team is understaffed and the others are overstaffed if all of them have a filled roadmap, which is generally the case. Because you are managing the trains with people that are *external to the software reality*, you may not see that the overstaffed team is developing only nice to have features, while the understaffed team will take many PIs to get the important features done. In a certain way, SAFe hides the resource allocation topic.
 
-SAFe also hides priorities. Who, in a SAFe management team, is able to assess that one backlog is full of critical feature and one is only filled with nice to have?
+SAFe also hides priorities. Who, in a SAFe management team, is able to assess that one backlog is full of critical feature and one is only filled with nice to have? In large SAFe solutions, you can even see administrative structures that are in charge of recording the requirements. The implementation plan of those requirements is becoming rapidly opaque considering that the size of the scope involved 
 
 Another sign of that problem is the non capability of explaining where we are standing in the project: "The trains are going on". Yes, but what did we deliver as a *complete feature*? What business processes are covered?
 
