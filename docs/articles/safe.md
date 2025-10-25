@@ -30,25 +30,70 @@ Leffingwell’s earlier works include large-scale systems engineering and proces
 
 We are now detailing the points that seem to us the most problematic.
 
-## The dimensions of IT project management
+## Reminder: The core dimensions of IT project management
 
 In order to be able to discuss about the problems caused by SAFe, we need to make a little background on the basics of IT project management.
 
-An IT project has 4 characteristics:
+An IT project has 3 main characteristics:
 
-* A scope,
-* A workload in men-days 
+* A *scope*,
+* A workload in men-days, which is equivalent to a *budget* necessary to realize it,
+* A timing of realization, also called a *plan*.
+
+The *quality* of the delivery can also be taken into account even if few projects choose to lower the quality as a project hypothesis. However, the result of bad project management is often bad quality.
+
+Project management frameworks such as [PMP](https://en.wikipedia.org/wiki/Project_Management_Professional) add several other dimensions to a project, but we will primarily focus on the 3 core characteristics.
+
+We'll see later in this article that SAFe, taking the pretext to scale the Agile methodology, introduces confusion and inefficiency in all dimensions of the project management.
+
+Note that a project plan has:
+
+* A start,
+* An end, which correspond to go-live of the project.
+
+## About the Agile methodology
+
+The Agile methodology, in a certain way, has few adherence with the project management methodology. In order to avoid the tunnel effect, the development teams develop in sprints on several weeks (generally between 2 and 4) and are capable at the end of each sprint to show something to the client of the software. This ensures that the software follows the client's requirements.
+
+During each sprint, the users can prioritize their demands and adjust the scope to be developed to better match their needs.
+
+In a way, seen from a project management standpoint, Agile is a way to organize in the development phase.
+
+Waterfall is another way: The development team develops all the product and shows it to the clients at the end of the full development. For functional people, it is a bit different compared to Agile because they must make a complete set of requirements at the beginning of the project and have no real possibility to change the scope during the development phase. In Agile, they can specify the software progressively.
+
+Comparing those 2 development methods, we can see that there is a complete change of responsibilities with Agile. The table 1 synthesize those changes.
+
+| Topic            | Waterfall                               | Agile                            |
+|------------------|-----------------------------------------|----------------------------------|
+| Specifications   | Complete before development             | Elaborated during development    |
+| Scope commitment | Functional are writing 100% of the spec | Functional team can change scope |
+| Scope commitment | Dev team can commit on the scope        | Dev team cannot commit           |
+
+
+## Management of "IT programs" before SAFe
+
+Before SAFe, to succeed in a complex project, you needed 2 key skills:
+
+* A program manager, able to manage a set of interlinked projects, often managed by their own project manager;
+* At least an enterprise architect, knowing the IT landscape and the functional/technical dependencies between applications and project scopes.
+
+Those two set of skills had to work hand in hand: The program manager was gathering the dependencies highlighted by the architect and was creating milestones of synchronization where necessary. The target was to determine *who* was delivering *what* to *whom* and *when*. Each project had its own targets, including the potential need to deliver a certain scope to another project at a certain moment.
+
+With this "program management" approach, massive projects can be realized.
+
+## SAFe confusion of project and maintenance
+
+
+
+## Problem #1: Scope management issue and confusion of semantic domains
+
+If we look at SAFe 
 
 
 
 ## Problem #1: SAFe is hiding project dependencies
 
-Before SAFe, to succeed in a complex project, you needed 2 key skills:
 
-* A program manager, able to manage a set of interlinked projects,
-* An enterprise architect, knowing the IT landscape and the functional/technical dependencies between applications and project scopes.
-
-Those two persons had to work hand in hand: The program manager was gathering the dependencies highlighted by the architect and was creating milestones of synchronization where necessary. The target was to determine *who* was delivering *what* to *whom* and *when*.
 
 With SAFe, the architecture problems are becoming hidden : Even if you may have many more architects working on your "solution", the fact that all stream can depend all streams has a tendency to hide the real dependencies. Everyone is delivering at the end of the Program Increment (PI) in his silo.
 
