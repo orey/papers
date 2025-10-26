@@ -1,22 +1,22 @@
-# Why I don't like SAFe
+# What you should know about SAFe
 
 ![safe_blackhole](../images/safe-blackhole.png)
 
 We need methods in IT like in any other engineering disciplines. But there are good and bad methods.
 
-I would like, in this article, to show how the SAFe methodology, that is unfortunately trendy in France (I'll come back to the why) is damaging the IT systems and limiting the productivity and innovation of many companies.
+I would like, in this article, to show how the SAFe methodology is damaging the IT systems and limiting the productivity and innovation of many companies. To be able to show it, I will come back to the advantages and drawbacks of the Agile methodology and show how SAFe does not leverage Agile at all but, on the contrary, remove its advantages.
 
-It may be seen as attacking an idol, but people have to realize there are better ways.
+This may be seen as attacking the *SAFe idol*, but people have to realize there are better ways.
 
-## Origin of Rational Unified Process (RUP)
+## Rational Unified Process (RUP), the roots of SAFe
 
 SAFe has its origin in RUP, another enormous useless methodology. The roots of RUP trace back to the merger of the Objectory AB (founded by Ivar Jacobson) and Rational Software Corporation in the mid-1990s. In June 1998, Rational publishes the Rational Unified Process (RUP) version 5.0.
 
 ![../images/RUP1999.jpeg](../images/RUP1999.jpeg)
 
-RUP was developed by a team at Rational (including Philippe Kruchten) and incorporated use-cases, UML, and iterative development practices. It was a very heavyweight process framework (nine disciplines, roles, artifacts, workflows) tailored theoretically for large systems and heavy modeling.
+RUP was developed by a team at Rational (including Philippe Kruchten) and incorporated use-cases, UML, and iterative development practices. It was a very heavyweight process framework (nine disciplines, roles, artifacts, workflows) tailored theoretically for large systems. It aimed to address projects requiring heavy modeling.
 
-Quickly, the software ecosystem observed that RUP was overly complex, documentation heavy and not efficient. In other terms, the market did not adopt it.
+Quickly, the software ecosystem observed that RUP was overly complex, documentation heavy and not efficient. In other terms, the market did not adopt it. In a certain way, RUP became iconic of *the methodology that should never be put in place if you wqant to realize a large software*.
 
 ## Origin of SAFe
 
@@ -32,7 +32,7 @@ We are now detailing the points that seem to us the most problematic.
 
 ## Reminder: The core dimensions of IT project management
 
-In order to be able to discuss about the problems caused by SAFe, we need to make a little background on the basics of IT project management.
+In order to be able to discuss about the problems caused by SAFe, we need to make a little background on the basics of IT project management. Note that we are talking about project management, and not software maintenance.
 
 An IT project has 3 main characteristics:
 
@@ -40,38 +40,47 @@ An IT project has 3 main characteristics:
 * A workload in men-days, which is equivalent to a *budget* necessary to realize it,
 * A timing of realization, also called a *plan*.
 
-The *quality* of the delivery can also be taken into account even if few projects choose to lower the quality as a project hypothesis. However, the result of bad project management is often bad quality.
+The *quality* of the delivery can also be taken into account even if few projects choose to lower the quality as a project hypothesis. However, the result of bad project management is often bad software quality.
 
 Project management frameworks such as [PMP](https://en.wikipedia.org/wiki/Project_Management_Professional) add several other dimensions to a project, but we will primarily focus on the 3 core characteristics.
 
-We'll see later in this article that SAFe, taking the pretext to scale the Agile methodology, introduces confusion and inefficiency in all dimensions of the project management.
+We'll see later in this article that SAFe, taking the pretext to *scale* the Agile methodology, introduces confusion and inefficiency in all dimensions of the project management.
 
 Note that a project plan has:
 
 * A start,
 * An end, which correspond to go-live of the project.
 
+In other terms, when a project is finished, we are entering in a maintenance phase, which is running in different hypothesis than the project hypothesis.
+
 ## About the Agile methodology
 
-The Agile methodology, in a certain way, has few adherence with the project management methodology. In order to avoid the tunnel effect, the development teams develop in sprints on several weeks (generally between 2 and 4) and are capable at the end of each sprint to show something to the client of the software. This ensures that the software follows the client's requirements.
+The [Agile methodology](https://en.wikipedia.org/wiki/Agile_software_development), in a certain way, has few adherence with the project management methodology. In order to avoid the tunnel effect, the development teams develop in sprints of several weeks (generally between 2 and 4) and are capable at the end of each sprint to show something to the client of the software. This ensures that the software follows the client's requirements.
 
-During each sprint, the users can prioritize their demands and adjust the scope to be developed to better match their needs.
+During each sprint, the clients can prioritize their demands and adjust the scope of the next sprint to better match their needs.
 
-In a way, seen from a project management standpoint, Agile is a way to organize in the development phase.
+In a way, seen from a project management standpoint, Agile is a way to organize the specification and development phases. But all the dimensions of project management, scope, costs, duration, stay the primary focus. Needless to say that the Agile methodology is *software development methodology* having impacts on the *requirements and specification management* process.
+
+For the testing phase, it is a project decision that is unrelated to Agile. The go-live ca be done after all project sprints have been developed, or the project can decide to make multiple go-live. For sure, before each go-live, the testing phase will be a user acceptance phase made of new features testing and non regression testing (if applicable).
 
 ## Agile and Waterfall responsibilities
 
-Waterfall is another way: The development team develops all the product and shows it to the clients at the end of the full development. For functional people, it is a bit different compared to Agile because they must make a complete set of requirements at the beginning of the project and have no real possibility to change the scope during the development phase. In Agile, they can specify the software progressively.
+[Waterfall](https://en.wikipedia.org/wiki/Waterfall_model) is the older way: The development team develops all the product and shows it to the clients *at the end of the full development*. For the clients (functional people), it is a bit different compared to Agile because they must make a complete set of requirements at the beginning of the project. During the project, they have no real possibility to change the scope during the development phase (in real life, they have, except that it is more complicated).
+
+In Agile, on the contrary, they can:
+
+* Specify the software progressively,
+* Change original requirements during the development phase.
 
 Comparing those 2 development methods, we can see that there is a complete change of responsibilities with Agile.
 
-In Waterfall, the functional team creates a set of requirements/specifications that aims to be complete. The development team can commit on the costs/plan to develop this finite scope. They can even take fixed-price contract commitments. The risk is assumed by the development team that commits on a scope/costs/plan.
+In Waterfall, the functional team creates a set of requirements/specifications that aims to be complete. The development team can commit on the costs/plan to develop this finite scope. They can even take fixed-price contract commitments (which was a standard way to proceed 20+ years ago). The risk is assumed by the development team that commits on a scope/costs/plan. Hence the capability of taking contractors to realize a project, because they can *commit*.
 
-In Agile, due to the fact that the functional team can reprioritize the backlog at each sprint, the functional team is taking no commitment on the scope. The development team cannot commit on the scope/plan and costs are just the price of each sprint. As no one is committing on anything, the Agile methodology requires very mature functional people, people that will follow their core scope, and a project management that follows the number of sprints (costs).
+In Agile, due to the fact that the functional team can reprioritize the backlog at each sprint, there is no real scope, except often a *starting scope*. The development team cannot commit on the scope/plan. Costs announced in the development phase are just the price of each sprint multiplied by the number of sprints supposed to be sufficient to realize the starting scope. As no one is committing on anything, the Agile methodology requires very mature functional people, people that will follow their core scope, and a project management that follows the number of sprints (costs) and ensure that we are progressive towards the objective of delivering a functional software at the end of the last sprint.
 
-Many IT service companies will try to sell to clients that they are in an *almost-fixed-price* contract in Agile: For sure, they estimated the original requirements to develop, and published a proposition with a number of sprints of a certain team (costs) addressing the requirements (scope) in a particular timeframe (plan). But as long as the functional people can alter the backlog at each sprint, they can prioritize nice-to-have features versus core features and so, the budget of the project can be spent while the scope is done realized.
+Many IT service companies are selling to clients that they are in an *almost-fixed-price* contract in Agile: For sure, they estimated the cost to develop of starting scope, and published a proposition with a number of sprints of a certain team (costs) addressing the requirements (scope) in a particular time frame (plan). But as long as the functional people can alter the backlog at each sprint, as long as they can prioritize nice-to-have features versus core features, or features that were not in the original scope, the full budget of the project can be spent without getting to a functional and usable software. Indeed, in Agile, the only role that guarantees the end product is, strangely, the functional team, meaning the client. The IT service company, in Agile, is taking only a commitment based on resources, so a means commitment and no more a fixed-price contract commitment. That explains why the IT contractors want to work in Agile.
 
-
+We insisted on the drawbacks of Agile but the advantage is that it can be much better to achieve complex programs, because the scope can be arranged differently that was was originally planned, and to a team A can be able to deliver a dependency to team B to enable team B to progress, even in the last of late dependency identification.
 
 ## Management of "IT programs" before SAFe
 
@@ -83,6 +92,12 @@ Before SAFe, to succeed in a complex project, you needed 2 key skills:
 Those two set of skills had to work hand in hand: The program manager was gathering the dependencies highlighted by the architect and was creating milestones of synchronization where necessary. The target was to determine *who* was delivering *what* to *whom* and *when*. Each project had its own targets, including the potential need to deliver a certain scope to another project at a certain moment.
 
 With this "program management" approach, massive projects can be realized.
+
+## The customer budget constraints
+
+SAFe makes us recall very basic questions.
+
+Why do we have a project phase and a maintenance phase?
 
 ## SAFe confusion of project and maintenance
 
@@ -192,4 +207,19 @@ Financially, the IT service companies, and only them.
 
 The other beneficiaries are the IT departments in which it is not stressful to manage a SAFe organization. Developers, scope, architecture, all that is far away, hidden by layers of administrative structure. Every project can be absorbed in a SAFe organization, split in parts and never really delivered, eveything becomes recurring costs and runs by itself, so don't need a lot of management.
 
+
+
+## UML at the source of inconsistency thinking?
+
+RUP was using extensively [UML](https://en.wikipedia.org/wiki/Unified_Modeling_Language). The biggest problem of UML is a consistency problem. As a modeling language, UML brings several kinds of diagrams to represent several kinds of aspects of the software. For each diagram type, you have a *grammar* with a certain semantics. As those diagrams are not *connectable*, each one being in its own *space* (structural, behavior, state machine, etc.), it is easy to build an inconsistent software model that will lead to crappy software. In a certain way, the consistency work has to be done by the designer/developer himself, and so UML helped a lot good designers/developers to model complex problems.
+
+In the 2000s, tools like Rational Rose were developed to overcome the UML drawbacks, tools trying to connect the various artifacts of the diagrams and check for a little consistency. But as the semantics of those models was really different, those efforts were not very successful.
+
+UML has the same problems as the [Zachman framework](https://en.wikipedia.org/wiki/Zachman_Framework) or the [military frameworks](mbse-vs-ea.md) in the enterprise architecture world: They propose an inconsistent view of the reality built upon multiple viewpoints with different semantics (sometimes even *overlapping* semantics but not interconnected semantics, see [graph-oriented programming](https://orey.github.io/papers/articles/first-article) for a vision of interconnected semantic domains).
+
+About the Zachman Framework, Wikipedia says it *is a structured tool used in enterprise architecture to organize and understand complex business systems. It acts as an ontology, providing a clear and formal way to describe an enterprise through a two-dimensional grid.* The fact is this is false. It proposes 30 disconnected ontologies with semantic overlaps, like UML, and like the other frameworks used by the military programs.
+
+The consequence, for us, is that there is a generation of methodology people that, in IT, have a structural problem to understand that the juxtaposition of various viewpoints does not make a consistent representation.
+
+SAFe can be interpreted as being in line with this kind of thought patterns. Taken individually, some elements seem pertinent, but as a whole, they are creating an inconsistent edifice.
 
