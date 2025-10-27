@@ -24,7 +24,6 @@ In 2025, I started a blog on AI. Yes, we have a topic here.
 * [A Simple Meta-Model for Portfolio Management](articles/portfolio.md)
 * [An Introduction to The Archimate Revolution](articles/archimate-intro.md)
 * [Archimate Recipes](articles/archimate-recipes.md)
-<!-- * [About artificial neural networks and machine learning](articles/about-ml.md) -->
 * [Considerations about Rest and Web Services](articles/about-rest.md)
 * [GraphQL And Classic Web Services](articles/graphql-web-services.md)
 * [The Five Levels of Conceptual Maturity for IT Teams](articles/five-levels.md)
