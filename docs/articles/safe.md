@@ -1,6 +1,6 @@
 # What you should know about SAFe
 
-![safe_blackhole](../images/safe-blackhole.png)
+![safe_blackhole](../images/safe-blackhole2.png)
 
 We need methods in IT like in any other engineering disciplines. But there are good and bad methods.
 
