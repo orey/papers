@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Olivier Rey">
+        <link rel="canonical" href="https://orey.github.io/papers/articles/change-agent2/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Change agent2 - Papers</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Papers</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">BlogAI</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../blog/2025_2/" class="dropdown-item">2025 Part 2</a>
+</li>
+                                    
+<li>
+    <a href="../../blog/2025_1/" class="dropdown-item">2025 Part 1</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">PLM</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../about-plm/" class="dropdown-item">PLM and graph data</a>
+</li>
+                                    
+<li>
+    <a href="../conf-mgt/" class="dropdown-item">Configuration management of industrial products in PDM/PLM</a>
+</li>
+                                    
+<li>
+    <a href="../spreadsheet-and-PLM/" class="dropdown-item">The four core functions showing you need a PLM</a>
+</li>
+                                    
+<li>
+    <a href="../data-mig/" class="dropdown-item">Semantic data migration in Industry</a>
+</li>
+                                    
+<li>
+    <a href="../industry-data/" class="dropdown-item">Reflections on industry data</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">IT, Modeling & Data</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../change-agent/" class="dropdown-item">Digital Transformation Starts with the Change Agent Transformation</a>
+</li>
+                                    
+<li>
+    <a href="../safe/" class="dropdown-item">What you should know about SAFe</a>
+</li>
+                                    
+<li>
+    <a href="../legends-of-it/" class="dropdown-item">Legends of IT</a>
+</li>
+                                    
+<li>
+    <a href="../data-interop/" class="dropdown-item">The real nature of data</a>
+</li>
+                                    
+<li>
+    <a href="../mbse-vs-ea/" class="dropdown-item">Military frameworks, systems engineering and enterprise architecture</a>
+</li>
+                                    
+<li>
+    <a href="../portfolio/" class="dropdown-item">A Simple Meta-Model for Portfolio Management</a>
+</li>
+                                    
+<li>
+    <a href="../archimate-intro/" class="dropdown-item">An Introduction to The Archimate Revolution</a>
+</li>
+                                    
+<li>
+    <a href="../archimate-recipes/" class="dropdown-item">Archimate Recipes</a>
+</li>
+                                    
+<li>
+    <a href="../about-rest/" class="dropdown-item">Considerations About Rest And Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../graphql-web-services/" class="dropdown-item">GraphQL And Classic Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../five-levels/" class="dropdown-item">The Five Levels of Conceptual Maturity for IT Teams</a>
+</li>
+                                    
+<li>
+    <a href="../the-v2-vortex/" class="dropdown-item">The V2 Vortex</a>
+</li>
+                                    
+<li>
+    <a href="../various-stages/" class="dropdown-item">The Various Stages of Digital Transformation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About Graphs</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../first-article/" class="dropdown-item">Graph-oriented programming</a>
+</li>
+                                    
+<li>
+    <a href="../staf-icgt2018/" class="dropdown-item">Conference at the STAF/ICGT 2018 in Toulouse</a>
+</li>
+                                    
+<li>
+    <a href="../graphapps/" class="dropdown-item">GraphApps project page</a>
+</li>
+                                    
+<li>
+    <a href="../graph-oriented-pl/" class="dropdown-item">Towards a graph-oriented programming language?</a>
+</li>
+                                    
+<li>
+    <a href="../index-research/" class="dropdown-item">Graph transformation index page</a>
+</li>
+                                    
+<li>
+    <a href="../graph-transfo/" class="dropdown-item">Graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../graph-interop/" class="dropdown-item">A general interoperability model using graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../basic-graph-transformations/" class="dropdown-item">Basic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../basic-semantic-graph-transformations/" class="dropdown-item">Basic semantic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../DSL-for-graph-topology-checks/" class="dropdown-item">DSL for graph topology check</a>
+</li>
+                                    
+<li>
+    <a href="../graph-transformation-applicability/" class="dropdown-item">Graph transformation applicability</a>
+</li>
+                                    
+<li>
+    <a href="../grammar-graph-transformation/" class="dropdown-item">Grammar of graph transformation</a>
+</li>
+                                    
+<li>
+    <a href="../rdf-design-patterns/" class="dropdown-item">UML to RDF considerations</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Various</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../zenon-lumiere/" class="dropdown-item">Paradoxe de Zénon et dépassement de la vitesse de la lumière</a>
+</li>
+                                    
+<li>
+    <a href="../relativite/" class="dropdown-item">A propos de la relativité générale</a>
+</li>
+                                    
+<li>
+    <a href="../cartan/" class="dropdown-item">Einstein, Cartan et la géométrie différentielle</a>
+</li>
+                                    
+<li>
+    <a href="../resources/" class="dropdown-item">Resources</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../about/about/" class="dropdown-item">Author</a>
+</li>
+                                    
+<li>
+    <a href="../../about/LICENSE/" class="dropdown-item">License</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>Hello. I want to write a paper about digital transformation and why those transformations are complicated. The title could be: Digital transformation starts with the change agent transformation</p>
+<p>Here is the synopsis.</p>
+<p>Note</p>
+<p>We are talking about transformation in which people will not be fired.</p>
+<ol>
+<li>The starting point of the digital transformation: conscience of inefficiency </li>
+</ol>
+<p>When there is a need for digital transformation, that means that the management realized that there was a problem, often an efficiency problem. That is not always the case for the organization that is targeted by the transformation. Most of the members may realize it is complicated, but they are doing the job.</p>
+<ol>
+<li>We transform something that works badly but that works</li>
+</ol>
+<p>Digital transformation comes where there is money to finance it. Companies finance the optimization of processes through digital tools. That means that you digitally transform something that is working. That means that, however inefficient, the organization gets the job done. That means that digital transformation can break what is working, which explains transformation comes with risks.</p>
+<ol>
+<li>Organization self-transformation is (almost) impossible</li>
+</ol>
+<p>Most of the time, the targeted organization has not the skills to transform itself. Many people know how to execute processes but few know how to change them for the better. Members of that organization may also be afraid to loose their jobs if the organization is optimized. Being lack of skills or fear, the targeted organization will resist change. So change must come from the outside.</p>
+<ol>
+<li>Resistance is the standard behavior</li>
+</ol>
+<p>The members of the targeted organization are experts in their inefficient processes, that's why they get the job done. This expertise, however not usable outside of the organization provides a leverage for members towards any change agent that would come from outside of the organization.</p>
+<ol>
+<li>Change agents that don't adapt</li>
+</ol>
+<p>The change agents most of the time come from the outside of the organization. They mostly come with patterns, sometimes with experience, rarely with a listen and learn phase. The more transformation patterns they want to apply, the greater the resistance.</p>
+<ol>
+<li>Listen and learn</li>
+</ol>
+<p>The change agents must, at some point, become experts in the content to be able to change, or even to specify the tools for change. They must acquire a deep knowledge of the dysfunctional landscape and start to transform. This is the listen and learn phase for the change agent. Indeed, in that phase, the change agent <em>changes itself</em>. It must stay modest face to a dysfunctional or inefficient organization that gets the job done.</p>
+<ol>
+<li>Experience needed</li>
+</ol>
+<p>When the change agents talk the local language and know the local traditions, they can use their experience to implement the change in an adapted way. They get can get inspired by transformation patterns but must be very cautious about the local specificity.</p>
+<p>Conclusion</p>
+<p>In the digital transformation, the first to change is the change agent. Then the organization can be changed. The change agent must never forget that, however inefficient, costly, chaotic, the organization to transform usually gets the job done. If the change agent comes with its certitudes, transformation patterns and diagnosis, even if it is right, the change may be impossible.</p>
+<p>Could you elaborate a bit on this plan to make an article? Can you respect the order and logic of the various points? Once you have the article, I am OK to have your comments about the content, what do you think is important and if I forgot some elements that you would find important.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyleft Olivier Rey 2017-2025 - Site licensed under the GNU FDL V3</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
