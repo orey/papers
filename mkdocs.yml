@@ -28,6 +28,7 @@ nav:
     - 'Semantic data migration in Industry': 'articles/data-mig.md'
     - 'Reflections on industry data': 'articles/industry-data.md'
 - IT, Modeling & Data:
+    - 'Digital Transformation Starts with the Change Agent Transformation': 'articles/change-agent.md'
     - 'What you should know about SAFe': 'articles/safe.md'
     - 'Legends of IT': 'articles/legends-of-it.md'
     - 'The real nature of data': 'articles/data-interop.md'

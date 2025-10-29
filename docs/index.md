@@ -17,6 +17,7 @@ In 2025, I started a blog on AI. Yes, we have a topic here.
 
 ## IT, Modeling & Data
 
+* [Digital Transformation Starts with the Change Agent Transformation](articles/change-agent.md)
 * [What you should know about SAFe](articles/safe.md)
 * [Legends of IT](articles/legends-of-it.md)
 * [The real nature of data](articles/data-interop.md)
