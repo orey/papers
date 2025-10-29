@@ -1,5 +1,7 @@
 # Digital Transformation Starts with the Change Agent Transformation
 
+![change_management](../images/change-management2.png)
+
 ## The Starting Point: A Conscience of Inefficiency
 
 Every digital transformation begins with a catalyst.
