@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,15 +10,14 @@
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>2025 Part 2 - Papers</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../css/fontawesome.min.css" rel="stylesheet">
-        <link href="../../css/brands.min.css" rel="stylesheet">
-        <link href="../../css/solid.min.css" rel="stylesheet">
-        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
-        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
     <body>
@@ -26,7 +25,7 @@
             <div class="container">
                 <a class="navbar-brand" href="../..">Papers</a>
                 <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -34,12 +33,12 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">BlogAI</a>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">BlogAI <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page">2025 Part 2</a>
+    <a href="./" class="dropdown-item active">2025 Part 2</a>
 </li>
                                     
 <li>
@@ -47,8 +46,8 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">PLM</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">PLM <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -72,8 +71,8 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">IT, Modeling & Data</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">IT, Modeling & Data <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -129,8 +128,8 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About Graphs</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About Graphs <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -186,8 +185,8 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Various</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Various <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -207,8 +206,8 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -222,9 +221,9 @@
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav ms-md-auto">
+                    <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
@@ -245,44 +244,48 @@
 
         <div class="container">
             <div class="row">
-                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
             <span class="fa fa-angle-down"></span>
         </button>
     </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#2025-part-2" class="nav-link">2025 Part 2</a>
+            <li class="nav-item" data-level="1"><a href="#2025-part-2" class="nav-link">2025 Part 2</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#bigai-impact-on-company-jobs-villain-or-savior" class="nav-link">BigAI impact on company jobs: Villain or savior?</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#bigai-is-the-book-of-sand" class="nav-link">BigAI is the Book of Sand</a>
+            <li class="nav-item" data-level="2"><a href="#radicalization-of-ai-positions" class="nav-link">Radicalization of AI positions</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#the-coming-war-of-synthetic-works" class="nav-link">The Coming War of Synthetic Works</a>
+            <li class="nav-item" data-level="2"><a href="#bigai-impact-on-company-jobs-villain-or-savior" class="nav-link">BigAI impact on company jobs: Villain or savior?</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#towards-a-new-licencing-model-for-content-used-for-model-training" class="nav-link">Towards a new licencing model for content used for model training</a>
+            <li class="nav-item" data-level="2"><a href="#bigai-is-the-book-of-sand" class="nav-link">BigAI is the Book of Sand</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#should-ai-have-a-personality" class="nav-link">Should AI have a personality?</a>
+            <li class="nav-item" data-level="2"><a href="#the-coming-war-of-synthetic-works" class="nav-link">The Coming War of Synthetic Works</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#an-au-secours-from-the-european-industry" class="nav-link">An "Au secours !" from the European industry</a>
+            <li class="nav-item" data-level="2"><a href="#towards-a-new-licencing-model-for-content-used-for-model-training" class="nav-link">Towards a new licencing model for content used for model training</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#three-visions-of-bigai" class="nav-link">Three visions of BigAI</a>
+            <li class="nav-item" data-level="2"><a href="#should-ai-have-a-personality" class="nav-link">Should AI have a personality?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#an-au-secours-from-the-european-industry" class="nav-link">An "Au secours !" from the European industry</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#three-visions-of-bigai" class="nav-link">Three visions of BigAI</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -294,6 +297,62 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="2025-part-2">2025 Part 2<a class="headerlink" href="#2025-part-2" title="Permanent link">#</a></h1>
+<h2 id="radicalization-of-ai-positions">Radicalization of AI positions<a class="headerlink" href="#radicalization-of-ai-positions" title="Permanent link">#</a></h2>
+<p><img alt="ai-center" src="../../images/ai-center.png" /></p>
+<p>In the last few months, weeks even, we can see a radicalization of AI-related positions, or better said, of LLM-related topics.</p>
+<h3 id="fear-everywhere">Fear everywhere<a class="headerlink" href="#fear-everywhere" title="Permanent link">#</a></h3>
+<p>LLMs are frightening people because they are already better than us in plenty of domains. They know a lot more than we do (even if they’re not fully reliable), they accelerate many tasks, they answer questions, correct us, propose things and seem to enhance us.</p>
+<p>Moreover, LLMs never complain, judge, and they are never tired. You can talk to them at every hour of the night, they will always be here to listen to you, challenge you and to learn you new things.</p>
+<p>In a certain way, even if the software industry talked a lot for decades about "assistants", that's the first time in human history when we can all feel that LLMs are real powerful assistants to us.</p>
+<p>This, for sure, generates <em>fear</em>. And the more powerful LLMs become, the bigger the fear.</p>
+<h3 id="the-impossibility-to-predict-the-future">The impossibility to predict the future<a class="headerlink" href="#the-impossibility-to-predict-the-future" title="Permanent link">#</a></h3>
+<p>If we look carefully at this fear, we can see it is rooted in one of the deepest human fears ever: <em>The impossibility to predict the future</em>.</p>
+<p>Indeed, everyone agrees that AI is changing the world quickly, and that it will change the world probably even more in the future. But no one can predict if those changes are good or bad for humanity. As we have signs of both kinds of changes, people are divided between fear of AI being catastrophic for humanity, and AI being a booster for the same humanity.</p>
+<p>Let’s dig deeper into those fears.</p>
+<h3 id="from-risk-aversion-to-risk-phobia">From risk-aversion to risk-phobia<a class="headerlink" href="#from-risk-aversion-to-risk-phobia" title="Permanent link">#</a></h3>
+<p>The first dimension of fear is the fact that, with time, our Western societies became <em>risk-averse</em>. In some societies, the piling of regulations’ primary intent is to reduce the risks. This risk preoccupation is so high that it became a real <em>risk-phobia</em> in the last decades, up to the point where some want to forbid entire activities, just because there are still risks attached to them.</p>
+<p>AI comes as the <em>object of the phobia</em>: It brings powerful tools, not 100% reliable, and it creates a future full of new risks and uncertainties.</p>
+<p>The consequence is that risk-phobic people feel compelled to struggle as much as they can to prevent AI to develop further. European laws to be applicable in 2026, for instance, by applying the concept of "systemic risk" to LLMs, is a symbol of this risk-phobia extremism.</p>
+<h3 id="the-threats-to-the-society-equilibriums">The threats to the society equilibriums<a class="headerlink" href="#the-threats-to-the-society-equilibriums" title="Permanent link">#</a></h3>
+<p>The second dimension of this fear is that not being able to predict the future implies that the <em>current social order is threatened</em>.</p>
+<p>Society, especially with its education system, structure the life of individuals. It guarantees a huge relationship between trainings, diplomas and jobs. Said differently, life paths, in society, are codified: There are several to choose from, and most people will take one of them and stick to it for the rest of their lives. Even if there are exceptions to this pattern, most people follow paths that were carved by the society along the decades and centuries.</p>
+<p>But, what if AI was creating a fundamental threat on all of that? What if suddenly any student could live without any professor? What if all the painful work done by individuals in one of the society's carved path was done for nothing? What if suddenly, all this model was <em>obsolete</em>?</p>
+<p>Obsolescence is one of the biggest fears, especially now that obsolescence touches intellectual professions, the white collars that were sure to be protected by their intellect. In a way, the society said to them they would be. And now what? Those who could predict their future in their jobs a few years ago are now on the edge: What will happen if the society don't need me anymore? If they are replace-able?</p>
+<p>The natural defense of individuals is to call to the State to maintain <em>order</em>: <em>please, State, protect us!</em> But, not only individuals want to be protected: groups of people sharing the same interests want to be protected also. The call is then a bit distorted and could be understood as: <em>please, State, protect our privileges!</em></p>
+<p>Because, let's face it: some of us have privileges, and so, they have plenty of things to lose.</p>
+<h3 id="threatening-the-learning-to-learn">Threatening the learning to learn<a class="headerlink" href="#threatening-the-learning-to-learn" title="Permanent link">#</a></h3>
+<p>Well, adults are supposed to be grown-up people, but we can worry about the younger generations.</p>
+<p>Who can predict the effects of AI on the learning of our children? While schools are supposed to <em>learn to learn</em>, AI seems to <em>learn to ask to get a reply</em>. That could deeply damage the relationship of children in construction to knowledge and learning. Will they learn? Is having a system that provides a response right now the best way to learn? Probably not.</p>
+<p>Concerning this fear, who can anticipate what will be the consequences on children? The ones of us that were trained in the old system? Who can imagine accurately what is an AI-native generation? In what world will they be living? For sure, the AI-assisted future people will be different from us, but different how?</p>
+<h3 id="fear-is-the-mind-killer">"Fear is the mind-killer"<a class="headerlink" href="#fear-is-the-mind-killer" title="Permanent link">#</a></h3>
+<p>In the <em>Dune</em> novel, Franck Herbert warn us about fear and its capability of clouding our judgment.</p>
+<p>Driven by fear, anti-AI-development people are attacking the AI ecosystem on the following topics:</p>
+<ul>
+<li>AI is a bubble and we should not invest in it because the bubble will explode and many people will lose a lot of money.</li>
+<li>AI is dangerous because it is not accurate. Putting AI in every device is the threat for humanity survival.</li>
+<li>AI is owned by evil US companies that will manipulate people providing biased answers.</li>
+<li>AI should be regulated before it’s too late. In the meanwhile, the development must stop.</li>
+<li>Etc.</li>
+</ul>
+<p>All those arguments hide the fears we have mentioned. They are not particularly strong, and they are not new. Let's examine them in the same order as above:</p>
+<ul>
+<li>AI is a bubble. OK and so what? The Internet bubble exploded but the Internet is still very much alive. Sure, people are placing bets on companies and many will lose a lot of money. But isn’t it capitalism?</li>
+<li>AI is not accurate. No, it is not 100% reliable. But men are not neither. And that’s not because you read something in a book that it is true. For sure, AI is not IT, that was one of the first statement of this blog. So it is not accurate as IT is supposed to be. LLMs are something new, different. And for sure, the fact that AI systems are not 100% accurate should imply they should be used with caution when, for instance, being embedded into devices.</li>
+<li>You don’t need AI to lie to people. Just look at your media, what they say today of past events and what they used to say about it.</li>
+<li>Concerning the AI regulation, the problem seems more complicated. Software is difficult to regulate. We'll see with the European AI act what will be the result of this regulation a lot of European industrial companies would like to postpone (forever).</li>
+</ul>
+<p>All those arguments are not great.</p>
+<h3 id="education-in-the-hurricane">Education in the hurricane<a class="headerlink" href="#education-in-the-hurricane" title="Permanent link">#</a></h3>
+<p>One of the pillars of our society is education. Education cultivates those various paths we were talking about, from childhood to manhood. In education, the signs of a big problem are here for 3 years and the arrival of ChatGPT in the student's lives.</p>
+<p>Picture it: Professors create their subjects with LLMs, students respond with LLMs and professors make the corrections with a LLM. The result is that no-one learns anything anymore. That cannot work.</p>
+<p>On the other hand, some professors are refusing any AI help in their domain and try to stick to the old methods and tools. That won't work either.</p>
+<p>But let's face it: A PhD is generally mostly bibliography analysis and a small innovation. If LLMs can create PhD thesis, why spend so much time doing a PhD? An even if you have done one without AI, how will you prove you did and that you did better than your colleague that used a LLM for 99% of the work?</p>
+<p>In a world based on competition, AI adoption seems inevitable.</p>
+<h3 id="more-antagonism">More antagonism<a class="headerlink" href="#more-antagonism" title="Permanent link">#</a></h3>
+<p>The fact is the LLMs are antagonizing people even more than they are today: All the persons that feel threatened will want to regulate, tax, forbid, break, prevent, etc. while all people benefiting from AI will want the exact opposite.</p>
+<p>I already talked about the irruption of AI in the <a href="../2025_1/#bigai-is-a-punishment-from-god">religious domain</a>, but AI may also become a political topic quite soon, provided the technology can be stopped by regulation. Europe's extremism will be the world's lab in 2026.</p>
+<p><em>(November 1 2025)</em></p>
+<p>&nbsp;</p>
 <h2 id="bigai-impact-on-company-jobs-villain-or-savior">BigAI impact on company jobs: Villain or savior?<a class="headerlink" href="#bigai-impact-on-company-jobs-villain-or-savior" title="Permanent link">#</a></h2>
 <p>My friend BigAI is highly criticized those days: it does not increase productivity and is responsible for laying off workers. Is it the villain of this blog? Or maybe it is the savior?</p>
 <p><img alt="Bras-de-fer-moi-robot.png" src="../../images/Bras-de-fer-moi-robot2.png" /></p>
@@ -728,20 +787,19 @@ technological dominance.</em></p>
                 <p>Copyleft Olivier Rey 2017-2025 - Site licensed under the GNU FDL V3</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script src="../../js/bootstrap.bundle.min.js"></script>
         <script>
             var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../js/base.js"></script>
-        <script src="../../search/main.js"></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body">
                 <p>From here you can search these documents. Enter your search terms below.</p>
@@ -761,7 +819,7 @@ technological dominance.</em></p>
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body">
               <table class="table">
