@@ -2,247 +2,198 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://orey.github.io/papers/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/about/LICENSE/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/about/about/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/DSL-for-graph-topology-checks/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/about-e2e-plm/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/about-ml/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/about-plm/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/about-rest/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/archimate-intro/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/archimate-recipes/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/basic-graph-transformations/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/basic-semantic-graph-transformations/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/cartan/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/change-agent/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/change-agent2/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/conf-mgt/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/data-interop/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/data-mig/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/first-article/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/five-levels/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/grammar-graph-transformation/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/graph-interop/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/graph-oriented-pl/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/graph-transfo/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/graph-transformation-applicability/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/graphapps/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/graphql-web-services/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/index-research/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/industry-data/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/legends-of-it/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/mbse-vs-ea/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/org-antipatterns/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/portfolio/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/rdf-design-patterns/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/relativite/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/resources/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/safe/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/spreadsheet-and-PLM/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/staf-icgt2018/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/the-v2-vortex/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/various-stages/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/articles/zenon-lumiere/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/blog/20250907_ABadScenario/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/blog/2025_1/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/blog/2025_2/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/blog/ChatGPT_4o_04-25-2025/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/blog/corporate-sncs-in-Alcatraz/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/blog/fear-of-science/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
     <url>
          <loc>https://orey.github.io/papers/blog/from-search-to-answer/</loc>
-         <lastmod>2025-11-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-09</lastmod>
     </url>
 </urlset>
