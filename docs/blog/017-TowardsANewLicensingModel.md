@@ -1,5 +1,16 @@
 # Towards a new licencing model for content used for model training
 
+**The content wars, episode 3**
+
+Read also:
+
+* The content wars, episode 1: [BigAI to clean the web to feed from it](006-BigAIToCleanTheWeb.md)
+* The content wars, episode 2: [From search to answers: How LLMs are rewiring the Internet's business model](012-FromSearchToAnswers.md)
+* The content wars, episode 4: [The coming war of synthetic works](018-TheComingWarOfSyntheticWorks.md)
+* The content wars, episode 5: [Original and synthetic content, and the Law](022-ContentAndLaw.md)
+
+---
+
 Anthropic has just been condemned for piracy and has agreed to pay 1.5 B$ for settlement.
 
 ![arguing-silhouette-19.png](../images/arguing-silhouette-19.png)

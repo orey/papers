@@ -1,6 +1,15 @@
 # From search to answers: How LLMs are rewiring the Internet’s business model
 
-*Original version [here](from-search-to-answer.md).*
+**The content wars, episode 2**
+
+Read also:
+
+* The content wars, episode 1: [BigAI to clean the web to feed from it](006-BigAIToCleanTheWeb.md)
+* The content wars, episode 3: [Towards a new licensing model for content used for model training](017-TowardsANewLicensingModel.md)
+* The content wars, episode 4: [The coming war of synthetic works](018-TheComingWarOfSyntheticWorks.md)
+* The content wars, episode 5: [Original and synthetic content, and the Law](022-ContentAndLaw.md)
+
+---
 
 The way we use the internet is undergoing a seismic shift. We are moving from a “search era” — where users actively seek out information — into an “answer era” defined by passive consumption through large language models (LLMs).
 
@@ -75,6 +84,8 @@ In the answer era:
 In this brave new web, those who control the flow of new content — and those who can structure, clean, and monetize it — will define the next digital economy.
 
 As an enterprise, if your SNC is integrated in the Cloud with AI, you're just multiplying the number of chains of your digital slave status.
+
+*Original version [here](from-search-to-answer.md).*
 
 *(July 13 2025)*
 

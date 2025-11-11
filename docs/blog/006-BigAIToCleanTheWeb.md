@@ -1,5 +1,16 @@
 # BigAI to clean the web to feed from it
 
+**The content wars, episode 1**
+
+Read also:
+
+* The content wars, episode 2: [From search to answers: How LLMs are rewiring the Internet's business model](012-FromSearchToAnswers.md)
+* The content wars, episode 3: [Towards a new licensing model for content used for model training](017-TowardsANewLicensingModel.md)
+* The content wars, episode 4: [The coming war of synthetic works](018-TheComingWarOfSyntheticWorks.md)
+* The content wars, episode 5: [Original and synthetic content, and the Law](022-ContentAndLaw.md)
+
+---
+
 Musk announce his will for BigAI to clean human knowledge to feed from it and build upon it.
 
 ![Musk](../images/musk1.jpg)

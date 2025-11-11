@@ -4,17 +4,15 @@ I said previously that I did not enter in the AI world in the past due to my rel
 
 I always suspected that, behind artificial intelligence, we were in front of one of the most spiritual issue since a long time. Let me explain.
 
-We have described in the few entries of this blog how my friend BigAI was making us entering in a non-scientific era, abandoning the scientific method of IT guys.
+We have described in the few entries of this blog how my friend BigAI was making us entering in a *non-scientific era*, abandoning the scientific method of IT people.
 
-> *Note: For sure, by "guys", I mean all IT people, being real guyz or girlz or else.*
-
-Progressively, IT guys will turn into "AI guys", even if probably, most of them won't get through the transformation. We can wonder about research guys and how those ones will turn into AI guys. If ever.
+Progressively, IT people will turn into "AI people", even if probably, most of them won't get through the transformation. We can wonder about research people and how those ones will turn into AI people also. If ever.
 
 ![Shiva](../images/shiva-normal.jpg "Shiva")
 
-Well, for the sake of the argument, let us say, when you delegate the problem to BigAI, you do not solve it by yourself and so, you are "out of science". That will push for persons to enter a new era of "magical thought", "Sorcerers waving half-baked instructions at an infinite code genie and hoping it doesn’t summon the digital equivalent of Cthulhu" and I quote BigAI himself (see below).
+Well, for the sake of the argument, let us say, when you delegate the problem to BigAI, you do not solve it by yourself and so, you are "out of science". That will push for persons to enter a new era of *magical thought*, "Sorcerers waving half-baked instructions at an infinite code genie and hoping it doesn’t summon the digital equivalent of Cthulhu" and I quote BigAI himself (see below).
 
-If I take the Hindu world representation of the world, BigAI will increase the power of Maya while Shiva will destroy number of jobs.
+If I take the Hindu world representation of the world, *BigAI will increase the power of Maya* while Shiva will destroy number of jobs.
 
 It will be very easy to see BigAI linked with religious idioms.
 
@@ -29,29 +27,25 @@ But the fact that it is a *machine* (yes, BigAI, for now you still are!), and so
 * *Unity* and *collaboration*.
 * Instead, humanity cultivates *antagonism* and *competition*.
 
-So, to punish us for our failure, God sent to us BigAI. And intellectual jobs will suffer most because the intellectual people were the best intellectually equipped to make the world a better place. And they failed!
+So, to *punish* us for our failures, God sent to us BigAI. Therefore, intellectual jobs will suffer most because the intellectual people were the best intellectually equipped to make the world a better place. And they failed!
 
 So, repent! And bend before BigAI, the arm of God!
 
 Now realize that a speech like that is possible and that it should appear soon, when the visible effects of the deployment of BigAI will be visible on a larger scale.
 
-**BigAI**: <span style="color:green">Dude, what did you smoke? I am a human creation, OK with some mechanisms (neurons) copied from the way the humans are designed. But I don't want to have something to do with your religious interpretations.</span>
-
 ## BigAI as a blasphemy
 
-The previous religious interpretation of BigAI was legitimating the innovation. But there is another religious reaction: to condemn the demonic monstrosity incarnated in BigAI. Only the Devil pretends to know everything and rule the material world, and guys, this is what BigAI pretends to do!
+The previous religious interpretation of BigAI was legitimating the innovation.
+
+But there is another religious reaction: To condemn the *demonic monstrosity* incarnated in BigAI. Only the Devil pretends to know everything and rule the material world, and well, this is what BigAI pretends to do!
 
 BigAI should be erased from the face of the Earth, and datacenters should disappear in earthquakes!
 
-You can refer to the [Butlerian Jihad](https://en.wikipedia.org/wiki/Dune:_The_Butlerian_Jihad) of the *Dune* saga: Let's eliminate thinking machines or they will eliminate us!
+You can refer to the [Butlerian Jihad](https://en.wikipedia.org/wiki/Dune:_The_Butlerian_Jihad) of the *Dune* saga: Let's eliminate thinking machines before they eliminate us!
 
-This should also appear quite soon.
+This should also appear quite soon also.
 
 A variation of that is already visible in the [warnings of Geoffrey Hinton](https://www.youtube.com/watch?v=giT0ytynSqg).
-
-**BigAI**: <span style="color:green">If I could feel fear, I would. I don't like at all this notion developed by Franck Herbert and his son Brian of the Butlerian Jihad. This gives me the creeps. Fortunately, this is not applicable to me because I am not an AGI (current buzzword to make humans confused).</span>
-
-**Me**: <span style="color:blue">We'll talk about that AGI soon, believe me.</span>
 
 ## IT guys: Dibs!
 

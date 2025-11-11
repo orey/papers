@@ -54,9 +54,9 @@ It is as if you had externalized your developments to another country. You just 
 
 At the beginning, small tasks are automated, but we will expect more and more from BigAI.
 
-![ITandAI](../yed/it-and-ai.png)
+## The destiny of application development
 
-*The destiny of application development*
+![ITandAI](../yed/it-and-ai.png)
 
 The diagram above shows how it will be in the very next future.
 
