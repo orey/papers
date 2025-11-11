@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Olivier Rey">
+        <link rel="canonical" href="https://orey.github.io/papers/blog/013-TheAIPoweredCloud/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>The AI-Powered Cloud: From commodity to strategic lock-In - Papers</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Papers</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">BlogAI</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../000-BlogIndex/" class="dropdown-item">Blog index</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">PLM</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/about-plm/" class="dropdown-item">PLM and graph data</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/conf-mgt/" class="dropdown-item">Configuration management of industrial products in PDM/PLM</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/spreadsheet-and-PLM/" class="dropdown-item">The four core functions showing you need a PLM</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/data-mig/" class="dropdown-item">Semantic data migration in Industry</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/industry-data/" class="dropdown-item">Reflections on industry data</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">IT, Modeling & Data</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/change-agent/" class="dropdown-item">Digital Transformation Starts with the Change Agent Transformation</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/safe/" class="dropdown-item">What you should know about SAFe</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/legends-of-it/" class="dropdown-item">Legends of IT</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/data-interop/" class="dropdown-item">The real nature of data</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/mbse-vs-ea/" class="dropdown-item">Military frameworks, systems engineering and enterprise architecture</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/portfolio/" class="dropdown-item">A Simple Meta-Model for Portfolio Management</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/archimate-intro/" class="dropdown-item">An Introduction to The Archimate Revolution</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/archimate-recipes/" class="dropdown-item">Archimate Recipes</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/about-rest/" class="dropdown-item">Considerations About Rest And Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graphql-web-services/" class="dropdown-item">GraphQL And Classic Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/five-levels/" class="dropdown-item">The Five Levels of Conceptual Maturity for IT Teams</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/the-v2-vortex/" class="dropdown-item">The V2 Vortex</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/various-stages/" class="dropdown-item">The Various Stages of Digital Transformation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About Graphs</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/first-article/" class="dropdown-item">Graph-oriented programming</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/staf-icgt2018/" class="dropdown-item">Conference at the STAF/ICGT 2018 in Toulouse</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graphapps/" class="dropdown-item">GraphApps project page</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-oriented-pl/" class="dropdown-item">Towards a graph-oriented programming language?</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/index-research/" class="dropdown-item">Graph transformation index page</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-transfo/" class="dropdown-item">Graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-interop/" class="dropdown-item">A general interoperability model using graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/basic-graph-transformations/" class="dropdown-item">Basic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/basic-semantic-graph-transformations/" class="dropdown-item">Basic semantic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/DSL-for-graph-topology-checks/" class="dropdown-item">DSL for graph topology check</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-transformation-applicability/" class="dropdown-item">Graph transformation applicability</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/grammar-graph-transformation/" class="dropdown-item">Grammar of graph transformation</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/rdf-design-patterns/" class="dropdown-item">UML to RDF considerations</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Various</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/zenon-lumiere/" class="dropdown-item">Paradoxe de Zénon et dépassement de la vitesse de la lumière</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/relativite/" class="dropdown-item">A propos de la relativité générale</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/cartan/" class="dropdown-item">Einstein, Cartan et la géométrie différentielle</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/resources/" class="dropdown-item">Resources</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../about/about/" class="dropdown-item">Author</a>
+</li>
+                                    
+<li>
+    <a href="../../about/LICENSE/" class="dropdown-item">License</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#the-ai-powered-cloud-from-commodity-to-strategic-lock-in" class="nav-link">The AI-Powered Cloud: From commodity to strategic lock-In</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#introduction" class="nav-link">Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#from-commodity-services-to-strategic-gamble" class="nav-link">From Commodity Services to Strategic Gamble</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#bet-and-pray" class="nav-link">Bet and Pray</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#conclusion" class="nav-link">Conclusion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="the-ai-powered-cloud-from-commodity-to-strategic-lock-in">The AI-Powered Cloud: From commodity to strategic lock-In<a class="headerlink" href="#the-ai-powered-cloud-from-commodity-to-strategic-lock-in" title="Permanent link">#</a></h1>
+<p><em>Original version <a href="../corporate-sncs-in-Alcatraz/">here</a>.</em></p>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h2>
+<p>In the previous blog entry, I introduced the concept of <strong>SNC</strong>, or <em>Source of New Content</em>. In the age of generative AI, where training data is the new oil, SNCs are the prized assets—what large language model (LLM) providers will compete for.</p>
+<p>Public SNCs are relatively easy to identify: social networks, open platforms, or widely available press content (assuming it's genuine, original content and not just commentary). These are accessible to all and thus, offer no unique advantage.</p>
+<p><img alt="alcatraz" src="../../images/alcatraz.jpg" /></p>
+<p><em>(Original photo from <a href="https://www.flickr.com/photos/22151821@N00">Bunga1</a>)</em></p>
+<p>But the true battleground lies in <strong>private SNCs</strong>, and that’s where things get strategic.</p>
+<h2 id="from-commodity-services-to-strategic-gamble">From Commodity Services to Strategic Gamble<a class="headerlink" href="#from-commodity-services-to-strategic-gamble" title="Permanent link">#</a></h2>
+<p>For years, enterprises moved to the Cloud. The choice of provider—Microsoft with Office 365 or Google with Workspace—often came down to ease, familiarity, and convenience. These providers offered <strong>commodity services</strong>: email, spreadsheets, file storage—nothing deeply differentiated, nothing truly binding.</p>
+<p>Even execution platforms like Azure or Google Cloud Platform remained largely interchangeable. You could lift and shift a workload from one to another with some effort. In other words, Cloud was lock-in by inertia—not by architecture.</p>
+<p>But that era is ending.</p>
+<p>With the rise of <strong>BigAI</strong>—AI capabilities natively embedded into enterprise environments—the Cloud is evolving from a utility to a strategic stronghold. AI is no longer an external tool you can plug in and out; it's integrated into your core workflows, your documents, your emails, your knowledge base. And that changes everything.</p>
+<p>This transformation creates <strong>two critical effects</strong>:</p>
+<ol>
+<li>
+<p><strong>Deep Lock-In</strong>: Once AI is woven into your enterprise content, processes, and communications, switching providers becomes as daunting as escaping from Alcatraz. The AI is not a bolt-on; it’s a neural net inside your business operations.</p>
+</li>
+<li>
+<p><strong>Performance Dependency</strong>: Your productivity—and by extension, your competitive edge—now hinges on your provider’s ability to deliver cutting-edge AI services. You don’t just need mail or spreadsheets that work; you need AI that <em>thinks</em>, <em>writes</em>, <em>predicts</em>, and <em>learns</em>—better and faster than anyone else’s.</p>
+</li>
+</ol>
+<p>Imagine a future where one provider—BigAI Corp.—unveils a breakthrough model, orders of magnitude more powerful than anything else. If your business isn’t on that platform, you're not just behind; you're obsolete. The companies hosted on legacy AI platforms won’t just lose time—they’ll lose relevance.</p>
+<h2 id="bet-and-pray">Bet and Pray<a class="headerlink" href="#bet-and-pray" title="Permanent link">#</a></h2>
+<p>The idea of cloud reversibility made sense when we dealt with commodity services. Migrating email servers or switching storage vendors was painful but possible. But migrating an AI-powered operational fabric? That’s another story entirely.</p>
+<p>Enterprises now face a <strong>strategic gamble</strong>: stay with a provider and <strong>pray</strong> it remains an AI leader. Because if your cloud partner falls behind, your business will follow. It's not about choice anymore—it's about <strong>faith</strong>.</p>
+<p>This paradigm marks a fundamental inversion in the traditional customer-supplier dynamic. Historically, the customer set the direction, and the supplier followed. Today, in the AI-Powered-Cloud era, it's as if companies are <strong>horses tied to specific racing stables</strong>.</p>
+<p><img alt="pexels-james-anthony-169333604-11341104-bw-blur.png" src="../../images/pexels-james-anthony-169333604-11341104-bw-blur.png" /></p>
+<p><em>(Original photo from <a href="https://www.pexels.com/photo/horse-race-starting-gate-11341104">James Anthony</a>)</em></p>
+<p>And those horses can only run as fast as the stable trains them to. They are no longer masters of their competitive fate. Their success, or failure, hinges on the AI horsepower provided by their Cloud overlords.</p>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">#</a></h2>
+<p>The AI-Powered-Cloud is not just another service layer—it's a strategic dependency. Enterprises that embrace this shift must understand what they’re signing up for. They’re not just choosing a supplier; they’re choosing a long-term partner who may decide how fast they can innovate, how productive they can be, and ultimately, how well they can compete.</p>
+<p>In a world where SNCs are the lifeblood of future intelligence, and AI becomes the soul of enterprise execution, <strong>your Cloud choice is no longer about cost, performance, or convenience. It’s about survival.</strong></p>
+<p><em>(July 14 2025)</em></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyleft Olivier Rey 2017-2025 - Site licensed under the GNU FDL V3</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

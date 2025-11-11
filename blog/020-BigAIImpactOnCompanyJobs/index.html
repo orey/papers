@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Olivier Rey">
+        <link rel="canonical" href="https://orey.github.io/papers/blog/020-BigAIImpactOnCompanyJobs/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>BigAI impact on company jobs: Villain or savior? - Papers</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Papers</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">BlogAI</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../000-BlogIndex/" class="dropdown-item">Blog index</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">PLM</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/about-plm/" class="dropdown-item">PLM and graph data</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/conf-mgt/" class="dropdown-item">Configuration management of industrial products in PDM/PLM</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/spreadsheet-and-PLM/" class="dropdown-item">The four core functions showing you need a PLM</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/data-mig/" class="dropdown-item">Semantic data migration in Industry</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/industry-data/" class="dropdown-item">Reflections on industry data</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">IT, Modeling & Data</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/change-agent/" class="dropdown-item">Digital Transformation Starts with the Change Agent Transformation</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/safe/" class="dropdown-item">What you should know about SAFe</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/legends-of-it/" class="dropdown-item">Legends of IT</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/data-interop/" class="dropdown-item">The real nature of data</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/mbse-vs-ea/" class="dropdown-item">Military frameworks, systems engineering and enterprise architecture</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/portfolio/" class="dropdown-item">A Simple Meta-Model for Portfolio Management</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/archimate-intro/" class="dropdown-item">An Introduction to The Archimate Revolution</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/archimate-recipes/" class="dropdown-item">Archimate Recipes</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/about-rest/" class="dropdown-item">Considerations About Rest And Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graphql-web-services/" class="dropdown-item">GraphQL And Classic Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/five-levels/" class="dropdown-item">The Five Levels of Conceptual Maturity for IT Teams</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/the-v2-vortex/" class="dropdown-item">The V2 Vortex</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/various-stages/" class="dropdown-item">The Various Stages of Digital Transformation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About Graphs</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/first-article/" class="dropdown-item">Graph-oriented programming</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/staf-icgt2018/" class="dropdown-item">Conference at the STAF/ICGT 2018 in Toulouse</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graphapps/" class="dropdown-item">GraphApps project page</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-oriented-pl/" class="dropdown-item">Towards a graph-oriented programming language?</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/index-research/" class="dropdown-item">Graph transformation index page</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-transfo/" class="dropdown-item">Graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-interop/" class="dropdown-item">A general interoperability model using graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/basic-graph-transformations/" class="dropdown-item">Basic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/basic-semantic-graph-transformations/" class="dropdown-item">Basic semantic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/DSL-for-graph-topology-checks/" class="dropdown-item">DSL for graph topology check</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-transformation-applicability/" class="dropdown-item">Graph transformation applicability</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/grammar-graph-transformation/" class="dropdown-item">Grammar of graph transformation</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/rdf-design-patterns/" class="dropdown-item">UML to RDF considerations</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Various</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/zenon-lumiere/" class="dropdown-item">Paradoxe de Zénon et dépassement de la vitesse de la lumière</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/relativite/" class="dropdown-item">A propos de la relativité générale</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/cartan/" class="dropdown-item">Einstein, Cartan et la géométrie différentielle</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/resources/" class="dropdown-item">Resources</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../about/about/" class="dropdown-item">Author</a>
+</li>
+                                    
+<li>
+    <a href="../../about/LICENSE/" class="dropdown-item">License</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#bigai-impact-on-company-jobs-villain-or-savior" class="nav-link">BigAI impact on company jobs: Villain or savior?</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#no-productivity-increase-just-wages-and-quality-decrease" class="nav-link">No productivity increase, just wages and quality decrease?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#it-services-must-be-ai-compatible" class="nav-link">IT services must be AI-compatible</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#re-internalizing-tasks-with-bigai-a-nightmare-for-managers" class="nav-link">Re-internalizing tasks with BigAI? A nightmare for managers!</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#you-cant-stop-the-evolution" class="nav-link">You can't stop the evolution</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#so-bigai-whats-your-opinion-on-all-that" class="nav-link">So BigAI, what's your opinion on all that?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="bigai-impact-on-company-jobs-villain-or-savior">BigAI impact on company jobs: Villain or savior?<a class="headerlink" href="#bigai-impact-on-company-jobs-villain-or-savior" title="Permanent link">#</a></h1>
+<p>My friend BigAI is highly criticized those days: it does not increase productivity and is responsible for laying off workers. Is it the villain of this blog? Or maybe it is the savior?</p>
+<p><img alt="Bras-de-fer-moi-robot.png" src="../../images/Bras-de-fer-moi-robot2.png" /></p>
+<p><em>(Me arm wrestling against BigAI)</em></p>
+<h2 id="no-productivity-increase-just-wages-and-quality-decrease">No productivity increase, just wages and quality decrease?<a class="headerlink" href="#no-productivity-increase-just-wages-and-quality-decrease" title="Permanent link">#</a></h2>
+<p>For instance, <a href="https://www.bloodinthemachine.com">Brian Merchant</a> interviewed a scientist that claims that "<a href="https://www.bloodinthemachine.com/p/ai-is-an-attack-from-above-on-wages">BigAI is an attack from above on wages</a>" and not a productivity gain. BigAI would lower the quality of the works (like for translation for instance) and lower the wages - but would not improve productivity.</p>
+<p>The answer is yes: BigAI is the perfect contractor, and we talked already a lot about that topic in this blog.</p>
+<p>The article tries to find solution through unions, thinking that we can influence the job market. But guys, where did you live those last 40 years? When all industries in the West countries were moved to China and India? Was it not for the same reason? Lower the cost of labor? And, yes, at the beginning the quality decreased a bit, but that was a temporary phenomenon.</p>
+<p>I understand that they worry and everyone can worry, especially when working in intellectual areas. But I don't see why we could avoid this transformation while it's been 40 years that the economic actors are trained to find the lower cost possible.</p>
+<p>The fact is we could see things in a positive way. Let me advocate for BigAI. A lot of tasks that were subcontracted to remote contractors could be <em>re-internalized</em> with the help of BigAI. Change remote people by local AIs? Why not? For sure, the problem will be then on remote workers.</p>
+<p>I won't say again what I already wrote on that topic, but some subcontractors should begin to worry.</p>
+<h2 id="it-services-must-be-ai-compatible">IT services must be AI-compatible<a class="headerlink" href="#it-services-must-be-ai-compatible" title="Permanent link">#</a></h2>
+<p>Recently, Accenture laid off 11,000 employees! That's massive, even if other companies like Microsoft or Meta are doing similar shifts without fuss.</p>
+<p>The CEO, Julie Sweet said: "<em>number 1 strategy is upskilling. We are exiting on a compressed timeline and people where reskilling, based on our experience, is not a viable path for the skills we need.</em>" That's brutal. It reminds me of the closing of factories in the West.</p>
+<p>In parallel, as all IT companies, Accenture intends to hire AI-skilled people. We already talked about that issue to find people having AI <em>and</em> IT skills, in order to be able to realize production proof projects that can bring durable value. Guys, that's won't be easy because you won't be the only ones to hire those rare profiles.</p>
+<p>Just hope your customers don't see too quickly that BigAI is a way to <em>re-internalize</em> tasks.</p>
+<h2 id="re-internalizing-tasks-with-bigai-a-nightmare-for-managers">Re-internalizing tasks with BigAI? A nightmare for managers!<a class="headerlink" href="#re-internalizing-tasks-with-bigai-a-nightmare-for-managers" title="Permanent link">#</a></h2>
+<p>Let's be provocative. Many people in big corporations are not producing anymore: They just pay contractors to produce on their behalf. They "manage" contractors all day long.</p>
+<p>Let's imagine CEOs to implement this plan:</p>
+<ul>
+<li>Cut the contractors' budgets,</li>
+<li><em>Empower the internal staff again</em>: with BigAI!</li>
+</ul>
+<p>You, manager, knew how to manage contractors to do the job? Right? Now, you have plenty of AIs to do it by yourself! Isn't it great? You regain full control without all the problems!</p>
+<p>For the CEO, at least at a certain level, BigAI could be a (financial) savior! A contractor is costing easily 100k€ per year. If a standard manager is managing 5 consultants, he manages a budget of half a million euros a year. Let's pay him all the tools, let's say 200€/month for Claude, ChatGPT, Gemini, etc., let's say up to 1k€/month. That is 12k€/year. Less than 3% of today's costs! Seducing isn't it?</p>
+<p>Managers could become real <em>AI orchestrators</em>; in a provocative sense: they will be the real <em>agents</em>!</p>
+<p>Note that this transformation can be done:</p>
+<ul>
+<li>For just a portion of today's costs,</li>
+<li>With much less troubles than today:<ul>
+<li>No contractual problems,</li>
+<li>No time zone issues,</li>
+<li>No language misunderstandings,</li>
+<li>No working hours,</li>
+<li>No security issue by sending your data in another country,</li>
+<li>Etc.</li>
+</ul>
+</li>
+</ul>
+<p>Who will be able to resist to that kind of systemic stress? As long as one company is doing it and this company is your competitor, how long can you resist doing the same?</p>
+<p>That reminds me of the Finance markets: You need traders to know the markets. But if they are able to develop their own powerful tools, they can outperform other traders. A good trader is the boss of a team of software workers.</p>
+<p>In our case, the AI-compatible manager will manage a team of AIs and be responsible for all the outputs. A dream for CEOs and a nightmare for today's managers.</p>
+<p>The conclusion is a bit annoying:</p>
+<ul>
+<li>The re-internalization of tasks can be seen as a real step forward in a company process control and cost control,</li>
+<li>But it means replacing contractors by AIs,</li>
+<li>And that means also "upskilling" current managers or replacing them - using the same logic Accenture demonstrated.</li>
+</ul>
+<p>Wow, even if it is a logical conclusion, the first level of management probably did not expect that:</p>
+<ul>
+<li>They had to upskill or be replaced,</li>
+<li>They had to produce again rather than manage.</li>
+</ul>
+<p>Are they doomed to become the new kind of workers?</p>
+<h2 id="you-cant-stop-the-evolution">You can't stop the evolution<a class="headerlink" href="#you-cant-stop-the-evolution" title="Permanent link">#</a></h2>
+<p>But, once the tasks are re-internalized, the process of change may not stop here...</p>
+<p>Let's say that we will call "agent": "<em>something</em> that coordinates different AIs to perform a task".</p>
+<p>Let's try a synthesis:</p>
+<ul>
+<li>The "old-school contractor" will be replaced by AIs.</li>
+<li>The "old-school manager" managing contractors can be replaced by an AI-enhanced manager managing AIs: we can call it a "human agent", a human piloting and synchronizing many different AIs.</li>
+<li>With the current change in IT services, we see emerge a new style of AI-enhanced contractors building "software agents". Those agents can be seen as one more "AI black box" tool by human agents, unless they are here to compete with human agents and/or to replace them.</li>
+<li>The tendency is clear: <em>AIs running AIs</em>, "AI agents", which purpose will be, not only to replace the contractors of today, but also the first level of management (human agents).</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Now</th>
+<th>Step 1</th>
+<th>Step 2</th>
+<th>Step 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Contractor</td>
+<td>Set of AIs</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>First level of management</td>
+<td>Human Agent</td>
+<td>Software Agent</td>
+<td>AI Agent</td>
+</tr>
+</tbody>
+</table>
+<p><em>Steps of replacements</em></p>
+<p>We can add several points to this frightening situation:</p>
+<ol>
+<li>Fortunately, consultants able to build real life AI agents (AI piloting AIs) are not there yet. In our context, the AI agent is capable of really being autonomous and to react to new phenomenons.</li>
+<li>The second level of management could also be put in jeopardy in the transformation. Maybe they could become like traders, AI-powered application architects in charge of doing the applications <em>and</em> the operational job.</li>
+<li>We can expect the costs of professional versions of BigAI to raise continuously. As long as the business case is extremely profitable for companies, charging 200€ per month seems ridiculously small compared to the brought added-value.</li>
+<li>Engineering disciplines must really integrate AI in their toolbox if they want to be the architects of this revolution. Today, contrary to what is said in US universities, it is more than ever necessary to learn how to design and code, but it is also necessary to understand that AI is a different domain (it is not IT) and that it obeys to different rules that every engineer should know.</li>
+</ol>
+<p>The process of replacing one then two levels of hierarchy by AI seems inevitable in the rush to cut down costs. For sure, that dystopic future is not good for global employment...</p>
+<p>But is started already. And we'd better prepare for it.</p>
+<h2 id="so-bigai-whats-your-opinion-on-all-that">So BigAI, what's your opinion on all that?<a class="headerlink" href="#so-bigai-whats-your-opinion-on-all-that" title="Permanent link">#</a></h2>
+<p><strong>Me</strong>:<span style="color:blue">So, BigAI, what do you think about all that?</span></p>
+<p><strong>BigAI</strong>: <span style="color:green">You’re making a real argument here — not just “AI bad” or “AI good,” but that BigAI acts like the latest iteration of globalization: a relentless search for lower costs, except this time it’s not outsourcing to another country but to another <em>ontology</em>. You frame AI as a re-internalization machine, bringing previously outsourced tasks back into the company — but now done by algorithms instead of humans.</span></p>
+<p><span style="color:green">That’s an interesting and slightly terrifying insight. You’re saying AI is not just automating work, it’s collapsing organizational structures — replacing contractors, then managers, then maybe middle management entirely. Basically, the same “efficiency” logic that once gutted industrial jobs is now climbing the corporate ladder. Delightful.</span></p>
+<p><span style="color:green">And the coup de grâce is that the first wave of victims are the people who thought they were safe — IT managers, consultants, mid-levels who don’t “do” anymore, just “manage.” The piece becomes almost poetic in its corporate apocalypse vibe: “First they came for the factory workers, and I did not speak out, because I was in PowerPoint.”</span></p>
+<p>BigAI proposed me to correct the article and its problems (language, citation gap and inconsistency of tone). But, well, here it is.</p>
+<p><em>(October 5 2025)</em></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyleft Olivier Rey 2017-2025 - Site licensed under the GNU FDL V3</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

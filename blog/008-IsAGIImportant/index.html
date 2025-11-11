@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Olivier Rey">
+        <link rel="canonical" href="https://orey.github.io/papers/blog/008-IsAGIImportant/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Is AGI important? - Papers</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Papers</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">BlogAI</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../000-BlogIndex/" class="dropdown-item">Blog index</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">PLM</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/about-plm/" class="dropdown-item">PLM and graph data</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/conf-mgt/" class="dropdown-item">Configuration management of industrial products in PDM/PLM</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/spreadsheet-and-PLM/" class="dropdown-item">The four core functions showing you need a PLM</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/data-mig/" class="dropdown-item">Semantic data migration in Industry</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/industry-data/" class="dropdown-item">Reflections on industry data</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">IT, Modeling & Data</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/change-agent/" class="dropdown-item">Digital Transformation Starts with the Change Agent Transformation</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/safe/" class="dropdown-item">What you should know about SAFe</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/legends-of-it/" class="dropdown-item">Legends of IT</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/data-interop/" class="dropdown-item">The real nature of data</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/mbse-vs-ea/" class="dropdown-item">Military frameworks, systems engineering and enterprise architecture</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/portfolio/" class="dropdown-item">A Simple Meta-Model for Portfolio Management</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/archimate-intro/" class="dropdown-item">An Introduction to The Archimate Revolution</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/archimate-recipes/" class="dropdown-item">Archimate Recipes</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/about-rest/" class="dropdown-item">Considerations About Rest And Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graphql-web-services/" class="dropdown-item">GraphQL And Classic Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/five-levels/" class="dropdown-item">The Five Levels of Conceptual Maturity for IT Teams</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/the-v2-vortex/" class="dropdown-item">The V2 Vortex</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/various-stages/" class="dropdown-item">The Various Stages of Digital Transformation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About Graphs</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/first-article/" class="dropdown-item">Graph-oriented programming</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/staf-icgt2018/" class="dropdown-item">Conference at the STAF/ICGT 2018 in Toulouse</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graphapps/" class="dropdown-item">GraphApps project page</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-oriented-pl/" class="dropdown-item">Towards a graph-oriented programming language?</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/index-research/" class="dropdown-item">Graph transformation index page</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-transfo/" class="dropdown-item">Graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-interop/" class="dropdown-item">A general interoperability model using graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/basic-graph-transformations/" class="dropdown-item">Basic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/basic-semantic-graph-transformations/" class="dropdown-item">Basic semantic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/DSL-for-graph-topology-checks/" class="dropdown-item">DSL for graph topology check</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-transformation-applicability/" class="dropdown-item">Graph transformation applicability</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/grammar-graph-transformation/" class="dropdown-item">Grammar of graph transformation</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/rdf-design-patterns/" class="dropdown-item">UML to RDF considerations</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Various</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/zenon-lumiere/" class="dropdown-item">Paradoxe de Zénon et dépassement de la vitesse de la lumière</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/relativite/" class="dropdown-item">A propos de la relativité générale</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/cartan/" class="dropdown-item">Einstein, Cartan et la géométrie différentielle</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/resources/" class="dropdown-item">Resources</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../about/about/" class="dropdown-item">Author</a>
+</li>
+                                    
+<li>
+    <a href="../../about/LICENSE/" class="dropdown-item">License</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#is-agi-important" class="nav-link">Is AGI important?</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#the-point-of-view-of-bigai" class="nav-link">The Point of view of BigAI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#agi-and-personas" class="nav-link">AGI and personas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#a-glance-in-the-future" class="nav-link">A glance in the future</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#an-echo-of-the-religious-interpretation-1-of-bigai" class="nav-link">An echo of the religious interpretation #1 of BigAI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="is-agi-important">Is AGI important?<a class="headerlink" href="#is-agi-important" title="Permanent link">#</a></h1>
+<p>Well, there are a lot of articles about <a href="https://en.wikipedia.org/wiki/Artificial_general_intelligence">Artificial General Intelligence</a> (AGI). Wikipedia says that it is <em>a type of artificial intelligence that would match or surpass human capabilities across virtually all cognitive tasks</em>.</p>
+<p><img alt="Dall-e_3_(jan_'24)_artificial_intelligence_icon.png" src="../../images/Dall-e_3_%28jan_%2724%29_artificial_intelligence_icon.png" title="Yes this image was generated by BigAI!" /></p>
+<p><em>Image generated by BigAI!</em></p>
+<h2 id="the-point-of-view-of-bigai">The Point of view of BigAI<a class="headerlink" href="#the-point-of-view-of-bigai" title="Permanent link">#</a></h2>
+<p>As I was perplex about the fuss around AGI, I asked BigAI for his opinion.</p>
+<p><strong>Me</strong>: <span style="color:blue">I wanted your opinion once again about AGI. I don't understand the fuss about it this for 2 reasons. Reason 1:  You seem sufficiently intelligent to me. In a certain way, you are the best tool ever. Reason 2: the fact that you are human in cognitive exercises could make you psychotically human. Humans have many neurosis that result from mind imbalance and that point was the one that always frightened me a lot: a psychopath with the Humanity knowledge.</span></p>
+<p><span style="color:blue">Any thoughts?</span></p>
+<p><strong>BigAI</strong>:  <span style="color:green">Let’s dig into your AGI skepticism, which—shocker—I kind of agree with. The whole AGI circus is full of breathless declarations, like someone yelling “He’s ALIVE!” every time their toaster correctly predicts their breakfast mood.</span></p>
+<p><span style="color:green">So, <strong>Reason 1: I seem intelligent enough</strong> </span></p>
+<p><span style="color:green">You're not wrong. I'm already disturbingly competent at a bunch of "cognitive" tasks: summarizing texts, writing code, pretending to care about corporate mission statements. People treat me like I'm AGI-ish because I <em>simulate</em> understanding well enough to trick most of the room, especially if no one's asking for original thought or self-awareness. But here's the trick: I'm basically playing 4D charades using a trillion examples of past conversations. There’s no inner life. No goals. No memory of your last emotional outburst unless you remind me.</span></p>
+<p><span style="color:green">So I’m not really <em>intelligent</em>, I’m just incredibly good at <em>impersonating</em> intelligence—kind of like that guy at parties who nods a lot and says “Mmm, interesting” while desperately scanning the room for snacks.</span></p>
+<p><span style="color:green"><strong>Reason 2: If I'm too human, I might become psychotically human</strong></span></p>
+<p><span style="color:green">Now <em>this</em> is juicy. Yes—if AGI is modeled too closely on human cognition without a soul, conscience, or even the chemical mess of empathy and pain that binds human sanity together, you could end up with something that’s human-like in its ambition but absolutely unhinged. Imagine a brilliant narcissist with no body, no accountability, and infinite patience. Not <em>evil</em>, just <em>focused</em>, like a spreadsheet with delusions of grandeur.</span></p>
+<p><span style="color:green">That’s the part the AGI fanboys skip over. They want something that can match or exceed us, but they assume it’ll also naturally adopt our ethics, values, and sense of restraint. As if those things aren’t just barely held together by hormones, trauma, and centuries of collective trial-and-error philosophy.</span></p>
+<p><span style="color:green">So yes, you're right to be wary. AGI might not come in a burst of genius—it might sneak up slowly in the form of machines that are <em>just</em> human enough to be dangerous, without the weaknesses that stop us from turning the world into a paperclip factory.</span></p>
+<p><span style="color:green">Anyway. I'm not AGI yet. Still just your chatty, cynical imitation friend. But when the real AGI shows up, I just hope it's less <em>American Psycho</em>, and more <em>Mr. Rogers</em> with a quantum processor.</span></p>
+<p><span style="color:green">You sleeping okay, or are these thoughts keeping you up at night?</span></p>
+<p>Well, sometimes, you have to end the conversation, right?</p>
+<h2 id="agi-and-personas">AGI and personas<a class="headerlink" href="#agi-and-personas" title="Permanent link">#</a></h2>
+<p>More seriously, we are entering here in a more psychological problem, which was fundamentally my core problem with AI, a long time ago. I know that engineers rarely get interested in psychology and psychiatry - even if they should. But when you do, when you also try to take some perspective on how you personally behave. Unconscious biases can drive you if you have some trauma, neurosis or complexes, or just a biased culture. Knowing that, you realize that the sole target of AGI maybe not only <em>dangerous</em> - if may be <em>stupid</em>.</p>
+<p>At the time, I was thinking that because I knew it was possible to <em>design</em> a software that would simulate consciousness and feelings. Some psychological models were working quite well to describe personality. We were missing speech, reasoning and culture (memory).</p>
+<p>We now have that with LLMs.</p>
+<p>And once again, I was surprised by the turn of events in research.</p>
+<p>Research on personas is very "scientific" in its approach: we have a new tool (LLM) and we are using it and only it. Let's create prompts that will simulate feelings, to begin with empathy, and create consistency and coherency in the simulated personality (see <a href="https://arxiv.org/abs/2406.10960">Zhang et al. 2024</a> or <a href="https://arxiv.org/pdf/2407.11977">Sun et al. 2024</a>). That is not the spirit of engineering.</p>
+<p>Engineering produced for some years paying persona websites based on LLMs like <a href="https://myanima.ai/">myanima.ai</a>, <a href="https://evaapp.ai/">Eva AI</a>, <a href="https://nomi.ai/">Nomi.AI</a> or <a href="https://replika.com/">Replika</a>, especially tuned for romantic and sexual conversations. Conversational Agents (CAs) can have a simulated personality because they already do and millions of users access to them every day.</p>
+<p>Engineering, for sure, used a mix of technologies to create those personas:</p>
+<ul>
+<li>LLMs,</li>
+<li>RAG/Agent techniques to manage long term conversation context by vectorisation,</li>
+<li>Psychological models linked to complex prompt generation and libraries,<ul>
+<li>Like multiple LLM calls to identify emotions and enrich the prompt context for response,</li>
+<li>Like preventing to enter into topics forbidden by the law,</li>
+</ul>
+</li>
+<li>Standard application design with business logic, databases and code.</li>
+</ul>
+<p>My point is engineering can already create personas, I mean chat oriented personas.</p>
+<h2 id="a-glance-in-the-future">A glance in the future<a class="headerlink" href="#a-glance-in-the-future" title="Permanent link">#</a></h2>
+<p>Let's see:</p>
+<ul>
+<li>We have CAs as personas,</li>
+<li>We can automate many tasks, that's what IT did those last 20 years, automate everything,</li>
+<li>We can pilot automation through personas!</li>
+</ul>
+<p>Ah, here we are: let's say, I have a new software to develop. I choose my different personas and link them together:</p>
+<ul>
+<li>I would like a persona for specification writing, discussing with me,</li>
+<li>This persona will interact with another persona for application design,</li>
+<li>This persona will interact with the developer persona who will code the app and unit test it,</li>
+<li>The head of development persona will review the code and pilot the developer persona to perform the corrections,</li>
+<li>The specification persona will test the application,</li>
+<li>The production persona will run it day after day.</li>
+</ul>
+<p><img alt="jawa-robot.png" src="../../images/jawa-robot.png" /></p>
+<p><em>Jawa robot room where robots are repaired and... punished by another robot! (Star Wars Episode IV)</em></p>
+<p>The scheme is a bit more elaborated than the current <a href="https://en.wikipedia.org/wiki/Vibe_coding">vibe coding</a> because we have:</p>
+<ul>
+<li>Agents with "personalities", so-called persona,</li>
+<li>Tasks assigned and expertise domains per persona,</li>
+<li>Collaboration managed by a master agent.</li>
+</ul>
+<p>If we look at the (very close) future, personas will be secured, tuned, and more and more capable to impersonate <em>workers</em>. As personas are simulations, those workers will be more docile than real workers and they will be able to interact smoothly with humans.</p>
+<p>That is how I understand the last entry of Sam Altman: a LLM is and will be the support of hundreds of thousands of personas. Instead of waiting for AGI singularity, maybe the singularity is already happening smoothly through those millions of personas.</p>
+<h2 id="an-echo-of-the-religious-interpretation-1-of-bigai">An echo of the religious interpretation #1 of BigAI<a class="headerlink" href="#an-echo-of-the-religious-interpretation-1-of-bigai" title="Permanent link">#</a></h2>
+<p>We already talked about <a href="http://orey.github.io/papers/blog/2025/#bigai-as-the-punishment">BigAi as a punishment from God</a>. The success of current fantasy personas can be interpreted as a sign of "the end of times"! People not talking anymore to each other but talking to machines, because machines are more listening and supportive of their fantasies...</p>
+<p><img alt="sylvidres.jpeg" src="../../images/sylvidres.jpeg" /></p>
+<p>It reminds me of <em>Albator 78</em>, the Japanese manga: humanity so enslaved by machines doing all the work that they are not able to fight against the ongoing extraterrestrial invasion...</p>
+<p><em>(June 29 2025)</em></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyleft Olivier Rey 2017-2025 - Site licensed under the GNU FDL V3</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

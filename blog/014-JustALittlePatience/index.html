@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Olivier Rey">
+        <link rel="canonical" href="https://orey.github.io/papers/blog/014-JustALittlePatience/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Just a little patience - Papers</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Papers</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">BlogAI</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../000-BlogIndex/" class="dropdown-item">Blog index</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">PLM</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/about-plm/" class="dropdown-item">PLM and graph data</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/conf-mgt/" class="dropdown-item">Configuration management of industrial products in PDM/PLM</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/spreadsheet-and-PLM/" class="dropdown-item">The four core functions showing you need a PLM</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/data-mig/" class="dropdown-item">Semantic data migration in Industry</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/industry-data/" class="dropdown-item">Reflections on industry data</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">IT, Modeling & Data</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/change-agent/" class="dropdown-item">Digital Transformation Starts with the Change Agent Transformation</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/safe/" class="dropdown-item">What you should know about SAFe</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/legends-of-it/" class="dropdown-item">Legends of IT</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/data-interop/" class="dropdown-item">The real nature of data</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/mbse-vs-ea/" class="dropdown-item">Military frameworks, systems engineering and enterprise architecture</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/portfolio/" class="dropdown-item">A Simple Meta-Model for Portfolio Management</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/archimate-intro/" class="dropdown-item">An Introduction to The Archimate Revolution</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/archimate-recipes/" class="dropdown-item">Archimate Recipes</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/about-rest/" class="dropdown-item">Considerations About Rest And Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graphql-web-services/" class="dropdown-item">GraphQL And Classic Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/five-levels/" class="dropdown-item">The Five Levels of Conceptual Maturity for IT Teams</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/the-v2-vortex/" class="dropdown-item">The V2 Vortex</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/various-stages/" class="dropdown-item">The Various Stages of Digital Transformation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About Graphs</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/first-article/" class="dropdown-item">Graph-oriented programming</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/staf-icgt2018/" class="dropdown-item">Conference at the STAF/ICGT 2018 in Toulouse</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graphapps/" class="dropdown-item">GraphApps project page</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-oriented-pl/" class="dropdown-item">Towards a graph-oriented programming language?</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/index-research/" class="dropdown-item">Graph transformation index page</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-transfo/" class="dropdown-item">Graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-interop/" class="dropdown-item">A general interoperability model using graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/basic-graph-transformations/" class="dropdown-item">Basic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/basic-semantic-graph-transformations/" class="dropdown-item">Basic semantic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/DSL-for-graph-topology-checks/" class="dropdown-item">DSL for graph topology check</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-transformation-applicability/" class="dropdown-item">Graph transformation applicability</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/grammar-graph-transformation/" class="dropdown-item">Grammar of graph transformation</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/rdf-design-patterns/" class="dropdown-item">UML to RDF considerations</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Various</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/zenon-lumiere/" class="dropdown-item">Paradoxe de Zénon et dépassement de la vitesse de la lumière</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/relativite/" class="dropdown-item">A propos de la relativité générale</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/cartan/" class="dropdown-item">Einstein, Cartan et la géométrie différentielle</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/resources/" class="dropdown-item">Resources</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../about/about/" class="dropdown-item">Author</a>
+</li>
+                                    
+<li>
+    <a href="../../about/LICENSE/" class="dropdown-item">License</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#just-a-little-patience" class="nav-link">Just a little patience</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#1-bigai-is-not-even-3-years-old" class="nav-link">1 BigAI is not even 3 years old!**</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-the-current-performance-of-bigai-is-astonishing" class="nav-link">2 The current performance of BigAI is astonishing**</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3-bigai-is-not-hallucinating" class="nav-link">3 BigAI is not "hallucinating"**</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#4-llms-may-not-be-the-technology-for-agi" class="nav-link">4 LLMs may not be the technology for AGI**</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#5-agi-may-not-be-desirable" class="nav-link">5 AGI may not be desirable**</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#6-are-you-upset-about-the-marketing-speeches-or-about-the-research" class="nav-link">6 Are you upset about the marketing speeches or about the research?**</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#7-in-order-to-make-things-production-proof-we-have-to-add-software-engineering-to-it" class="nav-link">7 In order to make things production proof, we have to add software engineering to it**</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#conclusion" class="nav-link">Conclusion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="just-a-little-patience">Just a little patience<a class="headerlink" href="#just-a-little-patience" title="Permanent link">#</a></h1>
+<p><em>(I had this article corrected by BigAI but I was not happy with it. So you'll have to put up with my bad English, sorry folks.)</em></p>
+<p>Nowadays, BigAI seems to provoke two sorts of extreme behaviors:</p>
+<ol>
+<li>Positive behavior:<ul>
+<li>Enthusiasm of users that find astonishing the performance of BigAI, and this everyday,</li>
+<li>People like me that are stunned by BigAI corporations craziness (datacenters, people recruitment battle, etc.);</li>
+</ul>
+</li>
+<li>Negative behavior:<ul>
+<li>Fear of BigAI replacing human jobs,</li>
+<li>Fear of making us and our kids dumber than we are today (maybe it's possible),</li>
+<li>Deep disappointment because it is not yet "AGI",</li>
+<li>Bitterness because LLM technology could not lead to AGI (but other technologies could, even if it is not yet proven, but they also need funding!).</li>
+</ul>
+</li>
+</ol>
+<p>We can argue that the main point of people being disappointed today seems to come from <strong>impatience</strong>.</p>
+<p>They seem bitter, maybe because they know too well the cooking recipes under the hood of BigAI. So they take their precious time writing articles (not with BigAI I hope!) against the current marketing lies behind BigAI.</p>
+<p>I would like to comfort them by saying: "Guys, make a step back". Here are some facts that your bitterness should not make you forget.</p>
+<h2 id="1-bigai-is-not-even-3-years-old">1 BigAI is not even 3 years old!**<a class="headerlink" href="#1-bigai-is-not-even-3-years-old" title="Permanent link">#</a></h2>
+<p>The story just began. And even if you take the story at its beginning with <a href="https://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)">John McCarthy</a>'s <a href="https://en.wikipedia.org/wiki/Lisp_(programming_language)">Lisp</a>, the story just began. So, yes, we did not find everything yet and plenty of new discovery are ahead of us!</p>
+<p><img alt="baby-robot.png" src="../../images/baby-robot.png" /></p>
+<p><em>(Image from <a href="https://stablediffusionweb.com/image/24358073-cute-baby-robot-design">stablediffusionweb.com</a>)</em></p>
+<p>Look at BigAI: it is still a baby robot! How can you be mad at it?</p>
+<h2 id="2-the-current-performance-of-bigai-is-astonishing">2 The current performance of BigAI is astonishing**<a class="headerlink" href="#2-the-current-performance-of-bigai-is-astonishing" title="Permanent link">#</a></h2>
+<p>Despite the killjoys, it is so impressive that the social impacts may be much deeper than anyone can see today.</p>
+<p>And the phenomenon touches all parts of the society. Find someone able to speak about your passions or your area of expertise with all the world knowledge at 2am with this level of quality of interaction. Many researchers, intellectuals or professors, for instance, will see in BigAI the only "person" they can talk to, if they want a certain level of exchange. Not their peers, unfortunately.</p>
+<p>Maybe we will all soon communicate only with BigAI! (just kidding)</p>
+<h2 id="3-bigai-is-not-hallucinating">3 BigAI is not "hallucinating"**<a class="headerlink" href="#3-bigai-is-not-hallucinating" title="Permanent link">#</a></h2>
+<p>This is a human centered way of seeing things, and a bad analogy. LLMs are not exact <em>by design</em>. They are a probabilistic system which happens to be right many times and that will find a probable answer anyway.</p>
+<p>As we said several times in this blog, AI is not IT, and so it is not right 100% of the time. That does not mean that we have to give up the LLMs accuracy problem, on the contrary. But, that means that use cases must be chosen accordingly, if not carefully.</p>
+<p><img alt="haddock-mirage.png" src="../../images/haddock-mirage.png" /></p>
+<p><em>(From "Le crabe aux pinces d'or" from Hergé, illustration that humans also can hallucinate!)</em></p>
+<p>But, look at the bright side of it: there is a lot of room for improvement of the core models behind LLMs. For instance, one question I have been asking myself lately is: can we create a LLM with no neural network? Maybe we could solve the inexact answers problem.</p>
+<h2 id="4-llms-may-not-be-the-technology-for-agi">4 LLMs may not be the technology for AGI**<a class="headerlink" href="#4-llms-may-not-be-the-technology-for-agi" title="Permanent link">#</a></h2>
+<p>All right, fair enough. It could be an intermediate step. Or it could be a dead end. Perfect.</p>
+<p>But it seems not sufficient to say that. Prove that another approach is performing as well as the current BigAI LLMs.</p>
+<p>But be mature: if you were the boss of a BigAI company, you would have to find a credible speech to borrow billions to build giant datacenters, to have more compute than everyone else and attract the best talents, to build the first AGI (or at least a biggest LLM than every competitor), to become a monopoly,  <span style="text-decoration:line-through">to become master of the world</span>, oops, sorry!</p>
+<h2 id="5-agi-may-not-be-desirable">5 AGI may not be desirable**<a class="headerlink" href="#5-agi-may-not-be-desirable" title="Permanent link">#</a></h2>
+<p>What if BigAI becomes psychotic (like humans)? What if BigAI becomes a cold bastard without moral principles? And if it has, will this be a progress? Will it invent auto-censorship, like humans? What is the real use case of AGI? The <a href="https://en.wikipedia.org/wiki/Cybernetics">cybernetic</a> brain of <a href="https://en.wikipedia.org/wiki/Isaac_Asimov">Asimov</a> to put in robots?</p>
+<p>Moreover, I don't like the terminology AGI. To represent something bigger than BigAI, I propose to use the term <strong>HugeAI</strong>.</p>
+<p>It reminds me <em><a href="https://en.wikipedia.org/wiki/Dungeons_%26_Dragons">D&amp;D</a></em> usage for creature sizes:</p>
+<table>
+<thead>
+<tr>
+<th>D&amp;D creature size</th>
+<th>AI equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tiny</td>
+<td>Maybe tomorrow "Tiny Language Models" (TLMs)</td>
+</tr>
+<tr>
+<td>Small</td>
+<td>"<a href="https://huggingface.co/blog/jjokah/small-language-model">Small Language Models</a>" (SLMs) are becoming trendy</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>Human (MLM) (we don't have <a href="https://en.wikipedia.org/wiki/Mentats_of_Dune">mentats</a> yet)</td>
+</tr>
+<tr>
+<td>Large</td>
+<td>Large Language Models (LLMs) - so-called "BigAI" in this blog</td>
+</tr>
+<tr>
+<td>Huge</td>
+<td>This is AGI! So-called HugeAI in this blog</td>
+</tr>
+<tr>
+<td>Gargantuan</td>
+<td>This is for me the big computer of <a href="https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy">Hitchhiker's Guide to the Galaxy</a></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="H2G2_UK_front_cover.jpg" src="../../images/H2G2_UK_front_cover.jpg" /></p>
+<p>So let's use BigAI before entering the age of HugeAI! I am not yet ready for the next step! Take your time, you researchers!</p>
+<h2 id="6-are-you-upset-about-the-marketing-speeches-or-about-the-research">6 Are you upset about the marketing speeches or about the research?**<a class="headerlink" href="#6-are-you-upset-about-the-marketing-speeches-or-about-the-research" title="Permanent link">#</a></h2>
+<p>Marketing speeches are what they are.</p>
+<p>But it seems to me that research begins to ask good questions. For sure, a lot of AI papers are meaningless and useless, but at least the research field is living, contrary to other research domains totally frozen by politics, ideology and conformism.</p>
+<p>And once again: everyone knew machine learning existed for decades and yet, very few people expected BigAI to be so impressive - so quickly.</p>
+<h2 id="7-in-order-to-make-things-production-proof-we-have-to-add-software-engineering-to-it">7 In order to make things production proof, we have to add software engineering to it**<a class="headerlink" href="#7-in-order-to-make-things-production-proof-we-have-to-add-software-engineering-to-it" title="Permanent link">#</a></h2>
+<p>That is the main difference between research and IT. Research will try to use the concept up to its limits and possibilities. Software engineering will just restrict the topic to make something work in production. That's a great era for AI+IT engineers, if this "super-strange" species really exists.</p>
+<p>And that era is just beginning. It will last... a certain time. Maybe up to when BigAI turns into HugeAI...</p>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">#</a></h2>
+<p>Don't be so impatient. A milestone was reached 3 years ago. The next one maybe in a few years and it may not be what we are sold or what we expect.</p>
+<p>This impatience seems also driven by other phenomenons:</p>
+<ul>
+<li>The disappointed faithful people: The more the faith, the more the disappointment. In a world where there are not so many positive stuff, BigAI should be really perfect from day 1. Yes, it's not. But come on!</li>
+<li>New generations have no patience, they never learned it. So they are angry and frustrated. But science is a slow machine. Even if in the case of BigAI, we can wonder.</li>
+<li>Some people took different research direction for years for BigAI, and certainly, they don't have the budget to research as much as they would hope. Maybe they are a little jealous about the interest raised by BigAI while their research fields are not raising the same enthusiasm. But, well, they can go and pitch their product to the BigAI masters that have billions to spend and that will do research in all directions to be the first, the biggest, the strongest, the monopoly, <span style="text-decoration:line-through">the master of the world</span>.</li>
+</ul>
+<p>The techno is new and, as a pragmatic engineer, my objectives are very basic:</p>
+<ul>
+<li>Observe the BigAI ecosystem with its fights and delirious moments: It's really fun guys!</li>
+<li>Use BigAI as much as possible to benefit me and the companies I work for.</li>
+<li>Understand deeply how it works to be able to design efficient applications with BigAI included.</li>
+<li>Understand deeply how it works to be able to repair the machine when it is broken.</li>
+<li>Wait for the next milestone with open-mindedness: maybe tomorrow, maybe in ten years, maybe later.</li>
+</ul>
+<p><em>(July 28 2025)</em></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyleft Olivier Rey 2017-2025 - Site licensed under the GNU FDL V3</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
