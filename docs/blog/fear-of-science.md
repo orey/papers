@@ -50,7 +50,7 @@ Believe me, I find that horrifying. It is a deep sign of the Western societies d
 
 The third phenomenon is that society turned its back to science. Decades ago, the society was expecting the technology to solve big human problems, but now, it seems that it is not important anymore. The society of individuals being a fight of everyone against each other, it is complicated to realize great science projects.
 
-This reminds me the [BigAI as a punishment from God](#bigai-as-the-punishment) that we discussed a bit earlier. When humans are not able to gather for big science projects, that's not a good sign.
+This reminds me the [BigAI is a punishment from God](005-BigAIIsAPunishmentFromGod.md) that we discussed a bit earlier. When humans are not able to gather for big science projects, that's not a good sign.
 
 When people look only at themselves, this gives bad things. When people look at a certain ideal that is beyond them, they can accomplish big things.
 

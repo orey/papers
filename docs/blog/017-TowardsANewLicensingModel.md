@@ -21,7 +21,7 @@ How short sighted this story is!
 
 ## The content war
 
-We already covered in a [previous entry](2025_1.md#4-the-rise-of-sources-of-new-content-snc) the topic of SNCs, the acronym standing for Source of New Content. In order to have fresh data for training, the BigAI companies have to have structural access to new content.
+We already covered in a [previous entry](012-FromSearchToAnswers.md#4-the-rise-of-sources-of-new-content-snc) the topic of SNCs, the acronym standing for Source of New Content. In order to have fresh data for training, the BigAI companies have to have structural access to new content.
 
 This is already true for some of them:
 
