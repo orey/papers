@@ -29,9 +29,9 @@ The inherent conflict is palpable: Grokipedia aims to purge what Musk perceives 
 
 But Grokipedia is not just a rival of Wikipedia: It seems like an experiment in *automating the very process of historical and factual record-keeping*. We talked, in older episodes about the Sources of New Content (SNCs) and in particular about the news as being one of those sources. Grokipedia intends to capture those sources and create a real timeline of events, a real automated history. In a way, Grokipedia begins the AI witness of the human history, and the AI scribe of human history, ensuring it is up-to-date and ensuring facts were not "forgotten" or twisted by partial editors.
 
-In that sense, Musk is not creating a new encyclopedia but *a new encyclopedist and archivist*! That could be a very deep change in the way we are doing short term history.
+In that sense, Musk is not creating a new encyclopedia but *a new encyclopedist and archivist*! That could be a very deep change in the way we are doing short term history. That could be close to a new version of [Foundation](https://en.wikipedia.org/wiki/Foundation_(novel_series)), from Asimov, except that the Foundation is, in a way, Grok.
 
-Just think about all those confidential letters working on open sources and analyzing what influential people say in the various media. They are doing the work of archivists and cross-reference all that is said publicly to draw unexpected portraits of influential people. If Grokipedia is doing it well, people may discover the true face of some individuals.
+Just think about all those confidential letters working on open sources and analyzing what influential people say in the various media. They are doing the work of archivists and cross-reference all that is said publicly to draw unexpected portraits of influential people. If Grokipedia is doing it well, people may discover the true face of some individuals. That looks like Musk.
 
 ## Sora 2 and the copyright tightrope
 
