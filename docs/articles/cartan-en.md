@@ -8,9 +8,7 @@ This weekend, I read a few articles by Cartan on differential geometry and affin
 
 I think I've understood two main concepts from these rather fascinating readings.
 
-1.  Differential geometry studies the properties of non-Euclidean spaces in the neighborhood of points by considering local transformations that can be likened to Euclidean transformations. These transformations, according to Cartan, break down into three fundamental transformations (each represented by a tensor):
-
-* Torsion (translation) and curvature (which has a rotational component and a homothety/dilation component). Cartan is interested in the invariants of these transformations, invariants which, ultimately, characterize the space in question.
+1.  Differential geometry studies the properties of non-Euclidean spaces in the neighborhood of points by considering local transformations that can be likened to Euclidean transformations. These transformations, according to Cartan, break down into three fundamental transformations (each represented by a tensor): Torsion (translation) and curvature (which has a rotational component and a homothety/dilation component). Cartan is interested in the invariants of these transformations, invariants which, ultimately, characterize the space in question.
 
 2.  These transformations make it possible to explain how to progressively pass from spaces with different macroscopic properties depending on the location. For example, if the point considered is in a vacuum, it won't be subject to the same gravitational fields as in the vicinity of a rotating star.
 
