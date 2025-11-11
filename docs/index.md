@@ -1,11 +1,34 @@
 # Olivier Rey's Papers
 
-## BlogAI
+## Blog
 
-In 2025, I started a blog on AI. Yes, we have a topic here.
-
-* [Year 2025 Part 2](blog/2025_2.md)
-* [Year 2025 Part 1](blog/2025_1.md)
+* November 2025
+    * [Radicalization of AI positions](blog/021-RadicalizationOfAIPositions.md)
+* October 2025
+    * [BigAI impact on company jobs:Villain or savior?](blog/020-BigAIImpactOnCompanyJobs.md)
+* September 2025
+    * [BigAI is the Book of Sand](blog/019-BigAIIsTheBookOfSand.md)
+    * [The coming war of synthetic works](blog/018-TheComingWarOfSyntheticWorks.md)
+    * [Towards a new licensing model for content used for model training](blog/017-TowardsANewLicensingModel.md)
+* August 2025
+    * [Should AI have a personality?](blog/016-ShouldAIHaveAPersonality.md)
+* July 2025
+    * [Three visions of bigAI](blog/015-ThreeVisionsOfBigAI.md)
+    * [Just a little patience](blog/014-JustALittlePatience.md)
+    * [The AI-Powered Cloud: From commodity to strategic lock-in](blog/013-TheAIPoweredCloud.md)
+    * [From search to answers: How LLMs are rewiring the Internet's business model](blog/012-FromSearchToAnswers.md)
+    * [Fear of science](blog/011-FearOfScience.md)
+    * [Something to believe in](blog/010-SomethingToBelieveIn.md)
+* June 2025
+    * [Did you say "hallucinations"?](blog/009-DidYouSayHallucinations.md)
+    * [Is AGI Important ?](blog/008-IsAGIImportant.md)
+    * [BigAI as the universal contractor](blog/007-BigAIAsTheUniversalContractor.md)
+    * [BigAI to clean the web to feed from it](blog/006-BigAIToCleanTheWeb.md)
+    * [BigAI is a punishment from God](blog/005-BigAIIsAPunishmentFromGod.md)
+    * [BigAI impact on service companies](blog/004-BigAIImpactOnSserviceCompanies.md)
+    * [Seriously BigAI, you gonna break everything?](blog/003-SeriouslyBigAI.md)
+    * [BigAI leads us out of science](blog/002-BigAILeadsUsOutOfScience.md)
+    * [BigAI and me](blog/001-BigAiAndMe.md)
 
 ## PLM
 
