@@ -27,11 +27,16 @@ This move marks a significant, large-scale application of *synthetic content gen
 
 The inherent conflict is palpable: Grokipedia aims to purge what Musk perceives as "editorial bias," but its content is often found to be derived or adapted from Wikipedia!
 
-But Grokipedia is not just a rival of Wikipedia: It seems like an experiment in *automating the very process of historical and factual record-keeping*. We talked, in older episodes about the Sources of New Content (SNCs) and in particular about the news as being one of those sources. Grokipedia intends to capture those sources and create a real timeline of events, a real automated history. In a way, Grokipedia begins the AI witness of the human history, and the AI scribe of human history, ensuring it is up-to-date and ensuring facts were not "forgotten" or twisted by partial editors.
+But Grokipedia is not just a rival of Wikipedia: It seems like an experiment in *automating the very process of historical and factual record-keeping*. We talked, in older episodes about the Sources of New Content (SNCs) and in particular about the news as being one of those sources. Grokipedia intends to capture those sources and create a real timeline of events, a real automated history.
 
-In that sense, Musk is not creating a new encyclopedia but *a new encyclopedist and archivist*! That could be a very deep change in the way we are doing short term history. That could be close to a new version of [Foundation](https://en.wikipedia.org/wiki/Foundation_(novel_series)), from Asimov, except that the Foundation is, in a way, Grok.
+In a way, Grokipedia begins the AI witness of the human history, and the AI scribe of human history, ensuring it is up-to-date and ensuring facts were not:
 
-Just think about all those confidential letters working on open sources and analyzing what influential people say in the various media. They are doing the work of archivists and cross-reference all that is said publicly to draw unexpected portraits of influential people. If Grokipedia is doing it well, people may discover the true face of some individuals. That looks like Musk.
+* "forgotten",
+* or twisted by partial editors.
+
+In that sense, Musk is not creating a new encyclopedia but *a new encyclopedist and archivist*! That could be a very deep change in the way we are doing short term history. That could be close to a new version of [Foundation](https://en.wikipedia.org/wiki/Foundation_(novel_series)), from Asimov, except that the Foundation is, in a way, Grok itself.
+
+Just think about all those confidential letters working on open sources. They analyze what influential people say in the various media, gather it and create perspective. They are doing the work of archivists and cross-reference all what is said publicly to draw unexpected portraits of those influential people. If Grokipedia is doing it well, people may discover automatically the true face of many individuals. Systematic archiving and correlation is fundamental to understanding not-so-hidden motivations. That looks like an objective Musk could have.
 
 ## Sora 2 and the copyright tightrope
 
@@ -55,11 +60,11 @@ On that topic, in a matter of months, everyone will forget the buzz. The solutio
 
 ## Filming everything to feed the hungry AI
 
-As AI models like Sora become more sophisticated, their hunger for high-quality, real-world data—especially video—is limitless. This leads to an intriguing, almost dystopian thought experiment: If we don't have enough cinematic-quality footage to train the next generation of autonomous cars, world simulators, or immersive AR systems, should we simply **film everything**?
+As AI models like Sora become more sophisticated, their hunger for high-quality, real-world data is limitless. This leads to an intriguing, almost dystopian thought experiment: If we don't have enough cinematic-quality footage to train the next generation of autonomous cars, world simulators, or immersive AR systems, should we simply *film everything*?
 
 The parallel is Google Maps, which systematically captured the world's streets to build a geographic model. Extending this logic to video would mean permanently mounting billions of cameras—on every vehicle, street corner, and wearable device—to create a continuous, multi-perspective record of human life and physics in action.
 
-This strategy could remind of [Borges](https://en.wikipedia.org/wiki/Jorge_Luis_Borges)' short story *North North-West* where a writer want to capture the full essence of the reality of the world. He intends to describe with words the entire world in all its details. Realizing the immensity of the task, he decides to start by describing his country, then his region, then his town, then his house, then his office, then his desk and finally the north north-west corner of his desk (hence the title of the short story).
+This strategy could remind of [Borges](https://en.wikipedia.org/wiki/Jorge_Luis_Borges)' short story *North North-West* where a writer wants to capture the full essence of the reality of the world. He intends to describe with words the entire world in all its details. Realizing the immensity of the task, he decides to start by describing his country, then his region, then his town, then his house, then his office, then his desk and finally the north north-west corner of his desk (hence the title of the short story).
 
 In our case, to what level of details should we stop? Should we also film every willing human? At every stage of his life?
 
@@ -71,13 +76,15 @@ That will open new question about personal data: Could you claim having right on
 
 The final, and perhaps most philosophical, stage of the content war concerns the human mind itself. If AI content—synthetic, optimized, and nearly limitless—floods our information ecosystem, will we, the consumers, lose our critical faculties?
 
-Will we be able to distinguish between human generated content and synthetic content anymore? Will it be the end of reflection, the standardization of opinions? Will we move towards the insipidity of business content when everyone will use the same recommendations coming from the same AIs, trained on the same data? Will we even remember what it is to have a personality?
+Will we be able to distinguish between human generated content and synthetic content anymore? Will it be the end of reflection, the standardization of opinions? Will we move towards the insipidity of business contents when everyone will use the same recommendations, coming from the same AIs, trained on the same data? Will we even remember what it is to have a personality?
 
-That's why personalizing AIs is probably something to look for (see [Should AI have a personality?](016-ShouldAIHaveAPersonality.md), because your AI will not be like the one of your neighbor. And that's why hallucinations may be, in the future, an important advantage to distinguish AIs (see [BigAI is the Book of Sand](019-BigAIIsTheBookOfSand.md)), like temperature enable then to be more creative, or at least to do weirder connections.
+That's why personalizing AIs is probably something to look for (see [Should AI have a personality?](016-ShouldAIHaveAPersonality.md), because your AI will not be like the one of your neighbor. That would be entering into a paradox: users to customize their AI personality to replace their lack of personality?
 
-In this context, *old books, original manuscripts, and non-digitized human-created content are of immense value* (even if few people realize it). They are the *verified truth-anchor*, artifacts we are confident contain the unique thought, original bias, and verifiable human hand of an author. They come from humans!
+And that's why hallucinations may be, in the future, an important advantage to distinguish AIs (see [BigAI is the Book of Sand](019-BigAIIsTheBookOfSand.md)). However criticized, parameters like temperature enable the AIs to be more creative, or at least to do unexpected connections between ideas.
 
-In the digital world however, those voices will soon be *endangered animals*.
+In this context, *old books, original manuscripts, and non-digitized human-created content are of immense value*, even if few people realize it. They are the *verified truth-anchor*, artifacts we are confident contain the unique thought, original bias, and verifiable human hand of an author. They really come from humans, from singular individuals that worked hard to express something, with their own world vision and their own personality.
+
+In the digital world of tomorrow, those human voices may soon appear as *endangered animals*.
 
 *(November 11 2025)*
 
