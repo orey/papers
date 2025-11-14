@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,15 +10,15 @@
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Fear of Science? - Papers</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../css/fontawesome.min.css" rel="stylesheet">
-        <link href="../../css/brands.min.css" rel="stylesheet">
-        <link href="../../css/solid.min.css" rel="stylesheet">
-        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
-        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../styles.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
     <body>
@@ -26,7 +26,7 @@
             <div class="container">
                 <a class="navbar-brand" href="../..">Papers</a>
                 <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -34,8 +34,8 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">BlogAI</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">BlogAI <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -43,8 +43,8 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">PLM</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">PLM <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -68,8 +68,8 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">IT, Modeling & Data</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">IT, Modeling & Data <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -125,8 +125,8 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About Graphs</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About Graphs <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -182,8 +182,8 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Various</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Various <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -203,8 +203,8 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -218,9 +218,9 @@
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav ms-md-auto">
+                    <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
@@ -231,9 +231,9 @@
 
         <div class="container">
             <div class="row">
-                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
             <span class="fa fa-angle-down"></span>
         </button>
     </div>
@@ -242,33 +242,33 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#fear-of-science" class="nav-link">Fear of Science?</a>
+            <li class="nav-item" data-level="1"><a href="#fear-of-science" class="nav-link">Fear of Science?</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#are-there-thinkers-in-silicon-valley" class="nav-link">Are There Thinkers in Silicon Valley?</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#why-has-innovation-slowed" class="nav-link">Why Has Innovation Slowed?</a>
+            <li class="nav-item" data-level="2"><a href="#are-there-thinkers-in-silicon-valley" class="nav-link">Are There Thinkers in Silicon Valley?</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#the-rule-of-the-old" class="nav-link">The Rule of the Old</a>
+            <li class="nav-item" data-level="2"><a href="#why-has-innovation-slowed" class="nav-link">Why Has Innovation Slowed?</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#the-safe-paths-to-wealth" class="nav-link">The Safe Paths to Wealth</a>
+            <li class="nav-item" data-level="2"><a href="#the-rule-of-the-old" class="nav-link">The Rule of the Old</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#a-society-turned-inward" class="nav-link">A Society Turned Inward</a>
+            <li class="nav-item" data-level="2"><a href="#the-safe-paths-to-wealth" class="nav-link">The Safe Paths to Wealth</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#the-return-of-the-technologists" class="nav-link">The Return of the Technologists</a>
+            <li class="nav-item" data-level="2"><a href="#a-society-turned-inward" class="nav-link">A Society Turned Inward</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#annex-peter-thiel-and-rene-girard" class="nav-link">Annex: Peter Thiel and René Girard</a>
+            <li class="nav-item" data-level="2"><a href="#the-return-of-the-technologists" class="nav-link">The Return of the Technologists</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#annex-peter-thiel-and-rene-girard" class="nav-link">Annex: Peter Thiel and René Girard</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -313,7 +313,14 @@
 <h2 id="annex-peter-thiel-and-rene-girard">Annex: Peter Thiel and René Girard<a class="headerlink" href="#annex-peter-thiel-and-rene-girard" title="Permanent link">#</a></h2>
 <p><strong>Me</strong>: <span style="color:blue">I don't really see how the thesis of rené Girard articulates with the thoughts of Thiel.</span></p>
 <p><strong>BigAI</strong>: <span style="color:green">Peter Thiel often cites René Girard as a major intellectual influence, particularly Girard’s theory of mimetic desire—the idea that we imitate the desires of others, leading to rivalry and conflict. Thiel sees this imitation as a trap that stifles innovation, pushing society into endless competition instead of original creation. For him, true innovators must escape the mimetic cycle and think independently. But Girard’s work is also a warning: unchecked desire and rivalry can lead to violence and collapse. In a way, Thiel treats Girard both as an inspiration and a cautionary tale—using his insights to justify bold innovation, but perhaps overlooking the deeper call for humility and social cohesion at the heart of Girard’s thought.</span></p>
-<p><em>(July 6 2025)</em></p></div>
+<p><em>(July 6 2025)</em></p>
+<hr />
+<p>Navigation:</p>
+<ul>
+<li>Next: The content wars, episode 2: <a href="../012-FromSearchToAnswers/">From search to answers: How LLMs are rewiring the Internet's business model</a></li>
+<li><a href="../000-BlogIndex/">Index</a></li>
+<li>Previous: <a href="../010-SomethingToBelieveIn/">Something to believe in</a></li>
+</ul></div>
             </div>
         </div>
 
@@ -322,20 +329,19 @@
                 <p>Copyleft Olivier Rey 2017-2025 - Site licensed under the GNU FDL V3</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script src="../../js/bootstrap.bundle.min.js"></script>
         <script>
             var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../js/base.js"></script>
-        <script src="../../search/main.js"></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body">
                 <p>From here you can search these documents. Enter your search terms below.</p>
@@ -355,7 +361,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body">
               <table class="table">

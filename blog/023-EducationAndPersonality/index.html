@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Olivier Rey">
+        <link rel="canonical" href="https://orey.github.io/papers/blog/023-EducationAndPersonality/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Education and personality - Papers</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../styles.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Papers</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">BlogAI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../000-BlogIndex/" class="dropdown-item">Blog index</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">PLM <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/about-plm/" class="dropdown-item">PLM and graph data</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/conf-mgt/" class="dropdown-item">Configuration management of industrial products in PDM/PLM</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/spreadsheet-and-PLM/" class="dropdown-item">The four core functions showing you need a PLM</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/data-mig/" class="dropdown-item">Semantic data migration in Industry</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/industry-data/" class="dropdown-item">Reflections on industry data</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">IT, Modeling & Data <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/change-agent/" class="dropdown-item">Digital Transformation Starts with the Change Agent Transformation</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/safe/" class="dropdown-item">What you should know about SAFe</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/legends-of-it/" class="dropdown-item">Legends of IT</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/data-interop/" class="dropdown-item">The real nature of data</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/mbse-vs-ea/" class="dropdown-item">Military frameworks, systems engineering and enterprise architecture</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/portfolio/" class="dropdown-item">A Simple Meta-Model for Portfolio Management</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/archimate-intro/" class="dropdown-item">An Introduction to The Archimate Revolution</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/archimate-recipes/" class="dropdown-item">Archimate Recipes</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/about-rest/" class="dropdown-item">Considerations About Rest And Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graphql-web-services/" class="dropdown-item">GraphQL And Classic Web Services</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/five-levels/" class="dropdown-item">The Five Levels of Conceptual Maturity for IT Teams</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/the-v2-vortex/" class="dropdown-item">The V2 Vortex</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/various-stages/" class="dropdown-item">The Various Stages of Digital Transformation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About Graphs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/first-article/" class="dropdown-item">Graph-oriented programming</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/staf-icgt2018/" class="dropdown-item">Conference at the STAF/ICGT 2018 in Toulouse</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graphapps/" class="dropdown-item">GraphApps project page</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-oriented-pl/" class="dropdown-item">Towards a graph-oriented programming language?</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/index-research/" class="dropdown-item">Graph transformation index page</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-transfo/" class="dropdown-item">Graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-interop/" class="dropdown-item">A general interoperability model using graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/basic-graph-transformations/" class="dropdown-item">Basic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/basic-semantic-graph-transformations/" class="dropdown-item">Basic semantic graph transformations</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/DSL-for-graph-topology-checks/" class="dropdown-item">DSL for graph topology check</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/graph-transformation-applicability/" class="dropdown-item">Graph transformation applicability</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/grammar-graph-transformation/" class="dropdown-item">Grammar of graph transformation</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/rdf-design-patterns/" class="dropdown-item">UML to RDF considerations</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Various <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../articles/zenon-lumiere/" class="dropdown-item">Paradoxe de Zénon et dépassement de la vitesse de la lumière</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/relativite/" class="dropdown-item">A propos de la relativité générale</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/cartan/" class="dropdown-item">Einstein, Cartan et la géométrie différentielle</a>
+</li>
+                                    
+<li>
+    <a href="../../articles/resources/" class="dropdown-item">Resources</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../about/about/" class="dropdown-item">Author</a>
+</li>
+                                    
+<li>
+    <a href="../../about/LICENSE/" class="dropdown-item">License</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#education-and-personality" class="nav-link">Education and personality</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#is-cognitive-offloading-really-the-problem" class="nav-link">Is cognitive offloading really the problem?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#trust-rather-than-cognitive-offloading" class="nav-link">Trust rather than cognitive offloading</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#the-risk-of-personality-loss" class="nav-link">The risk of personality loss</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#what-if-llms-have-good-aspects-for-education" class="nav-link">What if LLMs have good aspects for education?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#first-ideas-for-a-llm-enabled-education-system" class="nav-link">First ideas for a LLM-enabled education system</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#changing-the-life-of-educators" class="nav-link">Changing the life of educators</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#conclusion" class="nav-link">Conclusion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="education-and-personality">Education and personality<a class="headerlink" href="#education-and-personality" title="Permanent link">#</a></h1>
+<p><img alt="scholar" src="../../images/GD-104-Gerrit_Dou-A_Scholar_Sharpening_his_QuillFXD.jpg" /></p>
+<p><em>A scholar sharpening his quill, around 1632, Gerrit Dou (<a href="https://commons.wikimedia.org/wiki/File:GD-104-Gerrit_Dou-A_Scholar_Sharpening_his_QuillFXD.jpg">public domain</a>)</em></p>
+<h2 id="is-cognitive-offloading-really-the-problem">Is cognitive offloading really the problem?<a class="headerlink" href="#is-cognitive-offloading-really-the-problem" title="Permanent link">#</a></h2>
+<p>The advent of large language models (LLMs) has sparked a significant fear: that the emerging AI-native generation will become cognitively dependent on these tools, unable to function or solve problems without them.</p>
+<p>This concern is often encapsulated by the term <strong>cognitive offloading</strong>: the idea that we delegate our mental effort to an external agent, potentially leading to the atrophy of our innate intellectual skills.</p>
+<p>While this concept has been a central point of debate, particularly in discussions about memory and critical thinking, focusing solely on the <em>offloading</em> aspect may be too narrow. The true dynamic at play, especially for complex reasoning tasks, might be less about delegation and more about a fundamental shift in epistemic point of view.</p>
+<h2 id="trust-rather-than-cognitive-offloading">Trust rather than cognitive offloading<a class="headerlink" href="#trust-rather-than-cognitive-offloading" title="Permanent link">#</a></h2>
+<p>We must reconsider the nature of cognitive offloading when the external agent is a black-box system like an LLM. In essence, using an LLM to generate an answer can be likened to <strong>intellectual subcontracting</strong> (see <a href="../007-BigAIAsTheUniversalContractor/">BigAI as the universal contractor</a>).</p>
+<p>If a person possesses significant expertise in a domain, they have the necessary critical skills to thoroughly evaluate and validate the LLM's output, thus maintaining control and truly <em>offloading</em> a computational task.</p>
+<p>However, for a novice, or for the average student, the ability to critically judge the provided answer is absent. In this scenario, they are not genuinely <em>offloading</em> their cognition; instead, they are forced to <strong>trust</strong> the answer, accepting it as an authoritative truth because they lack the independent capacity to form an opinion or they have no way to verify the veracity of the information.</p>
+<p>This pivot from a skill-based delegation to an authority-based trust introduces a much deeper set of pedagogical and societal displacements.</p>
+<h2 id="the-risk-of-personality-loss">The risk of personality loss<a class="headerlink" href="#the-risk-of-personality-loss" title="Permanent link">#</a></h2>
+<p>If a large portion of the AI-native generation adopts this strategy of uncritical trust, relying on LLMs for core academic or professional output, we face the prospect of pervasive <em>intellectual uniformity</em>.</p>
+<p>While the responses generated by sophisticated LLMs may be statistically and factually superior to the average human output today, this efficiency comes at a cost. The real sacrifice may not be the <em>offloading of cognition</em>, but the <strong>offloading of personality</strong>.</p>
+<p>Indeed, personality is the unique voice, perspective, and singular chain of reasoning that defines an individual's intellectual world representation and thinking.</p>
+<p>Historically, even when utilizing external sources like encyclopedias or the early Internet, individuals still had the space to inject their own viewpoint, perspective, and unique synthesis. Since most LLMs operate on similar foundational datasets and are governed by shared ethical guardrails, their outputs tend toward a centralized mean, creating a homogenizing effect. That effect is to add to the social conformity of our western societies.</p>
+<p>This leads to the powerful realization circulating among nowadays' educators: the problem isn't just that students are "cheating": The problem is their work now lacks their personality. Works are becoming uniforms, better that what humans can do but not reflecting anymore the singular individuals.</p>
+<p>We could argue that, already today, with all the resources available, most students are not making a lot of efforts, but that is not really true. Because even compiling various sources is not a neutral exercise.</p>
+<h2 id="what-if-llms-have-good-aspects-for-education">What if LLMs have good aspects for education?<a class="headerlink" href="#what-if-llms-have-good-aspects-for-education" title="Permanent link">#</a></h2>
+<p>To progress, we must engage in a mental experiment and reverse the prevailing negative viewpoint to explore potential benefits of LLM-powered education.</p>
+<h3 id="memory-exercises">Memory exercises<a class="headerlink" href="#memory-exercises" title="Permanent link">#</a></h3>
+<p>For centuries, education has required students to memorize a vast amount of pure factual knowledge, much of which quickly becomes obsolete or rarely used. LLMs, effectively acting as vastly superior search engines and comprehensive knowledge bases, make this kind of repetitive memorization largely obsolete. This is not necessarily revolutionary, but it can be viewed as an opportunity.</p>
+<h3 id="reasoning">Reasoning<a class="headerlink" href="#reasoning" title="Permanent link">#</a></h3>
+<p>The true educational opportunity, and the ongoing challenge, lies in <em>reasoning</em>.</p>
+<p>As previously noted, the student has two choices:</p>
+<ul>
+<li>Either to exert the mental effort to understand the LLM's reasoning (perhaps by asking for step-by-step explanations);</li>
+<li>Or to simply <em>trust</em> the result, mirroring the traditional student who blindly copies a peer's correct exam answer without comprehension.</li>
+</ul>
+<p>This dynamic suggests that LLMs will act as powerful <em>difference amplifiers</em> in education:</p>
+<ul>
+<li>High-performing or motivated students can utilize the LLM as an <em>omniscient personal tutor</em> to deepen their understanding and explore complex concepts faster;</li>
+<li>Conversely, students predisposed to mental shortcuts will simply substitute peer-copying with output-copying, deepening their reliance on trust without comprehension.</li>
+</ul>
+<p>Thus, the tool promises to elevate the already-proficient to new heights while potentially stick the low-performing in a state of intellectual dependence.</p>
+<h2 id="first-ideas-for-a-llm-enabled-education-system">First ideas for a LLM-enabled education system<a class="headerlink" href="#first-ideas-for-a-llm-enabled-education-system" title="Permanent link">#</a></h2>
+<h3 id="context-for-the-student">Context for the student<a class="headerlink" href="#context-for-the-student" title="Permanent link">#</a></h3>
+<p>In an AI-saturated world, the primary objective for educational reform should be to <strong>raise the cognitive bar</strong>.</p>
+<p>If students possess an incredibly powerful, instantly available omniscient agent, then the nature of the problems they are asked to solve must evolve to match this capability.</p>
+<h3 id="context-for-the-educator">Context for the educator<a class="headerlink" href="#context-for-the-educator" title="Permanent link">#</a></h3>
+<p>We should, at any cost, avoid to enter into *<em>the sterile loop</em>:</p>
+<ol>
+<li>The teacher uses LLM to create a subject;</li>
+<li>The students use the LLM to answer to the subject;</li>
+<li>The teacher uses the LLM to correct the answers.</li>
+</ol>
+<p>In this loop, nobody learns nothing.</p>
+<p>That's why, when big AI companies are signing deals with universities, educators are bound to ask again the fundamental questions of education::</p>
+<ul>
+<li>What should we teach?</li>
+<li>How should we teach?</li>
+<li>How can we evaluate pupils/students?</li>
+</ul>
+<p>That's an excellent and crucial point. The "infernal loop" you describe—LLM-created assignment, LLM-generated answer, LLM-graded response—is a tangible risk that undermines the entire purpose of education.</p>
+<p>To break this loop and move into an era of LLM-enabled education, a comprehensive manual or philosophical framework is needed. This requires us to return to the core educational questions: what, how, and why we teach.</p>
+<h3 id="what-should-be-taught">What should be taught?<a class="headerlink" href="#what-should-be-taught" title="Permanent link">#</a></h3>
+<p>The content of education must pivot away from easily searchable, factual knowledge and toward meta-skills that machines cannot replicate - at least not yet.</p>
+<p>We can propose the following directions to study:</p>
+<ul>
+<li><strong>Focus on foundations</strong>: Students must learn the core theories that structure a discipline, not just the facts. They must understand the deep motivation for things. LLMs can then be seen as <strong>information boosters</strong> rather than as main information providers. This may not be easy.</li>
+<li><strong>Critics of LLM outputs</strong>: We can't focus anymore on information acquisition because LLMs know it all. Instead the focus should be made on <strong>information validation</strong> and <strong>information synthesis</strong>. Students should be taught how to critically evaluate LLM output, fact-check it, identify its biases, and integrate it with non-digital sources. Research in physical paper libraries will be great exercises in the coming years, just to assess the shift in representations between LLMs and old paper books. Hallucinations can also be used to learn about the AI unreliability.</li>
+<li><strong>Cultivate intellectual personality</strong>: Education must explicitly teach students how to inject their unique perspective, ethical lens, and personal values into their work. Students must also understand that LLMs tend to flatten everything into a statistical average... with no personality.</li>
+</ul>
+<h3 id="how-teaching-should-be">How teaching should be?<a class="headerlink" href="#how-teaching-should-be" title="Permanent link">#</a></h3>
+<p>The teaching methodology must transform from a delivery system of information to a facilitation system for complex thinking. Great phrase but not so easy to realize.</p>
+<p>We propose the following directions to study:</p>
+<ul>
+<li><strong>Inquiry-like learning</strong>: Teachers should include in their courses more questions, more time to challenge, to create a will to inquire. Now that the students have in their pocket a <em>thinking library</em>, can they find the roots of the things? And what would they have done?</li>
+<li><strong>Focus on process</strong>: Assignments should require students to submit their prompting process (the history of their queries, the LLM outputs they discarded, and their rationale) alongside the final answer. This makes the methodology the object of evaluation (see below).</li>
+<li><strong>LLM-Proof Assignments</strong>: Design assignments that require real-world engagement, collaboration, ethical judgment, or application to local or current situations that are not yet in the LLM's training data. That's not easy, but imagine situations where the LLM may not have the right answer.</li>
+</ul>
+<h3 id="how-can-evaluation-become">How can evaluation become?<a class="headerlink" href="#how-can-evaluation-become" title="Permanent link">#</a></h3>
+<p>Education should keep both LLM-free evaluation and LLM-assisted evaluation.</p>
+<p>We propose the following directions for the LLM-assisted evaluations.</p>
+<ul>
+<li><strong>Evaluation of the prompt/inquiry process</strong>: Grade the student's intellectual sophistication as revealed through the quality and complexity of their prompts. A good student asks a sequence of nuanced, specific questions; a poor student asks one vague question. That's one of the key points.</li>
+<li>On top of this one is the <strong>standardization of the LLM engine</strong> during an exam. Every result a student obtains should be reproducible by the teacher, unless the student explicitly indicates the thoughts are LLM-free (which is a gamble that brings more risks if they are not).</li>
+<li><strong>Cross-domain and complexity focus</strong>: Using multi-dimensional problems that require students to connect concepts from different disciplines (e.g., combining history, economics, and environmental science to solve a current policy issue) is a sure way to stimulate the student's comprehension and synthesis capabilities.</li>
+<li>The previous point focus on the <strong>increase of problem complexity</strong>. LLMs are bringing a lot to students: let them face complexity and cross-domain problems to test them.</li>
+<li>In order to have a good vision of the student's value, only one exam may not be sufficient: The student should be analyzed <strong>in a holistic way</strong>. That's where AI becomes a teacher's assistant enabling to analyze patterns of responses across a semester, looking for consistent signs of real comprehension rather than isolated instances of correct answers. In a way, the evaluation would look like a psychological profile where you can cheat on some questions but not on all, and especially not on the underlying model.</li>
+<li><strong>Don't punish old-school pupils/students</strong>: They may not want to use LLMs so often. They should be rewarded when their practices are proven.</li>
+</ul>
+<h2 id="changing-the-life-of-educators">Changing the life of educators<a class="headerlink" href="#changing-the-life-of-educators" title="Permanent link">#</a></h2>
+<p>For sure, this paradigm shift demands many changes in the role of the professor.</p>
+<p>Educators will need to move beyond simply assessing today's curriculum and proactively look at the cognitive demands of the next academic levels to effectively challenge their AI-augmented students.</p>
+<p>A key strategy for educators will be to collaborate with LLMs themselves to design robust evaluation methods, for instance based on what we've just exposed.</p>
+<p>Adaptation seems not optional now in education. Educators may have to live with it.</p>
+<p>Will they be replaced by AI? That's not so easy. AI can be a huge complement to serious students. AI progresses are spectacular but better have AI-augmented teachers teaching to AI-augmented students than no teachers at all.</p>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">#</a></h2>
+<p>The fears surrounding the AI-native generation may be misplaced. The daily integration of LLMs into the student workflow may not present an insurmountable barrier, but a unique lever for educational advancement.</p>
+<p>This future demands fast and willing actions. Here are, we think, the main ideas:</p>
+<ul>
+<li><strong>Standardization:</strong> Considering the evaluation of prompts, there is a strong argument for implementing <em>official, designated LLMs</em> in education to ensure a consistent baseline for comparison and assessment across students.</li>
+<li><strong>Restructuring:</strong> Courses must be fundamentally <em>restructured to favor complexity</em>, moving past repetitive knowledge and simple application questions.</li>
+<li><strong>Complexity:</strong> Evaluation should relentlessly <em>favor cross-domain, non-trivial issues</em> that necessitate genuine synthesis and deep critical inquiry, ensuring the student is the master of the tool, not its servant.</li>
+</ul>
+<p><em>(November 15 2025)</em></p>
+<hr />
+<p>Navigation:</p>
+<ul>
+<li><a href="../000-BlogIndex/">Index</a></li>
+<li>Previous: The content wars, episode 5: <a href="blog/022-ContentAndLaw.md">Original and synthetic content, and the Law</a></li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyleft Olivier Rey 2017-2025 - Site licensed under the GNU FDL V3</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
