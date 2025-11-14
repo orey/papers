@@ -151,5 +151,5 @@ This future demands fast and willing actions. Here are, we think, the main ideas
 Navigation:
 
 * [Index](000-BlogIndex.md)
-* Previous: The content wars, episode 5: [Original and synthetic content, and the Law](blog/022-ContentAndLaw.md)
+* Previous: The content wars, episode 5: [Original and synthetic content, and the Law](022-ContentAndLaw.md)
 
