@@ -5,6 +5,8 @@ site_author: Olivier Rey
 copyright: Copyleft Olivier Rey 2017-2025 - Site licensed under the GNU FDL V3
 theme:
     name: mkdocs
+extra_css:
+    - styles.css
 analytics:
     gtag: G-BZMZKWJP2V
 markdown_extensions:
