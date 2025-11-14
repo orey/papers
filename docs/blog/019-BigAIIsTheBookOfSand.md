@@ -46,3 +46,11 @@ Then why are we, humans, trying so hard to eradicate them?
 
 *(September 9 2025)*
 
+---
+
+Navigation:
+
+* Next: [BigAI impact on company jobs:Villain or savior?](020-BigAIImpactOnCompanyJobs.md)
+* [Index](000-BlogIndex.md)
+* Previous: The content wars, episode 4: [The coming war of synthetic works](018-TheComingWarOfSyntheticWorks.md)
+

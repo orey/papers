@@ -18,3 +18,11 @@ Hallucinations is one more feature BigAI got from his creators!
 
 *(June 30 2025)*
 
+---
+
+Navigation:
+
+* Next: [Something to believe in](010-SomethingToBelieveIn.md)
+* [Index](000-BlogIndex.md)
+* Previous: [Is AGI Important ?](008-IsAGIImportant.md)
+

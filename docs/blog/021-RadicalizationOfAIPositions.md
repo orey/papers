@@ -141,3 +141,11 @@ No one can predict the future. But, facing the reality of today is a first step 
 
 *(November 9 2025)*
 
+---
+
+Navigation:
+
+* Next: The content wars, episode 5: [Original and synthetic content, and the Law](022-ContentAndLaw.md)
+* [Index](000-BlogIndex.md)
+* Previous: [BigAI impact on company jobs:Villain or savior?](020-BigAIImpactOnCompanyJobs.md)
+

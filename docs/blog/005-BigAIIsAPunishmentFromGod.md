@@ -63,3 +63,11 @@ Pray I am wrong.
 
 *(June 22 2025)*
 
+---
+
+Navigation:
+
+* Next: The content wars, episode 1: [BigAI to clean the web to feed from it](006-BigAIToCleanTheWeb.md)
+* [Index](000-BlogIndex.md)
+* Previous: [BigAI impact on service companies](004-BigAIImpactOnSserviceCompanies.md)
+

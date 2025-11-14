@@ -87,3 +87,10 @@ Everything that is in this site, blog included, is AI free. It is worth saying b
 
 *(June 20 2025)*
 
+---
+
+Navigation:
+
+* Next: [BigAI leads us out of science](002-BigAILeadsUsOutOfScience.md)
+* [Index](000-BlogIndex.md)
+

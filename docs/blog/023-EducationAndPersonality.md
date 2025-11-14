@@ -66,6 +66,8 @@ If we look at the current practices, the intellectual effort has shifted from ge
 
 In a future education system, the *prompts* created by students will be the most revealing metric of their thought process and understanding. This would be a kind of *reverse-engineering evaluation* of learning, assessing the depth of conceptual understanding by scrutinizing the quality of the student's inquiry.
 
+For sure, being able to evaluate the prompt implies also that all players are working with the same AI, so standardization of the LLM for a particular class or school should be favored.
+
 ### Direction 2: Increase problem difficulty using cross-domain issues
 
 Just as the introduction of calculators allowed educators to increase the mathematical complexity of exam problems by removing the burden of manual arithmetic, LLMs enable a leap in *conceptual complexity*.
@@ -84,7 +86,17 @@ In a system where single-instance "cheating" is trivial, evaluation must become 
 
 Instead of grading single examinations, the assessment should be longitudinal and correlated. Students may successfully *fake* understanding on one complex assignment, but by assessing a multitude of their reactions and outputs across various, interlinked tasks, it would become possible (perhaps even with the assistance of an AI-powered grading system) to map their true conceptual mastery over time.
 
-## 6. Upgrade of teaching methods
+### Direction 4: Use hallucinations to learn to doubt
+
+If everyone uses the same LLM, teachers and students, the teachers could use the hallucinations as a way to learn pupils/students to doubt. Nowadays, it is quite easy to find errors in LLMs, and exploiting those errors as traps can be a way to introduce some distance with the tool.
+
+## Don't punish old-school pupils/students
+
+Big AI companies are pushing to introduce LLMs in educations though the seduction of teachers, making it inevitable, without having provided educators with the way to manage LLM-enabled pupils/students.
+
+Pupils/students that would like or prefer to use standard LLM-free methods should be able to indicate it in their copies
+
+## Upgrade of teaching methods
 
 For sure, this paradigm shift demands a profound change in the role of the professor.
 
@@ -109,4 +121,11 @@ This future demands fast and willing actions:
 * **Focus:** Evaluation should relentlessly *favor cross-domain, non-trivial issues* that necessitate genuine synthesis and deep critical inquiry, ensuring the student is the master of the tool, not its servant.
 
 *(November 13 2025)*
+
+---
+
+Navigation:
+
+* [Index](000-BlogIndex.md)
+* Previous: The content wars, episode 5: [Original and synthetic content, and the Law](blog/022-ContentAndLaw.md)
 

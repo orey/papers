@@ -54,3 +54,11 @@ That leads us to the strange animal called the "AI guy". Despite many people say
 
 *(June 22 2025)*
 
+---
+
+Navigation:
+
+* Next: [BigAI is a punishment from God](005-BigAIIsAPunishmentFromGod.md)
+* [Index](000-BlogIndex.md)
+* Previous: [Seriously BigAI, you gonna break everything?](003-SeriouslyBigAI.md)
+

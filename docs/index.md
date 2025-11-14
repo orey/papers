@@ -3,6 +3,7 @@
 ## Blog
 
 * November 2025
+    * [Education and personality](blog/023-EducationAndPersonality.md)
     * The content wars, episode 5: [Original and synthetic content, and the Law](blog/022-ContentAndLaw.md)
     * [Radicalization of AI positions](blog/021-RadicalizationOfAIPositions.md)
 * October 2025

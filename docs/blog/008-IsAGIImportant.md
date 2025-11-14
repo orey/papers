@@ -102,3 +102,11 @@ It reminds me of *Albator 78*, the Japanese manga: humanity so enslaved by machi
 
 *(June 29 2025)*
 
+---
+
+Navigation:
+
+* Next: [Did you say "hallucinations"?](009-DidYouSayHallucinations.md)
+* [Index](000-BlogIndex.md)
+* Previous: [BigAI as the universal contractor](007-BigAIAsTheUniversalContractor.md)
+

@@ -33,3 +33,11 @@ And I think this is exactly what OpenAI and Anthropic are doing. "Cleaning" is a
 
 *(June 28 2025)*
 
+---
+
+Navigation:
+
+* Next: [BigAI as the universal contractor](007-BigAIAsTheUniversalContractor.md)
+* [Index](000-BlogIndex.md)
+* Previous: [BigAI is a punishment from God](005-BigAIIsAPunishmentFromGod.md)
+

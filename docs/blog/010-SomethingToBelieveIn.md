@@ -61,3 +61,11 @@ And, in our generation of stagnation, where everybody says to you, you should no
 
 *(July 1 2025)*
 
+---
+
+Navigation:
+
+* Next: [Fear of science](011-FearOfScience.md)
+* [Index](000-BlogIndex.md)
+* Previous: [Did you say "hallucinations"?](009-DidYouSayHallucinations.md)
+

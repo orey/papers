@@ -88,3 +88,11 @@ In the digital world of tomorrow, those human voices may soon appear as *endange
 
 *(November 11 2025)*
 
+---
+
+Navigation:
+
+* Next: [Education and personality](023-EducationAndPersonality.md)
+* [Index](000-BlogIndex.md)
+* Previous: [Radicalization of AI positions](021-RadicalizationOfAIPositions.md)
+

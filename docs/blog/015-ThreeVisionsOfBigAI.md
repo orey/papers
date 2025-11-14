@@ -117,3 +117,11 @@ Please broadcast or we will, once again, be the willing victims.
 
 *(July 29-31 2025)*
 
+---
+
+Navigation:
+
+* Next: [Should AI have a personality?](016-ShouldAIHaveAPersonality.md)
+* [Index](000-BlogIndex.md)
+* Previous: [Just a little patience](014-JustALittlePatience.md)
+

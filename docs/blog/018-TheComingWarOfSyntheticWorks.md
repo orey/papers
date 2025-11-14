@@ -37,3 +37,11 @@ Authors: **build your new licensing model now**. Because soon, you may not just 
 
 *(September 07 2025, [original](20250907_ABadScenario.md))*
 
+---
+
+Navigation:
+
+* Next: [BigAI is the Book of Sand](019-BigAIIsTheBookOfSand.md)
+* [Index](000-BlogIndex.md)
+* Previous: The content wars, episode 3: [Towards a new licensing model for content used for model training](017-TowardsANewLicensingModel.md)
+

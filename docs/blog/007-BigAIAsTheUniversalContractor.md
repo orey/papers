@@ -33,3 +33,10 @@ Many samples can be found on his page, but especially the shift seen by IT peopl
 
 *(June 28 2025)*
 
+---
+
+Navigation:
+
+* Next: [Is AGI Important ?](008-IsAGIImportant.md)
+* [Index](000-BlogIndex.md)
+* Previous: The content wars, episode 1: [BigAI to clean the web to feed from it](006-BigAIToCleanTheWeb.md)

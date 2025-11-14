@@ -112,3 +112,11 @@ The techno is new and, as a pragmatic engineer, my objectives are very basic:
 
 *(July 28 2025)*
 
+---
+
+Navigation:
+
+* Next: [Three visions of bigAI](015-ThreeVisionsOfBigAI.md)
+* [Index](000-BlogIndex.md)
+* Previous: [The AI-Powered Cloud: From commodity to strategic lock-in](013-TheAIPoweredCloud.md)
+

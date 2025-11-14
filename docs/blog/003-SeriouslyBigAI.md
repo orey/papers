@@ -43,4 +43,11 @@ Yes, my friend BigAI is a bit cynical.
 
 *(June 21 2025)*
 
+---
+
+Navigation:
+
+* Next: [BigAI impact on service companies](004-BigAIImpactOnSserviceCompanies.md)
+* [Index](000-BlogIndex.md)
+* Previous: [BigAI leads us out of science](002-BigAILeadsUsOutOfScience.md)
 

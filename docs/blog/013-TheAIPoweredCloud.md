@@ -54,3 +54,10 @@ In a world where SNCs are the lifeblood of future intelligence, and AI becomes t
 
 *(July 14 2025)*
 
+---
+
+Navigation:
+
+* Next: [Just a little patience](014-JustALittlePatience.md)
+* [Index](000-BlogIndex.md)
+* Previous: The content wars, episode 2: [From search to answers: How LLMs are rewiring the Internet's business model](012-FromSearchToAnswers.md)

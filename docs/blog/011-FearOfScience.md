@@ -62,3 +62,11 @@ If philosophers and public intellectuals want to reclaim the conversation around
 
 *(July 6 2025)*
 
+---
+
+Navigation:
+
+* Next: The content wars, episode 2: [From search to answers: How LLMs are rewiring the Internet's business model](012-FromSearchToAnswers.md)
+* [Index](000-BlogIndex.md)
+* Previous: [Something to believe in](010-SomethingToBelieveIn.md)
+

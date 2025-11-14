@@ -82,3 +82,11 @@ Let’s get out of the content war and find a win-win-win situation for BigAI us
 
 *(September 6 2025)*
 
+---
+
+Navigation:
+
+* Next: The content wars, episode 4: [The coming war of synthetic works](018-TheComingWarOfSyntheticWorks.md)
+* [Index](000-BlogIndex.md)
+* Previous: [Should AI have a personality?](016-ShouldAIHaveAPersonality.md)
+

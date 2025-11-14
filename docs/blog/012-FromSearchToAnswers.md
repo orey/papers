@@ -89,4 +89,11 @@ As an enterprise, if your SNC is integrated in the Cloud with AI, you're just mu
 
 *(July 13 2025)*
 
+---
+
+Navigation:
+
+* Next: [The AI-Powered Cloud: From commodity to strategic lock-in](013-TheAIPoweredCloud.md)
+* [Index](000-BlogIndex.md)
+* Previous: [Fear of science](011-FearOfScience.md)
 

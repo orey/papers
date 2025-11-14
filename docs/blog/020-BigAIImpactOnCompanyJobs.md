@@ -120,3 +120,11 @@ BigAI proposed me to correct the article and its problems (language, citation ga
 
 *(October 5 2025)*
 
+---
+
+Navigation:
+
+* Next: [Radicalization of AI positions](021-RadicalizationOfAIPositions.md)
+* [Index](000-BlogIndex.md)
+* Previous: [BigAI is the Book of Sand](019-BigAIIsTheBookOfSand.md)
+

@@ -50,3 +50,11 @@ Haha, dear BigAI!
 
 *(August 31 2025)*
 
+---
+
+Navigation:
+
+* Next: The content wars, episode 3: [Towards a new licensing model for content used for model training](017-TowardsANewLicensingModel.md)
+* [Index](000-BlogIndex.md)
+* Previous: [Three visions of bigAI](015-ThreeVisionsOfBigAI.md)
+

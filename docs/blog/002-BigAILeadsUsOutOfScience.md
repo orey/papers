@@ -66,3 +66,11 @@ This diagram publishes dates so it will be funny to look it back in 2 years.
 
 *(June 21 2025)*
 
+---
+
+Navigation:
+
+* Next: [Seriously BigAI, you gonna break everything?](003-SeriouslyBigAI.md)
+* [Index](000-BlogIndex.md)
+* Previous: [BigAI and me](001-BigAiAndMe.md)
+
