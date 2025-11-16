@@ -82,7 +82,11 @@
 * [Einstein, Cartan et la géométrie différentielle](articles/cartan.md)
 * [Resources](articles/resources.md)
 
-*(Last update: June 2025)*
+## Conversations
+
+* [Conversation on quantum computing](conversations/20251115-Monday-QuantumComputing.md)
+
+*(Last update: November 2025)*
 
 
 

@@ -3,22 +3,39 @@ site_url: https://orey.github.io/papers/
 site_description: Olivier Rey's Papers
 site_author: Olivier Rey
 copyright: Copyleft Olivier Rey 2017-2025 - Site licensed under the GNU FDL V3
+
 theme:
-    name: mkdocs
-extra_css:
-    - styles.css
-analytics:
-    gtag: G-BZMZKWJP2V
+    name: material
+
 markdown_extensions:
+#    - admonition
+    - pymdownx.arithmatex:
+#        inline_math_double: true
+        generic: true
+#    - pymdownx.superfences
+#    - pymdownx.highlight
     - meta
     - toc:
         permalink: "#"
             #baselevel: 3
             #toc_depth: 3
+
+extra_css:
+    - stylesheets/styles.css
+
+extra_javascript:
+    - javascripts/config.js
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+google_analytics:
+  - G-BZMZKWJP2V
+  - auto
 #google_analytics: ['UA-110156293-1', 'orey.github.io']
 #repo_url: https://github.com/orey/papers/
 #theme: readthedocs
+
 site_dir: site
+
 nav:
 - BlogAI:
     - 'Blog index': 'blog/000-BlogIndex.md'
@@ -62,6 +79,8 @@ nav:
     - 'A propos de la relativité générale': 'articles/relativite.md'
     - 'Einstein, Cartan et la géométrie différentielle': 'articles/cartan.md'
     - 'Resources': 'articles/resources.md'
+- Conversations:
+    - 'Conversation on quantum computing': 'conversations/20251115-Monday-QuantumComputing.md'
 - About:
     - 'Author': 'about/about.md'
     - 'License': 'about/LICENSE.md'
