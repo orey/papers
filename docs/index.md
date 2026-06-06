@@ -1,36 +1,34 @@
 # Olivier Rey's Papers
 
-## Blog
+## BlogAI
 
-* November 2025
-    * [Education and personality](blog/023-EducationAndPersonality.md)
-    * The content wars, episode 5: [Original and synthetic content, and the Law](blog/022-ContentAndLaw.md)
-    * [Radicalization of AI positions](blog/021-RadicalizationOfAIPositions.md)
-* October 2025
-    * [BigAI impact on company jobs:Villain or savior?](blog/020-BigAIImpactOnCompanyJobs.md)
-* September 2025
-    * [BigAI is the Book of Sand](blog/019-BigAIIsTheBookOfSand.md)
-    * The content wars, episode 4: [The coming war of synthetic works](blog/018-TheComingWarOfSyntheticWorks.md)
-    * The content wars, episode 3: [Towards a new licensing model for content used for model training](blog/017-TowardsANewLicensingModel.md)
-* August 2025
-    * [Should AI have a personality?](blog/016-ShouldAIHaveAPersonality.md)
-* July 2025
-    * [Three visions of bigAI](blog/015-ThreeVisionsOfBigAI.md)
-    * [Just a little patience](blog/014-JustALittlePatience.md)
-    * [The AI-Powered Cloud: From commodity to strategic lock-in](blog/013-TheAIPoweredCloud.md)
-    * The content wars, episode 2: [From search to answers: How LLMs are rewiring the Internet's business model](blog/012-FromSearchToAnswers.md) (the content wars, episode 1)
-    * [Fear of science](blog/011-FearOfScience.md)
-    * [Something to believe in](blog/010-SomethingToBelieveIn.md)
-* June 2025
-    * [Did you say "hallucinations"?](blog/009-DidYouSayHallucinations.md)
-    * [Is AGI Important ?](blog/008-IsAGIImportant.md)
-    * [BigAI as the universal contractor](blog/007-BigAIAsTheUniversalContractor.md)
-    * The content wars, episode 1: [BigAI to clean the web to feed from it](blog/006-BigAIToCleanTheWeb.md)
-    * [BigAI is a punishment from God](blog/005-BigAIIsAPunishmentFromGod.md)
-    * [BigAI impact on service companies](blog/004-BigAIImpactOnSserviceCompanies.md)
-    * [Seriously BigAI, you gonna break everything?](blog/003-SeriouslyBigAI.md)
-    * [BigAI leads us out of science](blog/002-BigAILeadsUsOutOfScience.md)
-    * [BigAI and me](blog/001-BigAiAndMe.md)
+* The Content Wars, episode 6: [Companies in Front of the Content Tsunami](blog/027-GenAIasMaginfyingGlass.md)
+* [Strangling Agents](blog/026-StranglingAgents.md)
+* [AI faces only heathens](blog/025-AiFacesOnlyHeathens.md)
+* [Where is everybody?](blog/024-WhereIsEverybody.md)
+* [Education and personality](blog/023-EducationAndPersonality.md)
+* The content wars, episode 5: [Original and synthetic content, and the Law](blog/022-ContentAndLaw.md)
+* [Radicalization of AI positions](blog/021-RadicalizationOfAIPositions.md)
+* [BigAI impact on company jobs:Villain or savior?](blog/020-BigAIImpactOnCompanyJobs.md)
+* [BigAI is the Book of Sand](blog/019-BigAIIsTheBookOfSand.md)
+* The content wars, episode 4: [The coming war of synthetic works](blog/018-TheComingWarOfSyntheticWorks.md)
+* The content wars, episode 3: [Towards a new licensing model for content used for model training](blog/017-TowardsANewLicensingModel.md)
+* [Should AI have a personality?](blog/016-ShouldAIHaveAPersonality.md)
+* [Three visions of bigAI](blog/015-ThreeVisionsOfBigAI.md)
+* [Just a little patience](blog/014-JustALittlePatience.md)
+* [The AI-Powered Cloud: From commodity to strategic lock-in](blog/013-TheAIPoweredCloud.md)
+* The content wars, episode 2: [From search to answers: How LLMs are rewiring the Internet's business model](blog/012-FromSearchToAnswers.md) (the content wars, episode 1)
+* [Fear of science](blog/011-FearOfScience.md)
+* [Something to believe in](blog/010-SomethingToBelieveIn.md)
+* [Did you say "hallucinations"?](blog/009-DidYouSayHallucinations.md)
+* [Is AGI Important ?](blog/008-IsAGIImportant.md)
+* [BigAI as the universal contractor](blog/007-BigAIAsTheUniversalContractor.md)
+* The content wars, episode 1: [BigAI to clean the web to feed from it](blog/006-BigAIToCleanTheWeb.md)
+* [BigAI is a punishment from God](blog/005-BigAIIsAPunishmentFromGod.md)
+* [BigAI impact on service companies](blog/004-BigAIImpactOnSserviceCompanies.md)
+* [Seriously BigAI, you gonna break everything?](blog/003-SeriouslyBigAI.md)
+* [BigAI leads us out of science](blog/002-BigAILeadsUsOutOfScience.md)
+* [BigAI and me](blog/001-BigAiAndMe.md)
 
 ## PLM
 
@@ -86,7 +84,7 @@
 
 * [Conversation on quantum computing](conversations/20251115-Monday-QuantumComputing.md)
 
-*(Last update: November 2025)*
+*(Last update: June 2026)*
 
 
 

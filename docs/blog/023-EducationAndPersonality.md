@@ -152,4 +152,5 @@ Navigation:
 
 * [Index](000-BlogIndex.md)
 * Previous: The content wars, episode 5: [Original and synthetic content, and the Law](022-ContentAndLaw.md)
+* Next: [Where is everybody?](024-WhereIsEverybody.md)
 
