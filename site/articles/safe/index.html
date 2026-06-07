@@ -1,0 +1,2139 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Olivier Rey's Papers">
+      
+      
+        <meta name="author" content="Olivier Rey">
+      
+      
+        <link rel="canonical" href="https://orey.github.io/papers/articles/safe/">
+      
+      
+        <link rel="prev" href="../change-agent/">
+      
+      
+        <link rel="next" href="../legends-of-it/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>What you should know about SAFe - Papers</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/styles.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#what-you-should-know-about-safe" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Papers" class="md-header__button md-logo" aria-label="Papers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Papers
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              What you should know about SAFe
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Papers" class="md-nav__button md-logo" aria-label="Papers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Papers
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    BlogAI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            BlogAI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/000-BlogIndex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    PLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            PLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-plm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PLM and graph data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conf-mgt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration management of industrial products in PDM/PLM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spreadsheet-and-PLM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The four core functions showing you need a PLM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-mig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic data migration in Industry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../industry-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reflections on industry data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    IT, Modeling & Data
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            IT, Modeling & Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../change-agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Transformation Starts with the Change Agent Transformation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    What you should know about SAFe
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    What you should know about SAFe
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-origins" class="md-nav__link">
+    <span class="md-ellipsis">
+      The origins
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The origins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rational-unified-process-rup-the-roots-of-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rational Unified Process (RUP), the roots of SAFe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-origin-of-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      The origin of SAFe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkage-between-rup-and-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linkage between RUP and SAFe
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-word-about-it-project-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      A word about IT project management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A word about IT project management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reminder-the-core-dimensions-of-it-project-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reminder: The core dimensions of IT project management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#about-the-agile-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      About the Agile methodology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agile-and-waterfall-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agile and Waterfall responsibilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-management-of-it-programs-before-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      The management of "IT programs" before SAFe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-management-and-budget-arbitration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintenance management and budget arbitration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-safe-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      The SAFe approach
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The SAFe approach">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-patchwork-of-fancy-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      A patchwork of fancy ideas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-is-confusing-project-and-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAFe is confusing project and maintenance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-is-slowing-down-the-deliveries" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAFe is slowing down the deliveries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-is-hiding-the-project-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAFe is hiding the project dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-generates-bureaucracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAFe generates bureaucracy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-blurs-the-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAFe blurs the scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-is-very-expensive" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAFe is (very) expensive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-is-hiding-the-real-constraints-especially-resource-issues-and-priorities" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAFe is hiding the real constraints, especially resource issues and priorities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-is-flourishing-on-fragmented-it-landscapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAFe is flourishing on fragmented IT landscapes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-is-preventing-innovation-to-happen" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAFe is preventing innovation to happen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-likes-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who likes SAFe?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#with-safe-youre-not-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      With SAFe, you're not safe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendice-uml-at-the-source-of-inconsistency-thinking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appendice: UML at the source of inconsistency thinking?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../legends-of-it/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Legends of IT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-interop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The real nature of data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mbse-vs-ea/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Military frameworks, systems engineering and enterprise architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../portfolio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A Simple Meta-Model for Portfolio Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archimate-intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    An Introduction to The Archimate Revolution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archimate-recipes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archimate Recipes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-rest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Considerations About Rest And Web Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphql-web-services/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GraphQL And Classic Web Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../five-levels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Five Levels of Conceptual Maturity for IT Teams
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../the-v2-vortex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The V2 Vortex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../various-stages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Various Stages of Digital Transformation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    About Graphs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            About Graphs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-article/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph-oriented programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../staf-icgt2018/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conference at the STAF/ICGT 2018 in Toulouse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphapps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GraphApps project page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graph-oriented-pl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Towards a graph-oriented programming language?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index-research/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph transformation index page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graph-transfo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph transformations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graph-interop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A general interoperability model using graph transformations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic-graph-transformations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic graph transformations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic-semantic-graph-transformations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic semantic graph transformations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DSL-for-graph-topology-checks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DSL for graph topology check
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graph-transformation-applicability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph transformation applicability
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grammar-graph-transformation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grammar of graph transformation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rdf-design-patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UML to RDF considerations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Various
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Various
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zenon-lumiere/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paradoxe de Zénon et dépassement de la vitesse de la lumière
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relativite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A propos de la relativité générale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cartan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Einstein, Cartan et la géométrie différentielle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Conversations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Conversations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conversations/20251115-Monday-QuantumComputing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversation on quantum computing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Author
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/LICENSE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-origins" class="md-nav__link">
+    <span class="md-ellipsis">
+      The origins
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The origins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rational-unified-process-rup-the-roots-of-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rational Unified Process (RUP), the roots of SAFe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-origin-of-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      The origin of SAFe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkage-between-rup-and-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linkage between RUP and SAFe
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-word-about-it-project-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      A word about IT project management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A word about IT project management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reminder-the-core-dimensions-of-it-project-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reminder: The core dimensions of IT project management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#about-the-agile-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      About the Agile methodology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agile-and-waterfall-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agile and Waterfall responsibilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-management-of-it-programs-before-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      The management of "IT programs" before SAFe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-management-and-budget-arbitration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintenance management and budget arbitration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-safe-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      The SAFe approach
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The SAFe approach">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-patchwork-of-fancy-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      A patchwork of fancy ideas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-is-confusing-project-and-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAFe is confusing project and maintenance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-is-slowing-down-the-deliveries" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAFe is slowing down the deliveries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-is-hiding-the-project-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAFe is hiding the project dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-generates-bureaucracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAFe generates bureaucracy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-blurs-the-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAFe blurs the scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-is-very-expensive" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAFe is (very) expensive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-is-hiding-the-real-constraints-especially-resource-issues-and-priorities" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAFe is hiding the real constraints, especially resource issues and priorities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-is-flourishing-on-fragmented-it-landscapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAFe is flourishing on fragmented IT landscapes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-is-preventing-innovation-to-happen" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAFe is preventing innovation to happen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-likes-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who likes SAFe?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#with-safe-youre-not-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      With SAFe, you're not safe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendice-uml-at-the-source-of-inconsistency-thinking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appendice: UML at the source of inconsistency thinking?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="what-you-should-know-about-safe">What you should know about SAFe<a class="headerlink" href="#what-you-should-know-about-safe" title="Permanent link">#</a></h1>
+<p><img alt="safe_blackhole" src="../../images/safe-blackhole2.png" /></p>
+<p>We need methods in IT like in any other engineering disciplines. But there are good and bad methods.</p>
+<p>I would like, in this article, to show how the SAFe methodology is damaging the IT systems and limiting the productivity and innovation of many companies. To be able to show it, I will come back to the advantages and drawbacks of the Agile methodology and show how SAFe does not leverage Agile at all but, on the contrary, remove its advantages.</p>
+<p>This may be seen as attacking the <em>SAFe idol</em>, but people have to realize there are better ways.</p>
+<h2 id="the-origins">The origins<a class="headerlink" href="#the-origins" title="Permanent link">#</a></h2>
+<h3 id="rational-unified-process-rup-the-roots-of-safe">Rational Unified Process (RUP), the roots of SAFe<a class="headerlink" href="#rational-unified-process-rup-the-roots-of-safe" title="Permanent link">#</a></h3>
+<p>SAFe has its origin in RUP, another enormous useless methodology. The roots of RUP trace back to the merger of the Objectory AB (founded by Ivar Jacobson) and Rational Software Corporation in the mid-1990s. In June 1998, Rational publishes the Rational Unified Process (RUP) version 5.0.</p>
+<p><img alt="../images/RUP1999.jpeg" src="../../images/RUP1999.jpeg" /></p>
+<p>RUP was developed by a team at Rational (including Philippe Kruchten) and incorporated use-cases, UML, and iterative development practices. It was a very heavyweight process framework (nine disciplines, roles, artifacts, workflows) tailored theoretically for large systems. It aimed to address projects requiring heavy modeling.</p>
+<p>Quickly, the software ecosystem observed that RUP was overly complex, documentation heavy and not efficient. In other terms, the market did not adopt it. In a certain way, RUP became iconic of <em>the methodology that should never be put in place if you wqant to realize a large software</em>.</p>
+<h3 id="the-origin-of-safe">The origin of SAFe<a class="headerlink" href="#the-origin-of-safe" title="Permanent link">#</a></h3>
+<p>SAFe was developed by Dean Leffingwell (and collaborators) and first publicly described around 2011. The framework draws on lean-agile, systems thinking, and agile development practices.</p>
+<p>It was positioned as a solution to "scaling agile" practices across the enterprise (many teams, large programs) rather than single-team agile.</p>
+<h3 id="linkage-between-rup-and-safe">Linkage between RUP and SAFe<a class="headerlink" href="#linkage-between-rup-and-safe" title="Permanent link">#</a></h3>
+<p>Leffingwell’s earlier works include large-scale systems engineering and process frameworks, including RUP. Indeed, similar defaults that were rejected by the whole IT community in RUP can be found in SAFe.</p>
+<p>We are now detailing the points that seem to us the most problematic.</p>
+<h2 id="a-word-about-it-project-management">A word about IT project management<a class="headerlink" href="#a-word-about-it-project-management" title="Permanent link">#</a></h2>
+<h3 id="reminder-the-core-dimensions-of-it-project-management">Reminder: The core dimensions of IT project management<a class="headerlink" href="#reminder-the-core-dimensions-of-it-project-management" title="Permanent link">#</a></h3>
+<p>In order to be able to discuss about the problems caused by SAFe, we need to make a little background on the basics of IT project management. Note that we are talking about project management, and not software maintenance.</p>
+<p>An IT project has 3 main characteristics:</p>
+<ul>
+<li>A <em>scope</em>,</li>
+<li>A workload in men-days, which is equivalent to a <em>budget</em> necessary to realize it,</li>
+<li>A timing of realization, also called a <em>plan</em>.</li>
+</ul>
+<p>The <em>quality</em> of the delivery can also be taken into account even if few projects choose to lower the quality as a project hypothesis. However, the result of bad project management is often bad software quality.</p>
+<p>Project management frameworks such as <a href="https://en.wikipedia.org/wiki/Project_Management_Professional">PMP</a> add several other dimensions to a project, but we will primarily focus on the 3 core characteristics.</p>
+<p>We'll see later in this article that SAFe, taking the pretext to <em>scale</em> the Agile methodology, introduces confusion and inefficiency in all dimensions of the project management.</p>
+<p>Note that a project plan has:</p>
+<ul>
+<li>A start,</li>
+<li>An end, which correspond to go-live of the project.</li>
+</ul>
+<p>In other terms, when a project is finished, we are entering in a <em>maintenance and evolutions phase</em>, which process is different from the project's.</p>
+<h3 id="about-the-agile-methodology">About the Agile methodology<a class="headerlink" href="#about-the-agile-methodology" title="Permanent link">#</a></h3>
+<p>The <a href="https://en.wikipedia.org/wiki/Agile_software_development">Agile methodology</a>, in a certain way, has few adherence with the project management methodology. In order to avoid the tunnel effect, the development teams develop in sprints of several weeks (generally between 2 and 4) and are capable, at the end of each sprint, to show something to the client of the software. This ensures that the software follows the client's requirements.</p>
+<p>During each sprint, the client can prioritize their demands and adjust the scope of the next sprint to better match their needs.</p>
+<p>In a way, seen from a project management standpoint, Agile is a way to organize the specification and development phases. But all the dimensions of project management, scope, costs, duration, obey to the same project laws. Needless to say that the Agile methodology is a <em>software development methodology</em> having impacts on the <em>requirements and specification management</em> process. Thus, it is not straight forward to apply Agile in other contexts, contrary to what can be thought.</p>
+<p>For the testing phase, it is a project decision that is unrelated to Agile. The go-live can be done after all project sprints have been developed, or the project can decide to make multiple go-live. For sure, before each go-live, the testing phase will include a user acceptance phase, made of new features testing and non regression testing (if applicable).</p>
+<h3 id="agile-and-waterfall-responsibilities">Agile and Waterfall responsibilities<a class="headerlink" href="#agile-and-waterfall-responsibilities" title="Permanent link">#</a></h3>
+<p><a href="https://en.wikipedia.org/wiki/Waterfall_model">Waterfall</a> is the older way: The development team develops all the product and shows it to the client <em>at the end of the full development</em>. For the client (the functional team), it is a bit different compared to Agile, because they must make a complete set of requirements (scope) at the beginning of the project. During the project, they have no real possibility to change the scope during the development phase (in real life, they can have but it is more complicated than in Agile).</p>
+<p>In Agile, on the contrary, they can:</p>
+<ul>
+<li>Specify the software progressively,</li>
+<li>Change the original scope during the development phase.</li>
+</ul>
+<p>Comparing those 2 development methods, we can see that there is a complete change of responsibilities with Agile.</p>
+<p>In Waterfall, the functional team creates a set of requirements/specifications that aims to be complete. The development team can commit on the costs/plan to develop this finite scope. They can even take fixed-price contract commitments (which was a standard way to proceed 20+ years ago). The risk is assumed by the development team that commits on a scope/costs/plan because they are supposed to know everything to be developed in advance. Hence the capability of taking contractors to realize a project: because they can <em>commit</em> on the triad scope/costs/plan.</p>
+<p>In Agile, due to the fact that the functional team can re-prioritize the backlog at each sprint, there is no real scope, except often a <em>starting scope</em>. Thus, the development team cannot commit on the scope/plan. Costs announced in the development phase are just the price of each sprint multiplied by the number of sprints. This cost is supposed to be sufficient to realize the starting scope. As no one is committing on anything, the Agile methodology requires very mature functional teams composed of people that will follow their core scope and not be distracted along the way by their capacity to change it. The project manager follows the number of sprints (costs) and can also be vigilant that the project goes in the direction of delivering a functional software at the end of the last sprint.</p>
+<p>Many IT service companies are selling to clients that they are in an <em>almost-fixed-price</em> contract in Agile. For sure, they estimated the cost to develop of starting scope, and published a proposition with a number of sprints of a certain team (costs) addressing the requirements (starting scope) in a particular time frame (plan). But as long as the functional people can alter the backlog at each sprint, as long as they can prioritize nice-to-have features versus core features, or features that were not in the original scope, the full budget of the project can be spent without getting to a functional and usable software at the end. Indeed, in Agile, the only role that guarantees the end product is, strangely, the functional team, meaning <em>the client</em>. Compared to the waterfall methodology in which the realization team takes commitments, Agile reverses the responsibilities by putting it on the shoulders of the client. IT service company, in Agile, are taking only a commitment based on resources, so a <em>means commitment</em> and no more a fixed-price contract commitment (result commitment). That explains why the IT contractors want to work in Agile.</p>
+<p>We insisted on the drawbacks of Agile but the advantage of this method is that it can be much better to achieve complex programs: because the scope can be arranged differently that was was originally planned, and because a team A can be able to deliver a dependency to team B to enable team B to progress, even in the case of late dependency identification.</p>
+<h3 id="the-management-of-it-programs-before-safe">The management of "IT programs" before SAFe<a class="headerlink" href="#the-management-of-it-programs-before-safe" title="Permanent link">#</a></h3>
+<p>Before SAFe, to succeed in a complex program made of several projects, you needed 2 key skills:</p>
+<ul>
+<li>A program manager, able to manage the set of interlinked projects, often managed by their own project manager;</li>
+<li>At least an enterprise architect, knowing the IT landscape and the functional/technical dependencies between applications and project scopes.</li>
+</ul>
+<p>Those two set of skills had to work hand in hand: The program manager was gathering the dependencies highlighted by the architect and was creating milestones of synchronization where necessary. The target was to determine <em>who</em> was delivering <em>what</em> to <em>whom</em> and <em>when</em>. Each project had its own targets, including the potential need to deliver a certain scope to another project at a certain moment.</p>
+<p>With this classic "program management" approach, massive projects are delivered.</p>
+<h3 id="maintenance-management-and-budget-arbitration">Maintenance management and budget arbitration<a class="headerlink" href="#maintenance-management-and-budget-arbitration" title="Permanent link">#</a></h3>
+<p>When a project is delivered, the software enters in maintenance phase. Maintenance phase is generally less costly, based on bug fixes and small evolutions. The global common sense idea is that a company invests at certain periods on priorities (IT projects) and maintains its other software (maintenance). When some projects are over, the software enters into maintenance and the company invests on some other part of the IT landscape.</p>
+<p>The IT landscape looks like an old castle: You always have something to work on, and that costs money (projects). For sure, you have to pay for electricity and water everywhere (maintenance).</p>
+<p>Even if the maintenance phase can be done using Agile sprints, it is still a maintenance phase, so a phase with <em>reduced team and budget</em> (costs), compared to the project phase.</p>
+<p>In other words, the <em>project mode</em> is a phase that ends for a particular part of the IT system to be reborn elsewhere. This is the normal life of IT landscapes.</p>
+<h2 id="the-safe-approach">The SAFe approach<a class="headerlink" href="#the-safe-approach" title="Permanent link">#</a></h2>
+<h3 id="a-patchwork-of-fancy-ideas">A patchwork of fancy ideas<a class="headerlink" href="#a-patchwork-of-fancy-ideas" title="Permanent link">#</a></h3>
+<p>The first things that we can say about SAFe is that the methodology aims at addressing all the cases. You are supposed to do something, but you have a way to do the reverse. That's a very good approach not to be criticized, because all the critics can enter into a SAFe exception that is planned by the method! Moreover that creates expertise on all the cases that you must do: the <em>traditional</em> ones and the <em>exceptional</em> ones.</p>
+<p><img alt="safe" src="../../images/safe.png" /></p>
+<p>Looking at the image above shows the collection of fancy buzzwords, used to speak to every IT project stakeholder: Agile, Kanban, enabler, story, quality, NFR, Scrum, Product Owner, feature, backlog, pipeline, business owner, release,  DevOps, lean, measurement, program, solution, compliance, MBSE, framework, value stream, epic, portfolio, enterprise architect, milestone, roadmap, vision, UX, strategy, KPIs, capability, guardrails! This is incredible: Everything is in it! You can do everything with SAFe! How can the people before could be so stupid that they never invented such an ambitious methodology solving all problems?</p>
+<h3 id="safe-is-confusing-project-and-maintenance">SAFe is confusing project and maintenance<a class="headerlink" href="#safe-is-confusing-project-and-maintenance" title="Permanent link">#</a></h3>
+<p>SAFe is confusing project and maintenance: You now have "trains" composed by Agile streams that deliver continuously. This single statement has many consequences. We often say that there cannot be two masters in the house. It is applicable to SAFe. Is the SAFe approach maintenance or project? Indeed, it is more a giant maintenance mode with some rendez-vous (program increment, so-called "PI") where everyone delivers at the same time.</p>
+<p>Can you deliver outside of the end of a PI? Yes for sure, in exceptional SAFe, even if you should not in traditional SAFe.</p>
+<p>Considering that, in reality, in your IT systems, you have areas needing projects and areas needing maintenance, considering that you will allocate specific means (costs) to each of your Agile team, the SAFe confusion of genres is very bad for the 2 traditional project phases:</p>
+<ul>
+<li>Project: You have <em>no more real projects</em>, because they are mixed up with maintenance streams. So, you have a structural tendency to <em>under-invest into projects</em>.</li>
+<li>Maintenance: You <em>slow down maintenance</em> because you impose a delivery system that seems inherited from the project mode, whereas you may fix bugs and bring small features much more often than each PI. To come back on the possibility planned by SAFe to deliver outside the end of a PI, in maintenance, you may need that all the time.</li>
+</ul>
+<h3 id="safe-is-slowing-down-the-deliveries">SAFe is slowing down the deliveries<a class="headerlink" href="#safe-is-slowing-down-the-deliveries" title="Permanent link">#</a></h3>
+<p>Considering what we just explained, under invested projects will last longer, and maintenance will deliver less often. So structurally, SAFe is slower than projects and maintenance :</p>
+<ul>
+<li>Projects will split their scope in more iterations due to the under investment (and dependencies).</li>
+<li>Maintenance will spend money in useless features and nice-to-have to deliver each PI.</li>
+</ul>
+<p>A counter argument is to reduce the size of the maintenance teams for software that are in maintenance. OK, let's do that. But if they have the need to deliver often bug fixes and small evolutions (like many maintenance phases), why keep them in the train? And if they are excluded from the train, the remains are the real project streams. So we are back to a standard IT program, right? Not a good idea.</p>
+<p>The fun fact is that everyone that have worked in SAFe is feeling this deceleration in deliveries. With SAFe, you just <em>cannot</em> deliver "quickly".</p>
+<h3 id="safe-is-hiding-the-project-dependencies">SAFe is hiding the project dependencies<a class="headerlink" href="#safe-is-hiding-the-project-dependencies" title="Permanent link">#</a></h3>
+<p>All must stay in the train to be able to address <em>dependencies</em>. The maintenance projects as the real projects depend upon some other stream, being an "enabler" or another project. In SAFe, everything can depend upon everything. For sure, this is not the reality and architects are paid for that not to happen.</p>
+<p>With SAFe, the architecture problems are becoming hidden : Even if you may have many more architects working on your "solution", the fact that all stream can depend all streams has a tendency to <em>hide the real dependencies</em>. As everyone is delivering at the end of the Program Increment (PI) in his silo, who really knows where are the true dependencies?</p>
+<p>This one-size-fits-all way of working has several annoying consequences:</p>
+<ul>
+<li>Useless dependencies are often created: As everyone can depend on anyone, it is easy to create complexity in the architecture and on the function placement without alerting anybody, quite often for "the sake of reuse". If a team is developing a small stuff that you could use, why shouldn't you instead of redoing it yourself? This logic may have very serious effects though.</li>
+<li>You have a tendency to make bad architecture durable - because everyone is in its silo, so you won't change anything structural.</li>
+</ul>
+<h3 id="safe-generates-bureaucracy">SAFe generates bureaucracy<a class="headerlink" href="#safe-generates-bureaucracy" title="Permanent link">#</a></h3>
+<p>When we look at the diagram above, we can see several interesting things in the complete SAFe methodology:</p>
+<ul>
+<li>You have 4 layers and the IT teams are at the very bottom, which is convenient because IT people are boring and talking in a strange language.</li>
+<li>You have between 1 and 3 "administrative" layers depending on the size of your SAFe organization, knowing that SAFe is worth it if you have a "Solution Train" (3 layers).</li>
+<li>You can see strange positioning of functions: solution architects for instance are positioned at the large solution level whereas they should be involved in the bottom IT layer.</li>
+</ul>
+<p>SAFe loves administration (like RUP in its time): The more you have people that have neither business or functional knowledge nor any IT knowledge, the better. They are here to make the link between the reality (the bottom of the ship where the engines are) and the control bridge where the captain and his lieutenants are. 3 layers of pilots in a portfolio organization enables to say that it is not the fault of the method if all that structure is inefficient. It is because people are not respecting enough their role, they are not trained enough, etc.</p>
+<p>For those who haven't done it yet, assist to a PI planning, those 1-2 days of global collaboration between every actor in the SAFe organization. You will see what is bureaucracy. You will also be able to wonder where is the real dependency map between streams/software. Personally, I never saw one. </p>
+<h3 id="safe-blurs-the-scope">SAFe blurs the scope<a class="headerlink" href="#safe-blurs-the-scope" title="Permanent link">#</a></h3>
+<p>The company culture is used to projects (even if not so many companies know how to run projects efficiently). When you go to the Executive Committee, you sell a project with a scope, costs and plan. You commit. And then, you face the <em>SAFe Black Hole</em>!</p>
+<p>Your project will be exploded in the train, in the various Agile Release Trains and enablers, and each of them will split their part per PI. If they have dependencies, you will wait many PIs to have something. As, indeed, you are feeding backlogs of many software managed by administrative people, you will have to fight to:</p>
+<ul>
+<li>Master your scope that will potentially be split into a lot of parts,</li>
+<li>Master your plan because PIs are long and if people are waiting for each other, you will loose enormous amounts of time,</li>
+<li>Master your priorities because you will be challenged on the fact that your critical project that you sold in ExCom may be less important than the features asked by M. Doe in another department.</li>
+</ul>
+<p>The real question are:</p>
+<ul>
+<li>At the end of the day, who really works on your project?</li>
+<li>When will your project scope be delivered (if ever) ?</li>
+</ul>
+<p>You can't say. But no-one can in the SAFe structure. Because we are in "Agile", no one can say. You have to be there and repeat at each PI planning that the feature you want for next PI is part of your initial scope, the one you sold in ExCom. Once again, like in Agile, SAFe puts a lot more responsibilities on the shoulders of the client. Don't believe that the administrative SAFe structure is working for you. They don't: They work for the method.</p>
+<h3 id="safe-is-very-expensive">SAFe is (very) expensive<a class="headerlink" href="#safe-is-very-expensive" title="Permanent link">#</a></h3>
+<p>We already talked about the cost structure of SAFe, costs that can quickly become huge.</p>
+<p>But the real cost is the cost of projects: costs in money and costs in time-to-market. If your project is delivered in twice the time that would have delivered your scope in a traditional program mode, who pays the overcost? Your project.</p>
+<p>Who pays the cost structure, the 2/3 layers of administration? Your project.</p>
+<p>As the trains are running, you are only sure of one thing: You will spend a lot of money paying a lot of people that will work in a system that is far from optimizing the deliveries.</p>
+<h3 id="safe-is-hiding-the-real-constraints-especially-resource-issues-and-priorities">SAFe is hiding the real constraints, especially resource issues and priorities<a class="headerlink" href="#safe-is-hiding-the-real-constraints-especially-resource-issues-and-priorities" title="Permanent link">#</a></h3>
+<p>Let's suppose you have several IT products and a team attached to each of them to perform maintenance and evolutions.</p>
+<p>In SAFe, it will be complicated to realize that one team is understaffed and the others are overstaffed if all of them have a filled roadmap, which is generally the case. Because you are managing the trains with people that are <em>external to the software reality</em>, you may not see that the overstaffed team is developing only nice to have features, while the understaffed team will take many PIs to get the important features done. In a certain way, SAFe hides the resource allocation topic.</p>
+<p>SAFe also hides priorities. Who, in a SAFe management team, is able to assess that one backlog is full of critical feature and one is only filled with nice to have? You have to know the business in details to know that. And for product owners, every roadmap is important. In large SAFe solutions, you can even see dedicated administrative structures that are in charge of recording the requirements: For sure they don't know what they are talking about, the scope is too big, no-one can assess if we should implement this feature or not. After some PIs and some initial project scope split, no-one even remembers why this feature is in the roadmap.</p>
+<p>Another sign of that problem is the non capability of explaining where we are standing in the project: "The trains are going on". Yes, but what did we deliver as a <em>complete feature</em>? What business processes are covered? Did we change something? Did we deliver something consistent? When can I have my project scope?</p>
+<p>All that will lead you to :</p>
+<ul>
+<li>Inevitable delays in your projects: The understaffed team will slow down everyone,</li>
+<li>Useless money consumption: You will develop many nice to have with a money that could have been used elsewhere.</li>
+</ul>
+<p>The misuse of money shows how the methodology has perverse effects: It seems Agile, but the scaling effect has a critical anti-Agile effect. It pushes the teams with no real requirements to fill roadmaps with useless features: Because your pace of delivery must be the same as the other streams, you have to find something to deliver.</p>
+<p>In other words, whatever the size of teams, they will always be occupied 100%. I hope you have a lot of money to pay for all that.</p>
+<h3 id="safe-is-flourishing-on-fragmented-it-landscapes">SAFe is flourishing on fragmented IT landscapes<a class="headerlink" href="#safe-is-flourishing-on-fragmented-it-landscapes" title="Permanent link">#</a></h3>
+<p>With SAFe, you are in a certain way <em>hard-coding</em> the software delivery organization: one Agile team per stream plus all the overhead resources that come on top will freeze the organization making it complicated to change it.</p>
+<p>That means that, the more fragmented your IT systems (small tools inefficiently working together), the greater the SAFe pyramid and the lower the delivery.</p>
+<p>Worst: By hardcoding your software organization, one team per (historically badly scoped) small application, <em>you guarantee that you will never better your system</em>. Indeed, let's take the case of one application that should have disappeared in a project gathering 3 applications. But in SAFe, your organization is hard-coded. Everyone will continue to work in their silo evolve the crappy tools that you had. So, not only you will not reduce complexity, but you will increase it with time! And, when the complexity grows, delivery speed decreases.  That's what we could call the <em>Freeze Effect</em>. With time, with the same amount of money, you will deliver less and less.</p>
+<h3 id="safe-is-preventing-innovation-to-happen">SAFe is preventing innovation to happen<a class="headerlink" href="#safe-is-preventing-innovation-to-happen" title="Permanent link">#</a></h3>
+<p>Considering the previous points, you can see that you hardcode your problems entering into a "super maintenance phase" where everything has the same weight because it is managed administratively.</p>
+<p>So, <em>you will never innovate</em>, never reduce the complexity, and you will create silos that the dwellers will protect, like dogs in comfortable niches.</p>
+<p>Only real projects with a clear scope and dedicated people can really innovate. But in SAFe, you can't.</p>
+<h3 id="who-likes-safe">Who likes SAFe?<a class="headerlink" href="#who-likes-safe" title="Permanent link">#</a></h3>
+<p>Many people like SAFe, often many non-IT people. The project mode is complicated, stressful, risky, with a clear delivery at the end, delivery that works... or not. And when it does not work, everyone sees that it's your fault. In SAFe, you don't have:</p>
+<ul>
+<li>A personal responsibility: That's a collective hard to analyze problem;</li>
+<li>Changing rhythms like in a real project, which is comforting for day-to-day non anticipative minds ('S' people in the <a href="https://en.wikipedia.org/wiki/Myers–Briggs_Type_Indicator">MBTI</a> classification);</li>
+<li>To adapt to the company strategy: this company strategy is spread amongst a rigid hard-coded procedure-oriented organization that can solve all problems;</li>
+<li>To worry about costs: Your train will have a constant cost, whatever the content of the deliveries;</li>
+<li>To see the real IT guys and try to communicate with them: They are in the ship's hold of the methodology.</li>
+</ul>
+<p>I would say that the best qualifier for SAFe is the word <em>comforting</em> (for non-IT people). The fact that this methodology is widely used seems to me as a bad sign of IT skills lack in the IT departments of companies.</p>
+<p>Financially, only the IT service companies benefit from SAFe: they can sell you plenty of contractors that should never work on any IT projects, because they take bad decisions, because they don't have the required skills.</p>
+<p>On the métier side, many practitioners, especially the ones with previous project experiences, learn to hate SAFe, because they see that everything is slower, smaller, and more expensive.</p>
+<p>But, and that's the beauty of this method: <em>A motivated SAFe organization delivers stuff</em>, less than before, in a much longer time for much more money, but is able to deliver. The Freeze Effect slows down the productivity with time, for sure but that can run many years.</p>
+<h2 id="with-safe-youre-not-safe">With SAFe, you're not safe<a class="headerlink" href="#with-safe-youre-not-safe" title="Permanent link">#</a></h2>
+<p>As a conclusion, the tour-de-force of the SAFe method is that you master none of the traditional IT project parameters:</p>
+<ul>
+<li>Scope: You can't know when you will get it (if ever),</li>
+<li>Plan: You will wait a long time for your deliveries and you may have to learn to live with continuous partial deliveries,</li>
+<li>Costs: For sure, you'll spend a lot but you don't know how much.</li>
+</ul>
+<p>Let's suppose you have a regulatory milestone to respect. In SAFe, <em>you are sure that you won't make it on time with the right scope</em>. It's not an accident: You will fail <em>by design</em>. In SAFe, you are all but safe.</p>
+<h2 id="appendice-uml-at-the-source-of-inconsistency-thinking">Appendice: UML at the source of inconsistency thinking?<a class="headerlink" href="#appendice-uml-at-the-source-of-inconsistency-thinking" title="Permanent link">#</a></h2>
+<p>RUP was using extensively <a href="https://en.wikipedia.org/wiki/Unified_Modeling_Language">UML</a>. The biggest problem of UML is a consistency problem. As a modeling language, UML brings several kinds of diagrams to represent several kinds of aspects of the software. For each diagram type, you have a <em>grammar</em> with a certain semantics. As those diagrams are not <em>connectable</em>, each one being in its own <em>space</em> (structural, behavior, state machine, etc.), it is easy to build an inconsistent software model that will lead to crappy software. In a certain way, the consistency work has to be done by the designer/developer himself, and so UML helped a lot good designers/developers to model complex problems.</p>
+<p>In the 2000s, tools like Rational Rose were developed to overcome the UML drawbacks, tools trying to connect the various artifacts of the diagrams and check for a little consistency. But as the semantics of those models was really different, those efforts were not very successful.</p>
+<p>UML has the same problems as the <a href="https://en.wikipedia.org/wiki/Zachman_Framework">Zachman framework</a> or the <a href="../mbse-vs-ea/">military frameworks</a> in the enterprise architecture world: They propose an inconsistent view of the reality built upon multiple viewpoints with different semantics (sometimes even <em>overlapping</em> semantics but not interconnected semantics, see <a href="https://orey.github.io/papers/articles/first-article">graph-oriented programming</a> for a vision of interconnected semantic domains).</p>
+<p>About the Zachman Framework, Wikipedia says it <em>is a structured tool used in enterprise architecture to organize and understand complex business systems. It acts as an ontology, providing a clear and formal way to describe an enterprise through a two-dimensional grid.</em> The fact is this is false. It proposes 30 disconnected ontologies with semantic overlaps, like UML, and like the other frameworks used by the military programs.</p>
+<p>The consequence, for us, is that there is a generation of methodology people that, in IT, have a structural problem to understand that the juxtaposition of various viewpoints does not make a consistent representation.</p>
+<p>SAFe can be interpreted as being in line with this kind of thought patterns. Taken individually, some elements seem pertinent, but as a whole, they are creating an inconsistent edifice pretending to cover all cases.</p>
+<p><em>(October 27 2025)</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyleft Olivier Rey 2017-2026 - Site licensed under the GNU FDL V3
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

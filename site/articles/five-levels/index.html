@@ -1,0 +1,1766 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Olivier Rey's Papers">
+      
+      
+        <meta name="author" content="Olivier Rey">
+      
+      
+        <link rel="canonical" href="https://orey.github.io/papers/articles/five-levels/">
+      
+      
+        <link rel="prev" href="../graphql-web-services/">
+      
+      
+        <link rel="next" href="../the-v2-vortex/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>The Five Levels of Conceptual Maturity for IT Teams - Papers</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/styles.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-five-levels-of-conceptual-maturity-for-it-teams" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Papers" class="md-header__button md-logo" aria-label="Papers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Papers
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The Five Levels of Conceptual Maturity for IT Teams
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Papers" class="md-nav__button md-logo" aria-label="Papers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Papers
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    BlogAI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            BlogAI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/000-BlogIndex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    PLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            PLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-plm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PLM and graph data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conf-mgt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration management of industrial products in PDM/PLM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spreadsheet-and-PLM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The four core functions showing you need a PLM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-mig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic data migration in Industry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../industry-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reflections on industry data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    IT, Modeling & Data
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            IT, Modeling & Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../change-agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Transformation Starts with the Change Agent Transformation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../safe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What you should know about SAFe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../legends-of-it/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Legends of IT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-interop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The real nature of data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mbse-vs-ea/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Military frameworks, systems engineering and enterprise architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../portfolio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A Simple Meta-Model for Portfolio Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archimate-intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    An Introduction to The Archimate Revolution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archimate-recipes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archimate Recipes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-rest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Considerations About Rest And Web Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphql-web-services/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GraphQL And Classic Web Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    The Five Levels of Conceptual Maturity for IT Teams
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    The Five Levels of Conceptual Maturity for IT Teams
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#history-of-the-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      History of the Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-model-of-conceptual-maturity" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Model of Conceptual Maturity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-levels-of-conceptual-maturity" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Levels of Conceptual Maturity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Levels of Conceptual Maturity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level-1-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level 1: Development
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-2-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level 2: Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-3-application-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level 3: Application Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-4-it-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level 4: IT Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-5-enterprise-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level 5: Enterprise Architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-usual-maturity-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Usual Maturity Path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-maturity-model-related-to-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Maturity Model Related to Complexity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-the-required-level-of-maturity-for-my-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the Required Level of Maturity for my Project?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#it-industry-should-target-maturity" class="md-nav__link">
+    <span class="md-ellipsis">
+      IT Industry Should Target Maturity
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../the-v2-vortex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The V2 Vortex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../various-stages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Various Stages of Digital Transformation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    About Graphs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            About Graphs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-article/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph-oriented programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../staf-icgt2018/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conference at the STAF/ICGT 2018 in Toulouse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphapps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GraphApps project page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graph-oriented-pl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Towards a graph-oriented programming language?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index-research/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph transformation index page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graph-transfo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph transformations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graph-interop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A general interoperability model using graph transformations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic-graph-transformations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic graph transformations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic-semantic-graph-transformations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic semantic graph transformations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DSL-for-graph-topology-checks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DSL for graph topology check
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graph-transformation-applicability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph transformation applicability
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grammar-graph-transformation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grammar of graph transformation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rdf-design-patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UML to RDF considerations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Various
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Various
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zenon-lumiere/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paradoxe de Zénon et dépassement de la vitesse de la lumière
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relativite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A propos de la relativité générale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cartan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Einstein, Cartan et la géométrie différentielle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Conversations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Conversations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conversations/20251115-Monday-QuantumComputing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversation on quantum computing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Author
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/LICENSE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#history-of-the-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      History of the Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-model-of-conceptual-maturity" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Model of Conceptual Maturity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-levels-of-conceptual-maturity" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Levels of Conceptual Maturity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Levels of Conceptual Maturity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level-1-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level 1: Development
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-2-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level 2: Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-3-application-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level 3: Application Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-4-it-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level 4: IT Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-5-enterprise-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level 5: Enterprise Architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-usual-maturity-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Usual Maturity Path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-maturity-model-related-to-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Maturity Model Related to Complexity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-the-required-level-of-maturity-for-my-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the Required Level of Maturity for my Project?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#it-industry-should-target-maturity" class="md-nav__link">
+    <span class="md-ellipsis">
+      IT Industry Should Target Maturity
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="the-five-levels-of-conceptual-maturity-for-it-teams">The Five Levels of Conceptual Maturity for IT Teams<a class="headerlink" href="#the-five-levels-of-conceptual-maturity-for-it-teams" title="Permanent link">#</a></h1>
+<p><img alt="Image showing five levels" src="../../images/fivelevels.jpg" /></p>
+<p>IT is a strange activity because it is an industry that has troubles getting out of a craft industry approach. Constantly moving to new exciting technologies and constantly influenced by massive technology centered marketing, IT people stay durably too technical and have recurring troubles to achieve IT projects.</p>
+<h2 id="history-of-the-model">History of the Model<a class="headerlink" href="#history-of-the-model" title="Permanent link">#</a></h2>
+<p>Years ago, I was consulting a CEO and was trying to explain to him why his teams were failing big IT projects. A lot of executives today are digitally aware in their daily business practices but, when it comes to organizing new IT projects inside their company, they frequently discover that there is a huge gap between what they wanted to achieve and what is really done. Money is not the problem, and many big companies invest massive amounts of money in IT projects without getting the most of it. The fact is, when you invest too much in an IT project, your chances of success decrease drastically.</p>
+<p>I came to the CEO with this maturity model. I don't proclaim it to be perfect, far from it: it's just a representation of the problem. But the model is quite useful to explain and diagnose the capability of teams to perform IT projects and the levels of complexity attached to those projects.</p>
+<h2 id="a-model-of-conceptual-maturity">A Model of Conceptual Maturity<a class="headerlink" href="#a-model-of-conceptual-maturity" title="Permanent link">#</a></h2>
+<p>IT is an abstract discipline manipulating abstract concepts. In IT, it is always possible to "make the code work", even if the cost and the delay to do that are unacceptable.</p>
+<p>The problem of IT is that you can pay the price of bad choices years (even decades) after you did the investment - and you pay each year, possibly more and more year after year for the exact same modification. Bad IT choices imply increasing the technical debt and jeopardize the capability of achieving future projects (at least you will continuously increase their cost). In that sense, IT is quite near from traditional industry.</p>
+<p>The fact is, in tradition industry, people are specialized in jobs: not every automotive worker will design the brakes or the engine. In IT, the situation is blurrier. Most IT people don't know what they are capable of doing, because specialization of jobs has not yet reached an industry agreement, and because it seems always possible to "make the code work" (despite of any consideration about quality/evolutions/money/timing/etc.).</p>
+<p>However, in IT, there are several levels of concerns that require different skills and different conceptual approaches. Over my 20 years in the IT business, I identified five levels in this conceptual world of software systems creation. Generally, in their professional life, people climb the rungs of the ladder in the same order, which makes the model a "kind of" maturity model.</p>
+<h2 id="the-levels-of-conceptual-maturity">The Levels of Conceptual Maturity<a class="headerlink" href="#the-levels-of-conceptual-maturity" title="Permanent link">#</a></h2>
+<p>I will describe briefly the most important aspects of the various levels. I don't pretend to be exhaustive and I use more detailed materials and samples when I play the consultant for executives.</p>
+<h3 id="level-1-development">Level 1: Development<a class="headerlink" href="#level-1-development" title="Permanent link">#</a></h3>
+<p>Most IT people know how to code, how to produce programs. For that purpose, IT people use programming languages (like Java, Cobol, C++, C, etc.). Behind the coding level, we can add the mastering of the development environment: development standards, debugging, versionning and branching management, build management, testing management, etc.. All those skills are crucial to good developments. Considering all that, if we rated people from 0 to 1 on this topic, I would say that most developers in the market are between 0.5 and 0.8 in development.</p>
+<h3 id="level-2-design">Level 2: Design<a class="headerlink" href="#level-2-design" title="Permanent link">#</a></h3>
+<p>IT uses object orientation programming (OOP) commonly for more than two decades. However, OOP is conceptually complicated. To be explained to the non-IT people, design is the activity of building a set of programs structure and knowing where to put the code inside the program structure. Depending on how the programs are internally structured, you will face more or less troubles in the future maintenance and evolutions. Design activity uses lots of design patterns (level 2) which are generally badly mastered by IT teams because IT teams think too often at the "code level " (level 1). With years, and with Agile methodologies, IT people were pushed back to level 1. Design is complicated. IT people have to think before they code (very hard for developers); they have to forecast what will be the maintenance. Few people are really capable of good designs.</p>
+<h3 id="level-3-application-architecture">Level 3: Application Architecture<a class="headerlink" href="#level-3-application-architecture" title="Permanent link">#</a></h3>
+<p>Architecting an application today is not easy, because they are a lot of trendy "off-the-shelf" components, a lot of competing "sexy" technologies. The hype around technologies is extreme and IT people can change frameworks very quickly to follow the last trend. Architecting an application is the skill to choose what components (reusable or not) will be used into an application. It enables the application to be developed correctly by several people, to isolate "modules", to manage customizable dependencies inside the IT systems. This is not an easy job. The objective is not just to realize software but to be able to maintain them on the long run and whatever their functional perimeter (that can become quite large with years). In order to build good application architecture, you have to think about "component borders" and be able to estimate the pros and cons of using a trendy component in the market. That's quite a hard job.</p>
+<h3 id="level-4-it-architecture">Level 4: IT Architecture<a class="headerlink" href="#level-4-it-architecture" title="Permanent link">#</a></h3>
+<p>IT is everywhere and companies, even SMEs, have quite quickly a lot of IT systems. Being able to make those systems communicate together without being too hardly coupled, being able to make the IT systems as a whole evolving in a reasonable timing for reasonable costs, being able to communicate with the outside of the company in a safe manner, all that is part of IT architecture. In IT architecture, you also manage the positioning of features inside softwares: when a function is implemented in the wrong software, you can loose millions of dollars. In IT architecture problems are also the integration problems: a good IT architecture helps decreasing the QA costs and improving the TTM of the projects. Good IT architects are very rare in the market. It seems a pity because, for large companies, IT systems are one of the biggest problems, for instance in M&amp;A phases. To add to the complexity, the IT market sells a lot of "off-the-shelf solutions" in that area, solutions that often bring confusion in IT systems, when put in place by non level 4 people.</p>
+<h3 id="level-5-enterprise-architecture">Level 5: Enterprise Architecture<a class="headerlink" href="#level-5-enterprise-architecture" title="Permanent link">#</a></h3>
+<p>The term "Enterprise Architecture" (EA) is at the center of a lot of discussions because the industry is not clear about what an enterprise architect is supposed to do. I will provide my own pragmatic vision (which can be challenged). An enterprise architect must primarily ensure that company strategic intentions are concretely declined into the IT systems through auditable projects and programs. Secondly he/she must ensure that the changes brought to the softwares can be managed by end users, that software changes are not destroying efficient business processes but improving them. This is quite a work that requires a lot of IT skills but also a good business understanding and enhanced communication skills.</p>
+<h2 id="the-usual-maturity-path">The Usual Maturity Path<a class="headerlink" href="#the-usual-maturity-path" title="Permanent link">#</a></h2>
+<p>One common path for IT-related designers or architects is to go from level 1 to level 5. Each level is requiring, following my experience, in average, at least 2 years of real life practice. Most often, when you work at a certain level, you have to consider also the impacts of what you are doing in all other lowest levels (that's why enterprise architects that never coded often make me uncomfortable, because they cannot imagine the consequences of their decisions).</p>
+<p>Most people will find happiness in a certain layer and will excel in that layer because it fits their mind and taste and it is perfectly adapted to the level of complexity they like to manage. Without a proper project experience and without training and/or coaching, it is quite hard for people to change levels without having to work for months in real life at the concerned level.</p>
+<h2 id="a-maturity-model-related-to-complexity">A Maturity Model Related to Complexity<a class="headerlink" href="#a-maturity-model-related-to-complexity" title="Permanent link">#</a></h2>
+<p>The model describes the capability to solve IT problems at the proper level, to manage the complexity of the IT problem with the proper approach. For instance, you can take a level 4 problem with a level 1 approach but you have 70% of chances of never solving the problem completely and 95% of chances to spend millions of dollars fixing "things that don't work". The "things that don't work" were created by people because of their problem solving approach (level 1 instead of level 4). Using the proper approach would never have generated those costs and troubles.</p>
+<h2 id="what-is-the-required-level-of-maturity-for-my-project">What is the Required Level of Maturity for my Project?<a class="headerlink" href="#what-is-the-required-level-of-maturity-for-my-project" title="Permanent link">#</a></h2>
+<p>Regarding this maturity model, executives should appreciate the level of maturity of their internal IT organization. They are then able to ask themselves the question: what's the adequate level of maturity required to achieve the project I want? Or, we can ask the question the other way round: what projects can I safely achieve considering the maturity of my internal IT organization? Those questions are crucial.</p>
+<p>When I look at failed projects, I often see people having a maturity level between 1 and 3 trying to master a multi-million dollars IT projects requiring a level 5. Integrating external consultants can do the job but not in all cases. If your business is complex and quite specific, it is preferable to bet on internal skills in the long term for IT people to understand your business in depth. Moreover, who chooses the casting of your external consultants? Your internal IT organization, and few organizations are able to hire consultants that know more than they do.</p>
+<p>This is exactly what happened when big companies got out of the mainframe. Mainframe teams were mostly level 1, some of them were level 2 (level 3 is not relevant in old mainframe application design and level 4 is often just about producing files for the outside or consuming them). Giving such a team an IT program with distributed applications in various technologies to build is doomed to failure, whatever the money and whatever the quality and dedication of people. For sure, with time and the appropriate training, most people can climb rungs in the ladder. But without time and training, people will keep on reproducing failures. Suppose the management is not aware of the core problem and people get fired for project failure, you can end up taking big outsourcing decisions based on a situation that nobody really understood.</p>
+<h2 id="it-industry-should-target-maturity">IT Industry Should Target Maturity<a class="headerlink" href="#it-industry-should-target-maturity" title="Permanent link">#</a></h2>
+<p>Because it is only "soft"-ware and not hardware, the IT industry seems to like the level 1 so much that every serious attempt to raise to level 2 or 3 is pushed back to level 1 by the IT providers. IT providers love to focus their customers on the "code level": because they cannot see the bigger picture and buy their products even if they don't need them.</p>
+<p>If the IT industry created models for IT project management (like PMP), the increasing complexity of existing systems and new projects require the appropriate level of maturity in the project designers/architects teams.</p>
+<p>The problem today, in most companies, is not only to "code" nor only to "manage projects": it is to also to maintain the running systems and make the huge amount of legacy applications evolve without risks and conforming to the company strategic intentions. Most IT systems are a pile of geological layers of outdated technological hypes. The code of today becomes the legacy of tomorrow. If some industries (like aviation) forecast their investments for decades, IT should begin to do the same, to work on the adequate long-term skills that are required to ensure durable and quality IT services.</p>
+<p>IT industry should target maturity and maturity comes with the identification of our level of mastering of IT complexity.</p>
+<p>(<em>April 2015</em>)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyleft Olivier Rey 2017-2026 - Site licensed under the GNU FDL V3
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

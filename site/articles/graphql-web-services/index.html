@@ -1,0 +1,2094 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Olivier Rey's Papers">
+      
+      
+        <meta name="author" content="Olivier Rey">
+      
+      
+        <link rel="canonical" href="https://orey.github.io/papers/articles/graphql-web-services/">
+      
+      
+        <link rel="prev" href="../about-rest/">
+      
+      
+        <link rel="next" href="../five-levels/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>GraphQL And Classic Web Services - Papers</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/styles.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#graphql-and-classic-web-services" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Papers" class="md-header__button md-logo" aria-label="Papers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Papers
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              GraphQL And Classic Web Services
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Papers" class="md-nav__button md-logo" aria-label="Papers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Papers
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    BlogAI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            BlogAI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/000-BlogIndex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    PLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            PLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-plm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PLM and graph data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conf-mgt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration management of industrial products in PDM/PLM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spreadsheet-and-PLM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The four core functions showing you need a PLM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-mig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic data migration in Industry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../industry-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reflections on industry data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    IT, Modeling & Data
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            IT, Modeling & Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../change-agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Transformation Starts with the Change Agent Transformation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../safe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What you should know about SAFe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../legends-of-it/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Legends of IT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-interop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The real nature of data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mbse-vs-ea/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Military frameworks, systems engineering and enterprise architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../portfolio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A Simple Meta-Model for Portfolio Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archimate-intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    An Introduction to The Archimate Revolution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archimate-recipes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archimate Recipes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-rest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Considerations About Rest And Web Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    GraphQL And Classic Web Services
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    GraphQL And Classic Web Services
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-basics-of-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Basics of Services
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Basics of Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#various-standards-same-spirit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Various Standards, Same Spirit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-requirements-for-a-service-oriented-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Requirements For a Service Oriented Language
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont-forget-the-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't forget the protocol
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphql-answers-to-service-oriented-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      GraphQL Answers To Service Oriented Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GraphQL Answers To Service Oriented Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-verb" class="md-nav__link">
+    <span class="md-ellipsis">
+      The "Verb"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-type-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Type System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#and-the-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      And The Protocol?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-promising-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Promising Standard
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A Promising Standard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#an-intermediate-between-json-rpc-and-rest" class="md-nav__link">
+    <span class="md-ellipsis">
+      An Intermediate Between JSON-RPC and Rest?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#but-what-impact-on-the-server-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      But What Impact On The Server Design?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="But What Impact On The Server Design?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-your-business-domain-as-a-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Your Business Domain As A Graph
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-data-means-graph-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Data Means Graph Database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-heart-data-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open Heart Data Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-myth-of-the-single-representation-of-reality" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Myth Of The Single Representation Of Reality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-client-and-server-share-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      When Client and Server Share Everything
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publishing-a-graphql-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publishing a GraphQL API
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-fundamental-principle-of-interoperability" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Fundamental Principle Of Interoperability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-correct-intuition" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Correct Intuition?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      See also
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../five-levels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Five Levels of Conceptual Maturity for IT Teams
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../the-v2-vortex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The V2 Vortex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../various-stages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Various Stages of Digital Transformation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    About Graphs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            About Graphs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-article/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph-oriented programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../staf-icgt2018/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conference at the STAF/ICGT 2018 in Toulouse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphapps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GraphApps project page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graph-oriented-pl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Towards a graph-oriented programming language?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index-research/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph transformation index page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graph-transfo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph transformations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graph-interop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A general interoperability model using graph transformations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic-graph-transformations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic graph transformations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic-semantic-graph-transformations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic semantic graph transformations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DSL-for-graph-topology-checks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DSL for graph topology check
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graph-transformation-applicability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph transformation applicability
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grammar-graph-transformation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grammar of graph transformation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rdf-design-patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UML to RDF considerations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Various
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Various
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zenon-lumiere/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paradoxe de Zénon et dépassement de la vitesse de la lumière
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relativite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A propos de la relativité générale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cartan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Einstein, Cartan et la géométrie différentielle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Conversations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Conversations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conversations/20251115-Monday-QuantumComputing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversation on quantum computing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Author
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/LICENSE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-basics-of-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Basics of Services
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Basics of Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#various-standards-same-spirit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Various Standards, Same Spirit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-requirements-for-a-service-oriented-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Requirements For a Service Oriented Language
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont-forget-the-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't forget the protocol
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphql-answers-to-service-oriented-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      GraphQL Answers To Service Oriented Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GraphQL Answers To Service Oriented Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-verb" class="md-nav__link">
+    <span class="md-ellipsis">
+      The "Verb"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-type-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Type System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#and-the-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      And The Protocol?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-promising-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Promising Standard
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A Promising Standard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#an-intermediate-between-json-rpc-and-rest" class="md-nav__link">
+    <span class="md-ellipsis">
+      An Intermediate Between JSON-RPC and Rest?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#but-what-impact-on-the-server-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      But What Impact On The Server Design?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="But What Impact On The Server Design?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-your-business-domain-as-a-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Your Business Domain As A Graph
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-data-means-graph-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Data Means Graph Database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-heart-data-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open Heart Data Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-myth-of-the-single-representation-of-reality" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Myth Of The Single Representation Of Reality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-client-and-server-share-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      When Client and Server Share Everything
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publishing-a-graphql-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publishing a GraphQL API
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-fundamental-principle-of-interoperability" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Fundamental Principle Of Interoperability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-correct-intuition" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Correct Intuition?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      See also
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="graphql-and-classic-web-services">GraphQL And Classic Web Services<a class="headerlink" href="#graphql-and-classic-web-services" title="Permanent link">#</a></h1>
+<p><img alt="GraphQL logo" src="../../images/graphql.png" /> </p>
+<p>Facebook produced the <a href="http://graphql.org/">GraphQL specification</a> in order to be an alternative to Rest.</p>
+<p>We already explained <a href="../about-rest/">what we thought of Rest services</a>.</p>
+<p>GraphQL appears to us as a new way to do the same thing that what the industry is doing for decades.</p>
+<p>This article is an analysis of GraphQL principles, their consequences and a comparison with traditional ways of doing web services.</p>
+<h2 id="the-basics-of-services">The Basics of Services<a class="headerlink" href="#the-basics-of-services" title="Permanent link">#</a></h2>
+<h3 id="various-standards-same-spirit">Various Standards, Same Spirit<a class="headerlink" href="#various-standards-same-spirit" title="Permanent link">#</a></h3>
+<p>The underlying basis of services is RPC (Remote Procedure Call, <a href="../about-rest/">see the dedicated article on the subject</a>). For decades, this concept is reinvented again and again with various flavors.</p>
+<p>Apart from RPC protocols or proprietary protocols (like the <a href="https://en.wikipedia.org/wiki/Tuxedo_(software)">Tuxedo</a> ones), <a href="https://en.wikipedia.org/wiki/EDIFACT">Edifact</a> was for a long time an industry standard in some business domains like travel, banking, medical and logistics. Edifact was replaced by <a href="https://en.wikipedia.org/wiki/XML">XML</a> then by <a href="https://en.wikipedia.org/wiki/JSON">JSON</a>.</p>
+<p>Every of those standards aimed to provide the same functionality: exchanging structured data between two different systems, probably implemented with different programming languages and/or paradigms, and having a client system benefiting from a service provided by a server system.</p>
+<h3 id="basic-requirements-for-a-service-oriented-language">Basic Requirements For a Service Oriented Language<a class="headerlink" href="#basic-requirements-for-a-service-oriented-language" title="Permanent link">#</a></h3>
+<p>The first requirement is to have a "verb", meaning the name of the "transaction" we expect the remote system to process.</p>
+<p>The second requirement is to have a type system to be able to send structured data under the form of a tree of objects. This is generally achieved by proposing basic types (like string, integer, float, etc.) and the capability of defining fields that have those properties and that can be grouped into classes. Classes will generally have to indicate what fields are required and what fields are optional. This is generally done within the context of one particular transaction.</p>
+<p>Once classes are defined, they can be grouped in larger structures or other classes to define groups of object structures than define larger entities, most of the time, better suitable to express the business semantics.</p>
+<p>Optionally, those definitions are expressed in "grammars" or "schemas". This is the case in RPC systems, in Edifact and in XML, and this is optional for JSON (even if the <a href="http://json-schema.org/specification.html">JSON schema</a> specification is very usable). Note that, even if there is no explicit schema mechanism, the fact of defining objects and structures leads to the use of implicit schemas. The difference is really what part of the code is "validating" that the messages are well formed:</p>
+<ul>
+<li>With an explicit schema definition, we can generate the validation code and create a kind of serializer/unserializer layer (wrapper/unwrapper or proxy/stub layer);</li>
+<li>Without an explicit schema definition, the validation code is generally hand written.</li>
+</ul>
+<p>All those requirements are defined in the <a href="https://en.wikipedia.org/wiki/OSI_model">OSI model</a> in the "presentation layer".</p>
+<h3 id="dont-forget-the-protocol">Don't forget the protocol<a class="headerlink" href="#dont-forget-the-protocol" title="Permanent link">#</a></h3>
+<p>The last requirement is to have some kind of underlying protocol to:</p>
+<ul>
+<li>Send and receive messages between systems;</li>
+<li>Create a naming convention that enables to use the name of the service (or name of the "verb");</li>
+<li>Find the network configuration that enable to route the request message to the proper entry point;</li>
+<li>Possibly associate the request and the response with identifiers;</li>
+<li>Possibly include information about the sender and its security credentials.</li>
+</ul>
+<p>Once again, the <a href="https://en.wikipedia.org/wiki/OSI_model">OSI model</a> defines a certain split of responsibilities between all those requirements. Quickly explained:</p>
+<ul>
+<li>The transport layer (layer 4) is defining the addressing scheme and primitives that enables several systems to communicate together;</li>
+<li>The session layer (layer 5) enables to manage the sessions and conversations between the client and the server; this layer manages the succession of names messages that the two peers will exchange;</li>
+<li>The presentation layer (layer 6) manages the content of data, their structure and their values.</li>
+</ul>
+<p>In the current JSON world, <a href="http://www.jsonrpc.org/specification">JSON-RPC</a> is presenting a very basic protocol that can manage the basic single statement and request response messages.</p>
+<h2 id="graphql-answers-to-service-oriented-requirements">GraphQL Answers To Service Oriented Requirements<a class="headerlink" href="#graphql-answers-to-service-oriented-requirements" title="Permanent link">#</a></h2>
+<p>GraphQL seems to us as a new flavor of the same old story. It brings some interesting new stuff (and we will come back on that), but the important point is that we can implement traditional services with this language.</p>
+<h3 id="the-verb">The "Verb"<a class="headerlink" href="#the-verb" title="Permanent link">#</a></h3>
+<p>Each GraphQL service is an named <code>http</code> entry point. The <code>get</code> method will be used to access the <code>query</code> part of the service and the <code>post</code> method will access the <code>mutation</code> part of it.</p>
+<p>This looks like Rest but this is rather different, because the idea seems not to access to a single resource (even if it is possible), but to perform a service.</p>
+<h3 id="the-type-system">The Type System<a class="headerlink" href="#the-type-system" title="Permanent link">#</a></h3>
+<p>GraphQL proposes an extended type system that proposes:</p>
+<ul>
+<li>Basic types,</li>
+<li>Classes,</li>
+<li>Groups of classes,</li>
+<li>Fragments (kind of filters on classes),</li>
+<li>Queries.</li>
+</ul>
+<p>With all the available semantics, it is very easy to implement all the existing web services that are used currently in the business.</p>
+<p>Moreover, it is possible to have a richer interface on existing services and a more adaptative way of performing transactions.</p>
+<p>This seems rather promising for mobile or chatbot accesses for instance. Those two UIs manipulate a small amount of data and may require some server services to adapt their reply to their particular use.</p>
+<p>For sure, we could argue saying: with standard web services in JSON, as a client, we can always extract the subset of the response that is interesting to us. The fact is this feature goes beyond the subset approach and enables to ask the server to adapt the contents of its response to the client.</p>
+<h3 id="and-the-protocol">And The Protocol?<a class="headerlink" href="#and-the-protocol" title="Permanent link">#</a></h3>
+<p>In the Web, the protocol is <code>http</code> and the approach seems inspired by both Rest and Ajax kind of calls.</p>
+<h2 id="a-promising-standard">A Promising Standard<a class="headerlink" href="#a-promising-standard" title="Permanent link">#</a></h2>
+<h3 id="an-intermediate-between-json-rpc-and-rest">An Intermediate Between JSON-RPC and Rest?<a class="headerlink" href="#an-intermediate-between-json-rpc-and-rest" title="Permanent link">#</a></h3>
+<p>GraphQL seems to target the intermediate path between JSON-RPC (which is a simplified SOAP) and Rest. The fact of publishing a schema enables both approaches:</p>
+<ul>
+<li>Perform elaborated services (like before);</li>
+<li>Access business objects (like the Rest or CRUD approach).</li>
+</ul>
+<p>GraphQL seems to propose a way to benefit from both approaches.</p>
+<p>The fact of being able to perform complex queries (with a lot of flavours) also adds intelligence to the protocol, an intelligence driven by the client.</p>
+<h2 id="but-what-impact-on-the-server-design">But What Impact On The Server Design?<a class="headerlink" href="#but-what-impact-on-the-server-design" title="Permanent link">#</a></h2>
+<p>This seems very interesting but the problem caused by this new protocol is located on the backend part.</p>
+<p>Some questions must be answered:</p>
+<ul>
+<li>What kind of models and/or application this protocol is targeting? All applications? Applications that should be able to disclose a part of their model?</li>
+<li>Do we know the extend of the server impacts in terms of design?</li>
+</ul>
+<h3 id="model-your-business-domain-as-a-graph">Model Your Business Domain As A Graph<a class="headerlink" href="#model-your-business-domain-as-a-graph" title="Permanent link">#</a></h3>
+<p>We are entering here into delicate topics.</p>
+<p>For those how already performed some semantic modeling with <a href="https://www.w3.org/RDF/">RDF</a>, <a href="https://www.w3.org/TR/rdf-schema/">RDFS</a> or <a href="https://www.w3.org/OWL/">OWL</a>, I think you're convinced about the fact that we can model a business domain with a graph.</p>
+<p>For those who already used graph databases such as <a href="https://neo4j.com/">Neo</a> or <a href="http://orientdb.com/">Orient</a> in Big Data use cases or fraud recognition or social applications, may be convinced that a business model can be modeled as a graph.</p>
+<p>But for the vast majority of IT people, this assertion is not obvious.</p>
+<p>Well, we'll come back on this particular topic in future articles, so we'll take for granted that a business domain can be modeled with a graph.</p>
+<h3 id="graph-data-means-graph-database">Graph Data Means Graph Database<a class="headerlink" href="#graph-data-means-graph-database" title="Permanent link">#</a></h3>
+<p>What Facebook is proposing us is a protocol that enables to query the internal structure of the graph of data.</p>
+<p>So, the first consequences seem to be:</p>
+<ul>
+<li>Your data are modeled as a graph,</li>
+<li>You probably use a graph database of some sort.</li>
+</ul>
+<p>Consequently, your GraphQL schema is more or less the same thing as your graph database schema (when this sort of things exists such as in <a href="http://orientdb.com/">OrientDB</a>).</p>
+<h3 id="open-heart-data-model">Open Heart Data Model<a class="headerlink" href="#open-heart-data-model" title="Permanent link">#</a></h3>
+<p>The second consequence is also double:</p>
+<ol>
+<li>You published your graph business model to your clients;</li>
+<li>You use your database model as the presentation layer.</li>
+</ol>
+<p>This second point is very problematic. Indeed, it explains why the protocol is proposing so much complexity in some of its part: because it is supposed to be, at the same time, a protocol and a graph query language (like <a href="https://www.opencypher.org/">Cypher</a>).</p>
+<p>In a certain sense, it is supposed to be the new <a href="http://www.orafaq.com/wiki/SQL*Net">SQL*Net</a> or <a href="https://docs.microsoft.com/fr-fr/sql/odbc/microsoft-open-database-connectivity-odbc">ODBC</a> but for graphs.</p>
+<p>And this is where the approach is questionable.</p>
+<h3 id="the-myth-of-the-single-representation-of-reality">The Myth Of The Single Representation Of Reality<a class="headerlink" href="#the-myth-of-the-single-representation-of-reality" title="Permanent link">#</a></h3>
+<p>There are many myths in IT, and this one is a big one. Many people believe that there is only one way of representing the reality-theirs, indeed. And the reality is, they are wrong.</p>
+<p>Note that, throughout the history of science, many great scientists had the same debate as the <a href="https://en.wikipedia.org/wiki/Brouwer%E2%80%93Hilbert_controversy">intuitionist debate of the beginning of the 20th Century</a>.</p>
+<p>Any software designer that worked sufficiently in the domain should have seen several facts:</p>
+<ul>
+<li>Whatever the efforts and the design patterns used, you cannot predict how the business will evolve;</li>
+<li>Two designer confronted to the same problem will produce two different designs.</li>
+</ul>
+<p>Indeed, design is very subjective and, for a lot of reasons we won't explain here, it is not a bad thing that there is no unique model for a particular business domain, on the contrary.</p>
+<h3 id="when-client-and-server-share-everything">When Client and Server Share Everything<a class="headerlink" href="#when-client-and-server-share-everything" title="Permanent link">#</a></h3>
+<p>GraphQL is proposing a way for the customer to be very near from its server, so near that its data model is perfectly known, right from the client.</p>
+<p>This can be very useful when you work with yourself, when you develop your own client and server in a kind of symbiosis. If you are on an Internet application, you also must know that you core model will be known from the outside, which can be a problems in terms of IP and in terms of security.</p>
+<p>So:</p>
+<ul>
+<li>GraphQL is OK if your API is <strong>internal</strong>;</li>
+<li>GraphQL seems not OK if your API is external.</li>
+</ul>
+<h3 id="publishing-a-graphql-api">Publishing a GraphQL API<a class="headerlink" href="#publishing-a-graphql-api" title="Permanent link">#</a></h3>
+<p>Well, if you want to publish a GraphQL API, you have to consider several things:</p>
+<ul>
+<li>You will impose to your client the graph model of your business domain, and maybe it is relevant and maybe not (see next part);</li>
+<li>You will disclose a graph representation of your business model, which is not the case in JSON-RPC where you only disclose the <em>interoperability formats</em>; This can represent a potential threat on your IT because your software design is very often at the heart of your business value;</li>
+<li>You will have to have a complex security system, which is the security system of the graph exploration, and this will not be obvious to address;</li>
+<li>You will be bound to implement the protocol complexity that can open more security issues in your software.</li>
+</ul>
+<p>For sure, there are cases where all those arguments may be irrelevant:</p>
+<ul>
+<li>You can work in a domain where the graph model has no value or is very well known (for instance the social media);</li>
+<li>You can work for non profit organizations;</li>
+<li>You can have a system that will not cause any loss of money, loss of IP or loss of value if hacked.</li>
+</ul>
+<h2 id="the-fundamental-principle-of-interoperability">The Fundamental Principle Of Interoperability<a class="headerlink" href="#the-fundamental-principle-of-interoperability" title="Permanent link">#</a></h2>
+<p>In complement to the <a href="../about-rest/">article on REST</a>, we will explain the fundamental principle of interoperability.</p>
+<p>The context of interoperability is the following:</p>
+<ul>
+<li>Systems communicate when they have some interest in doing so: interoperability is business-oriented.</li>
+<li>To establish system interconnection costs money and time, this in the project phase but also in the recurring phase: to realize those investments, the client and the server generally have a good business reason.</li>
+<li>When a server is publishing an API, it cannot imagine the list of clients he will have tomorrow, nor make assumptions on their programming language or even design approach.</li>
+</ul>
+<p>In this context, the fundamental principle of interoperability is that the client and the server contracting the exchange <em>should define the common format that is proposing the less semantic constraints possible on both ends</em>.</p>
+<p>Because the client and the server don't have to commit on their internal structure and functional aspects, the interchange is described with a semantic that must be the simplest possible and that can enable the client and server to define different modeling of the same "exchanged data model".</p>
+<p><img alt="Interoperability explained" src="../../yed/interop.png" /></p>
+<p>The figure above shows the core problem of interoperability:</p>
+<ul>
+<li>The client and the server have no reason to model the interchange data the same way. Indeed, they don't. The consequence is that they must adapt their internal formats (memory or database) to the network presentation.</li>
+<li>The way they store the data is their problem, and their storage representation can be even quite different from their memory representation (that's why, generally, people use a data access layer to adapt their business objects to the database).</li>
+</ul>
+<p>Very commonly, in the industry, we have 3 representations of the data: the client's, the server's and the network presentation.</p>
+<p>Those adaptation are painful to develop, for sure, but they are the conditions of isolation, and who says isolation says separation of concerns.</p>
+<p>This is because the client and the server are different software parts that there is no need to impose more constraints.</p>
+<p>In this context, we do not recommend using GraphQL for an external business domain interface, but we can recommend it if the application architecture needs a kinf of ODBC or SQL*Net directly from the UI, and in a context where the API is not made to be exposed to unknown third parties.</p>
+<p>Note that we did not really enter into the core details of "how do we really build a graph-oriented business application"? This will come in later articles.</p>
+<h2 id="a-correct-intuition">A Correct Intuition?<a class="headerlink" href="#a-correct-intuition" title="Permanent link">#</a></h2>
+<p>If we try to step back one minute, we can say that the Facebook team may have had an intuition that, with the graph-oriented modeling approach, this fundamental principle or interoperability could be declared obsolete (and consequently graphs could be in the client, in the server, in the database, with exactly the same structure).</p>
+<p>In some cases, that's true: if you master both ends of the wire, that's probably one very efficient way to do it. But it looks like ODBC or SQL*Net anyway.</p>
+<p>One thing is sure, the graph-oriented modeling of business domains will revolution the IT world, but perhaps not the way the Facebook team imagined it. We'll come back on that in the future.</p>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">#</a></h2>
+<p>GraphQL is a very interesting attempt to propose a middle term between REST and JSON-RPC, as the following diagram is showing it.</p>
+<p><img alt="Facebook schema showing a business layer" src="../../images/business_layer.png" /></p>
+<p>However, this diagram is very misleading because the 3 inbound protocols have many different impacts on the server design, contrary to what's presented. Indeed, both REST and GraphQL imply a very specific programming model:</p>
+<ul>
+<li>REST is imposing a hard resource orientation that is unnatural to business applications (see <a href="../about-rest/">here</a>),</li>
+<li>GraphQL proposes a graph-oriented ODBC-like protocol that will have the tendency to tie-up strongly the client and the server.</li>
+</ul>
+<p>The conclusion is it seems to us that, so far, only RPC enables to design and deliver reliable and secure business applications, and to do it the way you want. RPC defines a contract that can lead to many various programming paradigms, which is not the case for REST or for GraphQL.</p>
+<p>The GraphQL has, however, opened publicly the case of graph-orientation in the design of business applications.</p>
+<p>This area is really a core game changer for the IT business and it will be a topic described and explained in the future in this site.</p>
+<h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../about-rest/">About Rest</a></li>
+</ul>
+<p>(<em>December 2017</em>)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyleft Olivier Rey 2017-2026 - Site licensed under the GNU FDL V3
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

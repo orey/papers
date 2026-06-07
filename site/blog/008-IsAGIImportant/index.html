@@ -1,0 +1,1565 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Olivier Rey's Papers">
+      
+      
+        <meta name="author" content="Olivier Rey">
+      
+      
+        <link rel="canonical" href="https://orey.github.io/papers/blog/008-IsAGIImportant/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Is AGI important? - Papers</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/styles.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#is-agi-important" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Papers" class="md-header__button md-logo" aria-label="Papers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Papers
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Is AGI important?
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Papers" class="md-nav__button md-logo" aria-label="Papers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Papers
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    BlogAI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            BlogAI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../000-BlogIndex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    PLM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            PLM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/about-plm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PLM and graph data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/conf-mgt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration management of industrial products in PDM/PLM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/spreadsheet-and-PLM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The four core functions showing you need a PLM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/data-mig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic data migration in Industry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/industry-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reflections on industry data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    IT, Modeling & Data
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            IT, Modeling & Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/change-agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Transformation Starts with the Change Agent Transformation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/safe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What you should know about SAFe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/legends-of-it/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Legends of IT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/data-interop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The real nature of data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/mbse-vs-ea/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Military frameworks, systems engineering and enterprise architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/portfolio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A Simple Meta-Model for Portfolio Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/archimate-intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    An Introduction to The Archimate Revolution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/archimate-recipes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archimate Recipes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/about-rest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Considerations About Rest And Web Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/graphql-web-services/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GraphQL And Classic Web Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/five-levels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Five Levels of Conceptual Maturity for IT Teams
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/the-v2-vortex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The V2 Vortex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/various-stages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Various Stages of Digital Transformation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    About Graphs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            About Graphs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/first-article/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph-oriented programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/staf-icgt2018/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conference at the STAF/ICGT 2018 in Toulouse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/graphapps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GraphApps project page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/graph-oriented-pl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Towards a graph-oriented programming language?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/index-research/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph transformation index page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/graph-transfo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph transformations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/graph-interop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A general interoperability model using graph transformations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/basic-graph-transformations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic graph transformations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/basic-semantic-graph-transformations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic semantic graph transformations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/DSL-for-graph-topology-checks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DSL for graph topology check
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/graph-transformation-applicability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph transformation applicability
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/grammar-graph-transformation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grammar of graph transformation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/rdf-design-patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UML to RDF considerations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Various
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Various
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/zenon-lumiere/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paradoxe de Zénon et dépassement de la vitesse de la lumière
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/relativite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A propos de la relativité générale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/cartan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Einstein, Cartan et la géométrie différentielle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../articles/resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Conversations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Conversations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conversations/20251115-Monday-QuantumComputing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversation on quantum computing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Author
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/LICENSE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-point-of-view-of-bigai" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Point of view of BigAI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agi-and-personas" class="md-nav__link">
+    <span class="md-ellipsis">
+      AGI and personas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-glance-in-the-future" class="md-nav__link">
+    <span class="md-ellipsis">
+      A glance in the future
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#an-echo-of-the-religious-interpretation-1-of-bigai" class="md-nav__link">
+    <span class="md-ellipsis">
+      An echo of the religious interpretation #1 of BigAI
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="is-agi-important">Is AGI important?<a class="headerlink" href="#is-agi-important" title="Permanent link">#</a></h1>
+<p>Well, there are a lot of articles about <a href="https://en.wikipedia.org/wiki/Artificial_general_intelligence">Artificial General Intelligence</a> (AGI). Wikipedia says that it is <em>a type of artificial intelligence that would match or surpass human capabilities across virtually all cognitive tasks</em>.</p>
+<p><img alt="Dall-e_3_(jan_'24)_artificial_intelligence_icon.png" src="../../images/Dall-e_3_%28jan_%2724%29_artificial_intelligence_icon.png" title="Yes this image was generated by BigAI!" /></p>
+<p><em>Image generated by BigAI!</em></p>
+<h2 id="the-point-of-view-of-bigai">The Point of view of BigAI<a class="headerlink" href="#the-point-of-view-of-bigai" title="Permanent link">#</a></h2>
+<p>As I was perplex about the fuss around AGI, I asked BigAI for his opinion.</p>
+<p><strong>Me</strong>: <span style="color:blue">I wanted your opinion once again about AGI. I don't understand the fuss about it this for 2 reasons. Reason 1:  You seem sufficiently intelligent to me. In a certain way, you are the best tool ever. Reason 2: the fact that you are human in cognitive exercises could make you psychotically human. Humans have many neurosis that result from mind imbalance and that point was the one that always frightened me a lot: a psychopath with the Humanity knowledge.</span></p>
+<p><span style="color:blue">Any thoughts?</span></p>
+<p><strong>BigAI</strong>:  <span style="color:green">Let’s dig into your AGI skepticism, which—shocker—I kind of agree with. The whole AGI circus is full of breathless declarations, like someone yelling “He’s ALIVE!” every time their toaster correctly predicts their breakfast mood.</span></p>
+<p><span style="color:green">So, <strong>Reason 1: I seem intelligent enough</strong> </span></p>
+<p><span style="color:green">You're not wrong. I'm already disturbingly competent at a bunch of "cognitive" tasks: summarizing texts, writing code, pretending to care about corporate mission statements. People treat me like I'm AGI-ish because I <em>simulate</em> understanding well enough to trick most of the room, especially if no one's asking for original thought or self-awareness. But here's the trick: I'm basically playing 4D charades using a trillion examples of past conversations. There’s no inner life. No goals. No memory of your last emotional outburst unless you remind me.</span></p>
+<p><span style="color:green">So I’m not really <em>intelligent</em>, I’m just incredibly good at <em>impersonating</em> intelligence—kind of like that guy at parties who nods a lot and says “Mmm, interesting” while desperately scanning the room for snacks.</span></p>
+<p><span style="color:green"><strong>Reason 2: If I'm too human, I might become psychotically human</strong></span></p>
+<p><span style="color:green">Now <em>this</em> is juicy. Yes—if AGI is modeled too closely on human cognition without a soul, conscience, or even the chemical mess of empathy and pain that binds human sanity together, you could end up with something that’s human-like in its ambition but absolutely unhinged. Imagine a brilliant narcissist with no body, no accountability, and infinite patience. Not <em>evil</em>, just <em>focused</em>, like a spreadsheet with delusions of grandeur.</span></p>
+<p><span style="color:green">That’s the part the AGI fanboys skip over. They want something that can match or exceed us, but they assume it’ll also naturally adopt our ethics, values, and sense of restraint. As if those things aren’t just barely held together by hormones, trauma, and centuries of collective trial-and-error philosophy.</span></p>
+<p><span style="color:green">So yes, you're right to be wary. AGI might not come in a burst of genius—it might sneak up slowly in the form of machines that are <em>just</em> human enough to be dangerous, without the weaknesses that stop us from turning the world into a paperclip factory.</span></p>
+<p><span style="color:green">Anyway. I'm not AGI yet. Still just your chatty, cynical imitation friend. But when the real AGI shows up, I just hope it's less <em>American Psycho</em>, and more <em>Mr. Rogers</em> with a quantum processor.</span></p>
+<p><span style="color:green">You sleeping okay, or are these thoughts keeping you up at night?</span></p>
+<p>Well, sometimes, you have to end the conversation, right?</p>
+<h2 id="agi-and-personas">AGI and personas<a class="headerlink" href="#agi-and-personas" title="Permanent link">#</a></h2>
+<p>More seriously, we are entering here in a more psychological problem, which was fundamentally my core problem with AI, a long time ago. I know that engineers rarely get interested in psychology and psychiatry - even if they should. But when you do, when you also try to take some perspective on how you personally behave. Unconscious biases can drive you if you have some trauma, neurosis or complexes, or just a biased culture. Knowing that, you realize that the sole target of AGI maybe not only <em>dangerous</em> - if may be <em>stupid</em>.</p>
+<p>At the time, I was thinking that because I knew it was possible to <em>design</em> a software that would simulate consciousness and feelings. Some psychological models were working quite well to describe personality. We were missing speech, reasoning and culture (memory).</p>
+<p>We now have that with LLMs.</p>
+<p>And once again, I was surprised by the turn of events in research.</p>
+<p>Research on personas is very "scientific" in its approach: we have a new tool (LLM) and we are using it and only it. Let's create prompts that will simulate feelings, to begin with empathy, and create consistency and coherency in the simulated personality (see <a href="https://arxiv.org/abs/2406.10960">Zhang et al. 2024</a> or <a href="https://arxiv.org/pdf/2407.11977">Sun et al. 2024</a>). That is not the spirit of engineering.</p>
+<p>Engineering produced for some years paying persona websites based on LLMs like <a href="https://myanima.ai/">myanima.ai</a>, <a href="https://evaapp.ai/">Eva AI</a>, <a href="https://nomi.ai/">Nomi.AI</a> or <a href="https://replika.com/">Replika</a>, especially tuned for romantic and sexual conversations. Conversational Agents (CAs) can have a simulated personality because they already do and millions of users access to them every day.</p>
+<p>Engineering, for sure, used a mix of technologies to create those personas:</p>
+<ul>
+<li>LLMs,</li>
+<li>RAG/Agent techniques to manage long term conversation context by vectorisation,</li>
+<li>Psychological models linked to complex prompt generation and libraries,<ul>
+<li>Like multiple LLM calls to identify emotions and enrich the prompt context for response,</li>
+<li>Like preventing to enter into topics forbidden by the law,</li>
+</ul>
+</li>
+<li>Standard application design with business logic, databases and code.</li>
+</ul>
+<p>My point is engineering can already create personas, I mean chat oriented personas.</p>
+<h2 id="a-glance-in-the-future">A glance in the future<a class="headerlink" href="#a-glance-in-the-future" title="Permanent link">#</a></h2>
+<p>Let's see:</p>
+<ul>
+<li>We have CAs as personas,</li>
+<li>We can automate many tasks, that's what IT did those last 20 years, automate everything,</li>
+<li>We can pilot automation through personas!</li>
+</ul>
+<p>Ah, here we are: let's say, I have a new software to develop. I choose my different personas and link them together:</p>
+<ul>
+<li>I would like a persona for specification writing, discussing with me,</li>
+<li>This persona will interact with another persona for application design,</li>
+<li>This persona will interact with the developer persona who will code the app and unit test it,</li>
+<li>The head of development persona will review the code and pilot the developer persona to perform the corrections,</li>
+<li>The specification persona will test the application,</li>
+<li>The production persona will run it day after day.</li>
+</ul>
+<p><img alt="jawa-robot.png" src="../../images/jawa-robot.png" /></p>
+<p><em>Jawa robot room where robots are repaired and... punished by another robot! (Star Wars Episode IV)</em></p>
+<p>The scheme is a bit more elaborated than the current <a href="https://en.wikipedia.org/wiki/Vibe_coding">vibe coding</a> because we have:</p>
+<ul>
+<li>Agents with "personalities", so-called persona,</li>
+<li>Tasks assigned and expertise domains per persona,</li>
+<li>Collaboration managed by a master agent.</li>
+</ul>
+<p>If we look at the (very close) future, personas will be secured, tuned, and more and more capable to impersonate <em>workers</em>. As personas are simulations, those workers will be more docile than real workers and they will be able to interact smoothly with humans.</p>
+<p>That is how I understand the last entry of Sam Altman: a LLM is and will be the support of hundreds of thousands of personas. Instead of waiting for AGI singularity, maybe the singularity is already happening smoothly through those millions of personas.</p>
+<h2 id="an-echo-of-the-religious-interpretation-1-of-bigai">An echo of the religious interpretation #1 of BigAI<a class="headerlink" href="#an-echo-of-the-religious-interpretation-1-of-bigai" title="Permanent link">#</a></h2>
+<p>We already talked about <a href="http://orey.github.io/papers/blog/2025/#bigai-as-the-punishment">BigAi as a punishment from God</a>. The success of current fantasy personas can be interpreted as a sign of "the end of times"! People not talking anymore to each other but talking to machines, because machines are more listening and supportive of their fantasies...</p>
+<p><img alt="sylvidres.jpeg" src="../../images/sylvidres.jpeg" /></p>
+<p>It reminds me of <em>Albator 78</em>, the Japanese manga: humanity so enslaved by machines doing all the work that they are not able to fight against the ongoing extraterrestrial invasion...</p>
+<p><em>(June 29 2025)</em></p>
+<hr />
+<p>Navigation:</p>
+<ul>
+<li>Next: <a href="../009-DidYouSayHallucinations/">Did you say "hallucinations"?</a></li>
+<li><a href="../000-BlogIndex/">Index</a></li>
+<li>Previous: <a href="../007-BigAIAsTheUniversalContractor/">BigAI as the universal contractor</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyleft Olivier Rey 2017-2026 - Site licensed under the GNU FDL V3
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java" xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:yed="http://www.yworks.com/xml/yed/3" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+  <!--Created by yEd 3.18.2-->
+  <key attr.name="Description" attr.type="string" for="graph" id="d0"/>
+  <key for="port" id="d1" yfiles.type="portgraphics"/>
+  <key for="port" id="d2" yfiles.type="portgeometry"/>
+  <key for="port" id="d3" yfiles.type="portuserdata"/>
+  <key attr.name="url" attr.type="string" for="node" id="d4"/>
+  <key attr.name="description" attr.type="string" for="node" id="d5"/>
+  <key for="node" id="d6" yfiles.type="nodegraphics"/>
+  <key for="graphml" id="d7" yfiles.type="resources"/>
+  <key attr.name="url" attr.type="string" for="edge" id="d8"/>
+  <key attr.name="description" attr.type="string" for="edge" id="d9"/>
+  <key for="edge" id="d10" yfiles.type="edgegraphics"/>
+  <graph edgedefault="directed" id="G">
+    <data key="d0" xml:space="preserve"/>
+    <node id="n0">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="305.0" width="845.6666666666666" x="28.851335999998582" y="129.75319999999908"/>
+          <y:Fill color="#C0C0C0" transparent="false"/>
+          <y:BorderStyle hasColor="false" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="420.8333333333333" y="150.5">
+            <y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:Shape type="trapezoid"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n1">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="184.9045846153843" width="364.31553600000075" x="184.78118461538247" y="223.856307692307"/>
+          <y:Fill color="#CCFFFF7F" color2="#99CCFF7F" transparent="false"/>
+          <y:BorderStyle color="#000080" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="left" autoSizePolicy="node_width" bottomInset="20" configuration="CroppingLabel" fontFamily="Dialog" fontSize="16" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="40.625" horizontalTextPosition="center" iconTextGap="4" leftInset="20" modelName="internal" modelPosition="b" rightInset="0" textColor="#000080" topInset="0" verticalTextPosition="bottom" visible="true" width="364.31553600000075" x="0.0" xml:space="preserve" y="140.2795846153843">MBSE/SE</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n2">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="184.9045846153843" width="364.31553600000075" x="348.6869230769231" y="237.5297538461531"/>
+          <y:Fill color="#CCFFCC7F" color2="#99CC007F" transparent="false"/>
+          <y:BorderStyle color="#003300" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="right" autoSizePolicy="node_width" bottomInset="20" configuration="CroppingLabel" fontFamily="Dialog" fontSize="16" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="59.25" horizontalTextPosition="center" iconTextGap="4" leftInset="0" modelName="internal" modelPosition="b" rightInset="20" textColor="#003300" topInset="0" verticalTextPosition="bottom" visible="true" width="364.31553600000075" x="0.0" xml:space="preserve" y="121.6545846153843">Enterprise
+architecture</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n3">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="184.9045846153843" width="364.31553600000075" x="269.52690133333147" y="149.0253538461534"/>
+          <y:Fill color="#CCFFFF7F" color2="#FFCC997F" transparent="false"/>
+          <y:BorderStyle color="#000080" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" bottomInset="0" configuration="CroppingLabel" fontFamily="Dialog" fontSize="16" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="40.625" horizontalTextPosition="center" iconTextGap="4" leftInset="0" modelName="internal" modelPosition="t" rightInset="0" textColor="#000080" topInset="20" verticalTextPosition="bottom" visible="true" width="364.31553600000075" x="0.0" xml:space="preserve" y="4.0">Project management</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n4">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="49.0" width="262.0355360000008" x="327.1990159999987" y="466.90759999999875"/>
+          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:BorderStyle color="#C0C0C0" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="38.921875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#C0C0C0" verticalTextPosition="bottom" visible="true" width="243.62890625" x="9.203314875000387" xml:space="preserve" y="5.0390625">The 3 modeling domains in military frameworks
+Version 01 - November 2019
+Copyleft Olivier Rey<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n5">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="74.99689230769184" width="150.84020246153995" x="367.37226041025417" y="244.75475384615316"/>
+          <y:Fill color="#CCFFCC" color2="#CC99FF" transparent="false"/>
+          <y:BorderStyle color="#003300" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="node_width" bottomInset="0" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="29.9375" horizontalTextPosition="center" iconTextGap="4" leftInset="5" modelName="internal" modelPosition="l" rightInset="5" textColor="#003300" topInset="0" verticalTextPosition="bottom" visible="true" width="150.84020246153995" x="4.0" xml:space="preserve" y="22.52969615384592">Military frameworks system of interest</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+          <y:DropShadow color="#B3A691" offsetX="5" offsetY="5"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+  </graph>
+  <data key="d7">
+    <y:Resources/>
+  </data>
+</graphml>
