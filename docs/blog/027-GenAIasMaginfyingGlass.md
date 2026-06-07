@@ -95,7 +95,7 @@ The organisations that will live through this period will be those that maintain
 
 For the others, and there will be many, the rescuers may turn out to be the same entities that designed the flood.
 
-BigAI companies could easily turn into the mega-corporations of William Gibson’s novels. Pushed to survive at all costs, they could become the vampires of our economy by draining progressively all the profits of all competing AI-enslaved companies.
+BigAI companies could easily turn into the mega-corporations of William Gibson’s novels. Pushed to survive at all costs, they could become **the vampires of our economy** by draining progressively all the profits of all competing AI-enslaved companies.
 
 *(June 6 2026)*
 
