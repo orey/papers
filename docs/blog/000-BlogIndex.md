@@ -3,6 +3,9 @@
 
 ## 2026
 
+* [The Only Way the AI Business Model Adds Up](030-AIBusinessModel.md)
+* [Spotify killed the CD. Claude Code is coming for your apps](029-SpotifyKills.md)
+* [Bigger Dreams: Refactoring Our Ambitions for the Age of AI](028-BiggerDreams.md)
 * The Content Wars, episode 6: [Companies in Front of the Content Tsunami](027-GenAIasMaginfyingGlass.md)
 * [Strangling Agents](026-StranglingAgents.md)
 * [AI faces only heathens](025-AiFacesOnlyHeathens.md)

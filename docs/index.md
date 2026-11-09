@@ -2,6 +2,9 @@
 
 ## BlogAI
 
+* [The Only Way the AI Business Model Adds Up](blog/030-AIBusinessModel.md)
+* [Spotify killed the CD. Claude Code is coming for your apps](blog/029-SpotifyKills.md)
+* [Bigger Dreams: Refactoring Our Ambitions for the Age of AI](blog/028-BiggerDreams.md)
 * The Content Wars, episode 6: [Companies in Front of the Content Tsunami](blog/027-GenAIasMaginfyingGlass.md)
 * [Strangling Agents](blog/026-StranglingAgents.md)
 * [AI faces only heathens](blog/025-AiFacesOnlyHeathens.md)
